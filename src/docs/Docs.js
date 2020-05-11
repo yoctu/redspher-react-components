@@ -11,7 +11,7 @@ const Docs = () => {
 
     useEffect(() => {
         window.addEventListener("hashchange", () => {
-            setRoute({ route: window.location.hash.substr(1) });
+            setRoute(window.location.hash.substr(1));
         });
     }, []);
 
