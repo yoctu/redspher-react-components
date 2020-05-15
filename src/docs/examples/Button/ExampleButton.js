@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "redspher/Button";
+import Button from "redspher-components/Button";
 
 /** This is an example Button Branding **/
 const ExampleButton = () => (
-    <Button handleButton={() => {alert("hello")}} text={"Click me"}/>
+    <Button handleButton={() => {alert("hello")}} text={"Click me"} className={"rubiwin"}/>
 );
 
 export default ExampleButton;
