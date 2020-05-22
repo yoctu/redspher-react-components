@@ -26,7 +26,8 @@ const RubiwinFormLabel = ({
                 onChange={onChange}
                 value={value}
                 inputRef={inputRef}
-                className={`${style.label} ${className}`}
+                className={`${className}`}
+                classes={{ label: style.label }}
             />
         </StylesProvider>
     );

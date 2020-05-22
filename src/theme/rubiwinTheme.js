@@ -5,18 +5,21 @@ const RubiwinTheme = createMuiTheme({
         fontFamily: "Montserrat, Arial, sans-serif",
     },
     palette: {
-        primary:  {
+        primary: {
             // light: will be calculated from palette.primary.main,
-            main: '#00c3ff',
+            main: "#00c3ff",
             // dark: will be calculated from palette.primary.main,
             // contrastText: will be calculated to contrast with palette.primary.main
         },
-        secondary:  {
+        secondary: {
             // light: will be calculated from palette.primary.main,
-            main: '#40598B',
+            main: "#40598B",
             // dark: will be calculated from palette.primary.main,
             // contrastText: will be calculated to contrast with palette.primary.main
-        }
+        },
+        body1: {
+            color: "#555",
+        },
     },
 });
 
