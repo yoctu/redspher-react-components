@@ -1,5 +1,8 @@
 @import "./src/css/rubiwin-constant";
 
 .checkbox {
-  color: $primaryColor;
+  color: $dynamiteGrey;
+  &:disabled {
+    color: $dynamiteGrey;
+  }
 }

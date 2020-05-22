@@ -1,6 +1,7 @@
+@import "./src/css/rubiwin-constant";
 /* Global styles */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $font-family;
   color: #666666;
 }
 
@@ -59,4 +60,3 @@ table {
 .componentpage {
   margin-left: 275px;
 }
-

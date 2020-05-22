@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import Docs from "./docs/Docs";
 import * as serviceWorker from "./serviceWorker";
-import '../node_modules/highlight.js/styles/ocean.css';
+import "../node_modules/highlight.js/styles/ocean.css";
+require("typeface-montserrat");
 
 ReactDOM.render(
     <React.StrictMode>

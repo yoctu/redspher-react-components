@@ -26,9 +26,9 @@ const RubiwinCheckbox = ({
             size={size}
             inputRef={inputRef}
             value={value}
-            color={"#C4C4C4"}
             name={name}
             icon={icon}
+            color={"primary"}
         />
     </StylesProvider>
 );
