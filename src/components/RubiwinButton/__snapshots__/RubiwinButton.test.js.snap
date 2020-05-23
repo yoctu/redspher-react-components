@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`has a link to /test 1`] = `
+<a
+  aria-disabled={false}
+  className="MuiButtonBase-root MuiButton-root MuiButton-text button "
+  href="/test"
+  onBlur={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="MuiButton-label"
+  >
+    Rubiwin
+  </span>
+  <span
+    className="MuiTouchRipple-root"
+  />
+</a>
+`;
+
+exports[`is disabled 1`] = `
+<button
+  className="MuiButtonBase-root MuiButton-root MuiButton-text button  Mui-disabled Mui-disabled"
+  disabled={true}
+  onBlur={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={-1}
+  type="button"
+>
+  <span
+    className="MuiButton-label"
+  >
+    Rubiwin
+  </span>
+</button>
+`;
+
+exports[`is fullWidth 1`] = `
+<button
+  className="MuiButtonBase-root MuiButton-root MuiButton-text button  MuiButton-fullWidth"
+  disabled={false}
+  onBlur={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="MuiButton-label"
+  >
+    Rubiwin
+  </span>
+</button>
+`;
+
+exports[`renders correctly props object 1`] = `
+<button
+  className="MuiButtonBase-root MuiButton-root MuiButton-text button test"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="MuiButton-label"
+  >
+    <span
+      className="MuiButton-startIcon MuiButton-iconSizeMedium"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 15"
+      >
+        <path
+          d="M18.4923 0H3.36049C0.88333 0 0 1.73305 0 3.36049V10.8592C0 12.4818 0.88333 14.2197 3.36049 14.2197H18.4923C20.1149 14.2197 21.8528 13.3364 21.8528 10.8592V3.36049C21.848 0.868927 20.1149 0 18.4923 0ZM3.36049 0.715305L18.4923 0.724906C19.0809 0.719866 19.6582 0.88675 20.1534 1.20498L10.9264 7.18185L8.74208 5.74164C8.7035 5.70648 8.65759 5.68025 8.60766 5.66483L1.68985 1.19537C2.18036 0.859326 2.76641 0.690881 3.36049 0.715305ZM0.724906 10.8592H0.729707V3.36049C0.731327 2.78183 0.897852 2.21564 1.20978 1.72825L7.93076 6.08729L1.46421 12.8083C0.979403 12.2759 0.715065 11.5792 0.724906 10.8592ZM18.4491 13.49L3.36529 13.4948C2.90899 13.5063 2.45604 13.4144 2.0403 13.2259L8.52605 6.48575L10.7296 7.92596H10.7536C10.8013 7.95002 10.8538 7.96311 10.9072 7.96437C10.9606 7.96311 11.0131 7.95002 11.0608 7.92596H11.0848L13.3027 6.48575L19.7837 13.2067C19.3642 13.3956 18.9091 13.4923 18.4491 13.49ZM20.427 12.7795L13.9604 6.05849L20.6814 1.70425C20.9976 2.1899 21.1536 2.76238 21.1279 3.34129V10.8592C21.1706 11.5688 20.9168 12.2642 20.427 12.7795Z"
+        />
+      </svg>
+    </span>
+    Rubiwin
+    <span
+      className="MuiButton-endIcon MuiButton-iconSizeMedium"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 15"
+      >
+        <path
+          d="M18.4923 0H3.36049C0.88333 0 0 1.73305 0 3.36049V10.8592C0 12.4818 0.88333 14.2197 3.36049 14.2197H18.4923C20.1149 14.2197 21.8528 13.3364 21.8528 10.8592V3.36049C21.848 0.868927 20.1149 0 18.4923 0ZM3.36049 0.715305L18.4923 0.724906C19.0809 0.719866 19.6582 0.88675 20.1534 1.20498L10.9264 7.18185L8.74208 5.74164C8.7035 5.70648 8.65759 5.68025 8.60766 5.66483L1.68985 1.19537C2.18036 0.859326 2.76641 0.690881 3.36049 0.715305ZM0.724906 10.8592H0.729707V3.36049C0.731327 2.78183 0.897852 2.21564 1.20978 1.72825L7.93076 6.08729L1.46421 12.8083C0.979403 12.2759 0.715065 11.5792 0.724906 10.8592ZM18.4491 13.49L3.36529 13.4948C2.90899 13.5063 2.45604 13.4144 2.0403 13.2259L8.52605 6.48575L10.7296 7.92596H10.7536C10.8013 7.95002 10.8538 7.96311 10.9072 7.96437C10.9606 7.96311 11.0131 7.95002 11.0608 7.92596H11.0848L13.3027 6.48575L19.7837 13.2067C19.3642 13.3956 18.9091 13.4923 18.4491 13.49ZM20.427 12.7795L13.9604 6.05849L20.6814 1.70425C20.9976 2.1899 21.1536 2.76238 21.1279 3.34129V10.8592C21.1706 11.5688 20.9168 12.2642 20.427 12.7795Z"
+        />
+      </svg>
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should be large 1`] = `
+<button
+  className="MuiButtonBase-root MuiButton-root MuiButton-text button  MuiButton-textSizeLarge MuiButton-sizeLarge"
+  disabled={false}
+  onBlur={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="MuiButton-label"
+  >
+    Rubiwin
+  </span>
+</button>
+`;
+
+exports[`should be small 1`] = `
+<button
+  className="MuiButtonBase-root MuiButton-root MuiButton-text button  MuiButton-textSizeSmall MuiButton-sizeSmall"
+  disabled={false}
+  onBlur={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="MuiButton-label"
+  >
+    Rubiwin
+  </span>
+</button>
+`;
