@@ -12,11 +12,11 @@ const testProps = {
     endIcon: <MailIcon />,
 };
 
+/** Snapshots */
 test("renders correctly props object", () => {
     const tree = renderer.create(<RubiwinButton {...testProps} />).toJSON();
     expect(tree).toMatchSnapshot();
 });
-/** Snapshots */
 
 test("is disabled", () => {
     const tree = renderer
