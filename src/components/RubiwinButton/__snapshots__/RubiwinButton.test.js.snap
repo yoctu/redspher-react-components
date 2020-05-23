@@ -159,6 +159,9 @@ exports[`should be large 1`] = `
   >
     Rubiwin
   </span>
+  <span
+    className="MuiTouchRipple-root"
+  />
 </button>
 `;
 
