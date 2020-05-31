@@ -9,6 +9,7 @@ const testProps = {
     inputRed: "ref",
     value: "testValue",
     name: "rubiname",
+    onChange: () => {},
 };
 
 /** Snapshots */
