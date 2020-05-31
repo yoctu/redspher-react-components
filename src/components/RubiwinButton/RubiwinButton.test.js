@@ -13,40 +13,40 @@ const testProps = {
 };
 
 /** Snapshots */
-test("renders correctly props object", () => {
+it("renders correctly props object", () => {
     const tree = renderer.create(<RubiwinButton {...testProps} />).toJSON();
     expect(tree).toMatchSnapshot();
 });
 
-test("is disabled", () => {
+it("is disabled", () => {
     const tree = renderer
         .create(<RubiwinButton text="Rubiwin" disabled />)
         .toJSON();
     expect(tree).toMatchSnapshot();
 });
 
-test("is fullWidth", () => {
+it("is fullWidth", () => {
     const tree = renderer
         .create(<RubiwinButton text="Rubiwin" fullWidth />)
         .toJSON();
     expect(tree).toMatchSnapshot();
 });
 
-test("has a link to /test", () => {
+it("has a link to /test", () => {
     const tree = renderer
         .create(<RubiwinButton text="Rubiwin" href={"/test"} />)
         .toJSON();
     expect(tree).toMatchSnapshot();
 });
 
-test("should be small", () => {
+it("should be small", () => {
     const tree = renderer
         .create(<RubiwinButton text="Rubiwin" size={"small"} />)
         .toJSON();
     expect(tree).toMatchSnapshot();
 });
 
-test("should be large", () => {
+it("should be large", () => {
     const tree = renderer
         .create(<RubiwinButton text="Rubiwin" size={"large"} />)
         .toJSON();
@@ -54,7 +54,7 @@ test("should be large", () => {
 });
 
 /** interaction test */
-test("should handle click event", () => {
+it("should handle click event", () => {
     const MockCallback = jest.fn();
     const wrapper = mount(
         <RubiwinButton text="Rubiwin" onClick={MockCallback} />

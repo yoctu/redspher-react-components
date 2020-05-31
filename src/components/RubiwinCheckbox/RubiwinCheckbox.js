@@ -14,7 +14,6 @@ const RubiwinCheckbox = ({
     inputRef,
     value,
     name,
-    icon,
 }) => (
     <StylesProvider injectFirst>
         <Checkbox
@@ -27,7 +26,6 @@ const RubiwinCheckbox = ({
             inputRef={inputRef}
             value={value}
             name={name}
-            icon={icon}
             color={"primary"}
         />
     </StylesProvider>
@@ -35,7 +33,7 @@ const RubiwinCheckbox = ({
 
 RubiwinCheckbox.propTypes = {
     /** component is checked or not */
-    checked: PropTypes.bool.isRequired,
+    checked: PropTypes.bool,
     /** add a class to overload styles */
     className: PropTypes.string,
     /** disable checkbox */
@@ -52,8 +50,6 @@ RubiwinCheckbox.propTypes = {
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     /** name attribute of input */
     name: PropTypes.string,
-    /** pass a custom icon element */
-    icon: PropTypes.element,
 };
 
 export default RubiwinCheckbox;

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import RubiwinCheckbox from "../../../components/RubiwinCheckbox";
 
 /** This is a Rubiwin checkbox */
