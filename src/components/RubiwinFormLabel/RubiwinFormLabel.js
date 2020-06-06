@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import style from "./RubiwinFormLabel.module.scss";
 import { StylesProvider } from "@material-ui/core/styles";
 
+/** full doc: https://material-ui.com/api/form-control-label/ */
 const RubiwinFormLabel = ({
     control,
     label,

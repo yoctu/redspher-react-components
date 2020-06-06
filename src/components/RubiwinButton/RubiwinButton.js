@@ -5,7 +5,8 @@ import { StylesProvider } from "@material-ui/core/styles";
 
 import style from "./RubiwinButton.module.scss";
 
-/** This is a RubiwinButton branded for Rubiwin **/
+/** This is a RubiwinButton branded for Rubiwin
+ * full doc : https://material-ui.com/api/button/ */
 const RubiwinButton = ({
     text,
     onClick,

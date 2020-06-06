@@ -1,0 +1,22 @@
+@import "../../css/rubiwin-constant";
+
+.root {
+    background-color: white;
+    border-radius: $border-radius-sm;
+    border: 1px solid $dynamiteGrey;
+    padding: 2px 6px;
+    transition: $transition-all;
+    &:hover {
+        border: 1px solid darken($dynamiteGrey, 10%);
+    }
+}
+
+.focused {
+    border: 1px solid $primaryColor;
+    border-radius: $border-radius-sm;
+    transition: $transition-all;
+    &:hover {
+        border: 1px solid $primaryColor;
+        border-radius: $border-radius-sm;
+    }
+}

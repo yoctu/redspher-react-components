@@ -4,6 +4,9 @@ import Checkbox from "@material-ui/core/Checkbox";
 import { StylesProvider } from "@material-ui/core/styles";
 import style from "./RubiwinCheckbox.module.scss";
 
+/** this is a Mui Checkbox branded for Rubiwin
+ * full dod : https://material-ui.com/api/checkbox/
+ */
 const RubiwinCheckbox = ({
     checked = false,
     className = "",
