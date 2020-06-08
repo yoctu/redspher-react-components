@@ -20,3 +20,15 @@
         border-radius: $border-radius-sm;
     }
 }
+
+.disabled {
+    background-color: $disableGrey;
+    cursor: not-allowed;
+}
+
+.error {
+    border: 1px solid $danger;
+    &:hover {
+        border: 1px solid darken($danger, 5%)
+    }
+}

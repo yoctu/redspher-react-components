@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`has error state 1`] = `
+<div
+  className="MuiInputBase-root MuiInput-root root Mui-error Mui-error error"
+  onClick={[Function]}
+>
+  <input
+    aria-invalid={true}
+    className="MuiInputBase-input MuiInput-input"
+    disabled={false}
+    onAnimationStart={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+</div>
+`;
+
+exports[`is disabled 1`] = `
+<div
+  className="MuiInputBase-root MuiInput-root root Mui-disabled Mui-disabled disabled"
+  onClick={[Function]}
+>
+  <input
+    aria-invalid={false}
+    className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled disabled"
+    disabled={true}
+    onAnimationStart={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+</div>
+`;
+
+exports[`is full-width 1`] = `
+<div
+  className="MuiInputBase-root MuiInput-root root MuiInputBase-fullWidth MuiInput-fullWidth"
+  onClick={[Function]}
+>
+  <input
+    aria-invalid={false}
+    className="MuiInputBase-input MuiInput-input"
+    disabled={false}
+    onAnimationStart={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+</div>
+`;
+
+exports[`renders correctly props object 1`] = `
+<div
+  className="MuiInputBase-root MuiInput-root root test"
+  onClick={[Function]}
+>
+  <input
+    aria-invalid={false}
+    className="MuiInputBase-input MuiInput-input"
+    disabled={false}
+    id="id"
+    name="name"
+    onAnimationStart={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="placeholder"
+    type="text"
+  />
+</div>
+`;

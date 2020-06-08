@@ -1,6 +1,16 @@
 import React from "react";
 import RubiwinInputField from "../../../components/RubiwinInputField";
 
-const ExampleRubiwinInputField = () => <RubiwinInputField />;
+const testProps = {
+    className: "test",
+    id: "id",
+    name: "name",
+    onChange: () => {},
+    placeholder: "placeholder",
+    fullWidth: true,
+    inputProps: "alt='test'"
+};
+
+const ExampleRubiwinInputField = () => <RubiwinInputField {...testProps} />;
 
 export default ExampleRubiwinInputField;

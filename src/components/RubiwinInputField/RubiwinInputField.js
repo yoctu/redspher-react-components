@@ -8,6 +8,8 @@ import { StylesProvider } from "@material-ui/core/styles";
 /** this is a simple input
  * full doc: https://material-ui.com/api/input/
  * */
+
+//TODO input Props
 const RubiwinInputField = ({
     className = "",
     id,
@@ -31,7 +33,12 @@ const RubiwinInputField = ({
     <StylesProvider injectFirst>
         <Input
             className={`${className}`}
-            classes={{ root: style.root, focused: style.focused }}
+            classes={{
+                root: style.root,
+                focused: style.focused,
+                disabled: style.disabled,
+                error: style.error,
+            }}
             disableUnderline
             id={id}
             defaultValue={defaultValue}
