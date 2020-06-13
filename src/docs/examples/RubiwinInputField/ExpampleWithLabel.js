@@ -1,12 +1,12 @@
 import React from "react";
 import RubiwinInputField from "../../../components/RubiwinInputField";
-import InputLabel from "@material-ui/core/InputLabel";
+import RubiwinInputLabel from "../../../components/RubiwinInputLabel";
 
 /** Example with label */
 const ExampleWithLabel = () => (
     <>
-        <InputLabel htmlFor={"test"}>tests</InputLabel>
-        <RubiwinInputField id={"test"}/>
+        <RubiwinInputLabel htmlFor={"test"}>tests</RubiwinInputLabel>
+        <RubiwinInputField id={"test"} />
     </>
 );
 
