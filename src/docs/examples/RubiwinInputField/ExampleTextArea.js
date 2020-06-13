@@ -6,10 +6,11 @@ const testProps = {
     id: "id",
     name: "name",
     onChange: () => {},
-    placeholder: "placeholder",
+    multiline: true,
+    rows: 5,
 };
 
-/** Simple input field */
-const ExampleRubiwinInputField = () => <RubiwinInputField {...testProps} />;
+/** Example of text Area */
+const ExampleTextArea = () => <RubiwinInputField {...testProps} />;
 
-export default ExampleRubiwinInputField;
+export default ExampleTextArea;

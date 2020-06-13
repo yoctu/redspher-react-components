@@ -6,10 +6,10 @@ const testProps = {
     id: "id",
     name: "name",
     onChange: () => {},
-    placeholder: "placeholder",
+    type: "number",
 };
 
-/** Simple input field */
-const ExampleRubiwinInputField = () => <RubiwinInputField {...testProps} />;
+/** example with type number */
+const ExampleTypeNumber = () => <RubiwinInputField {...testProps} />;
 
-export default ExampleRubiwinInputField;
+export default ExampleTypeNumber;

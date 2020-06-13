@@ -1,6 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import RubiwinInputField from "./RubiwinInputField";
+import MailIcon from "../../icons/MailIcon/MailIcon";
 
 const testProps = {
     className: "test",
@@ -55,5 +56,17 @@ it("is readOnly", () => {
 
 it("is required", () => {
     const tree = renderer.create(<RubiwinInputField required />).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("has a start and end adornment", () => {
+    const tree = renderer
+        .create(
+            <RubiwinInputField
+                startAdornment={<MailIcon />}
+                endAdornment={<MailIcon />}
+            />
+        )
+        .toJSON();
     expect(tree).toMatchSnapshot();
 });

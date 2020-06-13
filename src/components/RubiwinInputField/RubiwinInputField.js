@@ -14,6 +14,7 @@ const RubiwinInputField = ({
     id,
     defaultValue,
     disabled = false,
+    endAdornment,
     error = false,
     fullWidth = false,
     inputProps,
@@ -26,6 +27,7 @@ const RubiwinInputField = ({
     required,
     rows,
     rowsMax,
+    startAdornment,
     type,
     value,
 }) => (
@@ -39,6 +41,7 @@ const RubiwinInputField = ({
                 error: style.error,
             }}
             disableUnderline
+            endAdornment={endAdornment}
             id={id}
             defaultValue={defaultValue}
             disabled={disabled}
@@ -54,6 +57,7 @@ const RubiwinInputField = ({
             required={required}
             rows={rows}
             rowsMax={rowsMax}
+            startAdornment={startAdornment}
             type={type}
             value={value}
         />
@@ -69,6 +73,8 @@ RubiwinInputField.propTypes = {
     disabled: PropTypes.bool,
     /** error state */
     error: PropTypes.bool,
+    /** add end adornment */
+    endAdornment: PropTypes.node,
     /** fullWidth */
     fullWidth: PropTypes.bool,
     /** Attributes applied to the input element */
@@ -91,6 +97,8 @@ RubiwinInputField.propTypes = {
     rows: PropTypes.number,
     /** Maximum number of rows to display when multiline option is set to true. */
     rowsMax: PropTypes.number,
+    /** add end adornment */
+    startAdornment: PropTypes.node,
     /** Type of the input element. It should be a valid HTML5 input type. */
     type: PropTypes.string,
     /** value */
