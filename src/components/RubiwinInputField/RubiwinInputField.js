@@ -9,7 +9,6 @@ import { StylesProvider } from "@material-ui/core/styles";
  * full doc: https://material-ui.com/api/input/
  * */
 
-//TODO input Props
 const RubiwinInputField = ({
     className = "",
     id,

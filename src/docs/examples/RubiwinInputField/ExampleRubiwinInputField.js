@@ -8,7 +8,7 @@ const testProps = {
     onChange: () => {},
     placeholder: "placeholder",
     fullWidth: true,
-    inputProps: "alt='test'"
+    multiline: true,
 };
 
 const ExampleRubiwinInputField = () => <RubiwinInputField {...testProps} />;

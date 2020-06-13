@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`has an input element added 1`] = `
+<div
+  className="MuiInputBase-root MuiInput-root root"
+  onClick={[Function]}
+>
+  <input
+    aria-invalid={false}
+    className="MuiInputBase-input MuiInput-input"
+    disabled={false}
+    maxLength={20}
+    onAnimationStart={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+</div>
+`;
+
 exports[`has error state 1`] = `
 <div
   className="MuiInputBase-root MuiInput-root root Mui-error Mui-error error"
@@ -54,6 +73,64 @@ exports[`is full-width 1`] = `
 </div>
 `;
 
+exports[`is multiline, has 4 rows and 5 max rows 1`] = `
+<div
+  className="MuiInputBase-root MuiInput-root root"
+  onClick={[Function]}
+>
+  <input
+    aria-invalid={false}
+    className="MuiInputBase-input MuiInput-input"
+    disabled={false}
+    onAnimationStart={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    rows={5}
+    type="text"
+  />
+</div>
+`;
+
+exports[`is readOnly 1`] = `
+<div
+  className="MuiInputBase-root MuiInput-root root"
+  onClick={[Function]}
+>
+  <input
+    aria-invalid={false}
+    className="MuiInputBase-input MuiInput-input"
+    disabled={false}
+    onAnimationStart={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    readOnly={true}
+    type="text"
+  />
+</div>
+`;
+
+exports[`is required 1`] = `
+<div
+  className="MuiInputBase-root MuiInput-root root"
+  onClick={[Function]}
+  required={true}
+>
+  <input
+    aria-invalid={false}
+    className="MuiInputBase-input MuiInput-input"
+    disabled={false}
+    onAnimationStart={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    required={true}
+    type="text"
+  />
+</div>
+`;
+
 exports[`renders correctly props object 1`] = `
 <div
   className="MuiInputBase-root MuiInput-root root test"
@@ -64,6 +141,7 @@ exports[`renders correctly props object 1`] = `
     className="MuiInputBase-input MuiInput-input"
     disabled={false}
     id="id"
+    maxLength={20}
     name="name"
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -71,6 +149,7 @@ exports[`renders correctly props object 1`] = `
     onFocus={[Function]}
     placeholder="placeholder"
     type="text"
+    value="rubiwin"
   />
 </div>
 `;
