@@ -3,7 +3,7 @@
 exports[`is checked 1`] = `
 <span
   aria-disabled={false}
-  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root svg MuiCheckbox-colorPrimary checkbox  PrivateSwitchBase-checked-8 Mui-checked MuiIconButton-colorPrimary"
+  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root root MuiCheckbox-colorPrimary checkbox  PrivateSwitchBase-checked-8 Mui-checked checked MuiIconButton-colorPrimary"
   onBlur={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}
@@ -48,7 +48,7 @@ exports[`is checked 1`] = `
 exports[`is disabled 1`] = `
 <span
   aria-disabled={true}
-  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root svg MuiCheckbox-colorPrimary checkbox  PrivateSwitchBase-disabled-9 Mui-disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled"
+  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root root MuiCheckbox-colorPrimary checkbox  PrivateSwitchBase-disabled-9 Mui-disabled disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled"
   onBlur={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}
@@ -90,7 +90,7 @@ exports[`is disabled 1`] = `
 exports[`is small 1`] = `
 <span
   aria-disabled={false}
-  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root svg MuiCheckbox-colorPrimary checkbox testClass MuiIconButton-colorPrimary"
+  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root root MuiCheckbox-colorPrimary checkbox testClass MuiIconButton-colorPrimary"
   onBlur={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}
@@ -138,7 +138,7 @@ exports[`is small 1`] = `
 exports[`renders correctly props object 1`] = `
 <span
   aria-disabled={false}
-  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root svg MuiCheckbox-colorPrimary checkbox testClass MuiIconButton-colorPrimary"
+  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root root MuiCheckbox-colorPrimary checkbox testClass MuiIconButton-colorPrimary"
   onBlur={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}

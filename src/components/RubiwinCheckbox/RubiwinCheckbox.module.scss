@@ -2,11 +2,16 @@
 
 .checkbox {
   color: $dynamiteGrey;
-  &:disabled {
-    color: $dynamiteGrey;
-  }
 }
 
-.svg {
+.root {
+  color: $primaryColor;
+}
+
+.checked {
   color: $primaryColor !important;
+}
+
+.disabled {
+  color: $dynamiteGrey !important;
 }

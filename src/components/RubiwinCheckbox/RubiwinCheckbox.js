@@ -30,7 +30,11 @@ const RubiwinCheckbox = ({
             value={value}
             name={name}
             color={"primary"}
-            classes={{ root: style.svg }}
+            classes={{
+                root: style.root,
+                checked: style.checked,
+                disabled: style.disabled,
+            }}
         />
     </StylesProvider>
 );
