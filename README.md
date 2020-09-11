@@ -46,3 +46,9 @@ Enzyme helps with interaction testing.
 ### create an example
 1. create a folder with the name of the component in `src/docs/examples/`
 2. create as many Examples as you want.
+
+## docs
+
+deploy new online docs `npm run deploy:docs`
+
+[online docs](https://yoctu.github.io/redspher-react-components/)
