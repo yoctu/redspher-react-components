@@ -28,22 +28,25 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Add a component
 
 ### create component
+
 1. create a folder with the name of your component in `src/compoments`
 2. The component with the same name as the folder
 3. index.js with `export { default } from "./shinyCompoment"`
-4. create a `component.module.scss` and a `component.test.js`
-5. create snapshots tests for your component.
+4. import in components root index.js
+5. create a `component.module.scss` and a `component.test.js`
+6. create snapshots tests for your component.
 
 The documentation will be generated from comments you write before the components.
 The props and documentation is mandatory, comments before each props will be in docs.
-We have jest and enzyme as tests frameworks. 
-    [jest docs](https://jestjs.io/docs/en/getting-started)
-    [enzyme docs](https://enzymejs.github.io/enzyme/docs/api/)
-    
+We have jest and enzyme as tests frameworks.
+[jest docs](https://jestjs.io/docs/en/getting-started)
+[enzyme docs](https://enzymejs.github.io/enzyme/docs/api/)
+
 We do at least snapshots testing.
 Enzyme helps with interaction testing.
 
 ### create an example
+
 1. create a folder with the name of the component in `src/docs/examples/`
 2. create as many Examples as you want.
 
