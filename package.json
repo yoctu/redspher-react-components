@@ -1,7 +1,19 @@
 {
   "name": "redspher-components",
   "version": "0.1.0",
-  "private": true,
+  "main": "./lib/index.js",
+  "engines": {
+    "node": ">=11.0.0"
+  },
+  "author": {
+    "name": "Racelle Vincent",
+    "email": "contact@yoctu.com",
+    "url": "https://yoctu.com/"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [],
   "dependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "7.9.0",
@@ -89,7 +101,8 @@
     "build:lib": "npm-run-all --parallel build:commonjs build:css build:copy-files",
     "predeploy:docs": "npm run build:docs",
     "deploy:docs": "gh-pages -d build",
-    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js"
+    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
+    "prepublish": "npm run build:lib"
   },
   "eslintConfig": {
     "extends": "react-app"
