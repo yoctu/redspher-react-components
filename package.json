@@ -1,13 +1,14 @@
 {
-  "name": "redspher-components",
+  "name": "redspher-components-build-template",
   "version": "0.1.0",
   "main": "./lib/index.js",
+  "private": true,
   "engines": {
     "node": ">=11.0.0"
   },
   "author": {
-    "name": "Racelle Vincent",
-    "email": "contact@yoctu.com",
+    "name": "Vincent Racelle",
+    "email": "v.racelle@redspher.com",
     "url": "https://yoctu.com/"
   },
   "files": [
@@ -99,10 +100,11 @@
     "build:css": "cpx \"./src/components/**/*.scss\" ./lib",
     "prebuild:lib": "rimraf lib",
     "build:lib": "npm-run-all --parallel build:commonjs build:css build:copy-files",
+    "build:copy-files": "node scripts/copyBuildFiles.js",
     "predeploy:docs": "npm run build:docs",
     "deploy:docs": "gh-pages -d build",
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
-    "prepublish": "npm run build:lib"
+    "prepare": "npm run build:lib"
   },
   "eslintConfig": {
     "extends": "react-app"
