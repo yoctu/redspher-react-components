@@ -1,6 +1,6 @@
 {
   "name": "redspher-components-build-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./lib/index.js",
   "private": true,
   "engines": {
@@ -98,8 +98,9 @@
     "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js",
     "build:css": "cpx \"./src/components/**/*.scss\" ./lib",
+    "build:const": "cpx \"./src/css/*.scss\" ./lib",
     "prebuild:lib": "rimraf lib",
-    "build:lib": "npm-run-all --parallel build:commonjs build:css build:copy-files",
+    "build:lib": "npm-run-all --parallel build:commonjs build:css build:const build:copy-files",
     "build:copy-files": "node scripts/copyBuildFiles.js",
     "predeploy:docs": "npm run build:docs",
     "deploy:docs": "gh-pages -d build",
