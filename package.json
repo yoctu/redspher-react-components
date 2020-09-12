@@ -98,7 +98,7 @@
     "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js",
     "build:css": "cpx \"./src/components/**/*.scss\" ./lib",
-    "build:const": "cpx \"./src/css/*.scss\" ./lib",
+    "build:const": "cpx \"./src/components/*.scss\" ./lib",
     "prebuild:lib": "rimraf lib",
     "build:lib": "npm-run-all --parallel build:commonjs build:css build:const build:copy-files",
     "build:copy-files": "node scripts/copyBuildFiles.js",
