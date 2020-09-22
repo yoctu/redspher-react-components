@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import NextButton from "@material-ui/core/Button";
 import { StylesProvider } from "@material-ui/core/styles";
-
-import style from "./RubiwinButton.module.scss";
+import "./RubiwinButton.scss";
 
 /** This is a RubiwinButton branded for Rubiwin
  * full doc : https://material-ui.com/api/button/ */
@@ -21,7 +20,7 @@ const RubiwinButton = ({
     <StylesProvider injectFirst>
         <NextButton
             onClick={onClick}
-            className={`${style.button} ${className}`}
+            className={`rbw__button ${className}`}
             disabled={disabled}
             fullWidth={fullWidth}
             href={href}
