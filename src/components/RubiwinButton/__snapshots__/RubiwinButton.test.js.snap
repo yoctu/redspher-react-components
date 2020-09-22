@@ -3,7 +3,7 @@
 exports[`has a link to /test 1`] = `
 <a
   aria-disabled={false}
-  className="MuiButtonBase-root MuiButton-root MuiButton-text button "
+  className="MuiButtonBase-root MuiButton-root MuiButton-text rbw__button "
   href="/test"
   onBlur={[Function]}
   onDragLeave={[Function]}
@@ -31,7 +31,7 @@ exports[`has a link to /test 1`] = `
 
 exports[`is disabled 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-text button  Mui-disabled Mui-disabled"
+  className="MuiButtonBase-root MuiButton-root MuiButton-text rbw__button  Mui-disabled Mui-disabled"
   disabled={true}
   onBlur={[Function]}
   onDragLeave={[Function]}
@@ -57,7 +57,7 @@ exports[`is disabled 1`] = `
 
 exports[`is fullWidth 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-text button  MuiButton-fullWidth"
+  className="MuiButtonBase-root MuiButton-root MuiButton-text rbw__button  MuiButton-fullWidth"
   disabled={false}
   onBlur={[Function]}
   onDragLeave={[Function]}
@@ -83,7 +83,7 @@ exports[`is fullWidth 1`] = `
 
 exports[`renders correctly props object 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-text button test"
+  className="MuiButtonBase-root MuiButton-root MuiButton-text rbw__button test"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -138,7 +138,7 @@ exports[`renders correctly props object 1`] = `
 
 exports[`should be large 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-text button  MuiButton-textSizeLarge MuiButton-sizeLarge"
+  className="MuiButtonBase-root MuiButton-root MuiButton-text rbw__button  MuiButton-textSizeLarge MuiButton-sizeLarge"
   disabled={false}
   onBlur={[Function]}
   onDragLeave={[Function]}
@@ -167,7 +167,7 @@ exports[`should be large 1`] = `
 
 exports[`should be small 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-text button  MuiButton-textSizeSmall MuiButton-sizeSmall"
+  className="MuiButtonBase-root MuiButton-root MuiButton-text rbw__button  MuiButton-textSizeSmall MuiButton-sizeSmall"
   disabled={false}
   onBlur={[Function]}
   onDragLeave={[Function]}
