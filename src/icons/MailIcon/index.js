@@ -1,1 +1,1 @@
-export { default} from "./MailIcon";
+export { default } from './MailIcon'

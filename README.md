@@ -1,57 +1,30 @@
-## Available Scripts
+# redspher-components
 
-In the project directory, you can run:
+> reusable components for redspher
 
-### `npm start`
+[![NPM](https://img.shields.io/npm/v/redspher-components.svg)](https://www.npmjs.com/package/redspher-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Install
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```bash
+npm install --save redspher-components
+```
 
-### `npm t`
+## Usage
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+import React, { Component } from 'react'
 
-### `npm run build`
+import MyComponent from 'redspher-components'
+import 'redspher-components/dist/index.css'
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+class Example extends Component {
+  render() {
+    return <MyComponent />
+  }
+}
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Add a component
-
-### create component
-
-1. create a folder with the name of your component in `src/compoments`
-2. The component with the same name as the folder
-3. index.js with `export { default } from "./shinyCompoment"`
-4. import in components root index.js
-5. create a `component.module.scss` and a `component.test.js`
-6. create snapshots tests for your component.
-
-The documentation will be generated from comments you write before the components.
-The props and documentation is mandatory, comments before each props will be in docs.
-We have jest and enzyme as tests frameworks.
-[jest docs](https://jestjs.io/docs/en/getting-started)
-[enzyme docs](https://enzymejs.github.io/enzyme/docs/api/)
-
-We do at least snapshots testing.
-Enzyme helps with interaction testing.
-
-### create an example
-
-1. create a folder with the name of the component in `src/docs/examples/`
-2. create as many Examples as you want.
-
-## docs
-
-deploy new online docs `npm run deploy:docs`
-
-[online docs](https://yoctu.github.io/redspher-react-components/)
+MIT © [Vince6700](https://github.com/Vince6700)
