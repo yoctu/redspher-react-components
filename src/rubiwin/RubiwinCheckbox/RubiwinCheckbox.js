@@ -21,7 +21,7 @@ const RubiwinCheckbox = ({
   <StylesProvider injectFirst>
     <Checkbox
       checked={checked}
-      className={`${style.checkbox} ${className}`}
+      className={style.checkbox}
       disabled={disabled}
       id={id}
       onChange={onChange}
