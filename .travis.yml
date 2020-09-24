@@ -2,3 +2,14 @@ language: node_js
 node_js:
   - 12
   - 10
+
+before_deploy:
+  - npm run test
+  - npm run build
+  - npm run deploy
+  - npm publish
+
+deploy:
+  provider: npm
+  email: 'contact@yoctu.com'
+  api_key: '5dc1e9c3-e922-4351-a2f9-8e58dd36cb32'
