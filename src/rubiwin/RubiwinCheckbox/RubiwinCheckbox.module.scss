@@ -1,0 +1,17 @@
+@import '../rubiwin-constant';
+
+.checkbox {
+  color: $dynamiteGrey;
+}
+
+.root {
+  color: $primaryColor;
+}
+
+.checked {
+  color: $primaryColor !important;
+}
+
+.disabled {
+  color: $dynamiteGrey !important;
+}
