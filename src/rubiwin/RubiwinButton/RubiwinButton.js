@@ -20,7 +20,7 @@ const RubiwinButton = ({
   <StylesProvider injectFirst>
     <NextButton
       onClick={onClick}
-      className={style.button}
+      className={`${style.button} ${className}`}
       disabled={disabled}
       fullWidth={fullWidth}
       href={href}

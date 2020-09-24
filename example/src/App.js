@@ -25,7 +25,7 @@ const App = () => {
   }
 
   const sayHello = () => {
-    alert('Hello Rubiwin')
+    window.alert('Hello Rubiwin')
   }
 
   return (
