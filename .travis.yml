@@ -8,18 +8,12 @@ script:
 
 before_deploy:
   - npm run build
-  - npm run predeploy
+  - npm run deploy
 
 deploy:
   provider: npm
   email: $npm_mail
   api_key: $npm_key
   tag: next
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_key  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
   on:
     tags: true
-
-
