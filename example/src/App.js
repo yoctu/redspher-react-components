@@ -34,12 +34,14 @@ const App = () => {
         text='Create React Library Example 😄'
         onClick={sayHello}
       />
+      <br />
       <RubiwinCheckbox
         onChange={handleChange}
         checked={checked}
         inputProps={{ 'aria-label': 'primary checkbox' }}
         name='rubiwinCheck'
       />
+      <br />
       <RubiwinFormLabel
         control={<RubiwinCheckbox />}
         onChange={handleChange}
@@ -48,9 +50,13 @@ const App = () => {
         label='Rubiwin'
         labelPlacement='top'
       />
+      <br />
       <RubiwinInputField {...testProps} />
-      <RubiwinInputLabel htmlFor='test'>tests</RubiwinInputLabel>
+      <br />
+      <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
+      <br />
       <RubiwinInputField id='test' />
+      <br />
       <RubiwinSquareButton
         onClick={sayHello}
         text='Click me'
