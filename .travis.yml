@@ -15,9 +15,6 @@ deploy:
   github_token: $github_key
   keep_history: true
   provider: npm
-  local_dir: example/build
-  on:
-    tags: true
   email: $npm_mail
   api_key: $npm_key
   tag: next
