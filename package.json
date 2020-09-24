@@ -1,9 +1,9 @@
 {
   "name": "redspher-components",
   "description": "reusable components for redspher",
-  "author": "Vince6700",
+  "author": "Vincent Racelle",
   "license": "MIT",
-  "repository": "Vince6700/redspher-components",
+  "repository": "yoctu/redspher-components",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
