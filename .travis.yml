@@ -13,13 +13,11 @@ deploy:
   provider: npm
   email: $npm_mail
   api_key: $npm_key
-  on:
-    tags: true
-
-deploy:
   provider: pages
   skip_cleanup: true
   github_token: $github_key  # Set in the settings page of your repository, as a secure variable
   keep_history: true
+  on:
+    tags: true
 
 
