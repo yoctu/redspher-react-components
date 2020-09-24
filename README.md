@@ -13,9 +13,7 @@ npm install --save redspher-components
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'redspher-components'
+import { MyComponent } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 
 class Example extends Component {
@@ -25,6 +23,44 @@ class Example extends Component {
 }
 ```
 
+## contribute
+
+Clone repo https://github.com/yoctu/redspher-react-components
+
+install node modules
+```bash
+npm install
+```
+
+compile components
+```bash
+npm start
+```
+
+check demo and develop
+```bash
+cd example
+npm start
+```
+
+run tests
+```bash
+npm run test
+```
+
+test watch (jest only)
+```bash
+npm run test:watch
+```
+
+create a new folder with you component name, check the structure of the other components.
+We use scss modules
+create tests
+
+import component in src/index.js
+
+create examples in example folder.
+
 ## License
 
-MIT © [Vince6700](https://github.com/Vince6700)
+MIT © [yoctu](https://github.com/yoctu)
