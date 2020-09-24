@@ -1,10 +1,10 @@
 {
   "name": "redspher-components",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "reusable components for redspher",
   "author": "Vincent Racelle",
   "license": "MIT",
-  "repository": "yoctu/redspher-components",
+  "repository": "yoctu/redspher-react-components",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
