@@ -28,27 +28,32 @@ class Example extends Component {
 Clone repo https://github.com/yoctu/redspher-react-components
 
 install node modules
+
 ```bash
 npm install
 ```
 
 compile components
+
 ```bash
 npm start
 ```
 
 check demo and develop
+
 ```bash
 cd example
 npm start
 ```
 
 run tests
+
 ```bash
 npm run test
 ```
 
 test watch (jest only)
+
 ```bash
 npm run test:watch
 ```
@@ -60,6 +65,12 @@ create tests
 import component in src/index.js
 
 create examples in example folder.
+
+DONT FORGET TO UPDATE NPM VERSION !!!
+
+```bash
+npm version [<newversion> | major | minor | patch ]
+```
 
 ## License
 

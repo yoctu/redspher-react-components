@@ -30,6 +30,7 @@ const App = () => {
 
   return (
     <>
+      <h1>This is a test for github pages</h1>
       <RubiwinButton
         text='Create React Library Example 😄'
         onClick={sayHello}
