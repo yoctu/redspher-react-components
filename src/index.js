@@ -4,6 +4,7 @@ import RubiwinFormLabel from './rubiwin/RubiwinFormLabel'
 import RubiwinInputField from './rubiwin/RubiwinInputField'
 import RubiwinInputLabel from './rubiwin/RubiwinInputLabel'
 import RubiwinSquareButton from './rubiwin/RubiwinSquareButton'
+import RubiwinBackButton from './rubiwin/RubiwinBackButton'
 
 export {
   RubiwinButton,
@@ -11,5 +12,6 @@ export {
   RubiwinFormLabel,
   RubiwinInputField,
   RubiwinInputLabel,
-  RubiwinSquareButton
+  RubiwinSquareButton,
+  RubiwinBackButton
 }

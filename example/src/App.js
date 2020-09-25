@@ -6,7 +6,8 @@ import {
   RubiwinFormLabel,
   RubiwinInputField,
   RubiwinInputLabel,
-  RubiwinSquareButton
+  RubiwinSquareButton,
+  RubiwinBackButton
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 
@@ -31,10 +32,7 @@ const App = () => {
   return (
     <>
       <h1>This is a test for github pages</h1>
-      <RubiwinButton
-        text='Create React Library Example 😄'
-        onClick={sayHello}
-      />
+      <RubiwinButton text='yes yes' onClick={sayHello} />
       <br />
       <RubiwinCheckbox
         onChange={handleChange}
@@ -63,6 +61,8 @@ const App = () => {
         text='Click me'
         className='rubiwin'
       />
+      <br />
+      <RubiwinBackButton text={<>test</>} handleButton={sayHello} />
     </>
   )
 }
