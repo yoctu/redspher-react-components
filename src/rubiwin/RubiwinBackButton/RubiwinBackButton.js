@@ -1,19 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import style from './RubiwinBackButton.module.scss'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 
-const RubiwinBackButton = ({ handleButton, text }) => {
-  return (
-    <div className={style.backButton} onClick={handleButton}>
-      <span className=' glyphicon glyphicon-chevron-left' />
-      {text}
-    </div>
-  )
-}
+const RubiwinBackButton = ({ onClick, text }) => (
+  <div className={style.backButton} onClick={onClick}>
+    <ArrowBackIosIcon />
+    {text}
+  </div>
+)
 
 RubiwinBackButton.propTypes = {
-  handleButton: PropTypes.func.isRequired,
-  text: PropTypes.element
+  onClick: PropTypes.func.isRequired,
+  text: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
 }
 
 export default RubiwinBackButton

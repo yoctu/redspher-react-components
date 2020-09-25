@@ -62,7 +62,9 @@ const App = () => {
         className='rubiwin'
       />
       <br />
-      <RubiwinBackButton text={<>test</>} handleButton={sayHello} />
+      <RubiwinBackButton text={<>test</>} onClick={sayHello} />
+      <br />
+      <RubiwinBackButton text="test string" onClick={sayHello} />
     </>
   )
 }
