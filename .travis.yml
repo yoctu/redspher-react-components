@@ -10,14 +10,13 @@ before_deploy:
   - npm run predeploy
 
 deploy:
-  provider: npm
-  email: $npm_mail
-  api_key: $npm_key
-  tag: next
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_key
-  keep_history: true
-  local_dir: 'example/build'
+  - provider: npm
+    email: $npm_mail
+    api_key: $npm_key
+  - provider: pages
+    skip_cleanup: true
+    github_token: $github_key
+    keep_history: true
+    local_dir: 'example/build'
   on:
     tags: true
