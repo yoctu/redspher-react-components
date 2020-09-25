@@ -9,8 +9,10 @@ script:
   - npm run test
 
 before_deploy:
+  - ls
   - npm run build
   - npm run predeploy
+  - ls
 
 deploy:
   - provider: npm
