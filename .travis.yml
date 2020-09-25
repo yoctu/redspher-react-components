@@ -4,12 +4,6 @@ node_js:
 
 install:
   - npm install
-  - npm i -g npm-run-all
-  - npm i -g microbundle-crl
-  - npm i -g cross-env
-  - npm i -g react-scripts
-  - npm i -g node-sass
-  - npm i -g @material-ui/core
 
 script:
   - npm run test
@@ -20,6 +14,7 @@ before_deploy:
 
 deploy:
   - provider: npm
+    skip_cleanup: true
     email: $npm_mail
     api_key: $npm_key
     on:
