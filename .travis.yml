@@ -8,7 +8,7 @@ install:
   - npm i -g microbundle-crl
   - npm i -g cross-env
   - npm i -g react-scripts
-  - npm i -g node-dass
+  - npm i -g node-sass
   - npm i -g @material-ui/core
 
 script:
