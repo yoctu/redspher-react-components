@@ -11,8 +11,11 @@ import {
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 
+import componentData from './componentData.js'
+
 const App = () => {
   const [checked, setChecked] = useState(true)
+  console.log(componentData)
 
   const handleChange = () => {
     setChecked(!checked)
@@ -64,7 +67,7 @@ const App = () => {
       <br />
       <RubiwinBackButton text={<>test</>} onClick={sayHello} />
       <br />
-      <RubiwinBackButton text="test string" onClick={sayHello} />
+      <RubiwinBackButton text='test string' onClick={sayHello} />
     </>
   )
 }
