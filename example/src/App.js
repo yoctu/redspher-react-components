@@ -1,74 +1,28 @@
-import React, { useState } from 'react'
-
-import {
-  RubiwinButton,
-  RubiwinCheckbox,
-  RubiwinFormLabel,
-  RubiwinInputField,
-  RubiwinInputLabel,
-  RubiwinSquareButton,
-  RubiwinBackButton
-} from 'redspher-components'
-import 'redspher-components/dist/index.css'
-
-import componentData from './componentData.js'
+import React, { useEffect, useState } from 'react'
+import Layout from './components/layout'
+import useComponentData from './hooks/useComponentData'
+import ComponentDoc from './components/componentDoc'
 
 const App = () => {
-  const [checked, setChecked] = useState(true)
-  console.log(componentData)
+  const components = useComponentData()
+  const [selectedComponent, setSelectedComponent] = useState(null)
 
-  const handleChange = () => {
-    setChecked(!checked)
-  }
-  const testProps = {
-    className: 'test',
-    id: 'id',
-    name: 'name',
-    onChange: () => {},
-    placeholder: 'placeholder'
-  }
+  useEffect(() => {
+    window.addEventListener('hashchange', () => {
+      setSelectedComponent(window.location.hash.substr(1))
+    })
+    return () => {
+      window.removeEventListener('hashchange')
+    }
+  }, [])
 
-  const sayHello = () => {
-    window.alert('Hello Rubiwin')
-  }
+  const filterSelectedComponent = () =>
+    components.filter((component) => selectedComponent === component.name)[0]
 
   return (
-    <>
-      <h1>This is a test for github pages</h1>
-      <RubiwinButton text='yes yes' onClick={sayHello} />
-      <br />
-      <RubiwinCheckbox
-        onChange={handleChange}
-        checked={checked}
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-        name='rubiwinCheck'
-      />
-      <br />
-      <RubiwinFormLabel
-        control={<RubiwinCheckbox />}
-        onChange={handleChange}
-        checked={checked}
-        name='rubiwin'
-        label='Rubiwin'
-        labelPlacement='top'
-      />
-      <br />
-      <RubiwinInputField {...testProps} />
-      <br />
-      <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
-      <br />
-      <RubiwinInputField id='test' />
-      <br />
-      <RubiwinSquareButton
-        onClick={sayHello}
-        text='Click me'
-        className='rubiwin'
-      />
-      <br />
-      <RubiwinBackButton text={<>test</>} onClick={sayHello} />
-      <br />
-      <RubiwinBackButton text='test string' onClick={sayHello} />
-    </>
+    <Layout components={components}>
+      <ComponentDoc component={filterSelectedComponent()} />
+    </Layout>
   )
 }
 
