@@ -13,7 +13,6 @@ import Link from '@material-ui/core/Link'
 
 const Layout = ({ children = null, components }) => {
   const classes = useLayoutStyles()
-  const preventDefault = (event) => event.preventDefault()
 
   return (
     <div className={classes.root}>

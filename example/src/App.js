@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import Layout from './components/layout'
 import useComponentData from './hooks/useComponentData'
 import ComponentDoc from './components/componentDoc'
+import ExampleComponent from './components/exampleComponent'
+import Example from './components/example'
 
 const App = () => {
   const components = useComponentData()
   const [selectedComponent, setSelectedComponent] = useState(null)
+
+  console.log(components)
 
   useEffect(() => {
     window.addEventListener('hashchange', () => {
@@ -21,6 +25,12 @@ const App = () => {
 
   return (
     <Layout components={components}>
+      <Example>
+        {selectedComponent &&
+          filterSelectedComponent().examples.map((example) => (
+            <ExampleComponent example={example} key={example.name} />
+          ))}
+      </Example>
       <ComponentDoc component={filterSelectedComponent()} />
     </Layout>
   )

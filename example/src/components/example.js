@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Box from '@material-ui/core/Box'
 
-const Example = () => {
-  return <>example</>
+const Example = ({ children }) => <Box>{children}</Box>
+
+Example.propTypes = {
+  children: PropTypes.node
 }
-
-Example.propTypes = {}
 
 export default Example

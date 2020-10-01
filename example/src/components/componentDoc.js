@@ -18,7 +18,9 @@ const ComponentDoc = ({ component = null }) => {
           </Typography>
           <PropsTable>
             {Object.entries(component.props).map((prop) => {
-              return <PropsTableRow props={prop[1]} name={prop[0]} />
+              return (
+                <PropsTableRow props={prop[1]} name={prop[0]} key={prop[0]} />
+              )
             })}
           </PropsTable>
         </Container>
