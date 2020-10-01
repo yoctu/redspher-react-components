@@ -7,12 +7,14 @@ import {
   RubiwinInputField,
   RubiwinInputLabel,
   RubiwinSquareButton,
-  RubiwinBackButton
+  RubiwinBackButton,
+  AmazonTimePicker
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 
 const App = () => {
   const [checked, setChecked] = useState(true)
+  const [time, setTime] = useState(null)
 
   const handleChange = () => {
     setChecked(!checked)
@@ -64,7 +66,13 @@ const App = () => {
       <br />
       <RubiwinBackButton text={<>test</>} onClick={sayHello} />
       <br />
-      <RubiwinBackButton text="test string" onClick={sayHello} />
+      <RubiwinBackButton text='test string' onClick={sayHello} />
+      <br />
+      <AmazonTimePicker
+        value={time}
+        onClick={(event) => event.target.focus()}
+        onChange={(value) => setTime(value)}
+      />
     </>
   )
 }

@@ -5,6 +5,7 @@ import RubiwinInputField from './rubiwin/RubiwinInputField'
 import RubiwinInputLabel from './rubiwin/RubiwinInputLabel'
 import RubiwinSquareButton from './rubiwin/RubiwinSquareButton'
 import RubiwinBackButton from './rubiwin/RubiwinBackButton'
+import AmazonTimePicker from './amazon/AmazonTimePicker'
 
 export {
   RubiwinButton,
@@ -13,5 +14,6 @@ export {
   RubiwinInputField,
   RubiwinInputLabel,
   RubiwinSquareButton,
-  RubiwinBackButton
+  RubiwinBackButton,
+  AmazonTimePicker
 }
