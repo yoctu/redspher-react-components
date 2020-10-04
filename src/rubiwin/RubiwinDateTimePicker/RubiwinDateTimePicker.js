@@ -53,10 +53,10 @@ RubiwinDateTimePicker.propTypes = {
   /** onChange callback */
   onChange: PropTypes.func.isRequired,
   /** parsable date */
-  value: PropTypes.oneOfType(
-    [PropTypes.instanceOf(Date).isRequired],
+  value: PropTypes.oneOfType([
+    PropTypes.instanceOf(Date).isRequired,
     PropTypes.string
-  ),
+  ]),
   /** Enables keyboard listener for moving between days in calendar */
   allowKeyboardControl: PropTypes.bool,
   /** 12h/24h view for hour selection clock */

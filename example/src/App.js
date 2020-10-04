@@ -9,7 +9,7 @@ import {
   RubiwinSquareButton,
   RubiwinBackButton,
   AmazonTimePicker,
-  RubiwinDateTimePicker,
+  RubiwinDateTimePicker
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 
