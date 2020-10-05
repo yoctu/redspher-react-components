@@ -25,8 +25,10 @@ const RubiwinDateTimePicker = ({
   maxDate = new Date('2100-01-01'),
   minDate = new Date('1900-01-01'),
   onClose = () => {},
+  onError = () => {},
   className = '',
   variant = 'dialog',
+  TextFieldComponent,
   ...props
 }) => (
   <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -43,6 +45,12 @@ const RubiwinDateTimePicker = ({
         emptyLabel={emptyLabel}
         format={format}
         className={className}
+        minDate={minDate}
+        maxDate={maxDate}
+        onClose={onClose}
+        onError={onError}
+        variant={variant}
+        TextFieldComponent={TextFieldComponent}
         {...props}
       />
     </ThemeProvider>
@@ -76,13 +84,15 @@ RubiwinDateTimePicker.propTypes = {
   /** label text */
   label: PropTypes.string,
   /** Max selectable date */
-  maxDate: PropTypes.string,
+  maxDate: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
   /** Min selectable date */
-  minDate: PropTypes.string,
+  minDate: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
   /** On close callback */
   onClose: PropTypes.func,
   /** Picker container option */
-  variant: PropTypes.string
+  variant: PropTypes.string,
+  /** on error callback */
+  onError: PropTypes.func
 }
 
 export default RubiwinDateTimePicker
