@@ -29,7 +29,9 @@ const RubiwinInputField = ({
   rowsMax,
   startAdornment,
   type,
-  value
+  value,
+  onClick,
+  ...props
 }) => (
   <StylesProvider injectFirst>
     <Input
@@ -60,6 +62,8 @@ const RubiwinInputField = ({
       startAdornment={startAdornment}
       type={type}
       value={value}
+      onClick={onClick}
+      {...props}
     />
   </StylesProvider>
 )
@@ -102,7 +106,9 @@ RubiwinInputField.propTypes = {
   /** Type of the input element. It should be a valid HTML5 input type. */
   type: PropTypes.string,
   /** value */
-  value: PropTypes.any
+  value: PropTypes.any,
+  /** on click callback */
+  onClick: PropTypes.func
 }
 
 export default RubiwinInputField

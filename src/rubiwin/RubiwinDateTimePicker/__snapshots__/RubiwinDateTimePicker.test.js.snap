@@ -5,6 +5,7 @@ exports[`renders correctly props object 1`] = `
   className="MuiFormControl-root MuiTextField-root testClass"
   format="dd/MM/yyyy HH:mm"
   onClick={[Function]}
+  onError={[Function]}
   onKeyDown={[Function]}
 >
   <label

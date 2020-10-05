@@ -11,7 +11,8 @@ const testProps = {
   placeholder: 'placeholder',
   inputProps: { maxLength: 20 },
   type: 'text',
-  value: 'rubiwin'
+  value: 'rubiwin',
+  onClick: () => {}
 }
 
 /** Snapshots */

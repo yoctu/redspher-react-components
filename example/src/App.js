@@ -17,7 +17,7 @@ const App = () => {
   const [checked, setChecked] = useState(true)
   const [time, setTime] = useState(null)
   const [selectedDate, handleDateChange] = useState(
-    new Date('2018-01-01T00:00:00.000Z')
+    new Date('2020-10-05T00:00:00.000Z')
   )
 
   const handleChange = () => {
@@ -83,6 +83,8 @@ const App = () => {
         onChange={handleDateChange}
         className='test'
         label='test label'
+        minDate={new Date('2020-10-05T00:00:00.000Z')}
+        maxDate={'10/10/2020'}
       />
       <br />
     </>
