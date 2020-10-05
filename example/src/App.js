@@ -8,13 +8,17 @@ import {
   RubiwinInputLabel,
   RubiwinSquareButton,
   RubiwinBackButton,
-  AmazonTimePicker
+  AmazonTimePicker,
+  RubiwinDateTimePicker
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 
 const App = () => {
   const [checked, setChecked] = useState(true)
   const [time, setTime] = useState(null)
+  const [selectedDate, handleDateChange] = useState(
+    new Date('2018-01-01T00:00:00.000Z')
+  )
 
   const handleChange = () => {
     setChecked(!checked)
@@ -73,6 +77,14 @@ const App = () => {
         onClick={(event) => event.target.focus()}
         onChange={(value) => setTime(value)}
       />
+      <br />
+      <RubiwinDateTimePicker
+        value={selectedDate}
+        onChange={handleDateChange}
+        className='test'
+        label='test label'
+      />
+      <br />
     </>
   )
 }
