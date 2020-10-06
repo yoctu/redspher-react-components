@@ -54,7 +54,7 @@ const Layout = ({ children = null, components }) => {
 
 Layout.propTypes = {
   components: PropTypes.array,
-  children: PropTypes.element
+  children: PropTypes.node
 }
 
 export default Layout

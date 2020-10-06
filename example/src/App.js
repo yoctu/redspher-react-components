@@ -9,8 +9,6 @@ const App = () => {
   const components = useComponentData()
   const [selectedComponent, setSelectedComponent] = useState(null)
 
-  console.log(components)
-
   useEffect(() => {
     window.addEventListener('hashchange', () => {
       setSelectedComponent(window.location.hash.substr(1))
@@ -28,7 +26,11 @@ const App = () => {
       <Example>
         {selectedComponent &&
           filterSelectedComponent().examples.map((example) => (
-            <ExampleComponent example={example} key={example.name} />
+            <ExampleComponent
+              example={example}
+              key={example.name}
+              selectedComponent={selectedComponent}
+            />
           ))}
       </Example>
       <ComponentDoc component={filterSelectedComponent()} />

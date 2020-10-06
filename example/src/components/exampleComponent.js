@@ -1,16 +1,22 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import 'redspher-components/dist/index.css'
+import CodeExample from './CodeExample'
+const components = require('redspher-components')
 
-const ExampleComponent = ({ example }) => {
-  const [showCode, setShowCode] = useState(false)
+const ExampleComponent = ({ example, selectedComponent }) => {
+  const [showCode, setShowCode] = useState(true)
   const { code, description, name } = example
 
-  //const EComponent = require(`redspher-components/RubiwinButton`).default
+  const DemoComponent = components[selectedComponent]
 
-  //console.log(ExComponent)
+  return (
+    <>
+      {description && <h4>{description}</h4>}
 
-  return <>{}</>
+      {/*<CodeExample>{code}</CodeExample>*/}
+    </>
+  )
 }
 
 ExampleComponent.propTypes = {
