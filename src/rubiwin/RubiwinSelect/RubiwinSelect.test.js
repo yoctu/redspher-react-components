@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer'
 import RubiwinSelect from './rubiwinSelect'
 
 const testProps = {
-  children: <div></div>,
   className: 'test',
   autoWidth: false,
   id: 'testId',
@@ -11,7 +10,8 @@ const testProps = {
   onClose: () => {},
   onOpen: () => {},
   open: true,
-  renderValue: (value) => {}
+  renderValue: (value) => {},
+  value: ''
 }
 
 it('renders correctly props object', () => {

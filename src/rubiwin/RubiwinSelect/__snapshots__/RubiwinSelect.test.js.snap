@@ -74,6 +74,7 @@ exports[`renders correctly props object 1`] = `
     onAnimationStart={[Function]}
     onChange={[Function]}
     tabIndex={-1}
+    value=""
   />
   <svg
     aria-hidden={true}
