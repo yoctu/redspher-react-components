@@ -9,7 +9,9 @@ import {
   RubiwinSquareButton,
   RubiwinBackButton,
   AmazonTimePicker,
-  RubiwinDateTimePicker
+  RubiwinDateTimePicker,
+  RubiwinSelect,
+  RubiwinMenuItem
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 
@@ -19,6 +21,7 @@ const App = () => {
   const [selectedDate, handleDateChange] = useState(
     new Date('2020-10-05T00:00:00.000Z')
   )
+  const [selected, setSelected] = useState([10])
 
   const handleChange = () => {
     setChecked(!checked)
@@ -87,6 +90,19 @@ const App = () => {
         maxDate={'10/10/2020'}
       />
       <br />
+      <br />
+      <RubiwinSelect
+        labelId='demo-customized-select-label'
+        id='demo-customized-select'
+        value={selected}
+        onChange={(event) => setSelected(event.target.value)}
+        input={<RubiwinInputField fullWidth />}
+        multiple
+      >
+        <RubiwinMenuItem value={10}>Ten</RubiwinMenuItem>
+        <RubiwinMenuItem value={20}>Twenty</RubiwinMenuItem>
+        <RubiwinMenuItem value={30}>Thirty</RubiwinMenuItem>
+      </RubiwinSelect>
     </>
   )
 }
