@@ -22,7 +22,6 @@ const App = () => {
     new Date('2020-10-05T00:00:00.000Z')
   )
   const [selected, setSelected] = useState([10])
-  console.log(selected)
 
   const handleChange = () => {
     setChecked(!checked)
