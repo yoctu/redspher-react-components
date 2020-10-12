@@ -15,6 +15,14 @@ import {
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 
+const testRedender = () => {
+  const items = []
+  for (let i = 0; i < 30; i++) {
+    items.push(<RubiwinMenuItem value={i}>{i}</RubiwinMenuItem>)
+  }
+  return items
+}
+
 const App = () => {
   const [checked, setChecked] = useState(true)
   const [time, setTime] = useState(null)
@@ -99,9 +107,7 @@ const App = () => {
         input={<RubiwinInputField fullWidth />}
         multiple
       >
-        <RubiwinMenuItem value={10}>Ten</RubiwinMenuItem>
-        <RubiwinMenuItem value={20}>Twenty</RubiwinMenuItem>
-        <RubiwinMenuItem value={30}>Thirty</RubiwinMenuItem>
+        {testRedender()}
       </RubiwinSelect>
     </>
   )
