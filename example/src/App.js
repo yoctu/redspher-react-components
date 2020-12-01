@@ -11,9 +11,12 @@ import {
   AmazonTimePicker,
   RubiwinDateTimePicker,
   RubiwinSelect,
-  RubiwinMenuItem
+  RubiwinMenuItem,
+  DirectBusinessIcon,
+  RubiwinThemeProvider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
+import { Button } from '@material-ui/core'
 
 const testRedender = () => {
   const items = []
@@ -48,67 +51,78 @@ const App = () => {
 
   return (
     <>
-      <h1>This is a test for github pages</h1>
-      <RubiwinButton text='yes yes' onClick={sayHello} />
-      <br />
-      <RubiwinCheckbox
-        onChange={handleChange}
-        checked={checked}
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-        name='rubiwinCheck'
-      />
-      <br />
-      <RubiwinFormLabel
-        control={<RubiwinCheckbox />}
-        onChange={handleChange}
-        checked={checked}
-        name='rubiwin'
-        label='Rubiwin'
-        labelPlacement='top'
-      />
-      <br />
-      <RubiwinInputField {...testProps} />
-      <br />
-      <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
-      <br />
-      <RubiwinInputField id='test' />
-      <br />
-      <RubiwinSquareButton
-        onClick={sayHello}
-        text='Click me'
-        className='rubiwin'
-      />
-      <br />
-      <RubiwinBackButton text={<>test</>} onClick={sayHello} />
-      <br />
-      <RubiwinBackButton text='test string' onClick={sayHello} />
-      <br />
-      <AmazonTimePicker
-        value={time}
-        onClick={(event) => event.target.focus()}
-        onChange={(value) => setTime(value)}
-      />
-      <br />
-      <RubiwinDateTimePicker
-        value={selectedDate}
-        onChange={handleDateChange}
-        className='test'
-        label='test label'
-        minDate={new Date('2020-10-05T00:00:00.000Z')}
-        maxDate={'10/10/2020'}
-      />
-      <br />
-      <br />
-      <RubiwinSelect
-        labelId='demo-customized-select-label'
-        id='demo-customized-select'
-        value={selected}
-        onChange={(event) => setSelected(event.target.value)}
-        input={<RubiwinInputField fullWidth />}
-        multiple
-      >
-        {testRedender()}
-      </RubiwinSelect>
+      <RubiwinThemeProvider>
+        <h1>This is a test for github pages</h1>
+        <RubiwinButton text='yes yes' onClick={sayHello} />
+        <br />
+        <RubiwinCheckbox
+          onChange={handleChange}
+          checked={checked}
+          inputProps={{ 'aria-label': 'primary checkbox' }}
+          name='rubiwinCheck'
+        />
+        <br />
+        <RubiwinFormLabel
+          control={<RubiwinCheckbox />}
+          onChange={handleChange}
+          checked={checked}
+          name='rubiwin'
+          label='Rubiwin'
+          labelPlacement='top'
+        />
+        <br />
+        <RubiwinInputField {...testProps} />
+        <br />
+        <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
+        <br />
+        <RubiwinInputField id='test' />
+        <br />
+        <RubiwinSquareButton
+          onClick={sayHello}
+          text='Click me'
+          className='rubiwin'
+        />
+        <br />
+        <RubiwinBackButton text={<>test</>} onClick={sayHello} />
+        <br />
+        <RubiwinBackButton text='test string' onClick={sayHello} />
+        <br />
+        <AmazonTimePicker
+          value={time}
+          onClick={(event) => event.target.focus()}
+          onChange={(value) => setTime(value)}
+        />
+        <br />
+        <RubiwinDateTimePicker
+          value={selectedDate}
+          onChange={handleDateChange}
+          className='test'
+          label='test label'
+          minDate={new Date('2020-10-05T00:00:00.000Z')}
+          maxDate={'10/10/2020'}
+        />
+        <br />
+        <br />
+        <RubiwinSelect
+          labelId='demo-customized-select-label'
+          id='demo-customized-select'
+          value={selected}
+          onChange={(event) => setSelected(event.target.value)}
+          input={<RubiwinInputField fullWidth />}
+          multiple
+        >
+          {testRedender()}
+        </RubiwinSelect>
+        <br />
+        <Button
+          variant='contained'
+          startIcon={<DirectBusinessIcon />}
+          color='primary'
+          size='large'
+        >
+          Bid on it !
+        </Button>
+      </RubiwinThemeProvider>
     </>
   )
 }

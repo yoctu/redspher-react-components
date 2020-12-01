@@ -9,6 +9,8 @@ import AmazonTimePicker from './amazon/AmazonTimePicker'
 import RubiwinDateTimePicker from './rubiwin/RubiwinDateTimePicker'
 import RubiwinSelect from './rubiwin/RubiwinSelect'
 import RubiwinMenuItem from './rubiwin/RubiwinMenuItem'
+import DirectBusinessIcon from './icons/DirectBusinessIcon'
+import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
 
 export {
   RubiwinButton,
@@ -21,5 +23,7 @@ export {
   AmazonTimePicker,
   RubiwinDateTimePicker,
   RubiwinSelect,
-  RubiwinMenuItem
+  RubiwinMenuItem,
+  DirectBusinessIcon,
+  RubiwinThemeProvider
 }
