@@ -1,0 +1,9 @@
+@import '../rubiwin-constant';
+@import '../mixins';
+
+.select {
+  &:focus {
+    background-color: rgba($primaryColor, 0.05) !important;
+  }
+  font-family: $font-family !important;
+}
