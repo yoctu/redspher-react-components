@@ -4,6 +4,7 @@ import useComponentData from './hooks/useComponentData'
 import ComponentDoc from './components/componentDoc'
 import ExampleComponent from './components/exampleComponent'
 import Example from './components/example'
+import { rubiwinTheme } from 'redspher-components'
 
 const App = () => {
   const components = useComponentData()
@@ -23,17 +24,19 @@ const App = () => {
 
   return (
     <Layout components={components}>
-      <Example>
-        {selectedComponent &&
-          filterSelectedComponent().examples.map((example) => (
-            <ExampleComponent
-              example={example}
-              key={example.name}
-              selectedComponent={selectedComponent}
-            />
-          ))}
-      </Example>
-      <ComponentDoc component={filterSelectedComponent()} />
+      <rubiwinTheme>
+        <Example>
+          {selectedComponent &&
+            filterSelectedComponent().examples.map((example) => (
+              <ExampleComponent
+                example={example}
+                key={example.name}
+                selectedComponent={selectedComponent}
+              />
+            ))}
+        </Example>
+        <ComponentDoc component={filterSelectedComponent()} />
+      </rubiwinTheme>
     </Layout>
   )
 }

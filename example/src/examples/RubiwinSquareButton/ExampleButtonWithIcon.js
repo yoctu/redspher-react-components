@@ -1,7 +1,6 @@
 import React from 'react'
-import { RubiwinSquareButton } from 'redspher-components'
+import { RubiwinSquareButton, MailIcon } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import MailIcon from '../../../icons/MailIcon'
 
 const sayHello = () => {
   alert('Hello Rubiwin')

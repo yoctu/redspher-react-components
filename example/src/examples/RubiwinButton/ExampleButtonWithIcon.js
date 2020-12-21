@@ -1,5 +1,5 @@
 import React from 'react'
-import { RubiwinButton } from 'redspher-components'
+import { RubiwinButton, MailIcon } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 
 const sayHello = () => {

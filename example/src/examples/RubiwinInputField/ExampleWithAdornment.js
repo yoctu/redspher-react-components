@@ -1,7 +1,6 @@
 import React from 'react'
-import { RubiwinInputField } from 'redspher-components'
+import { RubiwinInputField, MailIcon } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import MailIcon from '../../../icons/MailIcon/MailIcon'
 
 const testProps = {
   className: 'test',
