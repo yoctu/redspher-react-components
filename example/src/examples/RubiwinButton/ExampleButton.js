@@ -5,7 +5,7 @@ const sayHello = () => {
   alert('Hello Rubiwin')
 }
 
-/** This is an example RubiwinButton Branding with an additonal class */
+/** This is an example RubiwinButton Branding with an additional class */
 const ExampleButton = () => (
   <Button
     onClick={sayHello}

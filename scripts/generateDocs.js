@@ -10,6 +10,7 @@ const paths = {
   output: path.join(__dirname, '../example', 'src', 'componentData.js')
 }
 
+// eslint-disable-next-line eqeqeq
 const enableWatchMode = process.argv.slice(2) == '--watch'
 if (enableWatchMode) {
   chokidar.watch([paths.components]).on('change', function (event, path) {
