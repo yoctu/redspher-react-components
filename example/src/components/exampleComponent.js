@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import 'redspher-components/dist/index.css'
 import CodeExample from './CodeExample'
 import Button from '@material-ui/core/Button'
-import { Box } from '@material-ui/core'
+import { Box, ThemeProvider } from '@material-ui/core'
+import { rubiwinTheme } from 'redspher-components'
 
 const ExampleComponent = ({ example, selectedComponent }) => {
   const [showCode, setShowCode] = useState(false)
@@ -16,7 +17,9 @@ const ExampleComponent = ({ example, selectedComponent }) => {
     <>
       {description && <h4>{description}</h4>}
       <Box mb={1}>
-        <DemoComponent />
+        <ThemeProvider theme={rubiwinTheme}>
+          <DemoComponent />
+        </ThemeProvider>
       </Box>
       <Box mb={1}>
         <Button

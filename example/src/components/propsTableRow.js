@@ -13,6 +13,9 @@ const PropsTableRow = ({ props, name }) => (
   </TableRow>
 )
 
-PropsTableRow.propTypes = {}
+PropsTableRow.propTypes = {
+  props: PropTypes.any,
+  name: PropTypes.string
+}
 
 export default PropsTableRow
