@@ -1,7 +1,6 @@
-import React from 'react'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { createMuiTheme } from '@material-ui/core/styles'
 
-const theme = createMuiTheme({
+const rubiwinTheme = createMuiTheme({
   palette: {
     primary: {
       main: '#00C3FF',
@@ -32,8 +31,4 @@ const theme = createMuiTheme({
   }
 })
 
-const RubiwinThemeProvider = ({ children }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
-)
-
-export default RubiwinThemeProvider
+export default rubiwinTheme

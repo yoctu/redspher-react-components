@@ -1,6 +1,6 @@
 import React from 'react'
-import { RubiwinButton } from 'redspher-components'
-import 'redspher-components/dist/index.css'
+import { Button, ThemeProvider } from '@material-ui/core'
+import { rubiwinTheme } from 'redspher-components'
 
 const sayHello = () => {
   alert('Hello Rubiwin')
@@ -8,7 +8,16 @@ const sayHello = () => {
 
 /** This is an example RubiwinButton Branding with an additonal class */
 const ExampleButton = () => (
-  <RubiwinButton onClick={sayHello} text={'Click me'} className={'rubiwin'} />
+  <ThemeProvider theme={rubiwinTheme}>
+    <Button
+      onClick={sayHello}
+      className='rubiwin'
+      variant='contained'
+      color='primary'
+    >
+      Click me
+    </Button>
+  </ThemeProvider>
 )
 
 export default ExampleButton
