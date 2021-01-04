@@ -1,1 +1,1 @@
-export { default } from './rubiwinSelect'
+export { default } from './RubiwinSelect'

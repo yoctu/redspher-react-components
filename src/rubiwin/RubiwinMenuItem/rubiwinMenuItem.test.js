@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import RubiwinMenuItem from './rubiwinMenuItem'
+import RubiwinMenuItem from './RubiwinMenuItem'
 
 it('renders correctly', () => {
   const tree = renderer

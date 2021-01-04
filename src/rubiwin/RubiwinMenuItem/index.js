@@ -1,1 +1,1 @@
-export { default } from './rubiwinMenuItem'
+export { default } from './RubiwinMenuItem'
