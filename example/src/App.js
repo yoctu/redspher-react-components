@@ -4,7 +4,6 @@ import useComponentData from './hooks/useComponentData'
 import ComponentDoc from './components/componentDoc'
 import ExampleComponent from './components/exampleComponent'
 import Example from './components/example'
-import { RubiwinThemeProvider } from 'redspher-components'
 
 const App = () => {
   const components = useComponentData()
