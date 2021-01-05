@@ -7,6 +7,7 @@ import { StylesProvider } from '@material-ui/core/styles'
 
 /** this is a simple input
  * full doc: https://material-ui.com/api/input/
+ * Deprecated: use Mui and provider
  * */
 
 const RubiwinInputField = ({

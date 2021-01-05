@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Select from '@material-ui/core/Select'
 import style from './rubiwinSelect.module.scss'
 
-/** full docs : https://material-ui.com/components/selects/ */
+/** full docs : https://material-ui.com/components/selects/ Deprecated, use Mui directly with provider */
 const RubiwinSelect = ({
   children,
   className,

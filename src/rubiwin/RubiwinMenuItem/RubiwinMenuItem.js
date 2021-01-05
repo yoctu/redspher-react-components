@@ -3,6 +3,11 @@ import PropTypes from 'prop-types'
 import MenuItem from '@material-ui/core/MenuItem'
 import style from './rubiwinMenuItem.module.scss'
 
+/**
+ * full doc: https://material-ui.com/
+ * Deprecated: use Mui and provider
+ * */
+
 const RubiwinMenuItem = ({ children, className, component, ...props }) => (
   <MenuItem
     className={className}

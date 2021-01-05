@@ -4,6 +4,13 @@ import useComponentData from './hooks/useComponentData'
 import ComponentDoc from './components/componentDoc'
 import ExampleComponent from './components/exampleComponent'
 import Example from './components/example'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useLocation
+} from 'react-router-dom'
 
 const App = () => {
   const components = useComponentData()
