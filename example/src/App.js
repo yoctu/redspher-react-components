@@ -10,21 +10,12 @@ import {
   RubiwinBackButton,
   AmazonTimePicker,
   RubiwinDateTimePicker,
-  RubiwinSelect,
   RubiwinMenuItem,
   DirectBusinessIcon,
   RubiwinThemeProvider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Select } from '@material-ui/core'
-
-const testRedender = () => {
-  const items = []
-  for (let i = 0; i < 30; i++) {
-    items.push(<RubiwinMenuItem value={i}>{i}</RubiwinMenuItem>)
-  }
-  return items
-}
 
 const testRedenderTwo = () => {
   const items = []
