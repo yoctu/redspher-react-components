@@ -16,12 +16,20 @@ import {
   RubiwinThemeProvider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button } from '@material-ui/core'
+import { Button, MenuItem, Select } from '@material-ui/core'
 
 const testRedender = () => {
   const items = []
   for (let i = 0; i < 30; i++) {
     items.push(<RubiwinMenuItem value={i}>{i}</RubiwinMenuItem>)
+  }
+  return items
+}
+
+const testRedenderTwo = () => {
+  const items = []
+  for (let i = 0; i < 30; i++) {
+    items.push(<MenuItem value={i}>{i}</MenuItem>)
   }
   return items
 }
@@ -103,17 +111,7 @@ const App = () => {
         />
         <br />
         <br />
-        <RubiwinSelect
-          labelId='demo-customized-select-label'
-          id='demo-customized-select'
-          value={selected}
-          onChange={(event) => setSelected(event.target.value)}
-          input={<RubiwinInputField fullWidth />}
-          multiple
-        >
-          {testRedender()}
-        </RubiwinSelect>
-        <br />
+
         <Button
           variant='contained'
           startIcon={<DirectBusinessIcon />}
@@ -122,6 +120,16 @@ const App = () => {
         >
           Bid on it !
         </Button>
+        <br />
+        <br />
+        <Select
+          value={selected}
+          onChange={(event) => setSelected(event.target.value)}
+          multiple
+          variant="outlined"
+        >
+          {testRedenderTwo()}
+        </Select>
       </RubiwinThemeProvider>
     </>
   )

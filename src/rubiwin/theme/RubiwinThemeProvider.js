@@ -1,6 +1,8 @@
 import React from 'react'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
+const primaryColor = '#00C3FF'
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -26,6 +28,17 @@ const theme = createMuiTheme({
       iconSizeLarge: {
         '&> *:first-child': {
           fontSize: '25px'
+        }
+      }
+    },
+    MuiListItem: {
+      root: {
+        '&$selected': {
+          backgroundColor: primaryColor,
+          color: 'white',
+          '&:hover': {
+            backgroundColor: `${primaryColor}FF`
+          }
         }
       }
     }
