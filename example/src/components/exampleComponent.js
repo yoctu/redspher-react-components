@@ -4,6 +4,7 @@ import 'redspher-components/dist/index.css'
 import CodeExample from './CodeExample'
 import Button from '@material-ui/core/Button'
 import { Box } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
 
 const ExampleComponent = ({ example, selectedComponent }) => {
   const [showCode, setShowCode] = useState(false)
