@@ -10,7 +10,6 @@ import {
   RubiwinBackButton,
   AmazonTimePicker,
   RubiwinDateTimePicker,
-  RubiwinMenuItem,
   DirectBusinessIcon,
   RubiwinThemeProvider
 } from 'redspher-components'
