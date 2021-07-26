@@ -1,8 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Checkbox from '@material-ui/core/Checkbox'
-import { StylesProvider } from '@material-ui/core/styles'
-import style from './RubiwinCheckbox.module.scss'
+import { Checkbox, CardMedia, makeStyles } from '@material-ui/core'
+import checked from '../../icons/checked.svg'
+
+const useStyles = makeStyles((theme) => {
+  return {
+    checkedIcon: {
+      width: '14px',
+      height: '14px'
+    }
+  }
+})
 
 /** this is a Mui Checkbox branded for Rubiwin
  * full dod : https://material-ui.com/api/checkbox/
@@ -16,12 +24,14 @@ const RubiwinCheckbox = ({
   size = 'medium',
   inputRef,
   value,
-  name
-}) => (
-  <StylesProvider injectFirst>
+  name,
+  color = 'primary',
+  props
+}) => {
+  const classes = useStyles()
+  return (
     <Checkbox
       checked={checked}
-      className={`${style.checkbox} ${className}`}
       disabled={disabled}
       id={id}
       onChange={onChange}
@@ -29,15 +39,15 @@ const RubiwinCheckbox = ({
       inputRef={inputRef}
       value={value}
       name={name}
-      color='primary'
-      classes={{
-        root: style.root,
-        checked: style.checked,
-        disabled: style.disabled
-      }}
+      color={color}
+      className={className}
+      checkedIcon={
+        <CardMedia className={classes.checkedIcon} image={checked} />
+      }
+      {...props}
     />
-  </StylesProvider>
-)
+  )
+}
 
 RubiwinCheckbox.propTypes = {
   /** component is checked or not */
@@ -57,7 +67,9 @@ RubiwinCheckbox.propTypes = {
   /** value of input */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** name attribute of input */
-  name: PropTypes.string
+  name: PropTypes.string,
+  /** color from MUI theme */
+  color: PropTypes.string
 }
 
 export default RubiwinCheckbox

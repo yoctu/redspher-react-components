@@ -70,6 +70,14 @@ import component in src/index.js
 
 create examples in example folder.
 
+## develop on other projects
+
+```bash
+npm i yoctu/redspher-react-components#feature/myFeature
+```
+
+## deploy
+
 DONT FORGET TO UPDATE NPM VERSION !!!
 
 ```bash
