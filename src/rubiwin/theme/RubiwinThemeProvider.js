@@ -7,20 +7,34 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       main: '#00C3FF',
-      light: '#6bf6ff',
-      dark: '#0093cc'
+      light: '#CAF3FF',
+      dark: '#006B8D'
     },
     secondary: {
+      main: '#00FFF3',
+      light: '#70ffff',
+      dark: '#00cbc0'
+    },
+    tertiary: {
       main: '#eb3343',
       light: '#ff6c6e',
       dark: '#b1001c'
+    },
+    grey: {
+      main: '#171F46',
+      light: '#8F8F8F',
+      lighter: '#F4F4F4'
     }
+  },
+  typography: {
+    fontFamily: ['Montserrat', 'sans-serif'].join(',')
   },
   overrides: {
     MuiButton: {
       root: {
-        fontWeight: 'bold',
-        borderRadius: '8px'
+        borderRadius: '8px',
+        fontSize: '14px',
+        textTransform: 'none'
       },
       containedPrimary: {
         color: '#FFF'
@@ -37,9 +51,30 @@ const theme = createMuiTheme({
           backgroundColor: primaryColor,
           color: 'white',
           '&:hover': {
-            backgroundColor: `${primaryColor}FF`
+            backgroundColor: primaryColor + 'FF'
           }
         }
+      }
+    },
+    MuiTableCell: {
+      head: {
+        backgroundColor: '#171F46',
+        color: 'white'
+      },
+      body: {
+        color: '#171F46 !important'
+      }
+    },
+    MuiTableRow: {
+      root: {
+        '&:nth-of-type(even)': {
+          backgroundColor: '#F4F4F4'
+        }
+      }
+    },
+    MuiCheckbox: {
+      root: {
+        color: '#8F8F8F'
       }
     }
   }
