@@ -62,7 +62,8 @@ const theme = createMuiTheme({
         color: 'white'
       },
       body: {
-        color: '#171F46 !important'
+        color: '#171F46 !important',
+        fontSize: '12px !important'
       }
     },
     MuiTableRow: {
