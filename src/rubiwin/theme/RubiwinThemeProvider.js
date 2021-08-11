@@ -1,29 +1,28 @@
 import React from 'react'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-
-const primaryColor = '#00C3FF'
+import themeConstants from './themeConstants'
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#00C3FF',
-      light: '#CAF3FF',
-      dark: '#006B8D'
+      main: themeConstants.primary.main,
+      light: themeConstants.primary.light,
+      dark: themeConstants.primary.dark
     },
     secondary: {
-      main: '#00FFF3',
-      light: '#70ffff',
-      dark: '#00cbc0'
+      main: themeConstants.secondary.main,
+      light: themeConstants.secondary.light,
+      dark: themeConstants.secondary.dark
     },
     tertiary: {
-      main: '#eb3343',
-      light: '#ff6c6e',
-      dark: '#b1001c'
+      main: themeConstants.tertiary.main,
+      light: themeConstants.tertiary.light,
+      dark: themeConstants.tertiary.dark
     },
     grey: {
-      main: '#171F46',
-      light: '#8F8F8F',
-      lighter: '#F4F4F4'
+      main: themeConstants.grey.main,
+      light: themeConstants.grey.light,
+      lighter: themeConstants.grey.lighter
     }
   },
   typography: {
@@ -37,7 +36,7 @@ const theme = createMuiTheme({
         textTransform: 'none'
       },
       containedPrimary: {
-        color: '#FFF'
+        color: themeConstants.white.main
       },
       iconSizeLarge: {
         '&> *:first-child': {
@@ -48,10 +47,10 @@ const theme = createMuiTheme({
     MuiListItem: {
       root: {
         '&$selected': {
-          backgroundColor: primaryColor,
-          color: 'white',
+          backgroundColor: themeConstants.primary.main,
+          color: themeConstants.white.main,
           '&:hover': {
-            backgroundColor: primaryColor + 'FF'
+            backgroundColor: themeConstants.primary.main + 'FF'
           }
         }
       }
@@ -62,27 +61,27 @@ const theme = createMuiTheme({
         color: 'white'
       },
       body: {
-        color: '#171F46 !important',
+        color: themeConstants.grey.main + '!important',
         fontSize: '12px !important'
       }
     },
     MuiTableRow: {
       root: {
         '&:nth-of-type(even)': {
-          backgroundColor: '#F4F4F4'
+          backgroundColor: themeConstants.grey.lighter
         }
       }
     },
     MuiCheckbox: {
       root: {
-        color: '#8F8F8F'
+        color: themeConstants.grey.light
       }
     },
     MuiDivider: {
       root: {
         marginTop: '10px',
         marginBottom: '10px',
-        backgroundColor: '#F4F4F4'
+        backgroundColor: themeConstants.grey.lighter
       }
     }
   }
