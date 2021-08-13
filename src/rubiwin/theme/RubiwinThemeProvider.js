@@ -26,7 +26,17 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    fontFamily: ['Montserrat', 'sans-serif'].join(',')
+    fontFamily: ['Montserrat', 'sans-serif'].join(','),
+    h2: {
+      fontWeight: 'bold',
+      color: themeConstants.grey.main,
+      fontSize: '32px',
+      lineHeight: '39px',
+      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]: {
+        fontSize: '22px',
+        lineHeight: '26px'
+      }
+    }
   },
   overrides: {
     MuiButton: {
@@ -56,9 +66,18 @@ const theme = createMuiTheme({
       }
     },
     MuiTableCell: {
+      root: {
+        '&:first-of-type': {
+          borderLeft: '1px solid transparent'
+        },
+        '&:last-of-type': {
+          borderRight: '1px solid transparent'
+        }
+      },
       head: {
-        backgroundColor: '#171F46',
-        color: 'white'
+        backgroundColor: themeConstants.grey.main,
+        color: 'white',
+        borderTop: '0px !important'
       },
       body: {
         color: themeConstants.grey.main + '!important',
