@@ -44,8 +44,18 @@ const theme = createMuiTheme({
       containedPrimary: {
         color: themeConstants.white.main
       },
+      outlinedPrimary: {
+        color: themeConstants.black.main,
+        '&:hover': {
+          backgroundColor: themeConstants.primary.main,
+          color: themeConstants.white.main
+        }
+      },
       textPrimary: {
-        color: themeConstants.black.main
+        color: themeConstants.black.main,
+        '&:hover': {
+          color: themeConstants.primary.main
+        }
       },
       iconSizeLarge: {
         '&> *:first-child': {

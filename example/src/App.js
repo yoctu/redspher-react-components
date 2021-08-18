@@ -123,9 +123,16 @@ const App = () => {
         </Select>
       </RubiwinThemeProvider>
       <br />
+      <h1>--------- SHIPPER COMPONENTS ---------</h1>
       <br />
       <ShipperThemeProvider>
-        <Button text='yes yes' onClick={sayHello} color="primary" variant="outlined" startIcon={<DirectBusinessIcon />}>test</Button>
+        <Button color="primary" variant="contained">Shipper Button</Button>
+        <br />
+        <br />
+        <Button color="primary" variant="outlined">Shipper Button</Button>
+        <br />
+        <br />
+        <Button color="primary" variant="text">Shipper Button</Button>
       </ShipperThemeProvider>
     </>
   )
