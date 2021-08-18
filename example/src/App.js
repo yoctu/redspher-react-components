@@ -11,7 +11,8 @@ import {
   AmazonTimePicker,
   RubiwinDateTimePicker,
   DirectBusinessIcon,
-  RubiwinThemeProvider
+  RubiwinThemeProvider,
+  ShipperThemeProvider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Select } from '@material-ui/core'
@@ -121,6 +122,11 @@ const App = () => {
           {testRedenderTwo()}
         </Select>
       </RubiwinThemeProvider>
+      <br />
+      <br />
+      <ShipperThemeProvider>
+        <Button text='yes yes' onClick={sayHello} color="primary" variant="outlined" startIcon={<DirectBusinessIcon />}>test</Button>
+      </ShipperThemeProvider>
     </>
   )
 }
