@@ -133,6 +133,17 @@ const App = () => {
         <br />
         <br />
         <Button color="primary" variant="text">Shipper Button</Button>
+        <br />
+        <br />
+        <Radio color="primary" checked="true"> </Radio>
+        <br />
+        <br />
+        <Radio color="primary"> </Radio>
+        <br />
+        <br />
+        <Radio color="grey" disabled="true"> </Radio>
+        <br />
+        <br />
       </ShipperThemeProvider>
     </>
   )

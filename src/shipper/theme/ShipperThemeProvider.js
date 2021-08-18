@@ -62,6 +62,19 @@ const theme = createMuiTheme({
           fontSize: '25px'
         }
       }
+    },
+    MuiRadio: {
+      root: {
+        '&:disabled': {
+          color: themeConstants.grey.main
+        }
+      },
+      colorPrimary: {
+        color: themeConstants.primary.main
+      },
+      colorGrey: {
+        color: themeConstants.grey.light
+      }
     }
   }
 })
