@@ -15,7 +15,7 @@ import {
   ShipperThemeProvider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Select } from '@material-ui/core'
+import { Button, MenuItem, Radio, Select } from '@material-ui/core'
 
 const testRedenderTwo = () => {
   const items = []

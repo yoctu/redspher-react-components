@@ -32,10 +32,11 @@ const theme = createMuiTheme({
       color: themeConstants.grey.main,
       fontSize: '32px',
       lineHeight: '39px',
-      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]: {
-        fontSize: '22px',
-        lineHeight: '26px'
-      }
+      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
+        {
+          fontSize: '22px',
+          lineHeight: '26px'
+        }
     }
   },
   overrides: {
