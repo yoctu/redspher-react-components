@@ -15,7 +15,7 @@ import {
   ShipperThemeProvider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Select } from '@material-ui/core'
+import { Button, MenuItem, Radio, Select } from '@material-ui/core'
 
 const testRedenderTwo = () => {
   const items = []
@@ -133,6 +133,17 @@ const App = () => {
         <br />
         <br />
         <Button color="primary" variant="text">Shipper Button</Button>
+        <br />
+        <br />
+        <Radio color="primary" checked="true"> </Radio>
+        <br />
+        <br />
+        <Radio color="primary"> </Radio>
+        <br />
+        <br />
+        <Radio color="grey" disabled="true"> </Radio>
+        <br />
+        <br />
       </ShipperThemeProvider>
     </>
   )
