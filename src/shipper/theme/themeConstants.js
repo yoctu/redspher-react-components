@@ -18,6 +18,15 @@ const constants = {
   black: {
     main: '#000'
   },
+  green: {
+    main: '#00CF53'
+  },
+  orange: {
+    main: '#FE7062'
+  },
+  red: {
+    main: '#F20738'
+  },
   breakpoints: {
     lg: 1280,
     md: 960,

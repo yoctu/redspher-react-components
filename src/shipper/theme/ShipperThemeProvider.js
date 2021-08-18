@@ -13,11 +13,6 @@ const theme = createMuiTheme({
       main: themeConstants.secondary.main,
       light: themeConstants.secondary.light,
       dark: themeConstants.secondary.dark
-    },
-    grey: {
-      dark: themeConstants.grey.dark,
-      main: themeConstants.grey.main,
-      light: themeConstants.grey.light
     }
   },
   typography: {
@@ -71,9 +66,22 @@ const theme = createMuiTheme({
       },
       colorPrimary: {
         color: themeConstants.primary.main
+      }
+    },
+    MuiChip: {
+      root: {
+        backgroundColor: themeConstants.green.main,
+        color: themeConstants.white.main,
+        '&$disabled': {
+          backgroundColor: themeConstants.grey.dark,
+          opacity: 1
+        }
       },
-      colorGrey: {
-        color: themeConstants.grey.light
+      colorPrimary: {
+        backgroundColor: themeConstants.orange.main
+      },
+      colorSecondary: {
+        backgroundColor: themeConstants.red.main
       }
     }
   }
