@@ -12,7 +12,8 @@ import {
   RubiwinDateTimePicker,
   DirectBusinessIcon,
   RubiwinThemeProvider,
-  ShipperThemeProvider
+  ShipperThemeProvider,
+  CheckIcon
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Select } from '@material-ui/core'
@@ -127,12 +128,15 @@ const App = () => {
       <br />
       <ShipperThemeProvider>
         <Button color="primary" variant="contained">Shipper Button</Button>
+        <Button startIcon={<CheckIcon primaryColor={'#fff'} secondaryColor={'#fff'} />} color="primary" variant="contained">Shipper Button</Button>
         <br />
         <br />
         <Button color="primary" variant="outlined">Shipper Button</Button>
+        <Button startIcon={<CheckIcon />} color="primary" variant="outlined">Shipper Button</Button>
         <br />
         <br />
         <Button color="primary" variant="text">Shipper Button</Button>
+        <Button startIcon={<CheckIcon />} color="primary" variant="text">Shipper Button</Button>
       </ShipperThemeProvider>
     </>
   )

@@ -42,13 +42,16 @@ const theme = createMuiTheme({
         textTransform: 'none'
       },
       containedPrimary: {
-        color: themeConstants.white.main
+        color: themeConstants.white.main,
       },
       outlinedPrimary: {
         color: themeConstants.black.main,
         '&:hover': {
           backgroundColor: themeConstants.primary.main,
-          color: themeConstants.white.main
+          color: themeConstants.white.main,
+          '& .MuiSvgIcon-root > *': {
+            stroke: themeConstants.white.main
+          }
         }
       },
       textPrimary: {
@@ -61,6 +64,11 @@ const theme = createMuiTheme({
         '&> *:first-child': {
           fontSize: '25px'
         }
+      }
+    },
+    MuiSvgIcon: {
+      root: {
+        color: 'transparent'
       }
     }
   }
