@@ -262,25 +262,25 @@ const App = () => {
         <EditIcon />
         <br />
         <br />
-        <Radio color="primary" checked="true"> </Radio>
+        <Radio color="primary" checked="true"/>
         <br />
         <br />
-        <Radio color="primary"> </Radio>
+        <Radio color="primary"/>
         <br />
         <br />
-        <Radio color="primary" disabled="true"> </Radio>
+        <Radio color="primary" disabled="true"/>
         <br />
         <br />
-        <Chip color="default" label="Label"></Chip>
+        <Chip color="default" label="Label"/>
         <br />
         <br />
-        <Chip color="primary" label="Label"></Chip>
+        <Chip color="primary" label="Label"/>
         <br />
         <br />
-        <Chip color="secondary" label="Label"></Chip>
+        <Chip color="secondary" label="Label"/>
         <br />
         <br />
-        <Chip color="primary" label="Label" disabled></Chip>
+        <Chip color="primary" label="Label" disabled/>
         <br />
         <br />
       </ShipperThemeProvider>
