@@ -86,6 +86,26 @@ const theme = createMuiTheme({
       colorSecondary: {
         backgroundColor: themeConstants.secondary.main
       }
+    },
+    MuiPagination: {
+      root: {
+        '& .MuiButtonBase-root': {
+          color: themeConstants.grey.main,
+          '&:hover': {
+            color: themeConstants.primary.main
+          },
+          '& .MuiSvgIcon-root': {
+            color: themeConstants.primary.main
+          }
+        },
+        '& .Mui-selected': {
+          color: themeConstants.white.main,
+          '&:hover': {
+            backgroundColor: themeConstants.white.main,
+            color: themeConstants.primary.main
+          }
+        }
+      }
     }
   }
 })
