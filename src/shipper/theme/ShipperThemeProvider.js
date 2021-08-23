@@ -81,7 +81,7 @@ const theme = createMuiTheme({
         backgroundColor: themeConstants.orange.main
       },
       colorSecondary: {
-        backgroundColor: themeConstants.red.main
+        backgroundColor: themeConstants.secondary.main
       }
     }
   }

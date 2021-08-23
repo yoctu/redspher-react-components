@@ -24,9 +24,6 @@ const constants = {
   orange: {
     main: '#FE7062'
   },
-  red: {
-    main: '#F20738'
-  },
   breakpoints: {
     lg: 1280,
     md: 960,
