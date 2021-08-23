@@ -13,11 +13,6 @@ const theme = createMuiTheme({
       main: themeConstants.secondary.main,
       light: themeConstants.secondary.light,
       dark: themeConstants.secondary.dark
-    },
-    grey: {
-      dark: themeConstants.grey.dark,
-      main: themeConstants.grey.main,
-      light: themeConstants.grey.light
     }
   },
   typography: {
@@ -42,7 +37,7 @@ const theme = createMuiTheme({
         textTransform: 'none'
       },
       containedPrimary: {
-        color: themeConstants.white.main,
+        color: themeConstants.white.main
       },
       outlinedPrimary: {
         color: themeConstants.black.main,
@@ -64,6 +59,32 @@ const theme = createMuiTheme({
         '&> *:first-child': {
           fontSize: '25px'
         }
+      }
+    },
+    MuiRadio: {
+      root: {
+        '&:disabled': {
+          color: themeConstants.grey.main
+        }
+      },
+      colorPrimary: {
+        color: themeConstants.primary.main
+      }
+    },
+    MuiChip: {
+      root: {
+        backgroundColor: themeConstants.green.main,
+        color: themeConstants.white.main,
+        '&$disabled': {
+          backgroundColor: themeConstants.grey.dark,
+          opacity: 1
+        }
+      },
+      colorPrimary: {
+        backgroundColor: themeConstants.orange.main
+      },
+      colorSecondary: {
+        backgroundColor: themeConstants.secondary.main
       }
     },
     MuiSvgIcon: {

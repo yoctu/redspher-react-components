@@ -75,7 +75,7 @@ import {
   EditIcon
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Select } from '@material-ui/core'
+import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
 
 const testRedenderTwo = () => {
   const items = []
@@ -113,6 +113,8 @@ const App = () => {
       <RubiwinThemeProvider>
         <h1>This is a test for github pages</h1>
         <RubiwinButton text='yes yes' onClick={sayHello} />
+        <br />
+        <Button color="tertiary"> Poney </Button>
         <br />
         <RubiwinCheckbox
           onChange={handleChange}
@@ -186,15 +188,12 @@ const App = () => {
       <h1>--------- SHIPPER COMPONENTS ---------</h1>
       <br />
       <ShipperThemeProvider>
-        <Button color="primary" variant="contained">Shipper Button</Button>
         <Button startIcon={<PlusIcon primaryColor={'#fff'} secondaryColor={'#fff'} />} color="primary" variant="contained">Shipper Button</Button>
         <br />
         <br />
-        <Button color="primary" variant="outlined">Shipper Button</Button>
         <Button startIcon={<PlusIcon />} color="primary" variant="outlined">Shipper Button</Button>
         <br />
         <br />
-        <Button color="primary" variant="text">Shipper Button</Button>
         <Button startIcon={<PlusIcon />} color="primary" variant="text">Shipper Button</Button>
         <br />
         <br />
@@ -258,6 +257,29 @@ const App = () => {
         <ArrowRight2Icon />
         <ArrowTop2Icon />
         <EditIcon />
+        <br />
+        <br />
+        <Radio color="primary" checked="true"> </Radio>
+        <br />
+        <br />
+        <Radio color="primary"> </Radio>
+        <br />
+        <br />
+        <Radio color="primary" disabled="true"> </Radio>
+        <br />
+        <br />
+        <Chip color="default" label="Label"></Chip>
+        <br />
+        <br />
+        <Chip color="primary" label="Label"></Chip>
+        <br />
+        <br />
+        <Chip color="secondary" label="Label"></Chip>
+        <br />
+        <br />
+        <Chip color="primary" label="Label" disabled></Chip>
+        <br />
+        <br />
       </ShipperThemeProvider>
     </>
   )
