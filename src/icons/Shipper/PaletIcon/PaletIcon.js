@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function PaletIcon(props) {
   return (
-    <SvgIcon {...props} viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <rect
         x='2.88889'
         y='7.75'

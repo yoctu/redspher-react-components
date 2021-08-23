@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function Truck03Icon(props) {
   return (
-    <SvgIcon {...props} viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M12.4156 4V11.158H1V4H12.4156Z'
         stroke={

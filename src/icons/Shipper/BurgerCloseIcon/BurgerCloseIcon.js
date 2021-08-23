@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function BurgerCloseIcon(props) {
   return (
-    <SvgIcon {...props} viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <rect
         width='17.1102'
         height='2.13878'

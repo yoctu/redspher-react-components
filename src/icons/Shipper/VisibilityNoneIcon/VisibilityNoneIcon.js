@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function VisibilityNoneIcon(props) {
   return (
-    <SvgIcon {...props} viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M10 16.0001C5.90909 16.0001 2.41547 13.5121 1 10.0001C2.41547 6.48807 5.90909 4.00006 10 4.00006C14.095 4.00006 17.5846 6.48807 19 10.0001C17.5846 13.5121 14.095 16.0001 10 16.0001Z'
         stroke={

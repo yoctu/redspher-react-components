@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function QuotesIcon(props) {
   return (
-    <SvgIcon {...props} viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M14.6483 12.8235V2H2V18H14.6483V16.8235V16'
         stroke={

@@ -86,11 +86,6 @@ const theme = createMuiTheme({
       colorSecondary: {
         backgroundColor: themeConstants.secondary.main
       }
-    },
-    MuiSvgIcon: {
-      root: {
-        color: 'transparent'
-      }
     }
   }
 })

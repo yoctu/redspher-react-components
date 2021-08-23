@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function HelpIcon(props) {
   return (
-    <SvgIcon {...props} viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M10.109 3C5.74932 3 2.21798 6.12984 2.21798 10.006C2.21798 11.5107 2.76294 12.9071 3.67847 14.0507L2 17H10.109C14.4687 17 18 13.8702 18 9.99398C17.9891 6.12984 14.4578 3 10.109 3Z'
         stroke={

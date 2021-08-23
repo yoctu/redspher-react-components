@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function People1Icon(props) {
   return (
-    <SvgIcon {...props} viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M15.84 15.46C14.38 13.9 12.31 12.92 10 12.92C7.69 12.92 5.62 13.9 4.16 15.46'
         stroke={

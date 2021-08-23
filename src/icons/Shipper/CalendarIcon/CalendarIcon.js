@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function CalendarIcon(props) {
   return (
-    <SvgIcon {...props} viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M17 18H3C2.46667 18 2 17.5334 2 17V4.33337C2 3.80004 2.46667 3.33337 3 3.33337H17C17.5333 3.33337 18 3.80004 18 4.33337V17C18 17.5334 17.5333 18 17 18ZM3 4.00004C2.8 4.00004 2.66667 4.13337 2.66667 4.33337V17C2.66667 17.2 2.8 17.3334 3 17.3334H17C17.2 17.3334 17.3333 17.2 17.3333 17V4.33337C17.3333 4.13337 17.2 4.00004 17 4.00004H3Z'
         stroke={

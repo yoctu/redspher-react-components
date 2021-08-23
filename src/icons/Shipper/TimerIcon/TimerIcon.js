@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function TimerIcon(props) {
   return (
-    <SvgIcon {...props} viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M13.9916 15.1644C13.9553 14.3995 13.7048 13.6637 13.2726 13.0521C12.8403 12.4405 12.2461 11.9811 11.5667 11.7333L10.0083 11.0489L8.49998 11.7245C7.82403 11.9718 7.23359 12.4306 6.80552 13.041C6.37745 13.6514 6.13161 14.3851 6.10001 15.1467V16.4089H13.9916V15.1644Z'
         stroke={
