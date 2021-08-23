@@ -13,7 +13,7 @@ import DirectBusinessIcon from './icons/DirectBusinessIcon'
 import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
 import ShipperThemeProvider from './shipper/theme/ShipperThemeProvider'
 import PlusIcon from './icons/Shipper/PlusIcon'
-import CheckIcon from './icons/Shipper/CheckIcon'
+import ConfirmationIcon from './icons/Shipper/ConfirmationIcon'
 import OffersIcon from './icons/Shipper/OffersIcon'
 import PaletIcon from './icons/Shipper/PaletIcon'
 import StatisticsIcon from './icons/Shipper/StatiticsIcon'
@@ -31,6 +31,47 @@ import PickupDetailsIcon from './icons/Shipper/PickupDetailsIcon'
 import SearchIcon from './icons/Shipper/SearchIcon'
 import PinIcon from './icons/Shipper/PinIcon'
 import RequestIcon from './icons/Shipper/RequestIcon'
+import StepIcon from './icons/Shipper/StepIcon'
+import ActionIcon from './icons/Shipper/ActionIcon'
+import MonitoringIcon from './icons/Shipper/MonitoringIcon'
+import DeliveryDetailsIcon from './icons/Shipper/DeliveryDetailsIcon'
+import PriceIcon from './icons/Shipper/PriceIcon'
+import InformationIcon from './icons/Shipper/InformationIcon'
+import AutomaticIcon from './icons/Shipper/AutomaticIcon'
+import HelpIcon from './icons/Shipper/HelpIcon'
+import LogoAddressBookIcon from './icons/Shipper/LogoAddressBookIcon'
+import Truck01Icon from './icons/Shipper/Truck01Icon'
+import Truck02Icon from './icons/Shipper/Truck02Icon'
+import Truck03Icon from './icons/Shipper/Truck03Icon'
+import Truck04Icon from './icons/Shipper/Truck04Icon'
+import ExpertIcon from './icons/Shipper/ExpertIcon'
+import People1Icon from './icons/Shipper/People1Icon'
+import ArrowLeftIcon from './icons/Shipper/ArrowLeftIcon'
+import ArrowRightIcon from './icons/Shipper/ArrowRightIcon'
+import ArrowTopIcon from './icons/Shipper/ArrowTopIcon'
+import ArrowBottomIcon from './icons/Shipper/ArrowBottomIcon'
+import AddStepsIcon from './icons/Shipper/AddStepsIcon'
+import PeopleGroupIcon from './icons/Shipper/PeopleGroupIcon'
+import CheckIcon from './icons/Shipper/CheckIcon'
+import SideLoadIcon from './icons/Shipper/SideLoadIcon'
+import TailLiftIcon from './icons/Shipper/TailLiftIcon'
+import DownloadIcon from './icons/Shipper/DownloadIcon'
+import UploadIcon from './icons/Shipper/UploadIcon'
+import BurgerIcon from './icons/Shipper/BurgerIcon'
+import BurgerCloseIcon from './icons/Shipper/BurgerCloseIcon'
+import StarIcon from './icons/Shipper/StarIcon'
+import TimerIcon from './icons/Shipper/TimerIcon'
+import NotIncludedIcon from './icons/Shipper/NotIncludedIcon'
+import VisibilityIcon from './icons/Shipper/VisibilityIcon'
+import VisibilityNoneIcon from './icons/Shipper/VisibilityNoneIcon'
+import LoadingIcon from './icons/Shipper/LoadingIcon'
+import WarningIcon from './icons/Shipper/WarningIcon'
+import People2Icon from './icons/Shipper/People2Icon'
+import ArrowLeft2Icon from './icons/Shipper/ArrowLeft2Icon'
+import ArrowRight2Icon from './icons/Shipper/ArrowRight2Icon'
+import ArrowTop2Icon from './icons/Shipper/ArrowTop2Icon'
+import ArrowBottom2Icon from './icons/Shipper/ArrowBottom2Icon'
+import EditIcon from './icons/Shipper/EditIcon'
 
 export {
   RubiwinButton,
@@ -48,7 +89,7 @@ export {
   RubiwinThemeProvider,
   ShipperThemeProvider,
   PlusIcon,
-  CheckIcon,
+  ConfirmationIcon,
   OffersIcon,
   PaletIcon,
   StatisticsIcon,
@@ -65,5 +106,46 @@ export {
   PickupDetailsIcon,
   SearchIcon,
   PinIcon,
-  RequestIcon
+  RequestIcon,
+  StepIcon,
+  ActionIcon,
+  MonitoringIcon,
+  DeliveryDetailsIcon,
+  PriceIcon,
+  InformationIcon,
+  AutomaticIcon,
+  HelpIcon,
+  LogoAddressBookIcon,
+  Truck01Icon,
+  Truck02Icon,
+  Truck03Icon,
+  Truck04Icon,
+  ExpertIcon,
+  People1Icon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowTopIcon,
+  ArrowBottomIcon,
+  AddStepsIcon,
+  PeopleGroupIcon,
+  CheckIcon,
+  SideLoadIcon,
+  TailLiftIcon,
+  DownloadIcon,
+  UploadIcon,
+  BurgerIcon,
+  BurgerCloseIcon,
+  StarIcon,
+  TimerIcon,
+  NotIncludedIcon,
+  VisibilityIcon,
+  VisibilityNoneIcon,
+  LoadingIcon,
+  WarningIcon,
+  People2Icon,
+  ArrowLeft2Icon,
+  ArrowRight2Icon,
+  ArrowTop2Icon,
+  ArrowBottom2Icon,
+  EditIcon
 }

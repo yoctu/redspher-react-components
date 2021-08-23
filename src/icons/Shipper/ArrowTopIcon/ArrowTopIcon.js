@@ -2,11 +2,11 @@ import React from 'react'
 import { SvgIcon } from '@material-ui/core'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
-function CheckIcon(props) {
+function ArrowTopIcon(props) {
   return (
     <SvgIcon {...props} viewBox='0 0 20 20'>
       <path
-        d='M4 11.7273L8.28571 15L16 6'
+        d='M6 11.9999L10.2426 7.7573L14.4853 11.9999'
         stroke={
           props.primaryColor ? props.primaryColor : themeConstants.primary.main
         }
@@ -17,4 +17,4 @@ function CheckIcon(props) {
   )
 }
 
-export default CheckIcon
+export default ArrowTopIcon

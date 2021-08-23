@@ -2,19 +2,20 @@ import React from 'react'
 import { SvgIcon } from '@material-ui/core'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
-function CheckIcon(props) {
+function LogoAddressBookIcon(props) {
   return (
     <SvgIcon {...props} viewBox='0 0 20 20'>
-      <path
-        d='M4 11.7273L8.28571 15L16 6'
+      <ellipse
+        cx='10'
+        cy='10'
+        rx='8'
+        ry='8'
         stroke={
           props.primaryColor ? props.primaryColor : themeConstants.primary.main
         }
-        strokeLinecap='round'
-        strokeLinejoin='round'
       />
     </SvgIcon>
   )
 }
 
-export default CheckIcon
+export default LogoAddressBookIcon

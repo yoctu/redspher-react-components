@@ -14,7 +14,7 @@ import {
   RubiwinThemeProvider,
   ShipperThemeProvider,
   PlusIcon,
-  CheckIcon,
+  ConfirmationIcon,
   OffersIcon,
   PaletIcon,
   StatisticsIcon,
@@ -31,7 +31,48 @@ import {
   PickupDetailsIcon,
   SearchIcon,
   PinIcon,
-  RequestIcon
+  RequestIcon,
+  StepIcon,
+  ActionIcon,
+  MonitoringIcon,
+  DeliveryDetailsIcon,
+  PriceIcon,
+  InformationIcon,
+  AutomaticIcon,
+  HelpIcon,
+  LogoAddressBookIcon,
+  Truck01Icon,
+  Truck02Icon,
+  Truck03Icon,
+  Truck04Icon,
+  ExpertIcon,
+  People1Icon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowTopIcon,
+  ArrowBottomIcon,
+  AddStepsIcon,
+  PeopleGroupIcon,
+  CheckIcon,
+  SideLoadIcon,
+  TailLiftIcon,
+  DownloadIcon,
+  UploadIcon,
+  BurgerIcon,
+  BurgerCloseIcon,
+  StarIcon,
+  TimerIcon,
+  NotIncludedIcon,
+  VisibilityIcon,
+  VisibilityNoneIcon,
+  LoadingIcon,
+  WarningIcon,
+  People2Icon,
+  ArrowLeft2Icon,
+  ArrowRight2Icon,
+  ArrowTop2Icon,
+  ArrowBottom2Icon,
+  EditIcon
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Select } from '@material-ui/core'
@@ -158,7 +199,7 @@ const App = () => {
         <br />
         <br />
         <PlusIcon />
-        <CheckIcon />
+        <ConfirmationIcon />
         <OffersIcon />
         <StatisticsIcon />
         <CalendarIcon />
@@ -176,6 +217,47 @@ const App = () => {
         <SearchIcon />
         <PinIcon />
         <RequestIcon />
+        <StepIcon />
+        <ActionIcon />
+        <MonitoringIcon />
+        <DeliveryDetailsIcon />
+        <PriceIcon />
+        <InformationIcon />
+        <AutomaticIcon />
+        <HelpIcon />
+        <LogoAddressBookIcon />
+        <Truck01Icon />
+        <Truck02Icon />
+        <Truck03Icon />
+        <Truck04Icon />
+        <ExpertIcon />
+        <People1Icon />
+        <ArrowLeftIcon />
+        <ArrowBottomIcon />
+        <ArrowRightIcon />
+        <ArrowTopIcon />
+        <AddStepsIcon />
+        <PeopleGroupIcon />
+        <CheckIcon />
+        <SideLoadIcon />
+        <TailLiftIcon />
+        <DownloadIcon />
+        <UploadIcon />
+        <BurgerIcon />
+        <BurgerCloseIcon />
+        <StarIcon />
+        <TimerIcon />
+        <NotIncludedIcon />
+        <VisibilityIcon />
+        <VisibilityNoneIcon />
+        <LoadingIcon />
+        <WarningIcon />
+        <People2Icon />
+        <ArrowLeft2Icon />
+        <ArrowBottom2Icon />
+        <ArrowRight2Icon />
+        <ArrowTop2Icon />
+        <EditIcon />
       </ShipperThemeProvider>
     </>
   )
