@@ -15,7 +15,17 @@ import {
   ShipperThemeProvider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
+import { Button, MenuItem, Radio, Select, Chip, Slider, Typography } from '@material-ui/core'
+import { makeStyles, createStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      width: 300 + theme.spacing(3) * 2,
+      paddingLeft: theme.spacing(2)
+    },
+  }),
+);
 
 const testRedenderTwo = () => {
   const items = []
@@ -48,13 +58,28 @@ const App = () => {
     window.alert('Hello Rubiwin')
   }
 
+  const classes = useStyles();
+  const [rangeValue, setRangeValue] = React.useState([1, 10]);
+  const [rangeDeltaValue, setRangeDeltaValue] = useState(0);
+
+  const handleRangeChange = (event, newValue) => {
+    setRangeValue(newValue);
+    displayRangeDelta();
+  }
+
+  const displayRangeDelta = () => {
+    setRangeDeltaValue(`${rangeValue[1] - rangeValue[0]}`)
+  }
+
+  const rangeLabelFormat = (value) => {
+    return `${value%24}:00`;
+  }
+
   return (
     <>
       <RubiwinThemeProvider>
         <h1>This is a test for github pages</h1>
         <RubiwinButton text='yes yes' onClick={sayHello} />
-        <br />
-        <Button color="tertiary"> Poney </Button>
         <br />
         <RubiwinCheckbox
           onChange={handleChange}
@@ -156,6 +181,21 @@ const App = () => {
         <br />
         <br />
         <Chip color="primary" label="Label" disabled></Chip>
+        <br />
+        <br />
+        <div className={classes.root}>
+          <Slider
+            value={rangeValue}
+            onChange={handleRangeChange}
+            valueLabelDisplay="on"
+            valueLabelFormat={rangeLabelFormat}
+            min={0}
+            max={23}
+          />
+          <Typography variant="body2">
+          + {rangeDeltaValue}h
+          </Typography>
+        </div>
         <br />
         <br />
       </ShipperThemeProvider>
