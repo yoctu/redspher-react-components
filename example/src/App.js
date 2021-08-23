@@ -188,12 +188,15 @@ const App = () => {
       <h1>--------- SHIPPER COMPONENTS ---------</h1>
       <br />
       <ShipperThemeProvider>
+        <Button color="primary" variant="contained">Shipper Button</Button>
         <Button startIcon={<PlusIcon primaryColor={'#fff'} secondaryColor={'#fff'} />} color="primary" variant="contained">Shipper Button</Button>
         <br />
         <br />
+        <Button color="primary" variant="outlined">Shipper Button</Button>
         <Button startIcon={<PlusIcon />} color="primary" variant="outlined">Shipper Button</Button>
         <br />
         <br />
+        <Button color="primary" variant="text">Shipper Button</Button>
         <Button startIcon={<PlusIcon />} color="primary" variant="text">Shipper Button</Button>
         <br />
         <br />
