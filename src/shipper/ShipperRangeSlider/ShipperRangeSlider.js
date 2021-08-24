@@ -3,9 +3,9 @@ import style from './ShipperRangeSlider.module.scss'
 import { Slider, Typography } from '@material-ui/core'
 import PropTypes from 'prop-types'
 
-const ShipperRangeSlider = ({ min, max, rangeLabelFormat }) => {
+const ShipperRangeSlider = ({ min, max, rangeLabelFormat, shownLabelFormat }) => {
   const [rangeValue, setRangeValue] = React.useState([min, max])
-  const [rangeDeltaValue, setRangeDeltaValue] = useState(max - min)
+  const [shownLabel, setShownLabel] = useState(max - min)
 
   const handleRangeChange = (event, newValue) => {
     setRangeValue(newValue)
@@ -13,7 +13,7 @@ const ShipperRangeSlider = ({ min, max, rangeLabelFormat }) => {
   }
 
   const displayRangeDelta = () => {
-    setRangeDeltaValue(`${rangeValue[1] - rangeValue[0]}`)
+    setShownLabel(`${rangeValue[1] - rangeValue[0]}`)
   }
   return (
     <div className={style.rangeSlider}>
@@ -33,7 +33,7 @@ const ShipperRangeSlider = ({ min, max, rangeLabelFormat }) => {
         }}
         variant='body2'
       >
-        + {rangeDeltaValue}h
+        {shownLabelFormat(shownLabel)}
       </Typography>
     </div>
   )
@@ -45,7 +45,9 @@ ShipperRangeSlider.propTypes = {
   /** max value for the slider */
   max: PropTypes.number,
   /** formatted label */
-  rangeLabelFormat: PropTypes.bool
+  rangeLabelFormat: PropTypes.string,
+  /** format for label */
+  shownLabelFormat: PropTypes.string
 }
 
 export default ShipperRangeSlider

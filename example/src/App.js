@@ -56,6 +56,10 @@ const App = () => {
     return `${value % 24}:00`
   }
 
+  const shownLabelFormat = (value) => {
+    return `+ ${value}h`
+  }
+
   return (
     <>
       <RubiwinThemeProvider>
@@ -169,6 +173,7 @@ const App = () => {
             min={min}
             max={max}
             rangeLabelFormat={rangeLabelFormat}
+            shownLabelFormat={shownLabelFormat}
           />
         </div>
         <br />
