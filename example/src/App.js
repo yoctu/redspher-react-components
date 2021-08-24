@@ -12,20 +12,11 @@ import {
   RubiwinDateTimePicker,
   DirectBusinessIcon,
   RubiwinThemeProvider,
-  ShipperThemeProvider
+  ShipperThemeProvider,
+  ShipperRangeSlider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Radio, Select, Chip, Slider, Typography } from '@material-ui/core'
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      width: 300 + theme.spacing(3) * 2,
-      paddingLeft: theme.spacing(2)
-    },
-  }),
-);
+import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
 
 const testRedenderTwo = () => {
   const items = []
@@ -58,9 +49,12 @@ const App = () => {
     window.alert('Hello Rubiwin')
   }
 
-  const classes = useStyles();
-  const [rangeValue, setRangeValue] = React.useState([1, 10]);
-  const [rangeDeltaValue, setRangeDeltaValue] = useState(0);
+  const min = 0;
+  const max = 23;
+  const [rangeValue, setRangeValue] = React.useState([min, max]);
+  const [rangeDeltaValue, setRangeDeltaValue] = useState(max - min);
+  const [paddingLeft, setPaddingLeft] = useState(0);
+  const [paddingRight, setPaddingRight] = useState(0);
 
   const handleRangeChange = (event, newValue) => {
     setRangeValue(newValue);
@@ -68,7 +62,9 @@ const App = () => {
   }
 
   const displayRangeDelta = () => {
-    setRangeDeltaValue(`${rangeValue[1] - rangeValue[0]}`)
+    setPaddingLeft((100 * rangeValue[0]) / max);
+    setPaddingRight((100 * (max - rangeValue[1])) / max);
+    setRangeDeltaValue(`${rangeValue[1] - rangeValue[0]}`);
   }
 
   const rangeLabelFormat = (value) => {
@@ -171,30 +167,30 @@ const App = () => {
         <Radio color="primary" disabled="true"> </Radio>
         <br />
         <br />
-        <Chip color="default" label="Label"></Chip>
+        <Chip color="default" label="Label"/>
         <br />
         <br />
-        <Chip color="primary" label="Label"></Chip>
+        <Chip color="primary" label="Label"/>
         <br />
         <br />
-        <Chip color="secondary" label="Label"></Chip>
+        <Chip color="secondary" label="Label"/>
         <br />
         <br />
-        <Chip color="primary" label="Label" disabled></Chip>
+        <Chip color="primary" label="Label" disabled/>
         <br />
         <br />
-        <div className={classes.root}>
-          <Slider
+        <div style={{width: '400px', marginLeft: '50px'}}>
+          <ShipperRangeSlider
             value={rangeValue}
             onChange={handleRangeChange}
             valueLabelDisplay="on"
             valueLabelFormat={rangeLabelFormat}
-            min={0}
-            max={23}
+            min={min}
+            max={max}
+            paddingLeft={paddingLeft}
+            paddingRight={paddingRight}
+            rangeDeltaValue={rangeDeltaValue}
           />
-          <Typography variant="body2">
-          + {rangeDeltaValue}h
-          </Typography>
         </div>
         <br />
         <br />

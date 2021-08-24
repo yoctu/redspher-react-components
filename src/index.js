@@ -12,6 +12,7 @@ import RubiwinMenuItem from './rubiwin/RubiwinMenuItem'
 import DirectBusinessIcon from './icons/DirectBusinessIcon'
 import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
 import ShipperThemeProvider from './shipper/theme/ShipperThemeProvider'
+import ShipperRangeSlider from './shipper/ShipperRangeSlider'
 
 export {
   RubiwinButton,
@@ -27,5 +28,6 @@ export {
   RubiwinMenuItem,
   DirectBusinessIcon,
   RubiwinThemeProvider,
-  ShipperThemeProvider
+  ShipperThemeProvider,
+  ShipperRangeSlider
 }
