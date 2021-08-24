@@ -49,26 +49,11 @@ const App = () => {
     window.alert('Hello Rubiwin')
   }
 
-  const min = 0;
-  const max = 23;
-  const [rangeValue, setRangeValue] = React.useState([min, max]);
-  const [rangeDeltaValue, setRangeDeltaValue] = useState(max - min);
-  const [paddingLeft, setPaddingLeft] = useState(0);
-  const [paddingRight, setPaddingRight] = useState(0);
-
-  const handleRangeChange = (event, newValue) => {
-    setRangeValue(newValue);
-    displayRangeDelta();
-  }
-
-  const displayRangeDelta = () => {
-    setPaddingLeft((100 * rangeValue[0]) / max);
-    setPaddingRight((100 * (max - rangeValue[1])) / max);
-    setRangeDeltaValue(`${rangeValue[1] - rangeValue[0]}`);
-  }
+  const min = 0
+  const max = 23
 
   const rangeLabelFormat = (value) => {
-    return `${value%24}:00`;
+    return `${value % 24}:00`
   }
 
   return (
@@ -181,15 +166,9 @@ const App = () => {
         <br />
         <div style={{width: '400px', marginLeft: '50px'}}>
           <ShipperRangeSlider
-            value={rangeValue}
-            onChange={handleRangeChange}
-            valueLabelDisplay="on"
-            valueLabelFormat={rangeLabelFormat}
             min={min}
             max={max}
-            paddingLeft={paddingLeft}
-            paddingRight={paddingRight}
-            rangeDeltaValue={rangeDeltaValue}
+            rangeLabelFormat={rangeLabelFormat}
           />
         </div>
         <br />
