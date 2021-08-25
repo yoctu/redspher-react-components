@@ -43,7 +43,10 @@ const theme = createMuiTheme({
         color: themeConstants.black.main,
         '&:hover': {
           backgroundColor: themeConstants.primary.main,
-          color: themeConstants.white.main
+          color: themeConstants.white.main,
+          '& .MuiSvgIcon-root > *': {
+            stroke: themeConstants.white.main
+          }
         }
       },
       textPrimary: {
