@@ -136,21 +136,21 @@ const ShipperCardInvoice = ({
 ShipperCardInvoice.propTypes = {
   /** text to display as title for the card, it can be <Translate> component too */
   title: PropTypes.string.isRequired,
-
+  /** text to display as reference of the invoice */
   reference: PropTypes.string.isRequired,
-
+  /** text to display as user reference of the invoice */
   userReference: PropTypes.string.isRequired,
-
+  /** date to display as invoice date */
   invoiceDate: PropTypes.string.isRequired,
-
+  /** date to displaya as due date of the invoice */
   dueDate: PropTypes.string.isRequired,
-
+  /** number to display as ttc price of the invoice */
   priceTtc: PropTypes.number.isRequired,
-
+  /** number to display as ht price of the invoice */
   priceHt: PropTypes.number.isRequired,
-
+  /** price to display as vat amount of the invoice */
   vatAmount: PropTypes.number.isRequired,
-
+  /** function to be executed when download button is clicked */
   downloadAction: PropTypes.func.isRequired
 }
 
