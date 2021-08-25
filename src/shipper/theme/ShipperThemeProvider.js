@@ -83,6 +83,31 @@ const theme = createMuiTheme({
       colorSecondary: {
         backgroundColor: themeConstants.secondary.main
       }
+    },
+    MuiDivider: {
+      root: {
+        color: themeConstants.grey.main,
+        backgroundColor: themeConstants.grey.main,
+        border: `1px solid ${themeConstants.grey.main}`,
+        height: '0px',
+        opacity: 0.25,
+        marginTop: '15px',
+        marginBottom: '15px'
+      }
+    },
+    MuiCard: {
+      root: {
+        borderRadius: themeConstants.borderRadius.main,
+        width: 270
+      }
+    },
+    MuiCardContent: {
+      root: {
+        padding: 20,
+        '&:last-child': {
+          paddingBottom: 20
+        }
+      }
     }
   }
 })

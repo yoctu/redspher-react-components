@@ -12,10 +12,21 @@ import {
   RubiwinDateTimePicker,
   DirectBusinessIcon,
   RubiwinThemeProvider,
-  ShipperThemeProvider
+  ShipperThemeProvider,
+  ShipperCardInvoice
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
+import { makeStyles, createStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      width: 300 + theme.spacing(3) * 2,
+      paddingLeft: theme.spacing(2)
+    },
+  }),
+);
 
 const testRedenderTwo = () => {
   const items = []
@@ -47,6 +58,8 @@ const App = () => {
   const sayHello = () => {
     window.alert('Hello Rubiwin')
   }
+
+  const classes = useStyles();
 
   return (
     <>
@@ -158,6 +171,9 @@ const App = () => {
         <Chip color="primary" label="Label" disabled></Chip>
         <br />
         <br />
+        <div className={classes.root}>
+          <ShipperCardInvoice title="invoice" reference="#GH012021032680" userReference="24WINAHL" invoiceDate="29/01/2021" dueDate="14/02/2021" priceTtc="125,85" priceHt="315,84" vatAmount="60,01"></ShipperCardInvoice>
+        </div>
       </ShipperThemeProvider>
     </>
   )
