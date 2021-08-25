@@ -72,7 +72,8 @@ import {
   ArrowRight2Icon,
   ArrowTop2Icon,
   ArrowBottom2Icon,
-  EditIcon
+  EditIcon,
+  ShipperRangeSlider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
@@ -109,13 +110,22 @@ const App = () => {
     window.alert('Hello Rubiwin')
   }
 
+  const min = 0
+  const max = 23
+
+  const rangeLabelFormat = (value) => {
+    return `${value % 24}:00`
+  }
+
+  const shownLabelFormat = (value) => {
+    return `+ ${value}h`
+  }
+
   return (
     <>
       <RubiwinThemeProvider>
         <h1>This is a test for github pages</h1>
         <RubiwinButton text='yes yes' onClick={sayHello} />
-        <br />
-        <Button color="tertiary"> Poney </Button>
         <br />
         <RubiwinCheckbox
           onChange={handleChange}
@@ -285,6 +295,16 @@ const App = () => {
         <br />
         <br />
         <Pagination count={69} color='primary' />
+        <br />
+        <br />
+        <div style={{width: '400px', marginLeft: '50px'}}>
+          <ShipperRangeSlider
+            min={min}
+            max={max}
+            rangeLabelFormat={rangeLabelFormat}
+            shownLabelFormat={shownLabelFormat}
+          />
+        </div>
         <br />
         <br />
       </ShipperThemeProvider>
