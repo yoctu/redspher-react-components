@@ -13,11 +13,72 @@ import {
   DirectBusinessIcon,
   RubiwinThemeProvider,
   ShipperThemeProvider,
-  ShipperCardInvoice
+  ShipperCardInvoice,
+  PlusIcon,
+  ConfirmationIcon,
+  OffersIcon,
+  PaletIcon,
+  StatisticsIcon,
+  CalendarIcon,
+  DriverIcon,
+  ShipmentsIcon,
+  ParcelIcon,
+  QuotesIcon,
+  DisconnectIcon,
+  AddressBookIcon,
+  HourIcon,
+  DeleteIcon,
+  InvoiceIcon,
+  PickupDetailsIcon,
+  SearchIcon,
+  PinIcon,
+  RequestIcon,
+  StepIcon,
+  ActionIcon,
+  MonitoringIcon,
+  DeliveryDetailsIcon,
+  PriceIcon,
+  InformationIcon,
+  AutomaticIcon,
+  HelpIcon,
+  LogoAddressBookIcon,
+  Truck01Icon,
+  Truck02Icon,
+  Truck03Icon,
+  Truck04Icon,
+  ExpertIcon,
+  People1Icon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowTopIcon,
+  ArrowBottomIcon,
+  AddStepsIcon,
+  PeopleGroupIcon,
+  CheckIcon,
+  SideLoadIcon,
+  TailLiftIcon,
+  DownloadIcon,
+  UploadIcon,
+  BurgerIcon,
+  BurgerCloseIcon,
+  StarIcon,
+  TimerIcon,
+  NotIncludedIcon,
+  VisibilityIcon,
+  VisibilityNoneIcon,
+  LoadingIcon,
+  WarningIcon,
+  People2Icon,
+  ArrowLeft2Icon,
+  ArrowRight2Icon,
+  ArrowTop2Icon,
+  ArrowBottom2Icon,
+  EditIcon,
+  ShipperRangeSlider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
-import { makeStyles, createStyles } from '@material-ui/core/styles';
+import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles } from '@material-ui/core'
+import { Pagination } from '@material-ui/lab'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -60,14 +121,22 @@ const App = () => {
   }
 
   const classes = useStyles();
+  const min = 0
+  const max = 23
+
+  const rangeLabelFormat = (value) => {
+    return `${value % 24}:00`
+  }
+
+  const shownLabelFormat = (value) => {
+    return `+ ${value}h`
+  }
 
   return (
     <>
       <RubiwinThemeProvider>
         <h1>This is a test for github pages</h1>
         <RubiwinButton text='yes yes' onClick={sayHello} />
-        <br />
-        <Button color="tertiary"> Poney </Button>
         <br />
         <RubiwinCheckbox
           onChange={handleChange}
@@ -142,33 +211,111 @@ const App = () => {
       <br />
       <ShipperThemeProvider>
         <Button color="primary" variant="contained">Shipper Button</Button>
+        <Button startIcon={<PlusIcon primaryColor={'#fff'} secondaryColor={'#fff'} />} color="primary" variant="contained">Shipper Button</Button>
         <br />
         <br />
         <Button color="primary" variant="outlined">Shipper Button</Button>
+        <Button startIcon={<PlusIcon />} color="primary" variant="outlined">Shipper Button</Button>
         <br />
         <br />
         <Button color="primary" variant="text">Shipper Button</Button>
+        <Button startIcon={<PlusIcon />} color="primary" variant="text">Shipper Button</Button>
         <br />
         <br />
-        <Radio color="primary" checked="true"> </Radio>
+        <PlusIcon />
+        <ConfirmationIcon />
+        <OffersIcon />
+        <StatisticsIcon />
+        <CalendarIcon />
+        <PaletIcon />
+        <DriverIcon />
+        <ParcelIcon />
+        <ShipmentsIcon />
+        <QuotesIcon />
+        <DisconnectIcon />
+        <AddressBookIcon />
+        <HourIcon />
+        <DeleteIcon />
+        <InvoiceIcon />
+        <PickupDetailsIcon />
+        <SearchIcon />
+        <PinIcon />
+        <RequestIcon />
+        <StepIcon />
+        <ActionIcon />
+        <MonitoringIcon />
+        <DeliveryDetailsIcon />
+        <PriceIcon />
+        <InformationIcon />
+        <AutomaticIcon />
+        <HelpIcon />
+        <LogoAddressBookIcon />
+        <Truck01Icon />
+        <Truck02Icon />
+        <Truck03Icon />
+        <Truck04Icon />
+        <ExpertIcon />
+        <People1Icon />
+        <ArrowLeftIcon />
+        <ArrowBottomIcon />
+        <ArrowRightIcon />
+        <ArrowTopIcon />
+        <AddStepsIcon />
+        <PeopleGroupIcon />
+        <CheckIcon />
+        <SideLoadIcon />
+        <TailLiftIcon />
+        <DownloadIcon />
+        <UploadIcon />
+        <BurgerIcon />
+        <BurgerCloseIcon />
+        <StarIcon />
+        <TimerIcon />
+        <NotIncludedIcon />
+        <VisibilityIcon />
+        <VisibilityNoneIcon />
+        <LoadingIcon />
+        <WarningIcon />
+        <People2Icon />
+        <ArrowLeft2Icon />
+        <ArrowBottom2Icon />
+        <ArrowRight2Icon />
+        <ArrowTop2Icon />
+        <EditIcon />
         <br />
         <br />
-        <Radio color="primary"> </Radio>
+        <Radio color="primary" checked="true"/>
         <br />
         <br />
-        <Radio color="primary" disabled="true"> </Radio>
+        <Radio color="primary"/>
         <br />
         <br />
-        <Chip color="default" label="Label"></Chip>
+        <Radio color="primary" disabled="true"/>
         <br />
         <br />
-        <Chip color="primary" label="Label"></Chip>
+        <Chip color="default" label="Label"/>
         <br />
         <br />
-        <Chip color="secondary" label="Label"></Chip>
+        <Chip color="primary" label="Label"/>
         <br />
         <br />
-        <Chip color="primary" label="Label" disabled></Chip>
+        <Chip color="secondary" label="Label"/>
+        <br />
+        <br />
+        <Chip color="primary" label="Label" disabled/>
+        <br />
+        <br />
+        <Pagination count={69} color='primary' />
+        <br />
+        <br />
+        <div style={{width: '400px', marginLeft: '50px'}}>
+          <ShipperRangeSlider
+            min={min}
+            max={max}
+            rangeLabelFormat={rangeLabelFormat}
+            shownLabelFormat={shownLabelFormat}
+          />
+        </div>
         <br />
         <br />
         <div className={classes.root}>

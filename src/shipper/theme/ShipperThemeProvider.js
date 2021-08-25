@@ -27,6 +27,11 @@ const theme = createMuiTheme({
           fontSize: '22px',
           lineHeight: '26px'
         }
+    },
+    body2: {
+      fontSize: '12px',
+      fontWeight: 'bold',
+      color: themeConstants.primary.main
     }
   },
   overrides: {
@@ -43,7 +48,10 @@ const theme = createMuiTheme({
         color: themeConstants.black.main,
         '&:hover': {
           backgroundColor: themeConstants.primary.main,
-          color: themeConstants.white.main
+          color: themeConstants.white.main,
+          '& .MuiSvgIcon-root > *': {
+            stroke: themeConstants.white.main
+          }
         }
       },
       textPrimary: {
@@ -107,6 +115,52 @@ const theme = createMuiTheme({
         '&:last-child': {
           paddingBottom: 20
         }
+      }
+    },
+    MuiPagination: {
+      root: {
+        '& .MuiButtonBase-root': {
+          color: themeConstants.grey.main,
+          '&:hover': {
+            color: themeConstants.primary.main
+          },
+          '& .MuiSvgIcon-root': {
+            color: themeConstants.primary.main
+          }
+        },
+        '& .Mui-selected': {
+          color: themeConstants.white.main,
+          '&:hover': {
+            backgroundColor: themeConstants.white.main,
+            color: themeConstants.primary.main
+          }
+        }
+      }
+    },
+    MuiSlider: {
+      root: {
+        color: '#3880ff',
+        height: 2,
+        padding: '15px 0'
+      },
+      thumb: {
+        color: themeConstants.primary.main
+      },
+      valueLabel: {
+        top: -20,
+        '& *': {
+          background: 'transparent',
+          color: themeConstants.grey.dark,
+          fontSize: '12px',
+          fontWeight: 'normal'
+        }
+      },
+      track: {
+        backgroundColor: themeConstants.primary.main
+      },
+      rail: {
+        opacity: 0.25,
+        backgroundColor: themeConstants.primary.main
       }
     }
   }
