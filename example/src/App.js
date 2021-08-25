@@ -132,6 +132,10 @@ const App = () => {
     return `+ ${value}h`
   }
 
+  const downloadAction = () => {
+    alert("Poney")
+  }
+
   return (
     <>
       <RubiwinThemeProvider>
@@ -319,8 +323,10 @@ const App = () => {
         <br />
         <br />
         <div className={classes.root}>
-          <ShipperCardInvoice title="invoice" reference="#GH012021032680" userReference="24WINAHL" invoiceDate="29/01/2021" dueDate="14/02/2021" priceTtc="125,85" priceHt="315,84" vatAmount="60,01"></ShipperCardInvoice>
+          <ShipperCardInvoice title="invoice" reference="#GH012021032680" userReference="24WINAHL" invoiceDate="29/01/2021" dueDate="14/02/2021" priceTtc="125,85" priceHt="315,84" vatAmount="60,01" downloadAction={downloadAction}></ShipperCardInvoice>
         </div>
+        <br />
+        <br />
       </ShipperThemeProvider>
     </>
   )

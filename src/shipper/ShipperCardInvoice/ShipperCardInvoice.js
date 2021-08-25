@@ -1,9 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Card, Grid, CardContent, Typography, Divider } from '@material-ui/core'
+import {
+  Card,
+  Grid,
+  CardContent,
+  Typography,
+  Divider,
+  Button,
+  Box
+} from '@material-ui/core'
 import style from './ShipperCardInvoice.module.scss'
 import { ShipperThemeProvider } from '../../index'
 import themeConstants from '../theme/themeConstants'
+import DownloadIcon from '../../icons/Shipper/DownloadIcon'
+import People2Icon from '../../icons/Shipper/People2Icon'
 
 const ShipperCardInvoice = ({
   title,
@@ -13,7 +23,8 @@ const ShipperCardInvoice = ({
   dueDate,
   priceTtc,
   priceHt,
-  vatAmount
+  vatAmount,
+  downloadAction
 }) => (
   <ShipperThemeProvider injectFirst>
     <Card>
@@ -35,13 +46,20 @@ const ShipperCardInvoice = ({
               {reference}
             </Typography>
           </Grid>
-          <Grid item xs={12}>
-            <Typography
-              style={{ color: themeConstants.grey.dark }}
-              className={`${style.subtitleBold}`}
-            >
-              {userReference}
-            </Typography>
+          <Grid container item xs={12} direction='row' alignItems='center'>
+            <Grid item>
+              <People2Icon />
+            </Grid>
+            <Grid item>
+              <Box mb={2} ml={2}>
+                <Typography
+                  style={{ color: themeConstants.grey.dark }}
+                  className={`${style.textSmall}`}
+                >
+                  {userReference}
+                </Typography>
+              </Box>
+            </Grid>
           </Grid>
           <Divider />
           <Grid container>
@@ -57,15 +75,17 @@ const ShipperCardInvoice = ({
               </Typography>
             </Grid>
             <Grid container item xs={6} justifyContent='center'>
-              <Typography
-                className={`${style.textSmall}`}
-                style={{ color: themeConstants.grey.main }}
-              >
-                Due date
-              </Typography>
-              <Typography className={`${style.textMedium}`}>
-                {dueDate}
-              </Typography>
+              <Grid item justifyContent='left'>
+                <Typography
+                  className={`${style.textSmall}`}
+                  style={{ color: themeConstants.grey.main }}
+                >
+                  Due date
+                </Typography>
+                <Typography className={`${style.textMedium}`}>
+                  {dueDate}
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
           <Divider />
@@ -98,7 +118,14 @@ const ShipperCardInvoice = ({
           </Grid>
           <Divider />
           <Grid container item xs={12} justifyContent='center'>
-            <Typography className={`${style.textMedium}`}>Download</Typography>
+            <Button
+              startIcon={<DownloadIcon />}
+              color='primary'
+              variant='text'
+              onClick={downloadAction}
+            >
+              Download
+            </Button>
           </Grid>
         </Grid>
       </CardContent>
@@ -122,7 +149,9 @@ ShipperCardInvoice.propTypes = {
 
   priceHt: PropTypes.number.isRequired,
 
-  vatAmount: PropTypes.number.isRequired
+  vatAmount: PropTypes.number.isRequired,
+
+  downloadAction: PropTypes.func.isRequired
 }
 
 export default ShipperCardInvoice

@@ -3,6 +3,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import themeConstants from './themeConstants'
 
 const theme = createMuiTheme({
+  spacing: 1,
   palette: {
     primary: {
       main: themeConstants.primary.main,
@@ -106,14 +107,19 @@ const theme = createMuiTheme({
     MuiCard: {
       root: {
         borderRadius: themeConstants.borderRadius.main,
-        width: 270
+        width: 270,
+        border: `1px solid transparent`,
+        '&:hover': {
+          border: `1px solid ${themeConstants.primary.main}`
+        },
+        boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)'
       }
     },
     MuiCardContent: {
       root: {
         padding: 20,
         '&:last-child': {
-          paddingBottom: 20
+          paddingBottom: 14
         }
       }
     },
