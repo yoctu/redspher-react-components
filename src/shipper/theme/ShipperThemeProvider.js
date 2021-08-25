@@ -48,7 +48,10 @@ const theme = createMuiTheme({
         color: themeConstants.black.main,
         '&:hover': {
           backgroundColor: themeConstants.primary.main,
-          color: themeConstants.white.main
+          color: themeConstants.white.main,
+          '& .MuiSvgIcon-root > *': {
+            stroke: themeConstants.white.main
+          }
         }
       },
       textPrimary: {
@@ -87,6 +90,26 @@ const theme = createMuiTheme({
       },
       colorSecondary: {
         backgroundColor: themeConstants.secondary.main
+      }
+    },
+    MuiPagination: {
+      root: {
+        '& .MuiButtonBase-root': {
+          color: themeConstants.grey.main,
+          '&:hover': {
+            color: themeConstants.primary.main
+          },
+          '& .MuiSvgIcon-root': {
+            color: themeConstants.primary.main
+          }
+        },
+        '& .Mui-selected': {
+          color: themeConstants.white.main,
+          '&:hover': {
+            backgroundColor: themeConstants.white.main,
+            color: themeConstants.primary.main
+          }
+        }
       }
     },
     MuiSlider: {
