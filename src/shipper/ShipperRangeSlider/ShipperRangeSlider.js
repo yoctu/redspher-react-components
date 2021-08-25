@@ -3,7 +3,12 @@ import style from './ShipperRangeSlider.module.scss'
 import { Slider, Typography } from '@material-ui/core'
 import PropTypes from 'prop-types'
 
-const ShipperRangeSlider = ({ min, max, rangeLabelFormat, shownLabelFormat }) => {
+const ShipperRangeSlider = ({
+  min,
+  max,
+  rangeLabelFormat,
+  shownLabelFormat
+}) => {
   const [rangeValue, setRangeValue] = React.useState([min, max])
   const [shownLabel, setShownLabel] = useState(max - min)
 
