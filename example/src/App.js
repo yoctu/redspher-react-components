@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       width: 300 + theme.spacing(3) * 2,
-      paddingLeft: theme.spacing(2)
+      marginLeft: theme.spacing(2)
     },
   }),
 );
