@@ -5,21 +5,19 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 function BurgerCloseIcon(props) {
   return (
     <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
-      <rect
-        width='17.1102'
-        height='2.13878'
-        transform='matrix(0.704387 0.709816 -0.704387 0.709816 4.50653 3.33679)'
+      <path
+        d='M3.40117 3.11881L17 16.8813'
         stroke={
           props.primaryColor ? props.primaryColor : themeConstants.primary.main
         }
+        strokeWidth='2'
       />
-      <rect
-        width='17.1102'
-        height='2.13878'
-        transform='matrix(0.704387 -0.709816 0.704387 0.709816 3.44125 15.1451)'
+      <path
+        d='M16.6715 3.00006L3.07271 17'
         stroke={
           props.primaryColor ? props.primaryColor : themeConstants.primary.main
         }
+        strokeWidth='2'
       />
     </SvgIcon>
   )

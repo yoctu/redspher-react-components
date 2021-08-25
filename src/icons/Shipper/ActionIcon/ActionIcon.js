@@ -5,29 +5,26 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 function ActionIcon(props) {
   return (
     <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
-      <ellipse
-        cx='10.5'
-        cy='4.5'
-        rx='1.5'
-        ry='1.5'
+      <circle
+        cx='10'
+        cy='6'
+        r='0.5'
         stroke={
           props.primaryColor ? props.primaryColor : themeConstants.primary.main
         }
       />
-      <ellipse
-        cx='10.5'
-        cy='9.83337'
-        rx='1.5'
-        ry='1.5'
+      <circle
+        cx='10'
+        cy='10'
+        r='0.5'
         stroke={
           props.primaryColor ? props.primaryColor : themeConstants.primary.main
         }
       />
-      <ellipse
-        cx='10.5'
-        cy='15.1666'
-        rx='1.5'
-        ry='1.5'
+      <circle
+        cx='10'
+        cy='14'
+        r='0.5'
         stroke={
           props.primaryColor ? props.primaryColor : themeConstants.primary.main
         }
