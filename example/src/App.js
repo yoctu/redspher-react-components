@@ -76,6 +76,7 @@ import {
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
+import { Pagination } from '@material-ui/lab'
 
 const testRedenderTwo = () => {
   const items = []
@@ -281,6 +282,9 @@ const App = () => {
         <br />
         <br />
         <Chip color="primary" label="Label" disabled/>
+        <br />
+        <br />
+        <Pagination count={69} color='primary' />
         <br />
         <br />
       </ShipperThemeProvider>
