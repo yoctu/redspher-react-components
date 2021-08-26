@@ -345,10 +345,10 @@ const App = () => {
         <br />
         <br />
         <div style={{width: '400px', marginLeft: '50px'}}>
-          <ShipperItem text='Yolo' />
-          <ShipperItem startIcon={<PlusIcon />} text='Yolo' />
-          <ShipperItem endIcon={<PlusIcon />} text='Yolo' />
-          <ShipperItem startIcon={<PlusIcon />} endIcon={<PlusIcon />} text='Yolo' />
+          <ShipperItem text='Yolo' action={downloadAction} />
+          <ShipperItem startIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
+          <ShipperItem endIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
+          <ShipperItem startIcon={<PlusIcon />} endIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
         </div>
         <br />
         <br />
