@@ -4,6 +4,7 @@ import themeConstants from './themeConstants'
 import { createTheme } from '@material-ui/core'
 
 const theme = createTheme({
+  spacing: 1,
   palette: {
     primary: {
       main: themeConstants.primary.main,
@@ -91,6 +92,36 @@ const theme = createTheme({
       },
       colorSecondary: {
         backgroundColor: themeConstants.secondary.main
+      }
+    },
+    MuiDivider: {
+      root: {
+        color: themeConstants.grey.main,
+        backgroundColor: themeConstants.grey.main,
+        border: `1px solid ${themeConstants.grey.main}`,
+        height: '0px',
+        opacity: 0.25,
+        marginTop: '15px',
+        marginBottom: '15px'
+      }
+    },
+    MuiCard: {
+      root: {
+        borderRadius: themeConstants.borderRadius.main,
+        width: 270,
+        border: `1px solid transparent`,
+        '&:hover': {
+          border: `1px solid ${themeConstants.primary.main}`
+        },
+        boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)'
+      }
+    },
+    MuiCardContent: {
+      root: {
+        padding: 20,
+        '&:last-child': {
+          paddingBottom: 14
+        }
       }
     },
     MuiPagination: {
