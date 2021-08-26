@@ -7,7 +7,8 @@ const ShipperRangeSlider = ({
   min,
   max,
   rangeLabelFormat,
-  shownLabelFormat
+  shownLabelFormat,
+  showLabel
 }) => {
   const [rangeValue, setRangeValue] = React.useState([min, max])
   const [shownLabel, setShownLabel] = useState(max - min)
@@ -33,12 +34,13 @@ const ShipperRangeSlider = ({
       <Typography
         style={{
           textAlign: 'center',
+          minWidth: 'max-content',
           paddingLeft: (100 * rangeValue[0]) / max + '%',
           paddingRight: (100 * (max - rangeValue[1])) / max + '%'
         }}
         variant='body2'
       >
-        {shownLabelFormat(shownLabel)}
+        {showLabel ? shownLabelFormat(shownLabel) : ''}
       </Typography>
     </div>
   )
@@ -52,7 +54,9 @@ ShipperRangeSlider.propTypes = {
   /** formatted label */
   rangeLabelFormat: PropTypes.string,
   /** format for label */
-  shownLabelFormat: PropTypes.string
+  shownLabelFormat: PropTypes.string,
+  /** does it show the label */
+  showLabel: PropTypes.bool
 }
 
 export default ShipperRangeSlider
