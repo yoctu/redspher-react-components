@@ -213,6 +213,18 @@ const theme = createTheme({
           }
         }
       }
+    },
+    MuiListItemIcon: {
+      root: {
+        minWidth: 'fit-content'
+      }
+    },
+    MuiListItemText: {
+      root: {
+        minWidth: 'fit-content',
+        flex: 'inherit',
+        margin: '0 7px'
+      }
     }
   }
 })
