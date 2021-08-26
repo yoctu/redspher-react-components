@@ -73,7 +73,8 @@ import {
   ArrowTop2Icon,
   ArrowBottom2Icon,
   EditIcon,
-  ShipperRangeSlider
+  ShipperRangeSlider,
+  ShipperSwitchPackage
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
@@ -305,6 +306,9 @@ const App = () => {
             shownLabelFormat={shownLabelFormat}
           />
         </div>
+        <br />
+        <br />
+        <ShipperSwitchPackage parcelTranslate='parcel' paletTranslate='pallet'/>
         <br />
         <br />
       </ShipperThemeProvider>

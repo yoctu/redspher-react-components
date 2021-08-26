@@ -1,8 +1,9 @@
 import React from 'react'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider } from '@material-ui/core/styles'
 import themeConstants from './themeConstants'
+import { createTheme } from '@material-ui/core'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: themeConstants.primary.main,
@@ -136,6 +137,33 @@ const theme = createMuiTheme({
       rail: {
         opacity: 0.25,
         backgroundColor: themeConstants.primary.main
+      }
+    },
+    MuiToggleButtonGroup: {
+      root: {
+        backgroundColor: themeConstants.primary.main,
+        borderRadius: '40px',
+        width: 'fit-content',
+        padding: '2px',
+        '& .MuiButtonBase-root': {
+          padding: '7.5px 15px',
+          borderRadius: '40px !important',
+          color: themeConstants.white.main,
+          '&:not(.Mui-selected) .MuiSvgIcon-root > *': {
+            stroke: themeConstants.white.main
+          },
+          '& .MuiSvgIcon-root': {
+            marginRight: '7px'
+          }
+        },
+        '& .Mui-selected': {
+          color: themeConstants.primary.main,
+          backgroundColor: themeConstants.white.main,
+          borderRadius: '40px !important',
+          '&:hover': {
+            backgroundColor: themeConstants.white.main
+          }
+        }
       }
     }
   }

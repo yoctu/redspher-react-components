@@ -73,6 +73,7 @@ import ArrowRight2Icon from './icons/Shipper/ArrowRight2Icon'
 import ArrowTop2Icon from './icons/Shipper/ArrowTop2Icon'
 import ArrowBottom2Icon from './icons/Shipper/ArrowBottom2Icon'
 import EditIcon from './icons/Shipper/EditIcon'
+import ShipperSwitchPackage from './shipper/ShipperSwitchPackage'
 
 export {
   RubiwinButton,
@@ -149,5 +150,6 @@ export {
   ArrowTop2Icon,
   ArrowBottom2Icon,
   EditIcon,
-  ShipperRangeSlider
+  ShipperRangeSlider,
+  ShipperSwitchPackage
 }
