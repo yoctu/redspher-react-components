@@ -227,6 +227,11 @@ const App = () => {
         <Button startIcon={<PlusIcon />} color="primary" variant="text">Shipper Button</Button>
         <br />
         <br />
+        <div style={{width: '300px', height: '100px', display: 'flex', backgroundColor: '#1436D3'}}>
+          <Button className={"logoutButton"} startIcon={<DisconnectIcon primaryColor={'#fff'} />} variant="contained">Shipper Button</Button>
+        </div>
+        <br />
+        <br />
         <PlusIcon />
         <ConfirmationIcon />
         <OffersIcon />
@@ -290,23 +295,13 @@ const App = () => {
         <br />
         <br />
         <Radio color="primary" checked="true"/>
-        <br />
-        <br />
         <Radio color="primary"/>
-        <br />
-        <br />
         <Radio color="primary" disabled="true"/>
         <br />
         <br />
         <Chip color="default" label="Label"/>
-        <br />
-        <br />
         <Chip color="primary" label="Label"/>
-        <br />
-        <br />
         <Chip color="secondary" label="Label"/>
-        <br />
-        <br />
         <Chip color="primary" label="Label" disabled/>
         <br />
         <br />
@@ -319,12 +314,29 @@ const App = () => {
             max={max}
             rangeLabelFormat={rangeLabelFormat}
             shownLabelFormat={shownLabelFormat}
+            showLabel={true}
           />
         </div>
         <br />
         <br />
         <div className={classes.root}>
-          <ShipperCardInvoice title="invoice" reference="#GH012021032680" userReference="24WINAHL" invoiceDate="29/01/2021" dueDate="14/02/2021" priceTtc="125,85" priceHt="315,84" vatAmount="60,01" downloadAction={downloadAction}></ShipperCardInvoice>
+          <ShipperCardInvoice
+            title="Invoice"
+            reference="#GH012021032680"
+            userReference="24WINAHL"
+            invoiceDate="29/01/2021"
+            dueDate="14/02/2021"
+            priceTtc="125,85€"
+            priceHt="315,84€"
+            vatAmount="60,01€"
+            downloadAction={downloadAction}
+            invoiceDateTranslate="Invoice Date"
+            dueDateTranslate="Due Date"
+            withoutTaxes="HT"
+            withTaxes="TTC"
+            VATAmount="VAT Amount"
+            downloadTranslate="Download"
+          />
         </div>
         <br />
         <br />

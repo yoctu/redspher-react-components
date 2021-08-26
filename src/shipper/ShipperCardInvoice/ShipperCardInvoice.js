@@ -24,7 +24,13 @@ const ShipperCardInvoice = ({
   priceTtc,
   priceHt,
   vatAmount,
-  downloadAction
+  downloadAction,
+  invoiceDateTranslate,
+  dueDateTranslate,
+  withoutTaxes,
+  withTaxes,
+  VATAmount,
+  downloadTranslate
 }) => (
   <ShipperThemeProvider injectFirst>
     <Card>
@@ -68,7 +74,7 @@ const ShipperCardInvoice = ({
                 className={`${style.textSmall}`}
                 style={{ color: themeConstants.grey.main }}
               >
-                Invoice date
+                {invoiceDateTranslate}
               </Typography>
               <Typography className={`${style.textMedium}`}>
                 {invoiceDate}
@@ -80,7 +86,7 @@ const ShipperCardInvoice = ({
                   className={`${style.textSmall}`}
                   style={{ color: themeConstants.grey.main }}
                 >
-                  Due date
+                  {dueDateTranslate}
                 </Typography>
                 <Typography className={`${style.textMedium}`}>
                   {dueDate}
@@ -95,7 +101,7 @@ const ShipperCardInvoice = ({
               className={`${style.textLargeXl}`}
             >
               {priceTtc}
-              {themeConstants.devise.euro} TTC
+              {withTaxes}
             </Typography>
           </Grid>
           <Grid item xs={12}>
@@ -104,7 +110,7 @@ const ShipperCardInvoice = ({
               style={{ color: themeConstants.grey.main }}
             >
               {priceHt}
-              {themeConstants.devise.euro} HT
+              {withoutTaxes}
             </Typography>
           </Grid>
           <Grid item xs={12}>
@@ -112,8 +118,7 @@ const ShipperCardInvoice = ({
               className={`${style.textMedium}`}
               style={{ color: themeConstants.grey.main }}
             >
-              VAT amount: {vatAmount}
-              {themeConstants.devise.euro}
+              {VATAmount}: {vatAmount}
             </Typography>
           </Grid>
           <Divider />
@@ -124,7 +129,7 @@ const ShipperCardInvoice = ({
               variant='text'
               onClick={downloadAction}
             >
-              Download
+              {downloadTranslate}
             </Button>
           </Grid>
         </Grid>

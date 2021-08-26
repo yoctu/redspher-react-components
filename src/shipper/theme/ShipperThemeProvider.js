@@ -39,9 +39,22 @@ const theme = createTheme({
   overrides: {
     MuiButton: {
       root: {
+        margin: 'auto',
         borderRadius: '40px',
         fontSize: '14px',
-        textTransform: 'none'
+        textTransform: 'none',
+        '&.logoutButton': {
+          backgroundColor: 'transparent',
+          border: '1px solid ' + themeConstants.white.main,
+          color: themeConstants.white.main,
+          '&:hover': {
+            backgroundColor: themeConstants.white.main,
+            color: themeConstants.primary.main,
+            '& .MuiSvgIcon-root path:first-child': {
+              stroke: themeConstants.primary.main
+            }
+          }
+        }
       },
       containedPrimary: {
         color: themeConstants.white.main
@@ -72,6 +85,10 @@ const theme = createTheme({
       root: {
         '&:disabled': {
           color: themeConstants.grey.main
+        },
+        '& .MuiSvgIcon-root': {
+          width: '10px',
+          height: '10px'
         }
       },
       colorPrimary: {
