@@ -13,6 +13,7 @@ import {
   DirectBusinessIcon,
   RubiwinThemeProvider,
   ShipperThemeProvider,
+  ShipperCardInvoice,
   PlusIcon,
   ConfirmationIcon,
   OffersIcon,
@@ -76,8 +77,17 @@ import {
   ShipperRangeSlider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
+import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles } from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      width: 300 + theme.spacing(3) * 2,
+      marginLeft: theme.spacing(2)
+    },
+  }),
+);
 
 const testRedenderTwo = () => {
   const items = []
@@ -110,6 +120,7 @@ const App = () => {
     window.alert('Hello Rubiwin')
   }
 
+  const classes = useStyles();
   const min = 0
   const max = 23
 
@@ -119,6 +130,10 @@ const App = () => {
 
   const shownLabelFormat = (value) => {
     return `+ ${value}h`
+  }
+
+  const downloadAction = () => {
+    alert("Poney")
   }
 
   return (
@@ -304,6 +319,11 @@ const App = () => {
             rangeLabelFormat={rangeLabelFormat}
             shownLabelFormat={shownLabelFormat}
           />
+        </div>
+        <br />
+        <br />
+        <div className={classes.root}>
+          <ShipperCardInvoice title="invoice" reference="#GH012021032680" userReference="24WINAHL" invoiceDate="29/01/2021" dueDate="14/02/2021" priceTtc="125,85" priceHt="315,84" vatAmount="60,01" downloadAction={downloadAction}></ShipperCardInvoice>
         </div>
         <br />
         <br />

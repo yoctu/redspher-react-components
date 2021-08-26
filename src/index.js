@@ -12,6 +12,7 @@ import RubiwinMenuItem from './rubiwin/RubiwinMenuItem'
 import DirectBusinessIcon from './icons/DirectBusinessIcon'
 import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
 import ShipperThemeProvider from './shipper/theme/ShipperThemeProvider'
+import ShipperCardInvoice from './shipper/ShipperCardInvoice/ShipperCardInvoice'
 import ShipperRangeSlider from './shipper/ShipperRangeSlider'
 import PlusIcon from './icons/Shipper/PlusIcon'
 import ConfirmationIcon from './icons/Shipper/ConfirmationIcon'
@@ -89,6 +90,7 @@ export {
   DirectBusinessIcon,
   RubiwinThemeProvider,
   ShipperThemeProvider,
+  ShipperCardInvoice,
   PlusIcon,
   ConfirmationIcon,
   OffersIcon,

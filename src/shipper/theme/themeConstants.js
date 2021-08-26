@@ -16,7 +16,8 @@ const constants = {
     main: '#FFF'
   },
   black: {
-    main: '#000'
+    main: '#000',
+    dark: '#062440'
   },
   green: {
     main: '#00CF53'
@@ -30,6 +31,13 @@ const constants = {
     sm: 600,
     xl: 1920,
     xs: 0
+  },
+  devise: {
+    euro: '€'
+  },
+  borderRadius: {
+    main: '16px',
+    small: '8px'
   }
 }
 
