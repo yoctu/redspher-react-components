@@ -74,7 +74,8 @@ import {
   ArrowTop2Icon,
   ArrowBottom2Icon,
   EditIcon,
-  ShipperRangeSlider
+  ShipperRangeSlider,
+  ShipperSwitchPackage
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles } from '@material-ui/core'
@@ -325,6 +326,9 @@ const App = () => {
         <div className={classes.root}>
           <ShipperCardInvoice title="invoice" reference="#GH012021032680" userReference="24WINAHL" invoiceDate="29/01/2021" dueDate="14/02/2021" priceTtc="125,85" priceHt="315,84" vatAmount="60,01" downloadAction={downloadAction}></ShipperCardInvoice>
         </div>
+        <br />
+        <br />
+        <ShipperSwitchPackage parcelTranslate='parcel' paletTranslate='pallet'/>
         <br />
         <br />
       </ShipperThemeProvider>
