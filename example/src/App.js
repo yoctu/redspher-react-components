@@ -75,10 +75,11 @@ import {
   ArrowBottom2Icon,
   EditIcon,
   ShipperRangeSlider,
-  ShipperSwitchPackage
+  ShipperSwitchPackage,
+  ShipperItem
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles } from '@material-ui/core'
+import {Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles} from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
 
 const useStyles = makeStyles((theme) =>
@@ -343,9 +344,17 @@ const App = () => {
         <ShipperSwitchPackage parcelTranslate='parcel' paletTranslate='pallet'/>
         <br />
         <br />
+        <div style={{width: '400px', marginLeft: '50px'}}>
+          <ShipperItem text='Yolo' action={downloadAction} />
+          <ShipperItem startIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
+          <ShipperItem endIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
+          <ShipperItem startIcon={<PlusIcon />} endIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
+        </div>
+        <br />
+        <br />
       </ShipperThemeProvider>
     </>
   )
-}
+};
 
 export default App
