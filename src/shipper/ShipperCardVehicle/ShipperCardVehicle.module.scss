@@ -1,0 +1,20 @@
+@import  '../shipper-constant.scss';
+
+.textSmall {
+    font-size: $font-size-small !important;
+    line-height: $font-line-small !important;
+}
+
+.textMedium {
+    font-size: $font-size-small !important;
+    line-height: $font-line-sm-med !important;
+    font-weight: bold !important;
+}
+
+.blueBorder {
+    border-color: #1436D3 !important;
+}
+
+.noBorder {
+    border-color: transparent;
+}

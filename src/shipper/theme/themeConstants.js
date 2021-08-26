@@ -30,6 +30,13 @@ const constants = {
     sm: 600,
     xl: 1920,
     xs: 0
+  },
+  devise: {
+    euro: '€'
+  },
+  borderRadius: {
+    main: '16px',
+    small: '8px'
   }
 }
 

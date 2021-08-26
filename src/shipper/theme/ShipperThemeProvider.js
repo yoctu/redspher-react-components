@@ -1,8 +1,8 @@
 import React from 'react'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import themeConstants from './themeConstants'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: themeConstants.primary.main,
@@ -136,6 +136,15 @@ const theme = createMuiTheme({
       rail: {
         opacity: 0.25,
         backgroundColor: themeConstants.primary.main
+      }
+    },
+    MuiCard: {
+      root: {
+        borderRadius: themeConstants.borderRadius.main,
+        border: `1px solid transparent`,
+        '&:hover': {
+          border: `1px solid ${themeConstants.primary.main} !important`
+        }
       }
     }
   }

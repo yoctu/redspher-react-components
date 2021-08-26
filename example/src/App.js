@@ -73,11 +73,21 @@ import {
   ArrowTop2Icon,
   ArrowBottom2Icon,
   EditIcon,
-  ShipperRangeSlider
+  ShipperRangeSlider,
+  ShipperCardVehicle
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Radio, Select, Chip } from '@material-ui/core'
+import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid } from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      width: 300 + theme.spacing(3) * 2,
+      marginLeft: theme.spacing(2)
+    },
+  }),
+);
 
 const testRedenderTwo = () => {
   const items = []
@@ -110,6 +120,7 @@ const App = () => {
     window.alert('Hello Rubiwin')
   }
 
+  const classes = useStyles();
   const min = 0
   const max = 23
 
@@ -120,6 +131,14 @@ const App = () => {
   const shownLabelFormat = (value) => {
     return `+ ${value}h`
   }
+
+  const cardVehicleAction = (txt) => {
+    console.log(txt)
+  }
+
+  const [selectedVehicle, setSelectedVehicle] = React.useState('truck02');
+  const [selectedSecondDriver, setSelectedSecondDriver] = React.useState('');
+  const [selectedTailift, setSelectedTailLift] = React.useState('');
 
   return (
     <>
@@ -200,7 +219,7 @@ const App = () => {
       <br />
       <ShipperThemeProvider>
         <Button color="primary" variant="contained">Shipper Button</Button>
-        <Button startIcon={<PlusIcon primaryColor={'#fff'} secondaryColor={'#fff'} />} color="primary" variant="contained">Shipper Button</Button>
+        <Button startIcon={<PlusIcon />} color="primary" variant="contained">Shipper Button</Button>
         <br />
         <br />
         <Button color="primary" variant="outlined">Shipper Button</Button>
@@ -273,13 +292,13 @@ const App = () => {
         <EditIcon />
         <br />
         <br />
-        <Radio color="primary" checked="true"/>
+        <Radio color="primary" checked={true}/>
         <br />
         <br />
         <Radio color="primary"/>
         <br />
         <br />
-        <Radio color="primary" disabled="true"/>
+        <Radio color="primary" disabled={true}/>
         <br />
         <br />
         <Chip color="default" label="Label"/>
@@ -291,7 +310,7 @@ const App = () => {
         <Chip color="secondary" label="Label"/>
         <br />
         <br />
-        <Chip color="primary" label="Label" disabled/>
+        <Chip color="primary" label="Label" disabled={true}/>
         <br />
         <br />
         <Pagination count={69} color='primary' />
@@ -305,6 +324,41 @@ const App = () => {
             shownLabelFormat={shownLabelFormat}
           />
         </div>
+        <br />
+        <br />
+        <Grid container direction="row">
+          <Grid item xs={1}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="truck01" value="truck01" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedVehicle} setSelectedValue={setSelectedVehicle}></ShipperCardVehicle>
+            </div>
+          </Grid>
+          <Grid item xs={1}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="truck02" value="truck02" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedVehicle} setSelectedValue={setSelectedVehicle}></ShipperCardVehicle>
+            </div>
+          </Grid>
+          <Grid item xs={1}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="truck03" value="truck03" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedVehicle} setSelectedValue={setSelectedVehicle}></ShipperCardVehicle>
+            </div>
+          </Grid>
+          <Grid item xs={1}></Grid>
+          <Grid item xs={1}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="driver" value="driver" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedSecondDriver} setSelectedValue={setSelectedSecondDriver} enableUnselect={true}></ShipperCardVehicle>
+            </div>
+          </Grid>
+            <Grid item xs={1}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="tailLift" value="tailLift" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedTailift} setSelectedValue={setSelectedTailLift} enableUnselect={true}></ShipperCardVehicle>
+            </div>
+          </Grid>
+          <Grid item xs={1}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="sideLoad" value="sideLoad" labelOne="Label" labelTwo="label" disabled={true}></ShipperCardVehicle>
+            </div>
+          </Grid>
+        </Grid>
         <br />
         <br />
       </ShipperThemeProvider>
