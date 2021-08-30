@@ -1,0 +1,30 @@
+@import  '../shipper-constant.scss';
+
+.textSmall {
+    font-size: $font-size-small !important;
+    line-height: $font-line-small !important;
+}
+
+.textMedium{
+    font-size: $font-size-medium !important;
+    line-height: $font-line-medium !important;
+}
+
+.textLarge {
+    font-size: $font-size-large !important;
+    line-height: $font-line-large !important;
+    font-weight: bold !important;
+    margin-top: 2px !important;
+    margin-bottom: 4px !important;
+}
+
+.textLargeXl {
+    font-size: $font-size-large-xl !important;
+    line-height: $font-line-large-xl !important;
+    font-weight: bold !important;
+    margin-bottom: 3px !important;
+}
+
+.cardHover:hover {
+    border: 1px solid #1436D3;
+}

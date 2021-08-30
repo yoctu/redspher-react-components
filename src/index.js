@@ -12,6 +12,7 @@ import RubiwinMenuItem from './rubiwin/RubiwinMenuItem'
 import DirectBusinessIcon from './icons/DirectBusinessIcon'
 import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
 import ShipperThemeProvider from './shipper/theme/ShipperThemeProvider'
+import ShipperCardInvoice from './shipper/ShipperCardInvoice/ShipperCardInvoice'
 import ShipperRangeSlider from './shipper/ShipperRangeSlider'
 import PlusIcon from './icons/Shipper/PlusIcon'
 import ConfirmationIcon from './icons/Shipper/ConfirmationIcon'
@@ -74,6 +75,8 @@ import ArrowTop2Icon from './icons/Shipper/ArrowTop2Icon'
 import ArrowBottom2Icon from './icons/Shipper/ArrowBottom2Icon'
 import EditIcon from './icons/Shipper/EditIcon'
 import ShipperCardVehicle from './shipper/ShipperCardVehicle'
+import ShipperSwitchPackage from './shipper/ShipperSwitchPackage'
+import ShipperItem from './shipper/ShipperItem'
 
 export {
   RubiwinButton,
@@ -90,6 +93,7 @@ export {
   DirectBusinessIcon,
   RubiwinThemeProvider,
   ShipperThemeProvider,
+  ShipperCardInvoice,
   PlusIcon,
   ConfirmationIcon,
   OffersIcon,
@@ -151,5 +155,7 @@ export {
   ArrowBottom2Icon,
   EditIcon,
   ShipperRangeSlider,
-  ShipperCardVehicle
+  ShipperCardVehicle,
+  ShipperSwitchPackage,
+  ShipperItem
 }

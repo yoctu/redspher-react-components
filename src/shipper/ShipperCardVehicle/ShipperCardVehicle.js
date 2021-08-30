@@ -124,7 +124,6 @@ const ShipperCardVehicle = ({
                   checked={selectedValue === value}
                   value={value}
                   disabled={disabled}
-                  className={`${style.smallIcon}`}
                 />
                 <br />
                 <br />

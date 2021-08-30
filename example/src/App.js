@@ -13,6 +13,7 @@ import {
   DirectBusinessIcon,
   RubiwinThemeProvider,
   ShipperThemeProvider,
+  ShipperCardInvoice,
   PlusIcon,
   ConfirmationIcon,
   OffersIcon,
@@ -74,11 +75,16 @@ import {
   ArrowBottom2Icon,
   EditIcon,
   ShipperRangeSlider,
-  ShipperCardVehicle
+  ShipperCardVehicle,
+  ShipperSwitchPackage,
+  ShipperItem
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid } from '@material-ui/core'
+import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid, FormControl, InputLabel, Input, FormHelperText } from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
+import 'redspher-components/dist/index.css'
+import InputAdornment from '@material-ui/core/InputAdornment'
+import MuiPhoneNumber from 'material-ui-phone-number'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -139,6 +145,10 @@ const App = () => {
   const [selectedVehicle, setSelectedVehicle] = React.useState('truck02');
   const [selectedSecondDriver, setSelectedSecondDriver] = React.useState('');
   const [selectedTailift, setSelectedTailLift] = React.useState('');
+
+  const downloadAction = () => {
+    alert("Poney")
+  }
 
   return (
     <>
@@ -219,7 +229,7 @@ const App = () => {
       <br />
       <ShipperThemeProvider>
         <Button color="primary" variant="contained">Shipper Button</Button>
-        <Button startIcon={<PlusIcon />} color="primary" variant="contained">Shipper Button</Button>
+        <Button startIcon={<PlusIcon  primaryColor={'#fff'} secondaryColor={'#fff'} />} color="primary" variant="contained">Shipper Button</Button>
         <br />
         <br />
         <Button color="primary" variant="outlined">Shipper Button</Button>
@@ -228,6 +238,11 @@ const App = () => {
         <br />
         <Button color="primary" variant="text">Shipper Button</Button>
         <Button startIcon={<PlusIcon />} color="primary" variant="text">Shipper Button</Button>
+        <br />
+        <br />
+        <div style={{width: '300px', height: '100px', display: 'flex', backgroundColor: '#1436D3'}}>
+          <Button className={"logoutButton"} startIcon={<DisconnectIcon primaryColor={'#fff'} />} variant="contained">Shipper Button</Button>
+        </div>
         <br />
         <br />
         <PlusIcon />
@@ -292,25 +307,15 @@ const App = () => {
         <EditIcon />
         <br />
         <br />
-        <Radio color="primary" checked={true}/>
-        <br />
-        <br />
+        <Radio color="primary" checked="true"/>
         <Radio color="primary"/>
-        <br />
-        <br />
-        <Radio color="primary" disabled={true}/>
+        <Radio color="primary" disabled="true"/>
         <br />
         <br />
         <Chip color="default" label="Label"/>
-        <br />
-        <br />
         <Chip color="primary" label="Label"/>
-        <br />
-        <br />
         <Chip color="secondary" label="Label"/>
-        <br />
-        <br />
-        <Chip color="primary" label="Label" disabled={true}/>
+        <Chip color="primary" label="Label" disabled/>
         <br />
         <br />
         <Pagination count={69} color='primary' />
@@ -322,6 +327,28 @@ const App = () => {
             max={max}
             rangeLabelFormat={rangeLabelFormat}
             shownLabelFormat={shownLabelFormat}
+            showLabel={true}
+          />
+        </div>
+        <br />
+        <br />
+        <div className={classes.root}>
+          <ShipperCardInvoice
+            title="Invoice"
+            reference="#GH012021032680"
+            userReference="24WINAHL"
+            invoiceDate="29/01/2021"
+            dueDate="14/02/2021"
+            priceTtc="125,85€"
+            priceHt="315,84€"
+            vatAmount="60,01€"
+            downloadAction={downloadAction}
+            invoiceDateTranslate="Invoice Date"
+            dueDateTranslate="Due Date"
+            withoutTaxes="HT"
+            withTaxes="TTC"
+            VATAmount="VAT Amount"
+            downloadTranslate="Download"
           />
         </div>
         <br />
@@ -361,9 +388,89 @@ const App = () => {
         </Grid>
         <br />
         <br />
+        <ShipperSwitchPackage parcelTranslate='parcel' paletTranslate='pallet'/>
+        <br />
+        <br />
+        <div style={{width: '400px', marginLeft: '50px'}}>
+          <ShipperItem text='Yolo' action={downloadAction} />
+          <ShipperItem startIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
+          <ShipperItem endIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
+          <ShipperItem startIcon={<PlusIcon />} endIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
+        </div>
+        <br />
+        <br />
+        <div style={{backgroundColor: '#ececec', padding: '20px', width: '400px'}}>
+          <FormControl>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+            />
+          </FormControl>
+          <br />
+          <FormControl>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <PlusIcon />
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+          <br />
+          <FormControl error>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+              aria-describedby="component-error-text"
+            />
+            <FormHelperText id="component-error-text">Error message</FormHelperText>
+          </FormControl>
+          <br />
+          <FormControl error>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <PlusIcon />
+                </InputAdornment>
+              }
+              aria-describedby="component-error-text"
+            />
+            <FormHelperText id="component-error-text">Error message</FormHelperText>
+          </FormControl>
+          <br />
+          <FormControl>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+              multiline={true}
+              aria-describedby="component-error-text"
+            />
+          </FormControl>
+          <br />
+          <br />
+          <MuiPhoneNumber
+            enableSearchField={true}
+            defaultCountry={'fr'}
+            countryCodeEditable={true}
+            dropdownClass={'dropdownShipper'}
+            label="Phone Number"
+            preferredCountries={['at', 'be', 'bg', 'cy', 'cz', 'de', 'dk', 'ee', 'es', 'fi', 'fr', 'gb', 'gr', 'hu', 'hr', 'ie', 'it', 'lt', 'lu', 'lv', 'mt', 'nl', 'pl', 'pt', 'ro', 'se', 'si', 'sk']}
+            disableAreaCodes={true}
+          />
+        </div>
+        <br />
       </ShipperThemeProvider>
     </>
   )
-}
+};
 
 export default App
