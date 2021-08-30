@@ -76,7 +76,8 @@ import {
   EditIcon,
   ShipperRangeSlider,
   ShipperSwitchPackage,
-  ShipperItem
+  ShipperItem,
+  ShipperCheckbox
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -431,6 +432,10 @@ const App = () => {
             disableAreaCodes={true}
           />
         </div>
+        <br />
+        <br />
+        <ShipperCheckbox />
+        <br />
         <br />
       </ShipperThemeProvider>
     </>
