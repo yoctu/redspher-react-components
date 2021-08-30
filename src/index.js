@@ -77,6 +77,7 @@ import EditIcon from './icons/Shipper/EditIcon'
 import ShipperCardVehicle from './shipper/ShipperCardVehicle'
 import ShipperSwitchPackage from './shipper/ShipperSwitchPackage'
 import ShipperItem from './shipper/ShipperItem'
+import ShipperCheckbox from './shipper/ShipperCheckbox'
 
 export {
   RubiwinButton,
@@ -157,5 +158,6 @@ export {
   ShipperRangeSlider,
   ShipperCardVehicle,
   ShipperSwitchPackage,
-  ShipperItem
+  ShipperItem,
+  ShipperCheckbox
 }

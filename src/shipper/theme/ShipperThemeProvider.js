@@ -87,8 +87,8 @@ const theme = createTheme({
           color: themeConstants.grey.main
         },
         '& .MuiSvgIcon-root': {
-          width: '10px',
-          height: '10px'
+          width: '14px',
+          height: '14px'
         }
       },
       colorPrimary: {

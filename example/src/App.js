@@ -77,10 +77,11 @@ import {
   ShipperRangeSlider,
   ShipperCardVehicle,
   ShipperSwitchPackage,
-  ShipperItem
+  ShipperItem,
+  ShipperCheckbox
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid, FormControl, InputLabel, Input, FormHelperText } from '@material-ui/core'
+import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid, FormControl, InputLabel, Input, FormHelperText, FormControlLabel } from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
 import 'redspher-components/dist/index.css'
 import InputAdornment from '@material-ui/core/InputAdornment'
@@ -468,6 +469,15 @@ const App = () => {
             disableAreaCodes={true}
           />
         </div>
+        <br />
+        <br />
+        <FormControlLabel
+          value="top"
+          control={<ShipperCheckbox color="primary" />}
+          label="Top"
+          labelPlacement="top"
+        />
+        <br />
         <br />
       </ShipperThemeProvider>
     </>

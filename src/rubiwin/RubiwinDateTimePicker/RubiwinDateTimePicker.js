@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { DateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers'
 import DateFnsUtils from '@date-io/date-fns'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core'
+import { createTheme, ThemeProvider } from '@material-ui/core'
 
-const defaultMaterialTheme = createMuiTheme({
+const defaultMaterialTheme = createTheme({
   palette: {
     primary: { main: '#00c3ff' }
   }
