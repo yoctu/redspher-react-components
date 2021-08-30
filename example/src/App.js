@@ -88,7 +88,7 @@ import {
   Chip,
   createStyles,
   makeStyles,
-  FormControl, InputLabel, Input, FormHelperText
+  FormControl, InputLabel, Input, FormHelperText, FormControlLabel
 } from '@material-ui/core'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import {Pagination} from '@material-ui/lab'
@@ -434,7 +434,12 @@ const App = () => {
         </div>
         <br />
         <br />
-        <ShipperCheckbox />
+        <FormControlLabel
+          value="top"
+          control={<ShipperCheckbox color="primary" />}
+          label="Top"
+          labelPlacement="top"
+        />
         <br />
         <br />
       </ShipperThemeProvider>
