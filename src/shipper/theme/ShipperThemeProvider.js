@@ -287,6 +287,7 @@ const theme = createTheme({
     MuiPopover: {
       root: {
         '& .MuiPaper-root': {
+          maxHeight: '400px',
           borderRadius: '16px',
           '& .MuiListItem-button': {
             margin: '0 5px',

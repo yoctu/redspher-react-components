@@ -90,13 +90,8 @@ import {
   FormControl, InputLabel, Input, FormHelperText
 } from '@material-ui/core'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import { Pagination } from '@material-ui/lab'
+import {Pagination} from '@material-ui/lab'
 import MuiPhoneNumber from 'material-ui-phone-number'
-const handleOnChange = (value) => {
-  this.setState({
-    phone: value
-  });
-}
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -426,7 +421,15 @@ const App = () => {
           </FormControl>
           <br />
           <br />
-          <MuiPhoneNumber defaultCountry={'fr'} disableAreaCodes={false} countryCodeEditable={false} dropdownClass={'dropdownShipper'}/>
+          <MuiPhoneNumber
+            enableSearchField={true}
+            defaultCountry={'fr'}
+            countryCodeEditable={true}
+            dropdownClass={'dropdownShipper'}
+            label="Phone Number"
+            preferredCountries={['at', 'be', 'bg', 'cy', 'cz', 'de', 'dk', 'ee', 'es', 'fi', 'fr', 'gb', 'gr', 'hu', 'hr', 'ie', 'it', 'lt', 'lu', 'lv', 'mt', 'nl', 'pl', 'pt', 'ro', 'se', 'si', 'sk']}
+            disableAreaCodes={true}
+          />
         </div>
         <br />
       </ShipperThemeProvider>

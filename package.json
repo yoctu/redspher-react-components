@@ -61,7 +61,6 @@
     "@material-ui/pickers": "^3.2.10",
     "@material-ui/styles": "^4.10.0",
     "date-fns": "^2.16.1",
-    "material-ui-phone-number": "^2.2.6",
-    "node-sass": "^6.0.1"
+    "material-ui-phone-number": "^2.2.6"
   }
 }
