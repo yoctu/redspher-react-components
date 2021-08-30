@@ -29,7 +29,9 @@ const ShipperCardVehicle = ({
   onclickFnc,
   selectedValue,
   setSelectedValue,
-  enableUnselect
+  enableUnselect,
+  tooltipValue,
+  noInfoIcon
 }) => {
   const allowedIcons = new Map([
     ['truck01', Truck01Icon],
@@ -65,15 +67,20 @@ const ShipperCardVehicle = ({
   return (
     <ShipperThemeProvider injectFirst>
       <Card
-        style={{ width: '90px' }}
-        elevation={0}
+        style={{
+          width: '90px'
+        }}
         onClick={onclickAction}
         className={`${
-          selectedValue === value ? style.blueBorder : style.noBorder
-        }`}
+          disabled
+            ? style.disabledBorder
+            : selectedValue === value
+            ? style.blueBorder
+            : style.noBorder
+        } ${style.cardHover}`}
       >
         <CardActionArea disabled={disabled}>
-          <CardContent>
+          <CardContent style={{ paddingTop: '5px', paddingBottom: 0 }}>
             <Grid>
               <Grid item xs={12} container justifyContent='center'>
                 {React.createElement(getIconByName(startIcon), {})}
@@ -95,9 +102,11 @@ const ShipperCardVehicle = ({
                 </Grid>
                 <Grid item>
                   <Box ml={0.4} mt={0.25}>
-                    <InformationIcon
-                      style={{ width: '12px', height: '12px' }}
-                    />
+                    {!noInfoIcon
+                      ? React.createElement(InformationIcon, {
+                          style: { width: '12px', height: '12px' }
+                        })
+                      : ''}
                   </Box>
                 </Grid>
               </Grid>
@@ -115,6 +124,7 @@ const ShipperCardVehicle = ({
                   checked={selectedValue === value}
                   value={value}
                   disabled={disabled}
+                  className={`${style.smallIcon}`}
                 />
                 <br />
                 <br />
@@ -134,8 +144,6 @@ ShipperCardVehicle.propTypes = {
   value: PropTypes.string.isRequired,
   /** text to display as reference of the invoice */
   labelOne: PropTypes.string.isRequired,
-  /** text to display as user reference of the invoice */
-  labelTwo: PropTypes.string.isRequired,
   /** date to display as invoice date */
   disabled: PropTypes.bool.isRequired,
   /** function to execute when the card is clicked and the component isn't disabled */
@@ -145,7 +153,11 @@ ShipperCardVehicle.propTypes = {
   /** The setter of the ueState, sent to the component to set the checked value */
   setSelectedValue: PropTypes.func.isRequired,
   /** Enable the switch mode on the card, select/unselect like a checkbox the radio button */
-  enableUnselect: PropTypes.bool.isRequired
+  enableUnselect: PropTypes.bool.isRequired,
+
+  tooltipValue: PropTypes.string,
+
+  noInfoIcon: PropTypes.bool
 }
 
 export default ShipperCardVehicle

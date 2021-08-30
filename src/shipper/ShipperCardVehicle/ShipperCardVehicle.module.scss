@@ -18,3 +18,16 @@
 .noBorder {
     border-color: transparent;
 }
+
+.disabledBorder {
+    border-color: transparent !important;
+}
+
+.cardHover:hover {
+    border: 1px solid #1436D3;
+}
+
+.smallIcon {
+    width: 10px;
+    height: 10px;
+}

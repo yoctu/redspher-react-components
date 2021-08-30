@@ -345,17 +345,17 @@ const App = () => {
           <Grid item xs={1}></Grid>
           <Grid item xs={1}>
             <div className={classes.root}>
-              <ShipperCardVehicle startIcon="driver" value="driver" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedSecondDriver} setSelectedValue={setSelectedSecondDriver} enableUnselect={true}></ShipperCardVehicle>
+              <ShipperCardVehicle startIcon="driver" value="driver" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedSecondDriver} setSelectedValue={setSelectedSecondDriver} enableUnselect={true} noInfoIcon={true}></ShipperCardVehicle>
             </div>
           </Grid>
             <Grid item xs={1}>
             <div className={classes.root}>
-              <ShipperCardVehicle startIcon="tailLift" value="tailLift" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedTailift} setSelectedValue={setSelectedTailLift} enableUnselect={true}></ShipperCardVehicle>
+              <ShipperCardVehicle startIcon="tailLift" value="tailLift" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedTailift} setSelectedValue={setSelectedTailLift} enableUnselect={true} noInfoIcon={true}></ShipperCardVehicle>
             </div>
           </Grid>
           <Grid item xs={1}>
             <div className={classes.root}>
-              <ShipperCardVehicle startIcon="sideLoad" value="sideLoad" labelOne="Label" labelTwo="label" disabled={true}></ShipperCardVehicle>
+              <ShipperCardVehicle startIcon="sideLoad" value="sideLoad" labelOne="Label" labelTwo="label" disabled={true} noInfoIcon={true}></ShipperCardVehicle>
             </div>
           </Grid>
         </Grid>

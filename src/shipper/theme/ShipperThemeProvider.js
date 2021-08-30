@@ -141,10 +141,7 @@ const theme = createTheme({
     MuiCard: {
       root: {
         borderRadius: themeConstants.borderRadius.main,
-        border: `1px solid transparent`,
-        '&:hover': {
-          border: `1px solid ${themeConstants.primary.main} !important`
-        }
+        border: `1px solid transparent`
       }
     }
   }
