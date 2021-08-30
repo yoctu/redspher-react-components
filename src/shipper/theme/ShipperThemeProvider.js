@@ -225,6 +225,81 @@ const theme = createTheme({
         flex: 'inherit',
         margin: '0 7px'
       }
+    },
+    MuiFormControl: {
+      root: {
+        width: '100%',
+        '& .MuiFormLabel-root': {
+          color: themeConstants.grey.dark,
+          zIndex: 2,
+          paddingLeft: '15px',
+          fontSize: '14px',
+          lineHeight: '17.07px',
+          '&.Mui-focused, &.MuiFormLabel-filled': {
+            color: themeConstants.grey.dark,
+            paddingLeft: '0px'
+          }
+        },
+        '& .MuiInputBase-root': {
+          padding: '7px 15px',
+          backgroundColor: themeConstants.white.main,
+          borderRadius: '20px',
+          zIndex: 1,
+          '&.MuiInput-underline:before': {
+            display: 'none'
+          },
+          '&.MuiInput-underline:after': {
+            display: 'none'
+          },
+          '& input': {
+            padding: '0px'
+          },
+          '&:hover': {
+            boxShadow: 'inset 0px 0px 0px 1px ' + themeConstants.grey.main
+          },
+          '&.Mui-focused': {
+            boxShadow: 'inset 0px 0px 0px 1px ' + themeConstants.primary.main
+          },
+          '& .MuiInputAdornment-root': {
+            width: '16px',
+            height: '16px',
+            '& .MuiSvgIcon-root': {
+              width: '16px',
+              height: '16px'
+            },
+            '& .MuiPhoneNumber-flagButton': {
+              width: '16px',
+              height: '16px'
+            }
+          },
+          '&.Mui-error': {
+            boxShadow: 'inset 0px 0px 0px 1px ' + themeConstants.secondary.main,
+            '& .MuiSvgIcon-root > *': {
+              stroke: themeConstants.secondary.main
+            }
+          },
+          '& .MuiInputBase-inputAdornedStart': {
+            marginLeft: '10px'
+          }
+        }
+      }
+    },
+    MuiPopover: {
+      root: {
+        '& .MuiPaper-root': {
+          maxHeight: '400px',
+          borderRadius: '16px',
+          '& .MuiListItem-button': {
+            margin: '0 5px',
+            '&.Mui-selected': {
+              borderRadius: '16px'
+            },
+            '&:hover': {
+              borderRadius: '16px'
+            }
+          }
+        }
+      }
     }
   }
 })

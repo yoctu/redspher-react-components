@@ -79,8 +79,19 @@ import {
   ShipperItem
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import {Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles} from '@material-ui/core'
-import { Pagination } from '@material-ui/lab'
+import {
+  Button,
+  MenuItem,
+  Radio,
+  Select,
+  Chip,
+  createStyles,
+  makeStyles,
+  FormControl, InputLabel, Input, FormHelperText
+} from '@material-ui/core'
+import InputAdornment from '@material-ui/core/InputAdornment'
+import {Pagination} from '@material-ui/lab'
+import MuiPhoneNumber from 'material-ui-phone-number'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -351,6 +362,75 @@ const App = () => {
           <ShipperItem startIcon={<PlusIcon />} endIcon={<PlusIcon />} text='Yolo' action={downloadAction} />
         </div>
         <br />
+        <br />
+        <div style={{backgroundColor: '#ececec', padding: '20px', width: '400px'}}>
+          <FormControl>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+            />
+          </FormControl>
+          <br />
+          <FormControl>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <PlusIcon />
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+          <br />
+          <FormControl error>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+              aria-describedby="component-error-text"
+            />
+            <FormHelperText id="component-error-text">Error message</FormHelperText>
+          </FormControl>
+          <br />
+          <FormControl error>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <PlusIcon />
+                </InputAdornment>
+              }
+              aria-describedby="component-error-text"
+            />
+            <FormHelperText id="component-error-text">Error message</FormHelperText>
+          </FormControl>
+          <br />
+          <FormControl>
+            <InputLabel htmlFor="input-test">Label</InputLabel>
+            <Input
+              id="input-test"
+              type={'text'}
+              multiline={true}
+              aria-describedby="component-error-text"
+            />
+          </FormControl>
+          <br />
+          <br />
+          <MuiPhoneNumber
+            enableSearchField={true}
+            defaultCountry={'fr'}
+            countryCodeEditable={true}
+            dropdownClass={'dropdownShipper'}
+            label="Phone Number"
+            preferredCountries={['at', 'be', 'bg', 'cy', 'cz', 'de', 'dk', 'ee', 'es', 'fi', 'fr', 'gb', 'gr', 'hu', 'hr', 'ie', 'it', 'lt', 'lu', 'lv', 'mt', 'nl', 'pl', 'pt', 'ro', 'se', 'si', 'sk']}
+            disableAreaCodes={true}
+          />
+        </div>
         <br />
       </ShipperThemeProvider>
     </>
