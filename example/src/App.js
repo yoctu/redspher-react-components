@@ -354,33 +354,34 @@ const App = () => {
         <br />
         <br />
         <Grid container direction="row">
-          <Grid item xs={1}>
+          <Grid item sm={2}>
             <div className={classes.root}>
               <ShipperCardVehicle startIcon="truck01" value="truck01" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedVehicle} setSelectedValue={setSelectedVehicle}></ShipperCardVehicle>
             </div>
           </Grid>
-          <Grid item xs={1}>
+          <Grid item sm={2}>
             <div className={classes.root}>
               <ShipperCardVehicle startIcon="truck02" value="truck02" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedVehicle} setSelectedValue={setSelectedVehicle}></ShipperCardVehicle>
             </div>
           </Grid>
-          <Grid item xs={1}>
+          <Grid item sm={2}>
             <div className={classes.root}>
               <ShipperCardVehicle startIcon="truck03" value="truck03" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedVehicle} setSelectedValue={setSelectedVehicle}></ShipperCardVehicle>
             </div>
           </Grid>
-          <Grid item xs={1}></Grid>
-          <Grid item xs={1}>
+        </Grid>
+        <Grid container direction="row">
+          <Grid item sm={2}>
             <div className={classes.root}>
               <ShipperCardVehicle startIcon="driver" value="driver" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedSecondDriver} setSelectedValue={setSelectedSecondDriver} enableUnselect={true} noInfoIcon={true}></ShipperCardVehicle>
             </div>
           </Grid>
-            <Grid item xs={1}>
+            <Grid item sm={2}>
             <div className={classes.root}>
               <ShipperCardVehicle startIcon="tailLift" value="tailLift" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedTailift} setSelectedValue={setSelectedTailLift} enableUnselect={true} noInfoIcon={true}></ShipperCardVehicle>
             </div>
           </Grid>
-          <Grid item xs={1}>
+          <Grid item sm={2}>
             <div className={classes.root}>
               <ShipperCardVehicle startIcon="sideLoad" value="sideLoad" labelOne="Label" labelTwo="label" disabled={true} noInfoIcon={true}></ShipperCardVehicle>
             </div>
