@@ -3,7 +3,6 @@ import Checkbox from '@material-ui/core/Checkbox'
 import CheckBoxOutlineBlankRoundedIcon from '@material-ui/icons/CheckBoxOutlineBlankRounded'
 import StopRounded from '@material-ui/icons/StopRounded'
 
-
 export default function IconCheckboxes() {
   return (
     <div style={{ position: 'relative', width: '10px', height: '10px' }}>
