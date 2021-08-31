@@ -122,17 +122,6 @@ const theme = createTheme({
         marginBottom: '15px'
       }
     },
-    MuiCard: {
-      root: {
-        borderRadius: themeConstants.borderRadius.main,
-        width: 270,
-        border: `1px solid transparent`,
-        '&:hover': {
-          border: `1px solid ${themeConstants.primary.main}`
-        },
-        boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)'
-      }
-    },
     MuiCardContent: {
       root: {
         padding: 20,
@@ -185,6 +174,13 @@ const theme = createTheme({
       rail: {
         opacity: 0.25,
         backgroundColor: themeConstants.primary.main
+      }
+    },
+    MuiCard: {
+      root: {
+        borderRadius: themeConstants.borderRadius.main,
+        border: `1px solid transparent`,
+        boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)'
       }
     },
     MuiToggleButtonGroup: {

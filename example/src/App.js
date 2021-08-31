@@ -75,23 +75,16 @@ import {
   ArrowBottom2Icon,
   EditIcon,
   ShipperRangeSlider,
+  ShipperCardVehicle,
   ShipperSwitchPackage,
   ShipperItem,
   ShipperCheckbox
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import {
-  Button,
-  MenuItem,
-  Radio,
-  Select,
-  Chip,
-  createStyles,
-  makeStyles,
-  FormControl, InputLabel, Input, FormHelperText, FormControlLabel
-} from '@material-ui/core'
+import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid, FormControl, InputLabel, Input, FormHelperText, FormControlLabel } from '@material-ui/core'
+import { Pagination } from '@material-ui/lab'
+import 'redspher-components/dist/index.css'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import {Pagination} from '@material-ui/lab'
 import MuiPhoneNumber from 'material-ui-phone-number'
 
 const useStyles = makeStyles((theme) =>
@@ -145,6 +138,14 @@ const App = () => {
   const shownLabelFormat = (value) => {
     return `+ ${value}h`
   }
+
+  const cardVehicleAction = (txt) => {
+    console.log(txt)
+  }
+
+  const [selectedVehicle, setSelectedVehicle] = React.useState('truck02');
+  const [selectedSecondDriver, setSelectedSecondDriver] = React.useState('');
+  const [selectedTailift, setSelectedTailLift] = React.useState('');
 
   const downloadAction = () => {
     alert("Poney")
@@ -229,7 +230,7 @@ const App = () => {
       <br />
       <ShipperThemeProvider>
         <Button color="primary" variant="contained">Shipper Button</Button>
-        <Button startIcon={<PlusIcon primaryColor={'#fff'} secondaryColor={'#fff'} />} color="primary" variant="contained">Shipper Button</Button>
+        <Button startIcon={<PlusIcon  primaryColor={'#fff'} secondaryColor={'#fff'} />} color="primary" variant="contained">Shipper Button</Button>
         <br />
         <br />
         <Button color="primary" variant="outlined">Shipper Button</Button>
@@ -351,6 +352,42 @@ const App = () => {
             downloadTranslate="Download"
           />
         </div>
+        <br />
+        <br />
+        <Grid container direction="row">
+          <Grid item sm={2}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="truck01" value="truck01" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedVehicle} setSelectedValue={setSelectedVehicle}></ShipperCardVehicle>
+            </div>
+          </Grid>
+          <Grid item sm={2}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="truck02" value="truck02" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedVehicle} setSelectedValue={setSelectedVehicle}></ShipperCardVehicle>
+            </div>
+          </Grid>
+          <Grid item sm={2}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="truck03" value="truck03" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedVehicle} setSelectedValue={setSelectedVehicle}></ShipperCardVehicle>
+            </div>
+          </Grid>
+        </Grid>
+        <Grid container direction="row">
+          <Grid item sm={2}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="driver" value="driver" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedSecondDriver} setSelectedValue={setSelectedSecondDriver} enableUnselect={true} noInfoIcon={true}></ShipperCardVehicle>
+            </div>
+          </Grid>
+            <Grid item sm={2}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="tailLift" value="tailLift" labelOne="Label" labelTwo="label" disabled={false} onclickFnc={cardVehicleAction} selectedValue={selectedTailift} setSelectedValue={setSelectedTailLift} enableUnselect={true} noInfoIcon={true}></ShipperCardVehicle>
+            </div>
+          </Grid>
+          <Grid item sm={2}>
+            <div className={classes.root}>
+              <ShipperCardVehicle startIcon="sideLoad" value="sideLoad" labelOne="Label" labelTwo="label" disabled={true} noInfoIcon={true}></ShipperCardVehicle>
+            </div>
+          </Grid>
+        </Grid>
         <br />
         <br />
         <ShipperSwitchPackage parcelTranslate='parcel' paletTranslate='pallet'/>

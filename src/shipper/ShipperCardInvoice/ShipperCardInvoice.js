@@ -33,7 +33,12 @@ const ShipperCardInvoice = ({
   downloadTranslate
 }) => (
   <ShipperThemeProvider injectFirst>
-    <Card>
+    <Card
+      style={{
+        width: '270px'
+      }}
+      className={`${style.cardHover}`}
+    >
       <CardContent>
         <Grid>
           <Grid item xs={12}>
