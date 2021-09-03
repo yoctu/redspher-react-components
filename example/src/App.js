@@ -11,7 +11,8 @@ import {
   AmazonTimePicker,
   RubiwinDateTimePicker,
   DirectBusinessIcon,
-  RubiwinThemeProvider
+  RubiwinThemeProvider,
+  E4pThemeProvider
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Select } from '@material-ui/core'
@@ -101,22 +102,23 @@ const App = () => {
         />
         <br />
         <br />
-
-        <Button
-          variant='contained'
-          startIcon={<DirectBusinessIcon />}
-          color='primary'
-          size='large'
-        >
-          Bid on it !
-        </Button>
+        <E4pThemeProvider>
+          <Button
+            variant='contained'
+            startIcon={<DirectBusinessIcon />}
+            color='primary'
+            size='large'
+          >
+            Bid on it !
+          </Button>
+        </E4pThemeProvider>
         <br />
         <br />
         <Select
           value={selected}
           onChange={(event) => setSelected(event.target.value)}
           multiple
-          variant="outlined"
+          variant='outlined'
         >
           {testRedenderTwo()}
         </Select>

@@ -1,18 +1,18 @@
 const constants = {
   primary: {
-    main: '#00C3FF',
-    light: '#CAF3FF',
-    dark: '#006B8D'
+    main: '#EC6825',
+    light: '#FF9668',
+    dark: '#CD5600'
   },
   secondary: {
+    main: '#29519D',
+    light: '#607dcf',
+    dark: '#002a6e'
+  },
+  tertiary: {
     main: '#eb3343',
     light: '#ff6c6e',
     dark: '#b1001c'
-  },
-  tertiary: {
-    main: '#00FFF3',
-    light: '#70ffff',
-    dark: '#00cbc0'
   },
   grey: {
     main: '#171F46',
