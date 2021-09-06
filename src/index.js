@@ -11,6 +11,7 @@ import RubiwinSelect from './rubiwin/RubiwinSelect'
 import RubiwinMenuItem from './rubiwin/RubiwinMenuItem'
 import DirectBusinessIcon from './icons/DirectBusinessIcon'
 import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
+import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 
 export {
   RubiwinButton,
@@ -25,5 +26,6 @@ export {
   RubiwinSelect,
   RubiwinMenuItem,
   DirectBusinessIcon,
-  RubiwinThemeProvider
+  RubiwinThemeProvider,
+  E4pThemeProvider
 }
