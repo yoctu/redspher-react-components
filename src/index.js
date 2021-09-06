@@ -10,9 +10,7 @@ import RubiwinDateTimePicker from './rubiwin/RubiwinDateTimePicker'
 import RubiwinSelect from './rubiwin/RubiwinSelect'
 import RubiwinMenuItem from './rubiwin/RubiwinMenuItem'
 import DirectBusinessIcon from './icons/DirectBusinessIcon'
-import RubiwinThemeProvider, {
-  rubiwinBaseTheme
-} from './rubiwin/theme/RubiwinThemeProvider'
+import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
 import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 
 export {
