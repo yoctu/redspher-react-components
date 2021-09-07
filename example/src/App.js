@@ -12,6 +12,7 @@ import {
   RubiwinDateTimePicker,
   DirectBusinessIcon,
   RubiwinThemeProvider,
+  E4pThemeProvider,
   ShipperThemeProvider,
   ShipperCardInvoice,
   PlusIcon,
@@ -205,22 +206,23 @@ const App = () => {
         />
         <br />
         <br />
-
-        <Button
-          variant='contained'
-          startIcon={<DirectBusinessIcon />}
-          color='primary'
-          size='large'
-        >
-          Bid on it !
-        </Button>
+        <E4pThemeProvider>
+          <Button
+            variant='contained'
+            startIcon={<DirectBusinessIcon />}
+            color='primary'
+            size='large'
+          >
+            Bid on it !
+          </Button>
+        </E4pThemeProvider>
         <br />
         <br />
         <Select
           value={selected}
           onChange={(event) => setSelected(event.target.value)}
           multiple
-          variant="outlined"
+          variant='outlined'
         >
           {testRedenderTwo()}
         </Select>
@@ -482,6 +484,6 @@ const App = () => {
       </ShipperThemeProvider>
     </>
   )
-};
+}
 
 export default App

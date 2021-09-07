@@ -78,6 +78,7 @@ import ShipperCardVehicle from './shipper/ShipperCardVehicle'
 import ShipperSwitchPackage from './shipper/ShipperSwitchPackage'
 import ShipperItem from './shipper/ShipperItem'
 import ShipperCheckbox from './shipper/ShipperCheckbox'
+import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 
 export {
   RubiwinButton,
@@ -93,6 +94,7 @@ export {
   RubiwinMenuItem,
   DirectBusinessIcon,
   RubiwinThemeProvider,
+  E4pThemeProvider,
   ShipperThemeProvider,
   ShipperCardInvoice,
   PlusIcon,
