@@ -18,7 +18,8 @@ import Truck03Icon from '../../icons/Shipper/Truck03Icon'
 import Truck04Icon from '../../icons/Shipper/Truck04Icon'
 import InformationIcon from '../../icons/Shipper/InformationIcon'
 import DriverIcon from '../../icons/Shipper/DriverIcon'
-import TailLiftIcon from '../../icons/Shipper/SideLoadIcon'
+import TailLiftIcon from '../../icons/Shipper/TailLiftIcon'
+import SideLoadIcon from '../../icons/Shipper/SideLoadIcon'
 
 const ShipperCardVehicle = ({
   startIcon,
@@ -39,7 +40,8 @@ const ShipperCardVehicle = ({
     ['truck03', Truck03Icon],
     ['truck04', Truck04Icon],
     ['driver', DriverIcon],
-    ['tailLift', TailLiftIcon]
+    ['tailLift', TailLiftIcon],
+    ['sideLoadIcon', SideLoadIcon]
   ])
 
   const getIconByName = (name) => {
