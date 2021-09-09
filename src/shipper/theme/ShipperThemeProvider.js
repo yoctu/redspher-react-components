@@ -95,6 +95,20 @@ const theme = createTheme({
         color: themeConstants.primary.main
       }
     },
+    PrivateRadioButtonIcon: {
+      root: {
+        '&:disabled': {
+          color: themeConstants.grey.main
+        },
+        '& svg[class^="MuiSvgIcon-root-"]': {
+          width: '14px !important',
+          height: '14px !important'
+        }
+      },
+      colorPrimary: {
+        color: themeConstants.primary.main
+      }
+    },
     MuiChip: {
       root: {
         backgroundColor: themeConstants.green.main,
