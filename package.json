@@ -64,8 +64,6 @@
     "date-fns": "^2.16.1",
     "material-ui-phone-number": "^2.2.6",
     "node-sass": "^6.0.1",
-    "react-chartjs-2": "^3.0.4",
-    "react-vis": "^1.11.7",
-    "recharts": "^2.1.2"
+    "react-chartjs-2": "^3.0.4"
   }
 }
