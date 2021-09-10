@@ -79,10 +79,11 @@ import {
   ShipperCardVehicle,
   ShipperSwitchPackage,
   ShipperItem,
-  ShipperCheckbox
+  ShipperCheckbox,
+  ShipperChartMap
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
-import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid, FormControl, InputLabel, Input, FormHelperText, FormControlLabel } from '@material-ui/core'
+import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid, FormControl, InputLabel, Input, FormHelperText, FormControlLabel, Box } from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
 import 'redspher-components/dist/index.css'
 import InputAdornment from '@material-ui/core/InputAdornment'
@@ -151,6 +152,12 @@ const App = () => {
   const downloadAction = () => {
     alert("Poney")
   }
+
+  const dataChartMap = [
+    { ISO3: 'FRA', value: '2' },
+    { ISO3: 'DEU', value: '3' },
+    { ISO3: 'ITA', value: '1' }
+  ]
 
   return (
     <>
@@ -481,6 +488,9 @@ const App = () => {
         />
         <br />
         <br />
+        <Box width={500} height={500}>
+          <ShipperChartMap data={dataChartMap} title={"Top 3 shipments country"}></ShipperChartMap>
+        </Box>
       </ShipperThemeProvider>
     </>
   )
