@@ -79,7 +79,8 @@ import {
   ShipperCardVehicle,
   ShipperSwitchPackage,
   ShipperItem,
-  ShipperCheckbox
+  ShipperCheckbox,
+  ShipperChart
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid, FormControl, InputLabel, Input, FormHelperText, FormControlLabel } from '@material-ui/core'
@@ -481,6 +482,7 @@ const App = () => {
         />
         <br />
         <br />
+        <ShipperChart></ShipperChart>
       </ShipperThemeProvider>
     </>
   )
