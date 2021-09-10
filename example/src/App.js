@@ -153,6 +153,46 @@ const App = () => {
     alert("Poney")
   }
 
+  const data1 = {
+    labels: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'FRG2', 'Others'],
+    datasets: [
+      {
+        label: '# of Votes',
+        data: [12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5],
+        backgroundColor: [
+          '#062440',
+          '#AFB9C4',
+          '#003B81',
+          '#1436D3',
+          '#68717B',
+          '#0095FD',
+          '#F20738',
+          '#FFCCCB'
+        ]
+      }
+    ]
+  }
+
+  const data2 = {
+    labels: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'FRG2', 'Others'],
+    datasets: [
+      {
+        label: '# of Votes',
+        data: [34.6, 13.6, 9.1, 4, 15.3, 4.1, 3.2, 8.7],
+        backgroundColor: [
+          '#062440',
+          '#AFB9C4',
+          '#003B81',
+          '#1436D3',
+          '#68717B',
+          '#0095FD',
+          '#F20738',
+          '#FFCCCB'
+        ]
+      }
+    ]
+  }
+
   return (
     <>
       <RubiwinThemeProvider>
@@ -482,7 +522,14 @@ const App = () => {
         />
         <br />
         <br />
-        <ShipperChart></ShipperChart>
+        <Grid container direction="row">
+          <Grid item sm={6}>
+            <ShipperChart data={data1}></ShipperChart>
+          </Grid>
+          <Grid item sm={6}>
+            <ShipperChart data={data2}></ShipperChart>
+          </Grid>
+        </Grid>
       </ShipperThemeProvider>
     </>
   )

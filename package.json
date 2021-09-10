@@ -60,9 +60,11 @@
     "@material-ui/lab": "^4.0.0-alpha.60",
     "@material-ui/pickers": "^3.2.10",
     "@material-ui/styles": "^4.10.0",
+    "chart.js": "^3.5.1",
     "date-fns": "^2.16.1",
     "material-ui-phone-number": "^2.2.6",
     "node-sass": "^6.0.1",
+    "react-chartjs-2": "^3.0.4",
     "react-vis": "^1.11.7",
     "recharts": "^2.1.2"
   }
