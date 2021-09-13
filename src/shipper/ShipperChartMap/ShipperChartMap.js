@@ -28,7 +28,7 @@ const ShipperChartMap = ({ data, title }) => {
         <ComposableMap
           projection='geoAzimuthalEqualArea'
           projectionConfig={{
-            rotate: [-10.0, -52.0, 0],
+            rotate: [-16.0, -54.0, 0],
             scale: 1000
           }}
         >
