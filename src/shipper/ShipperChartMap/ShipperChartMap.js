@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps'
 import { Card, CardContent, CardHeader } from '@material-ui/core'
+import style from './ShipperChartMap.module.scss'
 
 const ShipperChartMap = ({ data, title }) => {
   const geoUrl =
@@ -22,7 +23,7 @@ const ShipperChartMap = ({ data, title }) => {
 
   return (
     <Card>
-      <CardHeader title={title} />
+      <CardHeader title={title} className={style.centerTitle} />
       <CardContent>
         <ComposableMap
           projection='geoAzimuthalEqualArea'
