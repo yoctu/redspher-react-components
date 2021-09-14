@@ -80,6 +80,8 @@ import ShipperItem from './shipper/ShipperItem'
 import ShipperCheckbox from './shipper/ShipperCheckbox'
 import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 import ShipperChartDoughnut from './shipper/ShipperChartDoughnut'
+import rubiwinBaseTheme from './rubiwin/theme/RubiwinBaseTheme'
+import E4pTheme from './rubiwin/theme/E4pTheme'
 
 export {
   RubiwinButton,
@@ -163,5 +165,7 @@ export {
   ShipperSwitchPackage,
   ShipperItem,
   ShipperCheckbox,
-  ShipperChartDoughnut
+  ShipperChartDoughnut,
+  rubiwinBaseTheme,
+  E4pTheme
 }
