@@ -303,10 +303,9 @@ export const themeObject = {
   }
 }
 
-export const defaultTheme = createTheme(themeObject)
-
-const ShipperThemeProvider = ({ theme = defaultTheme, ...delegated }) => (
-  <ThemeProvider theme={theme} {...delegated} />
-)
+const ShipperThemeProvider = ({
+  theme = createTheme(themeObject),
+  ...delegated
+}) => <ThemeProvider theme={theme} {...delegated} />
 
 export default ShipperThemeProvider

@@ -95,7 +95,8 @@ import {
   InputLabel,
   Input,
   FormHelperText,
-  FormControlLabel
+  FormControlLabel,
+  ThemeProvider
 } from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
 import 'redspher-components/dist/index.css'
@@ -666,10 +667,12 @@ const testRedenderTwo = () => {
 
 const App = () => {
   return (
-    <>
+    // See: https://github.com/mui-org/material-ui/issues/15914
+    //      https://stackoverflow.com/a/67555923/6595024
+    <ThemeProvider>
       <RubiWinShowCase />
       <ShipperShowCase />
-    </>
+    </ThemeProvider>
   )
 }
 
