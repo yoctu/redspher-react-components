@@ -127,6 +127,11 @@ const rubiwinBaseTheme = {
         color: themeConstants.grey.main,
         textTransform: 'capitalize'
       }
+    },
+    MuiChip: {
+      colorPrimary: {
+        color: 'white'
+      }
     }
   }
 }
