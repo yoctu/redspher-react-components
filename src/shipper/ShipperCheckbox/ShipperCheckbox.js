@@ -8,6 +8,7 @@ export default function IconCheckboxes({ className = '', ...delegated }) {
   return (
     <div className={`${styles.container} ${className}`}>
       <Checkbox
+        {...delegated}
         className={styles.sizeStd}
         color='primary'
         icon={<CheckBoxOutlineBlankRoundedIcon className={styles.sizeStd} />}
