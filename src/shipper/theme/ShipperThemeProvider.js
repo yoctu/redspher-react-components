@@ -1,22 +1,11 @@
 import React from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
-import themeConstants from './themeConstants'
+import themeConstants, { colors } from './themeConstants'
 import { createTheme } from '@material-ui/core'
 
-const theme = createTheme({
+export const themeObject = {
   spacing: 1,
-  palette: {
-    primary: {
-      main: themeConstants.primary.main,
-      light: themeConstants.primary.light,
-      dark: themeConstants.primary.dark
-    },
-    secondary: {
-      main: themeConstants.secondary.main,
-      light: themeConstants.secondary.light,
-      dark: themeConstants.secondary.dark
-    }
-  },
+  palette: colors,
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
     h2: {
@@ -312,10 +301,12 @@ const theme = createTheme({
       }
     }
   }
-})
+}
 
-const ShipperThemeProvider = ({ children }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+export const defaultTheme = createTheme(themeObject)
+
+const ShipperThemeProvider = ({ theme = defaultTheme, ...delegated }) => (
+  <ThemeProvider theme={theme} {...delegated} />
 )
 
 export default ShipperThemeProvider
