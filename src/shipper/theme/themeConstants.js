@@ -1,10 +1,16 @@
-const constants = {
-  primary: {
+export const colors = {
+  get primary() {
+    return this.blue
+  },
+  get secondary() {
+    return this.red
+  },
+  blue: {
     main: '#1436D3',
     light: '#0095FD',
     dark: '#003B81'
   },
-  secondary: {
+  red: {
     main: '#F20738'
   },
   grey: {
@@ -24,7 +30,11 @@ const constants = {
   },
   orange: {
     main: '#FE7062'
-  },
+  }
+}
+
+const constants = {
+  ...colors,
   breakpoints: {
     lg: 1280,
     md: 960,
