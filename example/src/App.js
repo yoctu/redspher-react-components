@@ -641,6 +641,12 @@ const ShipperShowCase = () => {
           label='Top'
           labelPlacement='top'
         />
+        <FormControlLabel
+          value='right'
+          control={<ShipperCheckbox color='primary' />}
+          label='Right'
+          labelPlacement='right'
+        />
         <br />
         <br />
       </ShipperThemeProvider>
