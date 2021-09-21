@@ -524,8 +524,8 @@ const App = () => {
         <br />
         <Grid container direction="row">
           <Grid item sm={3}>
-            <Box width={300} height={300}> 
-              <ShipperChartDoughnut data={data1}></ShipperChartDoughnut>
+            <Box width={400} height={300}> 
+              <ShipperChartDoughnut data={data1} title={"Shipments by vehicle type"}></ShipperChartDoughnut>
             </Box>
           </Grid>
         </Grid>
