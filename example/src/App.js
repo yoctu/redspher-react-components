@@ -79,7 +79,8 @@ import {
   ShipperCardVehicle,
   ShipperSwitchPackage,
   ShipperItem,
-  ShipperCheckbox
+  ShipperCheckbox,
+  PrintIcon
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -348,6 +349,7 @@ const ShipperShowCase = () => {
           <ArrowRight2Icon />
           <ArrowTop2Icon />
           <EditIcon />
+          <PrintIcon />
         </section>
         <section
           style={{
