@@ -23,6 +23,11 @@ export const themeObject = {
       fontSize: '12px',
       fontWeight: 'bold',
       color: themeConstants.primary.main
+    },
+    subtitle1: {
+      color: themeConstants.primary.dark,
+      fontSize: '24px',
+      lineHeight: '29.26px'
     }
   },
   overrides: {
