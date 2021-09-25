@@ -80,6 +80,7 @@ import ShipperItem from './shipper/ShipperItem'
 import ShipperCheckbox from './shipper/ShipperCheckbox'
 import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 import ShipperChartMap from './shipper/ShipperChartMap'
+import ShipperChartFlowMap from './shipper/ShipperChartFlowMap'
 
 export {
   RubiwinButton,
@@ -163,5 +164,6 @@ export {
   ShipperSwitchPackage,
   ShipperItem,
   ShipperCheckbox,
-  ShipperChartMap
+  ShipperChartMap,
+  ShipperChartFlowMap
 }

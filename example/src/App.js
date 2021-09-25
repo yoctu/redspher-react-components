@@ -80,7 +80,8 @@ import {
   ShipperSwitchPackage,
   ShipperItem,
   ShipperCheckbox,
-  ShipperChartMap
+  ShipperChartMap,
+  ShipperChartFlowMap
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import { Button, MenuItem, Radio, Select, Chip, createStyles, makeStyles, Grid, FormControl, InputLabel, Input, FormHelperText, FormControlLabel, Box } from '@material-ui/core'
@@ -491,6 +492,11 @@ const App = () => {
         <Box width={500} height={500}>
           <ShipperChartMap data={dataChartMap} title={"Top 3 shipments country"}></ShipperChartMap>
         </Box>
+        <Grid container>
+          <Grid item>
+            <ShipperChartFlowMap data={dataChartMap} title={"Flows"}></ShipperChartFlowMap>
+          </Grid>
+        </Grid>
       </ShipperThemeProvider>
     </>
   )
