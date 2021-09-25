@@ -4,7 +4,8 @@ import * as d3 from 'd3'
 import { geoMercator, geoPath } from 'd3-geo'
 import { Card, CardContent, CardHeader } from '@material-ui/core'
 import * as topojson from 'topojson-client'
-import countries from './countries.json'
+import countries from './countries.topo.json'
+import airports from './airports.topo.json'
 import './styles.css'
 
 const ShipperChartMapFlow = ({ data, title }) => {
@@ -21,9 +22,6 @@ const ShipperChartMapFlow = ({ data, title }) => {
     const svgEl = d3.select(svgRef.current)
     svgEl.selectAll('*').remove()
 
-    // const airports = await d3.json('./airports.topo.json')
-    console.log(countries)
-
     svgEl
       .append('g')
       .attr('class', 'countries')
@@ -31,6 +29,18 @@ const ShipperChartMapFlow = ({ data, title }) => {
       .data(topojson.feature(countries, countries.objects.countries).features)
       .enter()
       .append('path')
+      .attr('d', path)
+
+    svgEl
+      .append('g')
+      .attr('class', 'airports')
+      .selectAll('path')
+      .data(topojson.feature(airports, airports.objects.collection).features)
+      .enter()
+      .append('path')
+      .attr('id', function (d) {
+        return d.id
+      })
       .attr('d', path)
   })
 
