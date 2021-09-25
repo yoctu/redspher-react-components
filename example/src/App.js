@@ -160,6 +160,17 @@ const App = () => {
     { ISO3: 'ITA', value: '1' }
   ]
 
+  const dimensions = {
+    width: 600,
+    height: 300,
+    margin: {
+      top: 30,
+      right: 30,
+      bottom: 30,
+      left: 60
+    }
+  }
+
   return (
     <>
       <RubiwinThemeProvider>
@@ -494,7 +505,7 @@ const App = () => {
         </Box>
         <Grid container>
           <Grid item>
-            <ShipperChartFlowMap data={dataChartMap} title={"Flows"}></ShipperChartFlowMap>
+            <ShipperChartFlowMap data={dataChartMap} title={"Flows"} dimensions={dimensions}></ShipperChartFlowMap>
           </Grid>
         </Grid>
       </ShipperThemeProvider>
