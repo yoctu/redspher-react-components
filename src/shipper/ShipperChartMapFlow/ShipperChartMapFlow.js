@@ -5,7 +5,7 @@ import { geoMercator, geoPath } from 'd3-geo'
 import { Card, CardContent, CardHeader } from '@material-ui/core'
 import * as topojson from 'topojson-client'
 import countries from './countries.json'
-import './style.css'
+import './styles.css'
 
 const ShipperChartMapFlow = ({ data, title }) => {
   const width = 938
@@ -37,7 +37,7 @@ const ShipperChartMapFlow = ({ data, title }) => {
   return (
     <Card>
       <CardHeader title={title} />
-      <CardContent>
+      <CardContent style={{ backgroundColor: '#73b6e6' }}>
         <svg ref={svgRef} width={width} height={height} />
       </CardContent>
     </Card>
