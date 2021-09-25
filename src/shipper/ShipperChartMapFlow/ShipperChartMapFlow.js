@@ -5,10 +5,11 @@ import { geoMercator, geoPath } from 'd3-geo'
 import { Card, CardContent, CardHeader } from '@material-ui/core'
 import * as topojson from 'topojson-client'
 import countries from './countries.json'
+import './style.css'
 
 const ShipperChartMapFlow = ({ data, title }) => {
-  const width = 500
-  const height = 500
+  const width = 938
+  const height = 620
   const svgRef = useRef()
 
   useEffect(() => {
@@ -23,24 +24,21 @@ const ShipperChartMapFlow = ({ data, title }) => {
     // const airports = await d3.json('./airports.topo.json')
     console.log(countries)
 
-    /*  svgEl
-        .append('g')
-        .attr('class', 'countries')
-        .selectAll('path')
-        .data(
-            topojson.feature(result.countries, result.countries.objects.countries)
-            .features
-        )
-        .enter()
-        .append('path')
-        .attr('d', path) */
+    svgEl
+      .append('g')
+      .attr('class', 'countries')
+      .selectAll('path')
+      .data(topojson.feature(countries, countries.objects.countries).features)
+      .enter()
+      .append('path')
+      .attr('d', path)
   })
 
   return (
     <Card>
       <CardHeader title={title} />
       <CardContent>
-          
+        <svg ref={svgRef} width={width} height={height} />
       </CardContent>
     </Card>
   )

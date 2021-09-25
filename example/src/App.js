@@ -493,7 +493,7 @@ const App = () => {
           <ShipperChartMap data={dataChartMap} title={"Top 3 shipments country"}></ShipperChartMap>
         </Box>
         <Box width={500} height={500}>
-          <ShipperChartMapFlow data={dataChartMap} title={"Top 3 shipments country"}></ShipperChartMapFlow>
+          <ShipperChartMapFlow data={dataChartMap} title={"Flowchart map"}></ShipperChartMapFlow>
         </Box>
       </ShipperThemeProvider>
     </>
