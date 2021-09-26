@@ -31,8 +31,15 @@ code {
 }
 .route {
     fill: none;
+    stroke: white;
     stroke-width: 1;
 }
+
+.noroute {
+  fill: none;
+  stroke-width: 0;
+}
+
 .plane {
     fill: #fff;
     stroke-width: 0;
