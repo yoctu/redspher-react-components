@@ -132,6 +132,11 @@ const rubiwinBaseTheme = {
       colorPrimary: {
         color: 'white'
       }
+    },
+    MuiSwitch: {
+      thumb: {
+        backgroundColor: themeConstants.primary.main
+      }
     }
   }
 }
