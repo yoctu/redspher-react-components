@@ -46,6 +46,17 @@ const rubiwinBaseTheme = {
           fontSize: '18px',
           lineHeight: '21.94px'
         }
+    },
+    h4: {
+      fontWeight: 'bold',
+      color: themeConstants.grey.main,
+      fontSize: '18px',
+      lineHeight: '21.94px',
+      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
+        {
+          fontSize: '16px',
+          lineHeight: '19.5px'
+        }
     }
   },
   overrides: {
