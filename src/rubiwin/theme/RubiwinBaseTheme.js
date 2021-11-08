@@ -148,6 +148,11 @@ const rubiwinBaseTheme = {
       thumb: {
         backgroundColor: themeConstants.primary.main
       }
+    },
+    MuiBackdrop: {
+      root: {
+        backgroundColor: `${themeConstants.grey.lighter}85`
+      }
     }
   }
 }
