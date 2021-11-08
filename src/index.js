@@ -82,7 +82,6 @@ import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 import rubiwinBaseTheme from './rubiwin/theme/RubiwinBaseTheme'
 import E4pTheme from './rubiwin/theme/E4pTheme'
 import PrintIcon from './icons/Shipper/PrintIcon/PrintIcon'
-import RubiwinModal from './rubiwin/RubiwinModal/RubiwinModal'
 
 export {
   RubiwinButton,
@@ -168,6 +167,5 @@ export {
   ShipperCheckbox,
   rubiwinBaseTheme,
   E4pTheme,
-  PrintIcon,
-  RubiwinModal
+  PrintIcon
 }
