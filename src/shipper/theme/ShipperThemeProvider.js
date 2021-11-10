@@ -4,7 +4,7 @@ import themeConstants, { colors } from './themeConstants'
 import { createTheme } from '@material-ui/core'
 
 export const themeObject = {
-  spacing: 1,
+  spacing: 8,
   palette: colors,
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
