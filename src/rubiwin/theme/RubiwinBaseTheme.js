@@ -164,6 +164,9 @@ const rubiwinBaseTheme = {
       root: {
         backgroundColor: `${themeConstants.grey.lighter}85`
       }
+    },
+    MuiInput: {
+      root: themeConstants.grey.main
     }
   }
 }
