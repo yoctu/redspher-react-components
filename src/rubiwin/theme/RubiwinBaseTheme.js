@@ -35,6 +35,28 @@ const rubiwinBaseTheme = {
           fontSize: '22px',
           lineHeight: '26px'
         }
+    },
+    h3: {
+      fontWeight: 'bold',
+      color: themeConstants.grey.main,
+      fontSize: '24px',
+      lineHeight: '29.26px',
+      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
+        {
+          fontSize: '18px',
+          lineHeight: '21.94px'
+        }
+    },
+    h4: {
+      fontWeight: 'bold',
+      color: themeConstants.grey.main,
+      fontSize: '18px',
+      lineHeight: '21.94px',
+      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
+        {
+          fontSize: '16px',
+          lineHeight: '19.5px'
+        }
     }
   },
   overrides: {
@@ -132,6 +154,19 @@ const rubiwinBaseTheme = {
       colorPrimary: {
         color: 'white'
       }
+    },
+    MuiSwitch: {
+      thumb: {
+        backgroundColor: themeConstants.primary.main
+      }
+    },
+    MuiBackdrop: {
+      root: {
+        backgroundColor: `${themeConstants.grey.lighter}85`
+      }
+    },
+    MuiInput: {
+      root: themeConstants.grey.main
     }
   }
 }
