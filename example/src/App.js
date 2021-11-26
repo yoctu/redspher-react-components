@@ -80,6 +80,7 @@ import {
   ShipperSwitchPackage,
   ShipperItem,
   ShipperCheckbox,
+  ShipperPhoneNumber,
   PrintIcon
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
@@ -102,7 +103,6 @@ import {
 import { Pagination } from '@material-ui/lab'
 import 'redspher-components/dist/index.css'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import MuiPhoneNumber from 'material-ui-phone-number'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -597,44 +597,7 @@ const ShipperShowCase = () => {
           </FormControl>
           <br />
           <br />
-          <MuiPhoneNumber
-            enableSearchField={true}
-            defaultCountry={'fr'}
-            countryCodeEditable={true}
-            dropdownClass={'dropdownShipper'}
-            label='Phone Number'
-            preferredCountries={[
-              'at',
-              'be',
-              'bg',
-              'cy',
-              'cz',
-              'de',
-              'dk',
-              'ee',
-              'es',
-              'fi',
-              'fr',
-              'gb',
-              'gr',
-              'hu',
-              'hr',
-              'ie',
-              'it',
-              'lt',
-              'lu',
-              'lv',
-              'mt',
-              'nl',
-              'pl',
-              'pt',
-              'ro',
-              'se',
-              'si',
-              'sk'
-            ]}
-            disableAreaCodes={true}
-          />
+          <ShipperPhoneNumber label={'Phone number'} helperText={'Not a number'} />
         </div>
         <br />
         <br />

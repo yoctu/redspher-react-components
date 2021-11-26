@@ -94,7 +94,7 @@ export const themeObject = {
         '&:disabled': {
           color: themeConstants.grey.main
         },
-        '& svg[class^="MuiSvgIcon-root-"]': {
+        '& svg[class*="MuiSvgIcon-root"]': {
           width: '14px !important',
           height: '14px !important'
         }
@@ -140,7 +140,7 @@ export const themeObject = {
     },
     MuiPagination: {
       root: {
-        '& .MuiButtonBase-root': {
+        '& [class*="MuiButtonBase-root"]': {
           color: themeConstants.grey.main,
           '&:hover': {
             color: themeConstants.primary.main
@@ -197,7 +197,7 @@ export const themeObject = {
         borderRadius: '40px',
         width: 'fit-content',
         padding: '2px',
-        '& .MuiButtonBase-root': {
+        '& [class*="MuiButtonBase-root]': {
           padding: '7.5px 15px',
           borderRadius: '40px !important',
           color: themeConstants.white.main,
@@ -233,26 +233,26 @@ export const themeObject = {
     MuiFormControl: {
       root: {
         width: '100%',
-        '& .MuiFormLabel-root': {
+        '& [class*="MuiFormLabel-root-"]': {
           color: themeConstants.grey.dark,
           zIndex: 2,
           paddingLeft: '15px',
           fontSize: '14px',
           lineHeight: '17.07px',
-          '&.Mui-focused, &.MuiFormLabel-filled': {
+          '&.Mui-focused, &[class*="MuiFormLabel-filled"]': {
             color: themeConstants.grey.dark,
             paddingLeft: '0px'
           }
         },
-        '& .MuiInputBase-root': {
+        '& [class*="MuiInputBase-root-"]': {
           padding: '7px 15px',
           backgroundColor: themeConstants.white.main,
           borderRadius: '20px',
           zIndex: 1,
-          '&.MuiInput-underline:before': {
+          '&[class*="MuiInput-underline"]:before': {
             display: 'none'
           },
-          '&.MuiInput-underline:after': {
+          '&[class*="MuiInput-underline"]:after': {
             display: 'none'
           },
           '& input': {
@@ -264,14 +264,14 @@ export const themeObject = {
           '&.Mui-focused': {
             boxShadow: 'inset 0px 0px 0px 1px ' + themeConstants.primary.main
           },
-          '& .MuiInputAdornment-root': {
+          '& [class*="MuiInputAdornment-root"]': {
             width: '16px',
             height: '16px',
-            '& .MuiSvgIcon-root': {
+            '& [class*="MuiSvgIcon-root"]': {
               width: '16px',
               height: '16px'
             },
-            '& .MuiPhoneNumber-flagButton': {
+            '& [class*="MuiPhoneNumber-flagButton"]': {
               width: '16px',
               height: '16px'
             }
@@ -282,7 +282,7 @@ export const themeObject = {
               stroke: themeConstants.secondary.main
             }
           },
-          '& .MuiInputBase-inputAdornedStart': {
+          '& [class*="MuiInputBase-inputAdornedStart"]': {
             marginLeft: '10px'
           }
         }
