@@ -168,6 +168,140 @@ const rubiwinBaseTheme = {
     MuiInput: {
       root: themeConstants.grey.main
     }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        contained: {
+          boxShadow: 'none',
+          '&:hover': {
+            boxShadow: 'none'
+          }
+        },
+        root: {
+          borderRadius: '8px',
+          fontSize: '14px',
+          textTransform: 'none'
+        },
+        containedPrimary: {
+          color: themeConstants.white.main
+        },
+        iconSizeLarge: {
+          '&> *:first-child': {
+            fontSize: '25px'
+          }
+        }
+      }
+    },
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          '&$selected': {
+            backgroundColor: themeConstants.primary.main,
+            color: themeConstants.white.main,
+            '&:hover': {
+              backgroundColor: themeConstants.primary.main + 'FF'
+            }
+          }
+        }
+      }
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        sizeSmall: {
+          padding: '6px 12px'
+        },
+        stickyHeader: {
+          backgroundColor: themeConstants.grey.main
+        },
+        root: {
+          '&:first-of-type': {
+            borderLeft: '1px solid transparent'
+          },
+          '&:last-of-type': {
+            borderRight: '1px solid transparent'
+          },
+          borderRight: '1px solid ' + themeConstants.grey.lighter,
+          borderLeft: '1px solid ' + themeConstants.grey.lighter,
+          borderBottom: '1px solid ' + themeConstants.grey.lighter
+        },
+        head: {
+          backgroundColor: themeConstants.grey.main,
+          color: 'white',
+          borderTop: '0px !important'
+        },
+        body: {
+          color: themeConstants.grey.main + '!important',
+          fontSize: '12px !important'
+        }
+      }
+    },
+    MuiTableRow: {
+      styleOverrides: {
+        root: {
+          '&:nth-of-type(even)': {
+            backgroundColor: themeConstants.grey.lighter
+          }
+        }
+      }
+    },
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          color: themeConstants.grey.light
+        }
+      }
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: themeConstants.grey.lighter
+        }
+      }
+    },
+    MuiTableSortLabel: {
+      styleOverrides: {
+        root: { color: themeConstants.grey.lighter + '!important', opacity: 1 },
+        active: { color: themeConstants.grey.lighter, opacity: 1 },
+        icon: { color: themeConstants.grey.lighter, opacity: 1 }
+      }
+    },
+    MuiFormLabel: {
+      styleOverrides: {
+        root: {
+          color: themeConstants.grey.main,
+          textTransform: 'capitalize'
+        }
+      }
+    },
+    MuiChip: {
+      styleOverrides: {
+        colorPrimary: {
+          color: 'white'
+        }
+      }
+    },
+    MuiSwitch: {
+      styleOverrides: {
+        thumb: {
+          backgroundColor: themeConstants.primary.main
+        }
+      }
+    },
+    MuiBackdrop: {
+      styleOverrides: {
+        root: {
+          backgroundColor: `${themeConstants.grey.lighter}85`
+        }
+      }
+    },
+    MuiInput: {
+      styleOverrides: {
+        root: themeConstants.grey.main
+      }
+    }
   }
 }
 
