@@ -214,6 +214,11 @@ const rubiwinBaseTheme = {
         stickyHeader: {
           backgroundColor: themeConstants.grey.main
         },
+        head: {
+          backgroundColor: themeConstants.grey.main,
+          color: 'white !important',
+          borderTop: '0px !important'
+        },
         root: {
           color: themeConstants.grey.main + '!important',
           fontSize: '12px !important',
@@ -226,11 +231,6 @@ const rubiwinBaseTheme = {
           borderRight: '1px solid ' + themeConstants.grey.lighter,
           borderLeft: '1px solid ' + themeConstants.grey.lighter,
           borderBottom: '1px solid ' + themeConstants.grey.lighter
-        },
-        head: {
-          backgroundColor: themeConstants.grey.main,
-          color: 'white',
-          borderTop: '0px !important'
         }
       }
     },
