@@ -215,6 +215,8 @@ const rubiwinBaseTheme = {
           backgroundColor: themeConstants.grey.main
         },
         root: {
+          color: themeConstants.grey.main + '!important',
+          fontSize: '12px !important'
           '&:first-of-type': {
             borderLeft: '1px solid transparent'
           },
@@ -230,10 +232,6 @@ const rubiwinBaseTheme = {
           color: 'white',
           borderTop: '0px !important'
         },
-        body: {
-          color: themeConstants.grey.main + '!important',
-          fontSize: '12px !important'
-        }
       }
     },
     MuiTableRow: {
