@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function RequestIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M8.5 14H18V1H2V14H5'
         stroke={

@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function DriverIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M10.5 13C11.3284 13 12 12.3284 12 11.5C12 10.6716 11.3284 10 10.5 10C9.67157 10 9 10.6716 9 11.5C9 12.3284 9.67157 13 10.5 13Z'
         stroke={

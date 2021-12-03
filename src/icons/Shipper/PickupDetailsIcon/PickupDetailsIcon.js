@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function PickupDetailsIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M7 3.5L14.3826 7.05182'
         stroke={

@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function UploadIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M2.5 17.13H18.5'
         stroke={

@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function BurgerCloseIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M3.40117 3.11881L17 16.8813'
         stroke={
