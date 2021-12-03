@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function AutomaticIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M4.5 3L5.3082 4.3876L6.87764 4.72746L5.8077 5.9249L5.96946 7.52254L4.5 6.875L3.03054 7.52254L3.1923 5.9249L2.12236 4.72746L3.6918 4.3876L4.5 3Z'
         stroke={
