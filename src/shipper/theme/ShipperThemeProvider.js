@@ -304,6 +304,70 @@ export const themeObject = {
           }
         }
       }
+    },
+    MuiDropzoneArea: {
+      root: {
+        width: '100%',
+        padding: '10px',
+        minHeight: 'fit-content',
+        maxWidth: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        border: '1px dashed ' + themeConstants.grey.main,
+        '&  [class*="MuiDropzoneArea-textContainer"]': {
+          display: 'flex',
+          flexDirection: 'row-reverse',
+          margin: 'auto',
+          '&  [class*="MuiTypography-root"]': {
+            maxWidth: '100px',
+            marginLeft: '10px',
+            margin: 'auto',
+            fontFamily: ['Montserrat', 'sans-serif'].join(','),
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            fontSize: '12px',
+            color: themeConstants.grey.dark
+          },
+          '&  [class*="MuiSvgIcon-root"]': {
+            margin: 'auto'
+          }
+        },
+        '&  [class*="MuiDropzonePreviewList-root"]': {
+          marginTop: '20px',
+          maxWidth: '100%',
+          '& [class*="MuiDropzonePreviewList-imageContainer"],& [class*="MuiChip-root"]':
+            {
+              maxWidth: '100%',
+              '&  [class*="MuiChip-label"]': {
+                color: themeConstants.grey.dark,
+                overflow: 'hidden',
+                whiteSpace: 'nowrap',
+                textOverflow: 'ellipsis'
+              }
+            }
+        }
+      }
+    },
+    MuiLinearProgress: {
+      root: {
+        borderRadius: '5px',
+        height: '1px',
+        backgroundColor: themeConstants.blue.light,
+        '& [class*="MuiLinearProgress-bar"]': {
+          backgroundColor: themeConstants.blue.main
+        },
+        '&.error': {
+          backgroundColor: themeConstants.red.light,
+          '& [class*="MuiLinearProgress-bar"]': {
+            backgroundColor: themeConstants.red.main
+          }
+        },
+        '&.finished': {
+          '& [class*="MuiLinearProgress-bar"]': {
+            backgroundColor: themeConstants.green.main
+          }
+        }
+      }
     }
   }
 }
