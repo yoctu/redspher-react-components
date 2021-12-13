@@ -11,18 +11,20 @@ import { LinearProgress } from '@material-ui/core'
 function DragAndDrop({ uploadStatus }) {
   const [files, setFiles] = useState(null)
   const [progress, setProgress] = useState(0)
-  let timer = null
+  const [timer, setTimer] = useState(null)
 
   useEffect(() => {
     if (uploadStatus === 'loading') {
       if (!timer) {
-        timer = setInterval(() => {
+        const timerId = setInterval(() => {
           setProgress((prevProgress) =>
             prevProgress <= 76 ? prevProgress + 19 : 99
           )
         }, 500)
+        setTimer(timerId)
       }
     } else if (uploadStatus === 'finished') {
+      clearInterval(timer)
       setProgress(100)
     } else {
       clearInterval(timer)

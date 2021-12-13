@@ -635,7 +635,10 @@ const ShipperShowCase = () => {
           }}
         >
           <DragAndDrop uploadStatus={uploadStatus}/>
-
+          <br />
+          <br />
+          <br />
+          <br />
           <Button color='primary' variant='contained' onClick={() => {uploadDocument()}}>
             Upload
           </Button>
