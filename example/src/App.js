@@ -81,7 +81,8 @@ import {
   ShipperItem,
   ShipperCheckbox,
   ShipperPhoneNumber,
-  PrintIcon
+  PrintIcon,
+  DragAndDrop
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -225,9 +226,20 @@ const ShipperShowCase = () => {
   const [selectedVehicle, setSelectedVehicle] = React.useState('truck02')
   const [selectedSecondDriver, setSelectedSecondDriver] = React.useState('')
   const [selectedTailift, setSelectedTailLift] = React.useState('')
+  const [uploadStatus, setUploadStatus] = React.useState('')
 
   const downloadAction = () => {
     alert('Poney')
+  }
+
+  const uploadDocument = () => {
+    setUploadStatus('loading');
+    setTimeout(() => {
+      setUploadStatus('error');
+    }, 10000);
+    setTimeout(() => {
+      setUploadStatus('finished');
+    }, 15000);
   }
 
   return (
@@ -613,6 +625,26 @@ const ShipperShowCase = () => {
           label='Right'
           labelPlacement='right'
         />
+        <br />
+        <br />
+        <div
+          style={{
+            backgroundColor: '#ececec',
+            padding: '20px',
+            width: '200px'
+          }}
+        >
+          <DragAndDrop uploadStatus={uploadStatus}/>
+          <br />
+          <br />
+          <br />
+          <br />
+          <Button color='primary' variant='contained' onClick={() => {uploadDocument()}}>
+            Upload
+          </Button>
+        </div>
+        <br />
+        <br />
         <br />
         <br />
       </ShipperThemeProvider>
