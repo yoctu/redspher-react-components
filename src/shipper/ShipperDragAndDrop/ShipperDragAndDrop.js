@@ -8,7 +8,7 @@ import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 import WarningIcon from '../../icons/Shipper/WarningIcon'
 import { LinearProgress } from '@material-ui/core'
 
-function DragAndDrop({ uploadStatus }) {
+function DragAndDrop({ uploadStatus, acceptedFiles = [] }) {
   const [files, setFiles] = useState(null)
   const [progress, setProgress] = useState(0)
   const [timer, setTimer] = useState(null)
@@ -49,6 +49,7 @@ function DragAndDrop({ uploadStatus }) {
         showAlerts={false}
         showPreviewsInDropzone={false}
         clearOnUnmount={false}
+        acceptedFiles={acceptedFiles}
         onChange={(file) => {
           handleChange(file)
         }}
