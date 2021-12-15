@@ -8,6 +8,16 @@ import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 import WarningIcon from '../../icons/Shipper/WarningIcon'
 import { LinearProgress } from '@material-ui/core'
 
+/**
+ * @param uploadStatus
+ * @param acceptedFiles
+ * @param dropzoneText
+ * @param onChangeMethod
+ * @param errorMessage
+ * @param maxFileSize
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function DragAndDrop({
   uploadStatus,
   acceptedFiles = [],
