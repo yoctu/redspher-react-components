@@ -8,10 +8,18 @@ import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 import WarningIcon from '../../icons/Shipper/WarningIcon'
 import { LinearProgress } from '@material-ui/core'
 
-function DragAndDrop({ uploadStatus, acceptedFiles = [] }) {
-  const [files, setFiles] = useState(null)
+function DragAndDrop({
+  uploadStatus,
+  acceptedFiles = [],
+  dropzoneText = 'Drag and drop a file here or click',
+  onChangeMethod = null,
+  errorMessage = 'Error: The file can be in the wrong format or too heavy',
+  maxFileSize = 5000000
+}) {
+  const [file, setFile] = useState(null)
   const [progress, setProgress] = useState(0)
   const [timer, setTimer] = useState(null)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     if (uploadStatus === 'loading') {
@@ -31,13 +39,16 @@ function DragAndDrop({ uploadStatus, acceptedFiles = [] }) {
     }
   }, [uploadStatus])
 
-  const handleChange = (files) => {
-    setFiles(files)
+  const handleChange = (file) => {
+    setFile(file)
     uploadStatus = null
+  }
+  const reject = () => {
+    setError(errorMessage)
   }
 
   const removeFile = () => {
-    setFiles(null)
+    setFile(null)
     uploadStatus = null
   }
 
@@ -46,17 +57,22 @@ function DragAndDrop({ uploadStatus, acceptedFiles = [] }) {
       <DropzoneArea
         filesLimit={1}
         Icon={UploadIcon}
+        dropzoneText={dropzoneText}
         showAlerts={false}
         showPreviewsInDropzone={false}
         clearOnUnmount={false}
         acceptedFiles={acceptedFiles}
+        maxFileSize={maxFileSize}
+        onDropRejected={() => {
+          reject()
+        }}
         onChange={(file) => {
-          handleChange(file)
+          onChangeMethod ? onChangeMethod(file) : handleChange(file)
         }}
       />
-      {files?.[0]?.name && (
-        <div className={styles.filenameContainer}>
-          <p className={styles.typoFileName}>{files?.[0]?.name}</p>
+      {file?.[0]?.name && (
+        <div className={`${styles.filenameContainer}`}>
+          <p className={`${styles.typoFileName}`}>{file?.[0]?.name}</p>
           {uploadStatus === 'loading' ? (
             <span className={`${styles.iconFile} ${styles.iconRotation}`}>
               <LoadingIcon />
@@ -81,7 +97,13 @@ function DragAndDrop({ uploadStatus, acceptedFiles = [] }) {
           )}
         </div>
       )}
-      {files?.[0]?.name && uploadStatus && (
+      {error && (
+        <span className={`${styles.errorMessage}`}>
+          <WarningIcon primaryColor='#F20738' />
+          {error}
+        </span>
+      )}
+      {file?.[0]?.name && uploadStatus && (
         <LinearProgress
           className={`${uploadStatus}`}
           variant='determinate'
@@ -90,14 +112,6 @@ function DragAndDrop({ uploadStatus, acceptedFiles = [] }) {
       )}
     </div>
   )
-}
-
-DragAndDrop.proptypes = {}
-
-DragAndDrop.defaultProps = {
-  allowEmpty: true,
-  isError: () => false,
-  onChange: () => null
 }
 
 export default DragAndDrop

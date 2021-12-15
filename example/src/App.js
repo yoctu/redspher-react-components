@@ -634,7 +634,7 @@ const ShipperShowCase = () => {
             width: '200px'
           }}
         >
-          <DragAndDrop uploadStatus={uploadStatus}/>
+          <DragAndDrop uploadStatus={uploadStatus} acceptedFiles={['.csv']}/>
           <br />
           <br />
           <br />

@@ -233,7 +233,7 @@ export const themeObject = {
     MuiFormControl: {
       root: {
         width: '100%',
-        '& [class*="MuiFormLabel-root-"]': {
+        '& [class*="MuiFormLabel-root"]': {
           color: themeConstants.grey.dark,
           zIndex: 2,
           paddingLeft: '15px',
@@ -244,7 +244,7 @@ export const themeObject = {
             paddingLeft: '0px'
           }
         },
-        '& [class*="MuiInputBase-root-"]': {
+        '& [class*="MuiInputBase-root"]': {
           padding: '7px 15px',
           backgroundColor: themeConstants.white.main,
           borderRadius: '20px',
