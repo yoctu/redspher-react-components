@@ -45,12 +45,10 @@ function DragAndDrop({
       clearInterval(timer)
       setTimer(null)
       setFile(null)
-      uploadStatus = ''
       setProgress(0)
     } else {
       clearInterval(timer)
       setTimer(null)
-      uploadStatus = ''
       setProgress(0)
     }
   }, [uploadStatus])
