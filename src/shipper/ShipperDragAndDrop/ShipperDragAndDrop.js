@@ -19,7 +19,7 @@ import { LinearProgress } from '@material-ui/core'
  * @constructor
  */
 function DragAndDrop({
-  uploadStatus,
+  uploadStatus = '',
   acceptedFiles = [],
   dropzoneText = 'Drag and drop a file here or click',
   onChangeMethod = null,
@@ -43,17 +43,24 @@ function DragAndDrop({
       }
     } else if (uploadStatus === 'finished') {
       clearInterval(timer)
-      setProgress(100)
+      setTimer(null)
+      setFile(null)
+      uploadStatus = ''
+      setProgress(0)
     } else {
       clearInterval(timer)
+      setTimer(null)
+      uploadStatus = ''
+      setProgress(0)
     }
   }, [uploadStatus])
 
   const handleChange = (file) => {
     setFile(file)
-    uploadStatus = null
+    setError(null)
   }
   const reject = () => {
+    setFile(null)
     setError(errorMessage)
   }
 

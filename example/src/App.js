@@ -236,10 +236,14 @@ const ShipperShowCase = () => {
     setUploadStatus('loading');
     setTimeout(() => {
       setUploadStatus('error');
-    }, 10000);
+    }, 2000);
     setTimeout(() => {
       setUploadStatus('finished');
-    }, 15000);
+    }, 4000);
+  }
+
+  const onChangeMethodDrag = () => {
+    setUploadStatus(null);
   }
 
   return (
@@ -634,7 +638,7 @@ const ShipperShowCase = () => {
             width: '200px'
           }}
         >
-          <DragAndDrop uploadStatus={uploadStatus} acceptedFiles={['.csv']}/>
+          <DragAndDrop uploadStatus={uploadStatus} onChangeMethod={() => {onChangeMethodDrag()}}/>
           <br />
           <br />
           <br />
