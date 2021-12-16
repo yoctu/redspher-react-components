@@ -77,7 +77,8 @@ function DragAndDrop({
           reject()
         }}
         onChange={(file) => {
-          onChangeMethod ? onChangeMethod(file) : handleChange(file)
+          onChangeMethod && onChangeMethod(file)
+          handleChange(file)
         }}
       />
       {file?.[0]?.name && (
