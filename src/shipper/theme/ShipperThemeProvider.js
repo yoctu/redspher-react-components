@@ -310,6 +310,7 @@ export const themeObject = {
         width: '100%',
         padding: '10px',
         minHeight: 'fit-content',
+        backgroundColor: 'transparent',
         maxWidth: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -319,7 +320,6 @@ export const themeObject = {
           flexDirection: 'row-reverse',
           margin: 'auto',
           '&  [class*="MuiTypography-root"]': {
-            maxWidth: '100px',
             marginLeft: '10px',
             margin: 'auto',
             fontFamily: ['Montserrat', 'sans-serif'].join(','),

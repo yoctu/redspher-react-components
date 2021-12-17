@@ -44,8 +44,7 @@ function DragAndDrop({
     } else if (uploadStatus === 'finished') {
       clearInterval(timer)
       setTimer(null)
-      setFile(null)
-      setProgress(0)
+      setProgress(100)
     } else {
       clearInterval(timer)
       setTimer(null)
