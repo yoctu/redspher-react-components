@@ -635,7 +635,7 @@ const ShipperShowCase = () => {
           style={{
             backgroundColor: '#ececec',
             padding: '20px',
-            width: '200px'
+            width: '300px'
           }}
         >
           <DragAndDrop uploadStatus={uploadStatus} onChangeMethod={() => {onChangeMethodDrag()}}/>
