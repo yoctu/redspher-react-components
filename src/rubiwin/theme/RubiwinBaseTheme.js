@@ -25,6 +25,16 @@ const rubiwinBaseTheme = {
   },
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
+    h1: {
+      fontWeight: 'bold',
+      fontSize: '48px',
+      lineHeight: '58px',
+      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
+        {
+          fontSize: '30px',
+          lineHeight: '36px'
+        }
+    },
     h2: {
       fontWeight: 'bold',
       color: themeConstants.grey.main,
