@@ -197,14 +197,11 @@ export const themeObject = {
         borderRadius: '40px',
         width: 'fit-content',
         padding: '2px',
-        '& [class*="MuiButtonBase-root]': {
+        '& [class*="MuiToggleButton-root"]': {
           padding: '7.5px 15px',
           borderRadius: '40px !important',
           color: themeConstants.white.main,
-          '&:not(.Mui-selected) .MuiSvgIcon-root > *': {
-            stroke: themeConstants.white.main
-          },
-          '& .MuiSvgIcon-root': {
+          '& [class*="MuiSvgIcon-root"]': {
             marginRight: '7px'
           }
         },
@@ -214,6 +211,14 @@ export const themeObject = {
           borderRadius: '40px !important',
           '&:hover': {
             backgroundColor: themeConstants.white.main
+          }
+        },
+        ' & [class*="MuiButtonBase-root"]:not(.Mui-selected)': {
+          border: 'none',
+          color: themeConstants.white.main,
+          '& [class*="MuiSvgIcon-root"] > *': {
+            stroke: themeConstants.white.main,
+            border: 'none'
           }
         }
       }
