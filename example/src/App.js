@@ -77,7 +77,7 @@ import {
   EditIcon,
   ShipperRangeSlider,
   ShipperCardVehicle,
-  ShipperSwitchPackage,
+  ShipperSwitch,
   ShipperItem,
   ShipperCheckbox,
   ShipperPhoneNumber,
@@ -487,7 +487,7 @@ const ShipperShowCase = () => {
                 setSelectedValue={setSelectedSecondDriver}
                 enableUnselect={true}
                 noInfoIcon={true}
-              ></ShipperCardVehicle>
+              />
             </div>
           </Grid>
           <Grid item sm={2}>
@@ -519,12 +519,6 @@ const ShipperShowCase = () => {
             </div>
           </Grid>
         </Grid>
-        <br />
-        <br />
-        <ShipperSwitchPackage
-          parcelTranslate='parcel'
-          paletTranslate='pallet'
-        />
         <br />
         <br />
         <div style={{ width: '400px', marginLeft: '50px' }}>
@@ -647,6 +641,26 @@ const ShipperShowCase = () => {
             Upload
           </Button>
         </div>
+        <br />
+        <br />
+        <ShipperSwitch
+          firstValueTranslate='parcel'
+          firstValue='parcel'
+          firstIcon={<ParcelIcon fontSize='small' />}
+          secondValueTranslate='palet'
+          secondValue='palet'
+          secondIcon={<PaletIcon fontSize='small' />}
+        />
+        <br />
+        <br />
+        <ShipperSwitch
+          firstValueTranslate='automatic'
+          firstValue='automatic'
+          firstIcon={<AutomaticIcon fontSize='small' />}
+          secondValueTranslate='expert'
+          secondValue='expert'
+          secondIcon={<ExpertIcon fontSize='small' />}
+        />
         <br />
         <br />
         <br />
