@@ -11,7 +11,8 @@ export const colors = {
     dark: '#003B81'
   },
   red: {
-    main: '#F20738'
+    main: '#F20738',
+    light: '#F5C5CF'
   },
   grey: {
     dark: '#68717B',

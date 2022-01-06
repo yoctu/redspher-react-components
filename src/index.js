@@ -75,7 +75,7 @@ import ArrowTop2Icon from './icons/Shipper/ArrowTop2Icon'
 import ArrowBottom2Icon from './icons/Shipper/ArrowBottom2Icon'
 import EditIcon from './icons/Shipper/EditIcon'
 import ShipperCardVehicle from './shipper/ShipperCardVehicle'
-import ShipperSwitchPackage from './shipper/ShipperSwitchPackage'
+import ShipperSwitch from './shipper/ShipperSwitch'
 import ShipperItem from './shipper/ShipperItem'
 import ShipperCheckbox from './shipper/ShipperCheckbox'
 import ShipperPhoneNumber from './shipper/ShipperPhoneNumber'
@@ -83,6 +83,7 @@ import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 import rubiwinBaseTheme from './rubiwin/theme/RubiwinBaseTheme'
 import E4pTheme from './rubiwin/theme/E4pTheme'
 import PrintIcon from './icons/Shipper/PrintIcon/PrintIcon'
+import DragAndDrop from './shipper/ShipperDragAndDrop'
 
 export {
   RubiwinButton,
@@ -164,10 +165,11 @@ export {
   EditIcon,
   ShipperRangeSlider,
   ShipperCardVehicle,
-  ShipperSwitchPackage,
+  ShipperSwitch,
   ShipperItem,
   ShipperCheckbox,
   rubiwinBaseTheme,
   E4pTheme,
-  PrintIcon
+  PrintIcon,
+  DragAndDrop
 }

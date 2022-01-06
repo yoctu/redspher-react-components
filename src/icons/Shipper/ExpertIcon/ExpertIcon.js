@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function ExpertIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M5 9L6.29313 11.2202L8.80423 11.7639L7.09232 13.6798L7.35114 16.2361L5 15.2L2.64886 16.2361L2.90768 13.6798L1.19577 11.7639L3.70687 11.2202L5 9Z'
         stroke={

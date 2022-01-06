@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function MonitoringIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M18 10C18 14.4183 14.4182 18 9.99997 18C5.58169 18 1.99997 14.4183 1.99997 10C1.99997 5.58172 5.58169 2 9.99997 2'
         stroke={

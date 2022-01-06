@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function PeopleGroupIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M12.82 13.8574C14.06 12.6366 15.76 11.8762 17.64 11.8762C17.68 11.8762 17.73 11.8862 17.77 11.8862'
         stroke={

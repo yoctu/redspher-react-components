@@ -77,11 +77,12 @@ import {
   EditIcon,
   ShipperRangeSlider,
   ShipperCardVehicle,
-  ShipperSwitchPackage,
+  ShipperSwitch,
   ShipperItem,
   ShipperCheckbox,
   ShipperPhoneNumber,
-  PrintIcon
+  PrintIcon,
+  DragAndDrop
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -225,9 +226,24 @@ const ShipperShowCase = () => {
   const [selectedVehicle, setSelectedVehicle] = React.useState('truck02')
   const [selectedSecondDriver, setSelectedSecondDriver] = React.useState('')
   const [selectedTailift, setSelectedTailLift] = React.useState('')
+  const [uploadStatus, setUploadStatus] = React.useState('')
 
   const downloadAction = () => {
     alert('Poney')
+  }
+
+  const uploadDocument = () => {
+    setUploadStatus('loading');
+    setTimeout(() => {
+      setUploadStatus('error');
+    }, 2000);
+    setTimeout(() => {
+      setUploadStatus('finished');
+    }, 4000);
+  }
+
+  const onChangeMethodDrag = () => {
+    setUploadStatus(null);
   }
 
   return (
@@ -471,7 +487,7 @@ const ShipperShowCase = () => {
                 setSelectedValue={setSelectedSecondDriver}
                 enableUnselect={true}
                 noInfoIcon={true}
-              ></ShipperCardVehicle>
+              />
             </div>
           </Grid>
           <Grid item sm={2}>
@@ -503,12 +519,6 @@ const ShipperShowCase = () => {
             </div>
           </Grid>
         </Grid>
-        <br />
-        <br />
-        <ShipperSwitchPackage
-          parcelTranslate='parcel'
-          paletTranslate='pallet'
-        />
         <br />
         <br />
         <div style={{ width: '400px', marginLeft: '50px' }}>
@@ -613,6 +623,46 @@ const ShipperShowCase = () => {
           label='Right'
           labelPlacement='right'
         />
+        <br />
+        <br />
+        <div
+          style={{
+            backgroundColor: '#ececec',
+            padding: '20px',
+            width: '300px'
+          }}
+        >
+          <DragAndDrop uploadStatus={uploadStatus} onChangeMethod={() => {onChangeMethodDrag()}}/>
+          <br />
+          <br />
+          <br />
+          <br />
+          <Button color='primary' variant='contained' onClick={() => {uploadDocument()}}>
+            Upload
+          </Button>
+        </div>
+        <br />
+        <br />
+        <ShipperSwitch
+          firstValueTranslate='parcel'
+          firstValue='parcel'
+          firstIcon={<ParcelIcon fontSize='small' />}
+          secondValueTranslate='palet'
+          secondValue='palet'
+          secondIcon={<PaletIcon fontSize='small' />}
+        />
+        <br />
+        <br />
+        <ShipperSwitch
+          firstValueTranslate='automatic'
+          firstValue='automatic'
+          firstIcon={<AutomaticIcon fontSize='small' />}
+          secondValueTranslate='expert'
+          secondValue='expert'
+          secondIcon={<ExpertIcon fontSize='small' />}
+        />
+        <br />
+        <br />
         <br />
         <br />
       </ShipperThemeProvider>
