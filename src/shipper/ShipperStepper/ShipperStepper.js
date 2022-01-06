@@ -5,7 +5,8 @@ import {
   Step,
   StepLabel,
   StepConnector,
-  makeStyles
+  makeStyles,
+  Typography
 } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles'
 import clsx from 'clsx'
@@ -35,6 +36,12 @@ const useQontoStepIconStyles = makeStyles({
     height: 6,
     borderRadius: '50%',
     backgroundColor: 'currentColor'
+  },
+  textActive: {
+    color: themeConstants.black.dark
+  },
+  textNotActive: {
+    color: themeConstants.grey.main
   }
 })
 
@@ -108,6 +115,7 @@ const QontoConnector = withStyles({
 })(StepConnector)
 
 const ShipperStepper = ({ steps, activeStep }) => {
+  const classes = useQontoStepIconStyles()
   return (
     <div className={style.stepper}>
       <Stepper
@@ -115,10 +123,18 @@ const ShipperStepper = ({ steps, activeStep }) => {
         activeStep={activeStep}
         connector={<QontoConnector />}
       >
-        {steps.map((step) => (
+        {steps.map((step, index) => (
           <Step key={step.label}>
             <StepLabel StepIconComponent={QontoStepIcon}>
-              {step.label}
+              <Typography
+                className={
+                  index <= activeStep
+                    ? classes.textActive
+                    : classes.textNotActive
+                }
+              >
+                {step.label}
+              </Typography>
             </StepLabel>
           </Step>
         ))}
