@@ -13,11 +13,10 @@ export const themeObject = {
       color: themeConstants.grey.main,
       fontSize: '32px',
       lineHeight: '39px',
-      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
-        {
-          fontSize: '22px',
-          lineHeight: '26px'
-        }
+      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]: {
+        fontSize: '22px',
+        lineHeight: '26px'
+      }
     },
     body2: {
       fontSize: '12px',
@@ -335,16 +334,15 @@ export const themeObject = {
         '&  [class*="MuiDropzonePreviewList-root"]': {
           marginTop: '20px',
           maxWidth: '100%',
-          '& [class*="MuiDropzonePreviewList-imageContainer"],& [class*="MuiChip-root"]':
-            {
-              maxWidth: '100%',
-              '&  [class*="MuiChip-label"]': {
-                color: themeConstants.grey.dark,
-                overflow: 'hidden',
-                whiteSpace: 'nowrap',
-                textOverflow: 'ellipsis'
-              }
+          '& [class*="MuiDropzonePreviewList-imageContainer"],& [class*="MuiChip-root"]': {
+            maxWidth: '100%',
+            '&  [class*="MuiChip-label"]': {
+              color: themeConstants.grey.dark,
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis'
             }
+          }
         }
       }
     },

@@ -85,6 +85,10 @@ import E4pTheme from './rubiwin/theme/E4pTheme'
 import PrintIcon from './icons/Shipper/PrintIcon/PrintIcon'
 import DragAndDrop from './shipper/ShipperDragAndDrop'
 
+// mui v5
+import { ShipperThemeProviderV2 } from './shipperv2/theme/ShipperThemeV2Provider'
+import { CustomCheckbox } from './shipperv2/components/buttons'
+
 export {
   RubiwinButton,
   RubiwinCheckbox,
@@ -171,5 +175,7 @@ export {
   rubiwinBaseTheme,
   E4pTheme,
   PrintIcon,
-  DragAndDrop
+  DragAndDrop,
+  ShipperThemeProviderV2,
+  CustomCheckbox
 }
