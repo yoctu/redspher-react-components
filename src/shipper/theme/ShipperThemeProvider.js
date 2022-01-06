@@ -197,14 +197,11 @@ export const themeObject = {
         borderRadius: '40px',
         width: 'fit-content',
         padding: '2px',
-        '& [class*="MuiButtonBase-root]': {
+        '& [class*="MuiToggleButton-root"]': {
           padding: '7.5px 15px',
           borderRadius: '40px !important',
           color: themeConstants.white.main,
-          '&:not(.Mui-selected) .MuiSvgIcon-root > *': {
-            stroke: themeConstants.white.main
-          },
-          '& .MuiSvgIcon-root': {
+          '& [class*="MuiSvgIcon-root"]': {
             marginRight: '7px'
           }
         },
@@ -214,6 +211,14 @@ export const themeObject = {
           borderRadius: '40px !important',
           '&:hover': {
             backgroundColor: themeConstants.white.main
+          }
+        },
+        ' & [class*="MuiButtonBase-root"]:not(.Mui-selected)': {
+          border: 'none',
+          color: themeConstants.white.main,
+          '& [class*="MuiSvgIcon-root"] > *': {
+            stroke: themeConstants.white.main,
+            border: 'none'
           }
         }
       }
@@ -233,7 +238,7 @@ export const themeObject = {
     MuiFormControl: {
       root: {
         width: '100%',
-        '& [class*="MuiFormLabel-root-"]': {
+        '& [class*="MuiFormLabel-root"]': {
           color: themeConstants.grey.dark,
           zIndex: 2,
           paddingLeft: '15px',
@@ -244,7 +249,7 @@ export const themeObject = {
             paddingLeft: '0px'
           }
         },
-        '& [class*="MuiInputBase-root-"]': {
+        '& [class*="MuiInputBase-root"]': {
           padding: '7px 15px',
           backgroundColor: themeConstants.white.main,
           borderRadius: '20px',
@@ -301,6 +306,70 @@ export const themeObject = {
             '&:hover': {
               borderRadius: '16px'
             }
+          }
+        }
+      }
+    },
+    MuiDropzoneArea: {
+      root: {
+        width: '100%',
+        padding: '10px',
+        minHeight: 'fit-content',
+        backgroundColor: 'transparent',
+        maxWidth: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        border: '1px dashed ' + themeConstants.grey.main,
+        '&  [class*="MuiDropzoneArea-textContainer"]': {
+          display: 'flex',
+          flexDirection: 'row-reverse',
+          margin: 'auto',
+          '&  [class*="MuiTypography-root"]': {
+            marginLeft: '10px',
+            margin: 'auto',
+            fontFamily: ['Montserrat', 'sans-serif'].join(','),
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            fontSize: '12px',
+            color: themeConstants.grey.dark
+          },
+          '&  [class*="MuiSvgIcon-root"]': {
+            margin: 'auto'
+          }
+        },
+        '&  [class*="MuiDropzonePreviewList-root"]': {
+          marginTop: '20px',
+          maxWidth: '100%',
+          '& [class*="MuiDropzonePreviewList-imageContainer"],& [class*="MuiChip-root"]':
+            {
+              maxWidth: '100%',
+              '&  [class*="MuiChip-label"]': {
+                color: themeConstants.grey.dark,
+                overflow: 'hidden',
+                whiteSpace: 'nowrap',
+                textOverflow: 'ellipsis'
+              }
+            }
+        }
+      }
+    },
+    MuiLinearProgress: {
+      root: {
+        borderRadius: '5px',
+        height: '1px',
+        backgroundColor: themeConstants.blue.light,
+        '& [class*="MuiLinearProgress-bar"]': {
+          backgroundColor: themeConstants.blue.main
+        },
+        '&.error': {
+          backgroundColor: themeConstants.red.light,
+          '& [class*="MuiLinearProgress-bar"]': {
+            backgroundColor: themeConstants.red.main
+          }
+        },
+        '&.finished': {
+          '& [class*="MuiLinearProgress-bar"]': {
+            backgroundColor: themeConstants.green.main
           }
         }
       }

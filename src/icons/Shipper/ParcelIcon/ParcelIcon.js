@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function ParcelIcon(props) {
   return (
-    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M6.6609 3.36072L14.3826 7.05182'
         stroke={
@@ -48,7 +48,6 @@ function ParcelIcon(props) {
         }
         strokeLinecap='round'
         strokeLinejoin='round'
-      />
       />
       <path
         d='M10.3479 18V8.92865'
