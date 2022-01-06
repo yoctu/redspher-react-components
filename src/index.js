@@ -84,6 +84,7 @@ import rubiwinBaseTheme from './rubiwin/theme/RubiwinBaseTheme'
 import E4pTheme from './rubiwin/theme/E4pTheme'
 import PrintIcon from './icons/Shipper/PrintIcon/PrintIcon'
 import DragAndDrop from './shipper/ShipperDragAndDrop'
+import ShipperStepper from './shipper/ShipperStepper'
 
 export {
   RubiwinButton,
@@ -171,5 +172,6 @@ export {
   rubiwinBaseTheme,
   E4pTheme,
   PrintIcon,
-  DragAndDrop
+  DragAndDrop,
+  ShipperStepper
 }
