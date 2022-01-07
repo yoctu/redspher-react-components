@@ -1,0 +1,35 @@
+@import  '../shipper-constant.scss';
+
+.select {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  [class*="MuiSelect-root"] {
+    padding-left: 15px;
+
+    &[aria-expanded=true] ~[class*="MuiSvgIcon-root"] {
+      transform: rotate(180deg);
+    }
+  }
+
+  [class*="MuiSvgIcon-root"] {
+    transition: 300ms transform;
+    position: absolute;
+    right: 15px;
+    width: 19px;
+    height: 19px;
+  }
+}
+
+.dropdown {
+  margin-top: 50px;
+  border-radius: 16px !important;
+
+  [class*="MuiListItem-root"] {
+    &:hover,
+    &[class*="Mui-focusVisible"] {
+      background-color: transparent;
+      color: $primaryBlue;
+    }
+  }
+}

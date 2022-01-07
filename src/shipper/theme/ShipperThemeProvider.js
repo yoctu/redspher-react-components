@@ -244,6 +244,7 @@ export const themeObject = {
           paddingLeft: '15px',
           fontSize: '14px',
           lineHeight: '17.07px',
+          pointerEvents: 'none',
           '&.Mui-focused, &[class*="MuiFormLabel-filled"]': {
             color: themeConstants.grey.dark,
             paddingLeft: '0px'

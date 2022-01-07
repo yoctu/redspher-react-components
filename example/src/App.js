@@ -82,7 +82,8 @@ import {
   ShipperCheckbox,
   ShipperPhoneNumber,
   PrintIcon,
-  DragAndDrop
+  DragAndDrop,
+  ShipperSelect
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -441,7 +442,7 @@ const ShipperShowCase = () => {
                 onclickFnc={cardVehicleAction}
                 selectedValue={selectedVehicle}
                 setSelectedValue={setSelectedVehicle}
-              ></ShipperCardVehicle>
+              />
             </div>
           </Grid>
           <Grid item sm={2}>
@@ -455,7 +456,7 @@ const ShipperShowCase = () => {
                 onclickFnc={cardVehicleAction}
                 selectedValue={selectedVehicle}
                 setSelectedValue={setSelectedVehicle}
-              ></ShipperCardVehicle>
+              />
             </div>
           </Grid>
           <Grid item sm={2}>
@@ -469,7 +470,7 @@ const ShipperShowCase = () => {
                 onclickFnc={cardVehicleAction}
                 selectedValue={selectedVehicle}
                 setSelectedValue={setSelectedVehicle}
-              ></ShipperCardVehicle>
+              />
             </div>
           </Grid>
         </Grid>
@@ -503,7 +504,7 @@ const ShipperShowCase = () => {
                 setSelectedValue={setSelectedTailLift}
                 enableUnselect={true}
                 noInfoIcon={true}
-              ></ShipperCardVehicle>
+              />
             </div>
           </Grid>
           <Grid item sm={2}>
@@ -515,7 +516,7 @@ const ShipperShowCase = () => {
                 labelTwo='label'
                 disabled={true}
                 noInfoIcon={true}
-              ></ShipperCardVehicle>
+              />
             </div>
           </Grid>
         </Grid>
@@ -604,6 +605,15 @@ const ShipperShowCase = () => {
               multiline={true}
               aria-describedby='component-error-text'
             />
+          </FormControl>
+          <br />
+          <br />
+          <FormControl>
+            <InputLabel htmlFor='select-test'>Select label</InputLabel>
+            <ShipperSelect>
+              <MenuItem value={1}>One</MenuItem>
+              <MenuItem value={2}>Two</MenuItem>
+            </ShipperSelect>
           </FormControl>
           <br />
           <br />
