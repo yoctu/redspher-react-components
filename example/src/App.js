@@ -718,11 +718,7 @@ const ShipperShowCase = () => {
         <br />
         <br />
         <br />
-        <ShipperStepper
-          steps={steps}
-          activeStep={activeStep}
-          style={{ width: '100%' }}
-        />
+        <ShipperStepper steps={steps} activeStep={activeStep} />
         <br />
         <br />
         <br />

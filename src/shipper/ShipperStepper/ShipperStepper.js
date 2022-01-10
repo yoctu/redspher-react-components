@@ -36,34 +36,62 @@ const useQontoStepIconStyles = makeStyles({
     width: 6,
     height: 6,
     borderRadius: '50%',
-    backgroundColor: 'currentColor'
+    backgroundColor: 'currentColor',
+    '&:hover': {
+      cursor: 'pointer'
+    }
   },
   textActive: {
-    color: themeConstants.black.dark
+    color: themeConstants.black.dark,
+    '&:hover': {
+      cursor: 'pointer'
+    }
   },
   textNotActive: {
     color: themeConstants.grey.main
+  },
+  textCurrent: {
+    color: themeConstants.black.dark
   },
   stepLabel: {
     marginTop: 0
   },
   alternativeLabel: {},
   labelContainer: {
+    width: 200,
     '& $alternativeLabel': {
       marginTop: 0
+    }
+  },
+  iconActive: {
+    '&:hover': {
+      cursor: 'pointer'
+    }
+  },
+  iconCurrent: {},
+  iconNotActive: {},
+  completedMiddle: {
+    '&:hover': {
+      cursor: 'pointer'
     }
   }
 })
 
 function QontoStepIcon(props) {
   const classes = useQontoStepIconStyles()
-  const { active, completed } = props
+  const { active, completed, onClick } = props
 
   return (
     <div
       className={clsx(classes.root, {
-        [classes.active]: active || completed
+        [classes.active]: active || completed,
+        [classes.completedMiddle]: completed
       })}
+      onClick={() => {
+        if (completed) {
+          onClick()
+        }
+      }}
     >
       {completed ? (
         <svg
@@ -126,6 +154,33 @@ const QontoConnector = withStyles({
 
 const ShipperStepper = ({ steps, activeStep }) => {
   const classes = useQontoStepIconStyles()
+
+  const getClassNameTypo = (index) => {
+    if (index < activeStep) {
+      return classes.textActive
+    } else if (index === activeStep) {
+      return classes.textCurrent
+    } else {
+      return classes.textNotActive
+    }
+  }
+
+  const getClassNameIcon = (index) => {
+    if (index < activeStep) {
+      return classes.iconActive
+    } else if (index === activeStep) {
+      return classes.iconCurrent
+    } else {
+      return classes.iconNotActive
+    }
+  }
+
+  const onClickAction = (index, step) => {
+    if (index < activeStep) {
+      step.onClick()
+    }
+  }
+
   return (
     <div className={style.stepper}>
       <Stepper
@@ -137,17 +192,19 @@ const ShipperStepper = ({ steps, activeStep }) => {
           <Step key={step.label}>
             <StepLabel
               StepIconComponent={QontoStepIcon}
+              StepIconProps={{
+                onClick: step.onClick
+              }}
               classes={{
                 labelContainer: classes.labelContainer,
                 alternativeLabel: classes.alternativeLabel
               }}
             >
               <Typography
-                className={
-                  index <= activeStep
-                    ? classes.textActive
-                    : classes.textNotActive
-                }
+                className={getClassNameTypo(index)}
+                onClick={() => {
+                  onClickAction(index, step)
+                }}
               >
                 {step.label}
               </Typography>
@@ -157,7 +214,14 @@ const ShipperStepper = ({ steps, activeStep }) => {
               justifyContent='center'
               style={{ marginTop: -70 }}
             >
-              {step.icon}
+              <Box
+                className={getClassNameIcon(index)}
+                onClick={() => {
+                  onClickAction(index, step)
+                }}
+              >
+                {step.icon}
+              </Box>
             </Box>
           </Step>
         ))}
