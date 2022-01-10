@@ -2,6 +2,8 @@ $size: 14px;
 
 .container {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .sizeStd {
