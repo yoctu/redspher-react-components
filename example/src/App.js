@@ -248,40 +248,32 @@ const ShipperShowCase = () => {
 
   const steps = [
     {
-      id: 'stepa',
-      label: 'Je suis step a',
-      icon: <PlusIcon />,
+      id: 'request',
+      label: 'Request',
+      icon: <RequestIcon />,
       onClick: () => {
         console.log('Pouet A')
       }
     },
     {
-      id: 'stepb',
-      label: 'Je suis step b',
-      icon: <ShipmentsIcon />,
+      id: 'offers',
+      label: 'Offers',
+      icon: <OffersIcon />,
       onClick: () => {
         console.log('Pouet B')
       }
     },
     {
-      id: 'stepc',
-      label: 'Je suis step c',
-      icon: <UploadIcon />,
+      id: 'confirmation',
+      label: 'Confirmation',
+      icon: <ConfirmationIcon />,
       onClick: () => {
         console.log('Pouet C')
-      }
-    },
-    {
-      id: 'stepd',
-      label: 'Je suis step d',
-      icon: <UploadIcon />,
-      onClick: () => {
-        console.log('Pouet D')
       }
     }
   ]
 
-  const [activeStep, setActiveStep] = useState(2)
+  const [activeStep] = useState(1)
 
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
@@ -716,7 +708,11 @@ const ShipperShowCase = () => {
         <br />
         <br />
         <br />
-        <ShipperStepper steps={steps} activeStep={activeStep} />
+        <ShipperStepper
+          steps={steps}
+          activeStep={activeStep}
+          style={{ width: '100%' }}
+        />
         <br />
         <br />
         <br />

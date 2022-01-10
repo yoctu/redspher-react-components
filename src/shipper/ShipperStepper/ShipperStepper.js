@@ -6,7 +6,8 @@ import {
   StepLabel,
   StepConnector,
   makeStyles,
-  Typography
+  Typography,
+  Box
 } from '@material-ui/core'
 import { withStyles, styled } from '@material-ui/styles'
 import clsx from 'clsx'
@@ -142,6 +143,13 @@ const ShipperStepper = ({ steps, activeStep }) => {
                 {step.label}
               </Typography>
             </StyledStepLabel>
+            <Box
+              display='flex'
+              justifyContent='center'
+              style={{ marginTop: -70 }}
+            >
+              {step.icon}
+            </Box>
           </Step>
         ))}
       </Stepper>
