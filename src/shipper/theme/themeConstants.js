@@ -27,7 +27,8 @@ export const colors = {
     dark: '#062440'
   },
   green: {
-    main: '#00CF53'
+    main: '#00CF53',
+    dark: '#55A715'
   },
   orange: {
     main: '#FE7062'
