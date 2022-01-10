@@ -9,15 +9,9 @@ import {
   Typography,
   Box
 } from '@material-ui/core'
-import { withStyles, styled } from '@material-ui/styles'
+import { withStyles } from '@material-ui/styles'
 import clsx from 'clsx'
 import themeConstants from '../theme/themeConstants'
-
-const StyledStepLabel = styled(StepLabel)({
-  '& .MuiStepLabel-label.MuiStepLabel-alternativeLabel ': {
-    marginTop: 0
-  }
-})
 
 const useQontoStepIconStyles = makeStyles({
   root: {
@@ -49,6 +43,15 @@ const useQontoStepIconStyles = makeStyles({
   },
   textNotActive: {
     color: themeConstants.grey.main
+  },
+  stepLabel: {
+    marginTop: 0
+  },
+  alternativeLabel: {},
+  labelContainer: {
+    '& $alternativeLabel': {
+      marginTop: 0
+    }
   }
 })
 
@@ -132,7 +135,13 @@ const ShipperStepper = ({ steps, activeStep }) => {
       >
         {steps.map((step, index) => (
           <Step key={step.label}>
-            <StyledStepLabel StepIconComponent={QontoStepIcon}>
+            <StepLabel
+              StepIconComponent={QontoStepIcon}
+              classes={{
+                labelContainer: classes.labelContainer,
+                alternativeLabel: classes.alternativeLabel
+              }}
+            >
               <Typography
                 className={
                   index <= activeStep
@@ -142,7 +151,7 @@ const ShipperStepper = ({ steps, activeStep }) => {
               >
                 {step.label}
               </Typography>
-            </StyledStepLabel>
+            </StepLabel>
             <Box
               display='flex'
               justifyContent='center'

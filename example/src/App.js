@@ -83,7 +83,8 @@ import {
   ShipperPhoneNumber,
   PrintIcon,
   DragAndDrop,
-  ShipperSelect
+  ShipperSelect,
+  ShipperStepper
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -105,7 +106,6 @@ import {
 import { Pagination } from '@material-ui/lab'
 import 'redspher-components/dist/index.css'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import ShipperStepper from '../../src/shipper/ShipperStepper'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
