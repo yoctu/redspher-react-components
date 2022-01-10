@@ -105,6 +105,7 @@ import {
 import { Pagination } from '@material-ui/lab'
 import 'redspher-components/dist/index.css'
 import InputAdornment from '@material-ui/core/InputAdornment'
+import ShipperStepper from '../../src/shipper/ShipperStepper'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -202,7 +203,6 @@ const RubiWinShowCase = () => {
         {testRedenderTwo()}
       </Select>
       <br />
-
     </RubiwinThemeProvider>
   )
 }
@@ -234,18 +234,47 @@ const ShipperShowCase = () => {
   }
 
   const uploadDocument = () => {
-    setUploadStatus('loading');
+    setUploadStatus('loading')
     setTimeout(() => {
-      setUploadStatus('error');
-    }, 2000);
+      setUploadStatus('error')
+    }, 2000)
     setTimeout(() => {
-      setUploadStatus('finished');
-    }, 4000);
+      setUploadStatus('finished')
+    }, 4000)
   }
 
   const onChangeMethodDrag = () => {
-    setUploadStatus(null);
+    setUploadStatus(null)
   }
+
+  const steps = [
+    {
+      id: 'request',
+      label: 'Request',
+      icon: <RequestIcon />,
+      onClick: () => {
+        console.log('Pouet A')
+      }
+    },
+    {
+      id: 'offers',
+      label: 'Offers',
+      icon: <OffersIcon />,
+      onClick: () => {
+        console.log('Pouet B')
+      }
+    },
+    {
+      id: 'confirmation',
+      label: 'Confirmation',
+      icon: <ConfirmationIcon />,
+      onClick: () => {
+        console.log('Pouet C')
+      }
+    }
+  ]
+
+  const [activeStep] = useState(1)
 
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
@@ -307,67 +336,67 @@ const ShipperShowCase = () => {
             gap: '1em'
           }}
         >
-          <PlusIcon title="PlusIcon"/>
-          <ConfirmationIcon title="ConfirmationIcon"/>
-          <OffersIcon title="OffersIcon"/>
-          <StatisticsIcon title="StatisticsIcon"/>
-          <CalendarIcon title="CalendarIcon"/>
-          <PaletIcon title="PaletIcon"/>
-          <DriverIcon title="DriverIcon"/>
-          <ParcelIcon title="ParcelIcon"/>
-          <ShipmentsIcon title="ShipmentsIcon"/>
-          <QuotesIcon title="QuotesIcon"/>
-          <DisconnectIcon title="DisconnectIcon"/>
-          <AddressBookIcon title="AddressBookIcon"/>
-          <HourIcon title="HourIcon"/>
-          <DeleteIcon title="DeleteIcon"/>
-          <InvoiceIcon title="InvoiceIcon"/>
-          <PickupDetailsIcon title="PickupDetailsIcon"/>
-          <SearchIcon title="SearchIcon"/>
-          <PinIcon title="PinIcon"/>
-          <RequestIcon title="RequestIcon"/>
-          <StepIcon title="StepIcon"/>
-          <ActionIcon title="ActionIcon"/>
-          <MonitoringIcon title="MonitoringIcon"/>
-          <DeliveryDetailsIcon title="DeliveryDetailsIcon"/>
-          <PriceIcon title="PriceIcon"/>
-          <InformationIcon title="Icon"/>
-          <AutomaticIcon title="AutomaticIcon"/>
-          <HelpIcon title="HelpIcon"/>
-          <LogoAddressBookIcon title="LogoAddressBookIcon"/>
-          <Truck01Icon title="Truck01Icon"/>
-          <Truck02Icon title="Truck02Icon"/>
-          <Truck03Icon title="Truck03Icon"/>
-          <Truck04Icon title="Truck04Icon"/>
-          <ExpertIcon title="ExpertIcon"/>
-          <People1Icon title="People1Icon"/>
-          <ArrowLeftIcon title="ArrowLeftIcon"/>
-          <ArrowBottomIcon title="ArrowBottomIcon"/>
-          <ArrowRightIcon title="ArrowRightIcon"/>
-          <ArrowTopIcon title="ArrowTopIcon"/>
-          <AddStepsIcon title="AddStepsIcon"/>
-          <PeopleGroupIcon title="PeopleGroupIcon"/>
-          <CheckIcon title="CheckIcon"/>
-          <SideLoadIcon title="SideLoadIcon"/>
-          <TailLiftIcon title="TailLiftIcon"/>
-          <DownloadIcon title="DownloadIcon"/>
-          <UploadIcon title="UploadIcon"/>
-          <BurgerIcon title="BurgerIcon"/>
-          <BurgerCloseIcon title="BurgerCloseIcon"/>
-          <StarIcon title="StarIcon"/>
-          <TimerIcon title="TimerIcon"/>
-          <NotIncludedIcon title="NotIcon"/>
-          <VisibilityIcon title="VisibilityIcon"/>
-          <VisibilityNoneIcon title="VisibilityNoneIcon"/>
-          <LoadingIcon title="LoadingIcon"/>
-          <WarningIcon title="WarningIcon"/>
-          <People2Icon title="People2Icon"/>
-          <ArrowLeft2Icon title="ArrowLeft2Icon"/>
-          <ArrowBottom2Icon title="ArrowBottom2Icon"/>
-          <ArrowRight2Icon title="ArrowRight2Icon"/>
-          <ArrowTop2Icon title="ArrowTop2Icon"/>
-          <EditIcon title="EditIcon"/>
-          <PrintIcon title="PrintIcon"/>
+          <PlusIcon title='PlusIcon' />
+          <ConfirmationIcon title='ConfirmationIcon' />
+          <OffersIcon title='OffersIcon' />
+          <StatisticsIcon title='StatisticsIcon' />
+          <CalendarIcon title='CalendarIcon' />
+          <PaletIcon title='PaletIcon' />
+          <DriverIcon title='DriverIcon' />
+          <ParcelIcon title='ParcelIcon' />
+          <ShipmentsIcon title='ShipmentsIcon' />
+          <QuotesIcon title='QuotesIcon' />
+          <DisconnectIcon title='DisconnectIcon' />
+          <AddressBookIcon title='AddressBookIcon' />
+          <HourIcon title='HourIcon' />
+          <DeleteIcon title='DeleteIcon' />
+          <InvoiceIcon title='InvoiceIcon' />
+          <PickupDetailsIcon title='PickupDetailsIcon' />
+          <SearchIcon title='SearchIcon' />
+          <PinIcon title='PinIcon' />
+          <RequestIcon title='RequestIcon' />
+          <StepIcon title='StepIcon' />
+          <ActionIcon title='ActionIcon' />
+          <MonitoringIcon title='MonitoringIcon' />
+          <DeliveryDetailsIcon title='DeliveryDetailsIcon' />
+          <PriceIcon title='PriceIcon' />
+          <InformationIcon title='Icon' />
+          <AutomaticIcon title='AutomaticIcon' />
+          <HelpIcon title='HelpIcon' />
+          <LogoAddressBookIcon title='LogoAddressBookIcon' />
+          <Truck01Icon title='Truck01Icon' />
+          <Truck02Icon title='Truck02Icon' />
+          <Truck03Icon title='Truck03Icon' />
+          <Truck04Icon title='Truck04Icon' />
+          <ExpertIcon title='ExpertIcon' />
+          <People1Icon title='People1Icon' />
+          <ArrowLeftIcon title='ArrowLeftIcon' />
+          <ArrowBottomIcon title='ArrowBottomIcon' />
+          <ArrowRightIcon title='ArrowRightIcon' />
+          <ArrowTopIcon title='ArrowTopIcon' />
+          <AddStepsIcon title='AddStepsIcon' />
+          <PeopleGroupIcon title='PeopleGroupIcon' />
+          <CheckIcon title='CheckIcon' />
+          <SideLoadIcon title='SideLoadIcon' />
+          <TailLiftIcon title='TailLiftIcon' />
+          <DownloadIcon title='DownloadIcon' />
+          <UploadIcon title='UploadIcon' />
+          <BurgerIcon title='BurgerIcon' />
+          <BurgerCloseIcon title='BurgerCloseIcon' />
+          <StarIcon title='StarIcon' />
+          <TimerIcon title='TimerIcon' />
+          <NotIncludedIcon title='NotIcon' />
+          <VisibilityIcon title='VisibilityIcon' />
+          <VisibilityNoneIcon title='VisibilityNoneIcon' />
+          <LoadingIcon title='LoadingIcon' />
+          <WarningIcon title='WarningIcon' />
+          <People2Icon title='People2Icon' />
+          <ArrowLeft2Icon title='ArrowLeft2Icon' />
+          <ArrowBottom2Icon title='ArrowBottom2Icon' />
+          <ArrowRight2Icon title='ArrowRight2Icon' />
+          <ArrowTop2Icon title='ArrowTop2Icon' />
+          <EditIcon title='EditIcon' />
+          <PrintIcon title='PrintIcon' />
         </section>
         <section
           style={{
@@ -617,7 +646,10 @@ const ShipperShowCase = () => {
           </FormControl>
           <br />
           <br />
-          <ShipperPhoneNumber label={'Phone number'} helperText={'Not a number'} />
+          <ShipperPhoneNumber
+            label={'Phone number'}
+            helperText={'Not a number'}
+          />
         </div>
         <br />
         <br />
@@ -642,12 +674,23 @@ const ShipperShowCase = () => {
             width: '300px'
           }}
         >
-          <DragAndDrop uploadStatus={uploadStatus} onChangeMethod={() => {onChangeMethodDrag()}}/>
+          <DragAndDrop
+            uploadStatus={uploadStatus}
+            onChangeMethod={() => {
+              onChangeMethodDrag()
+            }}
+          />
           <br />
           <br />
           <br />
           <br />
-          <Button color='primary' variant='contained' onClick={() => {uploadDocument()}}>
+          <Button
+            color='primary'
+            variant='contained'
+            onClick={() => {
+              uploadDocument()
+            }}
+          >
             Upload
           </Button>
         </div>
@@ -670,6 +713,15 @@ const ShipperShowCase = () => {
           secondValueTranslate='expert'
           secondValue='expert'
           secondIcon={<ExpertIcon fontSize='small' />}
+        />
+        <br />
+        <br />
+        <br />
+        <br />
+        <ShipperStepper
+          steps={steps}
+          activeStep={activeStep}
+          style={{ width: '100%' }}
         />
         <br />
         <br />
