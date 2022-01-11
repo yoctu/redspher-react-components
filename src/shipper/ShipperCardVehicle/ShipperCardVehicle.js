@@ -7,7 +7,9 @@ import {
   Typography,
   CardActionArea,
   Box,
-  Radio
+  Radio,
+  Tooltip,
+  IconButton
 } from '@material-ui/core'
 import style from './ShipperCardVehicle.module.scss'
 import { ShipperThemeProvider } from '../../index'
@@ -69,9 +71,6 @@ const ShipperCardVehicle = ({
   return (
     <ShipperThemeProvider injectFirst>
       <Card
-        style={{
-          width: '90px'
-        }}
         onClick={onclickAction}
         className={`${
           disabled
@@ -97,18 +96,24 @@ const ShipperCardVehicle = ({
                 <Grid item>
                   <Typography
                     style={{ color: themeConstants.black.main }}
-                    className={`${style.textMedium}`}
+                    className={style.textMedium}
                   >
                     {labelOne}
                   </Typography>
                 </Grid>
                 <Grid item>
                   <Box ml={0.4} mt={0.25}>
-                    {!noInfoIcon
-                      ? React.createElement(InformationIcon, {
-                          style: { width: '12px', height: '12px' }
-                        })
-                      : ''}
+                    {!noInfoIcon ? (
+                      <Tooltip
+                        title={<React.Fragment>{tooltipValue}</React.Fragment>}
+                      >
+                        <IconButton className={style.tooltipButton}>
+                          <InformationIcon />
+                        </IconButton>
+                      </Tooltip>
+                    ) : (
+                      ''
+                    )}
                   </Box>
                 </Grid>
               </Grid>
@@ -156,7 +161,7 @@ ShipperCardVehicle.propTypes = {
   /** Enable the switch mode on the card, select/unselect like a checkbox the radio button */
   enableUnselect: PropTypes.bool.isRequired,
 
-  tooltipValue: PropTypes.string,
+  tooltipValue: PropTypes.node,
 
   noInfoIcon: PropTypes.bool
 }
