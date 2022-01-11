@@ -254,7 +254,7 @@ const ShipperShowCase = () => {
       label: 'Request',
       icon: <RequestIcon />,
       onClick: () => {
-        console.log('Pouet A')
+        console.log('Step A')
       }
     },
     {
@@ -262,7 +262,7 @@ const ShipperShowCase = () => {
       label: 'Offers',
       icon: <OffersIcon />,
       onClick: () => {
-        console.log('Pouet B')
+        console.log('Step B')
       }
     },
     {
@@ -270,7 +270,7 @@ const ShipperShowCase = () => {
       label: 'Confirmation',
       icon: <ConfirmationIcon />,
       onClick: () => {
-        console.log('Pouet C')
+        console.log('Step C')
       }
     }
   ]
