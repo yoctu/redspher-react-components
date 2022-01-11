@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React from 'react'
 import MuiPhoneNumber from 'material-ui-phone-number'
 import PropTypes from 'prop-types'
 import withStyles from '@material-ui/core/styles/withStyles'
@@ -11,49 +11,31 @@ const styles = () => ({
 })
 
 function PhoneNumber({
-  allowEmpty,
   helperText,
-  // default to there's no error
   isError,
   label,
-  onChange: providedOnChange,
-  ...delegated
+  onChange,
+  name = 'phoneNumber'
 }) {
-  const [text, setText] = useState('')
-  const [error, setError] = useState(false)
-
-  useEffect(() => {
-    if (allowEmpty && !text) {
-      // Empty is always allowed
-      setError(false)
-      providedOnChange('')
-      return
-    }
-
-    if (isError(text)) {
-      setError(true)
-      return
-    }
-    setError(false)
-    providedOnChange(text)
-  }, [text, isError, providedOnChange, allowEmpty])
-
-  const onChange = useCallback((value) => {
-    setText(value)
-  }, [])
-
   return (
     <MuiPhoneNumber
       disableAreaCodes
-      onChange={onChange}
-      enableSearchField
+      onChange={(value) => {
+        const event = {
+          target: {
+            value: value,
+            name: name
+          }
+        }
+        onChange(event)
+      }}
+      enablesearchfield='true'
       defaultCountry='fr'
       countryCodeEditable
       preferredCountries={defaultPreferredCountries}
-      error={error}
+      error={isError}
       label={label}
-      helperText={error && helperText}
-      {...delegated}
+      helperText={isError && helperText}
     />
   )
 }
