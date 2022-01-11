@@ -471,8 +471,7 @@ const ShipperShowCase = () => {
             'place-content': 'center'
           }}
         >
-          <Grid item sm={2}>
-            <div className={classes.root}>
+          <Grid item sm={4}>
               <ShipperCardVehicle
                 startIcon='truck01'
                 value='truck01'
@@ -482,11 +481,15 @@ const ShipperShowCase = () => {
                 onclickFnc={cardVehicleAction}
                 selectedValue={selectedVehicle}
                 setSelectedValue={setSelectedVehicle}
+                tooltipValue={
+                  <>
+                    <h1>HELLO</h1>
+                    <p>I'm a tooltip</p>
+                  </>
+                }
               />
-            </div>
           </Grid>
-          <Grid item sm={2}>
-            <div className={classes.root}>
+          <Grid item sm={4}>
               <ShipperCardVehicle
                 startIcon='truck02'
                 value='truck02'
@@ -497,10 +500,8 @@ const ShipperShowCase = () => {
                 selectedValue={selectedVehicle}
                 setSelectedValue={setSelectedVehicle}
               />
-            </div>
           </Grid>
-          <Grid item sm={2}>
-            <div className={classes.root}>
+          <Grid item sm={4}>
               <ShipperCardVehicle
                 startIcon='truck03'
                 value='truck03'
@@ -511,7 +512,6 @@ const ShipperShowCase = () => {
                 selectedValue={selectedVehicle}
                 setSelectedValue={setSelectedVehicle}
               />
-            </div>
           </Grid>
         </Grid>
         <Grid container direction='row'>
