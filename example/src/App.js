@@ -84,7 +84,8 @@ import {
   PrintIcon,
   DragAndDrop,
   ShipperSelect,
-  ShipperStepper
+  ShipperStepper,
+  ShipperAddressStepper
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -275,6 +276,12 @@ const ShipperShowCase = () => {
   ]
 
   const [activeStep] = useState(1)
+
+  const addressStepperIcons = {
+    first: <PinIcon title='PinIcon' />,
+    last: <PinIcon title='PinIcon' />,
+    middle: <StepIcon title='StepIcon' />
+  }
 
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
@@ -719,6 +726,15 @@ const ShipperShowCase = () => {
         <br />
         <br />
         <ShipperStepper steps={steps} activeStep={activeStep} />
+        <br />
+        <br />
+        <br />
+        <br />
+        <ShipperAddressStepper
+          icons={addressStepperIcons}
+          nbItems={5}
+          minHeight={50}
+        />
         <br />
         <br />
         <br />

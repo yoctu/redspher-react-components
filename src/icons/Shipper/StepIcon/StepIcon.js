@@ -4,7 +4,7 @@ import themeConstants from '../../../shipper/theme/themeConstants'
 
 function StepIcon(props) {
   return (
-    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='-10 -10 40 40'>
       <ellipse
         cx='9.99998'
         cy='10'

@@ -86,6 +86,8 @@ import PrintIcon from './icons/Shipper/PrintIcon/PrintIcon'
 import DragAndDrop from './shipper/ShipperDragAndDrop'
 import ShipperSelect from './shipper/ShipperSelect'
 import ShipperStepper from './shipper/ShipperStepper'
+import ShipperAddressStepper from './shipper/ShipperAddressStepper'
+import ShipperStepperTest from './shipper/ShipperStepperTest'
 
 export {
   RubiwinButton,
@@ -175,5 +177,7 @@ export {
   PrintIcon,
   DragAndDrop,
   ShipperSelect,
-  ShipperStepper
+  ShipperStepper,
+  ShipperAddressStepper,
+  ShipperStepperTest
 }
