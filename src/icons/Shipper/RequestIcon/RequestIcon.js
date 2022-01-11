@@ -29,6 +29,17 @@ function RequestIcon(props) {
             : themeConstants.secondary.main
         }
       />
+      <circle
+        cx='9.5'
+        cy='10.5'
+        r='0.25'
+        stroke={
+          props.secondaryColor
+            ? props.secondaryColor
+            : themeConstants.secondary.main
+        }
+        strokeWidth='0.5'
+      />
     </SvgIcon>
   )
 }
