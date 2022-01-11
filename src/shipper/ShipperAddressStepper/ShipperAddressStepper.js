@@ -10,7 +10,7 @@ import {
 import { withStyles } from '@material-ui/styles'
 import themeConstants from '../theme/themeConstants'
 
-function QontoStepIcon(props) {
+function StepIcon(props) {
   const { index, nbItems, icons } = props
 
   const icon = icons.middle
@@ -43,7 +43,7 @@ const ShipperStepper = ({ icons, nbItems, minHeight }) => {
       {Array.apply(null, Array(nbItems)).map((_item, index) => (
         <Step key={index}>
           <StepLabel
-            StepIconComponent={QontoStepIcon}
+            StepIconComponent={StepIcon}
             StepIconProps={{
               index,
               nbItems,

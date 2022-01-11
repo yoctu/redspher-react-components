@@ -13,7 +13,7 @@ import { withStyles } from '@material-ui/styles'
 import clsx from 'clsx'
 import themeConstants from '../theme/themeConstants'
 
-const useQontoStepIconStyles = makeStyles({
+const useStepIconStyles = makeStyles({
   root: {
     color: themeConstants.grey.light,
     display: 'flex',
@@ -77,8 +77,8 @@ const useQontoStepIconStyles = makeStyles({
   }
 })
 
-function QontoStepIcon(props) {
-  const classes = useQontoStepIconStyles()
+function StepIcon(props) {
+  const classes = useStepIconStyles()
   const { active, completed, onClick } = props
 
   return (
@@ -129,7 +129,7 @@ function QontoStepIcon(props) {
   )
 }
 
-const QontoConnector = withStyles({
+const Connector = withStyles({
   alternativeLabel: {
     top: 10,
     left: 'calc(-50%)',
@@ -153,7 +153,7 @@ const QontoConnector = withStyles({
 })(StepConnector)
 
 const ShipperStepper = ({ steps, activeStep }) => {
-  const classes = useQontoStepIconStyles()
+  const classes = useStepIconStyles()
 
   const getClassNameTypo = (index) => {
     if (index < activeStep) {
@@ -186,12 +186,12 @@ const ShipperStepper = ({ steps, activeStep }) => {
       <Stepper
         alternativeLabel
         activeStep={activeStep}
-        connector={<QontoConnector />}
+        connector={<Connector />}
       >
         {steps.map((step, index) => (
           <Step key={step.label}>
             <StepLabel
-              StepIconComponent={QontoStepIcon}
+              StepIconComponent={StepIcon}
               StepIconProps={{
                 onClick: step.onClick
               }}
