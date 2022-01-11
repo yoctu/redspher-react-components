@@ -15,7 +15,8 @@ function PhoneNumber({
   isError,
   label,
   onChange,
-  name = 'phoneNumber'
+  name = 'phoneNumber',
+  value
 }) {
   return (
     <MuiPhoneNumber
@@ -30,6 +31,7 @@ function PhoneNumber({
         onChange(event)
       }}
       enablesearchfield='true'
+      value={value}
       defaultCountry='fr'
       countryCodeEditable
       preferredCountries={defaultPreferredCountries}
