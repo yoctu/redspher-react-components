@@ -283,6 +283,10 @@ const ShipperShowCase = () => {
     middle: <StepIcon title='StepIcon' />
   }
 
+  const updatePhone = (e) => {
+    console.log(e)
+  }
+
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
       <h1>--------- SHIPPER COMPONENTS ---------</h1>
@@ -653,9 +657,14 @@ const ShipperShowCase = () => {
           </FormControl>
           <br />
           <br />
+
           <ShipperPhoneNumber
             label={'Phone number'}
             helperText={'Not a number'}
+            isError={false}
+            onChange={(e) => {
+              updatePhone(e)
+            }}
           />
         </div>
         <br />
