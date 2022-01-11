@@ -23,7 +23,7 @@ function StepIcon(props) {
   return <div>{icon}</div>
 }
 
-const QontoConnector = withStyles({
+const Connector = withStyles({
   line: {},
   completed: {
     '& $line': {
@@ -37,7 +37,7 @@ const ShipperStepper = ({ icons, nbItems, minHeight }) => {
   return (
     <Stepper
       activeStep={nbItems}
-      connector={<QontoConnector />}
+      connector={<Connector />}
       orientation='vertical'
     >
       {Array.apply(null, Array(nbItems)).map((_item, index) => (
