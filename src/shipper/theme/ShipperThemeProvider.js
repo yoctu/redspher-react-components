@@ -195,13 +195,16 @@ export const themeObject = {
       root: {
         backgroundColor: themeConstants.primary.main,
         borderRadius: '40px',
+        height: '30px',
         width: 'fit-content',
         padding: '2px',
         '& [class*="MuiToggleButton-root"]': {
           padding: '7.5px 15px',
           borderRadius: '40px !important',
+          fontSize: '12px',
           color: themeConstants.white.main,
           '& [class*="MuiSvgIcon-root"]': {
+            width: '20px',
             marginRight: '7px'
           }
         },
