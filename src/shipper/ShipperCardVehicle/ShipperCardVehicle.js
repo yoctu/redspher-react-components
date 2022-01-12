@@ -6,7 +6,6 @@ import {
   CardContent,
   Typography,
   CardActionArea,
-  Box,
   Radio,
   Tooltip,
   IconButton
