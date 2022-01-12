@@ -32,7 +32,18 @@
     height: 10px;
 }
 
+.title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.tooltipContainer {
+  display: flex;
+  align-items: center;
+}
+
 .tooltipButton {
+  margin-left: 5px;
   padding: 0;
   width: 16px;
   height: 16px;

@@ -92,6 +92,7 @@ const ShipperCardVehicle = ({
                 direction='row'
                 justifyContent='center'
                 alignItems='center'
+                className={style.title}
               >
                 <Grid item>
                   <Typography
@@ -101,20 +102,18 @@ const ShipperCardVehicle = ({
                     {labelOne}
                   </Typography>
                 </Grid>
-                <Grid item>
-                  <Box ml={0.4} mt={0.25}>
-                    {!noInfoIcon ? (
-                      <Tooltip
-                        title={<React.Fragment>{tooltipValue}</React.Fragment>}
-                      >
-                        <IconButton className={style.tooltipButton}>
-                          <InformationIcon />
-                        </IconButton>
-                      </Tooltip>
-                    ) : (
-                      ''
-                    )}
-                  </Box>
+                <Grid item className={style.tooltipContainer}>
+                  {!noInfoIcon ? (
+                    <Tooltip
+                      title={<React.Fragment>{tooltipValue}</React.Fragment>}
+                    >
+                      <IconButton className={style.tooltipButton}>
+                        <InformationIcon />
+                      </IconButton>
+                    </Tooltip>
+                  ) : (
+                    ''
+                  )}
                 </Grid>
               </Grid>
               <Grid item xs={12} container justifyContent='center'>
