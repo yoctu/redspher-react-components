@@ -43,7 +43,7 @@ const ShipperCardVehicle = ({
     ['truck04', Truck04Icon],
     ['driver', DriverIcon],
     ['tailLift', TailLiftIcon],
-    ['sideLoadIcon', SideLoadIcon]
+    ['sideLoad', SideLoadIcon]
   ])
 
   const getIconByName = (name) => {

@@ -85,7 +85,8 @@ import {
   DragAndDrop,
   ShipperSelect,
   ShipperStepper,
-  ShipperAddressStepper
+  ShipperAddressStepper,
+  ShipperErrorPopover
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -287,6 +288,17 @@ const ShipperShowCase = () => {
     console.log(e)
   }
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const handlePopoverOpen = event => {
+    setAnchorEl(event.target);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
       <h1>--------- SHIPPER COMPONENTS ---------</h1>
@@ -465,13 +477,10 @@ const ShipperShowCase = () => {
         <Grid
           container
           direction='row'
-          style={{
-            width: 'unset',
-            margin: 'auto',
-            'place-content': 'center'
-          }}
+          justifyContent="center"
+          spacing={4}
         >
-          <Grid item sm={4}>
+          <Grid item sm={2}>
               <ShipperCardVehicle
                 startIcon='truck01'
                 value='truck01'
@@ -489,7 +498,7 @@ const ShipperShowCase = () => {
                 }
               />
           </Grid>
-          <Grid item sm={4}>
+          <Grid item sm={2}>
               <ShipperCardVehicle
                 startIcon='truck02'
                 value='truck02'
@@ -501,7 +510,7 @@ const ShipperShowCase = () => {
                 setSelectedValue={setSelectedVehicle}
               />
           </Grid>
-          <Grid item sm={4}>
+          <Grid item sm={2}>
               <ShipperCardVehicle
                 startIcon='truck03'
                 value='truck03'
@@ -513,10 +522,25 @@ const ShipperShowCase = () => {
                 setSelectedValue={setSelectedVehicle}
               />
           </Grid>
-        </Grid>
-        <Grid container direction='row'>
           <Grid item sm={2}>
-            <div className={classes.root}>
+            <ShipperCardVehicle
+              startIcon='truck04'
+              value='truck04'
+              labelOne='Label'
+              labelTwo='label'
+              disabled={false}
+              onclickFnc={cardVehicleAction}
+              selectedValue={selectedVehicle}
+              setSelectedValue={setSelectedVehicle}
+            />
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          direction='row'
+          justifyContent="center"
+          spacing={4}>
+          <Grid item sm={2}>
               <ShipperCardVehicle
                 startIcon='driver'
                 value='driver'
@@ -529,10 +553,8 @@ const ShipperShowCase = () => {
                 enableUnselect={true}
                 noInfoIcon={true}
               />
-            </div>
           </Grid>
           <Grid item sm={2}>
-            <div className={classes.root}>
               <ShipperCardVehicle
                 startIcon='tailLift'
                 value='tailLift'
@@ -545,10 +567,8 @@ const ShipperShowCase = () => {
                 enableUnselect={true}
                 noInfoIcon={true}
               />
-            </div>
           </Grid>
           <Grid item sm={2}>
-            <div className={classes.root}>
               <ShipperCardVehicle
                 startIcon='sideLoad'
                 value='sideLoad'
@@ -557,7 +577,6 @@ const ShipperShowCase = () => {
                 disabled={true}
                 noInfoIcon={true}
               />
-            </div>
           </Grid>
         </Grid>
         <br />
@@ -635,6 +654,20 @@ const ShipperShowCase = () => {
             <FormHelperText id='component-error-text'>
               Error message
             </FormHelperText>
+          </FormControl>
+          <br />
+          <FormControl
+            error
+            onMouseEnter={handlePopoverOpen}
+            onMouseLeave={handlePopoverClose}
+          >
+            <InputLabel htmlFor='input-test'>Label</InputLabel>
+            <Input
+              id='input-test'
+              type={'text'}
+              aria-describedby='component-error-text'
+            />
+            <ShipperErrorPopover open={open} anchorEl={anchorEl} text={'Error message'} handlePopoverClose={handlePopoverClose} />
           </FormControl>
           <br />
           <FormControl>

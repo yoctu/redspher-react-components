@@ -87,6 +87,7 @@ import DragAndDrop from './shipper/ShipperDragAndDrop'
 import ShipperSelect from './shipper/ShipperSelect'
 import ShipperStepper from './shipper/ShipperStepper'
 import ShipperAddressStepper from './shipper/ShipperAddressStepper'
+import ShipperErrorPopover from './shipper/ShipperErrorPopover'
 
 export {
   RubiwinButton,
@@ -177,5 +178,6 @@ export {
   DragAndDrop,
   ShipperSelect,
   ShipperStepper,
-  ShipperAddressStepper
+  ShipperAddressStepper,
+  ShipperErrorPopover
 }
