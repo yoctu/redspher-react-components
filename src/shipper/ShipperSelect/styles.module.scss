@@ -7,12 +7,17 @@
   [class*="MuiSelect-root"] {
     padding-left: 15px;
 
+    &:focus {
+      background-color: transparent;
+    }
+
     &[aria-expanded=true] ~[class*="MuiSvgIcon-root"] {
       transform: rotate(180deg);
     }
   }
 
   [class*="MuiSvgIcon-root"] {
+    pointer-events: none;
     transition: 300ms transform;
     position: absolute;
     right: 15px;
@@ -22,12 +27,14 @@
 }
 
 .dropdown {
-  margin-top: 50px;
+  margin-top: 35px;
   border-radius: 16px !important;
 
   [class*="MuiListItem-root"] {
     &:hover,
-    &[class*="Mui-focusVisible"] {
+    &[class*="Mui-focusVisible"],
+    &[class*="Mui-selected"],
+    &[class*="Mui-selected"]:hover {
       background-color: transparent;
       color: $primaryBlue;
     }
