@@ -31,9 +31,7 @@ export default function ShipperErrorPopover({
       disableAutoFocus
       {...delegated}
     >
-      <WarningIcon
-        primaryColor={themeConstants.secondary.main}
-      />
+      <WarningIcon primaryColor={themeConstants.secondary.main} />
       <FormHelperText>{text}</FormHelperText>
     </Popover>
   )
