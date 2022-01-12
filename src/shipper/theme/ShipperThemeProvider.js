@@ -195,6 +195,7 @@ export const themeObject = {
       root: {
         backgroundColor: themeConstants.primary.main,
         borderRadius: '40px',
+        height: '30px',
         width: 'fit-content',
         padding: '2px',
         '& [class*="MuiToggleButton-root"]': {
