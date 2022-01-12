@@ -204,7 +204,7 @@ export const themeObject = {
           fontSize: '12px',
           color: themeConstants.white.main,
           '& [class*="MuiSvgIcon-root"]': {
-            width:'20px',
+            width: '20px',
             marginRight: '7px'
           }
         },
