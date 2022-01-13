@@ -10,7 +10,7 @@ import {
   Tooltip,
   IconButton
 } from '@material-ui/core'
-import style from './ShipperCardVehicle.module.scss'
+import style from './ShipperCard.module.scss'
 import { ShipperThemeProvider } from '../../index'
 import themeConstants from '../theme/themeConstants'
 import Truck01Icon from '../../icons/Shipper/Truck01Icon'
@@ -22,7 +22,7 @@ import DriverIcon from '../../icons/Shipper/DriverIcon'
 import TailLiftIcon from '../../icons/Shipper/TailLiftIcon'
 import SideLoadIcon from '../../icons/Shipper/SideLoadIcon'
 
-const ShipperCardVehicle = ({
+const ShipperCard = ({
   startIcon,
   value,
   labelOne,
@@ -92,11 +92,19 @@ const ShipperCardVehicle = ({
             : style.noBorder
         } ${style.cardHover}`}
       >
-        <CardActionArea disabled={disabled}>
+        <CardActionArea disabled={disabled} style={{ height: '100%' }}>
           <CardContent style={{ paddingTop: '5px', paddingBottom: 0 }}>
             <Grid>
-              <Grid item xs={12} container justifyContent='center'>
-                {React.createElement(getIconByName(startIcon), {})}
+              <Grid
+                item
+                xs={12}
+                container
+                justifyContent='center'
+                className={style.iconContainer}
+              >
+                {React.isValidElement(startIcon)
+                  ? startIcon
+                  : React.createElement(getIconByName(startIcon), {})}
               </Grid>
               <Grid
                 xs={12}
@@ -156,9 +164,9 @@ const ShipperCardVehicle = ({
   )
 }
 
-ShipperCardVehicle.propTypes = {
+ShipperCard.propTypes = {
   /** text to display as title for the card, it can be <Translate> component too */
-  startIcon: PropTypes.string.isRequired,
+  startIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   /** id to pass to the function when the component is clicked */
   value: PropTypes.string.isRequired,
   /** text to display as reference of the invoice */
@@ -180,4 +188,4 @@ ShipperCardVehicle.propTypes = {
   noInfoIcon: PropTypes.bool
 }
 
-export default ShipperCardVehicle
+export default ShipperCard

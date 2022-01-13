@@ -74,7 +74,7 @@ import ArrowRight2Icon from './icons/Shipper/ArrowRight2Icon'
 import ArrowTop2Icon from './icons/Shipper/ArrowTop2Icon'
 import ArrowBottom2Icon from './icons/Shipper/ArrowBottom2Icon'
 import EditIcon from './icons/Shipper/EditIcon'
-import ShipperCardVehicle from './shipper/ShipperCardVehicle'
+import ShipperCard from './shipper/ShipperCard'
 import ShipperSwitch from './shipper/ShipperSwitch'
 import ShipperItem from './shipper/ShipperItem'
 import ShipperCheckbox from './shipper/ShipperCheckbox'
@@ -168,7 +168,7 @@ export {
   ArrowBottom2Icon,
   EditIcon,
   ShipperRangeSlider,
-  ShipperCardVehicle,
+  ShipperCard,
   ShipperSwitch,
   ShipperItem,
   ShipperCheckbox,
