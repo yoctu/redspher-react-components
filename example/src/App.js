@@ -227,8 +227,7 @@ const ShipperShowCase = () => {
   }
 
   const [selectedVehicle, setSelectedVehicle] = React.useState('truck02')
-  const [selectedSecondDriver, setSelectedSecondDriver] = React.useState('')
-  const [selectedTailift, setSelectedTailLift] = React.useState('')
+  const [selectedFeatures, setSelectedFeatures] = React.useState([])
   const [uploadStatus, setUploadStatus] = React.useState('')
 
   const downloadAction = () => {
@@ -547,9 +546,8 @@ const ShipperShowCase = () => {
                 labelOne='Label'
                 labelTwo='label'
                 disabled={false}
-                onclickFnc={cardVehicleAction}
-                selectedValue={selectedSecondDriver}
-                setSelectedValue={setSelectedSecondDriver}
+                selectedValue={selectedFeatures}
+                setSelectedValue={setSelectedFeatures}
                 enableUnselect={true}
                 noInfoIcon={true}
               />
@@ -561,9 +559,8 @@ const ShipperShowCase = () => {
                 labelOne='Label'
                 labelTwo='label'
                 disabled={false}
-                onclickFnc={cardVehicleAction}
-                selectedValue={selectedTailift}
-                setSelectedValue={setSelectedTailLift}
+                selectedValue={selectedFeatures}
+                setSelectedValue={setSelectedFeatures}
                 enableUnselect={true}
                 noInfoIcon={true}
               />
@@ -574,7 +571,10 @@ const ShipperShowCase = () => {
                 value='sideLoad'
                 labelOne='Label'
                 labelTwo='label'
-                disabled={true}
+                disabled={false}
+                selectedValue={selectedFeatures}
+                setSelectedValue={setSelectedFeatures}
+                enableUnselect={true}
                 noInfoIcon={true}
               />
           </Grid>

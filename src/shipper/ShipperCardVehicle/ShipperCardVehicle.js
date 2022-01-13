@@ -35,6 +35,7 @@ const ShipperCardVehicle = ({
   tooltipValue,
   noInfoIcon
 }) => {
+  const selectedValueIsArray = Array.isArray(selectedValue)
   const allowedIcons = new Map([
     ['truck01', Truck01Icon],
     ['truck02', Truck02Icon],
@@ -60,9 +61,17 @@ const ShipperCardVehicle = ({
   const onclickAction = () => {
     if (disabled) return
     if (enableUnselect) {
-      selectedValue === value ? setSelectedValue('') : setSelectedValue(value)
+      if (selectedValueIsArray) {
+        selectedValue.includes(value)
+          ? setSelectedValue(selectedValue.filter((val) => val !== value))
+          : setSelectedValue([...selectedValue, value])
+      } else {
+        selectedValue === value ? setSelectedValue('') : setSelectedValue(value)
+      }
     } else {
-      setSelectedValue(value)
+      if (!selectedValueIsArray) {
+        setSelectedValue(value)
+      }
     }
     if (onclickFnc) onclickFnc(value)
   }
@@ -74,7 +83,11 @@ const ShipperCardVehicle = ({
         className={`${
           disabled
             ? style.disabledBorder
-            : selectedValue === value
+            : (
+                selectedValueIsArray
+                  ? selectedValue.includes(value)
+                  : selectedValue === value
+              )
             ? style.blueBorder
             : style.noBorder
         } ${style.cardHover}`}
@@ -124,7 +137,11 @@ const ShipperCardVehicle = ({
               <Grid item xs={12} container justifyContent='center'>
                 <Radio
                   color='primary'
-                  checked={selectedValue === value}
+                  checked={
+                    selectedValueIsArray
+                      ? selectedValue.includes(value)
+                      : selectedValue === value
+                  }
                   value={value}
                   disabled={disabled}
                 />
@@ -151,7 +168,8 @@ ShipperCardVehicle.propTypes = {
   /** function to execute when the card is clicked and the component isn't disabled */
   onclickFnc: PropTypes.func,
   /** The getter of the useState, sent to the component to hold the checked value */
-  selectedValue: PropTypes.string.isRequired,
+  selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
+    .isRequired,
   /** The setter of the ueState, sent to the component to set the checked value */
   setSelectedValue: PropTypes.func.isRequired,
   /** Enable the switch mode on the card, select/unselect like a checkbox the radio button */
