@@ -81,6 +81,7 @@ import ShipperCheckbox from './shipper/ShipperCheckbox'
 import ShipperPhoneNumber from './shipper/ShipperPhoneNumber'
 import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 import rubiwinBaseTheme from './rubiwin/theme/RubiwinBaseTheme'
+import ShipperBaseTheme from './shipper/theme/ShipperBaseTheme'
 import E4pTheme from './rubiwin/theme/E4pTheme'
 import PrintIcon from './icons/Shipper/PrintIcon/PrintIcon'
 import DragAndDrop from './shipper/ShipperDragAndDrop'
@@ -173,6 +174,7 @@ export {
   ShipperItem,
   ShipperCheckbox,
   rubiwinBaseTheme,
+  ShipperBaseTheme,
   E4pTheme,
   PrintIcon,
   DragAndDrop,
