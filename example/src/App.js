@@ -43,10 +43,10 @@ import {
   AutomaticIcon,
   HelpIcon,
   LogoAddressBookIcon,
-  Truck01Icon,
-  Truck02Icon,
-  Truck03Icon,
-  Truck04Icon,
+  TruckIcon,
+  SemiIcon,
+  VanIcon,
+  BreakIcon,
   ExpertIcon,
   People1Icon,
   ArrowLeftIcon,
@@ -387,10 +387,10 @@ const ShipperShowCase = () => {
           <AutomaticIcon title='AutomaticIcon' />
           <HelpIcon title='HelpIcon' />
           <LogoAddressBookIcon title='LogoAddressBookIcon' />
-          <Truck01Icon title='Truck01Icon' />
-          <Truck02Icon title='Truck02Icon' />
-          <Truck03Icon title='Truck03Icon' />
-          <Truck04Icon title='Truck04Icon' />
+          <TruckIcon title='TruckIcon' />
+          <SemiIcon title='SemiIcon' />
+          <VanIcon title='VanIcon' />
+          <BreakIcon title='BreakIcon' />
           <ExpertIcon title='ExpertIcon' />
           <People1Icon title='People1Icon' />
           <ArrowLeftIcon title='ArrowLeftIcon' />
@@ -482,8 +482,8 @@ const ShipperShowCase = () => {
         >
           <Grid item sm={2}>
               <ShipperCard
-                startIcon='truck01'
-                value='truck01'
+                startIcon='van'
+                value='van'
                 labelOne='Label'
                 labelTwo='label'
                 disabled={false}
@@ -500,8 +500,8 @@ const ShipperShowCase = () => {
           </Grid>
           <Grid item sm={2}>
               <ShipperCard
-                startIcon='truck02'
-                value='truck02'
+                startIcon='break'
+                value='break'
                 labelOne='Label'
                 labelTwo='label'
                 disabled={false}
@@ -512,8 +512,8 @@ const ShipperShowCase = () => {
           </Grid>
           <Grid item sm={2}>
               <ShipperCard
-                startIcon='truck03'
-                value='truck03'
+                startIcon='truck'
+                value='truck'
                 labelOne='Label'
                 labelTwo='label'
                 disabled={false}
@@ -524,8 +524,8 @@ const ShipperShowCase = () => {
           </Grid>
           <Grid item sm={2}>
             <ShipperCard
-              startIcon='truck04'
-              value='truck04'
+              startIcon='semi'
+              value='semi'
               labelOne='Label'
               labelTwo='label'
               disabled={false}
