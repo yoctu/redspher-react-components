@@ -42,10 +42,10 @@ import InformationIcon from './icons/Shipper/InformationIcon'
 import AutomaticIcon from './icons/Shipper/AutomaticIcon'
 import HelpIcon from './icons/Shipper/HelpIcon'
 import LogoAddressBookIcon from './icons/Shipper/LogoAddressBookIcon'
-import Truck01Icon from './icons/Shipper/Truck01Icon'
-import Truck02Icon from './icons/Shipper/Truck02Icon'
-import Truck03Icon from './icons/Shipper/Truck03Icon'
-import Truck04Icon from './icons/Shipper/Truck04Icon'
+import VanIcon from './icons/Shipper/VanIcon'
+import BreakIcon from './icons/Shipper/BreakIcon'
+import TruckIcon from './icons/Shipper/TruckIcon'
+import SemiIcon from './icons/Shipper/SemiIcon'
 import ExpertIcon from './icons/Shipper/ExpertIcon'
 import People1Icon from './icons/Shipper/People1Icon'
 import ArrowLeftIcon from './icons/Shipper/ArrowLeftIcon'
@@ -135,10 +135,10 @@ export {
   AutomaticIcon,
   HelpIcon,
   LogoAddressBookIcon,
-  Truck01Icon,
-  Truck02Icon,
-  Truck03Icon,
-  Truck04Icon,
+  TruckIcon,
+  SemiIcon,
+  VanIcon,
+  BreakIcon,
   ExpertIcon,
   People1Icon,
   ArrowLeftIcon,

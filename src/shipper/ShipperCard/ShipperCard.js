@@ -13,10 +13,10 @@ import {
 import style from './ShipperCard.module.scss'
 import { ShipperThemeProvider } from '../../index'
 import themeConstants from '../theme/themeConstants'
-import Truck01Icon from '../../icons/Shipper/Truck01Icon'
-import Truck02Icon from '../../icons/Shipper/Truck02Icon'
-import Truck03Icon from '../../icons/Shipper/Truck03Icon'
-import Truck04Icon from '../../icons/Shipper/Truck04Icon'
+import VanIcon from '../../icons/Shipper/VanIcon'
+import BreakIcon from '../../icons/Shipper/BreakIcon'
+import TruckIcon from '../../icons/Shipper/TruckIcon'
+import SemiIcon from '../../icons/Shipper/SemiIcon'
 import InformationIcon from '../../icons/Shipper/InformationIcon'
 import DriverIcon from '../../icons/Shipper/DriverIcon'
 import TailLiftIcon from '../../icons/Shipper/TailLiftIcon'
@@ -37,10 +37,10 @@ const ShipperCard = ({
 }) => {
   const selectedValueIsArray = Array.isArray(selectedValue)
   const allowedIcons = new Map([
-    ['truck01', Truck01Icon],
-    ['truck02', Truck02Icon],
-    ['truck03', Truck03Icon],
-    ['truck04', Truck04Icon],
+    ['van', VanIcon],
+    ['break', BreakIcon],
+    ['truck', TruckIcon],
+    ['semi', SemiIcon],
     ['driver', DriverIcon],
     ['tailLift', TailLiftIcon],
     ['sideLoad', SideLoadIcon]
@@ -53,7 +53,7 @@ const ShipperCard = ({
       console.log(
         "Requested icon does not exist or isn't allowed in this component."
       )
-      return allowedIcons.get('truck01')
+      return allowedIcons.get('van')
     }
   }
 
