@@ -76,7 +76,7 @@ import {
   ArrowBottom2Icon,
   EditIcon,
   ShipperRangeSlider,
-  ShipperCardVehicle,
+  ShipperCard,
   ShipperSwitch,
   ShipperItem,
   ShipperCheckbox,
@@ -228,6 +228,7 @@ const ShipperShowCase = () => {
 
   const [selectedVehicle, setSelectedVehicle] = React.useState('truck02')
   const [selectedFeatures, setSelectedFeatures] = React.useState([])
+  const [selectedCarriers, setSelectedCarriers] = React.useState([])
   const [uploadStatus, setUploadStatus] = React.useState('')
 
   const downloadAction = () => {
@@ -480,7 +481,7 @@ const ShipperShowCase = () => {
           spacing={4}
         >
           <Grid item sm={2}>
-              <ShipperCardVehicle
+              <ShipperCard
                 startIcon='truck01'
                 value='truck01'
                 labelOne='Label'
@@ -498,7 +499,7 @@ const ShipperShowCase = () => {
               />
           </Grid>
           <Grid item sm={2}>
-              <ShipperCardVehicle
+              <ShipperCard
                 startIcon='truck02'
                 value='truck02'
                 labelOne='Label'
@@ -510,7 +511,7 @@ const ShipperShowCase = () => {
               />
           </Grid>
           <Grid item sm={2}>
-              <ShipperCardVehicle
+              <ShipperCard
                 startIcon='truck03'
                 value='truck03'
                 labelOne='Label'
@@ -522,7 +523,7 @@ const ShipperShowCase = () => {
               />
           </Grid>
           <Grid item sm={2}>
-            <ShipperCardVehicle
+            <ShipperCard
               startIcon='truck04'
               value='truck04'
               labelOne='Label'
@@ -540,7 +541,7 @@ const ShipperShowCase = () => {
           justifyContent="center"
           spacing={4}>
           <Grid item sm={2}>
-              <ShipperCardVehicle
+              <ShipperCard
                 startIcon='driver'
                 value='driver'
                 labelOne='Label'
@@ -553,7 +554,7 @@ const ShipperShowCase = () => {
               />
           </Grid>
           <Grid item sm={2}>
-              <ShipperCardVehicle
+              <ShipperCard
                 startIcon='tailLift'
                 value='tailLift'
                 labelOne='Label'
@@ -566,14 +567,55 @@ const ShipperShowCase = () => {
               />
           </Grid>
           <Grid item sm={2}>
-              <ShipperCardVehicle
+              <ShipperCard
                 startIcon='sideLoad'
                 value='sideLoad'
                 labelOne='Label'
-                labelTwo='label'
                 disabled={false}
                 selectedValue={selectedFeatures}
                 setSelectedValue={setSelectedFeatures}
+                enableUnselect={true}
+                noInfoIcon={true}
+              />
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          direction='row'
+          justifyContent="center"
+          spacing={4}>
+          <Grid item sm={2}>
+              <ShipperCard
+                startIcon={<img src="https://stagingcarrier.rubiwin.com/images/FRANAI001.png" alt="" />}
+                value='test1'
+                labelOne='test1'
+                disabled={false}
+                selectedValue={selectedCarriers}
+                setSelectedValue={setSelectedCarriers}
+                enableUnselect={true}
+                noInfoIcon={true}
+              />
+          </Grid>
+          <Grid item sm={2}>
+              <ShipperCard
+                startIcon={<img src="https://stagingcarrier.rubiwin.com/images/FRTEST020.png" alt="" />}
+                value='test2'
+                labelOne='test2'
+                disabled={false}
+                selectedValue={selectedCarriers}
+                setSelectedValue={setSelectedCarriers}
+                enableUnselect={true}
+                noInfoIcon={true}
+              />
+          </Grid>
+          <Grid item sm={2}>
+              <ShipperCard
+                startIcon={<img src="https://stagingcarrier.rubiwin.com/images/INTIME.png" alt="" />}
+                value='test3'
+                labelOne='test3'
+                disabled={false}
+                selectedValue={selectedCarriers}
+                setSelectedValue={setSelectedCarriers}
                 enableUnselect={true}
                 noInfoIcon={true}
               />
