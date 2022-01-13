@@ -101,8 +101,8 @@ const ShipperCardVehicle = ({
                     {labelOne}
                   </Typography>
                 </Grid>
-                <Grid item className={style.tooltipContainer}>
-                  {!noInfoIcon ? (
+                {!noInfoIcon && (
+                  <Grid item className={style.tooltipContainer}>
                     <Tooltip
                       title={<React.Fragment>{tooltipValue}</React.Fragment>}
                     >
@@ -110,10 +110,8 @@ const ShipperCardVehicle = ({
                         <InformationIcon />
                       </IconButton>
                     </Tooltip>
-                  ) : (
-                    ''
-                  )}
-                </Grid>
+                  </Grid>
+                )}
               </Grid>
               <Grid item xs={12} container justifyContent='center'>
                 <Typography
