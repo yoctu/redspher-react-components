@@ -10,9 +10,7 @@ import {
   Tooltip,
   IconButton
 } from '@material-ui/core'
-import { StylesProvider } from '@material-ui/core/styles'
 import style from './ShipperCard.module.scss'
-import { ShipperThemeProvider } from '../../index'
 import themeConstants from '../theme/themeConstants'
 import VanIcon from '../../icons/Shipper/VanIcon'
 import BreakIcon from '../../icons/Shipper/BreakIcon'
@@ -78,102 +76,98 @@ const ShipperCard = ({
   }
 
   return (
-    <ShipperThemeProvider>
-      <StylesProvider injectFirst>
-        <Card
-          onClick={onclickAction}
-          className={`${
-            disabled
-              ? style.disabledBorder
-              : (
+    <Card
+      onClick={onclickAction}
+      className={`${
+        disabled
+          ? style.disabledBorder
+          : (
+              selectedValueIsArray
+                ? selectedValue.includes(value)
+                : selectedValue === value
+            )
+          ? style.blueBorder
+          : style.noBorder
+      } ${style.card}`}
+    >
+      <CardActionArea
+        disabled={disabled}
+        style={{ height: '100%' }}
+        disableRipple
+      >
+        <CardContent className={style.cardContent}>
+          <Grid container>
+            <Grid
+              item
+              xs={12}
+              container
+              justifyContent='center'
+              className={style.iconContainer}
+            >
+              {React.isValidElement(startIcon)
+                ? startIcon
+                : React.createElement(getIconByName(startIcon), {})}
+            </Grid>
+            <Grid
+              xs={12}
+              container
+              direction='row'
+              justifyContent='center'
+              alignItems='center'
+              className={style.title}
+            >
+              <Grid item>
+                <Typography
+                  style={{ color: themeConstants.black.main }}
+                  className={style.textMedium}
+                >
+                  {labelOne}
+                </Typography>
+              </Grid>
+              {!noInfoIcon && (
+                <Grid item className={style.tooltipContainer}>
+                  <Tooltip
+                    title={<React.Fragment>{tooltipValue}</React.Fragment>}
+                  >
+                    <IconButton className={style.tooltipButton}>
+                      <InformationIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+              )}
+            </Grid>
+            <Grid item xs={12} container justifyContent='center'>
+              <Typography
+                style={{ color: themeConstants.grey.main }}
+                className={`${style.textSmall}`}
+              >
+                {labelTwo}
+              </Typography>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              container
+              justifyContent='center'
+              className={style.radioContainer}
+            >
+              <Radio
+                disableRipple
+                color='primary'
+                checked={
                   selectedValueIsArray
                     ? selectedValue.includes(value)
                     : selectedValue === value
-                )
-              ? style.blueBorder
-              : style.noBorder
-          } ${style.card}`}
-        >
-          <CardActionArea
-            disabled={disabled}
-            style={{ height: '100%' }}
-            disableRipple
-          >
-            <CardContent className={style.cardContent}>
-              <Grid container>
-                <Grid
-                  item
-                  xs={12}
-                  container
-                  justifyContent='center'
-                  className={style.iconContainer}
-                >
-                  {React.isValidElement(startIcon)
-                    ? startIcon
-                    : React.createElement(getIconByName(startIcon), {})}
-                </Grid>
-                <Grid
-                  xs={12}
-                  container
-                  direction='row'
-                  justifyContent='center'
-                  alignItems='center'
-                  className={style.title}
-                >
-                  <Grid item>
-                    <Typography
-                      style={{ color: themeConstants.black.main }}
-                      className={style.textMedium}
-                    >
-                      {labelOne}
-                    </Typography>
-                  </Grid>
-                  {!noInfoIcon && (
-                    <Grid item className={style.tooltipContainer}>
-                      <Tooltip
-                        title={<React.Fragment>{tooltipValue}</React.Fragment>}
-                      >
-                        <IconButton className={style.tooltipButton}>
-                          <InformationIcon />
-                        </IconButton>
-                      </Tooltip>
-                    </Grid>
-                  )}
-                </Grid>
-                <Grid item xs={12} container justifyContent='center'>
-                  <Typography
-                    style={{ color: themeConstants.grey.main }}
-                    className={`${style.textSmall}`}
-                  >
-                    {labelTwo}
-                  </Typography>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  container
-                  justifyContent='center'
-                  className={style.radioContainer}
-                >
-                  <Radio
-                    disableRipple
-                    color='primary'
-                    checked={
-                      selectedValueIsArray
-                        ? selectedValue.includes(value)
-                        : selectedValue === value
-                    }
-                    value={value}
-                    disabled={disabled}
-                    className={style.radio}
-                  />
-                </Grid>
-              </Grid>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </StylesProvider>
-    </ShipperThemeProvider>
+                }
+                value={value}
+                disabled={disabled}
+                className={style.radio}
+              />
+            </Grid>
+          </Grid>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   )
 }
 
