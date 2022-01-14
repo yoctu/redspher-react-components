@@ -4,8 +4,7 @@ import {
   Step,
   StepLabel,
   StepConnector,
-  StepContent,
-  Typography
+  StepContent
 } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles'
 import themeConstants from '../theme/themeConstants'
@@ -33,7 +32,7 @@ const Connector = withStyles({
   }
 })(StepConnector)
 
-const ShipperStepper = ({ icons, nbItems, minHeight }) => {
+const ShipperStepper = ({ icons, nbItems, childrens }) => {
   return (
     <Stepper
       activeStep={nbItems}
@@ -50,9 +49,7 @@ const ShipperStepper = ({ icons, nbItems, minHeight }) => {
               icons
             }}
           />
-          <StepContent>
-            <Typography>caca</Typography>
-          </StepContent>
+          <StepContent>{childrens[index]}</StepContent>
         </Step>
       ))}
     </Stepper>
