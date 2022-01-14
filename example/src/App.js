@@ -43,10 +43,10 @@ import {
   AutomaticIcon,
   HelpIcon,
   LogoAddressBookIcon,
-  Truck01Icon,
-  Truck02Icon,
-  Truck03Icon,
-  Truck04Icon,
+  TruckIcon,
+  SemiIcon,
+  VanIcon,
+  BreakIcon,
   ExpertIcon,
   People1Icon,
   ArrowLeftIcon,
@@ -76,7 +76,7 @@ import {
   ArrowBottom2Icon,
   EditIcon,
   ShipperRangeSlider,
-  ShipperCardVehicle,
+  ShipperCard,
   ShipperSwitch,
   ShipperItem,
   ShipperCheckbox,
@@ -85,7 +85,8 @@ import {
   DragAndDrop,
   ShipperSelect,
   ShipperStepper,
-  ShipperAddressStepper
+  ShipperAddressStepper,
+  ShipperErrorPopover
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -227,8 +228,8 @@ const ShipperShowCase = () => {
   }
 
   const [selectedVehicle, setSelectedVehicle] = React.useState('truck02')
-  const [selectedSecondDriver, setSelectedSecondDriver] = React.useState('')
-  const [selectedTailift, setSelectedTailLift] = React.useState('')
+  const [selectedFeatures, setSelectedFeatures] = React.useState([])
+  const [selectedCarriers, setSelectedCarriers] = React.useState([])
   const [uploadStatus, setUploadStatus] = React.useState('')
 
   const downloadAction = () => {
@@ -293,6 +294,17 @@ const ShipperShowCase = () => {
   const updatePhone = (e) => {
     console.log(e)
   }
+
+  const [anchorEl, setAnchorEl] = React.useState(null)
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.target)
+  }
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null)
+  }
+
+  const open = Boolean(anchorEl)
 
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
@@ -382,10 +394,10 @@ const ShipperShowCase = () => {
           <AutomaticIcon title='AutomaticIcon' />
           <HelpIcon title='HelpIcon' />
           <LogoAddressBookIcon title='LogoAddressBookIcon' />
-          <Truck01Icon title='Truck01Icon' />
-          <Truck02Icon title='Truck02Icon' />
-          <Truck03Icon title='Truck03Icon' />
-          <Truck04Icon title='Truck04Icon' />
+          <TruckIcon title='TruckIcon' />
+          <SemiIcon title='SemiIcon' />
+          <VanIcon title='VanIcon' />
+          <BreakIcon title='BreakIcon' />
           <ExpertIcon title='ExpertIcon' />
           <People1Icon title='People1Icon' />
           <ArrowLeftIcon title='ArrowLeftIcon' />
@@ -469,19 +481,11 @@ const ShipperShowCase = () => {
             downloadTranslate='Download'
           />
         </div>
-        <Grid
-          container
-          direction='row'
-          style={{
-            width: 'unset',
-            margin: 'auto',
-            'place-content': 'center'
-          }}
-        >
-          <Grid item sm={4}>
-            <ShipperCardVehicle
-              startIcon='truck01'
-              value='truck01'
+        <Grid container direction='row' justifyContent='center' spacing={6}>
+          <Grid item sm={2}>
+            <ShipperCard
+              startIcon='van'
+              value='van'
               labelOne='Label'
               labelTwo='label'
               disabled={false}
@@ -496,10 +500,10 @@ const ShipperShowCase = () => {
               }
             />
           </Grid>
-          <Grid item sm={4}>
-            <ShipperCardVehicle
-              startIcon='truck02'
-              value='truck02'
+          <Grid item sm={2}>
+            <ShipperCard
+              startIcon='break'
+              value='break'
               labelOne='Label'
               labelTwo='label'
               disabled={false}
@@ -508,10 +512,22 @@ const ShipperShowCase = () => {
               setSelectedValue={setSelectedVehicle}
             />
           </Grid>
-          <Grid item sm={4}>
-            <ShipperCardVehicle
-              startIcon='truck03'
-              value='truck03'
+          <Grid item sm={2}>
+            <ShipperCard
+              startIcon='truck'
+              value='truck'
+              labelOne='Label'
+              labelTwo='label'
+              disabled={false}
+              onclickFnc={cardVehicleAction}
+              selectedValue={selectedVehicle}
+              setSelectedValue={setSelectedVehicle}
+            />
+          </Grid>
+          <Grid item sm={2}>
+            <ShipperCard
+              startIcon='semi'
+              value='semi'
               labelOne='Label'
               labelTwo='label'
               disabled={false}
@@ -521,50 +537,95 @@ const ShipperShowCase = () => {
             />
           </Grid>
         </Grid>
-        <Grid container direction='row'>
+        <Grid container direction='row' justifyContent='center' spacing={4}>
           <Grid item sm={2}>
-            <div className={classes.root}>
-              <ShipperCardVehicle
-                startIcon='driver'
-                value='driver'
-                labelOne='Label'
-                labelTwo='label'
-                disabled={false}
-                onclickFnc={cardVehicleAction}
-                selectedValue={selectedSecondDriver}
-                setSelectedValue={setSelectedSecondDriver}
-                enableUnselect={true}
-                noInfoIcon={true}
-              />
-            </div>
+            <ShipperCard
+              startIcon='driver'
+              value='driver'
+              labelOne='Label'
+              disabled={false}
+              selectedValue={selectedFeatures}
+              setSelectedValue={setSelectedFeatures}
+              enableUnselect={true}
+              noInfoIcon={true}
+            />
           </Grid>
           <Grid item sm={2}>
-            <div className={classes.root}>
-              <ShipperCardVehicle
-                startIcon='tailLift'
-                value='tailLift'
-                labelOne='Label'
-                labelTwo='label'
-                disabled={false}
-                onclickFnc={cardVehicleAction}
-                selectedValue={selectedTailift}
-                setSelectedValue={setSelectedTailLift}
-                enableUnselect={true}
-                noInfoIcon={true}
-              />
-            </div>
+            <ShipperCard
+              startIcon='tailLift'
+              value='tailLift'
+              labelOne='Label'
+              disabled={false}
+              selectedValue={selectedFeatures}
+              setSelectedValue={setSelectedFeatures}
+              enableUnselect={true}
+              noInfoIcon={true}
+            />
           </Grid>
           <Grid item sm={2}>
-            <div className={classes.root}>
-              <ShipperCardVehicle
-                startIcon='sideLoad'
-                value='sideLoad'
-                labelOne='Label'
-                labelTwo='label'
-                disabled={true}
-                noInfoIcon={true}
-              />
-            </div>
+            <ShipperCard
+              startIcon='sideLoad'
+              value='sideLoad'
+              labelOne='Label'
+              disabled={false}
+              selectedValue={selectedFeatures}
+              setSelectedValue={setSelectedFeatures}
+              enableUnselect={true}
+              noInfoIcon={true}
+            />
+          </Grid>
+        </Grid>
+        <Grid container direction='row' justifyContent='center' spacing={4}>
+          <Grid item sm={2}>
+            <ShipperCard
+              startIcon={
+                <img
+                  src='https://stagingcarrier.rubiwin.com/images/FRANAI001.png'
+                  alt=''
+                />
+              }
+              value='test1'
+              labelOne='test1'
+              disabled={false}
+              selectedValue={selectedCarriers}
+              setSelectedValue={setSelectedCarriers}
+              enableUnselect={true}
+              noInfoIcon={true}
+            />
+          </Grid>
+          <Grid item sm={2}>
+            <ShipperCard
+              startIcon={
+                <img
+                  src='https://stagingcarrier.rubiwin.com/images/FRTEST020.png'
+                  alt=''
+                />
+              }
+              value='test2'
+              labelOne='test2'
+              disabled={false}
+              selectedValue={selectedCarriers}
+              setSelectedValue={setSelectedCarriers}
+              enableUnselect={true}
+              noInfoIcon={true}
+            />
+          </Grid>
+          <Grid item sm={2}>
+            <ShipperCard
+              startIcon={
+                <img
+                  src='https://stagingcarrier.rubiwin.com/images/INTIME.png'
+                  alt=''
+                />
+              }
+              value='test3'
+              labelOne='test3'
+              disabled={false}
+              selectedValue={selectedCarriers}
+              setSelectedValue={setSelectedCarriers}
+              enableUnselect={true}
+              noInfoIcon={true}
+            />
           </Grid>
         </Grid>
         <br />
@@ -642,6 +703,25 @@ const ShipperShowCase = () => {
             <FormHelperText id='component-error-text'>
               Error message
             </FormHelperText>
+          </FormControl>
+          <br />
+          <FormControl
+            error
+            onMouseEnter={handlePopoverOpen}
+            onMouseLeave={handlePopoverClose}
+          >
+            <InputLabel htmlFor='input-test'>Label</InputLabel>
+            <Input
+              id='input-test'
+              type={'text'}
+              aria-describedby='component-error-text'
+            />
+            <ShipperErrorPopover
+              open={open}
+              anchorEl={anchorEl}
+              text={'Error message'}
+              handlePopoverClose={handlePopoverClose}
+            />
           </FormControl>
           <br />
           <FormControl>

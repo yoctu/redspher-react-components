@@ -9,10 +9,11 @@
     font-size: $font-size-small !important;
     line-height: $font-line-sm-med !important;
     font-weight: bold !important;
+    text-align: center;
 }
 
 .blueBorder {
-    border-color: #1436D3 !important;
+    border-color: $primaryBlue !important;
 }
 
 .noBorder {
@@ -23,16 +24,29 @@
     border-color: transparent !important;
 }
 
-.cardHover:hover {
-    border: 1px solid #1436D3;
+.card {
+  &:hover {
+    border: 1px solid $primaryBlue;
+  }
 }
 
 .smallIcon {
-    width: 10px;
-    height: 10px;
+  width: 10px;
+  height: 10px;
+}
+
+.title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.tooltipContainer {
+  display: flex;
+  align-items: center;
 }
 
 .tooltipButton {
+  margin-left: 5px;
   padding: 0;
   width: 16px;
   height: 16px;
@@ -40,5 +54,11 @@
   svg {
     width: 16px;
     height: 16px;
+  }
+}
+
+.iconContainer {
+  img {
+    height: 50px;
   }
 }

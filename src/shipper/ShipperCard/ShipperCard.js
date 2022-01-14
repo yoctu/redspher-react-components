@@ -6,24 +6,23 @@ import {
   CardContent,
   Typography,
   CardActionArea,
-  Box,
   Radio,
   Tooltip,
   IconButton
 } from '@material-ui/core'
-import style from './ShipperCardVehicle.module.scss'
+import style from './ShipperCard.module.scss'
 import { ShipperThemeProvider } from '../../index'
 import themeConstants from '../theme/themeConstants'
-import Truck01Icon from '../../icons/Shipper/Truck01Icon'
-import Truck02Icon from '../../icons/Shipper/Truck02Icon'
-import Truck03Icon from '../../icons/Shipper/Truck03Icon'
-import Truck04Icon from '../../icons/Shipper/Truck04Icon'
+import VanIcon from '../../icons/Shipper/VanIcon'
+import BreakIcon from '../../icons/Shipper/BreakIcon'
+import TruckIcon from '../../icons/Shipper/TruckIcon'
+import SemiIcon from '../../icons/Shipper/SemiIcon'
 import InformationIcon from '../../icons/Shipper/InformationIcon'
 import DriverIcon from '../../icons/Shipper/DriverIcon'
 import TailLiftIcon from '../../icons/Shipper/TailLiftIcon'
 import SideLoadIcon from '../../icons/Shipper/SideLoadIcon'
 
-const ShipperCardVehicle = ({
+const ShipperCard = ({
   startIcon,
   value,
   labelOne,
@@ -36,14 +35,15 @@ const ShipperCardVehicle = ({
   tooltipValue,
   noInfoIcon
 }) => {
+  const selectedValueIsArray = Array.isArray(selectedValue)
   const allowedIcons = new Map([
-    ['truck01', Truck01Icon],
-    ['truck02', Truck02Icon],
-    ['truck03', Truck03Icon],
-    ['truck04', Truck04Icon],
+    ['van', VanIcon],
+    ['break', BreakIcon],
+    ['truck', TruckIcon],
+    ['semi', SemiIcon],
     ['driver', DriverIcon],
     ['tailLift', TailLiftIcon],
-    ['sideLoadIcon', SideLoadIcon]
+    ['sideLoad', SideLoadIcon]
   ])
 
   const getIconByName = (name) => {
@@ -53,7 +53,7 @@ const ShipperCardVehicle = ({
       console.log(
         "Requested icon does not exist or isn't allowed in this component."
       )
-      return allowedIcons.get('truck01')
+      return allowedIcons.get('van')
     }
   }
 
@@ -61,9 +61,17 @@ const ShipperCardVehicle = ({
   const onclickAction = () => {
     if (disabled) return
     if (enableUnselect) {
-      selectedValue === value ? setSelectedValue('') : setSelectedValue(value)
+      if (selectedValueIsArray) {
+        selectedValue.includes(value)
+          ? setSelectedValue(selectedValue.filter((val) => val !== value))
+          : setSelectedValue([...selectedValue, value])
+      } else {
+        selectedValue === value ? setSelectedValue('') : setSelectedValue(value)
+      }
     } else {
-      setSelectedValue(value)
+      if (!selectedValueIsArray) {
+        setSelectedValue(value)
+      }
     }
     if (onclickFnc) onclickFnc(value)
   }
@@ -75,16 +83,32 @@ const ShipperCardVehicle = ({
         className={`${
           disabled
             ? style.disabledBorder
-            : selectedValue === value
+            : (
+                selectedValueIsArray
+                  ? selectedValue.includes(value)
+                  : selectedValue === value
+              )
             ? style.blueBorder
             : style.noBorder
-        } ${style.cardHover}`}
+        } ${style.card}`}
       >
-        <CardActionArea disabled={disabled}>
-          <CardContent style={{ paddingTop: '5px', paddingBottom: 0 }}>
+        <CardActionArea
+          disabled={disabled}
+          style={{ height: '100%' }}
+          disableRipple
+        >
+          <CardContent style={{ padding: '10px 15px' }}>
             <Grid>
-              <Grid item xs={12} container justifyContent='center'>
-                {React.createElement(getIconByName(startIcon), {})}
+              <Grid
+                item
+                xs={12}
+                container
+                justifyContent='center'
+                className={style.iconContainer}
+              >
+                {React.isValidElement(startIcon)
+                  ? startIcon
+                  : React.createElement(getIconByName(startIcon), {})}
               </Grid>
               <Grid
                 xs={12}
@@ -92,6 +116,7 @@ const ShipperCardVehicle = ({
                 direction='row'
                 justifyContent='center'
                 alignItems='center'
+                className={style.title}
               >
                 <Grid item>
                   <Typography
@@ -101,21 +126,17 @@ const ShipperCardVehicle = ({
                     {labelOne}
                   </Typography>
                 </Grid>
-                <Grid item>
-                  <Box ml={0.4} mt={0.25}>
-                    {!noInfoIcon ? (
-                      <Tooltip
-                        title={<React.Fragment>{tooltipValue}</React.Fragment>}
-                      >
-                        <IconButton className={style.tooltipButton}>
-                          <InformationIcon />
-                        </IconButton>
-                      </Tooltip>
-                    ) : (
-                      ''
-                    )}
-                  </Box>
-                </Grid>
+                {!noInfoIcon && (
+                  <Grid item className={style.tooltipContainer}>
+                    <Tooltip
+                      title={<React.Fragment>{tooltipValue}</React.Fragment>}
+                    >
+                      <IconButton className={style.tooltipButton}>
+                        <InformationIcon />
+                      </IconButton>
+                    </Tooltip>
+                  </Grid>
+                )}
               </Grid>
               <Grid item xs={12} container justifyContent='center'>
                 <Typography
@@ -128,9 +149,14 @@ const ShipperCardVehicle = ({
               <Grid item xs={12} container justifyContent='center'>
                 <Radio
                   color='primary'
-                  checked={selectedValue === value}
+                  checked={
+                    selectedValueIsArray
+                      ? selectedValue.includes(value)
+                      : selectedValue === value
+                  }
                   value={value}
                   disabled={disabled}
+                  style={{ height: '100%' }}
                 />
                 <br />
                 <br />
@@ -143,9 +169,9 @@ const ShipperCardVehicle = ({
   )
 }
 
-ShipperCardVehicle.propTypes = {
+ShipperCard.propTypes = {
   /** text to display as title for the card, it can be <Translate> component too */
-  startIcon: PropTypes.string.isRequired,
+  startIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   /** id to pass to the function when the component is clicked */
   value: PropTypes.string.isRequired,
   /** text to display as reference of the invoice */
@@ -155,7 +181,8 @@ ShipperCardVehicle.propTypes = {
   /** function to execute when the card is clicked and the component isn't disabled */
   onclickFnc: PropTypes.func,
   /** The getter of the useState, sent to the component to hold the checked value */
-  selectedValue: PropTypes.string.isRequired,
+  selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
+    .isRequired,
   /** The setter of the ueState, sent to the component to set the checked value */
   setSelectedValue: PropTypes.func.isRequired,
   /** Enable the switch mode on the card, select/unselect like a checkbox the radio button */
@@ -166,4 +193,4 @@ ShipperCardVehicle.propTypes = {
   noInfoIcon: PropTypes.bool
 }
 
-export default ShipperCardVehicle
+export default ShipperCard

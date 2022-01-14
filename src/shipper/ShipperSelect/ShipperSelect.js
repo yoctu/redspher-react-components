@@ -14,6 +14,7 @@ export default function ShipperSelect({
       IconComponent={(props) => <ArrowBottomIcon {...props} />}
       className={`${styles.select} ${className}`}
       MenuProps={{
+        getContentAnchorEl: null,
         classes: { paper: styles.dropdown },
         elevation: 3
       }}
