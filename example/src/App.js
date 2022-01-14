@@ -106,6 +106,7 @@ import {
   ThemeProvider
 } from '@material-ui/core'
 import { Pagination } from '@material-ui/lab'
+import { StylesProvider } from '@material-ui/core/styles'
 import 'redspher-components/dist/index.css'
 import InputAdornment from '@material-ui/core/InputAdornment'
 
@@ -302,526 +303,524 @@ const ShipperShowCase = () => {
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
       <h1>--------- SHIPPER COMPONENTS ---------</h1>
-      <ShipperThemeProvider>
-        <section
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            placeItems: 'center'
-          }}
-        >
-          <Button color='primary' variant='contained'>
-            Shipper Button
-          </Button>
-          <Button
-            startIcon={
-              <PlusIcon primaryColor={'#fff'} secondaryColor={'#fff'} />
-            }
-            color='primary'
-            variant='contained'
-          >
-            Shipper Button
-          </Button>
-          <Button color='primary' variant='outlined'>
-            Shipper Button
-          </Button>
-          <Button startIcon={<PlusIcon />} color='primary' variant='outlined'>
-            Shipper Button
-          </Button>
-          <Button color='primary' variant='text'>
-            Shipper Button
-          </Button>
-          <Button startIcon={<PlusIcon />} color='primary' variant='text'>
-            Shipper Button
-          </Button>
-          <div
+      <StylesProvider injectFirst>
+        <ShipperThemeProvider>
+          <section
             style={{
-              width: '300px',
-              height: '100px',
-              display: 'flex',
-              backgroundColor: '#1436D3'
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              placeItems: 'center'
             }}
           >
+            <Button color='primary' variant='contained'>
+              Shipper Button
+            </Button>
             <Button
-              className={'logoutButton'}
-              startIcon={<DisconnectIcon primaryColor={'#fff'} />}
+              startIcon={
+                <PlusIcon primaryColor={'#fff'} secondaryColor={'#fff'} />
+              }
+              color='primary'
               variant='contained'
             >
               Shipper Button
             </Button>
-          </div>
-        </section>
-        <section
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(6, 1fr)',
-            placeItems: 'center',
-            gap: '1em'
-          }}
-        >
-          <PlusIcon title='PlusIcon' />
-          <ConfirmationIcon title='ConfirmationIcon' />
-          <OffersIcon title='OffersIcon' />
-          <StatisticsIcon title='StatisticsIcon' />
-          <CalendarIcon title='CalendarIcon' />
-          <PaletIcon title='PaletIcon' />
-          <DriverIcon title='DriverIcon' />
-          <ParcelIcon title='ParcelIcon' />
-          <ShipmentsIcon title='ShipmentsIcon' />
-          <QuotesIcon title='QuotesIcon' />
-          <DisconnectIcon title='DisconnectIcon' />
-          <AddressBookIcon title='AddressBookIcon' />
-          <HourIcon title='HourIcon' />
-          <DeleteIcon title='DeleteIcon' />
-          <InvoiceIcon title='InvoiceIcon' />
-          <PickupDetailsIcon title='PickupDetailsIcon' />
-          <SearchIcon title='SearchIcon' />
-          <PinIcon title='PinIcon' />
-          <RequestIcon title='RequestIcon' />
-          <StepIcon title='StepIcon' />
-          <ActionIcon title='ActionIcon' />
-          <MonitoringIcon title='MonitoringIcon' />
-          <DeliveryDetailsIcon title='DeliveryDetailsIcon' />
-          <PriceIcon title='PriceIcon' />
-          <InformationIcon title='Icon' />
-          <AutomaticIcon title='AutomaticIcon' />
-          <HelpIcon title='HelpIcon' />
-          <LogoAddressBookIcon title='LogoAddressBookIcon' />
-          <TruckIcon title='TruckIcon' />
-          <SemiIcon title='SemiIcon' />
-          <VanIcon title='VanIcon' />
-          <BreakIcon title='BreakIcon' />
-          <ExpertIcon title='ExpertIcon' />
-          <People1Icon title='People1Icon' />
-          <ArrowLeftIcon title='ArrowLeftIcon' />
-          <ArrowBottomIcon title='ArrowBottomIcon' />
-          <ArrowRightIcon title='ArrowRightIcon' />
-          <ArrowTopIcon title='ArrowTopIcon' />
-          <AddStepsIcon title='AddStepsIcon' />
-          <PeopleGroupIcon title='PeopleGroupIcon' />
-          <CheckIcon title='CheckIcon' />
-          <SideLoadIcon title='SideLoadIcon' />
-          <TailLiftIcon title='TailLiftIcon' />
-          <DownloadIcon title='DownloadIcon' />
-          <UploadIcon title='UploadIcon' />
-          <BurgerIcon title='BurgerIcon' />
-          <BurgerCloseIcon title='BurgerCloseIcon' />
-          <StarIcon title='StarIcon' />
-          <TimerIcon title='TimerIcon' />
-          <NotIncludedIcon title='NotIcon' />
-          <VisibilityIcon title='VisibilityIcon' />
-          <VisibilityNoneIcon title='VisibilityNoneIcon' />
-          <LoadingIcon title='LoadingIcon' />
-          <WarningIcon title='WarningIcon' />
-          <People2Icon title='People2Icon' />
-          <ArrowLeft2Icon title='ArrowLeft2Icon' />
-          <ArrowBottom2Icon title='ArrowBottom2Icon' />
-          <ArrowRight2Icon title='ArrowRight2Icon' />
-          <ArrowTop2Icon title='ArrowTop2Icon' />
-          <EditIcon title='EditIcon' />
-          <PrintIcon title='PrintIcon' />
-        </section>
-        <section
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            placeItems: 'center'
-          }}
-        >
-          <Radio color='primary' checked='true' />
-          <Radio color='primary' />
-          <Radio color='primary' disabled='true' />
-        </section>
-        <section
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            placeItems: 'center',
-            gap: '1em'
-          }}
-        >
-          <Chip color='default' label='Label' />
-          <Chip color='primary' label='Label' />
-          <Chip color='secondary' label='Label' />
-          <Chip color='primary' label='Label' disabled />
-          <Pagination count={69} color='primary' />
-          <div style={{ width: '400px', marginLeft: '50px' }}>
-            <ShipperRangeSlider
-              min={min}
-              max={max}
-              rangeLabelFormat={rangeLabelFormat}
-              shownLabelFormat={shownLabelFormat}
-              showLabel={true}
+            <Button color='primary' variant='outlined'>
+              Shipper Button
+            </Button>
+            <Button startIcon={<PlusIcon />} color='primary' variant='outlined'>
+              Shipper Button
+            </Button>
+            <Button color='primary' variant='text'>
+              Shipper Button
+            </Button>
+            <Button startIcon={<PlusIcon />} color='primary' variant='text'>
+              Shipper Button
+            </Button>
+            <div
+              style={{
+                width: '300px',
+                height: '100px',
+                display: 'flex',
+                backgroundColor: '#1436D3'
+              }}
+            >
+              <Button
+                className={'logoutButton'}
+                startIcon={<DisconnectIcon primaryColor={'#fff'} />}
+                variant='contained'
+              >
+                Shipper Button
+              </Button>
+            </div>
+          </section>
+          <section
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(6, 1fr)',
+              placeItems: 'center',
+              gap: '1em'
+            }}
+          >
+            <PlusIcon title='PlusIcon' />
+            <ConfirmationIcon title='ConfirmationIcon' />
+            <OffersIcon title='OffersIcon' />
+            <StatisticsIcon title='StatisticsIcon' />
+            <CalendarIcon title='CalendarIcon' />
+            <PaletIcon title='PaletIcon' />
+            <DriverIcon title='DriverIcon' />
+            <ParcelIcon title='ParcelIcon' />
+            <ShipmentsIcon title='ShipmentsIcon' />
+            <QuotesIcon title='QuotesIcon' />
+            <DisconnectIcon title='DisconnectIcon' />
+            <AddressBookIcon title='AddressBookIcon' />
+            <HourIcon title='HourIcon' />
+            <DeleteIcon title='DeleteIcon' />
+            <InvoiceIcon title='InvoiceIcon' />
+            <PickupDetailsIcon title='PickupDetailsIcon' />
+            <SearchIcon title='SearchIcon' />
+            <PinIcon title='PinIcon' />
+            <RequestIcon title='RequestIcon' />
+            <StepIcon title='StepIcon' />
+            <ActionIcon title='ActionIcon' />
+            <MonitoringIcon title='MonitoringIcon' />
+            <DeliveryDetailsIcon title='DeliveryDetailsIcon' />
+            <PriceIcon title='PriceIcon' />
+            <InformationIcon title='Icon' />
+            <AutomaticIcon title='AutomaticIcon' />
+            <HelpIcon title='HelpIcon' />
+            <LogoAddressBookIcon title='LogoAddressBookIcon' />
+            <TruckIcon title='TruckIcon' />
+            <SemiIcon title='SemiIcon' />
+            <VanIcon title='VanIcon' />
+            <BreakIcon title='BreakIcon' />
+            <ExpertIcon title='ExpertIcon' />
+            <People1Icon title='People1Icon' />
+            <ArrowLeftIcon title='ArrowLeftIcon' />
+            <ArrowBottomIcon title='ArrowBottomIcon' />
+            <ArrowRightIcon title='ArrowRightIcon' />
+            <ArrowTopIcon title='ArrowTopIcon' />
+            <AddStepsIcon title='AddStepsIcon' />
+            <PeopleGroupIcon title='PeopleGroupIcon' />
+            <CheckIcon title='CheckIcon' />
+            <SideLoadIcon title='SideLoadIcon' />
+            <TailLiftIcon title='TailLiftIcon' />
+            <DownloadIcon title='DownloadIcon' />
+            <UploadIcon title='UploadIcon' />
+            <BurgerIcon title='BurgerIcon' />
+            <BurgerCloseIcon title='BurgerCloseIcon' />
+            <StarIcon title='StarIcon' />
+            <TimerIcon title='TimerIcon' />
+            <NotIncludedIcon title='NotIcon' />
+            <VisibilityIcon title='VisibilityIcon' />
+            <VisibilityNoneIcon title='VisibilityNoneIcon' />
+            <LoadingIcon title='LoadingIcon' />
+            <WarningIcon title='WarningIcon' />
+            <People2Icon title='People2Icon' />
+            <ArrowLeft2Icon title='ArrowLeft2Icon' />
+            <ArrowBottom2Icon title='ArrowBottom2Icon' />
+            <ArrowRight2Icon title='ArrowRight2Icon' />
+            <ArrowTop2Icon title='ArrowTop2Icon' />
+            <EditIcon title='EditIcon' />
+            <PrintIcon title='PrintIcon' />
+          </section>
+          <section
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              placeItems: 'center'
+            }}
+          >
+            <Radio color='primary' checked='true' />
+            <Radio color='primary' />
+            <Radio color='primary' disabled='true' />
+          </section>
+          <section
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              placeItems: 'center',
+              gap: '1em'
+            }}
+          >
+            <Chip color='default' label='Label' />
+            <Chip color='primary' label='Label' />
+            <Chip color='secondary' label='Label' />
+            <Chip color='primary' label='Label' disabled />
+            <Pagination count={69} color='primary' />
+            <div style={{ width: '400px', marginLeft: '50px' }}>
+              <ShipperRangeSlider
+                min={min}
+                max={max}
+                rangeLabelFormat={rangeLabelFormat}
+                shownLabelFormat={shownLabelFormat}
+                showLabel={true}
+              />
+            </div>
+          </section>
+          <div className={classes.root}>
+            <ShipperCardInvoice
+              title='Invoice'
+              reference='#GH012021032680'
+              userReference='24WINAHL'
+              invoiceDate='29/01/2021'
+              dueDate='14/02/2021'
+              priceTtc='125,85€'
+              priceHt='315,84€'
+              vatAmount='60,01€'
+              downloadAction={downloadAction}
+              invoiceDateTranslate='Invoice Date'
+              dueDateTranslate='Due Date'
+              withoutTaxes='HT'
+              withTaxes='TTC'
+              VATAmount='VAT Amount'
+              downloadTranslate='Download'
             />
           </div>
-        </section>
-        <div className={classes.root}>
-          <ShipperCardInvoice
-            title='Invoice'
-            reference='#GH012021032680'
-            userReference='24WINAHL'
-            invoiceDate='29/01/2021'
-            dueDate='14/02/2021'
-            priceTtc='125,85€'
-            priceHt='315,84€'
-            vatAmount='60,01€'
-            downloadAction={downloadAction}
-            invoiceDateTranslate='Invoice Date'
-            dueDateTranslate='Due Date'
-            withoutTaxes='HT'
-            withTaxes='TTC'
-            VATAmount='VAT Amount'
-            downloadTranslate='Download'
-          />
-        </div>
-        <Grid
-          container
-          direction='row'
-          justifyContent="center"
-          spacing={6}
-        >
-          <Grid item sm={2}>
+          <Grid
+            container
+            direction='row'
+            justifyContent="center"
+            spacing={6}
+          >
+            <Grid item sm={2}>
+                <ShipperCard
+                  startIcon='van'
+                  value='van'
+                  labelOne='Label'
+                  labelTwo='label'
+                  disabled={false}
+                  onclickFnc={cardVehicleAction}
+                  selectedValue={selectedVehicle}
+                  setSelectedValue={setSelectedVehicle}
+                  tooltipValue={
+                    <>
+                      <h1>HELLO</h1>
+                      <p>I'm a tooltip</p>
+                    </>
+                  }
+                />
+            </Grid>
+            <Grid item sm={2}>
+                <ShipperCard
+                  startIcon='break'
+                  value='break'
+                  labelOne='Label'
+                  labelTwo='label'
+                  disabled={false}
+                  onclickFnc={cardVehicleAction}
+                  selectedValue={selectedVehicle}
+                  setSelectedValue={setSelectedVehicle}
+                />
+            </Grid>
+            <Grid item sm={2}>
+                <ShipperCard
+                  startIcon='truck'
+                  value='truck'
+                  labelOne='Label'
+                  labelTwo='label'
+                  disabled={false}
+                  onclickFnc={cardVehicleAction}
+                  selectedValue={selectedVehicle}
+                  setSelectedValue={setSelectedVehicle}
+                />
+            </Grid>
+            <Grid item sm={2}>
               <ShipperCard
-                startIcon='van'
-                value='van'
+                startIcon='semi'
+                value='semi'
                 labelOne='Label'
                 labelTwo='label'
                 disabled={false}
                 onclickFnc={cardVehicleAction}
                 selectedValue={selectedVehicle}
                 setSelectedValue={setSelectedVehicle}
-                tooltipValue={
-                  <>
-                    <h1>HELLO</h1>
-                    <p>I'm a tooltip</p>
-                  </>
+              />
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            direction='row'
+            justifyContent="center"
+            spacing={4}>
+            <Grid item sm={1}>
+                <ShipperCard
+                  startIcon='driver'
+                  value='driver'
+                  labelOne='Label'
+                  disabled={false}
+                  selectedValue={selectedFeatures}
+                  setSelectedValue={setSelectedFeatures}
+                  enableUnselect={true}
+                  noInfoIcon={true}
+                />
+            </Grid>
+            <Grid item sm={1}>
+                <ShipperCard
+                  startIcon='tailLift'
+                  value='tailLift'
+                  labelOne='Label with two lines'
+                  disabled={false}
+                  selectedValue={selectedFeatures}
+                  setSelectedValue={setSelectedFeatures}
+                  enableUnselect={true}
+                  noInfoIcon={true}
+                />
+            </Grid>
+            <Grid item sm={1}>
+                <ShipperCard
+                  startIcon='sideLoad'
+                  value='sideLoad'
+                  labelOne='Label'
+                  disabled={false}
+                  selectedValue={selectedFeatures}
+                  setSelectedValue={setSelectedFeatures}
+                  enableUnselect={true}
+                  noInfoIcon={true}
+                />
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            direction='row'
+            justifyContent="center"
+            spacing={4}>
+            <Grid item sm={2}>
+                <ShipperCard
+                  startIcon={<img src="https://stagingcarrier.rubiwin.com/images/FRANAI001.png" alt="" />}
+                  value='test1'
+                  labelOne='test1'
+                  disabled={false}
+                  selectedValue={selectedCarriers}
+                  setSelectedValue={setSelectedCarriers}
+                  enableUnselect={true}
+                  noInfoIcon={true}
+                />
+            </Grid>
+            <Grid item sm={2}>
+                <ShipperCard
+                  startIcon={<img src="https://stagingcarrier.rubiwin.com/images/FRTEST020.png" alt="" />}
+                  value='test2'
+                  labelOne='test2'
+                  disabled={false}
+                  selectedValue={selectedCarriers}
+                  setSelectedValue={setSelectedCarriers}
+                  enableUnselect={true}
+                  noInfoIcon={true}
+                />
+            </Grid>
+            <Grid item sm={2}>
+                <ShipperCard
+                  startIcon={<img src="https://stagingcarrier.rubiwin.com/images/INTIME.png" alt="" />}
+                  value='test3'
+                  labelOne='test3'
+                  disabled={false}
+                  selectedValue={selectedCarriers}
+                  setSelectedValue={setSelectedCarriers}
+                  enableUnselect={true}
+                  noInfoIcon={true}
+                />
+            </Grid>
+          </Grid>
+          <br />
+          <br />
+          <div style={{ width: '400px', marginLeft: '50px' }}>
+            <ShipperItem text='Yolo' action={downloadAction} />
+            <ShipperItem
+              startIcon={<PlusIcon />}
+              text='Yolo'
+              action={downloadAction}
+            />
+            <ShipperItem
+              endIcon={<PlusIcon />}
+              text='Yolo'
+              action={downloadAction}
+            />
+            <ShipperItem
+              startIcon={<PlusIcon />}
+              endIcon={<PlusIcon />}
+              text='Yolo'
+              action={downloadAction}
+            />
+          </div>
+          <br />
+          <br />
+          <div
+            style={{
+              backgroundColor: '#ececec',
+              padding: '20px',
+              width: '400px'
+            }}
+          >
+            <FormControl>
+              <InputLabel htmlFor='input-test'>Label</InputLabel>
+              <Input id='input-test' type={'text'} />
+            </FormControl>
+            <br />
+            <FormControl>
+              <InputLabel htmlFor='input-test'>Label</InputLabel>
+              <Input
+                id='input-test'
+                type={'text'}
+                endAdornment={
+                  <InputAdornment position='end'>
+                    <PlusIcon />
+                  </InputAdornment>
                 }
               />
-          </Grid>
-          <Grid item sm={2}>
-              <ShipperCard
-                startIcon='break'
-                value='break'
-                labelOne='Label'
-                labelTwo='label'
-                disabled={false}
-                onclickFnc={cardVehicleAction}
-                selectedValue={selectedVehicle}
-                setSelectedValue={setSelectedVehicle}
+            </FormControl>
+            <br />
+            <FormControl error>
+              <InputLabel htmlFor='input-test'>Label</InputLabel>
+              <Input
+                id='input-test'
+                type={'text'}
+                aria-describedby='component-error-text'
               />
-          </Grid>
-          <Grid item sm={2}>
-              <ShipperCard
-                startIcon='truck'
-                value='truck'
-                labelOne='Label'
-                labelTwo='label'
-                disabled={false}
-                onclickFnc={cardVehicleAction}
-                selectedValue={selectedVehicle}
-                setSelectedValue={setSelectedVehicle}
+              <FormHelperText id='component-error-text'>
+                Error message
+              </FormHelperText>
+            </FormControl>
+            <br />
+            <FormControl error>
+              <InputLabel htmlFor='input-test'>Label</InputLabel>
+              <Input
+                id='input-test'
+                type={'text'}
+                endAdornment={
+                  <InputAdornment position='end'>
+                    <PlusIcon />
+                  </InputAdornment>
+                }
+                aria-describedby='component-error-text'
               />
-          </Grid>
-          <Grid item sm={2}>
-            <ShipperCard
-              startIcon='semi'
-              value='semi'
-              labelOne='Label'
-              labelTwo='label'
-              disabled={false}
-              onclickFnc={cardVehicleAction}
-              selectedValue={selectedVehicle}
-              setSelectedValue={setSelectedVehicle}
-            />
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          direction='row'
-          justifyContent="center"
-          spacing={4}>
-          <Grid item sm={2}>
-              <ShipperCard
-                startIcon='driver'
-                value='driver'
-                labelOne='Label'
-                disabled={false}
-                selectedValue={selectedFeatures}
-                setSelectedValue={setSelectedFeatures}
-                enableUnselect={true}
-                noInfoIcon={true}
+              <FormHelperText id='component-error-text'>
+                Error message
+              </FormHelperText>
+            </FormControl>
+            <br />
+            <FormControl
+              error
+              onMouseEnter={handlePopoverOpen}
+              onMouseLeave={handlePopoverClose}
+            >
+              <InputLabel htmlFor='input-test'>Label</InputLabel>
+              <Input
+                id='input-test'
+                type={'text'}
+                aria-describedby='component-error-text'
               />
-          </Grid>
-          <Grid item sm={2}>
-              <ShipperCard
-                startIcon='tailLift'
-                value='tailLift'
-                labelOne='Label'
-                disabled={false}
-                selectedValue={selectedFeatures}
-                setSelectedValue={setSelectedFeatures}
-                enableUnselect={true}
-                noInfoIcon={true}
+              <ShipperErrorPopover open={open} anchorEl={anchorEl} text={'Error message'} handlePopoverClose={handlePopoverClose} />
+            </FormControl>
+            <br />
+            <FormControl>
+              <InputLabel htmlFor='input-test'>Label</InputLabel>
+              <Input
+                id='input-test'
+                type={'text'}
+                multiline={true}
+                aria-describedby='component-error-text'
               />
-          </Grid>
-          <Grid item sm={2}>
-              <ShipperCard
-                startIcon='sideLoad'
-                value='sideLoad'
-                labelOne='Label'
-                disabled={false}
-                selectedValue={selectedFeatures}
-                setSelectedValue={setSelectedFeatures}
-                enableUnselect={true}
-                noInfoIcon={true}
-              />
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          direction='row'
-          justifyContent="center"
-          spacing={4}>
-          <Grid item sm={2}>
-              <ShipperCard
-                startIcon={<img src="https://stagingcarrier.rubiwin.com/images/FRANAI001.png" alt="" />}
-                value='test1'
-                labelOne='test1'
-                disabled={false}
-                selectedValue={selectedCarriers}
-                setSelectedValue={setSelectedCarriers}
-                enableUnselect={true}
-                noInfoIcon={true}
-              />
-          </Grid>
-          <Grid item sm={2}>
-              <ShipperCard
-                startIcon={<img src="https://stagingcarrier.rubiwin.com/images/FRTEST020.png" alt="" />}
-                value='test2'
-                labelOne='test2'
-                disabled={false}
-                selectedValue={selectedCarriers}
-                setSelectedValue={setSelectedCarriers}
-                enableUnselect={true}
-                noInfoIcon={true}
-              />
-          </Grid>
-          <Grid item sm={2}>
-              <ShipperCard
-                startIcon={<img src="https://stagingcarrier.rubiwin.com/images/INTIME.png" alt="" />}
-                value='test3'
-                labelOne='test3'
-                disabled={false}
-                selectedValue={selectedCarriers}
-                setSelectedValue={setSelectedCarriers}
-                enableUnselect={true}
-                noInfoIcon={true}
-              />
-          </Grid>
-        </Grid>
-        <br />
-        <br />
-        <div style={{ width: '400px', marginLeft: '50px' }}>
-          <ShipperItem text='Yolo' action={downloadAction} />
-          <ShipperItem
-            startIcon={<PlusIcon />}
-            text='Yolo'
-            action={downloadAction}
-          />
-          <ShipperItem
-            endIcon={<PlusIcon />}
-            text='Yolo'
-            action={downloadAction}
-          />
-          <ShipperItem
-            startIcon={<PlusIcon />}
-            endIcon={<PlusIcon />}
-            text='Yolo'
-            action={downloadAction}
-          />
-        </div>
-        <br />
-        <br />
-        <div
-          style={{
-            backgroundColor: '#ececec',
-            padding: '20px',
-            width: '400px'
-          }}
-        >
-          <FormControl>
-            <InputLabel htmlFor='input-test'>Label</InputLabel>
-            <Input id='input-test' type={'text'} />
-          </FormControl>
-          <br />
-          <FormControl>
-            <InputLabel htmlFor='input-test'>Label</InputLabel>
-            <Input
-              id='input-test'
-              type={'text'}
-              endAdornment={
-                <InputAdornment position='end'>
-                  <PlusIcon />
-                </InputAdornment>
-              }
-            />
-          </FormControl>
-          <br />
-          <FormControl error>
-            <InputLabel htmlFor='input-test'>Label</InputLabel>
-            <Input
-              id='input-test'
-              type={'text'}
-              aria-describedby='component-error-text'
-            />
-            <FormHelperText id='component-error-text'>
-              Error message
-            </FormHelperText>
-          </FormControl>
-          <br />
-          <FormControl error>
-            <InputLabel htmlFor='input-test'>Label</InputLabel>
-            <Input
-              id='input-test'
-              type={'text'}
-              endAdornment={
-                <InputAdornment position='end'>
-                  <PlusIcon />
-                </InputAdornment>
-              }
-              aria-describedby='component-error-text'
-            />
-            <FormHelperText id='component-error-text'>
-              Error message
-            </FormHelperText>
-          </FormControl>
-          <br />
-          <FormControl
-            error
-            onMouseEnter={handlePopoverOpen}
-            onMouseLeave={handlePopoverClose}
-          >
-            <InputLabel htmlFor='input-test'>Label</InputLabel>
-            <Input
-              id='input-test'
-              type={'text'}
-              aria-describedby='component-error-text'
-            />
-            <ShipperErrorPopover open={open} anchorEl={anchorEl} text={'Error message'} handlePopoverClose={handlePopoverClose} />
-          </FormControl>
-          <br />
-          <FormControl>
-            <InputLabel htmlFor='input-test'>Label</InputLabel>
-            <Input
-              id='input-test'
-              type={'text'}
-              multiline={true}
-              aria-describedby='component-error-text'
-            />
-          </FormControl>
-          <br />
-          <br />
-          <FormControl>
-            <InputLabel htmlFor='select-test'>Select label</InputLabel>
-            <ShipperSelect>
-              <MenuItem value={1}>One</MenuItem>
-              <MenuItem value={2}>Two</MenuItem>
-            </ShipperSelect>
-          </FormControl>
-          <br />
-          <br />
+            </FormControl>
+            <br />
+            <br />
+            <FormControl>
+              <InputLabel htmlFor='select-test'>Select label</InputLabel>
+              <ShipperSelect>
+                <MenuItem value={1}>One</MenuItem>
+                <MenuItem value={2}>Two</MenuItem>
+              </ShipperSelect>
+            </FormControl>
+            <br />
+            <br />
 
-          <ShipperPhoneNumber
-            label={'Phone number'}
-            helperText={'Not a number'}
-            isError={false}
-            onChange={(e) => {
-              updatePhone(e)
-            }}
+            <ShipperPhoneNumber
+              label={'Phone number'}
+              helperText={'Not a number'}
+              isError={false}
+              onChange={(e) => {
+                updatePhone(e)
+              }}
+            />
+          </div>
+          <br />
+          <br />
+          <FormControlLabel
+            value='top'
+            control={<ShipperCheckbox color='primary' />}
+            label='Top'
+            labelPlacement='top'
           />
-        </div>
-        <br />
-        <br />
-        <FormControlLabel
-          value='top'
-          control={<ShipperCheckbox color='primary' />}
-          label='Top'
-          labelPlacement='top'
-        />
-        <FormControlLabel
-          value='right'
-          control={<ShipperCheckbox color='primary' />}
-          label='Right'
-          labelPlacement='right'
-        />
-        <br />
-        <br />
-        <div
-          style={{
-            backgroundColor: '#ececec',
-            padding: '20px',
-            width: '300px'
-          }}
-        >
-          <DragAndDrop
-            uploadStatus={uploadStatus}
-            onChangeMethod={() => {
-              onChangeMethodDrag()
-            }}
+          <FormControlLabel
+            value='right'
+            control={<ShipperCheckbox color='primary' />}
+            label='Right'
+            labelPlacement='right'
           />
           <br />
           <br />
-          <br />
-          <br />
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={() => {
-              uploadDocument()
+          <div
+            style={{
+              backgroundColor: '#ececec',
+              padding: '20px',
+              width: '300px'
             }}
           >
-            Upload
-          </Button>
-        </div>
-        <br />
-        <br />
-        <ShipperSwitch
-          firstValueTranslate='parcel'
-          firstValue='parcel'
-          firstIcon={<ParcelIcon fontSize='small' />}
-          secondValueTranslate='palet'
-          secondValue='palet'
-          secondIcon={<PaletIcon fontSize='small' />}
-        />
-        <br />
-        <br />
-        <ShipperSwitch
-          firstValueTranslate='automatic'
-          firstValue='automatic'
-          firstIcon={<AutomaticIcon fontSize='small' />}
-          secondValueTranslate='expert'
-          secondValue='expert'
-          secondIcon={<ExpertIcon fontSize='small' />}
-        />
-        <br />
-        <br />
-        <br />
-        <br />
-        <ShipperStepper steps={steps} activeStep={activeStep} />
-        <br />
-        <br />
-        <br />
-        <br />
-        <ShipperAddressStepper
-          icons={addressStepperIcons}
-          nbItems={5}
-          minHeight={50}
-        />
-        <br />
-        <br />
-        <br />
-        <br />
-      </ShipperThemeProvider>
+            <DragAndDrop
+              uploadStatus={uploadStatus}
+              onChangeMethod={() => {
+                onChangeMethodDrag()
+              }}
+            />
+            <br />
+            <br />
+            <br />
+            <br />
+            <Button
+              color='primary'
+              variant='contained'
+              onClick={() => {
+                uploadDocument()
+              }}
+            >
+              Upload
+            </Button>
+          </div>
+          <br />
+          <br />
+          <ShipperSwitch
+            firstValueTranslate='parcel'
+            firstValue='parcel'
+            firstIcon={<ParcelIcon fontSize='small' />}
+            secondValueTranslate='palet'
+            secondValue='palet'
+            secondIcon={<PaletIcon fontSize='small' />}
+          />
+          <br />
+          <br />
+          <ShipperSwitch
+            firstValueTranslate='automatic'
+            firstValue='automatic'
+            firstIcon={<AutomaticIcon fontSize='small' />}
+            secondValueTranslate='expert'
+            secondValue='expert'
+            secondIcon={<ExpertIcon fontSize='small' />}
+          />
+          <br />
+          <br />
+          <br />
+          <br />
+          <ShipperStepper steps={steps} activeStep={activeStep} />
+          <br />
+          <br />
+          <br />
+          <br />
+          <ShipperAddressStepper
+            icons={addressStepperIcons}
+            nbItems={5}
+            minHeight={50}
+          />
+        </ShipperThemeProvider>
+      </StylesProvider>
     </div>
   )
 }
