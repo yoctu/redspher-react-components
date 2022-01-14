@@ -198,6 +198,7 @@ const ShipperBaseTheme = {
         '& [class*="MuiToggleButton-root"]': {
           padding: '7.5px 15px',
           borderRadius: '40px !important',
+          textTransform: 'capitalize',
           fontSize: '12px',
           color: themeConstants.white.main,
           '& [class*="MuiSvgIcon-root"]': {
@@ -209,6 +210,7 @@ const ShipperBaseTheme = {
           color: themeConstants.primary.main,
           backgroundColor: themeConstants.white.main,
           borderRadius: '40px !important',
+          border: 'none',
           '&:hover': {
             backgroundColor: themeConstants.white.main
           }

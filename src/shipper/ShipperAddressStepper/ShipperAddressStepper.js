@@ -29,18 +29,33 @@ const Connector = withStyles({
       borderColor: themeConstants.primary.light,
       borderLeftStyle: 'dashed'
     }
+  },
+  active: {
+    '& $line': {
+      borderColor: themeConstants.primary.light,
+      borderLeftStyle: 'dashed'
+    }
   }
 })(StepConnector)
 
-const ShipperStepper = ({ icons, nbItems, childrens }) => {
+const Content = withStyles({
+  root: {
+    borderColor: themeConstants.primary.light,
+    borderLeftStyle: 'dashed',
+    '& [class*="MuiCollapse-wrapperInner"]': {
+      marginTop: '-35px'
+    }
+  },
+  last: {
+    border: 'none'
+  }
+})(StepContent)
+
+const ShipperAddressStepper = ({ icons, nbItems, children }) => {
   return (
-    <Stepper
-      activeStep={nbItems}
-      connector={<Connector />}
-      orientation='vertical'
-    >
+    <Stepper connector={<Connector />} orientation='vertical'>
       {Array.apply(null, Array(nbItems)).map((_item, index) => (
-        <Step key={index}>
+        <Step key={index} active>
           <StepLabel
             StepIconComponent={StepIcon}
             StepIconProps={{
@@ -49,11 +64,11 @@ const ShipperStepper = ({ icons, nbItems, childrens }) => {
               icons
             }}
           />
-          <StepContent>{childrens[index]}</StepContent>
+          <Content>{children[index]}</Content>
         </Step>
       ))}
     </Stepper>
   )
 }
 
-export default ShipperStepper
+export default ShipperAddressStepper

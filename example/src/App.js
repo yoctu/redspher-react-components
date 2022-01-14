@@ -285,10 +285,23 @@ const ShipperShowCase = () => {
     middle: <StepIcon title='StepIcon' />
   }
 
-  const childrens = [
-    <Typography>Stepa</Typography>,
-    <Typography>Stepb</Typography>,
-    <Typography>Stepc</Typography>
+  const childrenStepper = [
+    <div>
+      <FormControl>
+        <InputLabel htmlFor='input-test'>Label</InputLabel>
+        <Input
+          id='input-test'
+          type={'text'}
+          endAdornment={
+            <InputAdornment position='end'>
+              <PlusIcon />
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+    </div>,
+    <Typography>Step b</Typography>,
+    <Typography>Step c</Typography>
   ]
 
   const updatePhone = (e) => {
@@ -828,8 +841,8 @@ const ShipperShowCase = () => {
         <br />
         <ShipperAddressStepper
           icons={addressStepperIcons}
-          nbItems={5}
-          childrens={childrens}
+          nbItems={3}
+          children={childrenStepper}
         />
         <br />
         <br />
