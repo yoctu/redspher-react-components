@@ -13,7 +13,7 @@
 }
 
 .blueBorder {
-    border-color: #1436D3 !important;
+    border-color: $primaryBlue !important;
 }
 
 .noBorder {
@@ -24,13 +24,15 @@
     border-color: transparent !important;
 }
 
-.cardHover:hover {
-    border: 1px solid #1436D3;
+.card {
+  &:hover {
+    border: 1px solid $primaryBlue;
+  }
 }
 
 .smallIcon {
-    width: 10px;
-    height: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 .title {
