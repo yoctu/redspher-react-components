@@ -109,6 +109,7 @@ import { Pagination } from '@material-ui/lab'
 import { StylesProvider } from '@material-ui/core/styles'
 import 'redspher-components/dist/index.css'
 import InputAdornment from '@material-ui/core/InputAdornment'
+import {Typography} from "@material-ui/core/index";
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -285,20 +286,39 @@ const ShipperShowCase = () => {
     middle: <StepIcon title='StepIcon' />
   }
 
+  const childrenStepper = [
+    <div>
+      <FormControl>
+        <InputLabel htmlFor='input-test'>Label</InputLabel>
+        <Input
+          id='input-test'
+          type={'text'}
+          endAdornment={
+            <InputAdornment position='end'>
+              <PlusIcon />
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+    </div>,
+    <Typography>Step b</Typography>,
+    <Typography>Step c</Typography>
+  ]
+
   const updatePhone = (e) => {
     console.log(e)
   }
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const handlePopoverOpen = event => {
-    setAnchorEl(event.target);
-  };
+  const [anchorEl, setAnchorEl] = React.useState(null)
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.target)
+  }
 
   const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
 
-  const open = Boolean(anchorEl);
+  const open = Boolean(anchorEl)
 
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
@@ -816,8 +836,8 @@ const ShipperShowCase = () => {
           <br />
           <ShipperAddressStepper
             icons={addressStepperIcons}
-            nbItems={5}
-            minHeight={50}
+            nbItems={childrenStepper.length}
+            children={childrenStepper}
           />
         </ShipperThemeProvider>
       </StylesProvider>
