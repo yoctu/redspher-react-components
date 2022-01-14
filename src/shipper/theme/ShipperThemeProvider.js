@@ -5,8 +5,14 @@ import ShipperBaseTheme from './ShipperBaseTheme'
 
 export const defaultTheme = createTheme(ShipperBaseTheme)
 
-const ShipperThemeProvider = ({ theme = defaultTheme, ...delegated }) => (
-  <ThemeProvider theme={theme} {...delegated} />
+const ShipperThemeProvider = ({
+  theme = defaultTheme,
+  children,
+  ...delegated
+}) => (
+  <ThemeProvider theme={theme} {...delegated}>
+    {children}
+  </ThemeProvider>
 )
 
 export default ShipperThemeProvider
