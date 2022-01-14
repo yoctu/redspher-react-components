@@ -90,10 +90,14 @@ const ShipperCard = ({
               )
             ? style.blueBorder
             : style.noBorder
-        } ${style.cardHover}`}
+        } ${style.card}`}
       >
-        <CardActionArea disabled={disabled} style={{ height: '100%' }}>
-          <CardContent style={{ paddingTop: '5px', paddingBottom: 0 }}>
+        <CardActionArea
+          disabled={disabled}
+          style={{ height: '100%' }}
+          disableRipple
+        >
+          <CardContent style={{ padding: '10px 15px' }}>
             <Grid>
               <Grid
                 item
@@ -152,6 +156,7 @@ const ShipperCard = ({
                   }
                   value={value}
                   disabled={disabled}
+                  style={{ height: '100%' }}
                 />
                 <br />
                 <br />
