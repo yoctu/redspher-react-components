@@ -25,8 +25,20 @@
 }
 
 .card {
+  height: 100%;
+
   &:hover {
     border: 1px solid $primaryBlue;
+  }
+}
+
+.cardContent {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+
+  > div {
+    height: 100%;
   }
 }
 
@@ -60,5 +72,18 @@
 .iconContainer {
   img {
     height: 50px;
+  }
+}
+
+.radioContainer {
+  margin-top: auto;
+}
+
+.radio {
+  height: 100%;
+
+  &:hover,
+  &[class*=Mui-checked]:hover {
+    background-color: transparent;
   }
 }

@@ -540,7 +540,7 @@ const ShipperShowCase = () => {
           direction='row'
           justifyContent="center"
           spacing={4}>
-          <Grid item sm={2}>
+          <Grid item sm={1}>
               <ShipperCard
                 startIcon='driver'
                 value='driver'
@@ -552,11 +552,11 @@ const ShipperShowCase = () => {
                 noInfoIcon={true}
               />
           </Grid>
-          <Grid item sm={2}>
+          <Grid item sm={1}>
               <ShipperCard
                 startIcon='tailLift'
                 value='tailLift'
-                labelOne='Label'
+                labelOne='Label with two lines'
                 disabled={false}
                 selectedValue={selectedFeatures}
                 setSelectedValue={setSelectedFeatures}
@@ -564,7 +564,7 @@ const ShipperShowCase = () => {
                 noInfoIcon={true}
               />
           </Grid>
-          <Grid item sm={2}>
+          <Grid item sm={1}>
               <ShipperCard
                 startIcon='sideLoad'
                 value='sideLoad'

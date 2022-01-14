@@ -11,6 +11,7 @@ import {
 } from '@material-ui/core'
 import style from './ShipperCardInvoice.module.scss'
 import { ShipperThemeProvider } from '../../index'
+import { StylesProvider } from '@material-ui/core/styles'
 import themeConstants from '../theme/themeConstants'
 import DownloadIcon from '../../icons/Shipper/DownloadIcon'
 import People2Icon from '../../icons/Shipper/People2Icon'
@@ -32,114 +33,116 @@ const ShipperCardInvoice = ({
   VATAmount,
   downloadTranslate
 }) => (
-  <ShipperThemeProvider injectFirst>
-    <Card
-      style={{
-        width: '270px'
-      }}
-      className={`${style.cardHover}`}
-    >
-      <CardContent>
-        <Grid>
-          <Grid item xs={12}>
-            <Typography
-              style={{ color: themeConstants.grey.dark }}
-              className={`${style.textSmall}`}
-            >
-              {title}
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography
-              style={{ color: themeConstants.black.dark }}
-              className={`${style.textLarge}`}
-            >
-              {reference}
-            </Typography>
-          </Grid>
-          <Grid container item xs={12} direction='row' alignItems='center'>
-            <Grid item>
-              <People2Icon />
-            </Grid>
-            <Grid item>
-              <Box mb={2} ml={2}>
-                <Typography
-                  style={{ color: themeConstants.grey.dark }}
-                  className={`${style.textSmall}`}
-                >
-                  {userReference}
-                </Typography>
-              </Box>
-            </Grid>
-          </Grid>
-          <Divider />
-          <Grid container>
-            <Grid item xs={6}>
+  <ShipperThemeProvider>
+    <StylesProvider injectFirst>
+      <Card
+        style={{
+          width: '270px'
+        }}
+        className={`${style.cardHover}`}
+      >
+        <CardContent>
+          <Grid>
+            <Grid item xs={12}>
               <Typography
+                style={{ color: themeConstants.grey.dark }}
                 className={`${style.textSmall}`}
-                style={{ color: themeConstants.grey.main }}
               >
-                {invoiceDateTranslate}
-              </Typography>
-              <Typography className={`${style.textMedium}`}>
-                {invoiceDate}
+                {title}
               </Typography>
             </Grid>
-            <Grid container item xs={6} justifyContent='center'>
-              <Grid item justifyContent='left'>
+            <Grid item xs={12}>
+              <Typography
+                style={{ color: themeConstants.black.dark }}
+                className={`${style.textLarge}`}
+              >
+                {reference}
+              </Typography>
+            </Grid>
+            <Grid container item xs={12} direction='row' alignItems='center'>
+              <Grid item>
+                <People2Icon />
+              </Grid>
+              <Grid item>
+                <Box mb={2} ml={2}>
+                  <Typography
+                    style={{ color: themeConstants.grey.dark }}
+                    className={`${style.textSmall}`}
+                  >
+                    {userReference}
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
+            <Divider />
+            <Grid container>
+              <Grid item xs={6}>
                 <Typography
                   className={`${style.textSmall}`}
                   style={{ color: themeConstants.grey.main }}
                 >
-                  {dueDateTranslate}
+                  {invoiceDateTranslate}
                 </Typography>
                 <Typography className={`${style.textMedium}`}>
-                  {dueDate}
+                  {invoiceDate}
                 </Typography>
               </Grid>
+              <Grid container item xs={6} justifyContent='center'>
+                <Grid item justifyContent='left'>
+                  <Typography
+                    className={`${style.textSmall}`}
+                    style={{ color: themeConstants.grey.main }}
+                  >
+                    {dueDateTranslate}
+                  </Typography>
+                  <Typography className={`${style.textMedium}`}>
+                    {dueDate}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Divider />
+            <Grid item xs={12}>
+              <Typography
+                style={{ color: themeConstants.primary.main }}
+                className={`${style.textLargeXl}`}
+              >
+                {priceTtc}
+                {withTaxes}
+              </Typography>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                className={`${style.textMedium}`}
+                style={{ color: themeConstants.grey.main }}
+              >
+                {priceHt}
+                {withoutTaxes}
+              </Typography>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                className={`${style.textMedium}`}
+                style={{ color: themeConstants.grey.main }}
+              >
+                {VATAmount}: {vatAmount}
+              </Typography>
+            </Grid>
+            <Divider />
+            <Grid container item xs={12} justifyContent='center'>
+              <Button
+                startIcon={<DownloadIcon />}
+                color='primary'
+                variant='text'
+                onClick={downloadAction}
+              >
+                {downloadTranslate}
+              </Button>
             </Grid>
           </Grid>
-          <Divider />
-          <Grid item xs={12}>
-            <Typography
-              style={{ color: themeConstants.primary.main }}
-              className={`${style.textLargeXl}`}
-            >
-              {priceTtc}
-              {withTaxes}
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography
-              className={`${style.textMedium}`}
-              style={{ color: themeConstants.grey.main }}
-            >
-              {priceHt}
-              {withoutTaxes}
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography
-              className={`${style.textMedium}`}
-              style={{ color: themeConstants.grey.main }}
-            >
-              {VATAmount}: {vatAmount}
-            </Typography>
-          </Grid>
-          <Divider />
-          <Grid container item xs={12} justifyContent='center'>
-            <Button
-              startIcon={<DownloadIcon />}
-              color='primary'
-              variant='text'
-              onClick={downloadAction}
-            >
-              {downloadTranslate}
-            </Button>
-          </Grid>
-        </Grid>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </StylesProvider>
   </ShipperThemeProvider>
 )
 
