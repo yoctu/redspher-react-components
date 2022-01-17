@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Stepper,
   Step,
@@ -8,18 +8,31 @@ import {
 } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles'
 import themeConstants from '../theme/themeConstants'
+import { DeleteIcon } from '../../index'
 
 function StepIcon(props) {
-  const { index, nbItems, icons } = props
+  const { index, nbItems, icons, removeStepMethod } = props
+  const [hover, setHover] = useState(false)
 
-  const icon = icons.middle
+  let icon = icons.middle
   if (index === 0) {
-    return icons.first
+    icon = icons.first
   } else if (index === nbItems - 1) {
-    return icons.last
+    icon = icons.last
   }
 
-  return <div>{icon}</div>
+  const onClickMethod = () => {
+    removeStepMethod(index)
+  }
+  return (
+    <div
+      onClick={hover && nbItems > 2 ? onClickMethod : undefined}
+      onMouseOver={() => setHover(true)}
+      onMouseOut={() => setHover(false)}
+    >
+      {hover && nbItems > 2 ? <DeleteIcon /> : icon}
+    </div>
+  )
 }
 
 const Connector = withStyles({
@@ -51,7 +64,12 @@ const Content = withStyles({
   }
 })(StepContent)
 
-const ShipperAddressStepper = ({ icons, nbItems, childrenComponent }) => {
+const ShipperAddressStepper = ({
+  icons,
+  nbItems,
+  childrenComponent,
+  removeStepMethod
+}) => {
   return (
     <Stepper connector={<Connector />} orientation='vertical'>
       {Array.apply(null, Array(nbItems)).map((_item, index) => (
@@ -61,7 +79,8 @@ const ShipperAddressStepper = ({ icons, nbItems, childrenComponent }) => {
             StepIconProps={{
               index,
               nbItems,
-              icons
+              icons,
+              removeStepMethod
             }}
           />
           <Content>{childrenComponent[index]}</Content>
