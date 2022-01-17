@@ -232,6 +232,24 @@ const ShipperShowCase = () => {
   const [selectedFeatures, setSelectedFeatures] = React.useState([])
   const [selectedCarriers, setSelectedCarriers] = React.useState([])
   const [uploadStatus, setUploadStatus] = React.useState('')
+  const [childrenStepper, setChildrenStepper] = useState([
+    <div>
+      <FormControl>
+        <InputLabel htmlFor='input-test'>Label</InputLabel>
+        <Input
+          id='input-test'
+          type={'text'}
+          endAdornment={
+            <InputAdornment position='end'>
+              <PlusIcon />
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+    </div>,
+    <Typography>Step b</Typography>,
+    <Typography>Step c</Typography>
+  ])
 
   const downloadAction = () => {
     alert('Poney')
@@ -286,24 +304,15 @@ const ShipperShowCase = () => {
     middle: <StepIcon title='StepIcon' />
   }
 
-  const childrenStepper = [
-    <div>
-      <FormControl>
-        <InputLabel htmlFor='input-test'>Label</InputLabel>
-        <Input
-          id='input-test'
-          type={'text'}
-          endAdornment={
-            <InputAdornment position='end'>
-              <PlusIcon />
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-    </div>,
-    <Typography>Step b</Typography>,
-    <Typography>Step c</Typography>
-  ]
+
+  const removeStep = (index) => {
+    if (index > -1) {
+      setChildrenStepper([
+        <Typography>Step b</Typography>,
+        <Typography>Step c</Typography>
+      ])
+    }
+  }
 
   const updatePhone = (e) => {
     console.log(e)
@@ -838,6 +847,7 @@ const ShipperShowCase = () => {
             icons={addressStepperIcons}
             nbItems={childrenStepper.length}
             childrenComponent={childrenStepper}
+            removeStepMethod={removeStep}
           />
         </ShipperThemeProvider>
       </StylesProvider>
