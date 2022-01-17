@@ -837,7 +837,7 @@ const ShipperShowCase = () => {
           <ShipperAddressStepper
             icons={addressStepperIcons}
             nbItems={childrenStepper.length}
-            children={childrenStepper}
+            childrenComponent={childrenStepper}
           />
         </ShipperThemeProvider>
       </StylesProvider>

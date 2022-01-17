@@ -51,7 +51,7 @@ const Content = withStyles({
   }
 })(StepContent)
 
-const ShipperAddressStepper = ({ icons, nbItems, children }) => {
+const ShipperAddressStepper = ({ icons, nbItems, childrenComponent }) => {
   return (
     <Stepper connector={<Connector />} orientation='vertical'>
       {Array.apply(null, Array(nbItems)).map((_item, index) => (
@@ -64,7 +64,7 @@ const ShipperAddressStepper = ({ icons, nbItems, children }) => {
               icons
             }}
           />
-          <Content>{children[index]}</Content>
+          <Content>{childrenComponent[index]}</Content>
         </Step>
       ))}
     </Stepper>
