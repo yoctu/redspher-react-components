@@ -18,7 +18,7 @@ const useStepIconStyles = makeStyles({
     color: themeConstants.grey.light,
     display: 'flex',
     height: 22,
-    zIndex: 9999,
+    zIndex: 999,
     alignItems: 'center'
   },
   active: {
