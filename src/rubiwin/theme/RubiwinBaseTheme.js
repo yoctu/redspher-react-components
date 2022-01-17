@@ -309,6 +309,13 @@ const rubiwinBaseTheme = {
       styleOverrides: {
         root: themeConstants.grey.main
       }
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none'
+        }
+      }
     }
   }
 }
