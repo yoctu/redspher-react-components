@@ -8,14 +8,14 @@ function BurgerCloseIcon(props) {
       <path
         d='M3.40117 3.11881L17 16.8813'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeWidth='2'
       />
       <path
         d='M16.6715 3.00006L3.07271 17'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeWidth='2'
       />

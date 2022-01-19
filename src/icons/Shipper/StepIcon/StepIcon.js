@@ -11,7 +11,7 @@ function StepIcon(props) {
         rx='8'
         ry='8'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
       />
       <ellipse
@@ -20,8 +20,8 @@ function StepIcon(props) {
         rx='4'
         ry='4'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />

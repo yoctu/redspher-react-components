@@ -8,7 +8,7 @@ function PinIcon(props) {
       <path
         d='M16.6 8.36573C16.6 12.4337 10.3 19 10.3 19C10.3 19 4 12.4337 4 8.36573C4 4.29775 6.82061 1 10.3 1C13.7794 1 16.6 4.29775 16.6 8.36573Z'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -19,8 +19,8 @@ function PinIcon(props) {
         rx='2.1'
         ry='2.11765'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />

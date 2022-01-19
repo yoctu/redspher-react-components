@@ -8,7 +8,7 @@ function ArrowRightIcon(props) {
       <path
         d='M8 5.75732L12.2426 9.99996L8 14.2426'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'

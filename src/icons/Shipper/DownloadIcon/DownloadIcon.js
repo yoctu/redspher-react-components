@@ -8,7 +8,7 @@ function DownloadIcon(props) {
       <path
         d='M2.5 17.13H18.5'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -16,8 +16,8 @@ function DownloadIcon(props) {
       <path
         d='M10.5 3.5V13.65'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -26,8 +26,8 @@ function DownloadIcon(props) {
       <path
         d='M13.53 11.21L10.5 14.24L7.47 11.21'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
