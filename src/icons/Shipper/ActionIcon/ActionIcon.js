@@ -10,7 +10,7 @@ function ActionIcon(props) {
         cy='6'
         r='0.5'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
       />
       <circle
@@ -18,7 +18,7 @@ function ActionIcon(props) {
         cy='10'
         r='0.5'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
       />
       <circle
@@ -26,7 +26,7 @@ function ActionIcon(props) {
         cy='14'
         r='0.5'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
       />
     </SvgIcon>

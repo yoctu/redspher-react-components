@@ -8,8 +8,8 @@ function SearchIcon(props) {
       <path
         d='M13.8848 13.2376L17.8126 16.2621'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -20,7 +20,7 @@ function SearchIcon(props) {
         cy='9.32059'
         r='6.32059'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'

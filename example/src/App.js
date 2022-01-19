@@ -346,7 +346,7 @@ const ShipperShowCase = () => {
             </Button>
             <Button
               startIcon={
-                <PlusIcon primaryColor={'#fff'} secondaryColor={'#fff'} />
+                <PlusIcon primarycolor={'#fff'} secondarycolor={'#fff'} />
               }
               color='primary'
               variant='contained'
@@ -375,7 +375,7 @@ const ShipperShowCase = () => {
             >
               <Button
                 className={'logoutButton'}
-                startIcon={<DisconnectIcon primaryColor={'#fff'} />}
+                startIcon={<DisconnectIcon primarycolor={'#fff'} />}
                 variant='contained'
               >
                 Shipper Button

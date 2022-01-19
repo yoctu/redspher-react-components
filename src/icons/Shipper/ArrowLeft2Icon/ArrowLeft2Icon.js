@@ -8,14 +8,14 @@ function ArrowLeft2Icon(props) {
       <path
         d='M4 10L15 10'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
       />
       <path
         d='M7.5 6.5L4 10L7.5 13.5'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'

@@ -11,14 +11,14 @@ function InformationIcon(props) {
         rx='8'
         ry='8'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
       />
       <path
         d='M10 15L10 8'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />
@@ -28,8 +28,8 @@ function InformationIcon(props) {
         r='0.5'
         transform='rotate(-180 10 6)'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />

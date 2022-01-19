@@ -8,7 +8,7 @@ function AddressBookIcon(props) {
       <path
         d='M4.86664 2H17V18H4.86664V2Z'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -19,8 +19,8 @@ function AddressBookIcon(props) {
         x2='6.23333'
         y2='5.26471'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -32,8 +32,8 @@ function AddressBookIcon(props) {
         x2='6.23333'
         y2='10.9117'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -45,8 +45,8 @@ function AddressBookIcon(props) {
         x2='6.23333'
         y2='8.08826'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -58,8 +58,8 @@ function AddressBookIcon(props) {
         x2='6.23333'
         y2='13.7353'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -68,7 +68,7 @@ function AddressBookIcon(props) {
       <path
         d='M14.2 9.03837C14.2 10.8464 11.4 13.7647 11.4 13.7647C11.4 13.7647 8.59998 10.8464 8.59998 9.03837C8.59998 7.23038 9.85358 5.76471 11.4 5.76471C12.9464 5.76471 14.2 7.23038 14.2 9.03837Z'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -79,8 +79,8 @@ function AddressBookIcon(props) {
         rx='0.933333'
         ry='0.941176'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />

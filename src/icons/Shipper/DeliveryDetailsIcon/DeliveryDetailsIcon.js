@@ -11,7 +11,7 @@ function DeliveryDetailsIcon(props) {
         rx='2.1'
         ry='2.02632'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -22,7 +22,7 @@ function DeliveryDetailsIcon(props) {
         rx='2.1'
         ry='2.02632'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -33,7 +33,7 @@ function DeliveryDetailsIcon(props) {
         x2='5.30002'
         y2='13.7632'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -41,7 +41,7 @@ function DeliveryDetailsIcon(props) {
       <path
         d='M10 13.7632L12.9 13.7632'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -49,7 +49,7 @@ function DeliveryDetailsIcon(props) {
       <path
         d='M12.7 5.86841H15.3181L17.7999 9.34209'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -57,7 +57,7 @@ function DeliveryDetailsIcon(props) {
       <path
         d='M17.5 13.9737H19V10.7895L17.8 9.34211H12.7V5H3.40002'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -65,8 +65,8 @@ function DeliveryDetailsIcon(props) {
       <path
         d='M3.4 7.02631H8.79999M1 9.3421H6.39999M3.1 11.3684H6.09999'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'

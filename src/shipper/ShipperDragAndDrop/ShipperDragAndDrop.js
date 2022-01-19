@@ -94,11 +94,11 @@ function DragAndDrop({
             </span>
           ) : uploadStatus === 'finished' ? (
             <span className={`${styles.iconFile}`}>
-              <CheckIcon primaryColor='#00CF53' />
+              <CheckIcon primarycolor='#00CF53' />
             </span>
           ) : uploadStatus === 'error' ? (
             <span className={`${styles.iconFile}`}>
-              <WarningIcon primaryColor='#F20738' />
+              <WarningIcon primarycolor='#F20738' />
             </span>
           ) : (
             <span
@@ -114,7 +114,7 @@ function DragAndDrop({
       )}
       {error && (
         <span className={`${styles.errorMessage}`}>
-          <WarningIcon primaryColor='#F20738' />
+          <WarningIcon primarycolor='#F20738' />
           {error}
         </span>
       )}

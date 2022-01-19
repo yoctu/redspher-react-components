@@ -8,7 +8,7 @@ function CalendarIcon(props) {
       <path
         d='M3 4.00006C2.8 4.00006 2.66667 4.13339 2.66667 4.33339V17.0001C2.66667 17.2001 2.8 17.3334 3 17.3334H17C17.2 17.3334 17.3333 17.2001 17.3333 17.0001V4.33339C17.3333 4.13339 17.2 4.00006 17 4.00006H3Z'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
       />
       <line
@@ -17,8 +17,8 @@ function CalendarIcon(props) {
         x2='13.5'
         y2='5.5'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -29,8 +29,8 @@ function CalendarIcon(props) {
         x2='6.5'
         y2='5.5'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -41,8 +41,8 @@ function CalendarIcon(props) {
         x2='5.5'
         y2='8.5'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'

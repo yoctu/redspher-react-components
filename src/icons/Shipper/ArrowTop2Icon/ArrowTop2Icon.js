@@ -8,14 +8,14 @@ function ArrowTop2Icon(props) {
       <path
         d='M9.5 4.5L9.5 15.5'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
       />
       <path
         d='M13 8L9.5 4.5L6 8'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'

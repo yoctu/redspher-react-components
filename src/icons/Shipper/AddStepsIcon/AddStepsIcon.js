@@ -11,7 +11,7 @@ function AddStepsIcon(props) {
         rx='4'
         ry='4'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
       />
       <line
@@ -20,8 +20,8 @@ function AddStepsIcon(props) {
         x2='9.89999'
         y2='12.5'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -32,8 +32,8 @@ function AddStepsIcon(props) {
         x2='7.5'
         y2='9.90002'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -41,7 +41,7 @@ function AddStepsIcon(props) {
       <path
         d='M10 14L10 17'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeDasharray='2 2'
@@ -49,7 +49,7 @@ function AddStepsIcon(props) {
       <path
         d='M10 3L10 6'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeDasharray='2 2'
