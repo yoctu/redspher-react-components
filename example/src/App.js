@@ -766,6 +766,10 @@ const ShipperShowCase = () => {
               label={'Phone number'}
               helperText={'Not a number'}
               isError={false}
+              inputProps={{
+                className: 'contact-input',
+                id: 'phoneNumberInput',
+              }}
               onChange={(e) => {
                 updatePhone(e)
               }}

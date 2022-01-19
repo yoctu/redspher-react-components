@@ -16,10 +16,12 @@ function PhoneNumber({
   label,
   onChange,
   name = 'phoneNumber',
-  value
+  value,
+  ...props
 }) {
   return (
     <MuiPhoneNumber
+      {...props}
       disableAreaCodes
       onChange={(value) => {
         const event = {
