@@ -208,21 +208,21 @@ const ShipperStepper = ({ steps, activeStep }) => {
               >
                 {step.label}
               </Typography>
-            </StepLabel>
-            <Box
-              display='flex'
-              justifyContent='center'
-              style={{ marginTop: -70 }}
-            >
               <Box
-                className={getClassNameIcon(index)}
-                onClick={() => {
-                  onClickAction(index, step)
-                }}
+                display='flex'
+                justifyContent='center'
+                style={{ marginTop: -70 }}
               >
-                {step.icon}
+                <Box
+                  className={getClassNameIcon(index)}
+                  onClick={() => {
+                    onClickAction(index, step)
+                  }}
+                >
+                  {step.icon}
+                </Box>
               </Box>
-            </Box>
+            </StepLabel>
           </Step>
         ))}
       </Stepper>
