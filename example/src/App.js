@@ -531,7 +531,7 @@ const ShipperShowCase = () => {
                       </Typography>
                     </Grid>
                     <Grid item container>
-                      <Grid item style={{ width: 40 }}>
+                      <Grid item style={{ width: 50 }}>
                         <Typography
                           style={{
                             fontSize: 12,
@@ -541,7 +541,7 @@ const ShipperShowCase = () => {
                           }}
                           display='inline'
                         >
-                          3630
+                          Length
                         </Typography>
                       </Grid>
                       <Grid item>
@@ -554,12 +554,12 @@ const ShipperShowCase = () => {
                           }}
                           display='inline'
                         >
-                          Mdr (cm)
+                          600 (cm)
                         </Typography>
                       </Grid>
                     </Grid>
                     <Grid item container>
-                      <Grid item style={{ width: 40 }}>
+                      <Grid item style={{ width: 50 }}>
                         <Typography
                           style={{
                             fontSize: 12,
@@ -569,7 +569,7 @@ const ShipperShowCase = () => {
                           }}
                           display='inline'
                         >
-                          420
+                          Width
                         </Typography>
                       </Grid>
                       <Grid item>
@@ -582,12 +582,12 @@ const ShipperShowCase = () => {
                           }}
                           display='inline'
                         >
-                          caca (cm)
+                          500 (cm)
                         </Typography>
                       </Grid>
                     </Grid>
                     <Grid item container>
-                      <Grid item style={{ width: 40 }}>
+                      <Grid item style={{ width: 50 }}>
                         <Typography
                           style={{
                             fontSize: 12,
@@ -597,7 +597,7 @@ const ShipperShowCase = () => {
                           }}
                           display='inline'
                         >
-                          69
+                          Height
                         </Typography>
                       </Grid>
                       <Grid item>
@@ -610,12 +610,12 @@ const ShipperShowCase = () => {
                           }}
                           display='inline'
                         >
-                          prout (cm)
+                          270 (cm)
                         </Typography>
                       </Grid>
                     </Grid>
                     <Grid item container>
-                      <Grid item style={{ width: 40 }}>
+                      <Grid item style={{ width: 50 }}>
                         <Typography
                           style={{
                             fontSize: 12,
@@ -625,7 +625,7 @@ const ShipperShowCase = () => {
                           }}
                           display='inline'
                         >
-                          42
+                          Weight
                         </Typography>
                       </Grid>
                       <Grid item>
@@ -638,7 +638,7 @@ const ShipperShowCase = () => {
                           }}
                           display='inline'
                         >
-                          poney (cm)
+                          3500 (kg)
                         </Typography>
                       </Grid>
                     </Grid>
