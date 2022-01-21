@@ -45,7 +45,7 @@ function PhoneNumber({
 }
 
 PhoneNumber.proptypes = {
-  allowEmpty: PropTypes.bool,
+  allowempty: PropTypes.bool,
   helperText: PropTypes.string.isRequired,
   isError: PropTypes.func,
   label: PropTypes.string.isRequired,
@@ -53,7 +53,7 @@ PhoneNumber.proptypes = {
 }
 
 PhoneNumber.defaultProps = {
-  allowEmpty: true,
+  allowempty: true,
   isError: () => false,
   onChange: () => null
 }
