@@ -6,19 +6,17 @@ import styles from './styles.module.scss'
 
 export default function IconCheckboxes({ className = '', ...delegated }) {
   return (
-    <div className={`${styles.container} ${className}`}>
-      <Checkbox
-        {...delegated}
-        className={styles.sizeStd}
-        color='primary'
-        icon={<CheckBoxOutlineBlankRoundedIcon className={styles.sizeStd} />}
-        checkedIcon={
-          <React.Fragment>
-            <CheckBoxOutlineBlankRoundedIcon className={styles.sizeStd} />
-            <StopRounded className={styles.checked} />
-          </React.Fragment>
-        }
-      />
-    </div>
+    <Checkbox
+      {...delegated}
+      className={`${styles.sizeStd} ${className}`}
+      color='primary'
+      icon={<CheckBoxOutlineBlankRoundedIcon className={styles.sizeStd} />}
+      checkedIcon={
+        <React.Fragment>
+          <CheckBoxOutlineBlankRoundedIcon className={styles.sizeStd} />
+          <StopRounded className={styles.checked} />
+        </React.Fragment>
+      }
+    />
   )
 }
