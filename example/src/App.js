@@ -109,7 +109,7 @@ import { Pagination } from '@material-ui/lab'
 import { StylesProvider } from '@material-ui/core/styles'
 import 'redspher-components/dist/index.css'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import {Typography} from "@material-ui/core/index";
+import { Typography } from '@material-ui/core/index'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -303,7 +303,6 @@ const ShipperShowCase = () => {
     last: <PinIcon title='PinIcon' />,
     middle: <StepIcon title='StepIcon' />
   }
-
 
   const removeStep = (index) => {
     if (index > -1) {
@@ -505,53 +504,171 @@ const ShipperShowCase = () => {
               downloadTranslate='Download'
             />
           </div>
-          <Grid
-            container
-            direction='row'
-            justifyContent="center"
-            spacing={6}
-          >
+          <Grid container direction='row' justifyContent='center' spacing={6}>
             <Grid item sm={2}>
-                <ShipperCard
-                  startIcon='van'
-                  value='van'
-                  labelOne='Label'
-                  labelTwo='label'
-                  disabled={false}
-                  onclickFnc={cardVehicleAction}
-                  selectedValue={selectedVehicle}
-                  setSelectedValue={setSelectedVehicle}
-                  tooltipValue={
-                    <>
-                      <h1>HELLO</h1>
-                      <p>I'm a tooltip</p>
-                    </>
-                  }
-                />
+              <ShipperCard
+                startIcon='van'
+                value='van'
+                labelOne='Label'
+                labelTwo='label'
+                disabled={false}
+                onclickFnc={cardVehicleAction}
+                selectedValue={selectedVehicle}
+                setSelectedValue={setSelectedVehicle}
+                tooltipValue={
+                  <Grid container direction='column' style={{ margin: 8 }}>
+                    <Grid item>
+                      <Typography
+                        style={{
+                          fontSize: 12,
+                          color: '#062440',
+                          fontWeight: 700,
+                          marginBottom: 5,
+                          lineHeight: '16px'
+                        }}
+                      >
+                        PL5
+                      </Typography>
+                    </Grid>
+                    <Grid item container>
+                      <Grid item style={{ width: 40 }}>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#68717B',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          3630
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#062440',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          Mdr (cm)
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid item container>
+                      <Grid item style={{ width: 40 }}>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#68717B',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          420
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#062440',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          caca (cm)
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid item container>
+                      <Grid item style={{ width: 40 }}>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#68717B',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          69
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#062440',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          prout (cm)
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid item container>
+                      <Grid item style={{ width: 40 }}>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#68717B',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          42
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#062440',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          poney (cm)
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                }
+              />
             </Grid>
             <Grid item sm={2}>
-                <ShipperCard
-                  startIcon='break'
-                  value='break'
-                  labelOne='Label'
-                  labelTwo='label'
-                  disabled={false}
-                  onclickFnc={cardVehicleAction}
-                  selectedValue={selectedVehicle}
-                  setSelectedValue={setSelectedVehicle}
-                />
+              <ShipperCard
+                startIcon='break'
+                value='break'
+                labelOne='Label'
+                labelTwo='label'
+                disabled={false}
+                onclickFnc={cardVehicleAction}
+                selectedValue={selectedVehicle}
+                setSelectedValue={setSelectedVehicle}
+              />
             </Grid>
             <Grid item sm={2}>
-                <ShipperCard
-                  startIcon='truck'
-                  value='truck'
-                  labelOne='Label'
-                  labelTwo='label'
-                  disabled={false}
-                  onclickFnc={cardVehicleAction}
-                  selectedValue={selectedVehicle}
-                  setSelectedValue={setSelectedVehicle}
-                />
+              <ShipperCard
+                startIcon='truck'
+                value='truck'
+                labelOne='Label'
+                labelTwo='label'
+                disabled={false}
+                onclickFnc={cardVehicleAction}
+                selectedValue={selectedVehicle}
+                setSelectedValue={setSelectedVehicle}
+              />
             </Grid>
             <Grid item sm={2}>
               <ShipperCard
@@ -566,88 +683,95 @@ const ShipperShowCase = () => {
               />
             </Grid>
           </Grid>
-          <Grid
-            container
-            direction='row'
-            justifyContent="center"
-            spacing={4}>
+          <Grid container direction='row' justifyContent='center' spacing={4}>
             <Grid item sm={1}>
-                <ShipperCard
-                  startIcon='driver'
-                  value='driver'
-                  labelOne='Label'
-                  disabled={false}
-                  selectedValue={selectedFeatures}
-                  setSelectedValue={setSelectedFeatures}
-                  enableUnselect={true}
-                  noInfoIcon={true}
-                />
+              <ShipperCard
+                startIcon='driver'
+                value='driver'
+                labelOne='Label'
+                disabled={false}
+                selectedValue={selectedFeatures}
+                setSelectedValue={setSelectedFeatures}
+                enableUnselect={true}
+                noInfoIcon={true}
+              />
             </Grid>
             <Grid item sm={1}>
-                <ShipperCard
-                  startIcon='tailLift'
-                  value='tailLift'
-                  labelOne='Label with two lines'
-                  disabled={false}
-                  selectedValue={selectedFeatures}
-                  setSelectedValue={setSelectedFeatures}
-                  enableUnselect={true}
-                  noInfoIcon={true}
-                />
+              <ShipperCard
+                startIcon='tailLift'
+                value='tailLift'
+                labelOne='Label with two lines'
+                disabled={false}
+                selectedValue={selectedFeatures}
+                setSelectedValue={setSelectedFeatures}
+                enableUnselect={true}
+                noInfoIcon={true}
+              />
             </Grid>
             <Grid item sm={1}>
-                <ShipperCard
-                  startIcon='sideLoad'
-                  value='sideLoad'
-                  labelOne='Label'
-                  disabled={false}
-                  selectedValue={selectedFeatures}
-                  setSelectedValue={setSelectedFeatures}
-                  enableUnselect={true}
-                  noInfoIcon={true}
-                />
+              <ShipperCard
+                startIcon='sideLoad'
+                value='sideLoad'
+                labelOne='Label'
+                disabled={false}
+                selectedValue={selectedFeatures}
+                setSelectedValue={setSelectedFeatures}
+                enableUnselect={true}
+                noInfoIcon={true}
+              />
             </Grid>
           </Grid>
-          <Grid
-            container
-            direction='row'
-            justifyContent="center"
-            spacing={4}>
+          <Grid container direction='row' justifyContent='center' spacing={4}>
             <Grid item sm={2}>
-                <ShipperCard
-                  startIcon={<img src="https://stagingcarrier.rubiwin.com/images/FRANAI001.png" alt="" />}
-                  value='test1'
-                  labelOne='test1'
-                  disabled={false}
-                  selectedValue={selectedCarriers}
-                  setSelectedValue={setSelectedCarriers}
-                  enableUnselect={true}
-                  noInfoIcon={true}
-                />
+              <ShipperCard
+                startIcon={
+                  <img
+                    src='https://stagingcarrier.rubiwin.com/images/FRANAI001.png'
+                    alt=''
+                  />
+                }
+                value='test1'
+                labelOne='test1'
+                disabled={false}
+                selectedValue={selectedCarriers}
+                setSelectedValue={setSelectedCarriers}
+                enableUnselect={true}
+                noInfoIcon={true}
+              />
             </Grid>
             <Grid item sm={2}>
-                <ShipperCard
-                  startIcon={<img src="https://stagingcarrier.rubiwin.com/images/FRTEST020.png" alt="" />}
-                  value='test2'
-                  labelOne='test2'
-                  disabled={false}
-                  selectedValue={selectedCarriers}
-                  setSelectedValue={setSelectedCarriers}
-                  enableUnselect={true}
-                  noInfoIcon={true}
-                />
+              <ShipperCard
+                startIcon={
+                  <img
+                    src='https://stagingcarrier.rubiwin.com/images/FRTEST020.png'
+                    alt=''
+                  />
+                }
+                value='test2'
+                labelOne='test2'
+                disabled={false}
+                selectedValue={selectedCarriers}
+                setSelectedValue={setSelectedCarriers}
+                enableUnselect={true}
+                noInfoIcon={true}
+              />
             </Grid>
             <Grid item sm={2}>
-                <ShipperCard
-                  startIcon={<img src="https://stagingcarrier.rubiwin.com/images/INTIME.png" alt="" />}
-                  value='test3'
-                  labelOne='test3'
-                  disabled={false}
-                  selectedValue={selectedCarriers}
-                  setSelectedValue={setSelectedCarriers}
-                  enableUnselect={true}
-                  noInfoIcon={true}
-                />
+              <ShipperCard
+                startIcon={
+                  <img
+                    src='https://stagingcarrier.rubiwin.com/images/INTIME.png'
+                    alt=''
+                  />
+                }
+                value='test3'
+                labelOne='test3'
+                disabled={false}
+                selectedValue={selectedCarriers}
+                setSelectedValue={setSelectedCarriers}
+                enableUnselect={true}
+                noInfoIcon={true}
+              />
             </Grid>
           </Grid>
           <br />
@@ -738,7 +862,12 @@ const ShipperShowCase = () => {
                 type={'text'}
                 aria-describedby='component-error-text'
               />
-              <ShipperErrorPopover open={open} anchorEl={anchorEl} text={'Error message'} handlePopoverClose={handlePopoverClose} />
+              <ShipperErrorPopover
+                open={open}
+                anchorEl={anchorEl}
+                text={'Error message'}
+                handlePopoverClose={handlePopoverClose}
+              />
             </FormControl>
             <br />
             <FormControl>
@@ -768,7 +897,7 @@ const ShipperShowCase = () => {
               isError={false}
               inputProps={{
                 className: 'contact-input',
-                id: 'phoneNumberInput',
+                id: 'phoneNumberInput'
               }}
               onChange={(e) => {
                 updatePhone(e)

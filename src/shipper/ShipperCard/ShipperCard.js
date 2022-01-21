@@ -20,6 +20,15 @@ import InformationIcon from '../../icons/Shipper/InformationIcon'
 import DriverIcon from '../../icons/Shipper/DriverIcon'
 import TailLiftIcon from '../../icons/Shipper/TailLiftIcon'
 import SideLoadIcon from '../../icons/Shipper/SideLoadIcon'
+import { withStyles } from '@material-ui/styles'
+
+const HtmlTooltip = withStyles(() => ({
+  tooltip: {
+    backgroundColor: '#FFFFFF',
+    boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)',
+    borderRadius: 16
+  }
+}))(Tooltip)
 
 const ShipperCard = ({
   startIcon,
@@ -126,13 +135,13 @@ const ShipperCard = ({
               </Grid>
               {!noInfoIcon && (
                 <Grid item className={style.tooltipContainer}>
-                  <Tooltip
+                  <HtmlTooltip
                     title={<React.Fragment>{tooltipValue}</React.Fragment>}
                   >
                     <IconButton className={style.tooltipButton}>
                       <InformationIcon />
                     </IconButton>
-                  </Tooltip>
+                  </HtmlTooltip>
                 </Grid>
               )}
             </Grid>
