@@ -5,26 +5,53 @@ const ShipperBaseTheme = {
   palette: colors,
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
+    color: themeConstants.black.dark,
+    h1: {
+      fontWeight: 900,
+      color: '#fff',
+      fontSize: '36px',
+      lineHeight: '43.88px'
+    },
     h2: {
       fontWeight: 'bold',
-      color: themeConstants.grey.main,
+      color: themeConstants.primary.main,
       fontSize: '32px',
-      lineHeight: '39px',
-      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
-        {
-          fontSize: '22px',
-          lineHeight: '26px'
-        }
+      lineHeight: '39.01px'
     },
-    body2: {
-      fontSize: '12px',
+    h3: {
       fontWeight: 'bold',
-      color: themeConstants.primary.main
-    },
-    subtitle1: {
       color: themeConstants.primary.dark,
       fontSize: '24px',
       lineHeight: '29.26px'
+    },
+    h4: {
+      fontWeight: 'bold',
+      color: themeConstants.primary.dark,
+      fontSize: '20px',
+      lineHeight: '24.38px'
+    },
+    body1: {
+      fontWeight: 'normal',
+      fontSize: '15px',
+      lineHeight: '22px',
+      color: themeConstants.black.dark
+    },
+    body2: {
+      fontSize: '14px',
+      fontWeight: 'normal',
+      lineHeight: '17.07px',
+      color: themeConstants.black.dark
+    },
+    subtitle1: {
+      color: themeConstants.primary.dark,
+      fontSize: '18px',
+      lineHeight: '24px'
+    },
+    caption: {
+      fontWeight: 'normal',
+      fontSize: '12px',
+      lineHeight: '14.63px',
+      color: themeConstants.black.dark
     }
   },
   overrides: {
