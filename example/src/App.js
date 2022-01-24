@@ -982,6 +982,23 @@ const ShipperShowCase = () => {
             childrenComponent={childrenStepper}
             removeStepMethod={removeStep}
           />
+          <br />
+          <br />
+          <br />
+          <br />
+          <Typography variant='h1'>H1 text</Typography>
+          <Typography variant='h2'>H2 text</Typography>
+          <Typography variant='h3'>H3 text</Typography>
+          <Typography variant='h4'>H4 text</Typography>
+          <Typography variant='subtitle1'>Subtitle1 text</Typography>
+          <Typography variant='body1'>Body1 text</Typography>
+          <Typography variant='body2'>Body2 text</Typography>
+          <Typography variant='caption'>Caption text</Typography>
+          <Typography>Default no variant text</Typography>
+          <br />
+          <br />
+          <br />
+          <br />
         </ShipperThemeProvider>
       </StylesProvider>
     </div>
