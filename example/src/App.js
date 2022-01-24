@@ -516,10 +516,133 @@ const ShipperShowCase = () => {
                 selectedValue={selectedVehicle}
                 setSelectedValue={setSelectedVehicle}
                 tooltipValue={
-                  <>
-                    <h1>HELLO</h1>
-                    <p>I'm a tooltip</p>
-                  </>
+                  <Grid container direction='column' style={{ margin: 8 }}>
+                    <Grid item>
+                      <Typography
+                        style={{
+                          fontSize: 12,
+                          color: '#062440',
+                          fontWeight: 700,
+                          marginBottom: 5,
+                          lineHeight: '16px'
+                        }}
+                      >
+                        PL5
+                      </Typography>
+                    </Grid>
+                    <Grid item container>
+                      <Grid item style={{ width: 50 }}>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#68717B',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          Length
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#062440',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          600 (cm)
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid item container>
+                      <Grid item style={{ width: 50 }}>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#68717B',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          Width
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#062440',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          500 (cm)
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid item container>
+                      <Grid item style={{ width: 50 }}>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#68717B',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          Height
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#062440',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          270 (cm)
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid item container>
+                      <Grid item style={{ width: 50 }}>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#68717B',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          Weight
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          style={{
+                            fontSize: 12,
+                            color: '#062440',
+                            fontWeight: 400,
+                            lineHeight: '14px'
+                          }}
+                          display='inline'
+                        >
+                          3500 (kg)
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </Grid>
                 }
               />
             </Grid>

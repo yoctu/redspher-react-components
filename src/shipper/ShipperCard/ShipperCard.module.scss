@@ -1,27 +1,27 @@
-@import  '../shipper-constant.scss';
+@import '../shipper-constant.scss';
 
 .textSmall {
-    font-size: $font-size-small !important;
-    line-height: $font-line-small !important;
+  font-size: $font-size-small !important;
+  line-height: $font-line-small !important;
 }
 
 .textMedium {
-    font-size: $font-size-small !important;
-    line-height: $font-line-sm-med !important;
-    font-weight: bold !important;
-    text-align: center;
+  font-size: $font-size-small !important;
+  line-height: $font-line-sm-med !important;
+  font-weight: bold !important;
+  text-align: center;
 }
 
 .blueBorder {
-    border-color: $primaryBlue !important;
+  border-color: $primaryBlue !important;
 }
 
 .noBorder {
-    border-color: transparent;
+  border-color: transparent;
 }
 
 .disabledBorder {
-    border-color: transparent !important;
+  border-color: transparent !important;
 }
 
 .card {
@@ -83,7 +83,7 @@
   height: 100%;
 
   &:hover,
-  &[class*=Mui-checked]:hover {
+  &[class*='Mui-checked']:hover {
     background-color: transparent;
   }
 }
