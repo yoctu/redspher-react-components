@@ -14,19 +14,19 @@ const ShipperBaseTheme = {
     },
     h2: {
       fontWeight: 'bold',
-      color: themeConstants.primary.main,
+      color: themeConstants.black.dark,
       fontSize: '32px',
       lineHeight: '39.01px'
     },
     h3: {
       fontWeight: 'bold',
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '24px',
       lineHeight: '29.26px'
     },
     h4: {
       fontWeight: 'bold',
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '20px',
       lineHeight: '24.38px'
     },
@@ -43,7 +43,7 @@ const ShipperBaseTheme = {
       color: themeConstants.black.dark
     },
     subtitle1: {
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '18px',
       lineHeight: '24px'
     },
