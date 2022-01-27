@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import {
   Card,
@@ -29,6 +29,15 @@ const HtmlTooltip = withStyles(() => ({
     borderRadius: 16
   }
 }))(Tooltip)
+
+const IconButtonStyled = withStyles(() => ({
+  root: {
+    backgroundColor: 'transparent',
+    '&:hover': {
+      backgroundColor: 'transparent'
+    }
+  }
+}))(IconButton)
 
 const ShipperCard = ({
   startIcon,
@@ -84,6 +93,16 @@ const ShipperCard = ({
     if (onclickFnc) onclickFnc(value)
   }
 
+  const [open, setOpen] = useState(false)
+
+  const handleTooltipClose = () => {
+    setOpen(false)
+  }
+
+  const handleTooltipOpen = () => {
+    setOpen(true)
+  }
+
   return (
     <Card
       onClick={onclickAction}
@@ -137,10 +156,23 @@ const ShipperCard = ({
                 <Grid item className={style.tooltipContainer}>
                   <HtmlTooltip
                     title={<React.Fragment>{tooltipValue}</React.Fragment>}
+                    open={open}
+                    onClose={handleTooltipClose}
+                    onOpen={handleTooltipOpen}
                   >
-                    <IconButton className={style.tooltipButton}>
-                      <InformationIcon />
-                    </IconButton>
+                    <IconButtonStyled
+                      disableRipple
+                      className={style.tooltipButton}
+                    >
+                      {open ? (
+                        <InformationIcon
+                          primarycolor={themeConstants.primary.dark}
+                          secondarycolor={themeConstants.primary.dark}
+                        />
+                      ) : (
+                        <InformationIcon />
+                      )}
+                    </IconButtonStyled>
                   </HtmlTooltip>
                 </Grid>
               )}
