@@ -15,6 +15,13 @@ const Connector = withStyles({
   }
 })(StepConnector)
 
+const StepperStyled = withStyles({
+  root: {
+    padding: 0,
+    backgroundColor: 'transparent'
+  }
+})(Stepper)
+
 function StepIcon() {
   return (
     <div>
@@ -30,13 +37,13 @@ const ShipperStepper = () => {
   const steps = Array.apply('poney', Array(2))
   return (
     <div className={style.stepper}>
-      <Stepper connector={<Connector />}>
+      <StepperStyled connector={<Connector />}>
         {steps.map((step, index) => (
           <Step key={`${step}${index}`}>
             <StepLabel StepIconComponent={StepIcon} />
           </Step>
         ))}
-      </Stepper>
+      </StepperStyled>
     </div>
   )
 }
