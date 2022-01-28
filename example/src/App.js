@@ -86,7 +86,8 @@ import {
   ShipperSelect,
   ShipperStepper,
   ShipperAddressStepper,
-  ShipperErrorPopover
+  ShipperErrorPopover,
+  ShipperRequestStepper
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -972,6 +973,11 @@ const ShipperShowCase = () => {
           <br />
           <br />
           <ShipperStepper steps={steps} activeStep={activeStep} />
+          <br />
+          <br />
+          <br />
+          <br />
+          <ShipperRequestStepper />
           <br />
           <br />
           <br />

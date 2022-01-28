@@ -89,6 +89,7 @@ import ShipperSelect from './shipper/ShipperSelect'
 import ShipperStepper from './shipper/ShipperStepper'
 import ShipperAddressStepper from './shipper/ShipperAddressStepper'
 import ShipperErrorPopover from './shipper/ShipperErrorPopover'
+import ShipperRequestStepper from './shipper/ShipperRequestStepper'
 
 export {
   RubiwinButton,
@@ -181,5 +182,6 @@ export {
   ShipperSelect,
   ShipperStepper,
   ShipperAddressStepper,
-  ShipperErrorPopover
+  ShipperErrorPopover,
+  ShipperRequestStepper
 }
