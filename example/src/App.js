@@ -977,7 +977,11 @@ const ShipperShowCase = () => {
           <br />
           <br />
           <br />
-          <ShipperRequestStepper />
+          <ShipperRequestStepper
+            stepperColor={'#000'}
+            iconPrimaryColor={'#2986cc'}
+            iconSecondaryColor={'#f44336'}
+          />
           <br />
           <br />
           <br />
