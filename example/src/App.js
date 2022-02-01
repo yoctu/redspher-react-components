@@ -105,7 +105,7 @@ import {
   ThemeProvider
 } from '@mui/material'
 import { Pagination } from '@mui/lab'
-import { StylesProvider, makeStyles, createStyles } from '@mui/styles'
+import { makeStyles, createStyles } from '@mui/styles'
 import 'redspher-components/dist/index.css'
 import InputAdornment from '@mui/material/InputAdornment'
 import { Typography } from '@mui/material'
@@ -330,7 +330,7 @@ const ShipperShowCase = () => {
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
       <h1>--------- SHIPPER COMPONENTS ---------</h1>
-      <StylesProvider injectFirst>
+
         <ShipperThemeProvider>
           <section
             style={{
@@ -999,7 +999,6 @@ const ShipperShowCase = () => {
           <br />
           <br />
         </ShipperThemeProvider>
-      </StylesProvider>
     </div>
   )
 }

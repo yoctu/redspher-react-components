@@ -23,23 +23,6 @@ const useStepIconStyles = makeStyles({
   active: {
     color: themeConstants.primary.main
   },
-  circle: {
-    width: 6,
-    height: 6,
-    borderRadius: '50%',
-    backgroundColor: 'white',
-    borderWidth: 2,
-    borderColor: themeConstants.primary.main
-  },
-  completed: {
-    width: 6,
-    height: 6,
-    borderRadius: '50%',
-    backgroundColor: 'currentColor',
-    '&:hover': {
-      cursor: 'pointer'
-    }
-  },
   textActive: {
     color: themeConstants.black.dark,
     '&:hover': {
@@ -207,11 +190,7 @@ const ShipperStepper = ({ steps, activeStep }) => {
               >
                 {step.label}
               </Typography>
-              <Box
-                display='flex'
-                justifyContent='center'
-                style={{ marginTop: -70 }}
-              >
+              <Box display='flex' justifyContent='center' sx={{ mt: -9 }}>
                 <Box
                   className={getClassNameIcon(index)}
                   onClick={() => {

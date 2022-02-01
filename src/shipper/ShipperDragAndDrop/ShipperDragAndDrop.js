@@ -7,6 +7,34 @@ import CheckIcon from '../../icons/Shipper/CheckIcon'
 import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 import WarningIcon from '../../icons/Shipper/WarningIcon'
 import { LinearProgress } from '@mui/material'
+import { makeStyles } from '@mui/styles'
+import themeConstants from '../theme/themeConstants'
+
+const useStyles = makeStyles({
+  root: {
+    width: '100%',
+    padding: '10px',
+    minHeight: 'fit-content',
+    backgroundColor: 'transparent',
+    maxWidth: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    border: `1px dashed ${themeConstants.grey.main}`
+  },
+  textContainer: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    margin: 'auto'
+  },
+  text: {
+    margin: 'auto auto auto 10px',
+    fontSize: '12px',
+    color: themeConstants.grey.dark
+  },
+  icon: {
+    margin: 'auto'
+  }
+})
 
 /**
  * @param uploadStatus
@@ -30,6 +58,7 @@ function DragAndDrop({
   const [progress, setProgress] = useState(0)
   const [timer, setTimer] = useState(null)
   const [error, setError] = useState(null)
+  const classes = useStyles()
 
   useEffect(() => {
     if (uploadStatus === 'loading') {
@@ -69,6 +98,12 @@ function DragAndDrop({
   return (
     <div>
       <DropzoneArea
+        classes={{
+          root: classes.root,
+          textContainer: classes.textContainer,
+          text: classes.text,
+          icon: classes.icon
+        }}
         filesLimit={1}
         Icon={UploadIcon}
         dropzoneText={dropzoneText}

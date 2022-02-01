@@ -186,7 +186,7 @@ const ShipperBaseTheme = {
               color: themeConstants.primary.main
             }
           },
-          '& .Mui-selected': {
+          '& .MuiPaginationItem-root.Mui-selected': {
             color: themeConstants.white.main,
             '&:hover': {
               backgroundColor: themeConstants.white.main,
@@ -208,6 +208,7 @@ const ShipperBaseTheme = {
         },
         valueLabel: {
           top: -20,
+          background: 'transparent',
           '& *': {
             background: 'transparent',
             color: themeConstants.grey.dark,
@@ -295,12 +296,12 @@ const ShipperBaseTheme = {
           '& [class*="MuiFormLabel-root"]': {
             color: themeConstants.grey.dark,
             zIndex: 2,
-            fontSize: '14px',
             pointerEvents: 'none',
             top: '7px',
             '&.Mui-focused, &[class*="MuiFormLabel-filled"]': {
               color: themeConstants.grey.dark,
-              paddingLeft: '0px'
+              paddingLeft: '0px',
+              transform: 'translate(14px, -9px) scale(0.75)'
             }
           },
           '& [class*="MuiInputBase-root"]': {
@@ -315,7 +316,8 @@ const ShipperBaseTheme = {
               display: 'none'
             },
             '& input': {
-              padding: '0px'
+              padding: '0px',
+              border: '0px'
             },
             '&:hover': {
               boxShadow: 'inset 0px 0px 0px 1px ' + themeConstants.grey.main
@@ -331,8 +333,8 @@ const ShipperBaseTheme = {
                 height: '16px'
               },
               '& [class*="MuiPhoneNumber-flagButton"]': {
-                width: '16px',
-                height: '16px'
+                height: '16px',
+                minWidth: '16px'
               }
             },
             '&.Mui-error': {
@@ -364,51 +366,6 @@ const ShipperBaseTheme = {
                 borderRadius: '16px'
               }
             }
-          }
-        }
-      }
-    },
-    MuiDropzoneArea: {
-      styleOverrides: {
-        root: {
-          width: '100%',
-          padding: '10px',
-          minHeight: 'fit-content',
-          backgroundColor: 'transparent',
-          maxWidth: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          border: '1px dashed ' + themeConstants.grey.main,
-          '&  [class*="MuiDropzoneArea-textContainer"]': {
-            display: 'flex',
-            flexDirection: 'row-reverse',
-            margin: 'auto',
-            '&  [class*="MuiTypography-root"]': {
-              marginLeft: '10px',
-              margin: 'auto',
-              fontFamily: ['Montserrat', 'sans-serif'].join(','),
-              fontStyle: 'normal',
-              fontWeight: 'normal',
-              fontSize: '12px',
-              color: themeConstants.grey.dark
-            },
-            '&  [class*="MuiSvgIcon-root"]': {
-              margin: 'auto'
-            }
-          },
-          '&  [class*="MuiDropzonePreviewList-root"]': {
-            marginTop: '20px',
-            maxWidth: '100%',
-            '& [class*="MuiDropzonePreviewList-imageContainer"],& [class*="MuiChip-root"]':
-              {
-                maxWidth: '100%',
-                '&  [class*="MuiChip-label"]': {
-                  color: themeConstants.grey.dark,
-                  overflow: 'hidden',
-                  whiteSpace: 'nowrap',
-                  textOverflow: 'ellipsis'
-                }
-              }
           }
         }
       }
