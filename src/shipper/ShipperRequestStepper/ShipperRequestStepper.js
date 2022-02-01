@@ -3,15 +3,17 @@ import style from './ShipperRequestStepper.module.scss'
 import { Stepper, Step, StepLabel, StepConnector } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles'
 
-import themeConstants from '../theme/themeConstants'
 import PinIcon from '../../icons/Shipper/PinIcon'
 
 const Connector = withStyles({
   line: {
     marginTop: -2,
     marginLeft: -7,
-    borderColor: themeConstants.white.main,
+    borderColor: (p) => p.$stepperColor,
     border: '1px dashed'
+  },
+  props: {
+    poney: 'prout'
   }
 })(StepConnector)
 
@@ -22,25 +24,32 @@ const StepperStyled = withStyles({
   }
 })(Stepper)
 
-function StepIcon() {
+function StepIcon({ iconPrimaryColor, iconSecondaryColor }) {
   return (
     <div>
       <PinIcon
-        primarycolor={themeConstants.white.main}
-        secondarycolor={themeConstants.white.main}
+        primarycolor={iconPrimaryColor}
+        secondarycolor={iconSecondaryColor}
       />
     </div>
   )
 }
 
-const ShipperStepper = () => {
+const ShipperStepper = ({
+  stepperColor,
+  iconPrimaryColor,
+  iconSecondaryColor
+}) => {
   const steps = Array.apply('poney', Array(2))
   return (
     <div className={style.stepper}>
-      <StepperStyled connector={<Connector />}>
+      <StepperStyled connector={<Connector $stepperColor={stepperColor} />}>
         {steps.map((step, index) => (
           <Step key={`${step}${index}`}>
-            <StepLabel StepIconComponent={StepIcon} />
+            <StepLabel
+              StepIconComponent={StepIcon}
+              StepIconProps={{ iconPrimaryColor, iconSecondaryColor }}
+            />
           </Step>
         ))}
       </StepperStyled>
