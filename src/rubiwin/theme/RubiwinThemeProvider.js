@@ -1,9 +1,10 @@
 import React from 'react'
 import rubiwinBaseTheme from './RubiwinBaseTheme'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core'
+import { ThemeProvider } from '@mui/material'
+import { createTheme } from '@mui/material/styles'
 
 const RubiwinThemeProvider = ({ children }) => {
-  const theme = createMuiTheme(rubiwinBaseTheme)
+  const theme = createTheme(rubiwinBaseTheme)
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
 

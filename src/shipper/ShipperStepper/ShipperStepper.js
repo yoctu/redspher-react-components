@@ -5,11 +5,10 @@ import {
   Step,
   StepLabel,
   StepConnector,
-  makeStyles,
   Typography,
   Box
-} from '@material-ui/core'
-import { withStyles } from '@material-ui/styles'
+} from '@mui/material'
+import { withStyles, makeStyles } from '@mui/styles'
 import clsx from 'clsx'
 import themeConstants from '../theme/themeConstants'
 

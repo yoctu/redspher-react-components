@@ -1,6 +1,6 @@
 import React from 'react'
-import { ThemeProvider } from '@material-ui/core/styles'
-import { createTheme } from '@material-ui/core'
+import { ThemeProvider } from '@mui/material/styles'
+import { createTheme } from '@mui/material'
 import ShipperBaseTheme from './ShipperBaseTheme'
 
 export const defaultTheme = createTheme(ShipperBaseTheme)

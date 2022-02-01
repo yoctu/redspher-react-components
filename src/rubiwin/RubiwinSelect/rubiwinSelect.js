@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Select from '@material-ui/core/Select'
+import Select from '@mui/material/Select'
 import style from './rubiwinSelect.module.scss'
 
 /** full docs : https://material-ui.com/components/selects/ */

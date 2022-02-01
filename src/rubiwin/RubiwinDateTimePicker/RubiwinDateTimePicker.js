@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { DateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers'
-import DateFnsUtils from '@date-io/date-fns'
-import { createTheme, ThemeProvider } from '@material-ui/core'
+import AdapterDateFns from '@mui/lab/AdapterDateFns'
+import { DateTimePicker, LocalizationProvider } from '@mui/lab'
+// import DateFnsUtils from '@date-io/date-fns'
+import { createTheme, TextField, ThemeProvider } from '@mui/material'
 
 const defaultMaterialTheme = createTheme({
   palette: {
@@ -31,7 +32,7 @@ const RubiwinDateTimePicker = ({
   TextFieldComponent,
   ...props
 }) => (
-  <MuiPickersUtilsProvider utils={DateFnsUtils}>
+  <LocalizationProvider dateAdapter={AdapterDateFns}>
     <ThemeProvider theme={defaultMaterialTheme}>
       <DateTimePicker
         label={label}
@@ -51,10 +52,11 @@ const RubiwinDateTimePicker = ({
         onError={onError}
         variant={variant}
         TextFieldComponent={TextFieldComponent}
+        renderInput={(props) => <TextField {...props} />}
         {...props}
       />
     </ThemeProvider>
-  </MuiPickersUtilsProvider>
+  </LocalizationProvider>
 )
 
 RubiwinDateTimePicker.propTypes = {

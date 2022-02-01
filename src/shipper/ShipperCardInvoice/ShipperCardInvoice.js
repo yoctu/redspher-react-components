@@ -8,7 +8,7 @@ import {
   Divider,
   Button,
   Box
-} from '@material-ui/core'
+} from '@mui/material'
 import style from './ShipperCardInvoice.module.scss'
 import themeConstants from '../theme/themeConstants'
 import DownloadIcon from '../../icons/Shipper/DownloadIcon'

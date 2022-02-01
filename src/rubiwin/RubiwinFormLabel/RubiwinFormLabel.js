@@ -1,8 +1,8 @@
 import React from 'react'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
+import FormControlLabel from '@mui/material/FormControlLabel'
 import PropTypes from 'prop-types'
 import style from './RubiwinFormLabel.module.scss'
-import { StylesProvider } from '@material-ui/core/styles'
+import { StylesProvider } from '@mui/styles'
 
 /** full doc: https://material-ui.com/api/form-control-label/ */
 const RubiwinFormLabel = ({

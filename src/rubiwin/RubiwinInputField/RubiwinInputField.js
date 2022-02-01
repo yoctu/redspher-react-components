@@ -1,9 +1,9 @@
 import React from 'react'
-import Input from '@material-ui/core/Input'
+import Input from '@mui/material/Input'
 import PropTypes from 'prop-types'
 import style from './RubiwinInputField.module.scss'
 
-import { StylesProvider } from '@material-ui/core/styles'
+import { StylesProvider } from '@mui/styles'
 
 /** this is a simple input
  * full doc: https://material-ui.com/api/input/

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import style from './ShipperRangeSlider.module.scss'
-import { Slider, Typography } from '@material-ui/core'
+import { Slider, Typography } from '@mui/material'
 import PropTypes from 'prop-types'
 
 const ShipperRangeSlider = ({

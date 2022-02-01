@@ -9,7 +9,7 @@ import {
   Radio,
   Tooltip,
   IconButton
-} from '@material-ui/core'
+} from '@mui/material'
 import style from './ShipperCard.module.scss'
 import themeConstants from '../theme/themeConstants'
 import VanIcon from '../../icons/Shipper/VanIcon'
@@ -20,7 +20,7 @@ import InformationIcon from '../../icons/Shipper/InformationIcon'
 import DriverIcon from '../../icons/Shipper/DriverIcon'
 import TailLiftIcon from '../../icons/Shipper/TailLiftIcon'
 import SideLoadIcon from '../../icons/Shipper/SideLoadIcon'
-import { withStyles } from '@material-ui/styles'
+import { withStyles } from '@mui/styles'
 
 const HtmlTooltip = withStyles(() => ({
   tooltip: {

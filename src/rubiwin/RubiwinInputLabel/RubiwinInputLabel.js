@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import InputLabel from '@material-ui/core/InputLabel'
+import InputLabel from '@mui/material/InputLabel'
 import style from './RubiwinInputLabel.module.scss'
-import { StylesProvider } from '@material-ui/core/styles'
+import { StylesProvider } from '@mui/styles'
 
 const RubiwinInputLabel = ({
   children,

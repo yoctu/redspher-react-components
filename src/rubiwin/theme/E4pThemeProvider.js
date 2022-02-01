@@ -1,9 +1,10 @@
 import React from 'react'
-import { ThemeProvider, createMuiTheme } from '@material-ui/core'
+import { ThemeProvider } from '@mui/material'
+import { createTheme } from '@mui/material/styles'
 import E4pTheme from './E4pTheme'
 
 const E4pThemeProvider = ({ children }) => {
-  const theme = createMuiTheme(E4pTheme)
+  const theme = createTheme(E4pTheme)
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
 

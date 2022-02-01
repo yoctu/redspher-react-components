@@ -1,7 +1,7 @@
 import React from 'react'
 import MuiPhoneNumber from 'material-ui-phone-number'
 import PropTypes from 'prop-types'
-import withStyles from '@material-ui/core/styles/withStyles'
+import withStyles from '@mui/styles/withStyles'
 
 const styles = () => ({
   flagButton: {

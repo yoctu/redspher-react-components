@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StylesProvider } from '@material-ui/core/styles'
-import {
-  KeyboardTimePicker,
-  MuiPickersUtilsProvider
-} from '@material-ui/pickers'
-import DateFnsUtils from '@date-io/date-fns'
+import { StylesProvider } from '@mui/styles'
+// import { KeyboardTimePicker } from '@material-ui/pickers' old
+import AdapterDateFns from '@mui/lab/AdapterDateFns'
+import { LocalizationProvider, TimePicker } from '@mui/lab'
+// import DateFnsUtils from '@date-io/date-fns' replaced by AdapterDateFns
+import { TextField } from '@mui/material'
 
 /** This is a TimePicker branded for Amazon-Webapp
  * full doc : https://material-ui-pickers.dev/api/TimePicker */
@@ -20,9 +20,9 @@ const AmazonTimePicker = ({
   emptyLabel = '--:--',
   KeyboardButtonProps = {}
 }) => (
-  <MuiPickersUtilsProvider utils={DateFnsUtils}>
+  <LocalizationProvider dateAdapter={AdapterDateFns}>
     <StylesProvider injectFirst>
-      <KeyboardTimePicker
+      <TimePicker
         ampm={ampm}
         value={value}
         disabled={disabled}
@@ -32,9 +32,10 @@ const AmazonTimePicker = ({
         onClick={onClick}
         onChange={onChange}
         KeyboardButtonProps={KeyboardButtonProps}
+        renderInput={(props) => <TextField {...props} />}
       />
     </StylesProvider>
-  </MuiPickersUtilsProvider>
+  </LocalizationProvider>
 )
 
 AmazonTimePicker.propTypes = {

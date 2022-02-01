@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Checkbox from '@material-ui/core/Checkbox'
-import { StylesProvider } from '@material-ui/core/styles'
+import Checkbox from '@mui/material/Checkbox'
+import { StylesProvider } from '@mui/styles'
 import style from './RubiwinCheckbox.module.scss'
 
 /** this is a Mui Checkbox branded for Rubiwin

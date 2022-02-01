@@ -96,8 +96,6 @@ import {
   Radio,
   Select,
   Chip,
-  createStyles,
-  makeStyles,
   Grid,
   FormControl,
   InputLabel,
@@ -105,12 +103,12 @@ import {
   FormHelperText,
   FormControlLabel,
   ThemeProvider
-} from '@material-ui/core'
-import { Pagination } from '@material-ui/lab'
-import { StylesProvider } from '@material-ui/core/styles'
+} from '@mui/material'
+import { Pagination } from '@mui/lab'
+import { StylesProvider, makeStyles, createStyles } from '@mui/styles'
 import 'redspher-components/dist/index.css'
-import InputAdornment from '@material-ui/core/InputAdornment'
-import { Typography } from '@material-ui/core/index'
+import InputAdornment from '@mui/material/InputAdornment'
+import { Typography } from '@mui/material'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -834,7 +832,7 @@ const ShipperShowCase = () => {
                 Error message
               </FormHelperText>
             </FormControl>
-            <br />
+
             <FormControl error>
               <InputLabel htmlFor='input-test'>Label</InputLabel>
               <Input
@@ -851,7 +849,7 @@ const ShipperShowCase = () => {
                 Error message
               </FormHelperText>
             </FormControl>
-            <br />
+
             <FormControl
               error
               onMouseEnter={handlePopoverOpen}
@@ -870,7 +868,6 @@ const ShipperShowCase = () => {
                 handlePopoverClose={handlePopoverClose}
               />
             </FormControl>
-            <br />
             <FormControl>
               <InputLabel htmlFor='input-test'>Label</InputLabel>
               <Input
@@ -880,17 +877,13 @@ const ShipperShowCase = () => {
                 aria-describedby='component-error-text'
               />
             </FormControl>
-            <br />
-            <br />
             <FormControl>
               <InputLabel htmlFor='select-test'>Select label</InputLabel>
-              <ShipperSelect>
+              <ShipperSelect label={'Select label'}>
                 <MenuItem value={1}>One</MenuItem>
                 <MenuItem value={2}>Two</MenuItem>
               </ShipperSelect>
             </FormControl>
-            <br />
-            <br />
 
             <ShipperPhoneNumber
               label={'Phone number'}
@@ -1011,13 +1004,15 @@ const ShipperShowCase = () => {
   )
 }
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      width: 300 + theme.spacing(3) * 2,
-      marginLeft: theme.spacing(2)
-    }
-  })
+const useStyles = makeStyles((theme) => {
+  console.log(theme)
+    return createStyles({
+      root: {
+        // width: `calc('300px' + (${theme.spacing(3)} * 2)`,
+        // marginLeft: theme.spacing(2)
+      }
+    })
+  }
 )
 
 const testRedenderTwo = () => {

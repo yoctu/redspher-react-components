@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { DropzoneArea } from 'material-ui-dropzone'
+import { DropzoneArea } from 'react-mui-dropzone'
 import UploadIcon from '../../icons/Shipper/UploadIcon'
 import styles from './ShipperDragAndDrop.module.scss'
 import LoadingIcon from '../../icons/Shipper/LoadingIcon'
 import CheckIcon from '../../icons/Shipper/CheckIcon'
 import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 import WarningIcon from '../../icons/Shipper/WarningIcon'
-import { LinearProgress } from '@material-ui/core'
+import { LinearProgress } from '@mui/material'
 
 /**
  * @param uploadStatus

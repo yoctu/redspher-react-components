@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NextButton from '@material-ui/core/Button'
-import { StylesProvider } from '@material-ui/core/styles'
+import NextButton from '@mui/material/Button'
+import { StylesProvider } from '@mui/styles'
 import style from './RubiwinButton.module.scss'
 
 /** This is a RubiwinButton branded for Rubiwin

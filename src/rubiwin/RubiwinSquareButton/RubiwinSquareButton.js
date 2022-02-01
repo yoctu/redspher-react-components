@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StylesProvider } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
+import { StylesProvider } from '@mui/styles'
+import Button from '@mui/material/Button'
 import style from './RubiwinSquareButton.module.scss'
 
 const RubiwinSquareButton = ({

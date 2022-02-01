@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './ShipperRequestStepper.module.scss'
-import { Stepper, Step, StepLabel, StepConnector } from '@material-ui/core'
-import { withStyles } from '@material-ui/styles'
+import { Stepper, Step, StepLabel, StepConnector } from '@mui/material'
+import { withStyles } from '@mui/styles'
 
 import themeConstants from '../theme/themeConstants'
 import PinIcon from '../../icons/Shipper/PinIcon'
