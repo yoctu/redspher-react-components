@@ -8,6 +8,7 @@ import {
   RubiwinInputLabel,
   RubiwinSquareButton,
   RubiwinBackButton,
+  RubiwinSelect,
   AmazonTimePicker,
   RubiwinDateTimePicker,
   DirectBusinessIcon,
@@ -164,6 +165,14 @@ const RubiWinShowCase = () => {
         text='Click me'
         className='rubiwin'
       />
+      <br />
+      <FormControl fullWidth>
+        <InputLabel>Select option</InputLabel>
+        <RubiwinSelect label="Select option">
+          <MenuItem value={0}>Option 1</MenuItem>
+          <MenuItem value={1}>Option 2</MenuItem>
+        </RubiwinSelect>
+      </FormControl>
       <br />
       <RubiwinBackButton text={<>test</>} onClick={sayHello} />
       <br />

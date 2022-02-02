@@ -2,9 +2,9 @@
 
 exports[`is checked 1`] = `
 <span
-  aria-disabled={false}
-  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root root MuiCheckbox-colorPrimary checkbox  PrivateSwitchBase-checked-2 Mui-checked checked MuiIconButton-colorPrimary"
+  className="root MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root checked Mui-checked checkbox  css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
   onBlur={[Function]}
+  onContextMenu={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -17,39 +17,34 @@ exports[`is checked 1`] = `
   onTouchStart={[Function]}
   tabIndex={null}
 >
-  <span
-    className="MuiIconButton-label"
-  >
-    <input
-      checked={true}
-      className="PrivateSwitchBase-input-4"
-      data-indeterminate={false}
-      disabled={false}
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <svg
-      aria-hidden={true}
-      className="MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-      />
-    </svg>
-  </span>
-  <span
-    className="MuiTouchRipple-root"
+  <input
+    checked={true}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    data-indeterminate={false}
+    disabled={false}
+    onChange={[Function]}
+    type="checkbox"
   />
+  <svg
+    aria-hidden={true}
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+    data-testid="CheckBoxIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+    />
+  </svg>
 </span>
 `;
 
 exports[`is disabled 1`] = `
 <span
   aria-disabled={true}
-  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root root MuiCheckbox-colorPrimary checkbox  PrivateSwitchBase-disabled-3 Mui-disabled disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled"
+  className="root MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root disabled Mui-disabled root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root disabled Mui-disabled checkbox  css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
   onBlur={[Function]}
+  onContextMenu={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -62,36 +57,33 @@ exports[`is disabled 1`] = `
   onTouchStart={[Function]}
   tabIndex={-1}
 >
-  <span
-    className="MuiIconButton-label"
+  <input
+    checked={false}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    data-indeterminate={false}
+    disabled={true}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <svg
+    aria-hidden={true}
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+    data-testid="CheckBoxOutlineBlankIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <input
-      checked={false}
-      className="PrivateSwitchBase-input-4"
-      data-indeterminate={false}
-      disabled={true}
-      onChange={[Function]}
-      type="checkbox"
+    <path
+      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
     />
-    <svg
-      aria-hidden={true}
-      className="MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-      />
-    </svg>
-  </span>
+  </svg>
 </span>
 `;
 
 exports[`is small 1`] = `
 <span
-  aria-disabled={false}
-  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root root MuiCheckbox-colorPrimary checkbox testClass MuiIconButton-colorPrimary"
+  className="root MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root checkbox testClass css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
   onBlur={[Function]}
+  onContextMenu={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -104,42 +96,36 @@ exports[`is small 1`] = `
   onTouchStart={[Function]}
   tabIndex={null}
 >
-  <span
-    className="MuiIconButton-label"
-  >
-    <input
-      checked={false}
-      className="PrivateSwitchBase-input-4"
-      data-indeterminate={false}
-      disabled={false}
-      id="rubiwin"
-      name="rubiname"
-      onChange={[Function]}
-      type="checkbox"
-      value="testValue"
-    />
-    <svg
-      aria-hidden={true}
-      className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-      />
-    </svg>
-  </span>
-  <span
-    className="MuiTouchRipple-root"
+  <input
+    checked={false}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    data-indeterminate={false}
+    disabled={false}
+    id="rubiwin"
+    name="rubiname"
+    onChange={[Function]}
+    type="checkbox"
+    value="testValue"
   />
+  <svg
+    aria-hidden={true}
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+    data-testid="CheckBoxOutlineBlankIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    />
+  </svg>
 </span>
 `;
 
 exports[`renders correctly props object 1`] = `
 <span
-  aria-disabled={false}
-  className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root root MuiCheckbox-colorPrimary checkbox testClass MuiIconButton-colorPrimary"
+  className="root MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root checkbox testClass css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
   onBlur={[Function]}
+  onContextMenu={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -152,30 +138,27 @@ exports[`renders correctly props object 1`] = `
   onTouchStart={[Function]}
   tabIndex={null}
 >
-  <span
-    className="MuiIconButton-label"
+  <input
+    checked={false}
+    className="PrivateSwitchBase-input css-1m9pwf3"
+    data-indeterminate={false}
+    disabled={false}
+    id="rubiwin"
+    name="rubiname"
+    onChange={[Function]}
+    type="checkbox"
+    value="testValue"
+  />
+  <svg
+    aria-hidden={true}
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+    data-testid="CheckBoxOutlineBlankIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <input
-      checked={false}
-      className="PrivateSwitchBase-input-4"
-      data-indeterminate={false}
-      disabled={false}
-      id="rubiwin"
-      name="rubiname"
-      onChange={[Function]}
-      type="checkbox"
-      value="testValue"
+    <path
+      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
     />
-    <svg
-      aria-hidden={true}
-      className="MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-      />
-    </svg>
-  </span>
+  </svg>
 </span>
 `;

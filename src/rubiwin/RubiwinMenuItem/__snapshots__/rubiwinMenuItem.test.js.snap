@@ -2,9 +2,9 @@
 
 exports[`renders as a div 1`] = `
 <div
-  aria-disabled={false}
-  className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root root testClass MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+  className="root MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root testClass css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root"
   onBlur={[Function]}
+  onContextMenu={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -17,18 +17,14 @@ exports[`renders as a div 1`] = `
   onTouchStart={[Function]}
   role="menuitem"
   tabIndex={-1}
->
-  <span
-    className="MuiTouchRipple-root"
-  />
-</div>
+/>
 `;
 
 exports[`renders correctly 1`] = `
 <li
-  aria-disabled={false}
-  className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root root testClass MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+  className="root MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root testClass css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root"
   onBlur={[Function]}
+  onContextMenu={[Function]}
   onDragLeave={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}

@@ -2,37 +2,51 @@
 
 exports[`renders correctly props object 1`] = `
 <div
-  className="MuiFormControl-root MuiTextField-root testClass"
-  format="dd/MM/yyyy HH:mm"
-  onClick={[Function]}
-  onError={[Function]}
-  onKeyDown={[Function]}
+  className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
 >
   <label
-    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-    data-shrink={true}
+    className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-5qcp56-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink={false}
+    htmlFor="mui-1"
+    id="mui-1-label"
   >
     test
   </label>
   <div
-    className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-188x4da-MuiInputBase-root-MuiOutlinedInput-root"
     onClick={[Function]}
   >
     <input
       aria-invalid={false}
+      aria-label="Choose date, selected date is Jan 1, 2018"
+      aria-readonly={true}
       autoFocus={false}
-      className="MuiInputBase-input MuiInput-input"
+      className="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
       disabled={false}
+      id="mui-1"
       onAnimationStart={[Function]}
       onBlur={[Function]}
       onChange={[Function]}
+      onClick={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
       readOnly={true}
       required={false}
       type="text"
       value="01/01/2018 01:00"
     />
+    <fieldset
+      aria-hidden={true}
+      className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+    >
+      <legend
+        className="css-173wfxe"
+      >
+        <span>
+          test
+        </span>
+      </legend>
+    </fieldset>
   </div>
-  
 </div>
 `;

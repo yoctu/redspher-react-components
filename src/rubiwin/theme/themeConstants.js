@@ -28,6 +28,17 @@ const constants = {
     sm: 600,
     xl: 1920,
     xs: 0
+  },
+  borderRadius: {
+    sm: '8px',
+    main: '16px'
+  },
+  typography: {
+    smaller: '12px',
+    fontFamily: ['Montserrat', 'sans-serif'].join(',')
+  },
+  boxShadow: {
+    main: '0px 4px 4px rgba(0, 0, 0, 0.25)'
   }
 }
 

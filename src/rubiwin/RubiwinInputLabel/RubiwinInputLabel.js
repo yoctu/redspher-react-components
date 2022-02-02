@@ -11,17 +11,15 @@ const RubiwinInputLabel = ({
   htmlFor,
   className
 }) => (
-  <StylesProvider injectFirst>
-    <InputLabel
-      disabled={disabled}
-      error={error}
-      htmlFor={htmlFor}
-      classes={{ root: style.root }}
-      className={className}
-    >
-      {children}
-    </InputLabel>
-  </StylesProvider>
+  <InputLabel
+    disabled={disabled}
+    error={error}
+    htmlFor={htmlFor}
+    classes={{ root: style.root }}
+    className={className}
+  >
+    {children}
+  </InputLabel>
 )
 
 RubiwinInputLabel.propTypes = {

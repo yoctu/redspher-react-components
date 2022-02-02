@@ -2,7 +2,6 @@ import React from 'react'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import PropTypes from 'prop-types'
 import style from './RubiwinFormLabel.module.scss'
-import { StylesProvider } from '@mui/styles'
 
 /** full doc: https://material-ui.com/api/form-control-label/ */
 const RubiwinFormLabel = ({
@@ -17,20 +16,18 @@ const RubiwinFormLabel = ({
   className = ''
 }) => {
   return (
-    <StylesProvider injectFirst>
-      <FormControlLabel
-        control={control}
-        label={label}
-        checked={checked}
-        disabled={disabled}
-        labelPlacement={labelPlacement}
-        onChange={onChange}
-        value={value}
-        inputRef={inputRef}
-        className={`${className}`}
-        classes={{ label: style.label }}
-      />
-    </StylesProvider>
+    <FormControlLabel
+      control={control}
+      label={label}
+      checked={checked}
+      disabled={disabled}
+      labelPlacement={labelPlacement}
+      onChange={onChange}
+      value={value}
+      inputRef={inputRef}
+      className={`${className}`}
+      classes={{ label: style.label }}
+    />
   )
 }
 

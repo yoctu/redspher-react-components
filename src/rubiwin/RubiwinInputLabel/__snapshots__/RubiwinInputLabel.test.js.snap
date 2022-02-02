@@ -2,19 +2,19 @@
 
 exports[`has error 1`] = `
 <label
-  className="MuiFormLabel-root MuiInputLabel-root root MuiInputLabel-animated Mui-error Mui-error"
+  className="root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-9npbnl-MuiFormLabel-root-MuiInputLabel-root"
 />
 `;
 
 exports[`is disabled 1`] = `
 <label
-  className="MuiFormLabel-root MuiInputLabel-root root MuiInputLabel-animated Mui-disabled Mui-disabled"
+  className="root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-root MuiFormLabel-colorPrimary Mui-disabled css-9npbnl-MuiFormLabel-root-MuiInputLabel-root"
 />
 `;
 
 exports[`renders correctly props object 1`] = `
 <label
-  className="MuiFormLabel-root MuiInputLabel-root root addClass MuiInputLabel-animated"
+  className="root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-root MuiFormLabel-colorPrimary addClass css-9npbnl-MuiFormLabel-root-MuiInputLabel-root"
   htmlFor="textId"
 >
   test text

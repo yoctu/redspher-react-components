@@ -43,7 +43,7 @@ it('has an input element added', () => {
   expect(tree).toMatchSnapshot()
 })
 
-it('is multiline, has 4 rows and 5 max rows', () => {
+it('is multiline, has 5 rows and 6 max rows', () => {
   const tree = renderer
     .create(<RubiwinInputField rows={5} rowsMax={6} />)
     .toJSON()

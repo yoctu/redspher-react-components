@@ -21,20 +21,18 @@ const AmazonTimePicker = ({
   KeyboardButtonProps = {}
 }) => (
   <LocalizationProvider dateAdapter={AdapterDateFns}>
-    <StylesProvider injectFirst>
-      <TimePicker
-        ampm={ampm}
-        value={value}
-        disabled={disabled}
-        className={className}
-        helperText={helperText}
-        emptyLabel={emptyLabel}
-        onClick={onClick}
-        onChange={onChange}
-        KeyboardButtonProps={KeyboardButtonProps}
-        renderInput={(props) => <TextField {...props} />}
-      />
-    </StylesProvider>
+    <TimePicker
+      ampm={ampm}
+      value={value}
+      disabled={disabled}
+      className={className}
+      helperText={helperText}
+      emptyLabel={emptyLabel}
+      onClick={onClick}
+      onChange={onChange}
+      KeyboardButtonProps={KeyboardButtonProps}
+      renderInput={(props) => <TextField {...props} />}
+    />
   </LocalizationProvider>
 )
 

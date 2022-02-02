@@ -1,6 +1,7 @@
 import themeConstants from './themeConstants'
 
 const rubiwinBaseTheme = {
+  spacing: 4,
   palette: {
     primary: {
       main: themeConstants.primary.main,
