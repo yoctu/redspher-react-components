@@ -1,13 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import style from './RubiwinBackButton.module.scss'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
+import { Box } from '@mui/material'
 
 const RubiwinBackButton = ({ onClick, text }) => (
-  <div className={style.backButton} onClick={onClick}>
+  <Box
+    onClick={onClick}
+    sx={{
+      cursor: 'pointer',
+      display: 'flex',
+      alignItems: 'center',
+      padding: '5px'
+    }}
+  >
     <ArrowBackIosIcon />
     {text}
-  </div>
+  </Box>
 )
 
 RubiwinBackButton.propTypes = {

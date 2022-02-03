@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import InputLabel from '@mui/material/InputLabel'
-import style from './RubiwinInputLabel.module.scss'
-import { StylesProvider } from '@mui/styles'
 
 const RubiwinInputLabel = ({
   children,
@@ -15,7 +13,6 @@ const RubiwinInputLabel = ({
     disabled={disabled}
     error={error}
     htmlFor={htmlFor}
-    classes={{ root: style.root }}
     className={className}
   >
     {children}

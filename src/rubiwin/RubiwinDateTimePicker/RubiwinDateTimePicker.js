@@ -2,14 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
 import { DateTimePicker, LocalizationProvider } from '@mui/lab'
-// import DateFnsUtils from '@date-io/date-fns'
-import { createTheme, TextField, ThemeProvider } from '@mui/material'
-
-const defaultMaterialTheme = createTheme({
-  palette: {
-    primary: { main: '#00c3ff' }
-  }
-})
+import { TextField } from '@mui/material'
 
 /** full documentation : https://material-ui-pickers.dev/api/DateTimePicker */
 const RubiwinDateTimePicker = ({
@@ -33,29 +26,27 @@ const RubiwinDateTimePicker = ({
   ...props
 }) => (
   <LocalizationProvider dateAdapter={AdapterDateFns}>
-    <ThemeProvider theme={defaultMaterialTheme}>
-      <DateTimePicker
-        label={label}
-        value={value}
-        onChange={onChange}
-        allowKeyboardControl={allowKeyboardControl}
-        ampm={ampm}
-        disabled={disabled}
-        disableFuture={disableFuture}
-        disablePast={disablePast}
-        emptyLabel={emptyLabel}
-        format={format}
-        className={className}
-        minDate={minDate}
-        maxDate={maxDate}
-        onClose={onClose}
-        onError={onError}
-        variant={variant}
-        TextFieldComponent={TextFieldComponent}
-        renderInput={(props) => <TextField {...props} />}
-        {...props}
-      />
-    </ThemeProvider>
+    <DateTimePicker
+      label={label}
+      value={value}
+      onChange={onChange}
+      allowKeyboardControl={allowKeyboardControl}
+      ampm={ampm}
+      disabled={disabled}
+      disableFuture={disableFuture}
+      disablePast={disablePast}
+      emptyLabel={emptyLabel}
+      format={format}
+      className={className}
+      minDate={minDate}
+      maxDate={maxDate}
+      onClose={onClose}
+      onError={onError}
+      variant={variant}
+      TextFieldComponent={TextFieldComponent}
+      renderInput={(props) => <TextField {...props} />}
+      {...props}
+    />
   </LocalizationProvider>
 )
 

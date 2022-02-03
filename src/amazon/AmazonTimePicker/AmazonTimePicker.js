@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StylesProvider } from '@mui/styles'
-// import { KeyboardTimePicker } from '@material-ui/pickers' old
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
 import { LocalizationProvider, TimePicker } from '@mui/lab'
-// import DateFnsUtils from '@date-io/date-fns' replaced by AdapterDateFns
 import { TextField } from '@mui/material'
 
 /** This is a TimePicker branded for Amazon-Webapp

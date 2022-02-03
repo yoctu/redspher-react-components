@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Checkbox from '@mui/material/Checkbox'
-import style from './RubiwinCheckbox.module.scss'
 
 /** this is a Mui Checkbox branded for Rubiwin
  * full dod : https://material-ui.com/api/checkbox/
@@ -19,7 +18,7 @@ const RubiwinCheckbox = ({
 }) => (
   <Checkbox
     checked={checked}
-    className={`${style.checkbox} ${className}`}
+    className={className}
     disabled={disabled}
     id={id}
     onChange={onChange}
@@ -28,11 +27,6 @@ const RubiwinCheckbox = ({
     value={value}
     name={name}
     color='primary'
-    classes={{
-      root: style.root,
-      checked: style.checked,
-      disabled: style.disabled
-    }}
   />
 )
 

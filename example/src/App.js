@@ -142,7 +142,14 @@ const RubiWinShowCase = () => {
         onChange={handleChange}
         checked={checked}
         inputProps={{ 'aria-label': 'primary checkbox' }}
-        name='rubiwinCheck'
+        name='rubiwinCheck1'
+      />
+      <br />
+      <RubiwinCheckbox
+        onChange={handleChange}
+        inputProps={{ 'aria-label': 'primary checkbox' }}
+        name='rubiwinCheck2'
+        disabled
       />
       <br />
       <RubiwinFormLabel
@@ -156,6 +163,8 @@ const RubiWinShowCase = () => {
       <br />
       <RubiwinInputField {...testProps} />
       <br />
+      <RubiwinInputField {...testProps} disabled />
+      <br />
       <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
       <br />
       <RubiwinInputField id='test' />
@@ -166,7 +175,7 @@ const RubiWinShowCase = () => {
         className='rubiwin'
       />
       <br />
-      <FormControl fullWidth>
+      <FormControl variant="standard" fullWidth>
         <InputLabel>Select option</InputLabel>
         <RubiwinSelect label="Select option">
           <MenuItem value={0}>Option 1</MenuItem>

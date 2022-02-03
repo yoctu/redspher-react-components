@@ -17,10 +17,15 @@ const constants = {
   grey: {
     main: '#171F46',
     light: '#8F8F8F',
-    lighter: '#F4F4F4'
+    lighter: '#F4F4F4',
+    dynamite: '#C4C4C4',
+    disable: '#E5E5E5'
   },
   white: {
     main: '#FFF'
+  },
+  red: {
+    main: '#FF003B'
   },
   breakpoints: {
     lg: 1280,
@@ -35,10 +40,14 @@ const constants = {
   },
   typography: {
     smaller: '12px',
+    small: '14px',
     fontFamily: ['Montserrat', 'sans-serif'].join(',')
   },
   boxShadow: {
     main: '0px 4px 4px rgba(0, 0, 0, 0.25)'
+  },
+  transition: {
+    default: 'all .2s ease'
   }
 }
 

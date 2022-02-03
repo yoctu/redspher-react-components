@@ -1,7 +1,6 @@
 import React from 'react'
 import Input from '@mui/material/Input'
 import PropTypes from 'prop-types'
-import style from './RubiwinInputField.module.scss'
 
 /** this is a simple input
  * full doc: https://material-ui.com/api/input/
@@ -33,12 +32,6 @@ const RubiwinInputField = ({
 }) => (
   <Input
     className={`${className}`}
-    classes={{
-      root: style.root,
-      focused: style.focused,
-      disabled: style.disabled,
-      error: style.error
-    }}
     disableUnderline
     endAdornment={endAdornment}
     id={id}

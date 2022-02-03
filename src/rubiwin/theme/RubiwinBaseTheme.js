@@ -1,4 +1,5 @@
 import themeConstants from './themeConstants'
+import { darken } from '@mui/material/styles'
 
 const rubiwinBaseTheme = {
   spacing: 4,
@@ -107,6 +108,16 @@ const rubiwinBaseTheme = {
         }
       }
     },
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          fontFamily: themeConstants.typography.fontFamily,
+          '&:focus': {
+            backgroundColor: `rgba(${themeConstants.primary.main}, 0.05)`
+          }
+        }
+      }
+    },
     MuiTableCell: {
       styleOverrides: {
         sizeSmall: {
@@ -147,7 +158,12 @@ const rubiwinBaseTheme = {
     MuiCheckbox: {
       styleOverrides: {
         root: {
-          color: themeConstants.grey.light
+          '&.Mui-disabled': {
+            color: themeConstants.grey.dynamite
+          }
+        },
+        colorPrimary: {
+          color: themeConstants.primary.main
         }
       }
     },
@@ -198,13 +214,59 @@ const rubiwinBaseTheme = {
     },
     MuiInput: {
       styleOverrides: {
-        root: themeConstants.grey.main
+        root: {
+          backgroundColor: 'white',
+          borderRadius: themeConstants.borderRadius.sm,
+          border: `1px solid ${themeConstants.grey.dynamite}`,
+          padding: '2px 6px',
+          transition: themeConstants.transition.default,
+          '&:hover': {
+            border: `1px solid ${darken(themeConstants.grey.dynamite, 0.1)}`
+          },
+          '&.Mui-focused': {
+            border: `1px solid ${themeConstants.primary.main}`,
+            borderRadius: themeConstants.borderRadius.sm,
+            transition: themeConstants.transition.default
+          },
+          '&.Mui-disabled': {
+            backgroundColor: themeConstants.grey.disable,
+            cursor: 'not-allowed'
+          },
+          '&.Mui-error': {
+            border: `1px solid ${themeConstants.red.main}`,
+            '&:hover': {
+              border: `1px solid ${darken(themeConstants.red.main, 0.05)}`
+            }
+          },
+          '&.MuiInput-underline': {
+            border: '0'
+          }
+        }
       }
     },
     MuiPaper: {
       styleOverrides: {
         root: {
           boxShadow: 'none'
+        }
+      }
+    },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        label: {
+          fontWeight: 'bold',
+          fontSize: themeConstants.typography.smaller
+        }
+      }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          fontWeight: 'bold',
+          fontSize: themeConstants.typography.small,
+          marginLeft: '6px',
+          marginBottom: '6px',
+          zIndex: '2'
         }
       }
     }

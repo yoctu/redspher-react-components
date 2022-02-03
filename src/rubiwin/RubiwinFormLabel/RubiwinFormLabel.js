@@ -1,7 +1,6 @@
 import React from 'react'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import PropTypes from 'prop-types'
-import style from './RubiwinFormLabel.module.scss'
 
 /** full doc: https://material-ui.com/api/form-control-label/ */
 const RubiwinFormLabel = ({
@@ -26,7 +25,6 @@ const RubiwinFormLabel = ({
       value={value}
       inputRef={inputRef}
       className={`${className}`}
-      classes={{ label: style.label }}
     />
   )
 }
