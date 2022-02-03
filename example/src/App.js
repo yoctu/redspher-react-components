@@ -87,7 +87,8 @@ import {
   ShipperStepper,
   ShipperAddressStepper,
   ShipperErrorPopover,
-  ShipperRequestStepper
+  ShipperRequestStepper,
+  RubiwinSelect
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -160,6 +161,14 @@ const RubiWinShowCase = () => {
       <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
       <br />
       <RubiwinInputField id='test' />
+      <br />
+      <FormControl fullWidth>
+        <InputLabel>Select option</InputLabel>
+        <RubiwinSelect label="Select option">
+          <MenuItem value={0}>Option 1</MenuItem>
+          <MenuItem value={1}>Option 2</MenuItem>
+        </RubiwinSelect>
+      </FormControl>
       <br />
       <RubiwinSquareButton
         onClick={sayHello}
