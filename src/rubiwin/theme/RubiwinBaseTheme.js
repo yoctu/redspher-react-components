@@ -110,10 +110,10 @@ const rubiwinBaseTheme = {
     },
     MuiSelect: {
       styleOverrides: {
-        root: {
+        select: {
           fontFamily: themeConstants.typography.fontFamily,
           '&:focus': {
-            backgroundColor: `rgba(${themeConstants.primary.main}, 0.05)`
+            backgroundColor: `${themeConstants.primary.main}0D`
           }
         }
       }
@@ -267,6 +267,33 @@ const rubiwinBaseTheme = {
           marginLeft: '6px',
           marginBottom: '6px',
           zIndex: '2'
+        }
+      }
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: `${themeConstants.primary.main}08`
+          }
+        },
+        selected: {
+          color: 'white',
+          backgroundColor: `${themeConstants.primary.main}14`
+        }
+      }
+    },
+    MuiPickersDay: {
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            '&:hover': {
+              backgroundColor: themeConstants.primary.main
+            },
+            '&:focus': {
+              backgroundColor: themeConstants.primary.main
+            }
+          }
         }
       }
     }

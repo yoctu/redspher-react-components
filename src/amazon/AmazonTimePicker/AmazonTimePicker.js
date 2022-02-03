@@ -28,7 +28,7 @@ const AmazonTimePicker = ({
       onClick={onClick}
       onChange={onChange}
       KeyboardButtonProps={KeyboardButtonProps}
-      renderInput={(props) => <TextField {...props} />}
+      renderInput={(props) => <TextField {...props} variant='standard' />}
     />
   </LocalizationProvider>
 )

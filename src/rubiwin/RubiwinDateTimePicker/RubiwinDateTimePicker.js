@@ -44,7 +44,7 @@ const RubiwinDateTimePicker = ({
       onError={onError}
       variant={variant}
       TextFieldComponent={TextFieldComponent}
-      renderInput={(props) => <TextField {...props} />}
+      renderInput={(props) => <TextField {...props} variant='standard' />}
       {...props}
     />
   </LocalizationProvider>

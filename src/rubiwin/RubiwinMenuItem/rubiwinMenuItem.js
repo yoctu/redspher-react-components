@@ -1,15 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import MenuItem from '@mui/material/MenuItem'
-import style from './rubiwinMenuItem.module.scss'
 
 const RubiwinMenuItem = ({ children, className, component, ...props }) => (
-  <MenuItem
-    className={className}
-    component={component}
-    classes={{ root: style.root, selected: style.selected }}
-    {...props}
-  >
+  <MenuItem className={className} component={component} {...props}>
     {children}
   </MenuItem>
 )

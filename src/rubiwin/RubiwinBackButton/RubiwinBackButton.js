@@ -7,7 +7,9 @@ const RubiwinBackButton = ({ onClick, text }) => (
   <Box
     onClick={onClick}
     sx={{
+      fontFamily: (theme) => theme.typography.fontFamily,
       cursor: 'pointer',
+      color: (theme) => theme.palette.primary.main,
       display: 'flex',
       alignItems: 'center',
       padding: '5px'

@@ -169,12 +169,6 @@ const RubiWinShowCase = () => {
       <br />
       <RubiwinInputField id='test' />
       <br />
-      <RubiwinSquareButton
-        onClick={sayHello}
-        text='Click me'
-        className='rubiwin'
-      />
-      <br />
       <FormControl variant="standard" fullWidth>
         <InputLabel>Select option</InputLabel>
         <RubiwinSelect label="Select option">
@@ -182,6 +176,12 @@ const RubiWinShowCase = () => {
           <MenuItem value={1}>Option 2</MenuItem>
         </RubiwinSelect>
       </FormControl>
+      <br />
+      <RubiwinSquareButton
+        onClick={sayHello}
+        text='Click me'
+        className='rubiwin'
+      />
       <br />
       <RubiwinBackButton text={<>test</>} onClick={sayHello} />
       <br />
