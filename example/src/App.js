@@ -669,6 +669,18 @@ const ShipperShowCase = () => {
                 value='break'
                 labelOne='Label'
                 labelTwo='label'
+                disabled
+                onclickFnc={cardVehicleAction}
+                selectedValue={selectedVehicle}
+                setSelectedValue={setSelectedVehicle}
+              />
+            </Grid>
+            <Grid item sm={2}>
+              <ShipperCard
+                startIcon='break'
+                value='break'
+                labelOne='Label'
+                labelTwo='label'
                 disabled={false}
                 onclickFnc={cardVehicleAction}
                 selectedValue={selectedVehicle}

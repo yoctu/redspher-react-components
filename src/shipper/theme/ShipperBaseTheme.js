@@ -6,6 +6,8 @@ const ShipperBaseTheme = {
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
     color: themeConstants.black.dark,
+    sizes: ['10px', '12px', '14px', '18px', '24px'],
+    lineHeights: ['14.63px', '16px', '17.07px', '24px', '29.26px'],
     h1: {
       fontWeight: 900,
       color: '#fff',
@@ -167,6 +169,8 @@ const ShipperBaseTheme = {
     MuiCardContent: {
       styleOverrides: {
         root: {
+          height: '100%',
+          boxSizing: 'border-box',
           padding: 20,
           '&:last-child': {
             paddingBottom: 14
@@ -230,7 +234,15 @@ const ShipperBaseTheme = {
         root: {
           borderRadius: themeConstants.borderRadius.main,
           border: `1px solid transparent`,
-          boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)'
+          boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)',
+          height: '100%'
+        }
+      }
+    },
+    MuiCardActions: {
+      styleOverrides: {
+        root: {
+          height: '100%'
         }
       }
     },

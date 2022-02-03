@@ -10,7 +10,6 @@ import {
   Tooltip,
   IconButton
 } from '@mui/material'
-import style from './ShipperCard.module.scss'
 import themeConstants from '../theme/themeConstants'
 import VanIcon from '../../icons/Shipper/VanIcon'
 import BreakIcon from '../../icons/Shipper/BreakIcon'
@@ -33,11 +32,30 @@ const HtmlTooltip = withStyles(() => ({
 const IconButtonStyled = withStyles(() => ({
   root: {
     backgroundColor: 'transparent',
+    marginLeft: '5px',
+    padding: 0,
+    width: '16px',
+    height: '16px',
     '&:hover': {
       backgroundColor: 'transparent'
+    },
+    '& svg': {
+      width: '16px',
+      height: '16px'
     }
   }
 }))(IconButton)
+
+const RadioStyled = withStyles({
+  root: {
+    '&:hover': {
+      backgroundColor: 'transparent'
+    },
+    '&.Mui-checked:hover': {
+      backgroundColor: 'transparent'
+    }
+  }
+})(Radio)
 
 const ShipperCard = ({
   startIcon,
@@ -103,67 +121,73 @@ const ShipperCard = ({
     setOpen(true)
   }
 
+  const CardStyled = withStyles({
+    root: {
+      '&:not([disabled]):hover': {
+        border: `1px solid ${themeConstants.primary.main}`
+      },
+      '&[aria-selected=true]': {
+        border: `1px solid ${themeConstants.primary.main}`
+      }
+    }
+  })(Card)
+
+  const GridIcon = withStyles({
+    root: {
+      '& img': {
+        height: '50px'
+      }
+    }
+  })(Grid)
+
   return (
-    <Card
+    <CardStyled
+      disabled={disabled}
       onClick={onclickAction}
-      className={`${
-        disabled
-          ? style.disabledBorder
-          : (
-              selectedValueIsArray
-                ? selectedValue.includes(value)
-                : selectedValue === value
-            )
-          ? style.blueBorder
-          : style.noBorder
-      } ${style.card}`}
+      aria-selected={
+        selectedValueIsArray
+          ? selectedValue.includes(value)
+          : selectedValue === value
+      }
     >
-      <CardActionArea
-        disabled={disabled}
-        style={{ height: '100%' }}
-        disableRipple
-      >
-        <CardContent className={style.cardContent}>
-          <Grid container>
-            <Grid
-              item
-              xs={12}
-              container
-              justifyContent='center'
-              className={style.iconContainer}
-            >
+      <CardActionArea disabled={disabled} disableRipple>
+        <CardContent sx={{ padding: '10px 15px' }}>
+          <Grid container sx={{ height: '100%' }}>
+            <GridIcon item xs={12} container justifyContent='center'>
               {React.isValidElement(startIcon)
                 ? startIcon
                 : React.createElement(getIconByName(startIcon), {})}
-            </Grid>
+            </GridIcon>
             <Grid
               xs={12}
               container
               direction='row'
               justifyContent='center'
               alignItems='center'
-              className={style.title}
+              sx={{ mt: '10px', mb: '5px' }}
             >
               <Grid item>
                 <Typography
-                  style={{ color: themeConstants.black.main }}
-                  className={style.textMedium}
+                  sx={{
+                    color: themeConstants.black.main,
+                    fontSize: (theme) => theme.spacing(1.5),
+                    lineHeight: (theme) => theme.spacing(2),
+                    fontWeight: 'bold',
+                    textAlign: 'center'
+                  }}
                 >
                   {labelOne}
                 </Typography>
               </Grid>
               {!noInfoIcon && (
-                <Grid item className={style.tooltipContainer}>
+                <Grid item sx={{ display: 'flex', alignItems: 'center' }}>
                   <HtmlTooltip
                     title={<React.Fragment>{tooltipValue}</React.Fragment>}
                     open={open}
                     onClose={handleTooltipClose}
                     onOpen={handleTooltipOpen}
                   >
-                    <IconButtonStyled
-                      disableRipple
-                      className={style.tooltipButton}
-                    >
+                    <IconButtonStyled disableRipple>
                       {open ? (
                         <InformationIcon
                           primarycolor={themeConstants.primary.dark}
@@ -179,8 +203,11 @@ const ShipperCard = ({
             </Grid>
             <Grid item xs={12} container justifyContent='center'>
               <Typography
-                style={{ color: themeConstants.grey.main }}
-                className={`${style.textSmall}`}
+                sx={{
+                  color: (theme) => theme.palette.grey.main,
+                  fontSize: (theme) => theme.typography.sizes[1],
+                  lineHeight: (theme) => theme.typography.lineHeights[0]
+                }}
               >
                 {labelTwo}
               </Typography>
@@ -190,9 +217,9 @@ const ShipperCard = ({
               xs={12}
               container
               justifyContent='center'
-              className={style.radioContainer}
+              sx={{ mt: 'auto' }}
             >
-              <Radio
+              <RadioStyled
                 disableRipple
                 color='primary'
                 checked={
@@ -202,13 +229,13 @@ const ShipperCard = ({
                 }
                 value={value}
                 disabled={disabled}
-                className={style.radio}
+                sx={{ height: '100%' }}
               />
             </Grid>
           </Grid>
         </CardContent>
       </CardActionArea>
-    </Card>
+    </CardStyled>
   )
 }
 
