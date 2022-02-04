@@ -208,7 +208,9 @@ const ShipperBaseTheme = {
           padding: '15px 0'
         },
         thumb: {
-          color: themeConstants.primary.main
+          color: themeConstants.primary.main,
+          width: '12px',
+          height: '12px'
         },
         valueLabel: {
           top: -20,
@@ -218,6 +220,9 @@ const ShipperBaseTheme = {
             color: themeConstants.grey.dark,
             fontSize: '12px',
             fontWeight: 'normal'
+          },
+          '&.MuiSlider-valueLabelOpen': {
+            transform: 'translateY(-10px) scale(1)'
           }
         },
         track: {
