@@ -163,9 +163,11 @@ const ShipperStepper = ({ steps, activeStep }) => {
   }
 
   return (
-    <Box sx={{
-      width: '100%'
-    }}>
+    <Box
+      sx={{
+        width: '100%'
+      }}
+    >
       <Stepper
         alternativeLabel
         activeStep={activeStep}
