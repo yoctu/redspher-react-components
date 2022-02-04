@@ -2,7 +2,7 @@
 
 exports[`has a start and end adornment 1`] = `
 <div
-  className="root MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-adornedStart MuiInputBase-adornedEnd css-spqcwk-MuiInputBase-root-MuiInput-root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-adornedStart MuiInputBase-adornedEnd css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <svg
@@ -40,7 +40,7 @@ exports[`has a start and end adornment 1`] = `
 
 exports[`has an input element added 1`] = `
 <div
-  className="root MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
@@ -59,7 +59,7 @@ exports[`has an input element added 1`] = `
 
 exports[`has error state 1`] = `
 <div
-  className="root MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary error Mui-error css-spqcwk-MuiInputBase-root-MuiInput-root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
@@ -77,12 +77,12 @@ exports[`has error state 1`] = `
 
 exports[`is disabled 1`] = `
 <div
-  className="root MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary disabled Mui-disabled css-spqcwk-MuiInputBase-root-MuiInput-root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
     aria-invalid={false}
-    className="MuiInput-input MuiInputBase-input disabled Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
+    className="MuiInput-input MuiInputBase-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={true}
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -95,12 +95,12 @@ exports[`is disabled 1`] = `
 
 exports[`is full-width 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root MuiInputBase-fullWidth MuiInput-fullWidth"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth css-1s97tdc-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
     aria-invalid={false}
-    className="MuiInputBase-input MuiInput-input"
+    className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={false}
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -113,7 +113,7 @@ exports[`is full-width 1`] = `
 
 exports[`is multiline, has 5 rows and 6 max rows 1`] = `
 <div
-  className="root MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
   rowsMax={6}
 >
@@ -133,7 +133,7 @@ exports[`is multiline, has 5 rows and 6 max rows 1`] = `
 
 exports[`is readOnly 1`] = `
 <div
-  className="root MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
@@ -152,7 +152,7 @@ exports[`is readOnly 1`] = `
 
 exports[`is required 1`] = `
 <div
-  className="root MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
   required={true}
 >
@@ -172,7 +172,7 @@ exports[`is required 1`] = `
 
 exports[`renders correctly props object 1`] = `
 <div
-  className="root MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary test css-spqcwk-MuiInputBase-root-MuiInput-root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary test css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input

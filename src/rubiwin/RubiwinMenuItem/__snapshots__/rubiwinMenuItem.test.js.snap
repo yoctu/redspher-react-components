@@ -2,7 +2,7 @@
 
 exports[`renders as a div 1`] = `
 <div
-  className="root MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root testClass css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root"
+  className="MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root testClass css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root"
   onBlur={[Function]}
   onContextMenu={[Function]}
   onDragLeave={[Function]}
@@ -17,12 +17,16 @@ exports[`renders as a div 1`] = `
   onTouchStart={[Function]}
   role="menuitem"
   tabIndex={-1}
-/>
+>
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
+</div>
 `;
 
 exports[`renders correctly 1`] = `
 <li
-  className="root MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root testClass css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root"
+  className="MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root testClass css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root"
   onBlur={[Function]}
   onContextMenu={[Function]}
   onDragLeave={[Function]}

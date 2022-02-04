@@ -8,7 +8,7 @@ exports[`is multiple 1`] = `
   <div
     aria-expanded="false"
     aria-haspopup="listbox"
-    className="select MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+    className="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -72,7 +72,7 @@ exports[`renders correctly props object 1`] = `
     aria-expanded="false"
     aria-haspopup="listbox"
     aria-labelledby="testId"
-    className="select MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+    className="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
     id="testId"
     onBlur={[Function]}
     onFocus={[Function]}

@@ -2,7 +2,7 @@
 
 exports[`is checked 1`] = `
 <span
-  className="root MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root checked Mui-checked checkbox  css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+  className="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked  css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
   onBlur={[Function]}
   onContextMenu={[Function]}
   onDragLeave={[Function]}
@@ -36,13 +36,16 @@ exports[`is checked 1`] = `
       d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
     />
   </svg>
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
 </span>
 `;
 
 exports[`is disabled 1`] = `
 <span
   aria-disabled={true}
-  className="root MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root disabled Mui-disabled root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root disabled Mui-disabled checkbox  css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+  className="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-disabled  css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
   onBlur={[Function]}
   onContextMenu={[Function]}
   onDragLeave={[Function]}
@@ -81,7 +84,7 @@ exports[`is disabled 1`] = `
 
 exports[`is small 1`] = `
 <span
-  className="root MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root checkbox testClass css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+  className="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root testClass css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
   onBlur={[Function]}
   onContextMenu={[Function]}
   onDragLeave={[Function]}
@@ -118,12 +121,15 @@ exports[`is small 1`] = `
       d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
     />
   </svg>
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
 </span>
 `;
 
 exports[`renders correctly props object 1`] = `
 <span
-  className="root MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root checkbox testClass css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+  className="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root testClass css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
   onBlur={[Function]}
   onContextMenu={[Function]}
   onDragLeave={[Function]}
