@@ -2,14 +2,13 @@ import React from 'react'
 import { Stepper, Step, StepLabel, StepConnector, Box } from '@mui/material'
 import { withStyles } from '@mui/styles'
 
-import themeConstants from '../theme/themeConstants'
 import PinIcon from '../../icons/Shipper/PinIcon'
 
 const Connector = withStyles({
   line: {
     marginTop: -2,
     marginLeft: -7,
-    borderColor: themeConstants.white.main,
+    borderColor: (p) => p.$stepperColor,
     border: '1px dashed'
   }
 })(StepConnector)
@@ -21,18 +20,22 @@ const StepperStyled = withStyles({
   }
 })(Stepper)
 
-function StepIcon() {
+function StepIcon({ iconPrimaryColor, iconSecondaryColor }) {
   return (
     <div>
       <PinIcon
-        primarycolor={themeConstants.white.main}
-        secondarycolor={themeConstants.white.main}
+        primarycolor={iconPrimaryColor}
+        secondarycolor={iconSecondaryColor}
       />
     </div>
   )
 }
 
-const ShipperStepper = () => {
+const ShipperStepper = ({
+  stepperColor,
+  iconPrimaryColor,
+  iconSecondaryColor
+}) => {
   const steps = Array.apply('poney', Array(2))
   return (
     <Box
@@ -40,10 +43,13 @@ const ShipperStepper = () => {
         width: '100%'
       }}
     >
-      <StepperStyled connector={<Connector />}>
+      <StepperStyled connector={<Connector $stepperColor={stepperColor} />}>
         {steps.map((step, index) => (
           <Step key={`${step}${index}`}>
-            <StepLabel StepIconComponent={StepIcon} />
+            <StepLabel
+              StepIconComponent={StepIcon}
+              StepIconProps={{ iconPrimaryColor, iconSecondaryColor }}
+            />
           </Step>
         ))}
       </StepperStyled>

@@ -8,7 +8,6 @@ import {
   RubiwinInputLabel,
   RubiwinSquareButton,
   RubiwinBackButton,
-  RubiwinSelect,
   AmazonTimePicker,
   RubiwinDateTimePicker,
   DirectBusinessIcon,
@@ -88,7 +87,8 @@ import {
   ShipperStepper,
   ShipperAddressStepper,
   ShipperErrorPopover,
-  ShipperRequestStepper
+  ShipperRequestStepper,
+  RubiwinSelect
 } from 'redspher-components'
 import 'redspher-components/dist/index.css'
 import {
@@ -1000,7 +1000,11 @@ const ShipperShowCase = () => {
           <br />
           <br />
           <br />
-          <ShipperRequestStepper />
+          <ShipperRequestStepper
+            stepperColor={'#000'}
+            iconPrimaryColor={'#2986cc'}
+            iconSecondaryColor={'#f44336'}
+          />
           <br />
           <br />
           <br />
