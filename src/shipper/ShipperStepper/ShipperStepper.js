@@ -1,5 +1,4 @@
 import React from 'react'
-import style from './ShipperStepper.module.scss'
 import {
   Stepper,
   Step,
@@ -164,7 +163,9 @@ const ShipperStepper = ({ steps, activeStep }) => {
   }
 
   return (
-    <div className={style.stepper}>
+    <Box sx={{
+      width: '100%'
+    }}>
       <Stepper
         alternativeLabel
         activeStep={activeStep}
@@ -204,7 +205,7 @@ const ShipperStepper = ({ steps, activeStep }) => {
           </Step>
         ))}
       </Stepper>
-    </div>
+    </Box>
   )
 }
 

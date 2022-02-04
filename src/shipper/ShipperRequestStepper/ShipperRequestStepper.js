@@ -1,6 +1,5 @@
 import React from 'react'
-import style from './ShipperRequestStepper.module.scss'
-import { Stepper, Step, StepLabel, StepConnector } from '@mui/material'
+import { Stepper, Step, StepLabel, StepConnector, Box } from '@mui/material'
 import { withStyles } from '@mui/styles'
 
 import themeConstants from '../theme/themeConstants'
@@ -36,7 +35,11 @@ function StepIcon() {
 const ShipperStepper = () => {
   const steps = Array.apply('poney', Array(2))
   return (
-    <div className={style.stepper}>
+    <Box
+      sx={{
+        width: '100%'
+      }}
+    >
       <StepperStyled connector={<Connector />}>
         {steps.map((step, index) => (
           <Step key={`${step}${index}`}>
@@ -44,7 +47,7 @@ const ShipperStepper = () => {
           </Step>
         ))}
       </StepperStyled>
-    </div>
+    </Box>
   )
 }
 

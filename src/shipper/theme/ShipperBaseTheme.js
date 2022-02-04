@@ -409,6 +409,26 @@ const ShipperBaseTheme = {
           }
         }
       }
+    },
+    MuiSelect: {
+      styleOverrides: {
+        select: {
+          '&:focus': {
+            backgroundColor: 'transparent'
+          },
+          '&[aria-expanded=true] ~ .MuiSvgIcon-root': {
+            transform: 'rotate(180deg)'
+          },
+          '& ~ .MuiSvgIcon-root': {
+            pointerEvents: 'none',
+            transition: '300ms transform',
+            position: 'absolute',
+            right: '15px',
+            width: '19px',
+            height: '19px'
+          }
+        }
+      }
     }
   }
 }
