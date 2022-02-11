@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Select } from '@material-ui/core'
-import { ArrowBottomIcon } from '../../index'
+import ArrowBottomIcon from '../../icons/Shipper/ArrowBottomIcon'
 import styles from './styles.module.scss'
 
 export default function ShipperSelect({

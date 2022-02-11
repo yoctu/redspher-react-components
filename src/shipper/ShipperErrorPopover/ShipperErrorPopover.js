@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { FormHelperText, Popover } from '@material-ui/core'
 import styles from './styles.module.scss'
-import { WarningIcon } from '../../index'
+import WarningIcon from '../../icons/Shipper/WarningIcon'
 import themeConstants from '../theme/themeConstants'
 
 export default function ShipperErrorPopover({

@@ -14,6 +14,7 @@ import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
 import ShipperThemeProvider from './shipper/theme/ShipperThemeProvider'
 import ShipperCardInvoice from './shipper/ShipperCardInvoice/ShipperCardInvoice'
 import ShipperRangeSlider from './shipper/ShipperRangeSlider'
+import ApprovalFlowIcon from './icons/Shipper/ApprovalFlowIcon'
 import PlusIcon from './icons/Shipper/PlusIcon'
 import ConfirmationIcon from './icons/Shipper/ConfirmationIcon'
 import OffersIcon from './icons/Shipper/OffersIcon'
@@ -109,6 +110,7 @@ export {
   ShipperThemeProvider,
   ShipperCardInvoice,
   ShipperPhoneNumber,
+  ApprovalFlowIcon,
   PlusIcon,
   ConfirmationIcon,
   OffersIcon,

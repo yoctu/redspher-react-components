@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core'
 import { withStyles } from '@material-ui/styles'
 import themeConstants from '../theme/themeConstants'
-import { DeleteIcon } from '../../index'
+import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 
 function StepIcon(props) {
   const { index, nbItems, icons, removeStepMethod } = props
