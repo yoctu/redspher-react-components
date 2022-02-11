@@ -15,6 +15,7 @@ import {
   E4pThemeProvider,
   ShipperThemeProvider,
   ShipperCardInvoice,
+  ApprovalFlowIcon,
   PlusIcon,
   ConfirmationIcon,
   OffersIcon,
@@ -460,6 +461,7 @@ const ShipperShowCase = () => {
             <ArrowTop2Icon title='ArrowTop2Icon' />
             <EditIcon title='EditIcon' />
             <PrintIcon title='PrintIcon' />
+            <ApprovalFlowIcon title='ApprovalFlowIcon' />
           </section>
           <section
             style={{
