@@ -107,7 +107,6 @@ import {
 } from '@mui/material'
 import { Pagination } from '@mui/lab'
 import { makeStyles, createStyles } from '@mui/styles'
-import 'redspher-components/dist/index.css'
 import InputAdornment from '@mui/material/InputAdornment'
 import { Typography } from '@mui/material'
 
