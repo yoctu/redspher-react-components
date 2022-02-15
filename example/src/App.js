@@ -91,7 +91,6 @@ import {
   ShipperRequestStepper,
   RubiwinSelect
 } from 'redspher-components'
-import 'redspher-components/dist/index.css'
 import {
   Button,
   MenuItem,
