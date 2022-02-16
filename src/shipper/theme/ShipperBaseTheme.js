@@ -71,7 +71,7 @@ const ShipperBaseTheme = {
             '&:hover': {
               backgroundColor: themeConstants.white.main,
               color: themeConstants.primary.main,
-              '& .MuiSvgIcon-root path:first-child': {
+              '& .MuiSvgIcon-root path:first-of-type': {
                 stroke: themeConstants.primary.main
               }
             }
@@ -97,7 +97,7 @@ const ShipperBaseTheme = {
           }
         },
         iconSizeLarge: {
-          '&> *:first-child': {
+          '&> *:first-of-type': {
             fontSize: '25px'
           }
         }

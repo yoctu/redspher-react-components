@@ -89,7 +89,7 @@ const rubiwinBaseTheme = {
           color: themeConstants.white.main
         },
         iconSizeLarge: {
-          '&> *:first-child': {
+          '&> *:first-of-type': {
             fontSize: '25px'
           }
         }
