@@ -55,7 +55,7 @@ const Content = withStyles({
   root: {
     borderColor: themeConstants.primary.light,
     borderLeftStyle: 'dashed',
-    '& [class*="MuiCollapse-wrapperInner"]': {
+    '& .MuiCollapse-wrapperInner': {
       marginTop: '-35px'
     }
   },

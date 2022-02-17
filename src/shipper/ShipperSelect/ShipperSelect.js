@@ -8,12 +8,11 @@ const useStyles = makeStyles({
   dropdown: {
     marginTop: '15px',
 
-    '& [class*="MuiMenuItem-root"]': {
-      '&:hover, &[class*="Mui-focusVisible"], &[class*="Mui-selected"], &[class*="Mui-selected"]:hover':
-        {
-          backgroundColor: 'transparent',
-          color: themeConstants.primary.main
-        }
+    '& .MuiMenuItem-root': {
+      '&:hover, &.Mui-focusVisible, &.Mui-selected, &.Mui-selected:hover': {
+        backgroundColor: 'transparent',
+        color: themeConstants.primary.main
+      }
     }
   }
 })

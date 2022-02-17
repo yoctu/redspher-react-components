@@ -125,7 +125,7 @@ const ShipperBaseTheme = {
           '&:disabled': {
             color: themeConstants.grey.main
           },
-          '& svg[class*="MuiSvgIcon-root"]': {
+          '& svg.MuiSvgIcon-root': {
             width: '14px !important',
             height: '14px !important'
           }
@@ -181,7 +181,7 @@ const ShipperBaseTheme = {
     MuiPagination: {
       styleOverrides: {
         root: {
-          '& [class*="MuiButtonBase-root"]': {
+          '& .MuiButtonBase-root': {
             color: themeConstants.grey.main,
             '&:hover': {
               color: themeConstants.primary.main
@@ -259,13 +259,13 @@ const ShipperBaseTheme = {
           height: '30px',
           width: 'fit-content',
           padding: '2px',
-          '& [class*="MuiToggleButton-root"]': {
+          '& .MuiToggleButton-root': {
             padding: '7.5px 15px',
             borderRadius: '40px !important',
             textTransform: 'capitalize',
             fontSize: '12px',
             color: themeConstants.white.main,
-            '& [class*="MuiSvgIcon-root"]': {
+            '& .MuiSvgIcon-root': {
               width: '20px',
               marginRight: '7px'
             }
@@ -279,10 +279,10 @@ const ShipperBaseTheme = {
               backgroundColor: themeConstants.white.main
             }
           },
-          '& [class*="MuiButtonBase-root"]:not(.Mui-selected)': {
+          '& .MuiButtonBase-root:not(.Mui-selected)': {
             border: 'none',
             color: themeConstants.white.main,
-            '& [class*="MuiSvgIcon-root"] > *': {
+            '& .MuiSvgIcon-root > *': {
               stroke: themeConstants.white.main,
               border: 'none'
             }
@@ -310,26 +310,26 @@ const ShipperBaseTheme = {
       styleOverrides: {
         root: {
           width: '100%',
-          '& [class*="MuiFormLabel-root"]': {
+          '& .MuiFormLabel-root': {
             color: themeConstants.grey.dark,
             zIndex: 2,
             pointerEvents: 'none',
             top: '7px',
-            '&.Mui-focused, &[class*="MuiFormLabel-filled"]': {
+            '&.Mui-focused, &.MuiFormLabel-filled': {
               color: themeConstants.grey.dark,
               paddingLeft: '0px',
               transform: 'translate(14px, -9px) scale(0.75)'
             }
           },
-          '& [class*="MuiInputBase-root"]': {
+          '& .MuiInputBase-root': {
             padding: '7px 15px',
             backgroundColor: themeConstants.white.main,
             borderRadius: '20px',
             zIndex: 1,
-            '&[class*="MuiInput-underline"]:before': {
+            '&.MuiInput-underline:before': {
               display: 'none'
             },
-            '&[class*="MuiInput-underline"]:after': {
+            '&.MuiInput-underline:after': {
               display: 'none'
             },
             '& input': {
@@ -342,14 +342,14 @@ const ShipperBaseTheme = {
             '&.Mui-focused': {
               boxShadow: 'inset 0px 0px 0px 1px ' + themeConstants.primary.main
             },
-            '& [class*="MuiInputAdornment-root"]': {
+            '& .MuiInputAdornment-root': {
               width: '16px',
               height: '16px',
-              '& [class*="MuiSvgIcon-root"]': {
+              '& .MuiSvgIcon-root': {
                 width: '16px',
                 height: '16px'
               },
-              '& [class*="MuiPhoneNumber-flagButton"]': {
+              '& .MuiPhoneNumber-flagButton': {
                 height: '16px',
                 minWidth: '16px'
               }
@@ -361,7 +361,7 @@ const ShipperBaseTheme = {
                 stroke: themeConstants.secondary.main
               }
             },
-            '& [class*="MuiInputBase-inputAdornedStart"]': {
+            '& .MuiInputBase-inputAdornedStart': {
               marginLeft: '10px'
             }
           }
@@ -393,17 +393,17 @@ const ShipperBaseTheme = {
           borderRadius: '5px',
           height: '1px',
           backgroundColor: themeConstants.blue.light,
-          '& [class*="MuiLinearProgress-bar"]': {
+          '& .MuiLinearProgress-bar': {
             backgroundColor: themeConstants.blue.main
           },
           '&.error': {
             backgroundColor: themeConstants.red.light,
-            '& [class*="MuiLinearProgress-bar"]': {
+            '& .MuiLinearProgress-bar': {
               backgroundColor: themeConstants.red.main
             }
           },
           '&.finished': {
-            '& [class*="MuiLinearProgress-bar"]': {
+            '& .MuiLinearProgress-bar': {
               backgroundColor: themeConstants.green.main
             }
           }
