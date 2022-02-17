@@ -419,7 +419,7 @@ const ShipperBaseTheme = {
           '&[aria-expanded=true] ~ .MuiSvgIcon-root': {
             transform: 'rotate(180deg)'
           },
-          '& ~ .MuiSvgIcon-root': {
+          '& ~ .MuiSvgIcon-root:not(.MuiSelect-icon)': {
             pointerEvents: 'none',
             transition: '300ms transform',
             position: 'absolute',
