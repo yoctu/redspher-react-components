@@ -1,20 +1,22 @@
 import * as React from 'react'
 import { Select } from '@mui/material'
 import ArrowBottomIcon from '../../icons/Shipper/ArrowBottomIcon'
-import { makeStyles } from '@mui/styles'
+import { createStyles, makeStyles } from '@mui/styles'
 import themeConstants from '../theme/themeConstants'
 
-const useStyles = makeStyles({
-  dropdown: {
-    marginTop: '15px',
+const useStyles = makeStyles(() => {
+  return createStyles({
+    dropdown: {
+      marginTop: '15px',
 
-    '& .MuiMenuItem-root': {
-      '&:hover, &.Mui-focusVisible, &.Mui-selected, &.Mui-selected:hover': {
-        backgroundColor: 'transparent',
-        color: themeConstants.primary.main
+      '& .MuiMenuItem-root': {
+        '&:hover, &.Mui-focusVisible, &.Mui-selected, &.Mui-selected:hover': {
+          backgroundColor: 'transparent',
+          color: themeConstants.primary.main
+        }
       }
     }
-  }
+  })
 })
 
 export default function ShipperSelect({

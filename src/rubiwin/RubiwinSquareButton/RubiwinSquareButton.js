@@ -1,26 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '@mui/material/Button'
-import { makeStyles } from '@mui/styles'
+import { createStyles, makeStyles } from '@mui/styles'
 import { darken } from '@mui/material/styles'
 import themeConstants from '../theme/themeConstants'
 
-const useStyles = makeStyles({
-  root: {
-    backgroundColor: themeConstants.primary.main,
-    borderRadius: themeConstants.borderRadius.sm,
-    fontFamily: themeConstants.typography.fontFamily,
-    fontWeight: '700',
-    color: 'white',
-    boxShadow: themeConstants.boxShadow.main,
-    '&:hover': {
-      backgroundColor: darken(themeConstants.primary.main, 0.1)
+const useStyles = makeStyles(() => {
+  return createStyles({
+    root: {
+      backgroundColor: themeConstants.primary.main,
+      borderRadius: themeConstants.borderRadius.sm,
+      fontFamily: themeConstants.typography.fontFamily,
+      fontWeight: '700',
+      color: 'white',
+      boxShadow: themeConstants.boxShadow.main,
+      '&:hover': {
+        backgroundColor: darken(themeConstants.primary.main, 0.1)
+      }
+    },
+    disabled: {
+      backgroundColor: themeConstants.grey.light,
+      boxShadow: 'none'
     }
-  },
-  disabled: {
-    backgroundColor: themeConstants.grey.light,
-    boxShadow: 'none'
-  }
+  })
 })
 
 const RubiwinSquareButton = ({

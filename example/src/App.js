@@ -1037,8 +1037,7 @@ const ShipperShowCase = () => {
   )
 }
 
-const useStyles = makeStyles((theme) => {
-  console.log(theme)
+const useStyles = makeStyles(() => {
     return createStyles({
       root: {
         // width: `calc('300px' + (${theme.spacing(3)} * 2)`,

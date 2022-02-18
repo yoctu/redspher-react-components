@@ -6,34 +6,36 @@ import CheckIcon from '../../icons/Shipper/CheckIcon'
 import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 import WarningIcon from '../../icons/Shipper/WarningIcon'
 import { Box, LinearProgress } from '@mui/material'
-import { makeStyles } from '@mui/styles'
+import { createStyles, makeStyles } from '@mui/styles'
 import { styled } from '@mui/system'
 import themeConstants from '../theme/themeConstants'
 
-const useStyles = makeStyles({
-  root: {
-    width: '100%',
-    padding: '10px',
-    minHeight: 'fit-content',
-    backgroundColor: 'transparent',
-    maxWidth: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    border: `1px dashed ${themeConstants.grey.main}`
-  },
-  textContainer: {
-    display: 'flex',
-    flexDirection: 'row-reverse',
-    margin: 'auto'
-  },
-  text: {
-    margin: 'auto auto auto 10px',
-    fontSize: '12px',
-    color: themeConstants.grey.dark
-  },
-  icon: {
-    margin: 'auto'
-  }
+const useStyles = makeStyles(() => {
+  return createStyles({
+    root: {
+      width: '100%',
+      padding: '10px',
+      minHeight: 'fit-content',
+      backgroundColor: 'transparent',
+      maxWidth: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      border: `1px dashed ${themeConstants.grey.main}`
+    },
+    textContainer: {
+      display: 'flex',
+      flexDirection: 'row-reverse',
+      margin: 'auto'
+    },
+    text: {
+      margin: 'auto auto auto 10px',
+      fontSize: '12px',
+      color: themeConstants.grey.dark
+    },
+    icon: {
+      margin: 'auto'
+    }
+  })
 })
 
 const IconFile = styled('span')`
@@ -132,6 +134,7 @@ function DragAndDrop({
     setFile(file)
     setError(null)
   }
+
   const reject = () => {
     setFile(null)
     setError(errorMessage)

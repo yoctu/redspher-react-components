@@ -7,55 +7,57 @@ import {
   Typography,
   Box
 } from '@mui/material'
-import { withStyles, makeStyles } from '@mui/styles'
+import { withStyles, makeStyles, createStyles } from '@mui/styles'
 import clsx from 'clsx'
 import themeConstants from '../theme/themeConstants'
 
-const useStepIconStyles = makeStyles({
-  root: {
-    color: themeConstants.grey.light,
-    display: 'flex',
-    height: 22,
-    zIndex: 999,
-    alignItems: 'center'
-  },
-  active: {
-    color: themeConstants.primary.main
-  },
-  textActive: {
-    color: themeConstants.black.dark,
-    '&:hover': {
-      cursor: 'pointer'
-    }
-  },
-  textNotActive: {
-    color: themeConstants.grey.main
-  },
-  textCurrent: {
-    color: themeConstants.black.dark
-  },
-  stepLabel: {
-    marginTop: 0
-  },
-  alternativeLabel: {},
-  labelContainer: {
-    width: 200,
-    '& $alternativeLabel': {
+const useStepIconStyles = makeStyles(() => {
+  return createStyles({
+    root: {
+      color: themeConstants.grey.light,
+      display: 'flex',
+      height: 22,
+      zIndex: 999,
+      alignItems: 'center'
+    },
+    active: {
+      color: themeConstants.primary.main
+    },
+    textActive: {
+      color: themeConstants.black.dark,
+      '&:hover': {
+        cursor: 'pointer'
+      }
+    },
+    textNotActive: {
+      color: themeConstants.grey.main
+    },
+    textCurrent: {
+      color: themeConstants.black.dark
+    },
+    stepLabel: {
       marginTop: 0
+    },
+    alternativeLabel: {},
+    labelContainer: {
+      width: 200,
+      '& $alternativeLabel': {
+        marginTop: 0
+      }
+    },
+    iconActive: {
+      '&:hover': {
+        cursor: 'pointer'
+      }
+    },
+    iconCurrent: {},
+    iconNotActive: {},
+    completedMiddle: {
+      '&:hover': {
+        cursor: 'pointer'
+      }
     }
-  },
-  iconActive: {
-    '&:hover': {
-      cursor: 'pointer'
-    }
-  },
-  iconCurrent: {},
-  iconNotActive: {},
-  completedMiddle: {
-    '&:hover': {
-      cursor: 'pointer'
-    }
-  }
+  })
 })
 
 function StepIcon(props) {
