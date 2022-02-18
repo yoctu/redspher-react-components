@@ -374,6 +374,7 @@ const ShipperBaseTheme = {
           '& .MuiPaper-root': {
             maxHeight: '400px',
             borderRadius: '16px',
+            boxShadow: `2px 2px 8px 0px ${themeConstants.blue.dark}1a`,
             '& .MuiListItem-button': {
               margin: '0 5px',
               '&.Mui-selected': {
@@ -427,6 +428,22 @@ const ShipperBaseTheme = {
             width: '19px',
             height: '19px'
           }
+        }
+      }
+    },
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true
+      }
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&:hover, &.Mui-focusVisible, &.Mui-selected, &.Mui-selected:hover, &:hover .MuiTypography-root, &.Mui-focusVisible .MuiTypography-root, &.Mui-selected .MuiTypography-root, &.Mui-selected:hover .MuiTypography-root':
+            {
+              backgroundColor: 'transparent',
+              color: themeConstants.primary.main
+            }
         }
       }
     }

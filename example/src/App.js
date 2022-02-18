@@ -103,12 +103,12 @@ import {
   Input,
   FormHelperText,
   FormControlLabel,
-  ThemeProvider
+  ThemeProvider,
+  Typography,
 } from '@mui/material'
 import { Pagination } from '@mui/lab'
 import { makeStyles, createStyles } from '@mui/styles'
 import InputAdornment from '@mui/material/InputAdornment'
-import { Typography } from '@mui/material'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -910,8 +910,12 @@ const ShipperShowCase = () => {
             <FormControl>
               <InputLabel htmlFor='select-test'>Select label</InputLabel>
               <ShipperSelect label={'Select label'}>
-                <MenuItem value={1}>One</MenuItem>
-                <MenuItem value={2}>Two</MenuItem>
+                <MenuItem value={1}>
+                  <Typography>One</Typography>
+                </MenuItem>
+                <MenuItem value={2}>
+                  <Typography>Two</Typography>
+                </MenuItem>
               </ShipperSelect>
             </FormControl>
 
