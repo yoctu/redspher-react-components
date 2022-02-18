@@ -75,7 +75,8 @@ const ShipperBaseTheme = {
         }
       },
       containedPrimary: {
-        color: themeConstants.white.main
+        color: themeConstants.white.main,
+        boxShadow: 'inherit'
       },
       outlinedPrimary: {
         color: themeConstants.black.main,
