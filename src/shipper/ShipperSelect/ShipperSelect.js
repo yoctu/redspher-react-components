@@ -6,7 +6,7 @@ import { createStyles, makeStyles } from '@mui/styles'
 const useStyles = makeStyles(() => {
   return createStyles({
     dropdown: {
-      marginTop: '15px',
+      marginTop: '15px'
     }
   })
 })
