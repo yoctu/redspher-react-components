@@ -2,6 +2,15 @@ import themeConstants, { colors } from './themeConstants'
 
 const ShipperBaseTheme = {
   spacing: 8,
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920
+    }
+  },
   palette: colors,
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
