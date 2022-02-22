@@ -5,8 +5,8 @@ import {
   StepLabel,
   StepConnector,
   StepContent
-} from '@material-ui/core'
-import { withStyles } from '@material-ui/styles'
+} from '@mui/material'
+import { withStyles } from '@mui/styles'
 import themeConstants from '../theme/themeConstants'
 import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 
@@ -55,7 +55,7 @@ const Content = withStyles({
   root: {
     borderColor: themeConstants.primary.light,
     borderLeftStyle: 'dashed',
-    '& [class*="MuiCollapse-wrapperInner"]': {
+    '& .MuiCollapse-wrapperInner': {
       marginTop: '-35px'
     }
   },

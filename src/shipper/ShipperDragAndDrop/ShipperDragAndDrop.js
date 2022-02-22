@@ -1,12 +1,89 @@
 import React, { useEffect, useState } from 'react'
-import { DropzoneArea } from 'material-ui-dropzone'
+import { DropzoneArea } from 'react-mui-dropzone'
 import UploadIcon from '../../icons/Shipper/UploadIcon'
-import styles from './ShipperDragAndDrop.module.scss'
 import LoadingIcon from '../../icons/Shipper/LoadingIcon'
 import CheckIcon from '../../icons/Shipper/CheckIcon'
 import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 import WarningIcon from '../../icons/Shipper/WarningIcon'
-import { LinearProgress } from '@material-ui/core'
+import { Box, LinearProgress } from '@mui/material'
+import { createStyles, makeStyles } from '@mui/styles'
+import { styled } from '@mui/system'
+import themeConstants from '../theme/themeConstants'
+
+const useStyles = makeStyles(() => {
+  return createStyles({
+    root: {
+      width: '100%',
+      padding: '10px',
+      minHeight: 'fit-content',
+      backgroundColor: 'transparent',
+      maxWidth: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      border: `1px dashed ${themeConstants.grey.main}`
+    },
+    textContainer: {
+      display: 'flex',
+      flexDirection: 'row-reverse',
+      margin: 'auto'
+    },
+    text: {
+      margin: 'auto auto auto 10px',
+      fontSize: '12px',
+      color: themeConstants.grey.dark
+    },
+    icon: {
+      margin: 'auto'
+    }
+  })
+})
+
+const IconFile = styled('span')`
+  max-width: 20px;
+  max-height: 20px;
+  margin: auto 0 auto auto;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  &.iconRotation {
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  &.clickable {
+    cursor: pointer;
+  }
+
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+`
+
+const Error = styled('span')`
+  font-family: ${(theme) => theme.typography.fontFamily};
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: ${(theme) => theme.palette.red.main};
+  margin: 5px auto 0;
+  display: flex;
+
+  & svg {
+    margin: auto 10px auto 0;
+  }
+`
 
 /**
  * @param uploadStatus
@@ -30,6 +107,7 @@ function DragAndDrop({
   const [progress, setProgress] = useState(0)
   const [timer, setTimer] = useState(null)
   const [error, setError] = useState(null)
+  const classes = useStyles()
 
   useEffect(() => {
     if (uploadStatus === 'loading') {
@@ -56,6 +134,7 @@ function DragAndDrop({
     setFile(file)
     setError(null)
   }
+
   const reject = () => {
     setFile(null)
     setError(errorMessage)
@@ -69,6 +148,12 @@ function DragAndDrop({
   return (
     <div>
       <DropzoneArea
+        classes={{
+          root: classes.root,
+          textContainer: classes.textContainer,
+          text: classes.text,
+          icon: classes.icon
+        }}
         filesLimit={1}
         Icon={UploadIcon}
         dropzoneText={dropzoneText}
@@ -86,37 +171,59 @@ function DragAndDrop({
         }}
       />
       {file?.[0]?.name && (
-        <div className={`${styles.filenameContainer}`}>
-          <p className={`${styles.typoFileName}`}>{file?.[0]?.name}</p>
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            marginTop: '10px'
+          }}
+        >
+          <Box
+            as='p'
+            sx={{
+              width: '100%',
+              fontFamily: (theme) => theme.typography.fontFamily,
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '12px',
+              color: themeConstants.black.dark,
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+              margin: 'auto 10px auto 0'
+            }}
+          >
+            {file?.[0]?.name}
+          </Box>
           {uploadStatus === 'loading' ? (
-            <span className={`${styles.iconFile} ${styles.iconRotation}`}>
+            <IconFile className='iconRotation'>
               <LoadingIcon />
-            </span>
+            </IconFile>
           ) : uploadStatus === 'finished' ? (
-            <span className={`${styles.iconFile}`}>
+            <IconFile>
               <CheckIcon primarycolor='#00CF53' />
-            </span>
+            </IconFile>
           ) : uploadStatus === 'error' ? (
-            <span className={`${styles.iconFile}`}>
+            <IconFile>
               <WarningIcon primarycolor='#F20738' />
-            </span>
+            </IconFile>
           ) : (
-            <span
-              className={`${styles.iconFile} ${styles.clickable}`}
+            <IconFile
+              className='clickable'
               onClick={() => {
                 removeFile()
               }}
             >
               <DeleteIcon />
-            </span>
+            </IconFile>
           )}
-        </div>
+        </Box>
       )}
       {error && (
-        <span className={`${styles.errorMessage}`}>
+        <Error>
           <WarningIcon primarycolor='#F20738' />
           {error}
-        </span>
+        </Error>
       )}
       {file?.[0]?.name && uploadStatus && (
         <LinearProgress

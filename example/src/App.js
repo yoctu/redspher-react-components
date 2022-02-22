@@ -91,28 +91,23 @@ import {
   ShipperRequestStepper,
   RubiwinSelect
 } from 'redspher-components'
-import 'redspher-components/dist/index.css'
 import {
   Button,
   MenuItem,
   Radio,
   Select,
   Chip,
-  createStyles,
-  makeStyles,
   Grid,
   FormControl,
   InputLabel,
   Input,
   FormHelperText,
   FormControlLabel,
-  ThemeProvider
-} from '@material-ui/core'
-import { Pagination } from '@material-ui/lab'
-import { StylesProvider } from '@material-ui/core/styles'
-import 'redspher-components/dist/index.css'
-import InputAdornment from '@material-ui/core/InputAdornment'
-import { Typography } from '@material-ui/core/index'
+  ThemeProvider,
+  Typography,
+} from '@mui/material'
+import { Pagination } from '@mui/lab'
+import InputAdornment from '@mui/material/InputAdornment'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -145,7 +140,14 @@ const RubiWinShowCase = () => {
         onChange={handleChange}
         checked={checked}
         inputProps={{ 'aria-label': 'primary checkbox' }}
-        name='rubiwinCheck'
+        name='rubiwinCheck1'
+      />
+      <br />
+      <RubiwinCheckbox
+        onChange={handleChange}
+        inputProps={{ 'aria-label': 'primary checkbox' }}
+        name='rubiwinCheck2'
+        disabled
       />
       <br />
       <RubiwinFormLabel
@@ -159,11 +161,13 @@ const RubiWinShowCase = () => {
       <br />
       <RubiwinInputField {...testProps} />
       <br />
+      <RubiwinInputField {...testProps} disabled />
+      <br />
       <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
       <br />
       <RubiwinInputField id='test' />
       <br />
-      <FormControl fullWidth>
+      <FormControl variant="standard" fullWidth>
         <InputLabel>Select option</InputLabel>
         <RubiwinSelect label="Select option">
           <MenuItem value={0}>Option 1</MenuItem>
@@ -223,7 +227,6 @@ const RubiWinShowCase = () => {
 }
 
 const ShipperShowCase = () => {
-  const classes = useStyles()
   const min = 0
   const max = 23
 
@@ -342,7 +345,7 @@ const ShipperShowCase = () => {
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
       <h1>--------- SHIPPER COMPONENTS ---------</h1>
-      <StylesProvider injectFirst>
+
         <ShipperThemeProvider>
           <section
             style={{
@@ -497,7 +500,7 @@ const ShipperShowCase = () => {
               />
             </div>
           </section>
-          <div className={classes.root}>
+          <div>
             <ShipperCardInvoice
               title='Invoice'
               reference='#GH012021032680'
@@ -656,6 +659,18 @@ const ShipperShowCase = () => {
                     </Grid>
                   </Grid>
                 }
+              />
+            </Grid>
+            <Grid item sm={2}>
+              <ShipperCard
+                startIcon='break'
+                value='break'
+                labelOne='Label'
+                labelTwo='label'
+                disabled
+                onclickFnc={cardVehicleAction}
+                selectedValue={selectedVehicle}
+                setSelectedValue={setSelectedVehicle}
               />
             </Grid>
             <Grid item sm={2}>
@@ -845,7 +860,7 @@ const ShipperShowCase = () => {
                 Error message
               </FormHelperText>
             </FormControl>
-            <br />
+
             <FormControl error>
               <InputLabel htmlFor='input-test'>Label</InputLabel>
               <Input
@@ -862,7 +877,7 @@ const ShipperShowCase = () => {
                 Error message
               </FormHelperText>
             </FormControl>
-            <br />
+
             <FormControl
               error
               onMouseEnter={handlePopoverOpen}
@@ -881,7 +896,6 @@ const ShipperShowCase = () => {
                 handlePopoverClose={handlePopoverClose}
               />
             </FormControl>
-            <br />
             <FormControl>
               <InputLabel htmlFor='input-test'>Label</InputLabel>
               <Input
@@ -891,17 +905,17 @@ const ShipperShowCase = () => {
                 aria-describedby='component-error-text'
               />
             </FormControl>
-            <br />
-            <br />
             <FormControl>
               <InputLabel htmlFor='select-test'>Select label</InputLabel>
-              <ShipperSelect>
-                <MenuItem value={1}>One</MenuItem>
-                <MenuItem value={2}>Two</MenuItem>
+              <ShipperSelect label={'Select label'}>
+                <MenuItem value={1}>
+                  <Typography>One</Typography>
+                </MenuItem>
+                <MenuItem value={2}>
+                  <Typography>Two</Typography>
+                </MenuItem>
               </ShipperSelect>
             </FormControl>
-            <br />
-            <br />
 
             <ShipperPhoneNumber
               label={'Phone number'}
@@ -1021,19 +1035,9 @@ const ShipperShowCase = () => {
           <br />
           <br />
         </ShipperThemeProvider>
-      </StylesProvider>
     </div>
   )
 }
-
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      width: 300 + theme.spacing(3) * 2,
-      marginLeft: theme.spacing(2)
-    }
-  })
-)
 
 const testRedenderTwo = () => {
   const items = []

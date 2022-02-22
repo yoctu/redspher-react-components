@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NextButton from '@material-ui/core/Button'
-import { StylesProvider } from '@material-ui/core/styles'
-import style from './RubiwinButton.module.scss'
+import NextButton from '@mui/material/Button'
+import { darken } from '@mui/material/styles'
 
 /** This is a RubiwinButton branded for Rubiwin
  * full doc : https://material-ui.com/api/button/ */
@@ -17,20 +16,37 @@ const RubiwinButton = ({
   endIcon,
   startIcon
 }) => (
-  <StylesProvider injectFirst>
-    <NextButton
-      onClick={onClick}
-      className={`${style.button} ${className}`}
-      disabled={disabled}
-      fullWidth={fullWidth}
-      href={href}
-      size={size}
-      endIcon={endIcon}
-      startIcon={startIcon}
-    >
-      {text}
-    </NextButton>
-  </StylesProvider>
+  <NextButton
+    onClick={onClick}
+    className={className}
+    disabled={disabled}
+    fullWidth={fullWidth}
+    href={href}
+    size={size}
+    endIcon={endIcon}
+    startIcon={startIcon}
+    sx={{
+      fontFamily: (theme) => theme.typography.fontFamily,
+      fontSize: (theme) => theme.typography.smaller,
+      fontWeight: 'bold',
+      color: 'white',
+      backgroundColor: (theme) => theme.palette.primary.main,
+      borderRadius: (theme) => theme.spacing(4),
+      textTransform: 'capitalize',
+      ':hover': {
+        backgroundColor: (theme) => darken(theme.palette.primary.main, 0.1)
+      },
+      ':disabled': {
+        backgroundColor: (theme) => theme.palette.grey.light,
+        border: (theme) => `1px solid ${theme.palette.grey.light}`
+      },
+      a: {
+        color: 'white'
+      }
+    }}
+  >
+    {text}
+  </NextButton>
 )
 
 RubiwinButton.propTypes = {

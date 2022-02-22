@@ -1,5 +1,5 @@
 import React from 'react'
-import { SvgIcon } from '@material-ui/core'
+import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
 function InformationIcon(props) {

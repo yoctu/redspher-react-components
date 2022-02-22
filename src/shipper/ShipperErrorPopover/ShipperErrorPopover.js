@@ -1,8 +1,25 @@
 import * as React from 'react'
-import { FormHelperText, Popover } from '@material-ui/core'
-import styles from './styles.module.scss'
+import { FormHelperText, Popover } from '@mui/material'
 import WarningIcon from '../../icons/Shipper/WarningIcon'
 import themeConstants from '../theme/themeConstants'
+import { withStyles } from '@mui/styles'
+
+const PopoverStyled = withStyles({
+  paper: {
+    padding: '10px',
+    borderRadius: '16px',
+    display: 'flex',
+    alignItems: 'center',
+    '& svg': {
+      marginRight: '5px',
+      width: '12px',
+      height: '12px'
+    },
+    '& p': {
+      marginTop: '0'
+    }
+  }
+})(Popover)
 
 export default function ShipperErrorPopover({
   className = '',
@@ -13,9 +30,8 @@ export default function ShipperErrorPopover({
   ...delegated
 }) {
   return (
-    <Popover
+    <PopoverStyled
       className={className}
-      classes={{ paper: styles.paper }}
       open={open}
       onClose={handlePopoverClose}
       anchorEl={anchorEl}
@@ -33,6 +49,6 @@ export default function ShipperErrorPopover({
     >
       <WarningIcon primarycolor={themeConstants.secondary.main} />
       <FormHelperText>{text}</FormHelperText>
-    </Popover>
+    </PopoverStyled>
   )
 }

@@ -1,22 +1,42 @@
 import * as React from 'react'
-import Checkbox from '@material-ui/core/Checkbox'
-import CheckBoxOutlineBlankRoundedIcon from '@material-ui/icons/CheckBoxOutlineBlankRounded'
-import StopRounded from '@material-ui/icons/StopRounded'
-import styles from './styles.module.scss'
+import Checkbox from '@mui/material/Checkbox'
+import { CheckBoxOutlineBlankRounded, StopRounded } from '@mui/icons-material'
 
 export default function IconCheckboxes({ className = '', ...delegated }) {
   return (
     <Checkbox
       {...delegated}
-      className={`${styles.sizeStd} ${className}`}
+      className={className}
       color='primary'
-      icon={<CheckBoxOutlineBlankRoundedIcon className={styles.sizeStd} />}
+      icon={
+        <CheckBoxOutlineBlankRounded
+          sx={{
+            width: (theme) => theme.spacing(2),
+            height: (theme) => theme.spacing(2)
+          }}
+        />
+      }
       checkedIcon={
         <React.Fragment>
-          <CheckBoxOutlineBlankRoundedIcon className={styles.sizeStd} />
-          <StopRounded className={styles.checked} />
+          <CheckBoxOutlineBlankRounded
+            sx={{
+              width: (theme) => theme.spacing(2),
+              height: (theme) => theme.spacing(2)
+            }}
+          />
+          <StopRounded
+            sx={{
+              position: 'absolute',
+              width: (theme) => `calc(${theme.spacing(2)} - 2px)`,
+              height: (theme) => `calc(${theme.spacing(2)} - 2px)`
+            }}
+          />
         </React.Fragment>
       }
+      sx={{
+        width: (theme) => theme.spacing(2),
+        height: (theme) => theme.spacing(2)
+      }}
     />
   )
 }

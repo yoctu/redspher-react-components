@@ -1,7 +1,6 @@
 import React from 'react'
-import style from './ShipperRequestStepper.module.scss'
-import { Stepper, Step, StepLabel, StepConnector } from '@material-ui/core'
-import { withStyles } from '@material-ui/styles'
+import { Stepper, Step, StepLabel, StepConnector, Box } from '@mui/material'
+import { withStyles } from '@mui/styles'
 
 import PinIcon from '../../icons/Shipper/PinIcon'
 
@@ -11,9 +10,6 @@ const Connector = withStyles({
     marginLeft: -7,
     borderColor: (p) => p.$stepperColor,
     border: '1px dashed'
-  },
-  props: {
-    poney: 'prout'
   }
 })(StepConnector)
 
@@ -42,7 +38,11 @@ const ShipperStepper = ({
 }) => {
   const steps = Array.apply('poney', Array(2))
   return (
-    <div className={style.stepper}>
+    <Box
+      sx={{
+        width: '100%'
+      }}
+    >
       <StepperStyled connector={<Connector $stepperColor={stepperColor} />}>
         {steps.map((step, index) => (
           <Step key={`${step}${index}`}>
@@ -53,7 +53,7 @@ const ShipperStepper = ({
           </Step>
         ))}
       </StepperStyled>
-    </div>
+    </Box>
   )
 }
 

@@ -1,80 +1,63 @@
 import React from 'react'
-import style from './ShipperStepper.module.scss'
 import {
   Stepper,
   Step,
   StepLabel,
   StepConnector,
-  makeStyles,
   Typography,
   Box
-} from '@material-ui/core'
-import { withStyles } from '@material-ui/styles'
+} from '@mui/material'
+import { withStyles, makeStyles, createStyles } from '@mui/styles'
 import clsx from 'clsx'
 import themeConstants from '../theme/themeConstants'
 
-const useStepIconStyles = makeStyles({
-  root: {
-    color: themeConstants.grey.light,
-    display: 'flex',
-    height: 22,
-    zIndex: 999,
-    alignItems: 'center'
-  },
-  active: {
-    color: themeConstants.primary.main
-  },
-  circle: {
-    width: 6,
-    height: 6,
-    borderRadius: '50%',
-    backgroundColor: 'white',
-    borderWidth: 2,
-    borderColor: themeConstants.primary.main
-  },
-  completed: {
-    width: 6,
-    height: 6,
-    borderRadius: '50%',
-    backgroundColor: 'currentColor',
-    '&:hover': {
-      cursor: 'pointer'
-    }
-  },
-  textActive: {
-    color: themeConstants.black.dark,
-    '&:hover': {
-      cursor: 'pointer'
-    }
-  },
-  textNotActive: {
-    color: themeConstants.grey.main
-  },
-  textCurrent: {
-    color: themeConstants.black.dark
-  },
-  stepLabel: {
-    marginTop: 0
-  },
-  alternativeLabel: {},
-  labelContainer: {
-    width: 200,
-    '& $alternativeLabel': {
+const useStepIconStyles = makeStyles(() => {
+  return createStyles({
+    root: {
+      color: themeConstants.grey.light,
+      display: 'flex',
+      height: 22,
+      zIndex: 999,
+      alignItems: 'center'
+    },
+    active: {
+      color: themeConstants.primary.main
+    },
+    textActive: {
+      color: themeConstants.black.dark,
+      '&:hover': {
+        cursor: 'pointer'
+      }
+    },
+    textNotActive: {
+      color: themeConstants.grey.main
+    },
+    textCurrent: {
+      color: themeConstants.black.dark
+    },
+    stepLabel: {
       marginTop: 0
+    },
+    alternativeLabel: {},
+    labelContainer: {
+      width: 200,
+      '& $alternativeLabel': {
+        marginTop: 0
+      }
+    },
+    iconActive: {
+      '&:hover': {
+        cursor: 'pointer'
+      }
+    },
+    iconCurrent: {},
+    iconNotActive: {},
+    completedMiddle: {
+      '&:hover': {
+        cursor: 'pointer'
+      }
     }
-  },
-  iconActive: {
-    '&:hover': {
-      cursor: 'pointer'
-    }
-  },
-  iconCurrent: {},
-  iconNotActive: {},
-  completedMiddle: {
-    '&:hover': {
-      cursor: 'pointer'
-    }
-  }
+  })
 })
 
 function StepIcon(props) {
@@ -182,7 +165,11 @@ const ShipperStepper = ({ steps, activeStep }) => {
   }
 
   return (
-    <div className={style.stepper}>
+    <Box
+      sx={{
+        width: '100%'
+      }}
+    >
       <Stepper
         alternativeLabel
         activeStep={activeStep}
@@ -208,11 +195,7 @@ const ShipperStepper = ({ steps, activeStep }) => {
               >
                 {step.label}
               </Typography>
-              <Box
-                display='flex'
-                justifyContent='center'
-                style={{ marginTop: -70 }}
-              >
+              <Box display='flex' justifyContent='center' sx={{ mt: -9 }}>
                 <Box
                   className={getClassNameIcon(index)}
                   onClick={() => {
@@ -226,7 +209,7 @@ const ShipperStepper = ({ steps, activeStep }) => {
           </Step>
         ))}
       </Stepper>
-    </div>
+    </Box>
   )
 }
 

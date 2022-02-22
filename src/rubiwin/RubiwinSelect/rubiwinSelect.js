@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Select from '@material-ui/core/Select'
-import style from './rubiwinSelect.module.scss'
+import Select from '@mui/material/Select'
 
 /** full docs : https://material-ui.com/components/selects/ */
 const RubiwinSelect = ({
@@ -33,7 +32,6 @@ const RubiwinSelect = ({
     renderValue={renderValue}
     value={value}
     className={className}
-    classes={{ select: style.select }}
     {...props}
   >
     {children}

@@ -2,17 +2,18 @@
 
 exports[`renders correctly with element 1`] = `
 <div
-  className="backButton"
+  className="MuiBox-root css-1mpub4e"
   onClick={[Function]}
 >
   <svg
     aria-hidden={true}
-    className="MuiSvgIcon-root"
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+    data-testid="ArrowBackIosIcon"
     focusable="false"
     viewBox="0 0 24 24"
   >
     <path
-      d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"
+      d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"
     />
   </svg>
   test
@@ -21,17 +22,18 @@ exports[`renders correctly with element 1`] = `
 
 exports[`renders correctly with string 1`] = `
 <div
-  className="backButton"
+  className="MuiBox-root css-1mpub4e"
   onClick={[Function]}
 >
   <svg
     aria-hidden={true}
-    className="MuiSvgIcon-root"
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+    data-testid="ArrowBackIosIcon"
     focusable="false"
     viewBox="0 0 24 24"
   >
     <path
-      d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"
+      d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"
     />
   </svg>
   test
