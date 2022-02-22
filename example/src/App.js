@@ -107,7 +107,6 @@ import {
   Typography,
 } from '@mui/material'
 import { Pagination } from '@mui/lab'
-import { makeStyles, createStyles } from '@mui/styles'
 import InputAdornment from '@mui/material/InputAdornment'
 
 const RubiWinShowCase = () => {
@@ -228,7 +227,6 @@ const RubiWinShowCase = () => {
 }
 
 const ShipperShowCase = () => {
-  const classes = useStyles()
   const min = 0
   const max = 23
 
@@ -502,7 +500,7 @@ const ShipperShowCase = () => {
               />
             </div>
           </section>
-          <div className={classes.root}>
+          <div>
             <ShipperCardInvoice
               title='Invoice'
               reference='#GH012021032680'
@@ -1040,16 +1038,6 @@ const ShipperShowCase = () => {
     </div>
   )
 }
-
-const useStyles = makeStyles(() => {
-    return createStyles({
-      root: {
-        // width: `calc('300px' + (${theme.spacing(3)} * 2)`,
-        // marginLeft: theme.spacing(2)
-      }
-    })
-  }
-)
 
 const testRedenderTwo = () => {
   const items = []
