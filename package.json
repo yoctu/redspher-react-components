@@ -1,6 +1,6 @@
 {
   "name": "redspher-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "reusable components for redspher",
   "author": "Vincent Racelle",
   "license": "MIT",
@@ -65,6 +65,7 @@
     "@mui/system": "^5.4.0",
     "date-fns": "^2.16.1",
     "globalyzer": "^0.1.4",
+    "libphonenumber-js": "^1.9.49",
     "material-ui-phone-number": "^3.0.0",
     "node-sass": "^6.0.1",
     "react-mui-dropzone": "^4.0.6"
