@@ -920,7 +920,7 @@ const ShipperShowCase = () => {
             <ShipperPhoneNumber
               label={'Phone number'}
               helperText={'Not a number'}
-              isError={false}
+              enableValidation
               inputProps={{
                 className: 'contact-input',
                 id: 'phoneNumberInput'
