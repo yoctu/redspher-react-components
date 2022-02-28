@@ -68,10 +68,11 @@ const ShipperAddressStepper = ({
   icons,
   nbItems,
   childrenComponent,
-  removeStepMethod
+  removeStepMethod,
+  ...delegated
 }) => {
   return (
-    <Stepper connector={<Connector />} orientation='vertical'>
+    <Stepper connector={<Connector />} orientation='vertical' {...delegated}>
       {Array.apply(null, Array(nbItems)).map((_item, index) => (
         <Step key={index} active>
           <StepLabel
