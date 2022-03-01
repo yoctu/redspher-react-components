@@ -12,7 +12,8 @@ export default function IconCheckboxes({ className = '', ...delegated }) {
         <CheckBoxOutlineBlankRounded
           sx={{
             width: (theme) => theme.spacing(2),
-            height: (theme) => theme.spacing(2)
+            height: (theme) => theme.spacing(2),
+            marginRight: '10px'
           }}
         />
       }
