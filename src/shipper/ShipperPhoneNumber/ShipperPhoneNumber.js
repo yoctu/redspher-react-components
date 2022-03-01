@@ -7,7 +7,10 @@ import { isValidPhoneNumber } from 'libphonenumber-js'
 const styles = () => ({
   flagButton: {
     marginTop: 0,
-    marginBottom: 0
+    marginBottom: 0,
+    '& .margin': {
+      width: '16px'
+    }
   }
 })
 
