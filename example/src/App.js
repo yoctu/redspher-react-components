@@ -260,6 +260,18 @@ const ShipperShowCase = () => {
           }
         />
       </FormControl>
+      <FormControl>
+        <InputLabel htmlFor='input-test'>Label</InputLabel>
+        <Input
+          id='input-test'
+          type={'text'}
+          endAdornment={
+            <InputAdornment position='end'>
+              <PlusIcon />
+            </InputAdornment>
+          }
+        />
+      </FormControl>
     </div>,
     <Typography>Step b</Typography>,
     <Typography>Step c</Typography>
