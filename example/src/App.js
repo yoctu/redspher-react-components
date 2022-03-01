@@ -406,6 +406,36 @@ const ShipperShowCase = () => {
                 Shipper Button
               </Button>
             </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <Button color='primary' disabled variant='contained'>
+              Shipper Button
+            </Button>
+            <Button
+              startIcon={
+                <PlusIcon primarycolor={'#fff'} secondarycolor={'#fff'} />
+              }
+              color='primary'
+              disabled
+              variant='contained'
+            >
+              Shipper Button
+            </Button>
+            <Button color='primary' disabled variant='outlined'>
+              Shipper Button
+            </Button>
+            <Button disabled startIcon={<PlusIcon />} color='primary' variant='outlined'>
+              Shipper Button
+            </Button>
+            <Button disabled color='primary' variant='text'>
+              Shipper Button
+            </Button>
+            <Button disabled startIcon={<PlusIcon />} color='primary' variant='text'>
+              Shipper Button
+            </Button>
           </section>
           <section
             style={{

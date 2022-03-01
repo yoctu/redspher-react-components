@@ -91,6 +91,10 @@ const ShipperBaseTheme = {
           boxShadow: 'none',
           '&:hover': {
             boxShadow: 'none'
+          },
+          '&.Mui-disabled': {
+            backgroundColor: themeConstants.grey.main,
+            color: themeConstants.white.main
           }
         },
         outlinedPrimary: {
@@ -101,12 +105,25 @@ const ShipperBaseTheme = {
             '& .MuiSvgIcon-root > *': {
               stroke: themeConstants.white.main
             }
+          },
+          '&.Mui-disabled': {
+            borderColor: themeConstants.grey.main,
+            color: themeConstants.grey.main,
+            '& .MuiSvgIcon-root > *': {
+              stroke: themeConstants.grey.main
+            }
           }
         },
         textPrimary: {
           color: themeConstants.black.main,
           '&:hover': {
             color: themeConstants.primary.main
+          },
+          '&.Mui-disabled': {
+            color: themeConstants.grey.main,
+            '& .MuiSvgIcon-root > *': {
+              stroke: themeConstants.grey.main
+            }
           }
         },
         iconSizeLarge: {
