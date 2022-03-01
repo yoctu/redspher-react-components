@@ -48,6 +48,9 @@ const Connector = withStyles({
       borderColor: themeConstants.primary.light,
       borderLeftStyle: 'dashed'
     }
+  },
+  vertical: {
+    marginTop: '3px'
   }
 })(StepConnector)
 
@@ -56,7 +59,7 @@ const Content = withStyles({
     borderColor: themeConstants.primary.light,
     borderLeftStyle: 'dashed',
     '& .MuiCollapse-wrapperInner': {
-      marginTop: '-35px'
+      marginTop: '-55px'
     }
   },
   last: {
