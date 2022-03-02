@@ -233,14 +233,14 @@ const ShipperBaseTheme = {
     MuiSlider: {
       styleOverrides: {
         root: {
-          color: '#3880ff',
-          height: 2,
+          color: themeConstants.secondary.main,
+          height: 1,
           padding: '15px 0'
         },
         thumb: {
           color: themeConstants.primary.main,
-          width: '12px',
-          height: '12px'
+          width: '10px',
+          height: '10px'
         },
         valueLabel: {
           top: -20,
@@ -256,7 +256,8 @@ const ShipperBaseTheme = {
           }
         },
         track: {
-          backgroundColor: themeConstants.primary.main
+          backgroundColor: themeConstants.primary.main,
+          border: 'none'
         },
         rail: {
           opacity: 0.25,
