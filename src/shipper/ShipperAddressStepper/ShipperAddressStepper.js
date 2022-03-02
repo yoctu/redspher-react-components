@@ -84,7 +84,7 @@ const ShipperAddressStepper = ({
               '.MuiCollapse-wrapperInner': {
                 marginTop: '-55px'
               },
-              '.MuiStepContent-last': {
+              '&.MuiStepContent-last': {
                 border: 'none'
               }
             }}
