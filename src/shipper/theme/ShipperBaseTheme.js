@@ -19,25 +19,25 @@ const ShipperBaseTheme = {
     lineHeights: ['14.63px', '16px', '17.07px', '24px', '29.26px'],
     h1: {
       fontWeight: 900,
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '36px',
       lineHeight: '43.88px'
     },
     h2: {
       fontWeight: 'bold',
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '32px',
       lineHeight: '39.01px'
     },
     h3: {
       fontWeight: 'bold',
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '24px',
       lineHeight: '29.26px'
     },
     h4: {
       fontWeight: 'bold',
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '20px',
       lineHeight: '24.38px'
     },
@@ -73,6 +73,8 @@ const ShipperBaseTheme = {
           borderRadius: '40px',
           fontSize: '14px',
           textTransform: 'none',
+          height: 31,
+          boxShadow: 'none',
           '&.logoutButton': {
             backgroundColor: 'transparent',
             border: '1px solid ' + themeConstants.white.main,
@@ -233,14 +235,17 @@ const ShipperBaseTheme = {
     MuiSlider: {
       styleOverrides: {
         root: {
-          color: '#3880ff',
-          height: 2,
+          color: themeConstants.primary.main,
+          height: 1,
           padding: '15px 0'
         },
         thumb: {
           color: themeConstants.primary.main,
-          width: '12px',
-          height: '12px'
+          width: '10px',
+          height: '10px',
+          '&.Mui-disabled': {
+            color: themeConstants.grey.main
+          }
         },
         valueLabel: {
           top: -20,
@@ -256,7 +261,8 @@ const ShipperBaseTheme = {
           }
         },
         track: {
-          backgroundColor: themeConstants.primary.main
+          backgroundColor: themeConstants.primary.main,
+          border: 'none'
         },
         rail: {
           opacity: 0.25,

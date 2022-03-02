@@ -119,11 +119,14 @@ const ShipperStepper = ({ steps, activeStep }) => {
         activeStep={activeStep}
         connector={
           <StepConnector
-            sx={{
+            sx={(theme) => ({
               '&.MuiStepConnector-alternativeLabel': {
                 top: 10,
                 left: 'calc(-50%)',
-                right: 'calc(50%)'
+                right: 'calc(50%)',
+                '& .MuiStepConnector-line': {
+                  borderColor: 'grey.light'
+                }
               },
               '&.Mui-active': {
                 '& .MuiStepConnector-line': {
@@ -136,11 +139,11 @@ const ShipperStepper = ({ steps, activeStep }) => {
                 }
               },
               '&.MuiStepConnector-line': {
-                borderColor: 'grey.light',
+                borderColor: theme.palette.secondary.main,
                 borderTopWidth: 2,
                 borderRadius: 1
               }
-            }}
+            })}
           />
         }
       >
