@@ -20,7 +20,6 @@ const ShipperStepper = ({
   iconSecondaryColor
 }) => {
   const steps = Array.apply('poney', Array(2))
-  console.log('Poney stepper', stepperColor)
   return (
     <Box
       sx={{
