@@ -233,7 +233,7 @@ const ShipperBaseTheme = {
     MuiSlider: {
       styleOverrides: {
         root: {
-          color: themeConstants.secondary.main,
+          color: themeConstants.primary.main,
           height: 1,
           padding: '15px 0'
         },
