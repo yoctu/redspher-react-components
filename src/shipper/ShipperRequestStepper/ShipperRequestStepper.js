@@ -1,24 +1,7 @@
 import React from 'react'
 import { Stepper, Step, StepLabel, StepConnector, Box } from '@mui/material'
-import { withStyles } from '@mui/styles'
 
 import PinIcon from '../../icons/Shipper/PinIcon'
-
-const Connector = withStyles({
-  line: {
-    marginTop: -2,
-    marginLeft: -7,
-    borderColor: (p) => p.$stepperColor,
-    border: '1px dashed'
-  }
-})(StepConnector)
-
-const StepperStyled = withStyles({
-  root: {
-    padding: 0,
-    backgroundColor: 'transparent'
-  }
-})(Stepper)
 
 function StepIcon({ iconPrimaryColor, iconSecondaryColor }) {
   return (
@@ -43,7 +26,22 @@ const ShipperStepper = ({
         width: '100%'
       }}
     >
-      <StepperStyled connector={<Connector $stepperColor={stepperColor} />}>
+      <Stepper
+        sx={{
+          padding: 0,
+          backgroundColor: 'transparent'
+        }}
+        connector={
+          <StepConnector
+            sx={{
+              '.MuiStepConnector-line': {
+                borderColor: stepperColor,
+                border: '1px dashed'
+              }
+            }}
+          />
+        }
+      >
         {steps.map((step, index) => (
           <Step key={`${step}${index}`}>
             <StepLabel
@@ -52,7 +50,7 @@ const ShipperStepper = ({
             />
           </Step>
         ))}
-      </StepperStyled>
+      </Stepper>
     </Box>
   )
 }

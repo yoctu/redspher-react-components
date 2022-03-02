@@ -6,8 +6,6 @@ import {
   StepConnector,
   StepContent
 } from '@mui/material'
-import { withStyles } from '@mui/styles'
-import themeConstants from '../theme/themeConstants'
 import DeleteIcon from '../../icons/Shipper/DeleteIcon'
 
 function StepIcon(props) {
@@ -35,38 +33,6 @@ function StepIcon(props) {
   )
 }
 
-const Connector = withStyles({
-  line: {},
-  completed: {
-    '& $line': {
-      borderColor: themeConstants.primary.light,
-      borderLeftStyle: 'dashed'
-    }
-  },
-  active: {
-    '& $line': {
-      borderColor: themeConstants.primary.light,
-      borderLeftStyle: 'dashed'
-    }
-  },
-  vertical: {
-    marginTop: '3px'
-  }
-})(StepConnector)
-
-const Content = withStyles({
-  root: {
-    borderColor: themeConstants.primary.light,
-    borderLeftStyle: 'dashed',
-    '& .MuiCollapse-wrapperInner': {
-      marginTop: '-55px'
-    }
-  },
-  last: {
-    border: 'none'
-  }
-})(StepContent)
-
 const ShipperAddressStepper = ({
   icons,
   nbItems,
@@ -75,7 +41,31 @@ const ShipperAddressStepper = ({
   ...delegated
 }) => {
   return (
-    <Stepper connector={<Connector />} orientation='vertical' {...delegated}>
+    <Stepper
+      connector={
+        <StepConnector
+          sx={{
+            '&.Mui-completed': {
+              '& 	.MuiStepConnector-line': {
+                borderColor: 'primary.light',
+                borderLeftStyle: 'dashed'
+              }
+            },
+            '&.Mui-active': {
+              '& 	.MuiStepConnector-line': {
+                borderColor: 'primary.light',
+                borderLeftStyle: 'dashed'
+              }
+            },
+            '.MuiStepConnector-vertical': {
+              marginTop: '3px'
+            }
+          }}
+        />
+      }
+      orientation='vertical'
+      {...delegated}
+    >
       {Array.apply(null, Array(nbItems)).map((_item, index) => (
         <Step key={index} active>
           <StepLabel
@@ -87,7 +77,20 @@ const ShipperAddressStepper = ({
               removeStepMethod
             }}
           />
-          <Content>{childrenComponent[index]}</Content>
+          <StepContent
+            sx={{
+              borderColor: 'primary.light',
+              borderLeftStyle: 'dashed',
+              '.MuiCollapse-wrapperInner': {
+                marginTop: '-55px'
+              },
+              '.MuiStepContent-last': {
+                border: 'none'
+              }
+            }}
+          >
+            {childrenComponent[index]}
+          </StepContent>
         </Step>
       ))}
     </Stepper>
