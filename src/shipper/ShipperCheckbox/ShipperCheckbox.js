@@ -22,14 +22,16 @@ export default function IconCheckboxes({ className = '', ...delegated }) {
           <CheckBoxOutlineBlankRounded
             sx={{
               width: (theme) => theme.spacing(2),
-              height: (theme) => theme.spacing(2)
+              height: (theme) => theme.spacing(2),
+              marginRight: '10px'
             }}
           />
           <StopRounded
             sx={{
               position: 'absolute',
               width: (theme) => `calc(${theme.spacing(2)} - 2px)`,
-              height: (theme) => `calc(${theme.spacing(2)} - 2px)`
+              height: (theme) => `calc(${theme.spacing(2)} - 2px)`,
+              marginRight: '10px'
             }}
           />
         </React.Fragment>
