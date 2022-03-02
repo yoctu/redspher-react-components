@@ -104,7 +104,8 @@ import {
   FormHelperText,
   FormControlLabel,
   ThemeProvider,
-  Typography
+  Typography,
+  Slider
 } from '@mui/material'
 import { Pagination } from '@mui/lab'
 import InputAdornment from '@mui/material/InputAdornment'
@@ -550,6 +551,9 @@ const ShipperShowCase = () => {
               shownLabelFormat={shownLabelFormat}
               showLabel={true}
             />
+          </div>
+          <div style={{ width: '400px', marginLeft: '50px' }}>
+            <Slider disabled defaultValue={30} aria-label='Disabled slider' />
           </div>
         </section>
         <div>

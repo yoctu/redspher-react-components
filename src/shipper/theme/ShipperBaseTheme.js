@@ -240,7 +240,10 @@ const ShipperBaseTheme = {
         thumb: {
           color: themeConstants.primary.main,
           width: '10px',
-          height: '10px'
+          height: '10px',
+          '&.Mui-disabled': {
+            color: themeConstants.grey.main
+          }
         },
         valueLabel: {
           top: -20,
