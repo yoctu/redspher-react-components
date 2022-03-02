@@ -7,69 +7,25 @@ import {
   Typography,
   Box
 } from '@mui/material'
-import { withStyles, makeStyles, createStyles } from '@mui/styles'
-import clsx from 'clsx'
 import themeConstants from '../theme/themeConstants'
 
-const useStepIconStyles = makeStyles(() => {
-  return createStyles({
-    root: {
-      color: themeConstants.grey.light,
-      display: 'flex',
-      height: 22,
-      zIndex: 999,
-      alignItems: 'center'
-    },
-    active: {
-      color: themeConstants.primary.main
-    },
-    textActive: {
-      color: themeConstants.black.dark,
-      '&:hover': {
-        cursor: 'pointer'
-      }
-    },
-    textNotActive: {
-      color: themeConstants.grey.main
-    },
-    textCurrent: {
-      color: themeConstants.black.dark
-    },
-    stepLabel: {
-      marginTop: 0
-    },
-    alternativeLabel: {},
-    labelContainer: {
-      width: 200,
-      '& $alternativeLabel': {
-        marginTop: 0
-      }
-    },
-    iconActive: {
-      '&:hover': {
-        cursor: 'pointer'
-      }
-    },
-    iconCurrent: {},
-    iconNotActive: {},
-    completedMiddle: {
-      '&:hover': {
-        cursor: 'pointer'
-      }
-    }
-  })
-})
-
 function StepIcon(props) {
-  const classes = useStepIconStyles()
   const { active, completed, onClick } = props
 
   return (
-    <div
-      className={clsx(classes.root, {
-        [classes.active]: active || completed,
-        [classes.completedMiddle]: completed
-      })}
+    <Box
+      sx={{
+        display: 'flex',
+        height: 22,
+        zIndex: 999,
+        alignItems: 'center',
+        color: active || completed ? 'primary.main' : 'grey.light',
+        completedMiddle: {
+          '&:hover': {
+            cursor: completed ? 'pointer' : 'default'
+          }
+        }
+      }}
       onClick={() => {
         if (completed) {
           onClick()
@@ -108,53 +64,41 @@ function StepIcon(props) {
           />
         </svg>
       )}
-    </div>
+    </Box>
   )
 }
 
-const Connector = withStyles({
-  alternativeLabel: {
-    top: 10,
-    left: 'calc(-50%)',
-    right: 'calc(50%)'
-  },
-  active: {
-    '& $line': {
-      borderColor: themeConstants.primary.main
-    }
-  },
-  completed: {
-    '& $line': {
-      borderColor: themeConstants.primary.main
-    }
-  },
-  line: {
-    borderColor: themeConstants.grey.light,
-    borderTopWidth: 2,
-    borderRadius: 1
-  }
-})(StepConnector)
-
 const ShipperStepper = ({ steps, activeStep }) => {
-  const classes = useStepIconStyles()
-
   const getClassNameTypo = (index) => {
     if (index < activeStep) {
-      return classes.textActive
+      return {
+        color: 'black.dark',
+        '&:hover': {
+          cursor: 'pointer'
+        }
+      }
     } else if (index === activeStep) {
-      return classes.textCurrent
+      return {
+        color: 'black.dark'
+      }
     } else {
-      return classes.textNotActive
+      return {
+        color: 'grey.main'
+      }
     }
   }
 
   const getClassNameIcon = (index) => {
     if (index < activeStep) {
-      return classes.iconActive
+      return {
+        '&:hover': {
+          cursor: 'pointer'
+        }
+      }
     } else if (index === activeStep) {
-      return classes.iconCurrent
+      return {}
     } else {
-      return classes.iconNotActive
+      return {}
     }
   }
 
@@ -173,7 +117,32 @@ const ShipperStepper = ({ steps, activeStep }) => {
       <Stepper
         alternativeLabel
         activeStep={activeStep}
-        connector={<Connector />}
+        connector={
+          <StepConnector
+            sx={{
+              '&.MuiStepConnector-alternativeLabel': {
+                top: 10,
+                left: 'calc(-50%)',
+                right: 'calc(50%)'
+              },
+              '&.Mui-active': {
+                '& .MuiStepConnector-line': {
+                  borderColor: 'primary.main'
+                }
+              },
+              '&.Mui-completed': {
+                '& .MuiStepConnector-line': {
+                  borderColor: 'primary.main'
+                }
+              },
+              '&.MuiStepConnector-line': {
+                borderColor: 'grey.light',
+                borderTopWidth: 2,
+                borderRadius: 1
+              }
+            }}
+          />
+        }
       >
         {steps.map((step, index) => (
           <Step key={step.label}>
@@ -182,13 +151,17 @@ const ShipperStepper = ({ steps, activeStep }) => {
               StepIconProps={{
                 onClick: step.onClick
               }}
-              classes={{
-                labelContainer: classes.labelContainer,
-                alternativeLabel: classes.alternativeLabel
+              sx={{
+                '& .MuiStepLabel-labelContainer': {
+                  width: 200,
+                  '& .MuiStepLabel-alternativeLabel': {
+                    marginTop: 0
+                  }
+                }
               }}
             >
               <Typography
-                className={getClassNameTypo(index)}
+                sx={getClassNameTypo(index)}
                 onClick={() => {
                   onClickAction(index, step)
                 }}
@@ -197,7 +170,7 @@ const ShipperStepper = ({ steps, activeStep }) => {
               </Typography>
               <Box display='flex' justifyContent='center' sx={{ mt: -9 }}>
                 <Box
-                  className={getClassNameIcon(index)}
+                  sx={getClassNameIcon(index)}
                   onClick={() => {
                     onClickAction(index, step)
                   }}

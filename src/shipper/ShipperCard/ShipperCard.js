@@ -19,43 +19,6 @@ import InformationIcon from '../../icons/Shipper/InformationIcon'
 import DriverIcon from '../../icons/Shipper/DriverIcon'
 import TailLiftIcon from '../../icons/Shipper/TailLiftIcon'
 import SideLoadIcon from '../../icons/Shipper/SideLoadIcon'
-import { withStyles } from '@mui/styles'
-
-const HtmlTooltip = withStyles(() => ({
-  tooltip: {
-    backgroundColor: '#FFFFFF',
-    boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)',
-    borderRadius: 16
-  }
-}))(Tooltip)
-
-const IconButtonStyled = withStyles(() => ({
-  root: {
-    backgroundColor: 'transparent',
-    marginLeft: '5px',
-    padding: 0,
-    width: '16px',
-    height: '16px',
-    '&:hover': {
-      backgroundColor: 'transparent'
-    },
-    '& svg': {
-      width: '16px',
-      height: '16px'
-    }
-  }
-}))(IconButton)
-
-const RadioStyled = withStyles({
-  root: {
-    '&:hover': {
-      backgroundColor: 'transparent'
-    },
-    '&.Mui-checked:hover': {
-      backgroundColor: 'transparent'
-    }
-  }
-})(Radio)
 
 const ShipperCard = ({
   startIcon,
@@ -121,27 +84,16 @@ const ShipperCard = ({
     setOpen(true)
   }
 
-  const CardStyled = withStyles({
-    root: {
-      '&:not([disabled]):hover': {
-        border: `1px solid ${themeConstants.primary.main}`
-      },
-      '&[aria-selected=true]': {
-        border: `1px solid ${themeConstants.primary.main}`
-      }
-    }
-  })(Card)
-
-  const GridIcon = withStyles({
-    root: {
-      '& img': {
-        height: '50px'
-      }
-    }
-  })(Grid)
-
   return (
-    <CardStyled
+    <Card
+      sx={{
+        '&:not([disabled]):hover': {
+          border: `1px solid ${themeConstants.primary.main}`
+        },
+        '&[aria-selected=true]': {
+          border: `1px solid ${themeConstants.primary.main}`
+        }
+      }}
       disabled={disabled}
       onClick={onclickAction}
       aria-selected={
@@ -153,11 +105,21 @@ const ShipperCard = ({
       <CardActionArea disabled={disabled} disableRipple>
         <CardContent sx={{ padding: '10px 15px' }}>
           <Grid container sx={{ height: '100%' }}>
-            <GridIcon item xs={12} container justifyContent='center'>
+            <Grid
+              item
+              xs={12}
+              container
+              justifyContent='center'
+              sx={{
+                '& img': {
+                  height: '50px'
+                }
+              }}
+            >
               {React.isValidElement(startIcon)
                 ? startIcon
                 : React.createElement(getIconByName(startIcon), {})}
-            </GridIcon>
+            </Grid>
             <Grid
               xs={12}
               container
@@ -181,13 +143,38 @@ const ShipperCard = ({
               </Grid>
               {!noInfoIcon && (
                 <Grid item sx={{ display: 'flex', alignItems: 'center' }}>
-                  <HtmlTooltip
+                  <Tooltip
                     title={<React.Fragment>{tooltipValue}</React.Fragment>}
                     open={open}
                     onClose={handleTooltipClose}
                     onOpen={handleTooltipOpen}
+                    PopperProps={{
+                      sx: {
+                        '.MuiTooltip-tooltip': {
+                          backgroundColor: '#FFFFFF',
+                          boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)',
+                          borderRadius: 2
+                        }
+                      }
+                    }}
                   >
-                    <IconButtonStyled disableRipple>
+                    <IconButton
+                      sx={{
+                        backgroundColor: 'transparent',
+                        marginLeft: '5px',
+                        padding: 0,
+                        width: '16px',
+                        height: '16px',
+                        '&:hover': {
+                          backgroundColor: 'transparent'
+                        },
+                        '& svg': {
+                          width: '16px',
+                          height: '16px'
+                        }
+                      }}
+                      disableRipple
+                    >
                       {open ? (
                         <InformationIcon
                           primarycolor={themeConstants.primary.dark}
@@ -196,8 +183,8 @@ const ShipperCard = ({
                       ) : (
                         <InformationIcon />
                       )}
-                    </IconButtonStyled>
-                  </HtmlTooltip>
+                    </IconButton>
+                  </Tooltip>
                 </Grid>
               )}
             </Grid>
@@ -219,7 +206,7 @@ const ShipperCard = ({
               justifyContent='center'
               sx={{ mt: 'auto' }}
             >
-              <RadioStyled
+              <Radio
                 disableRipple
                 color='primary'
                 checked={
@@ -229,13 +216,21 @@ const ShipperCard = ({
                 }
                 value={value}
                 disabled={disabled}
-                sx={{ height: '100%' }}
+                sx={{
+                  height: '100%',
+                  '&:hover': {
+                    backgroundColor: 'transparent'
+                  },
+                  '&.Mui-checked:hover': {
+                    backgroundColor: 'transparent'
+                  }
+                }}
               />
             </Grid>
           </Grid>
         </CardContent>
       </CardActionArea>
-    </CardStyled>
+    </Card>
   )
 }
 

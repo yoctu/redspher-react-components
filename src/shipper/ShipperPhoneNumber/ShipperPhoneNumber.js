@@ -1,18 +1,7 @@
 import React, { useState } from 'react'
 import MuiPhoneNumber from 'material-ui-phone-number'
 import PropTypes from 'prop-types'
-import withStyles from '@mui/styles/withStyles'
 import { isValidPhoneNumber } from 'libphonenumber-js'
-
-const styles = () => ({
-  flagButton: {
-    marginTop: 0,
-    marginBottom: 0,
-    '& .margin': {
-      width: '16px'
-    }
-  }
-})
 
 function PhoneNumber({
   helperText,
@@ -29,6 +18,15 @@ function PhoneNumber({
   return (
     <MuiPhoneNumber
       {...props}
+      sx={{
+        '.MuiIconButton-root': {
+          marginTop: 0,
+          marginBottom: 0,
+          '& .margin': {
+            width: 16
+          }
+        }
+      }}
       disableAreaCodes
       onChange={(value, country) => {
         const event = {
@@ -71,7 +69,7 @@ PhoneNumber.defaultProps = {
   onChange: () => null
 }
 
-export default withStyles(styles)(PhoneNumber)
+export default PhoneNumber
 
 export const defaultPreferredCountries = [
   'at',

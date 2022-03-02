@@ -9,19 +9,8 @@ import {
   Button,
   Box
 } from '@mui/material'
-import themeConstants from '../theme/themeConstants'
 import DownloadIcon from '../../icons/Shipper/DownloadIcon'
 import People2Icon from '../../icons/Shipper/People2Icon'
-import { withStyles } from '@mui/styles'
-
-const CardStyled = withStyles({
-  root: {
-    width: '270px',
-    '&:hover': {
-      border: `1px solid ${themeConstants.primary.main}`
-    }
-  }
-})(Card)
 
 const ShipperCardInvoice = ({
   title,
@@ -40,13 +29,21 @@ const ShipperCardInvoice = ({
   VATAmount,
   downloadTranslate
 }) => (
-  <CardStyled>
+  <Card
+    sx={{
+      width: '270px',
+      '&:hover': {
+        border: '1px solid',
+        borderColor: 'primary.main'
+      }
+    }}
+  >
     <CardContent>
       <Grid>
         <Grid item xs={12}>
           <Typography
             sx={{
-              color: (theme) => theme.palette.grey.dark,
+              color: 'grey.dark',
               fontSize: (theme) => theme.typography.sizes[1],
               lineHeight: (theme) => theme.typography.lineHeights[0]
             }}
@@ -57,7 +54,7 @@ const ShipperCardInvoice = ({
         <Grid item xs={12}>
           <Typography
             sx={{
-              color: (theme) => theme.palette.black.dark,
+              color: 'black.dark',
               fontSize: (theme) => theme.typography.sizes[3],
               lineHeight: (theme) => theme.typography.lineHeights[2],
               fontWeight: 'bold',
@@ -76,7 +73,7 @@ const ShipperCardInvoice = ({
             <Box mb={2} ml={2}>
               <Typography
                 sx={{
-                  color: (theme) => theme.palette.grey.dark,
+                  color: 'grey.dark',
                   fontSize: (theme) => theme.typography.sizes[1],
                   lineHeight: (theme) => theme.typography.lineHeights[0]
                 }}
@@ -91,7 +88,7 @@ const ShipperCardInvoice = ({
           <Grid item xs={6}>
             <Typography
               sx={{
-                color: (theme) => theme.palette.grey.main,
+                color: 'grey.main',
                 fontSize: (theme) => theme.typography.sizes[1],
                 lineHeight: (theme) => theme.typography.lineHeights[0]
               }}
@@ -111,7 +108,7 @@ const ShipperCardInvoice = ({
             <Grid item justifyContent='left'>
               <Typography
                 sx={{
-                  color: (theme) => theme.palette.grey.main,
+                  color: 'grey.main',
                   fontSize: (theme) => theme.typography.sizes[1],
                   lineHeight: (theme) => theme.typography.lineHeights[0]
                 }}
@@ -133,7 +130,7 @@ const ShipperCardInvoice = ({
         <Grid item xs={12}>
           <Typography
             sx={{
-              color: (theme) => theme.palette.primary.main,
+              color: 'primary.main',
               fontSize: (theme) => theme.typography.sizes[4],
               lineHeight: (theme) => theme.typography.lineHeights[3],
               fontWeight: 'bold',
@@ -147,7 +144,7 @@ const ShipperCardInvoice = ({
         <Grid item xs={12}>
           <Typography
             sx={{
-              color: (theme) => theme.palette.grey.main,
+              color: 'grey.main',
               fontSize: (theme) => theme.typography.sizes[2],
               lineHeight: (theme) => theme.typography.lineHeights[1]
             }}
@@ -159,7 +156,7 @@ const ShipperCardInvoice = ({
         <Grid item xs={12}>
           <Typography
             sx={{
-              color: (theme) => theme.palette.grey.main,
+              color: 'grey.main',
               fontSize: (theme) => theme.typography.sizes[2],
               lineHeight: (theme) => theme.typography.lineHeights[1]
             }}
@@ -180,7 +177,7 @@ const ShipperCardInvoice = ({
         </Grid>
       </Grid>
     </CardContent>
-  </CardStyled>
+  </Card>
 )
 
 ShipperCardInvoice.propTypes = {
