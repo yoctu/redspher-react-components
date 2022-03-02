@@ -12,8 +12,7 @@ export default function IconCheckboxes({ className = '', ...delegated }) {
         <CheckBoxOutlineBlankRounded
           sx={{
             width: (theme) => theme.spacing(2),
-            height: (theme) => theme.spacing(2),
-            marginRight: '10px'
+            height: (theme) => theme.spacing(2)
           }}
         />
       }
@@ -22,23 +21,22 @@ export default function IconCheckboxes({ className = '', ...delegated }) {
           <CheckBoxOutlineBlankRounded
             sx={{
               width: (theme) => theme.spacing(2),
-              height: (theme) => theme.spacing(2),
-              marginRight: '10px'
+              height: (theme) => theme.spacing(2)
             }}
           />
           <StopRounded
             sx={{
               position: 'absolute',
               width: (theme) => `calc(${theme.spacing(2)} - 2px)`,
-              height: (theme) => `calc(${theme.spacing(2)} - 2px)`,
-              marginRight: '10px'
+              height: (theme) => `calc(${theme.spacing(2)} - 2px)`
             }}
           />
         </React.Fragment>
       }
       sx={{
         width: (theme) => theme.spacing(2),
-        height: (theme) => theme.spacing(2)
+        height: (theme) => theme.spacing(2),
+        marginRight: '10px'
       }}
     />
   )
