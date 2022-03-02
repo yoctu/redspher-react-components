@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stepper, Step, StepLabel, StepConnector, Box } from '@mui/material'
+import { Stepper, Step, StepLabel, Box, StepConnector } from '@mui/material'
 
 import PinIcon from '../../icons/Shipper/PinIcon'
 
@@ -20,6 +20,7 @@ const ShipperStepper = ({
   iconSecondaryColor
 }) => {
   const steps = Array.apply('poney', Array(2))
+  console.log('Poney stepper', stepperColor)
   return (
     <Box
       sx={{
@@ -33,10 +34,10 @@ const ShipperStepper = ({
         }}
         connector={
           <StepConnector
+            stepperColor={stepperColor}
             sx={{
               '.MuiStepConnector-line': {
-                borderColor: stepperColor,
-                border: '1px dashed'
+                border: `1px dashed  ${stepperColor}`
               }
             }}
           />

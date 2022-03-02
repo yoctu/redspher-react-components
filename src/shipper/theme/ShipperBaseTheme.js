@@ -19,25 +19,25 @@ const ShipperBaseTheme = {
     lineHeights: ['14.63px', '16px', '17.07px', '24px', '29.26px'],
     h1: {
       fontWeight: 900,
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '36px',
       lineHeight: '43.88px'
     },
     h2: {
       fontWeight: 'bold',
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '32px',
       lineHeight: '39.01px'
     },
     h3: {
       fontWeight: 'bold',
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '24px',
       lineHeight: '29.26px'
     },
     h4: {
       fontWeight: 'bold',
-      color: themeConstants.primary.dark,
+      color: themeConstants.black.dark,
       fontSize: '20px',
       lineHeight: '24.38px'
     },
