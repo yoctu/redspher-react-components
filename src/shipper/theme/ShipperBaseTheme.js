@@ -73,6 +73,8 @@ const ShipperBaseTheme = {
           borderRadius: '40px',
           fontSize: '14px',
           textTransform: 'none',
+          height: 31,
+          boxShadow: 'none',
           '&.logoutButton': {
             backgroundColor: 'transparent',
             border: '1px solid ' + themeConstants.white.main,
