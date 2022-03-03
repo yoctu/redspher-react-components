@@ -15,7 +15,7 @@ function StepIcon({ iconPrimaryColor, iconSecondaryColor }) {
 }
 
 const ShipperStepper = ({
-  stepperColor,
+  steppercolor,
   iconPrimaryColor,
   iconSecondaryColor
 }) => {
@@ -33,10 +33,10 @@ const ShipperStepper = ({
         }}
         connector={
           <StepConnector
-            stepperColor={stepperColor}
+            stepperColor={steppercolor}
             sx={{
               '.MuiStepConnector-line': {
-                border: `1px dashed  ${stepperColor}`
+                border: `1px dashed  ${steppercolor}`
               }
             }}
           />
