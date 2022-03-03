@@ -104,7 +104,8 @@ import {
   FormHelperText,
   FormControlLabel,
   ThemeProvider,
-  Typography
+  Typography,
+  Slider
 } from '@mui/material'
 import { Pagination } from '@mui/lab'
 import InputAdornment from '@mui/material/InputAdornment'
@@ -550,6 +551,9 @@ const ShipperShowCase = () => {
               shownLabelFormat={shownLabelFormat}
               showLabel={true}
             />
+          </div>
+          <div style={{ width: '400px', marginLeft: '50px' }}>
+            <Slider disabled defaultValue={30} aria-label='Disabled slider' />
           </div>
         </section>
         <div>
@@ -1055,9 +1059,15 @@ const ShipperShowCase = () => {
         <br />
         <br />
         <ShipperRequestStepper
+<<<<<<< HEAD
           steppercolor={'#000'}
           iconPrimaryColor={'#2986cc'}
           iconSecondaryColor={'#f44336'}
+=======
+          stepperColor='#2986cc'
+          iconPrimaryColor='#2986cc'
+          iconSecondaryColor='#f44336'
+>>>>>>> 7ca34ce44a787426e524adb2091cbb78f4eb291d
         />
         <br />
         <br />

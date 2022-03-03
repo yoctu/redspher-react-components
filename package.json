@@ -68,6 +68,7 @@
     "libphonenumber-js": "^1.9.49",
     "material-ui-phone-number": "^3.0.0",
     "node-sass": "^6.0.1",
+    "prop-types": "^15.8.1",
     "react-mui-dropzone": "^4.0.6"
   }
 }

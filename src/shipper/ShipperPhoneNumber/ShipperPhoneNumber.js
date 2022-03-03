@@ -29,17 +29,19 @@ function PhoneNumber({
       }}
       disableAreaCodes
       onChange={(value, country) => {
+        const valid = isValidPhoneNumber(value)
+        setError(!valid)
         const event = {
           target: {
             value: value,
-            name: name
+            name: name,
+            validity: {
+              valid
+            }
           }
         }
         setCountryCode(country.countryCode)
         onChange(event)
-      }}
-      onBlur={(event) => {
-        setError(!isValidPhoneNumber(event.target.value))
       }}
       enablesearchfield='true'
       value={value}
