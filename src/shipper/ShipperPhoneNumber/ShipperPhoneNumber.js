@@ -10,10 +10,11 @@ function PhoneNumber({
   onChange,
   name = 'phoneNumber',
   value,
+  defaultCountry = 'fr',
   ...props
 }) {
   const [error, setError] = useState(false)
-  const [countryCode, setCountryCode] = useState('fr')
+  const [countryCode, setCountryCode] = useState(defaultCountry)
 
   return (
     <MuiPhoneNumber
