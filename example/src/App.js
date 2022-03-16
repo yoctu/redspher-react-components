@@ -10,7 +10,78 @@ import {
   RubiwinBackButton,
   AmazonTimePicker,
   RubiwinDateTimePicker,
+  RubiwinActionIcon,
+  RubiwinAddIcon,
+  RubiwinAdrIcon,
+  RubiwinArrowBottomIcon,
+  RubiwinArrowLeftIcon,
+  RubiwinArrowRightIcon,
+  RubiwinArrowTopIcon,
+  RubiwinAttachmentIcon,
+  RubiwinAttentionIcon,
+  RubiwinBigMapIcon,
+  RubiwinBusinessDirectIcon,
   DirectBusinessIcon,
+  RubiwinBurgerMenuIcon,
+  RubiwinCamembertIcon,
+  RubiwinCamion1Icon,
+  RubiwinCamion2Icon,
+  RubiwinCamion3Icon,
+  RubiwinCamion4Icon,
+  RubiwinCamion5Icon,
+  RubiwinCamion6Icon,
+  RubiwinCaretBottomIcon,
+  RubiwinCaretLeftIcon,
+  RubiwinCaretRightIcon,
+  RubiwinCaretTopIcon,
+  RubiwinCheckIcon,
+  RubiwinCheckpointIcon,
+  RubiwinCircleCaretBottomIcon,
+  RubiwinCircleCaretLeftIcon,
+  RubiwinCircleCaretRightIcon,
+  RubiwinCircleCaretUpIcon,
+  RubiwinClearIcon,
+  RubiwinConcessionIcon,
+  RubiwinContactIcon,
+  RubiwinDashboardIcon,
+  RubiwinDatePickerIcon,
+  RubiwinDetailIcon,
+  RubiwinDownloadIcon,
+  RubiwinEditIcon,
+  RubiwinEmailIcon,
+  RubiwinEuroIcon,
+  RubiwinFavorisIcon,
+  RubiwinFiltersIcon,
+  RubiwinFormationIcon,
+  RubiwinGreenPassIcon,
+  RubiwinHistogramIcon,
+  RubiwinHomeIcon,
+  RubiwinIncoterms,
+  RubiwinInformationIcon,
+  RubiwinInvoiceIcon,
+  RubiwinManyPeopleIcon,
+  RubiwinNotificationsIcon,
+  RubiwinNumberCircleFillIcon,
+  RubiwinNumberCircleStrokeIcon,
+  RubiwinPeopleIcon,
+  RubiwinPeopleLockIcon,
+  RubiwinPercentageIcon,
+  RubiwinPhoneIcon,
+  RubiwinPinMapIcon,
+  RubiwinRefreshIcon,
+  RubiwinReposIcon,
+  RubiwinSaveIcon,
+  RubiwinSecondDriverIcon,
+  RubiwinSendIcon,
+  RubiwinSideLoadIcon,
+  RubiwinSortIcon,
+  RubiwinTabIcon,
+  RubiwinTailLiftIcon,
+  RubiwinTimerIcon,
+  RubiwinUnvisibilityIcon,
+  RubiwinUploadIcon,
+  RubiwinVisibilityIcon,
+  RubiwinWebAppIcon,
   RubiwinThemeProvider,
   E4pThemeProvider,
   ShipperThemeProvider,
@@ -133,97 +204,184 @@ const RubiWinShowCase = () => {
     window.alert('Hello Rubiwin')
   }
   return (
-    <RubiwinThemeProvider>
-      <h1>This is a test for github pages</h1>
-      <RubiwinButton text='yes yes' onClick={sayHello} />
-      <br />
-      <RubiwinCheckbox
-        onChange={handleChange}
-        checked={checked}
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-        name='rubiwinCheck1'
-      />
-      <br />
-      <RubiwinCheckbox
-        onChange={handleChange}
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-        name='rubiwinCheck2'
-        disabled
-      />
-      <br />
-      <RubiwinFormLabel
-        control={<RubiwinCheckbox />}
-        onChange={handleChange}
-        checked={checked}
-        name='rubiwin'
-        label='Rubiwin'
-        labelPlacement='top'
-      />
-      <br />
-      <RubiwinInputField {...testProps} />
-      <br />
-      <RubiwinInputField {...testProps} disabled />
-      <br />
-      <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
-      <br />
-      <RubiwinInputField id='test' />
-      <br />
-      <FormControl variant='standard' fullWidth>
-        <InputLabel>Select option</InputLabel>
-        <RubiwinSelect label='Select option'>
-          <MenuItem value={0}>Option 1</MenuItem>
-          <MenuItem value={1}>Option 2</MenuItem>
-        </RubiwinSelect>
-      </FormControl>
-      <br />
-      <RubiwinSquareButton
-        onClick={sayHello}
-        text='Click me'
-        className='rubiwin'
-      />
-      <br />
-      <RubiwinBackButton text={<>test</>} onClick={sayHello} />
-      <br />
-      <RubiwinBackButton text='test string' onClick={sayHello} />
-      <br />
-      <AmazonTimePicker
-        value={time}
-        onClick={(event) => event.target.focus()}
-        onChange={(value) => setTime(value)}
-      />
-      <br />
-      <RubiwinDateTimePicker
-        value={selectedDate}
-        onChange={handleDateChange}
-        className='test'
-        label='test label'
-        minDate={new Date('2020-10-05T00:00:00.000Z')}
-        maxDate={'10/10/2020'}
-      />
-      <br />
-      <br />
-      <E4pThemeProvider>
-        <Button
-          variant='contained'
-          startIcon={<DirectBusinessIcon />}
-          color='primary'
-          size='large'
+    <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
+      <h1>--------- RUBIWIN COMPONENTS ---------</h1>
+
+      <RubiwinThemeProvider>
+        <RubiwinCheckbox
+          onChange={handleChange}
+          checked={checked}
+          inputProps={{ 'aria-label': 'primary checkbox' }}
+          name='rubiwinCheck1'
+        />
+        <RubiwinCheckbox
+          onChange={handleChange}
+          inputProps={{ 'aria-label': 'primary checkbox' }}
+          name='rubiwinCheck2'
+          disabled
+        />
+        <RubiwinFormLabel
+          control={<RubiwinCheckbox />}
+          onChange={handleChange}
+          checked={checked}
+          name='rubiwin'
+          label='Rubiwin'
+          labelPlacement='top'
+        />
+        <RubiwinInputField {...testProps} />
+        <RubiwinInputField {...testProps} disabled />
+        <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
+        <RubiwinInputField id='test' />
+        <FormControl variant='standard' fullWidth>
+          <InputLabel>Select option</InputLabel>
+          <RubiwinSelect label='Select option'>
+            <MenuItem value={0}>Option 1</MenuItem>
+            <MenuItem value={1}>Option 2</MenuItem>
+          </RubiwinSelect>
+        </FormControl>
+
+        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em'}}>
+          <h2>- BUTTONS -</h2>
+
+          <RubiwinButton text='default RubiwinButton' onClick={sayHello} />
+          <RubiwinButton text='default RubiwinButton disabled' disabled />
+          <Button>Default button mui text</Button>
+          <Button startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}>Default button mui text</Button>
+          <Button disabled>Default button mui disabled</Button>
+          <Button variant='contained'>Default button mui contained</Button>
+          <Button variant='contained' startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}>Default button mui contained</Button>
+          <Button variant='contained' disabled>Default button mui contained and disabled</Button>
+          <Button variant='outlined'>Default button mui outlined</Button>
+          <Button variant='outlined' startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}>Default button mui outlined</Button>
+          <Button variant='outlined' disabled>Default button mui outlined and disabled</Button>
+          <RubiwinSquareButton
+            onClick={sayHello}
+            text='square'
+            className='rubiwin'
+          />
+          <RubiwinBackButton text='back' onClick={sayHello} />
+        </div>
+
+        <AmazonTimePicker
+          value={time}
+          onClick={(event) => event.target.focus()}
+          onChange={(value) => setTime(value)}
+        />
+        <RubiwinDateTimePicker
+          value={selectedDate}
+          onChange={handleDateChange}
+          className='test'
+          label='test label'
+          minDate={new Date('2020-10-05T00:00:00.000Z')}
+          maxDate={'10/10/2020'}
+        />
+        <Select
+          value={selected}
+          onChange={(event) => setSelected(event.target.value)}
+          multiple
+          variant='outlined'
         >
-          Bid on it !
-        </Button>
-      </E4pThemeProvider>
-      <br />
-      <br />
-      <Select
-        value={selected}
-        onChange={(event) => setSelected(event.target.value)}
-        multiple
-        variant='outlined'
-      >
-        {testRedenderTwo()}
-      </Select>
-      <br />
-    </RubiwinThemeProvider>
+          {testRedenderTwo()}
+        </Select>
+
+        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em'}}>
+          <h2>- ICONS -</h2>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(6, 1fr)',
+              placeItems: 'center',
+              gap: '1em'
+            }}
+          >
+            <RubiwinActionIcon />
+            <RubiwinAddIcon />
+            <RubiwinAdrIcon />
+            <RubiwinArrowBottomIcon />
+            <RubiwinArrowLeftIcon />
+            <RubiwinArrowRightIcon />
+            <RubiwinArrowTopIcon />
+            <RubiwinAttachmentIcon />
+            <RubiwinAttentionIcon />
+            <RubiwinBigMapIcon />
+            <RubiwinBusinessDirectIcon />
+            <DirectBusinessIcon />
+            <RubiwinBurgerMenuIcon />
+            <RubiwinCamembertIcon />
+            <RubiwinCamion1Icon />
+            <RubiwinCamion2Icon />
+            <RubiwinCamion3Icon />
+            <RubiwinCamion4Icon />
+            <RubiwinCamion5Icon />
+            <RubiwinCamion6Icon />
+            <RubiwinCaretBottomIcon />
+            <RubiwinCaretLeftIcon />
+            <RubiwinCaretRightIcon />
+            <RubiwinCaretTopIcon />
+            <RubiwinCheckIcon />
+            <RubiwinCheckpointIcon />
+            <RubiwinCircleCaretBottomIcon />
+            <RubiwinCircleCaretLeftIcon />
+            <RubiwinCircleCaretRightIcon />
+            <RubiwinCircleCaretUpIcon />
+            <RubiwinClearIcon />
+            <RubiwinConcessionIcon />
+            <RubiwinContactIcon />
+            <RubiwinDashboardIcon />
+            <RubiwinDatePickerIcon />
+            <RubiwinDetailIcon />
+            <RubiwinDownloadIcon />
+            <RubiwinEditIcon />
+            <RubiwinEmailIcon />
+            <RubiwinEuroIcon />
+            <RubiwinFavorisIcon />
+            <RubiwinFiltersIcon />
+            <RubiwinFormationIcon />
+            <RubiwinGreenPassIcon />
+            <RubiwinHistogramIcon />
+            <RubiwinHomeIcon />
+            <RubiwinIncoterms />
+            <RubiwinInformationIcon />
+            <RubiwinInvoiceIcon />
+            <RubiwinManyPeopleIcon />
+            <RubiwinNotificationsIcon />
+            <RubiwinNumberCircleFillIcon />
+            <RubiwinNumberCircleStrokeIcon />
+            <RubiwinPeopleIcon />
+            <RubiwinPeopleLockIcon />
+            <RubiwinPercentageIcon />
+            <RubiwinPhoneIcon />
+            <RubiwinPinMapIcon />
+            <RubiwinRefreshIcon />
+            <RubiwinReposIcon />
+            <RubiwinSaveIcon />
+            <RubiwinSecondDriverIcon />
+            <RubiwinSendIcon />
+            <RubiwinSideLoadIcon />
+            <RubiwinSortIcon />
+            <RubiwinTabIcon />
+            <RubiwinTailLiftIcon />
+            <RubiwinTimerIcon />
+            <RubiwinUnvisibilityIcon />
+            <RubiwinUploadIcon />
+            <RubiwinVisibilityIcon />
+            <RubiwinWebAppIcon />
+          </div>
+        </div>
+
+        <h2>- E4P COMPONENTS -</h2>
+        <E4pThemeProvider>
+          <Button
+            variant='contained'
+            startIcon={<DirectBusinessIcon />}
+            color='primary'
+            size='large'
+          >
+            Bid on it !
+          </Button>
+        </E4pThemeProvider>
+      </RubiwinThemeProvider>
+    </div>
   )
 }
 

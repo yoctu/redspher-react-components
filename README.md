@@ -25,11 +25,11 @@ class Example extends Component {
 
 ## doc
 
-[Online documentation](https://yoctu.github.io/redspher-react-components/)
+[Online documentation](https://flash-global.github.io/redspher-react-components/)
 
 ## contribute
 
-Clone repo https://github.com/yoctu/redspher-react-components
+Clone repo https://github.com/flash-global/redspher-react-components
 
 install node modules
 
