@@ -16,7 +16,24 @@ import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 import E4pTheme from './rubiwin/theme/E4pTheme'
 
 // RUBIWIN ICONS
+import RubiwinActionIcon from './icons/Rubiwin/ActionIcon'
+import RubiwinAddIcon from './icons/Rubiwin/AddIcon'
+import RubiwinAdrIcon from './icons/Rubiwin/AdrIcon'
+import RubiwinArrowBottomIcon from './icons/Rubiwin/ArrowBottomIcon'
+import RubiwinArrowLeftIcon from './icons/Rubiwin/ArrowLeftIcon'
+import RubiwinArrowRightIcon from './icons/Rubiwin/ArrowRightIcon'
+import RubiwinArrowTopIcon from './icons/Rubiwin/ArrowTopIcon'
+import RubiwinAttachmentIcon from './icons/Rubiwin/AttachmentIcon'
+import RubiwinAttentionIcon from './icons/Rubiwin/AttentionIcon'
+import RubiwinBigMapIcon from './icons/Rubiwin/BigMapIcon'
 import DirectBusinessIcon from './icons/Rubiwin/DirectBusinessIcon'
+import RubiwinBurgerMenuIcon from './icons/Rubiwin/BurgerMenuIcon'
+import RubiwinCamembertIcon from './icons/Rubiwin/CamembertIcon'
+import RubiwinCaretBottomIcon from './icons/Rubiwin/CaretBottomIcon'
+import RubiwinCaretLeftIcon from './icons/Rubiwin/CaretLeftIcon'
+import RubiwinCaretRightIcon from './icons/Rubiwin/CaretRightIcon'
+import RubiwinCaretTopIcon from './icons/Rubiwin/CaretTopIcon'
+import RubiwinSecondDriverIcon from './icons/Rubiwin/SecondDriverIcon'
 
 // SHIPPER
 import ShipperBaseTheme from './shipper/theme/ShipperBaseTheme'
@@ -111,7 +128,24 @@ export {
   RubiwinDateTimePicker,
   RubiwinSelect,
   RubiwinMenuItem,
+  RubiwinActionIcon,
+  RubiwinAddIcon,
+  RubiwinAdrIcon,
+  RubiwinArrowBottomIcon,
+  RubiwinArrowLeftIcon,
+  RubiwinArrowRightIcon,
+  RubiwinArrowTopIcon,
+  RubiwinAttachmentIcon,
+  RubiwinAttentionIcon,
+  RubiwinBigMapIcon,
   DirectBusinessIcon,
+  RubiwinBurgerMenuIcon,
+  RubiwinCamembertIcon,
+  RubiwinCaretBottomIcon,
+  RubiwinCaretLeftIcon,
+  RubiwinCaretRightIcon,
+  RubiwinCaretTopIcon,
+  RubiwinSecondDriverIcon,
   RubiwinThemeProvider,
   E4pThemeProvider,
   ShipperThemeProvider,

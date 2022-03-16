@@ -25,7 +25,7 @@ class Example extends Component {
 
 ## doc
 
-[Online documentation](https://yoctu.github.io/redspher-react-components/)
+[Online documentation](https://flash-global.github.io/redspher-react-components/)
 
 ## contribute
 

@@ -10,7 +10,24 @@ import {
   RubiwinBackButton,
   AmazonTimePicker,
   RubiwinDateTimePicker,
+  RubiwinActionIcon,
+  RubiwinAddIcon,
+  RubiwinAdrIcon,
+  RubiwinArrowBottomIcon,
+  RubiwinArrowLeftIcon,
+  RubiwinArrowRightIcon,
+  RubiwinArrowTopIcon,
+  RubiwinAttachmentIcon,
+  RubiwinAttentionIcon,
+  RubiwinBigMapIcon,
   DirectBusinessIcon,
+  RubiwinBurgerMenuIcon,
+  RubiwinCamembertIcon,
+  RubiwinCaretBottomIcon,
+  RubiwinCaretLeftIcon,
+  RubiwinCaretRightIcon,
+  RubiwinCaretTopIcon,
+  RubiwinSecondDriverIcon,
   RubiwinThemeProvider,
   E4pThemeProvider,
   ShipperThemeProvider,
@@ -223,7 +240,24 @@ const RubiWinShowCase = () => {
               gap: '1em'
             }}
           >
-            <PlusIcon title='PlusIcon' />
+            <RubiwinActionIcon />
+            <RubiwinAddIcon />
+            <RubiwinAdrIcon />
+            <RubiwinArrowBottomIcon />
+            <RubiwinArrowLeftIcon />
+            <RubiwinArrowRightIcon />
+            <RubiwinArrowTopIcon />
+            <RubiwinAttachmentIcon />
+            <RubiwinAttentionIcon />
+            <RubiwinBigMapIcon />
+            <DirectBusinessIcon />
+            <RubiwinBurgerMenuIcon />
+            <RubiwinCamembertIcon />
+            <RubiwinCaretBottomIcon />
+            <RubiwinCaretLeftIcon />
+            <RubiwinCaretRightIcon />
+            <RubiwinCaretTopIcon />
+            <RubiwinSecondDriverIcon />
           </div>
         </div>
 
