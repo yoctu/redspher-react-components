@@ -29,10 +29,33 @@ import RubiwinBigMapIcon from './icons/Rubiwin/BigMapIcon'
 import DirectBusinessIcon from './icons/Rubiwin/DirectBusinessIcon'
 import RubiwinBurgerMenuIcon from './icons/Rubiwin/BurgerMenuIcon'
 import RubiwinCamembertIcon from './icons/Rubiwin/CamembertIcon'
+import RubiwinCamion1Icon from './icons/Rubiwin/Camion1Icon'
+import RubiwinCamion2Icon from './icons/Rubiwin/Camion2Icon'
+import RubiwinCamion3Icon from './icons/Rubiwin/Camion3Icon'
+import RubiwinCamion4Icon from './icons/Rubiwin/Camion4Icon'
+import RubiwinCamion5Icon from './icons/Rubiwin/Camion5Icon'
+import RubiwinCamion6Icon from './icons/Rubiwin/Camion6Icon'
 import RubiwinCaretBottomIcon from './icons/Rubiwin/CaretBottomIcon'
 import RubiwinCaretLeftIcon from './icons/Rubiwin/CaretLeftIcon'
 import RubiwinCaretRightIcon from './icons/Rubiwin/CaretRightIcon'
 import RubiwinCaretTopIcon from './icons/Rubiwin/CaretTopIcon'
+import RubiwinCheckIcon from './icons/Rubiwin/CheckIcon'
+import RubiwinCheckpointIcon from './icons/Rubiwin/CheckpointIcon'
+import RubiwinCircleCaretBottomIcon from './icons/Rubiwin/CircleCaretBottomIcon'
+import RubiwinCircleCaretLeftIcon from './icons/Rubiwin/CircleCaretLeftIcon'
+import RubiwinCircleCaretRightIcon from './icons/Rubiwin/CircleCaretRightIcon'
+import RubiwinCircleCaretUpIcon from './icons/Rubiwin/CircleCaretUpIcon'
+import RubiwinClearIcon from './icons/Rubiwin/ClearIcon'
+import RubiwinConcessionIcon from './icons/Rubiwin/ConcessionIcon'
+import RubiwinContactIcon from './icons/Rubiwin/ContactIcon'
+import RubiwinDashboardIcon from './icons/Rubiwin/DashboardIcon'
+import RubiwinDatePickerIcon from './icons/Rubiwin/DatePickerIcon'
+import RubiwinDetailIcon from './icons/Rubiwin/DetailIcon'
+import RubiwinDownloadIcon from './icons/Rubiwin/DownloadIcon'
+import RubiwinEditIcon from './icons/Rubiwin/EditIcon'
+import RubiwinEmailIcon from './icons/Rubiwin/EmailIcon'
+import RubiwinEuroIcon from './icons/Rubiwin/EuroIcon'
+import RubiwinFavorisIcon from './icons/Rubiwin/FavorisIcon'
 import RubiwinSecondDriverIcon from './icons/Rubiwin/SecondDriverIcon'
 
 // SHIPPER
@@ -141,10 +164,33 @@ export {
   DirectBusinessIcon,
   RubiwinBurgerMenuIcon,
   RubiwinCamembertIcon,
+  RubiwinCamion1Icon,
+  RubiwinCamion2Icon,
+  RubiwinCamion3Icon,
+  RubiwinCamion4Icon,
+  RubiwinCamion5Icon,
+  RubiwinCamion6Icon,
   RubiwinCaretBottomIcon,
   RubiwinCaretLeftIcon,
   RubiwinCaretRightIcon,
   RubiwinCaretTopIcon,
+  RubiwinCheckIcon,
+  RubiwinCheckpointIcon,
+  RubiwinCircleCaretBottomIcon,
+  RubiwinCircleCaretLeftIcon,
+  RubiwinCircleCaretRightIcon,
+  RubiwinCircleCaretUpIcon,
+  RubiwinClearIcon,
+  RubiwinConcessionIcon,
+  RubiwinContactIcon,
+  RubiwinDashboardIcon,
+  RubiwinDatePickerIcon,
+  RubiwinDetailIcon,
+  RubiwinDownloadIcon,
+  RubiwinEditIcon,
+  RubiwinEmailIcon,
+  RubiwinEuroIcon,
+  RubiwinFavorisIcon,
   RubiwinSecondDriverIcon,
   RubiwinThemeProvider,
   E4pThemeProvider,

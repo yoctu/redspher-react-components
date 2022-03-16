@@ -23,10 +23,33 @@ import {
   DirectBusinessIcon,
   RubiwinBurgerMenuIcon,
   RubiwinCamembertIcon,
+  RubiwinCamion1Icon,
+  RubiwinCamion2Icon,
+  RubiwinCamion3Icon,
+  RubiwinCamion4Icon,
+  RubiwinCamion5Icon,
+  RubiwinCamion6Icon,
   RubiwinCaretBottomIcon,
   RubiwinCaretLeftIcon,
   RubiwinCaretRightIcon,
   RubiwinCaretTopIcon,
+  RubiwinCheckIcon,
+  RubiwinCheckpointIcon,
+  RubiwinCircleCaretBottomIcon,
+  RubiwinCircleCaretLeftIcon,
+  RubiwinCircleCaretRightIcon,
+  RubiwinCircleCaretUpIcon,
+  RubiwinClearIcon,
+  RubiwinConcessionIcon,
+  RubiwinContactIcon,
+  RubiwinDashboardIcon,
+  RubiwinDatePickerIcon,
+  RubiwinDetailIcon,
+  RubiwinDownloadIcon,
+  RubiwinEditIcon,
+  RubiwinEmailIcon,
+  RubiwinEuroIcon,
+  RubiwinFavorisIcon,
   RubiwinSecondDriverIcon,
   RubiwinThemeProvider,
   E4pThemeProvider,
@@ -253,10 +276,33 @@ const RubiWinShowCase = () => {
             <DirectBusinessIcon />
             <RubiwinBurgerMenuIcon />
             <RubiwinCamembertIcon />
+            <RubiwinCamion1Icon />
+            <RubiwinCamion2Icon />
+            <RubiwinCamion3Icon />
+            <RubiwinCamion4Icon />
+            <RubiwinCamion5Icon />
+            <RubiwinCamion6Icon />
             <RubiwinCaretBottomIcon />
             <RubiwinCaretLeftIcon />
             <RubiwinCaretRightIcon />
             <RubiwinCaretTopIcon />
+            <RubiwinCheckIcon />
+            <RubiwinCheckpointIcon />
+            <RubiwinCircleCaretBottomIcon />
+            <RubiwinCircleCaretLeftIcon />
+            <RubiwinCircleCaretRightIcon />
+            <RubiwinCircleCaretUpIcon />
+            <RubiwinClearIcon />
+            <RubiwinConcessionIcon />
+            <RubiwinContactIcon />
+            <RubiwinDashboardIcon />
+            <RubiwinDatePickerIcon />
+            <RubiwinDetailIcon />
+            <RubiwinDownloadIcon />
+            <RubiwinEditIcon />
+            <RubiwinEmailIcon />
+            <RubiwinEuroIcon />
+            <RubiwinFavorisIcon />
             <RubiwinSecondDriverIcon />
           </div>
         </div>
