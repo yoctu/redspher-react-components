@@ -20,6 +20,7 @@ import {
   RubiwinAttachmentIcon,
   RubiwinAttentionIcon,
   RubiwinBigMapIcon,
+  RubiwinBusinessDirectIcon,
   DirectBusinessIcon,
   RubiwinBurgerMenuIcon,
   RubiwinCamembertIcon,
@@ -50,7 +51,37 @@ import {
   RubiwinEmailIcon,
   RubiwinEuroIcon,
   RubiwinFavorisIcon,
+  RubiwinFiltersIcon,
+  RubiwinFormationIcon,
+  RubiwinGreenPassIcon,
+  RubiwinHistogramIcon,
+  RubiwinHomeIcon,
+  RubiwinIncoterms,
+  RubiwinInformationIcon,
+  RubiwinInvoiceIcon,
+  RubiwinManyPeopleIcon,
+  RubiwinNotificationsIcon,
+  RubiwinNumberCircleFillIcon,
+  RubiwinNumberCircleStrokeIcon,
+  RubiwinPeopleIcon,
+  RubiwinPeopleLockIcon,
+  RubiwinPercentageIcon,
+  RubiwinPhoneIcon,
+  RubiwinPinMapIcon,
+  RubiwinRefreshIcon,
+  RubiwinReposIcon,
+  RubiwinSaveIcon,
   RubiwinSecondDriverIcon,
+  RubiwinSendIcon,
+  RubiwinSideLoadIcon,
+  RubiwinSortIcon,
+  RubiwinTabIcon,
+  RubiwinTailLiftIcon,
+  RubiwinTimerIcon,
+  RubiwinUnvisibilityIcon,
+  RubiwinUploadIcon,
+  RubiwinVisibilityIcon,
+  RubiwinWebAppIcon,
   RubiwinThemeProvider,
   E4pThemeProvider,
   ShipperThemeProvider,
@@ -215,13 +246,13 @@ const RubiWinShowCase = () => {
           <RubiwinButton text='default RubiwinButton' onClick={sayHello} />
           <RubiwinButton text='default RubiwinButton disabled' disabled />
           <Button>Default button mui text</Button>
-          <Button startIcon={<DirectBusinessIcon />}>Default button mui text</Button>
+          <Button startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}>Default button mui text</Button>
           <Button disabled>Default button mui disabled</Button>
           <Button variant='contained'>Default button mui contained</Button>
-          <Button variant='contained' startIcon={<DirectBusinessIcon />}>Default button mui contained</Button>
+          <Button variant='contained' startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}>Default button mui contained</Button>
           <Button variant='contained' disabled>Default button mui contained and disabled</Button>
           <Button variant='outlined'>Default button mui outlined</Button>
-          <Button variant='outlined' startIcon={<DirectBusinessIcon />}>Default button mui outlined</Button>
+          <Button variant='outlined' startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}>Default button mui outlined</Button>
           <Button variant='outlined' disabled>Default button mui outlined and disabled</Button>
           <RubiwinSquareButton
             onClick={sayHello}
@@ -273,6 +304,7 @@ const RubiWinShowCase = () => {
             <RubiwinAttachmentIcon />
             <RubiwinAttentionIcon />
             <RubiwinBigMapIcon />
+            <RubiwinBusinessDirectIcon />
             <DirectBusinessIcon />
             <RubiwinBurgerMenuIcon />
             <RubiwinCamembertIcon />
@@ -303,7 +335,37 @@ const RubiWinShowCase = () => {
             <RubiwinEmailIcon />
             <RubiwinEuroIcon />
             <RubiwinFavorisIcon />
+            <RubiwinFiltersIcon />
+            <RubiwinFormationIcon />
+            <RubiwinGreenPassIcon />
+            <RubiwinHistogramIcon />
+            <RubiwinHomeIcon />
+            <RubiwinIncoterms />
+            <RubiwinInformationIcon />
+            <RubiwinInvoiceIcon />
+            <RubiwinManyPeopleIcon />
+            <RubiwinNotificationsIcon />
+            <RubiwinNumberCircleFillIcon />
+            <RubiwinNumberCircleStrokeIcon />
+            <RubiwinPeopleIcon />
+            <RubiwinPeopleLockIcon />
+            <RubiwinPercentageIcon />
+            <RubiwinPhoneIcon />
+            <RubiwinPinMapIcon />
+            <RubiwinRefreshIcon />
+            <RubiwinReposIcon />
+            <RubiwinSaveIcon />
             <RubiwinSecondDriverIcon />
+            <RubiwinSendIcon />
+            <RubiwinSideLoadIcon />
+            <RubiwinSortIcon />
+            <RubiwinTabIcon />
+            <RubiwinTailLiftIcon />
+            <RubiwinTimerIcon />
+            <RubiwinUnvisibilityIcon />
+            <RubiwinUploadIcon />
+            <RubiwinVisibilityIcon />
+            <RubiwinWebAppIcon />
           </div>
         </div>
 

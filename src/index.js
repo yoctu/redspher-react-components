@@ -28,6 +28,7 @@ import RubiwinAttentionIcon from './icons/Rubiwin/AttentionIcon'
 import RubiwinBigMapIcon from './icons/Rubiwin/BigMapIcon'
 import DirectBusinessIcon from './icons/Rubiwin/DirectBusinessIcon'
 import RubiwinBurgerMenuIcon from './icons/Rubiwin/BurgerMenuIcon'
+import RubiwinBusinessDirectIcon from './icons/Rubiwin/BusinessDirectIcon'
 import RubiwinCamembertIcon from './icons/Rubiwin/CamembertIcon'
 import RubiwinCamion1Icon from './icons/Rubiwin/Camion1Icon'
 import RubiwinCamion2Icon from './icons/Rubiwin/Camion2Icon'
@@ -56,7 +57,37 @@ import RubiwinEditIcon from './icons/Rubiwin/EditIcon'
 import RubiwinEmailIcon from './icons/Rubiwin/EmailIcon'
 import RubiwinEuroIcon from './icons/Rubiwin/EuroIcon'
 import RubiwinFavorisIcon from './icons/Rubiwin/FavorisIcon'
+import RubiwinFiltersIcon from './icons/Rubiwin/FiltersIcon'
+import RubiwinFormationIcon from './icons/Rubiwin/FormationIcon'
+import RubiwinGreenPassIcon from './icons/Rubiwin/GreenPassIcon'
+import RubiwinHistogramIcon from './icons/Rubiwin/HistogramIcon'
+import RubiwinHomeIcon from './icons/Rubiwin/HomeIcon'
+import RubiwinIncoterms from './icons/Rubiwin/IncotermsIcon'
+import RubiwinInformationIcon from './icons/Rubiwin/InformationIcon'
+import RubiwinInvoiceIcon from './icons/Rubiwin/InvoiceIcon'
+import RubiwinManyPeopleIcon from './icons/Rubiwin/ManyPeopleIcon'
+import RubiwinNotificationsIcon from './icons/Rubiwin/NotificationsIcon'
+import RubiwinNumberCircleFillIcon from './icons/Rubiwin/NumberCircleFillIcon'
+import RubiwinNumberCircleStrokeIcon from './icons/Rubiwin/NumberCircleStrokeIcon'
+import RubiwinPeopleIcon from './icons/Rubiwin/PeopleIcon'
+import RubiwinPeopleLockIcon from './icons/Rubiwin/PeopleLockIcon'
+import RubiwinPercentageIcon from './icons/Rubiwin/PercentageIcon'
+import RubiwinPhoneIcon from './icons/Rubiwin/PhoneIcon'
+import RubiwinPinMapIcon from './icons/Rubiwin/PinMapIcon'
+import RubiwinRefreshIcon from './icons/Rubiwin/RefreshIcon'
+import RubiwinReposIcon from './icons/Rubiwin/ReposIcon'
+import RubiwinSaveIcon from './icons/Rubiwin/SaveIcon'
 import RubiwinSecondDriverIcon from './icons/Rubiwin/SecondDriverIcon'
+import RubiwinSendIcon from './icons/Rubiwin/SendIcon'
+import RubiwinSideLoadIcon from './icons/Rubiwin/SideLoadIcon'
+import RubiwinSortIcon from './icons/Rubiwin/SortIcon'
+import RubiwinTabIcon from './icons/Rubiwin/TabIcon'
+import RubiwinTailLiftIcon from './icons/Rubiwin/TailLiftIcon'
+import RubiwinTimerIcon from './icons/Rubiwin/TimerIcon'
+import RubiwinUnvisibilityIcon from './icons/Rubiwin/UnvisibilityIcon'
+import RubiwinUploadIcon from './icons/Rubiwin/UploadIcon'
+import RubiwinVisibilityIcon from './icons/Rubiwin/VisibilityIcon'
+import RubiwinWebAppIcon from './icons/Rubiwin/WebAppIcon'
 
 // SHIPPER
 import ShipperBaseTheme from './shipper/theme/ShipperBaseTheme'
@@ -161,6 +192,7 @@ export {
   RubiwinAttachmentIcon,
   RubiwinAttentionIcon,
   RubiwinBigMapIcon,
+  RubiwinBusinessDirectIcon,
   DirectBusinessIcon,
   RubiwinBurgerMenuIcon,
   RubiwinCamembertIcon,
@@ -191,7 +223,37 @@ export {
   RubiwinEmailIcon,
   RubiwinEuroIcon,
   RubiwinFavorisIcon,
+  RubiwinFiltersIcon,
+  RubiwinFormationIcon,
+  RubiwinGreenPassIcon,
+  RubiwinHistogramIcon,
+  RubiwinHomeIcon,
+  RubiwinIncoterms,
+  RubiwinInformationIcon,
+  RubiwinInvoiceIcon,
+  RubiwinManyPeopleIcon,
+  RubiwinNotificationsIcon,
+  RubiwinNumberCircleFillIcon,
+  RubiwinNumberCircleStrokeIcon,
+  RubiwinPeopleIcon,
+  RubiwinPeopleLockIcon,
+  RubiwinPercentageIcon,
+  RubiwinPhoneIcon,
+  RubiwinPinMapIcon,
+  RubiwinRefreshIcon,
+  RubiwinReposIcon,
+  RubiwinSaveIcon,
   RubiwinSecondDriverIcon,
+  RubiwinSendIcon,
+  RubiwinSideLoadIcon,
+  RubiwinSortIcon,
+  RubiwinTabIcon,
+  RubiwinTailLiftIcon,
+  RubiwinTimerIcon,
+  RubiwinUnvisibilityIcon,
+  RubiwinUploadIcon,
+  RubiwinVisibilityIcon,
+  RubiwinWebAppIcon,
   RubiwinThemeProvider,
   E4pThemeProvider,
   ShipperThemeProvider,
