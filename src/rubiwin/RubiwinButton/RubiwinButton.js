@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NextButton from '@mui/material/Button'
+import Button from '@mui/material/Button'
 import { darken } from '@mui/material/styles'
 
 /** This is a RubiwinButton branded for Rubiwin
@@ -16,7 +16,7 @@ const RubiwinButton = ({
   endIcon,
   startIcon
 }) => (
-  <NextButton
+  <Button
     onClick={onClick}
     className={className}
     disabled={disabled}
@@ -46,7 +46,7 @@ const RubiwinButton = ({
     }}
   >
     {text}
-  </NextButton>
+  </Button>
 )
 
 RubiwinButton.propTypes = {

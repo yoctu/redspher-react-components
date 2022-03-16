@@ -29,7 +29,7 @@ class Example extends Component {
 
 ## contribute
 
-Clone repo https://github.com/yoctu/redspher-react-components
+Clone repo https://github.com/flash-global/redspher-react-components
 
 install node modules
 
