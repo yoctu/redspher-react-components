@@ -208,6 +208,28 @@ const RubiWinShowCase = () => {
       <h1>--------- RUBIWIN COMPONENTS ---------</h1>
 
       <RubiwinThemeProvider>
+        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em'}}>
+          <h2>- TYPOGRAPHIES -</h2>
+
+          <Typography variant='h1'>H1 text</Typography>
+          <Typography variant='h2'>H2 text</Typography>
+          <Typography variant='h3'>H3 text</Typography>
+          <Typography variant='h4'>H4 text</Typography>
+          <Typography variant='subtitle1'>Subtitle1 text</Typography>
+          <Typography variant='subtitle1underline'>Subtitle1 underline text</Typography>
+          <Typography variant='subtitle1bold'>Subtitle1 bold text</Typography>
+          <Typography variant='body1'>Body1 text</Typography>
+          <Typography variant='body1underline'>Body1 underline text</Typography>
+          <Typography variant='body1bold'>Body1 bold text</Typography>
+          <Typography variant='body2'>Body2 text</Typography>
+          <Typography variant='body2underline'>Body2 underline text</Typography>
+          <Typography variant='body2bold'>Body2 bold text</Typography>
+          <Typography variant='caption'>Caption text</Typography>
+          <Typography variant='captionunderline'>Caption underline text</Typography>
+          <Typography variant='captionbold'>Caption bold text</Typography>
+          <Typography>Default no variant text</Typography>
+        </div>
+
         <RubiwinCheckbox
           onChange={handleChange}
           checked={checked}
