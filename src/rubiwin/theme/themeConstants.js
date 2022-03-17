@@ -1,4 +1,8 @@
-const constants = {
+export const colors = {
+  action: {
+    disabled: '#FFF',
+    disabledBackground: '#8F8F8F'
+  },
   primary: {
     main: '#00C3FF',
     light: '#CAF3FF',
@@ -21,12 +25,19 @@ const constants = {
     dynamite: '#C4C4C4',
     disable: '#E5E5E5'
   },
+  error: {
+    main: '#FF003B'
+  },
   white: {
-    main: '#FFF'
+    main: '#FFFFFF'
   },
   red: {
     main: '#FF003B'
-  },
+  }
+}
+
+export const constants = {
+  ...colors,
   breakpoints: {
     lg: 1280,
     md: 960,

@@ -1,41 +1,7 @@
-import themeConstants from './themeConstants'
+import themeConstants, { colors } from './themeConstants'
 
 const rubiwinBaseTheme = {
-  palette: {
-    action: {
-      disabled: themeConstants.white.main,
-      disabledBackground: themeConstants.grey.light
-    },
-    primary: {
-      main: themeConstants.primary.main,
-      light: themeConstants.primary.light,
-      dark: themeConstants.primary.dark
-    },
-    secondary: {
-      main: themeConstants.secondary.main,
-      light: themeConstants.secondary.light,
-      dark: themeConstants.secondary.dark
-    },
-    tertiary: {
-      main: themeConstants.tertiary.main,
-      light: themeConstants.tertiary.light,
-      dark: themeConstants.tertiary.dark
-    },
-    grey: {
-      main: themeConstants.grey.main,
-      light: themeConstants.grey.light,
-      lighter: themeConstants.grey.lighter
-    },
-    error: {
-      main: themeConstants.red.main
-    },
-    white: {
-      main: themeConstants.white.main
-    },
-    red: {
-      main: themeConstants.red.main
-    }
-  },
+  palette: colors,
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
     h1: {
