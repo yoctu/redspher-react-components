@@ -17,6 +17,7 @@ const RubiwinButton = ({
   startIcon
 }) => (
   <Button
+    variant='contained'
     onClick={onClick}
     className={className}
     disabled={disabled}
