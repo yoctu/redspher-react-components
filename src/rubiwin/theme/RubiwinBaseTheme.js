@@ -2,6 +2,10 @@ import themeConstants from './themeConstants'
 
 const rubiwinBaseTheme = {
   palette: {
+    action: {
+      disabled: themeConstants.white.main,
+      disabledBackground: themeConstants.grey.light
+    },
     primary: {
       main: themeConstants.primary.main,
       light: themeConstants.primary.light,
@@ -182,6 +186,16 @@ const rubiwinBaseTheme = {
   components: {
     MuiButton: {
       styleOverrides: {
+        text: {
+          '&.Mui-disabled': {
+            color: themeConstants.grey.light
+          }
+        },
+        outlined: {
+          '&.Mui-disabled': {
+            color: themeConstants.grey.light
+          }
+        },
         contained: {
           boxShadow: 'none',
           '&:hover': {

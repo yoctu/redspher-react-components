@@ -248,12 +248,15 @@ const RubiWinShowCase = () => {
           <Button>Default button mui text</Button>
           <Button startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}>Default button mui text</Button>
           <Button disabled>Default button mui disabled</Button>
+          <Button disabled startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}>Default button mui disabled</Button>
           <Button variant='contained'>Default button mui contained</Button>
           <Button variant='contained' startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}>Default button mui contained</Button>
           <Button variant='contained' disabled>Default button mui contained and disabled</Button>
+          <Button variant='contained' disabled startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}>Default button mui contained and disabled</Button>
           <Button variant='outlined'>Default button mui outlined</Button>
           <Button variant='outlined' startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}>Default button mui outlined</Button>
           <Button variant='outlined' disabled>Default button mui outlined and disabled</Button>
+          <Button variant='outlined' disabled startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}>Default button mui outlined and disabled</Button>
           <RubiwinSquareButton
             onClick={sayHello}
             text='square'
