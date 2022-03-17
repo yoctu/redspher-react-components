@@ -19,10 +19,9 @@ deploy:
     api_key: $npm_key
     on:
       tags: true
-  - provider: pages
-    skip_cleanup: true
-    github_token: $github_key
-    keep_history: true
-    local_dir: 'example/build'
-    on:
-      tags: true
+  #- provider: pages
+    ##github_token: $github_key
+    #keep_history: true
+    #local_dir: 'example/build'
+    #on:
+      #tags: true
