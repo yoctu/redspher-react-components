@@ -25,6 +25,9 @@ const rubiwinBaseTheme = {
       main: themeConstants.grey.main,
       light: themeConstants.grey.light,
       lighter: themeConstants.grey.lighter
+    },
+    error: {
+      main: themeConstants.red.main
     }
   },
   typography: {
