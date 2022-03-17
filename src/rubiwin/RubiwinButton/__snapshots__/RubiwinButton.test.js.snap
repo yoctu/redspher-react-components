@@ -19,6 +19,9 @@ exports[`has a link to /test 1`] = `
   tabIndex={0}
 >
   Rubiwin
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
 </a>
 `;
 
@@ -140,6 +143,9 @@ exports[`should be large 1`] = `
   type="button"
 >
   Rubiwin
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
 </button>
 `;
 
