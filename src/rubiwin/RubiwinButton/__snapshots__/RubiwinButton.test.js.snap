@@ -2,7 +2,7 @@
 
 exports[`has a link to /test 1`] = `
 <a
-  className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-gk9eee-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-1i6ku62-MuiButtonBase-root-MuiButton-root"
   href="/test"
   onBlur={[Function]}
   onContextMenu={[Function]}
@@ -19,15 +19,12 @@ exports[`has a link to /test 1`] = `
   tabIndex={0}
 >
   Rubiwin
-  <span
-    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-  />
 </a>
 `;
 
 exports[`is disabled 1`] = `
 <button
-  className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root Mui-disabled  css-gk9eee-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root Mui-disabled  css-1i6ku62-MuiButtonBase-root-MuiButton-root"
   disabled={true}
   onBlur={[Function]}
   onContextMenu={[Function]}
@@ -50,7 +47,7 @@ exports[`is disabled 1`] = `
 
 exports[`is fullWidth 1`] = `
 <button
-  className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-10lh37t-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-1vc7709-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   onBlur={[Function]}
   onContextMenu={[Function]}
@@ -73,7 +70,7 @@ exports[`is fullWidth 1`] = `
 
 exports[`renders correctly props object 1`] = `
 <button
-  className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root test css-gk9eee-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root test css-1i6ku62-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -125,7 +122,7 @@ exports[`renders correctly props object 1`] = `
 
 exports[`should be large 1`] = `
 <button
-  className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButtonBase-root  css-1abtfup-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButtonBase-root  css-anbzer-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   onBlur={[Function]}
   onContextMenu={[Function]}
@@ -143,15 +140,12 @@ exports[`should be large 1`] = `
   type="button"
 >
   Rubiwin
-  <span
-    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-  />
 </button>
 `;
 
 exports[`should be small 1`] = `
 <button
-  className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-373zmf-MuiButtonBase-root-MuiButton-root"
+  className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButtonBase-root  css-eu017v-MuiButtonBase-root-MuiButton-root"
   disabled={false}
   onBlur={[Function]}
   onContextMenu={[Function]}
