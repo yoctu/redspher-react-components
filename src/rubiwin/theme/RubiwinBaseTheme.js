@@ -28,6 +28,12 @@ const rubiwinBaseTheme = {
     },
     error: {
       main: themeConstants.red.main
+    },
+    white: {
+      main: themeConstants.white.main
+    },
+    red: {
+      main: themeConstants.red.main
     }
   },
   typography: {
