@@ -237,18 +237,27 @@ const rubiwinBaseTheme = {
         outlined: {
           '&.Mui-disabled': {
             color: themeConstants.grey.light
+          },
+          '&:hover': {
+            backgroundColor: themeConstants.primary.main,
+            color: themeConstants.white.main
           }
         },
         contained: {
           boxShadow: 'none',
           '&:hover': {
-            boxShadow: 'none'
+            boxShadow: 'none',
+            backgroundColor: themeConstants.primary.hover
           }
         },
         root: {
           borderRadius: '8px',
           fontSize: '14px',
-          textTransform: 'none'
+          textTransform: 'none',
+          padding: '12px 15px'
+        },
+        sizeSmall: {
+          padding: '5px 10px'
         },
         containedPrimary: {
           color: themeConstants.white.main
