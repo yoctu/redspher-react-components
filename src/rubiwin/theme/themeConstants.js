@@ -6,7 +6,8 @@ export const colors = {
   primary: {
     main: '#00C3FF',
     light: '#CAF3FF',
-    dark: '#006B8D'
+    dark: '#006B8D',
+    hover: '#069CCA'
   },
   secondary: {
     main: '#eb3343',
