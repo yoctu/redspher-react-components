@@ -64,6 +64,7 @@ import RubiwinHistogramIcon from './icons/Rubiwin/HistogramIcon'
 import RubiwinHomeIcon from './icons/Rubiwin/HomeIcon'
 import RubiwinIncoterms from './icons/Rubiwin/IncotermsIcon'
 import RubiwinInformationIcon from './icons/Rubiwin/InformationIcon'
+import RubiwinInformationFillIcon from './icons/Rubiwin/InformationFillIcon'
 import RubiwinInvoiceIcon from './icons/Rubiwin/InvoiceIcon'
 import RubiwinManyPeopleIcon from './icons/Rubiwin/ManyPeopleIcon'
 import RubiwinNotificationsIcon from './icons/Rubiwin/NotificationsIcon'
@@ -230,6 +231,7 @@ export {
   RubiwinHomeIcon,
   RubiwinIncoterms,
   RubiwinInformationIcon,
+  RubiwinInformationFillIcon,
   RubiwinInvoiceIcon,
   RubiwinManyPeopleIcon,
   RubiwinNotificationsIcon,

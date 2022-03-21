@@ -29,6 +29,9 @@ export const colors = {
   error: {
     main: '#FF003B'
   },
+  warning: {
+    main: '#FFD600'
+  },
   white: {
     main: '#FFFFFF'
   },
