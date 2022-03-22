@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Select from '@mui/material/Select'
+import RubiwinCaretBottomIcon from '../../icons/Rubiwin/CaretBottomIcon'
+import themeConstants from '../theme/themeConstants'
 
 /** full docs : https://material-ui.com/components/selects/ */
 const RubiwinSelect = ({
@@ -32,6 +34,18 @@ const RubiwinSelect = ({
     renderValue={renderValue}
     value={value}
     className={className}
+    IconComponent={(props) => {
+      return (
+        <RubiwinCaretBottomIcon
+          primarycolor={
+            /MuiSelect-iconOpen/.test(props?.className)
+              ? themeConstants.primary.main
+              : themeConstants.grey.main
+          }
+          {...props}
+        />
+      )
+    }}
     {...props}
   >
     {children}

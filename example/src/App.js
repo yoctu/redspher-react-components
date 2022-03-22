@@ -209,7 +209,7 @@ const RubiWinShowCase = () => {
       <h1>--------- RUBIWIN COMPONENTS ---------</h1>
 
       <RubiwinThemeProvider>
-        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em'}}>
+        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
           <h2>- TYPOGRAPHIES -</h2>
 
           <Typography variant='h1'>H1 text</Typography>
@@ -255,15 +255,38 @@ const RubiWinShowCase = () => {
         <RubiwinInputField {...testProps} disabled />
         <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
         <RubiwinInputField id='test' />
-        <FormControl variant='standard' fullWidth>
-          <InputLabel>Select option</InputLabel>
-          <RubiwinSelect label='Select option'>
-            <MenuItem value={0}>Option 1</MenuItem>
-            <MenuItem value={1}>Option 2</MenuItem>
-          </RubiwinSelect>
-        </FormControl>
 
-        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em'}}>
+        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
+          <h2>- FORMS -</h2>
+
+          <FormControl variant='standard' sx={{ width: '250px' }}>
+            <InputLabel>Select option</InputLabel>
+            <RubiwinSelect label='Select option'>
+              <MenuItem value={0}>
+                <Typography variant='body2'>Option 1</Typography>
+              </MenuItem>
+              <MenuItem value={1}>
+                <Typography variant='body2'>Option 2</Typography>
+              </MenuItem>
+            </RubiwinSelect>
+          </FormControl>
+
+          <FormControl variant='standard' sx={{ width: '250px' }}>
+            <RubiwinSelect label='Select option' displayEmpty>
+              <MenuItem disabled sx={{ display: 'none' }}>
+                <Typography variant="body2">-</Typography>
+              </MenuItem>
+              <MenuItem value={0}>
+                <Typography variant='body2'>Option 1</Typography>
+              </MenuItem>
+              <MenuItem value={1}>
+                <Typography variant='body2'>Option 2</Typography>
+              </MenuItem>
+            </RubiwinSelect>
+          </FormControl>
+        </div>
+
+        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
           <h2>- BUTTONS -</h2>
 
           <RubiwinButton text='default RubiwinButton' onClick={sayHello} />
@@ -273,15 +296,19 @@ const RubiWinShowCase = () => {
           <Button disabled>Default button mui disabled</Button>
           <Button disabled startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}>Default button mui disabled</Button>
           <Button variant='contained'>Default button mui contained</Button>
-          <Button variant='contained' size="small">Default button mui contained small</Button>
-          <Button variant='contained' startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}>Default button mui contained</Button>
+          <Button variant='contained' size='small'>Default button mui contained small</Button>
+          <Button variant='contained' startIcon={
+            <RubiwinAddIcon primarycolor='#FFFFFF' />}>Default button mui contained</Button>
           <Button variant='contained' disabled>Default button mui contained and disabled</Button>
-          <Button variant='contained' disabled startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}>Default button mui contained and disabled</Button>
-          <Button variant='outlined' size="small">Default button mui outlined small</Button>
+          <Button variant='contained' disabled startIcon={
+            <RubiwinAddIcon primarycolor='#FFFFFF' />}>Default button mui contained and disabled</Button>
+          <Button variant='outlined' size='small'>Default button mui outlined small</Button>
           <Button variant='outlined'>Default button mui outlined</Button>
-          <Button variant='outlined' startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}>Default button mui outlined</Button>
+          <Button variant='outlined' startIcon={
+            <RubiwinAddIcon primarycolor='#00C3FF' />}>Default button mui outlined</Button>
           <Button variant='outlined' disabled>Default button mui outlined and disabled</Button>
-          <Button variant='outlined' disabled startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}>Default button mui outlined and disabled</Button>
+          <Button variant='outlined' disabled startIcon={
+            <RubiwinAddIcon primarycolor='#8F8F8F' />}>Default button mui outlined and disabled</Button>
           <RubiwinSquareButton
             onClick={sayHello}
             text='square'
@@ -312,7 +339,7 @@ const RubiWinShowCase = () => {
           {testRedenderTwo()}
         </Select>
 
-        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em'}}>
+        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
           <h2>- ICONS -</h2>
           <div
             style={{

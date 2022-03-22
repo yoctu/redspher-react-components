@@ -2,20 +2,16 @@ import React from 'react'
 import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../rubiwin/theme/themeConstants'
 
-function SortIcon(props) {
+function SortIcon({ primarycolor, ...props }) {
   return (
-    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <path
         d='M13.5355 12.9497L10 16.4853L6.46447 12.9497'
-        stroke={
-          props.primarycolor ? props.primarycolor : themeConstants.grey.main
-        }
+        stroke={primarycolor || themeConstants.grey.main}
       />
       <path
         d='M6.46447 7.53551L10 3.99998L13.5355 7.53551'
-        stroke={
-          props.primarycolor ? props.primarycolor : themeConstants.grey.main
-        }
+        stroke={primarycolor || themeConstants.grey.main}
       />
     </SvgIcon>
   )
