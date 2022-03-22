@@ -1,7 +1,7 @@
 import React from 'react'
 import { SvgIcon } from '@mui/material'
 
-function DirectBusinessIcon(props) {
+function DirectBusinessIcon({ primarycolor, ...props }) {
   return (
     <SvgIcon {...props} viewBox='0 0 24 24'>
       <ellipse

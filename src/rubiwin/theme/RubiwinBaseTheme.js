@@ -382,6 +382,13 @@ const rubiwinBaseTheme = {
           boxShadow: 'none'
         }
       }
+    },
+    MuiSelect: {
+      styleOverrides: {
+        iconStandard: {
+          color: 'transparent'
+        }
+      }
     }
   }
 }
