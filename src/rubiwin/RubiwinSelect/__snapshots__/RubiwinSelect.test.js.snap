@@ -35,12 +35,13 @@ exports[`is multiple 1`] = `
   <svg
     aria-hidden={true}
     className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
-    data-testid="ArrowDropDownIcon"
+    color="transparent"
     focusable="false"
-    viewBox="0 0 24 24"
+    viewBox="0 0 20 20"
   >
     <path
-      d="M7 10l5 5 5-5z"
+      d="M15.6569 7.65685L10 13.3137L4.34315 7.65685"
+      stroke="#171F46"
     />
   </svg>
   <fieldset
@@ -101,12 +102,13 @@ exports[`renders correctly props object 1`] = `
   <svg
     aria-hidden={true}
     className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
-    data-testid="ArrowDropDownIcon"
+    color="transparent"
     focusable="false"
-    viewBox="0 0 24 24"
+    viewBox="0 0 20 20"
   >
     <path
-      d="M7 10l5 5 5-5z"
+      d="M15.6569 7.65685L10 13.3137L4.34315 7.65685"
+      stroke="#171F46"
     />
   </svg>
   <fieldset
