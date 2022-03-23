@@ -1,14 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Checkbox from '@mui/material/Checkbox'
-import CheckboxIcon from '../../icons/Rubiwin/CheckboxIcon'
-import CheckboxBlankIcon from '../../icons/Rubiwin/CheckboxBlankIcon'
-import CheckboxIndeterminateIcon from '../../icons/Rubiwin/CheckboxIndeterminateIcon'
+import { Radio } from '@mui/material'
+import RadioBlankIcon from '../../icons/Rubiwin/RadioBlankIcon'
+import RadioIcon from '../../icons/Rubiwin/RadioIcon'
 
-/** this is a Mui Checkbox branded for Rubiwin
- * full dod : https://material-ui.com/api/checkbox/
- */
-const RubiwinCheckbox = ({
+const RubiwinRadio = ({
   checked = false,
   className = '',
   disabled = false,
@@ -20,7 +16,7 @@ const RubiwinCheckbox = ({
   name,
   ...props
 }) => (
-  <Checkbox
+  <Radio
     checked={checked}
     className={className}
     disabled={disabled}
@@ -31,14 +27,13 @@ const RubiwinCheckbox = ({
     value={value}
     name={name}
     color='primary'
-    icon={<CheckboxBlankIcon />}
-    checkedIcon={<CheckboxIcon />}
-    indeterminateIcon={<CheckboxIndeterminateIcon />}
+    icon={<RadioBlankIcon />}
+    checkedIcon={<RadioIcon />}
     {...props}
   />
 )
 
-RubiwinCheckbox.propTypes = {
+RubiwinRadio.propTypes = {
   /** component is checked or not */
   checked: PropTypes.bool,
   /** add a class to overload styles */
@@ -59,4 +54,4 @@ RubiwinCheckbox.propTypes = {
   name: PropTypes.string
 }
 
-export default RubiwinCheckbox
+export default RubiwinRadio

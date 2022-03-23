@@ -227,6 +227,32 @@ const rubiwinBaseTheme = {
     }
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          scrollbarColor: themeConstants.primary.main,
+          scrollbarFaceColor: themeConstants.primary.main,
+          scrollbarBaseColor: themeConstants.primary.main,
+          scrollbar3dlightColor: themeConstants.primary.main,
+          scrollbarHighlightColor: themeConstants.primary.main,
+          '*::-webkit-scrollbar': {
+            width: '3px'
+          },
+          '*::-webkit-scrollbar-track': {
+            background: 'transparent'
+          },
+          '*::-webkit-scrollbar-thumb': {
+            background: themeConstants.primary.main,
+            borderRadius: '29px'
+          }
+        }
+      }
+    },
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true
+      }
+    },
     MuiButton: {
       styleOverrides: {
         text: {
@@ -322,7 +348,10 @@ const rubiwinBaseTheme = {
     MuiCheckbox: {
       styleOverrides: {
         root: {
-          color: themeConstants.grey.light
+          color: themeConstants.grey.light,
+          '&:hover': {
+            backgroundColor: 'transparent'
+          }
         }
       }
     },
@@ -387,6 +416,25 @@ const rubiwinBaseTheme = {
       styleOverrides: {
         iconStandard: {
           color: 'transparent'
+        }
+      }
+    },
+    MuiAutocomplete: {
+      styleOverrides: {
+        popupIndicatorOpen: {
+          '& .MuiSvgIcon-root path': {
+            stroke: themeConstants.primary.main
+          }
+        },
+        paper: {
+          boxShadow: '6px 6px 18px 2px rgba(0, 0, 0, 0.08)',
+          borderRadius: '6px',
+          marginTop: '10px'
+        },
+        listbox: {
+          '& .MuiAutocomplete-option[aria-selected="true"]': {
+            backgroundColor: 'transparent'
+          }
         }
       }
     }
