@@ -49,6 +49,9 @@ exports[`is checked 1`] = `
       y="3"
     />
   </svg>
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
 </span>
 `;
 
@@ -142,6 +145,9 @@ exports[`is small 1`] = `
       y="1"
     />
   </svg>
+  <span
+    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
 </span>
 `;
 
