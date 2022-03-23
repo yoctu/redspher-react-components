@@ -28,17 +28,27 @@ exports[`is checked 1`] = `
   <svg
     aria-hidden={true}
     className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-    data-testid="CheckBoxIcon"
+    color="transparent"
     focusable="false"
-    viewBox="0 0 24 24"
+    viewBox="0 0 16 16"
   >
-    <path
-      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+    <rect
+      height="14"
+      rx="1"
+      stroke="#8F8F8F"
+      width="14"
+      x="1"
+      y="1"
+    />
+    <rect
+      fill="#00C3FF"
+      height="10"
+      rx="1"
+      width="10"
+      x="3"
+      y="3"
     />
   </svg>
-  <span
-    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-  />
 </span>
 `;
 
@@ -71,12 +81,17 @@ exports[`is disabled 1`] = `
   <svg
     aria-hidden={true}
     className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
+    color="transparent"
     focusable="false"
-    viewBox="0 0 24 24"
+    viewBox="0 0 16 16"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <rect
+      height="14"
+      rx="1"
+      stroke="#8F8F8F"
+      width="14"
+      x="1"
+      y="1"
     />
   </svg>
 </span>
@@ -85,6 +100,7 @@ exports[`is disabled 1`] = `
 exports[`is small 1`] = `
 <span
   className="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root testClass css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+  inputRed="ref"
   onBlur={[Function]}
   onContextMenu={[Function]}
   onDragLeave={[Function]}
@@ -113,23 +129,26 @@ exports[`is small 1`] = `
   <svg
     aria-hidden={true}
     className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
+    color="transparent"
     focusable="false"
-    viewBox="0 0 24 24"
+    viewBox="0 0 16 16"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <rect
+      height="14"
+      rx="1"
+      stroke="#8F8F8F"
+      width="14"
+      x="1"
+      y="1"
     />
   </svg>
-  <span
-    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-  />
 </span>
 `;
 
 exports[`renders correctly props object 1`] = `
 <span
   className="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root testClass css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+  inputRed="ref"
   onBlur={[Function]}
   onContextMenu={[Function]}
   onDragLeave={[Function]}
@@ -158,12 +177,17 @@ exports[`renders correctly props object 1`] = `
   <svg
     aria-hidden={true}
     className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-    data-testid="CheckBoxOutlineBlankIcon"
+    color="transparent"
     focusable="false"
-    viewBox="0 0 24 24"
+    viewBox="0 0 16 16"
   >
-    <path
-      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+    <rect
+      height="14"
+      rx="1"
+      stroke="#8F8F8F"
+      width="14"
+      x="1"
+      y="1"
     />
   </svg>
 </span>
