@@ -184,7 +184,13 @@ import {
   FormControlLabel,
   ThemeProvider,
   Typography,
-  Slider
+  Slider,
+  Table,
+  TableCell,
+  TableFooter,
+  TableRow,
+  TableHead,
+  TableBody
 } from '@mui/material'
 import { Pagination } from '@mui/lab'
 import InputAdornment from '@mui/material/InputAdornment'
@@ -364,6 +370,140 @@ const RubiWinShowCase = () => {
           <Typography variant='captionunderline'>Caption underline text</Typography>
           <Typography variant='captionbold'>Caption bold text</Typography>
           <Typography>Default no variant text</Typography>
+        </div>
+
+        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
+          <h2>- TABLES -</h2>
+
+          <h3>SIMPLE</h3>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>
+                  Heading 1
+                </TableCell>
+                <TableCell>
+                  Heading 2
+                </TableCell>
+                <TableCell>
+                  Heading 3
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>
+                  Body 1
+                </TableCell>
+                <TableCell>
+                  Body 2
+                </TableCell>
+                <TableCell>
+                  Body 3
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  Body 1
+                </TableCell>
+                <TableCell>
+                  Body 2
+                </TableCell>
+                <TableCell>
+                  Body 3
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  Body 1
+                </TableCell>
+                <TableCell>
+                  Body 2
+                </TableCell>
+                <TableCell>
+                  Body 3
+                </TableCell>
+              </TableRow>
+            </TableBody>
+            <TableFooter>
+              <TableRow>
+                <TableCell>
+                  Footer 1
+                </TableCell>
+                <TableCell>
+                  Footer 2
+                </TableCell>
+                <TableCell>
+                  Footer 3
+                </TableCell>
+              </TableRow>
+            </TableFooter>
+          </Table>
+
+          <h3>SMALL</h3>
+          <Table size="small">
+            <TableHead>
+              <TableRow>
+                <TableCell>
+                  Heading 1
+                </TableCell>
+                <TableCell>
+                  Heading 2
+                </TableCell>
+                <TableCell>
+                  Heading 3
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>
+                  Body 1
+                </TableCell>
+                <TableCell>
+                  Body 2
+                </TableCell>
+                <TableCell>
+                  Body 3
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  Body 1
+                </TableCell>
+                <TableCell>
+                  Body 2
+                </TableCell>
+                <TableCell>
+                  Body 3
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  Body 1
+                </TableCell>
+                <TableCell>
+                  Body 2
+                </TableCell>
+                <TableCell>
+                  Body 3
+                </TableCell>
+              </TableRow>
+            </TableBody>
+            <TableFooter>
+              <TableRow>
+                <TableCell>
+                  Footer 1
+                </TableCell>
+                <TableCell>
+                  Footer 2
+                </TableCell>
+                <TableCell>
+                  Footer 3
+                </TableCell>
+              </TableRow>
+            </TableFooter>
+          </Table>
         </div>
 
         <RubiwinInputField {...testProps} />
