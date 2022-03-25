@@ -313,6 +313,9 @@ const rubiwinBaseTheme = {
         sizeSmall: {
           padding: '6px 12px'
         },
+        sizeMedium: {
+          padding: '9px'
+        },
         stickyHeader: {
           backgroundColor: themeConstants.grey.main
         },
@@ -322,7 +325,7 @@ const rubiwinBaseTheme = {
           borderTop: '0px !important'
         },
         root: {
-          color: themeConstants.grey.main + '!important',
+          color: `${themeConstants.grey.main} !important`,
           fontSize: '12px !important',
           '&:first-of-type': {
             borderLeft: '1px solid transparent'
@@ -330,9 +333,9 @@ const rubiwinBaseTheme = {
           '&:last-of-type': {
             borderRight: '1px solid transparent'
           },
-          borderRight: '1px solid ' + themeConstants.grey.lighter,
-          borderLeft: '1px solid ' + themeConstants.grey.lighter,
-          borderBottom: '1px solid ' + themeConstants.grey.lighter
+          borderRight: `1px solid ${themeConstants.grey.lighter}`,
+          borderLeft: `1px solid ${themeConstants.grey.lighter}`,
+          borderBottom: `1px solid ${themeConstants.grey.lighter}`
         }
       }
     },
@@ -340,7 +343,7 @@ const rubiwinBaseTheme = {
       styleOverrides: {
         root: {
           '&:nth-of-type(even)': {
-            backgroundColor: themeConstants.grey.lighter
+            backgroundColor: `${themeConstants.grey.lighter}80`
           }
         }
       }
