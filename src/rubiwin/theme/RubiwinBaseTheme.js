@@ -256,6 +256,14 @@ const rubiwinBaseTheme = {
     MuiButton: {
       styleOverrides: {
         text: {
+          padding: 0,
+          '&.MuiButton-textPrimary': {
+            color: themeConstants.grey.main,
+            '&:hover': {
+              backgroundColor: 'transparent',
+              color: themeConstants.primary.main
+            }
+          },
           '&.Mui-disabled': {
             color: themeConstants.grey.light
           }
