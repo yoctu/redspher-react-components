@@ -376,134 +376,138 @@ const RubiWinShowCase = () => {
           <h2>- TABLES -</h2>
 
           <h3>SIMPLE</h3>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>
-                  Heading 1
-                </TableCell>
-                <TableCell>
-                  Heading 2
-                </TableCell>
-                <TableCell>
-                  Heading 3
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell>
-                  Body 1
-                </TableCell>
-                <TableCell>
-                  Body 2
-                </TableCell>
-                <TableCell>
-                  Body 3
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>
-                  Body 1
-                </TableCell>
-                <TableCell>
-                  Body 2
-                </TableCell>
-                <TableCell>
-                  Body 3
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>
-                  Body 1
-                </TableCell>
-                <TableCell>
-                  Body 2
-                </TableCell>
-                <TableCell>
-                  Body 3
-                </TableCell>
-              </TableRow>
-            </TableBody>
-            <TableFooter>
-              <TableRow>
-                <TableCell>
-                  Footer 1
-                </TableCell>
-                <TableCell>
-                  Footer 2
-                </TableCell>
-                <TableCell>
-                  Footer 3
-                </TableCell>
-              </TableRow>
-            </TableFooter>
-          </Table>
+          <Grid sx={{ width: '100%', px: 2 }}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>
+                    Heading 1
+                  </TableCell>
+                  <TableCell>
+                    Heading 2
+                  </TableCell>
+                  <TableCell>
+                    Heading 3
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>
+                    Body 1
+                  </TableCell>
+                  <TableCell>
+                    Body 2
+                  </TableCell>
+                  <TableCell>
+                    Body 3
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    Body 1
+                  </TableCell>
+                  <TableCell>
+                    Body 2
+                  </TableCell>
+                  <TableCell>
+                    Body 3
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    Body 1
+                  </TableCell>
+                  <TableCell>
+                    Body 2
+                  </TableCell>
+                  <TableCell>
+                    Body 3
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+              <TableFooter>
+                <TableRow>
+                  <TableCell>
+                    Footer 1
+                  </TableCell>
+                  <TableCell>
+                    Footer 2
+                  </TableCell>
+                  <TableCell>
+                    Footer 3
+                  </TableCell>
+                </TableRow>
+              </TableFooter>
+            </Table>
+          </Grid>
 
           <h3>SMALL</h3>
-          <Table size="small">
-            <TableHead>
-              <TableRow>
-                <TableCell>
-                  Heading 1
-                </TableCell>
-                <TableCell>
-                  Heading 2
-                </TableCell>
-                <TableCell>
-                  Heading 3
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell>
-                  Body 1
-                </TableCell>
-                <TableCell>
-                  Body 2
-                </TableCell>
-                <TableCell>
-                  Body 3
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>
-                  Body 1
-                </TableCell>
-                <TableCell>
-                  Body 2
-                </TableCell>
-                <TableCell>
-                  Body 3
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>
-                  Body 1
-                </TableCell>
-                <TableCell>
-                  Body 2
-                </TableCell>
-                <TableCell>
-                  Body 3
-                </TableCell>
-              </TableRow>
-            </TableBody>
-            <TableFooter>
-              <TableRow>
-                <TableCell>
-                  Footer 1
-                </TableCell>
-                <TableCell>
-                  Footer 2
-                </TableCell>
-                <TableCell>
-                  Footer 3
-                </TableCell>
-              </TableRow>
-            </TableFooter>
-          </Table>
+          <Grid sx={{ width: '100%', px: 2 }}>
+            <Table size="small">
+              <TableHead>
+                <TableRow>
+                  <TableCell>
+                    Heading 1
+                  </TableCell>
+                  <TableCell>
+                    Heading 2
+                  </TableCell>
+                  <TableCell>
+                    Heading 3
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>
+                    Body 1
+                  </TableCell>
+                  <TableCell>
+                    Body 2
+                  </TableCell>
+                  <TableCell>
+                    Body 3
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    Body 1
+                  </TableCell>
+                  <TableCell>
+                    Body 2
+                  </TableCell>
+                  <TableCell>
+                    Body 3
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    Body 1
+                  </TableCell>
+                  <TableCell>
+                    Body 2
+                  </TableCell>
+                  <TableCell>
+                    Body 3
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+              <TableFooter>
+                <TableRow>
+                  <TableCell>
+                    Footer 1
+                  </TableCell>
+                  <TableCell>
+                    Footer 2
+                  </TableCell>
+                  <TableCell>
+                    Footer 3
+                  </TableCell>
+                </TableRow>
+              </TableFooter>
+            </Table>
+          </Grid>
         </div>
 
         <RubiwinInputField {...testProps} />
