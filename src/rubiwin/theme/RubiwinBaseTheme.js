@@ -396,7 +396,10 @@ const rubiwinBaseTheme = {
     MuiBackdrop: {
       styleOverrides: {
         root: {
-          backgroundColor: `${themeConstants.grey.lighter}85`
+          backgroundColor: `${themeConstants.grey.lighter}D9`
+        },
+        invisible: {
+          backgroundColor: 'transparent'
         }
       }
     },
