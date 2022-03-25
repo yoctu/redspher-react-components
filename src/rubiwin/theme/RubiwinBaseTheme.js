@@ -335,7 +335,8 @@ const rubiwinBaseTheme = {
           },
           borderRight: `1px solid ${themeConstants.grey.lighter}`,
           borderLeft: `1px solid ${themeConstants.grey.lighter}`,
-          borderBottom: `1px solid ${themeConstants.grey.lighter}`
+          borderBottom: `1px solid ${themeConstants.grey.lighter}`,
+          borderTop: `1px solid ${themeConstants.grey.lighter}`
         }
       }
     },
