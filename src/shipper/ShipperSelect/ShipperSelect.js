@@ -1,20 +1,34 @@
 import * as React from 'react'
-import { Select } from '@material-ui/core'
-import { ArrowBottomIcon } from '../../index'
-import styles from './styles.module.scss'
+import { Select } from '@mui/material'
+import ArrowBottomIcon from '../../icons/Shipper/ArrowBottomIcon'
+import { createStyles, makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles(() => {
+  return createStyles({
+    dropdown: {
+      marginTop: '15px'
+    }
+  })
+})
 
 export default function ShipperSelect({
   className = '',
   children,
+  label,
   ...delegated
 }) {
+  const classes = useStyles()
+
   return (
     <Select
       multiline
+      variant='standard'
+      label={label}
       IconComponent={(props) => <ArrowBottomIcon {...props} />}
-      className={`${styles.select} ${className}`}
+      className={className}
       MenuProps={{
-        classes: { paper: styles.dropdown },
+        getContentAnchorEl: null,
+        classes: { paper: classes.dropdown },
         elevation: 3
       }}
       {...delegated}

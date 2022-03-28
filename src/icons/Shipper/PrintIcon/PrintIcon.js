@@ -1,5 +1,5 @@
 import React from 'react'
-import { SvgIcon } from '@material-ui/core'
+import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
 function PrintIcon(props) {
@@ -10,8 +10,8 @@ function PrintIcon(props) {
         cy='10.15'
         r='0.15'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />
@@ -21,8 +21,8 @@ function PrintIcon(props) {
         x2='11.5'
         y2='13.5'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -33,8 +33,8 @@ function PrintIcon(props) {
         x2='11.5'
         y2='15.5'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -42,7 +42,7 @@ function PrintIcon(props) {
       <path
         d='M6 14H3V8H17V14H14'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinejoin='round'
       />
@@ -52,7 +52,7 @@ function PrintIcon(props) {
         width='8'
         height='4'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinejoin='round'
       />
@@ -62,7 +62,7 @@ function PrintIcon(props) {
         width='8'
         height='5'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinejoin='round'
       />

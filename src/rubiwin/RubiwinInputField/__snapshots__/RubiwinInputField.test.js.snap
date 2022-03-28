@@ -2,12 +2,12 @@
 
 exports[`has a start and end adornment 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root MuiInputBase-adornedStart MuiInputBase-adornedEnd"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-adornedStart MuiInputBase-adornedEnd css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <svg
     aria-hidden={true}
-    className="MuiSvgIcon-root"
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
     focusable="false"
     viewBox="0 0 24 15"
   >
@@ -17,7 +17,7 @@ exports[`has a start and end adornment 1`] = `
   </svg>
   <input
     aria-invalid={false}
-    className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd"
+    className="MuiInput-input MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={false}
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -27,7 +27,7 @@ exports[`has a start and end adornment 1`] = `
   />
   <svg
     aria-hidden={true}
-    className="MuiSvgIcon-root"
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
     focusable="false"
     viewBox="0 0 24 15"
   >
@@ -40,12 +40,12 @@ exports[`has a start and end adornment 1`] = `
 
 exports[`has an input element added 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
     aria-invalid={false}
-    className="MuiInputBase-input MuiInput-input"
+    className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={false}
     maxLength={20}
     onAnimationStart={[Function]}
@@ -59,12 +59,12 @@ exports[`has an input element added 1`] = `
 
 exports[`has error state 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root Mui-error Mui-error error"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
     aria-invalid={true}
-    className="MuiInputBase-input MuiInput-input"
+    className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={false}
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -77,12 +77,12 @@ exports[`has error state 1`] = `
 
 exports[`is disabled 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root Mui-disabled Mui-disabled disabled"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
     aria-invalid={false}
-    className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled disabled"
+    className="MuiInput-input MuiInputBase-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={true}
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -95,12 +95,12 @@ exports[`is disabled 1`] = `
 
 exports[`is full-width 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root MuiInputBase-fullWidth MuiInput-fullWidth"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth css-1s97tdc-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
     aria-invalid={false}
-    className="MuiInputBase-input MuiInput-input"
+    className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={false}
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -111,14 +111,15 @@ exports[`is full-width 1`] = `
 </div>
 `;
 
-exports[`is multiline, has 4 rows and 5 max rows 1`] = `
+exports[`is multiline, has 5 rows and 6 max rows 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
+  rowsMax={6}
 >
   <input
     aria-invalid={false}
-    className="MuiInputBase-input MuiInput-input"
+    className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={false}
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -132,12 +133,12 @@ exports[`is multiline, has 4 rows and 5 max rows 1`] = `
 
 exports[`is readOnly 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
     aria-invalid={false}
-    className="MuiInputBase-input MuiInput-input"
+    className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={false}
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -151,13 +152,13 @@ exports[`is readOnly 1`] = `
 
 exports[`is required 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
   required={true}
 >
   <input
     aria-invalid={false}
-    className="MuiInputBase-input MuiInput-input"
+    className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={false}
     onAnimationStart={[Function]}
     onBlur={[Function]}
@@ -171,12 +172,12 @@ exports[`is required 1`] = `
 
 exports[`renders correctly props object 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root root test"
+  className="MuiInput-root MuiInputBase-root MuiInputBase-colorPrimary test css-spqcwk-MuiInputBase-root-MuiInput-root"
   onClick={[Function]}
 >
   <input
     aria-invalid={false}
-    className="MuiInputBase-input MuiInput-input"
+    className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
     disabled={false}
     id="id"
     maxLength={20}

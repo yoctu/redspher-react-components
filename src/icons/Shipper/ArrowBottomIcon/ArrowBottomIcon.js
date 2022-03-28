@@ -1,5 +1,5 @@
 import React from 'react'
-import { SvgIcon } from '@material-ui/core'
+import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
 function ArrowBottomIcon(props) {
@@ -8,7 +8,7 @@ function ArrowBottomIcon(props) {
       <path
         d='M14 8L9.75736 12.2426L5.51472 8'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'

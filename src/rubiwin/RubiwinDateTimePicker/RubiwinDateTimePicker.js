@@ -1,14 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { DateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers'
-import DateFnsUtils from '@date-io/date-fns'
-import { createTheme, ThemeProvider } from '@material-ui/core'
-
-const defaultMaterialTheme = createTheme({
-  palette: {
-    primary: { main: '#00c3ff' }
-  }
-})
+import AdapterDateFns from '@mui/lab/AdapterDateFns'
+import { DateTimePicker, LocalizationProvider } from '@mui/lab'
+import { TextField } from '@mui/material'
 
 /** full documentation : https://material-ui-pickers.dev/api/DateTimePicker */
 const RubiwinDateTimePicker = ({
@@ -31,30 +25,29 @@ const RubiwinDateTimePicker = ({
   TextFieldComponent,
   ...props
 }) => (
-  <MuiPickersUtilsProvider utils={DateFnsUtils}>
-    <ThemeProvider theme={defaultMaterialTheme}>
-      <DateTimePicker
-        label={label}
-        value={value}
-        onChange={onChange}
-        allowKeyboardControl={allowKeyboardControl}
-        ampm={ampm}
-        disabled={disabled}
-        disableFuture={disableFuture}
-        disablePast={disablePast}
-        emptyLabel={emptyLabel}
-        format={format}
-        className={className}
-        minDate={minDate}
-        maxDate={maxDate}
-        onClose={onClose}
-        onError={onError}
-        variant={variant}
-        TextFieldComponent={TextFieldComponent}
-        {...props}
-      />
-    </ThemeProvider>
-  </MuiPickersUtilsProvider>
+  <LocalizationProvider dateAdapter={AdapterDateFns}>
+    <DateTimePicker
+      label={label}
+      value={value}
+      onChange={onChange}
+      allowKeyboardControl={allowKeyboardControl}
+      ampm={ampm}
+      disabled={disabled}
+      disableFuture={disableFuture}
+      disablePast={disablePast}
+      emptyLabel={emptyLabel}
+      format={format}
+      className={className}
+      minDate={minDate}
+      maxDate={maxDate}
+      onClose={onClose}
+      onError={onError}
+      variant={variant}
+      TextFieldComponent={TextFieldComponent}
+      renderInput={(props) => <TextField {...props} variant='standard' />}
+      {...props}
+    />
+  </LocalizationProvider>
 )
 
 RubiwinDateTimePicker.propTypes = {

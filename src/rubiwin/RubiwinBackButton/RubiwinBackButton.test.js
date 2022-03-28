@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { mount, configure } from 'enzyme'
+import { shallow, configure } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import { RubiwinBackButton } from '../../index'
 
@@ -24,7 +24,7 @@ it('renders correctly with element', () => {
 /** interaction test */
 it('should handle click event', () => {
   const MockCallback = jest.fn()
-  const wrapper = mount(
+  const wrapper = shallow(
     <RubiwinBackButton text='Rubiwin' onClick={MockCallback} />
   )
   wrapper.simulate('click')

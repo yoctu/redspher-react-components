@@ -1,5 +1,5 @@
 import React from 'react'
-import { SvgIcon } from '@material-ui/core'
+import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
 function DeleteIcon(props) {
@@ -11,8 +11,8 @@ function DeleteIcon(props) {
         x2='4.92878'
         y2='15.5354'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -23,8 +23,8 @@ function DeleteIcon(props) {
         x2='5.09205'
         y2='4.92867'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'

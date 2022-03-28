@@ -1,17 +1,17 @@
 import React from 'react'
-import { SvgIcon } from '@material-ui/core'
+import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
 function StepIcon(props) {
   return (
-    <SvgIcon htmlColor='transparent' viewBox='0 0 20 20'>
+    <SvgIcon htmlColor='transparent' viewBox='-10 -10 40 40'>
       <ellipse
         cx='9.99998'
         cy='10'
         rx='8'
         ry='8'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
       />
       <ellipse
@@ -20,8 +20,8 @@ function StepIcon(props) {
         rx='4'
         ry='4'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />

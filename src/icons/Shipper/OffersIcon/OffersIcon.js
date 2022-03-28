@@ -1,5 +1,5 @@
 import React from 'react'
-import { SvgIcon } from '@material-ui/core'
+import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
 function OffersIcon(props) {
@@ -8,8 +8,8 @@ function OffersIcon(props) {
       <path
         d='M15.1333 3.6842H16.9999V18H5.79993V16.3158'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
         strokeLinecap='round'
@@ -18,7 +18,7 @@ function OffersIcon(props) {
       <path
         d='M3 2H15.1333V16.3158H3V2Z'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -29,7 +29,7 @@ function OffersIcon(props) {
         x2='12.7667'
         y2='5.71057'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -40,7 +40,7 @@ function OffersIcon(props) {
         x2='12.7667'
         y2='8.23682'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -51,7 +51,7 @@ function OffersIcon(props) {
         x2='12.7667'
         y2='10.7632'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -62,7 +62,7 @@ function OffersIcon(props) {
         x2='12.7667'
         y2='13.2894'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'

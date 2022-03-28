@@ -2,12 +2,13 @@
 
 exports[`is multiple 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root MuiInput-underline"
+  className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
   onClick={[Function]}
 >
   <div
+    aria-expanded="false"
     aria-haspopup="listbox"
-    className="MuiSelect-root MuiSelect-select select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+    className="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -16,6 +17,7 @@ exports[`is multiple 1`] = `
     tabIndex={0}
   >
     <span
+      className="notranslate"
       dangerouslySetInnerHTML={
         Object {
           "__html": "&#8203;",
@@ -25,33 +27,53 @@ exports[`is multiple 1`] = `
   </div>
   <input
     aria-hidden={true}
-    className="MuiSelect-nativeInput"
+    className="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
     onAnimationStart={[Function]}
     onChange={[Function]}
     tabIndex={-1}
   />
   <svg
     aria-hidden={true}
-    className="MuiSvgIcon-root MuiSelect-icon"
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+    color="transparent"
     focusable="false"
-    viewBox="0 0 24 24"
+    viewBox="0 0 20 20"
   >
     <path
-      d="M7 10l5 5 5-5z"
+      d="M15.6569 7.65685L10 13.3137L4.34315 7.65685"
+      stroke="#171F46"
     />
   </svg>
+  <fieldset
+    aria-hidden={true}
+    className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+  >
+    <legend
+      className="css-nnbavb"
+    >
+      <span
+        className="notranslate"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "&#8203;",
+          }
+        }
+      />
+    </legend>
+  </fieldset>
 </div>
 `;
 
 exports[`renders correctly props object 1`] = `
 <div
-  className="MuiInputBase-root MuiInput-root MuiInput-underline test"
+  className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary test css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
   onClick={[Function]}
 >
   <div
+    aria-expanded="false"
     aria-haspopup="listbox"
     aria-labelledby="testId"
-    className="MuiSelect-root MuiSelect-select select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+    className="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
     id="testId"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -61,6 +83,7 @@ exports[`renders correctly props object 1`] = `
     tabIndex={0}
   >
     <span
+      className="notranslate"
       dangerouslySetInnerHTML={
         Object {
           "__html": "&#8203;",
@@ -70,7 +93,7 @@ exports[`renders correctly props object 1`] = `
   </div>
   <input
     aria-hidden={true}
-    className="MuiSelect-nativeInput"
+    className="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
     onAnimationStart={[Function]}
     onChange={[Function]}
     tabIndex={-1}
@@ -78,13 +101,32 @@ exports[`renders correctly props object 1`] = `
   />
   <svg
     aria-hidden={true}
-    className="MuiSvgIcon-root MuiSelect-icon"
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+    color="transparent"
     focusable="false"
-    viewBox="0 0 24 24"
+    viewBox="0 0 20 20"
   >
     <path
-      d="M7 10l5 5 5-5z"
+      d="M15.6569 7.65685L10 13.3137L4.34315 7.65685"
+      stroke="#171F46"
     />
   </svg>
+  <fieldset
+    aria-hidden={true}
+    className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+  >
+    <legend
+      className="css-nnbavb"
+    >
+      <span
+        className="notranslate"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "&#8203;",
+          }
+        }
+      />
+    </legend>
+  </fieldset>
 </div>
 `;

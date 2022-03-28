@@ -1,78 +1,78 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import MuiPhoneNumber from 'material-ui-phone-number'
 import PropTypes from 'prop-types'
-import withStyles from '@material-ui/core/styles/withStyles'
-
-const styles = () => ({
-  flagButton: {
-    marginTop: 0,
-    marginBottom: 0
-  }
-})
+import { isValidPhoneNumber } from 'libphonenumber-js'
 
 function PhoneNumber({
-  allowEmpty,
   helperText,
-  // default to there's no error
-  isError,
+  enableValidation,
   label,
-  onChange: providedOnChange,
-  ...delegated
+  onChange,
+  name = 'phoneNumber',
+  value,
+  defaultCountry = 'fr',
+  ...props
 }) {
-  const [text, setText] = useState('')
   const [error, setError] = useState(false)
-
-  useEffect(() => {
-    if (allowEmpty && !text) {
-      // Empty is always allowed
-      setError(false)
-      providedOnChange('')
-      return
-    }
-
-    if (isError(text)) {
-      setError(true)
-      return
-    }
-    setError(false)
-    providedOnChange(text)
-  }, [text, isError, providedOnChange, allowEmpty])
-
-  const onChange = useCallback((value) => {
-    setText(value)
-  }, [])
+  const [countryCode, setCountryCode] = useState(defaultCountry)
 
   return (
     <MuiPhoneNumber
+      {...props}
+      sx={{
+        '.MuiIconButton-root': {
+          marginTop: 0,
+          marginBottom: 0,
+          '& .margin': {
+            width: 16
+          }
+        }
+      }}
       disableAreaCodes
-      onChange={onChange}
-      enableSearchField
-      defaultCountry='fr'
+      onChange={(value, country) => {
+        const valid = isValidPhoneNumber(value)
+        setError(!valid)
+        const event = {
+          target: {
+            value: value,
+            name: name,
+            validity: {
+              valid
+            }
+          }
+        }
+        setCountryCode(country.countryCode)
+        onChange(event)
+      }}
+      enablesearchfield='true'
+      value={value}
+      defaultCountry={countryCode}
       countryCodeEditable
       preferredCountries={defaultPreferredCountries}
-      error={error}
+      error={enableValidation && error}
       label={label}
-      helperText={error && helperText}
-      {...delegated}
+      helperText={enableValidation && error && helperText}
     />
   )
 }
 
 PhoneNumber.proptypes = {
-  allowEmpty: PropTypes.bool,
-  helperText: PropTypes.string.isRequired,
-  isError: PropTypes.func,
+  enableValidation: PropTypes.bool,
+  helperText: PropTypes.string,
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.string.isRequired
 }
 
 PhoneNumber.defaultProps = {
-  allowEmpty: true,
-  isError: () => false,
+  enableValidation: false,
+  helperText: '',
+  name: 'phoneNumber',
   onChange: () => null
 }
 
-export default withStyles(styles)(PhoneNumber)
+export default PhoneNumber
 
 export const defaultPreferredCountries = [
   'at',

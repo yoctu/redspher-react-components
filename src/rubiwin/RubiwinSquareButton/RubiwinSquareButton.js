@@ -1,8 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StylesProvider } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import style from './RubiwinSquareButton.module.scss'
+import Button from '@mui/material/Button'
+import { createStyles, makeStyles } from '@mui/styles'
+import { darken } from '@mui/material/styles'
+import themeConstants from '../theme/themeConstants'
+
+const useStyles = makeStyles(() => {
+  return createStyles({
+    root: {
+      backgroundColor: themeConstants.primary.main,
+      borderRadius: themeConstants.borderRadius.sm,
+      fontFamily: themeConstants.typography.fontFamily,
+      fontWeight: '700',
+      color: 'white',
+      boxShadow: themeConstants.boxShadow.main,
+      '&:hover': {
+        backgroundColor: darken(themeConstants.primary.main, 0.1)
+      }
+    },
+    disabled: {
+      backgroundColor: themeConstants.grey.light,
+      boxShadow: 'none'
+    }
+  })
+})
 
 const RubiwinSquareButton = ({
   text,
@@ -14,8 +35,10 @@ const RubiwinSquareButton = ({
   size = 'medium',
   endIcon,
   startIcon
-}) => (
-  <StylesProvider injectFirst>
+}) => {
+  const classes = useStyles()
+
+  return (
     <Button
       onClick={onClick}
       className={`${className}`}
@@ -25,12 +48,12 @@ const RubiwinSquareButton = ({
       size={size}
       endIcon={endIcon}
       startIcon={startIcon}
-      classes={{ root: style.root, disabled: style.disabled }}
+      classes={{ root: classes.root, disabled: classes.disabled }}
     >
       {text}
     </Button>
-  </StylesProvider>
-)
+  )
+}
 
 RubiwinSquareButton.propTypes = {
   /** text to display, it can be <Translate> component too */

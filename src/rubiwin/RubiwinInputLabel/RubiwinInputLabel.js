@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import InputLabel from '@material-ui/core/InputLabel'
-import style from './RubiwinInputLabel.module.scss'
-import { StylesProvider } from '@material-ui/core/styles'
+import InputLabel from '@mui/material/InputLabel'
 
 const RubiwinInputLabel = ({
   children,
@@ -11,17 +9,14 @@ const RubiwinInputLabel = ({
   htmlFor,
   className
 }) => (
-  <StylesProvider injectFirst>
-    <InputLabel
-      disabled={disabled}
-      error={error}
-      htmlFor={htmlFor}
-      classes={{ root: style.root }}
-      className={className}
-    >
-      {children}
-    </InputLabel>
-  </StylesProvider>
+  <InputLabel
+    disabled={disabled}
+    error={error}
+    htmlFor={htmlFor}
+    className={className}
+  >
+    {children}
+  </InputLabel>
 )
 
 RubiwinInputLabel.propTypes = {

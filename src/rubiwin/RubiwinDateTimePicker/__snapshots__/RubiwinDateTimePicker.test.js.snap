@@ -2,37 +2,39 @@
 
 exports[`renders correctly props object 1`] = `
 <div
-  className="MuiFormControl-root MuiTextField-root testClass"
-  format="dd/MM/yyyy HH:mm"
-  onClick={[Function]}
-  onError={[Function]}
-  onKeyDown={[Function]}
+  className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
 >
   <label
-    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-    data-shrink={true}
+    className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+    data-shrink={false}
+    htmlFor="mui-1"
+    id="mui-1-label"
   >
     test
   </label>
   <div
-    className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    className="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1480iag-MuiInputBase-root-MuiInput-root"
     onClick={[Function]}
   >
     <input
       aria-invalid={false}
+      aria-label="Choose date, selected date is Jan 1, 2018"
+      aria-readonly={true}
       autoFocus={false}
-      className="MuiInputBase-input MuiInput-input"
+      className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
       disabled={false}
+      id="mui-1"
       onAnimationStart={[Function]}
       onBlur={[Function]}
       onChange={[Function]}
+      onClick={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
       readOnly={true}
       required={false}
       type="text"
       value="01/01/2018 01:00"
     />
   </div>
-  
 </div>
 `;

@@ -1,53 +1,32 @@
-import themeConstants from './themeConstants'
+import themeConstants, { colors } from './themeConstants'
 
 const rubiwinBaseTheme = {
-  palette: {
-    primary: {
-      main: themeConstants.primary.main,
-      light: themeConstants.primary.light,
-      dark: themeConstants.primary.dark
-    },
-    secondary: {
-      main: themeConstants.secondary.main,
-      light: themeConstants.secondary.light,
-      dark: themeConstants.secondary.dark
-    },
-    tertiary: {
-      main: themeConstants.tertiary.main,
-      light: themeConstants.tertiary.light,
-      dark: themeConstants.tertiary.dark
-    },
-    grey: {
-      main: themeConstants.grey.main,
-      light: themeConstants.grey.light,
-      lighter: themeConstants.grey.lighter
-    }
-  },
+  palette: colors,
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
     h1: {
-      fontWeight: 'bold',
-      fontSize: '48px',
-      lineHeight: '58px',
+      fontWeight: 700,
+      fontSize: '40px',
+      lineHeight: '48.76px',
       [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
         {
           fontSize: '30px',
-          lineHeight: '36px'
+          lineHeight: '36.57px'
         }
     },
     h2: {
-      fontWeight: 'bold',
+      fontWeight: 700,
       color: themeConstants.grey.main,
       fontSize: '32px',
-      lineHeight: '39px',
+      lineHeight: '39.01px',
       [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
         {
           fontSize: '22px',
-          lineHeight: '26px'
+          lineHeight: '26.82px'
         }
     },
     h3: {
-      fontWeight: 'bold',
+      fontWeight: 700,
       color: themeConstants.grey.main,
       fontSize: '24px',
       lineHeight: '29.26px',
@@ -58,7 +37,7 @@ const rubiwinBaseTheme = {
         }
     },
     h4: {
-      fontWeight: 'bold',
+      fontWeight: 700,
       color: themeConstants.grey.main,
       fontSize: '18px',
       lineHeight: '21.94px',
@@ -67,6 +46,74 @@ const rubiwinBaseTheme = {
           fontSize: '16px',
           lineHeight: '19.5px'
         }
+    },
+    subtitle1: {
+      color: themeConstants.grey.main,
+      fontSize: '18px',
+      lineHeight: '21.94px'
+    },
+    subtitle1underline: {
+      color: themeConstants.grey.main,
+      fontSize: '18px',
+      lineHeight: '21.94px',
+      textDecoration: 'underline'
+    },
+    subtitle1bold: {
+      fontWeight: 700,
+      color: themeConstants.grey.main,
+      fontSize: '18px',
+      lineHeight: '21.94px'
+    },
+    body1: {
+      color: themeConstants.grey.main,
+      fontSize: '15px',
+      lineHeight: '22px'
+    },
+    body1underline: {
+      color: themeConstants.grey.light,
+      fontSize: '15px',
+      lineHeight: '22px',
+      textDecoration: 'underline'
+    },
+    body1bold: {
+      fontWeight: 700,
+      color: themeConstants.grey.main,
+      fontSize: '15px',
+      lineHeight: '22px'
+    },
+    body2: {
+      color: themeConstants.grey.main,
+      fontSize: '14px',
+      lineHeight: '17px'
+    },
+    body2underline: {
+      color: themeConstants.grey.light,
+      fontSize: '14px',
+      lineHeight: '17px',
+      textDecoration: 'underline'
+    },
+    body2bold: {
+      fontWeight: 700,
+      color: themeConstants.grey.main,
+      fontSize: '14px',
+      lineHeight: '17px'
+    },
+    caption: {
+      color: themeConstants.grey.main,
+      fontSize: '12px',
+      lineHeight: '16px'
+    },
+    captionunderline: {
+      color: themeConstants.grey.main,
+      fontSize: '12px',
+      lineHeight: '16px',
+      textDecoration: 'underline'
+    },
+    captionbold: {
+      fontWeight: 700,
+      color: themeConstants.grey.main,
+      fontSize: '12px',
+      lineHeight: '16px'
     }
   },
   overrides: {
@@ -180,18 +227,71 @@ const rubiwinBaseTheme = {
     }
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          scrollbarColor: themeConstants.primary.main,
+          scrollbarFaceColor: themeConstants.primary.main,
+          scrollbarBaseColor: themeConstants.primary.main,
+          scrollbar3dlightColor: themeConstants.primary.main,
+          scrollbarHighlightColor: themeConstants.primary.main,
+          '*::-webkit-scrollbar': {
+            width: '3px'
+          },
+          '*::-webkit-scrollbar-track': {
+            background: 'transparent'
+          },
+          '*::-webkit-scrollbar-thumb': {
+            background: themeConstants.primary.main,
+            borderRadius: '29px'
+          }
+        }
+      }
+    },
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true
+      }
+    },
     MuiButton: {
       styleOverrides: {
+        text: {
+          padding: 0,
+          '&.MuiButton-textPrimary': {
+            color: themeConstants.grey.main,
+            '&:hover': {
+              backgroundColor: 'transparent',
+              color: themeConstants.primary.main
+            }
+          },
+          '&.Mui-disabled': {
+            color: themeConstants.grey.light
+          }
+        },
+        outlined: {
+          '&.Mui-disabled': {
+            color: themeConstants.grey.light
+          },
+          '&:hover': {
+            backgroundColor: themeConstants.primary.main,
+            color: themeConstants.white.main
+          }
+        },
         contained: {
           boxShadow: 'none',
           '&:hover': {
-            boxShadow: 'none'
+            boxShadow: 'none',
+            backgroundColor: themeConstants.primary.hover
           }
         },
         root: {
           borderRadius: '8px',
           fontSize: '14px',
-          textTransform: 'none'
+          textTransform: 'none',
+          padding: '12px 15px'
+        },
+        sizeSmall: {
+          padding: '5px 10px'
         },
         containedPrimary: {
           color: themeConstants.white.main
@@ -221,6 +321,9 @@ const rubiwinBaseTheme = {
         sizeSmall: {
           padding: '6px 12px'
         },
+        sizeMedium: {
+          padding: '9px'
+        },
         stickyHeader: {
           backgroundColor: themeConstants.grey.main
         },
@@ -230,7 +333,7 @@ const rubiwinBaseTheme = {
           borderTop: '0px !important'
         },
         root: {
-          color: themeConstants.grey.main + '!important',
+          color: `${themeConstants.grey.main} !important`,
           fontSize: '12px !important',
           '&:first-of-type': {
             borderLeft: '1px solid transparent'
@@ -238,9 +341,10 @@ const rubiwinBaseTheme = {
           '&:last-of-type': {
             borderRight: '1px solid transparent'
           },
-          borderRight: '1px solid ' + themeConstants.grey.lighter,
-          borderLeft: '1px solid ' + themeConstants.grey.lighter,
-          borderBottom: '1px solid ' + themeConstants.grey.lighter
+          borderRight: `1px solid ${themeConstants.grey.lighter}`,
+          borderLeft: `1px solid ${themeConstants.grey.lighter}`,
+          borderBottom: `1px solid ${themeConstants.grey.lighter}`,
+          borderTop: `1px solid ${themeConstants.grey.lighter}`
         }
       }
     },
@@ -248,7 +352,7 @@ const rubiwinBaseTheme = {
       styleOverrides: {
         root: {
           '&:nth-of-type(even)': {
-            backgroundColor: themeConstants.grey.lighter
+            backgroundColor: `${themeConstants.grey.lighter}80`
           }
         }
       }
@@ -256,7 +360,10 @@ const rubiwinBaseTheme = {
     MuiCheckbox: {
       styleOverrides: {
         root: {
-          color: themeConstants.grey.light
+          color: themeConstants.grey.light,
+          '&:hover': {
+            backgroundColor: 'transparent'
+          }
         }
       }
     },
@@ -301,13 +408,49 @@ const rubiwinBaseTheme = {
     MuiBackdrop: {
       styleOverrides: {
         root: {
-          backgroundColor: `${themeConstants.grey.lighter}85`
+          backgroundColor: `${themeConstants.grey.lighter}D9`
+        },
+        invisible: {
+          backgroundColor: 'transparent'
         }
       }
     },
     MuiInput: {
       styleOverrides: {
         root: themeConstants.grey.main
+      }
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none'
+        }
+      }
+    },
+    MuiSelect: {
+      styleOverrides: {
+        iconStandard: {
+          color: 'transparent'
+        }
+      }
+    },
+    MuiAutocomplete: {
+      styleOverrides: {
+        popupIndicatorOpen: {
+          '& .MuiSvgIcon-root path': {
+            stroke: themeConstants.primary.main
+          }
+        },
+        paper: {
+          boxShadow: '6px 6px 18px 2px rgba(0, 0, 0, 0.08)',
+          borderRadius: '6px',
+          marginTop: '10px'
+        },
+        listbox: {
+          '& .MuiAutocomplete-option[aria-selected="true"]': {
+            backgroundColor: 'transparent'
+          }
+        }
       }
     }
   }

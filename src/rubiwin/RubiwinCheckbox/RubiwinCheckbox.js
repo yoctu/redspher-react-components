@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Checkbox from '@material-ui/core/Checkbox'
-import { StylesProvider } from '@material-ui/core/styles'
-import style from './RubiwinCheckbox.module.scss'
+import Checkbox from '@mui/material/Checkbox'
+import CheckboxIcon from '../../icons/Rubiwin/CheckboxIcon'
+import CheckboxBlankIcon from '../../icons/Rubiwin/CheckboxBlankIcon'
+import CheckboxIndeterminateIcon from '../../icons/Rubiwin/CheckboxIndeterminateIcon'
 
 /** this is a Mui Checkbox branded for Rubiwin
  * full dod : https://material-ui.com/api/checkbox/
@@ -16,27 +17,25 @@ const RubiwinCheckbox = ({
   size = 'medium',
   inputRef,
   value,
-  name
+  name,
+  ...props
 }) => (
-  <StylesProvider injectFirst>
-    <Checkbox
-      checked={checked}
-      className={`${style.checkbox} ${className}`}
-      disabled={disabled}
-      id={id}
-      onChange={onChange}
-      size={size}
-      inputRef={inputRef}
-      value={value}
-      name={name}
-      color='primary'
-      classes={{
-        root: style.root,
-        checked: style.checked,
-        disabled: style.disabled
-      }}
-    />
-  </StylesProvider>
+  <Checkbox
+    checked={checked}
+    className={className}
+    disabled={disabled}
+    id={id}
+    onChange={onChange}
+    size={size}
+    inputRef={inputRef}
+    value={value}
+    name={name}
+    color='primary'
+    icon={<CheckboxBlankIcon />}
+    checkedIcon={<CheckboxIcon />}
+    indeterminateIcon={<CheckboxIndeterminateIcon />}
+    {...props}
+  />
 )
 
 RubiwinCheckbox.propTypes = {

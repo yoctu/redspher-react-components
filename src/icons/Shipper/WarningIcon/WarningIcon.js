@@ -1,5 +1,5 @@
 import React from 'react'
-import { SvgIcon } from '@material-ui/core'
+import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
 function WarningIcon(props) {
@@ -8,15 +8,15 @@ function WarningIcon(props) {
       <path
         d='M18.2155 16.412L10 2L1.78454 16.412H18.2155Z'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinejoin='round'
       />
       <path
         d='M10 7L10 12'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />
@@ -25,8 +25,8 @@ function WarningIcon(props) {
         cy='14'
         r='0.5'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />

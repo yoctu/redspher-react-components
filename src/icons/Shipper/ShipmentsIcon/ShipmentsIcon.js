@@ -1,5 +1,5 @@
 import React from 'react'
-import { SvgIcon } from '@material-ui/core'
+import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../shipper/theme/themeConstants'
 
 function ShipmentsIcon(props) {
@@ -11,8 +11,8 @@ function ShipmentsIcon(props) {
         rx='1.06667'
         ry='1.06666'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />
@@ -22,8 +22,8 @@ function ShipmentsIcon(props) {
         rx='1.06667'
         ry='1.06667'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />
@@ -33,15 +33,15 @@ function ShipmentsIcon(props) {
         rx='1.06667'
         ry='1.06667'
         stroke={
-          props.secondaryColor
-            ? props.secondaryColor
+          props.secondarycolor
+            ? props.secondarycolor
             : themeConstants.secondary.main
         }
       />
       <path
         d='M6.26667 5.33337L18 5.33338'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -49,7 +49,7 @@ function ShipmentsIcon(props) {
       <path
         d='M6.26667 10.6666L18 10.6666'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -57,7 +57,7 @@ function ShipmentsIcon(props) {
       <path
         d='M6.26667 16L18 16'
         stroke={
-          props.primaryColor ? props.primaryColor : themeConstants.primary.main
+          props.primarycolor ? props.primarycolor : themeConstants.primary.main
         }
         strokeLinecap='round'
         strokeLinejoin='round'

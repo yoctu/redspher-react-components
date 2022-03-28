@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import style from './ShipperRangeSlider.module.scss'
-import { Slider, Typography } from '@material-ui/core'
+import { Box, Slider, Typography } from '@mui/material'
 import PropTypes from 'prop-types'
 
 const ShipperRangeSlider = ({
@@ -22,7 +21,7 @@ const ShipperRangeSlider = ({
     setShownLabel(`${rangeValue[1] - rangeValue[0]}`)
   }
   return (
-    <div className={style.rangeSlider}>
+    <Box sx={{ width: '100%' }}>
       <Slider
         value={rangeValue}
         onChange={handleRangeChange}
@@ -42,7 +41,7 @@ const ShipperRangeSlider = ({
       >
         {showLabel ? shownLabelFormat(shownLabel) : ''}
       </Typography>
-    </div>
+    </Box>
   )
 }
 
