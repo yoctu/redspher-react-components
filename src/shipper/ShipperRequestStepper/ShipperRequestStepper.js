@@ -33,7 +33,6 @@ const ShipperStepper = ({
         }}
         connector={
           <StepConnector
-            stepperColor={steppercolor}
             sx={{
               '.MuiStepConnector-line': {
                 border: `1px dashed  ${steppercolor}`
