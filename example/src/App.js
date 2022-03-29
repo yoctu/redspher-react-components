@@ -168,7 +168,8 @@ import {
   ShipperErrorPopover,
   ShipperRequestStepper,
   RubiwinSelect,
-  RubiwinAutocomplete
+  RubiwinAutocomplete,
+  RubiwinPagination
 } from 'redspher-components'
 import {
   Button,
@@ -345,6 +346,12 @@ const RubiWinShowCase = () => {
     { label: 'Monty Python and the Holy Grail', year: 1975 },
   ];
 
+  const [page, setPage] = useState(0);
+  const rowsPerPage = 5;
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage - 1);
+  };
+
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
       <h1>--------- RUBIWIN COMPONENTS ---------</h1>
@@ -392,39 +399,19 @@ const RubiWinShowCase = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
-                  <TableCell>
-                    Body 1
-                  </TableCell>
-                  <TableCell>
-                    Body 2
-                  </TableCell>
-                  <TableCell>
-                    Body 3
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    Body 1
-                  </TableCell>
-                  <TableCell>
-                    Body 2
-                  </TableCell>
-                  <TableCell>
-                    Body 3
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    Body 1
-                  </TableCell>
-                  <TableCell>
-                    Body 2
-                  </TableCell>
-                  <TableCell>
-                    Body 3
-                  </TableCell>
-                </TableRow>
+                {[...Array(4)].map(() =>
+                  <TableRow>
+                    <TableCell>
+                      Body 1
+                    </TableCell>
+                    <TableCell>
+                      Body 2
+                    </TableCell>
+                    <TableCell>
+                      Body 3
+                    </TableCell>
+                  </TableRow>
+                )}
               </TableBody>
               <TableFooter>
                 <TableRow>
@@ -459,39 +446,19 @@ const RubiWinShowCase = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
-                  <TableCell>
-                    Body 1
-                  </TableCell>
-                  <TableCell>
-                    Body 2
-                  </TableCell>
-                  <TableCell>
-                    Body 3
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    Body 1
-                  </TableCell>
-                  <TableCell>
-                    Body 2
-                  </TableCell>
-                  <TableCell>
-                    Body 3
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    Body 1
-                  </TableCell>
-                  <TableCell>
-                    Body 2
-                  </TableCell>
-                  <TableCell>
-                    Body 3
-                  </TableCell>
-                </TableRow>
+                {[...Array(4)].map(() =>
+                  <TableRow>
+                    <TableCell>
+                      Body 1
+                    </TableCell>
+                    <TableCell>
+                      Body 2
+                    </TableCell>
+                    <TableCell>
+                      Body 3
+                    </TableCell>
+                  </TableRow>
+                )}
               </TableBody>
               <TableFooter>
                 <TableRow>
@@ -507,6 +474,65 @@ const RubiWinShowCase = () => {
                 </TableRow>
               </TableFooter>
             </Table>
+          </Grid>
+
+          <h3>PAGINATION</h3>
+          <Grid sx={{ width: '100%', px: 2 }}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>
+                    Heading 1
+                  </TableCell>
+                  <TableCell>
+                    Heading 2
+                  </TableCell>
+                  <TableCell>
+                    Heading 3
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {[...Array(40).keys()]
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row) =>
+                  <TableRow>
+                    <TableCell>
+                      Body 1 - Row {row}
+                    </TableCell>
+                    <TableCell>
+                      Body 2 - Row {row}
+                    </TableCell>
+                    <TableCell>
+                      Body 3 - Row {row}
+                    </TableCell>
+                  </TableRow>
+                )}
+              </TableBody>
+              <TableFooter>
+                <TableRow>
+                  <TableCell>
+                    Footer 1
+                  </TableCell>
+                  <TableCell>
+                    Footer 2
+                  </TableCell>
+                  <TableCell>
+                    Footer 3
+                  </TableCell>
+                </TableRow>
+              </TableFooter>
+            </Table>
+            <Grid container justifyContent="end" sx={{ pt: 1 }}>
+              <Grid item>
+                <RubiwinPagination
+                  count={40}
+                  page={page + 1}
+                  onPageChange={handleChangePage}
+                  rowsPerPage={rowsPerPage}
+                />
+              </Grid>
+            </Grid>
           </Grid>
         </div>
 

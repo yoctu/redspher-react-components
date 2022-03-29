@@ -6,17 +6,17 @@ function ClearIcon({ primarycolor, ...props }) {
   return (
     <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <line
-        x1='14.4497'
-        y1='5.55025'
-        x2='4.55021'
-        y2='15.4497'
+        x1='14.8995'
+        y1='5.70711'
+        x2='5.70715'
+        y2='14.8995'
         stroke={primarycolor || themeConstants.grey.main}
       />
       <line
-        x1='4.55025'
-        y1='5.55023'
-        x2='14.4497'
-        y2='15.4497'
+        x1='5.70711'
+        y1='5.70709'
+        x2='14.8995'
+        y2='14.8995'
         stroke={primarycolor || themeConstants.grey.main}
       />
     </SvgIcon>
