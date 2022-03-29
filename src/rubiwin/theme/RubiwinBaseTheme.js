@@ -1,121 +1,8 @@
-import themeConstants, { colors } from './themeConstants'
+import themeConstants, { colors, typographies } from './themeConstants'
 
 const rubiwinBaseTheme = {
   palette: colors,
-  typography: {
-    fontFamily: ['Montserrat', 'sans-serif'].join(','),
-    h1: {
-      fontWeight: 700,
-      fontSize: '40px',
-      lineHeight: '48.76px',
-      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
-        {
-          fontSize: '30px',
-          lineHeight: '36.57px'
-        }
-    },
-    h2: {
-      fontWeight: 700,
-      color: themeConstants.grey.main,
-      fontSize: '32px',
-      lineHeight: '39.01px',
-      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
-        {
-          fontSize: '22px',
-          lineHeight: '26.82px'
-        }
-    },
-    h3: {
-      fontWeight: 700,
-      color: themeConstants.grey.main,
-      fontSize: '24px',
-      lineHeight: '29.26px',
-      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
-        {
-          fontSize: '18px',
-          lineHeight: '21.94px'
-        }
-    },
-    h4: {
-      fontWeight: 700,
-      color: themeConstants.grey.main,
-      fontSize: '18px',
-      lineHeight: '21.94px',
-      [`@media only screen and (max-width: ${themeConstants.breakpoints.sm}px)`]:
-        {
-          fontSize: '16px',
-          lineHeight: '19.5px'
-        }
-    },
-    subtitle1: {
-      color: themeConstants.grey.main,
-      fontSize: '18px',
-      lineHeight: '21.94px'
-    },
-    subtitle1underline: {
-      color: themeConstants.grey.main,
-      fontSize: '18px',
-      lineHeight: '21.94px',
-      textDecoration: 'underline'
-    },
-    subtitle1bold: {
-      fontWeight: 700,
-      color: themeConstants.grey.main,
-      fontSize: '18px',
-      lineHeight: '21.94px'
-    },
-    body1: {
-      color: themeConstants.grey.main,
-      fontSize: '15px',
-      lineHeight: '22px'
-    },
-    body1underline: {
-      color: themeConstants.grey.light,
-      fontSize: '15px',
-      lineHeight: '22px',
-      textDecoration: 'underline'
-    },
-    body1bold: {
-      fontWeight: 700,
-      color: themeConstants.grey.main,
-      fontSize: '15px',
-      lineHeight: '22px'
-    },
-    body2: {
-      color: themeConstants.grey.main,
-      fontSize: '14px',
-      lineHeight: '17px'
-    },
-    body2underline: {
-      color: themeConstants.grey.light,
-      fontSize: '14px',
-      lineHeight: '17px',
-      textDecoration: 'underline'
-    },
-    body2bold: {
-      fontWeight: 700,
-      color: themeConstants.grey.main,
-      fontSize: '14px',
-      lineHeight: '17px'
-    },
-    caption: {
-      color: themeConstants.grey.main,
-      fontSize: '12px',
-      lineHeight: '16px'
-    },
-    captionunderline: {
-      color: themeConstants.grey.main,
-      fontSize: '12px',
-      lineHeight: '16px',
-      textDecoration: 'underline'
-    },
-    captionbold: {
-      fontWeight: 700,
-      color: themeConstants.grey.main,
-      fontSize: '12px',
-      lineHeight: '16px'
-    }
-  },
+  typography: typographies,
   overrides: {
     MuiButton: {
       contained: {
@@ -329,12 +216,10 @@ const rubiwinBaseTheme = {
         },
         head: {
           backgroundColor: themeConstants.grey.main,
-          color: 'white !important',
-          borderTop: '0px !important'
+          color: 'white',
+          borderTop: 0
         },
         root: {
-          color: `${themeConstants.grey.main} !important`,
-          fontSize: '12px !important',
           '&:first-of-type': {
             borderLeft: '1px solid transparent'
           },
@@ -344,7 +229,8 @@ const rubiwinBaseTheme = {
           borderRight: `1px solid ${themeConstants.grey.lighter}`,
           borderLeft: `1px solid ${themeConstants.grey.lighter}`,
           borderBottom: `1px solid ${themeConstants.grey.lighter}`,
-          borderTop: `1px solid ${themeConstants.grey.lighter}`
+          borderTop: `1px solid ${themeConstants.grey.lighter}`,
+          ...typographies.caption
         }
       }
     },
