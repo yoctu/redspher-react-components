@@ -357,6 +357,19 @@ const rubiwinBaseTheme = {
         }
       }
     },
+    MuiPaginationItem: {
+      styleOverrides: {
+        text: {
+          color: themeConstants.grey.main,
+          '&.Mui-selected': {
+            color: themeConstants.white.main
+          },
+          '&.Mui-disabled': {
+            color: themeConstants.grey.light
+          }
+        }
+      }
+    },
     MuiCheckbox: {
       styleOverrides: {
         root: {
