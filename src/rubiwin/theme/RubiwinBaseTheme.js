@@ -173,7 +173,6 @@ const rubiwinBaseTheme = {
         },
         root: {
           borderRadius: '8px',
-          fontSize: '14px',
           textTransform: 'none',
           padding: '12px 15px'
         },
@@ -285,7 +284,6 @@ const rubiwinBaseTheme = {
     MuiFormLabel: {
       styleOverrides: {
         root: {
-          color: themeConstants.grey.main,
           textTransform: 'capitalize'
         }
       }

@@ -126,37 +126,37 @@ export const typographies = {
   },
   body1: {
     color: constants.grey.main,
-    fontSize: '15px',
-    lineHeight: '22px'
-  },
-  body1underline: {
-    color: constants.grey.light,
-    fontSize: '15px',
-    lineHeight: '22px',
-    textDecoration: 'underline'
-  },
-  body1bold: {
-    fontWeight: 700,
-    color: constants.grey.main,
-    fontSize: '15px',
-    lineHeight: '22px'
-  },
-  body2: {
-    color: constants.grey.main,
     fontSize: '14px',
     lineHeight: '17px'
   },
-  body2underline: {
+  body1underline: {
     color: constants.grey.light,
     fontSize: '14px',
     lineHeight: '17px',
     textDecoration: 'underline'
   },
-  body2bold: {
+  body1bold: {
     fontWeight: 700,
     color: constants.grey.main,
     fontSize: '14px',
     lineHeight: '17px'
+  },
+  body2: {
+    color: constants.grey.main,
+    fontSize: '15px',
+    lineHeight: '22px'
+  },
+  body2underline: {
+    color: constants.grey.light,
+    fontSize: '15px',
+    lineHeight: '22px',
+    textDecoration: 'underline'
+  },
+  body2bold: {
+    fontWeight: 700,
+    color: constants.grey.main,
+    fontSize: '15px',
+    lineHeight: '22px'
   },
   caption: {
     color: constants.grey.main,
