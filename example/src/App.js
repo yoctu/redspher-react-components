@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createRef, useState } from 'react'
 
 import {
   RubiwinButton,
@@ -346,11 +346,12 @@ const RubiWinShowCase = () => {
     { label: 'Monty Python and the Holy Grail', year: 1975 },
   ];
 
-  const [page, setPage] = useState(0);
-  const rowsPerPage = 5;
+  const [page, setPage] = useState(1);
+  const rowsPerPage = 10;
   const handleChangePage = (event, newPage) => {
-    setPage(newPage - 1);
+    setPage(newPage);
   };
+  const tableRef = createRef();
 
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
@@ -477,7 +478,7 @@ const RubiWinShowCase = () => {
           </Grid>
 
           <h3>PAGINATION</h3>
-          <Grid sx={{ width: '100%', px: 2 }}>
+          <Grid sx={{ width: '100%', px: 2 }} ref={tableRef}>
             <Table>
               <TableHead>
                 <TableRow>
@@ -494,7 +495,7 @@ const RubiWinShowCase = () => {
               </TableHead>
               <TableBody>
                 {[...Array(40).keys()]
-                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .slice((page - 1) * rowsPerPage, (page - 1) * rowsPerPage + rowsPerPage)
                   .map((row) =>
                   <TableRow>
                     <TableCell>
@@ -527,9 +528,10 @@ const RubiWinShowCase = () => {
               <Grid item>
                 <RubiwinPagination
                   count={40}
-                  page={page + 1}
+                  page={page}
                   onPageChange={handleChangePage}
                   rowsPerPage={rowsPerPage}
+                  table={tableRef}
                 />
               </Grid>
             </Grid>
