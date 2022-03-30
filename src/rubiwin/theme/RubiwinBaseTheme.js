@@ -215,8 +215,11 @@ const rubiwinBaseTheme = {
         },
         head: {
           backgroundColor: themeConstants.grey.main,
-          color: 'white',
+          color: themeConstants.white.main,
           borderTop: 0
+        },
+        footer: {
+          color: themeConstants.white.main
         },
         root: {
           '&:first-of-type': {
@@ -230,6 +233,13 @@ const rubiwinBaseTheme = {
           borderBottom: `1px solid ${themeConstants.grey.lighter}`,
           borderTop: `1px solid ${themeConstants.grey.lighter}`,
           ...typographies.caption
+        }
+      }
+    },
+    MuiTableFooter: {
+      styleOverrides: {
+        root: {
+          backgroundColor: themeConstants.primary.dark
         }
       }
     },
@@ -291,7 +301,7 @@ const rubiwinBaseTheme = {
     MuiChip: {
       styleOverrides: {
         colorPrimary: {
-          color: 'white'
+          color: themeConstants.white.main
         }
       }
     },
