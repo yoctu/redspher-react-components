@@ -359,6 +359,50 @@ const rubiwinBaseTheme = {
           }
         }
       }
+    },
+    MuiCalendarPicker: {
+      styleOverrides: {
+        root: {
+          '& > div:first-of-type': {
+            paddingTop: 14,
+            paddingBottom: 14,
+            margin: 0,
+            backgroundColor: themeConstants.grey.main,
+            borderRadius: '6px 6px 0 0',
+            '& .MuiButtonBase-root': {
+              color: themeConstants.white.main
+            },
+            '& > div': {
+              color: themeConstants.white.main
+            }
+          },
+          '& .PrivatePickersSlideTransition-root': {
+            minHeight: 0,
+            '& > div:first-of-type': {
+              position: 'relative'
+            }
+          }
+        }
+      }
+    },
+    MuiPickersDay: {
+      styleOverrides: {
+        root: {
+          borderRadius: 0,
+          '&.Mui-selected': {
+            color: themeConstants.white.main,
+            '&:hover': {
+              backgroundColor: themeConstants.primary.main
+            },
+            '&:focus': {
+              backgroundColor: themeConstants.primary.main
+            }
+          },
+          '&:hover': {
+            backgroundColor: themeConstants.primary.light
+          }
+        }
+      }
     }
   }
 }

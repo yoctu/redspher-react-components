@@ -169,7 +169,8 @@ import {
   ShipperRequestStepper,
   RubiwinSelect,
   RubiwinAutocomplete,
-  RubiwinPagination
+  RubiwinPagination,
+  RubiwinDatePicker
 } from 'redspher-components'
 import {
   Button,
@@ -191,10 +192,11 @@ import {
   TableFooter,
   TableRow,
   TableHead,
-  TableBody
+  TableBody,
+  InputAdornment
 } from '@mui/material'
-import { Pagination } from '@mui/lab'
-import InputAdornment from '@mui/material/InputAdornment'
+import { Pagination, LocalizationProvider } from '@mui/lab'
+import AdapterMoment from '@mui/lab/AdapterMoment'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -346,6 +348,7 @@ const RubiWinShowCase = () => {
     { label: 'Monty Python and the Holy Grail', year: 1975 },
   ];
 
+  const [date, setDate] = useState();
   const [page, setPage] = useState(1);
   const rowsPerPage = 10;
   const handleChangePage = (event, newPage) => {
@@ -647,6 +650,11 @@ const RubiWinShowCase = () => {
             label='Checkbox rubiwin end'
             labelPlacement='end'
           />
+
+          <LocalizationProvider dateAdapter={AdapterMoment}>
+            <RubiwinDatePicker onChange={(date) => setDate(date)} value={date}/>
+            <RubiwinDatePicker onChange={(date) => setDate(date)} value={date} label="DesktopDatePicker with label" />
+          </LocalizationProvider>
         </div>
 
         <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>

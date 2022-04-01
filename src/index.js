@@ -13,6 +13,7 @@ import RubiwinSelect from './rubiwin/RubiwinSelect'
 import RubiwinAutocomplete from './rubiwin/RubiwinAutocomplete'
 import RubiwinMenuItem from './rubiwin/RubiwinMenuItem'
 import RubiwinPagination from './rubiwin/RubiwinPagination'
+import RubiwinDatePicker from './rubiwin/RubiwinDatePicker'
 import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
 import rubiwinBaseTheme from './rubiwin/theme/RubiwinBaseTheme'
 import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
@@ -272,6 +273,7 @@ export {
   RubiwinVisibilityIcon,
   RubiwinWebAppIcon,
   RubiwinPagination,
+  RubiwinDatePicker,
   RubiwinThemeProvider,
   E4pThemeProvider,
   ShipperThemeProvider,
