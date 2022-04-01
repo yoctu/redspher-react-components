@@ -2,7 +2,7 @@
 
 exports[`is multiple 1`] = `
 <div
-  className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+  className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
   onClick={[Function]}
 >
   <div
@@ -18,12 +18,9 @@ exports[`is multiple 1`] = `
   >
     <span
       className="notranslate"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "&#8203;",
-        }
-      }
-    />
+    >
+      ​
+    </span>
   </div>
   <input
     aria-hidden={true}
@@ -49,16 +46,13 @@ exports[`is multiple 1`] = `
     className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
   >
     <legend
-      className="css-nnbavb"
+      className="css-hdw1oc"
     >
       <span
         className="notranslate"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "&#8203;",
-          }
-        }
-      />
+      >
+        ​
+      </span>
     </legend>
   </fieldset>
 </div>
@@ -66,7 +60,7 @@ exports[`is multiple 1`] = `
 
 exports[`renders correctly props object 1`] = `
 <div
-  className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary test css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+  className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary test css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
   onClick={[Function]}
 >
   <div
@@ -84,12 +78,9 @@ exports[`renders correctly props object 1`] = `
   >
     <span
       className="notranslate"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "&#8203;",
-        }
-      }
-    />
+    >
+      ​
+    </span>
   </div>
   <input
     aria-hidden={true}
@@ -116,16 +107,13 @@ exports[`renders correctly props object 1`] = `
     className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
   >
     <legend
-      className="css-nnbavb"
+      className="css-hdw1oc"
     >
       <span
         className="notranslate"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "&#8203;",
-          }
-        }
-      />
+      >
+        ​
+      </span>
     </legend>
   </fieldset>
 </div>
