@@ -61,11 +61,13 @@ import RubiwinDatePickerIcon from './icons/Rubiwin/DatePickerIcon'
 import RubiwinDetailIcon from './icons/Rubiwin/DetailIcon'
 import RubiwinDownloadIcon from './icons/Rubiwin/DownloadIcon'
 import RubiwinEditIcon from './icons/Rubiwin/EditIcon'
+import RubiwinEditPeopleIcon from './icons/Rubiwin/EditPeopleIcon'
 import RubiwinEmailIcon from './icons/Rubiwin/EmailIcon'
 import RubiwinEuroIcon from './icons/Rubiwin/EuroIcon'
 import RubiwinFavorisIcon from './icons/Rubiwin/FavorisIcon'
 import RubiwinFiltersIcon from './icons/Rubiwin/FiltersIcon'
 import RubiwinFormationIcon from './icons/Rubiwin/FormationIcon'
+import RubiwinGearIcon from './icons/Rubiwin/GearIcon'
 import RubiwinGreenPassIcon from './icons/Rubiwin/GreenPassIcon'
 import RubiwinHistogramIcon from './icons/Rubiwin/HistogramIcon'
 import RubiwinHomeIcon from './icons/Rubiwin/HomeIcon'
@@ -235,11 +237,13 @@ export {
   RubiwinDetailIcon,
   RubiwinDownloadIcon,
   RubiwinEditIcon,
+  RubiwinEditPeopleIcon,
   RubiwinEmailIcon,
   RubiwinEuroIcon,
   RubiwinFavorisIcon,
   RubiwinFiltersIcon,
   RubiwinFormationIcon,
+  RubiwinGearIcon,
   RubiwinGreenPassIcon,
   RubiwinHistogramIcon,
   RubiwinHomeIcon,
