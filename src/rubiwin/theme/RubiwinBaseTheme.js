@@ -403,6 +403,33 @@ const rubiwinBaseTheme = {
           }
         }
       }
+    },
+    MuiTabs: {
+      styleOverrides: {
+        scroller: {
+          paddingBottom: '1px'
+        },
+        flexContainer: {
+          borderBottom: `2px solid ${themeConstants.grey.lighter}`
+        },
+        indicator: {
+          height: '4px'
+        }
+      }
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          ...typographies.caption
+        }
+      }
+    },
+    MuiTabPanel: {
+      styleOverrides: {
+        root: {
+          padding: '15px 50px'
+        }
+      }
     }
   }
 }
