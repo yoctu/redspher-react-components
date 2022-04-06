@@ -43,7 +43,7 @@ import {
   RubiwinCircleCaretBottomIcon,
   RubiwinCircleCaretLeftIcon,
   RubiwinCircleCaretRightIcon,
-  RubiwinCircleCaretUpIcon,
+  RubiwinCircleCaretTopIcon,
   RubiwinClearIcon,
   RubiwinConcessionIcon,
   RubiwinContactIcon,
@@ -195,9 +195,10 @@ import {
   TableRow,
   TableHead,
   TableBody,
-  InputAdornment
+  InputAdornment,
+  Tab
 } from '@mui/material'
-import { Pagination, LocalizationProvider } from '@mui/lab'
+import { Pagination, LocalizationProvider, TabPanel, TabList, TabContext } from '@mui/lab'
 import AdapterMoment from '@mui/lab/AdapterMoment'
 
 const RubiWinShowCase = () => {
@@ -357,6 +358,11 @@ const RubiWinShowCase = () => {
     setPage(newPage);
   };
   const tableRef = createRef();
+
+  const [tabValue, setTabValue] = React.useState('1');
+  const handleChangeTab = (event, newValue) => {
+    setTabValue(newValue);
+  }
 
   return (
     <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
@@ -547,6 +553,30 @@ const RubiWinShowCase = () => {
         <RubiwinInputField {...testProps} disabled />
         <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
         <RubiwinInputField id='test' />
+
+        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
+          <h2>- TABS -</h2>
+
+          <Grid sx={{ width: '100%' }}>
+            <TabContext value={tabValue}>
+              <TabList onChange={handleChangeTab} aria-label="lab API tabs example">
+                <Tab label="Item One" value="1" />
+                <Tab label="Item Two" value="2" />
+                <Tab label="Item Three" value="3" />
+              </TabList>
+
+              <TabPanel value="1">
+                Item One
+              </TabPanel>
+              <TabPanel value="2">
+                Item Two
+              </TabPanel>
+              <TabPanel value="3">
+                Item Three
+              </TabPanel>
+            </TabContext>
+          </Grid>
+        </div>
 
         <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
           <h2>- FORMS -</h2>
@@ -758,7 +788,7 @@ const RubiWinShowCase = () => {
             <RubiwinCircleCaretBottomIcon />
             <RubiwinCircleCaretLeftIcon />
             <RubiwinCircleCaretRightIcon />
-            <RubiwinCircleCaretUpIcon />
+            <RubiwinCircleCaretTopIcon />
             <RubiwinClearIcon />
             <RubiwinConcessionIcon />
             <RubiwinContactIcon />

@@ -52,7 +52,7 @@ import RubiwinCheckpointIcon from './icons/Rubiwin/CheckpointIcon'
 import RubiwinCircleCaretBottomIcon from './icons/Rubiwin/CircleCaretBottomIcon'
 import RubiwinCircleCaretLeftIcon from './icons/Rubiwin/CircleCaretLeftIcon'
 import RubiwinCircleCaretRightIcon from './icons/Rubiwin/CircleCaretRightIcon'
-import RubiwinCircleCaretUpIcon from './icons/Rubiwin/CircleCaretUpIcon'
+import RubiwinCircleCaretTopIcon from './icons/Rubiwin/CircleCaretTopIcon'
 import RubiwinClearIcon from './icons/Rubiwin/ClearIcon'
 import RubiwinConcessionIcon from './icons/Rubiwin/ConcessionIcon'
 import RubiwinContactIcon from './icons/Rubiwin/ContactIcon'
@@ -228,7 +228,7 @@ export {
   RubiwinCircleCaretBottomIcon,
   RubiwinCircleCaretLeftIcon,
   RubiwinCircleCaretRightIcon,
-  RubiwinCircleCaretUpIcon,
+  RubiwinCircleCaretTopIcon,
   RubiwinClearIcon,
   RubiwinConcessionIcon,
   RubiwinContactIcon,
