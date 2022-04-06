@@ -52,11 +52,13 @@ import {
   RubiwinDetailIcon,
   RubiwinDownloadIcon,
   RubiwinEditIcon,
+  RubiwinEditPeopleIcon,
   RubiwinEmailIcon,
   RubiwinEuroIcon,
   RubiwinFavorisIcon,
   RubiwinFiltersIcon,
   RubiwinFormationIcon,
+  RubiwinGearIcon,
   RubiwinGreenPassIcon,
   RubiwinHistogramIcon,
   RubiwinHomeIcon,
@@ -765,11 +767,13 @@ const RubiWinShowCase = () => {
             <RubiwinDetailIcon />
             <RubiwinDownloadIcon />
             <RubiwinEditIcon />
+            <RubiwinEditPeopleIcon />
             <RubiwinEmailIcon />
             <RubiwinEuroIcon />
             <RubiwinFavorisIcon />
             <RubiwinFiltersIcon />
             <RubiwinFormationIcon />
+            <RubiwinGearIcon />
             <RubiwinGreenPassIcon />
             <RubiwinHistogramIcon />
             <RubiwinHomeIcon />
