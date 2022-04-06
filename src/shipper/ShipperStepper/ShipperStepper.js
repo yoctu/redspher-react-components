@@ -173,6 +173,7 @@ const ShipperStepper = ({ steps, activeStep }) => {
               </Typography>
               <Box display='flex' justifyContent='center' sx={{ mt: -9 }}>
                 <Box
+                  id={step.btnId}
                   sx={getClassNameIcon(index)}
                   onClick={() => {
                     onClickAction(index, step)
