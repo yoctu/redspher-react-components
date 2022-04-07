@@ -88,7 +88,7 @@ const rubiwinBaseTheme = {
         color: themeConstants.grey.lighter + '!important',
         opacity: 1,
         '&.Mui-active': {
-          color: '#F4F4F4',
+          color: themeConstants.grey.lighter,
           opacity: 1
         }
       },
@@ -296,7 +296,7 @@ const rubiwinBaseTheme = {
           color: themeConstants.grey.lighter + '!important',
           opacity: 1,
           '&.Mui-active': {
-            color: '#F4F4F4',
+            color: themeConstants.grey.lighter,
             opacity: 1
           }
         },
