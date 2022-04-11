@@ -168,11 +168,20 @@ const ShipperBaseTheme = {
       }
     },
     MuiChip: {
+      variants: [
+        {
+          props: { variant: 'defaultGrey' },
+          style: {
+            backgroundColor: themeConstants.grey.main,
+            color: themeConstants.white.main
+          }
+        }
+      ],
       styleOverrides: {
         root: {
           backgroundColor: themeConstants.green.main,
           color: themeConstants.white.main,
-          '&$disabled': {
+          '&:disabled': {
             backgroundColor: themeConstants.grey.dark,
             opacity: 1
           }
