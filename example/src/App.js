@@ -198,7 +198,13 @@ import {
   InputAdornment,
   Tab
 } from '@mui/material'
-import { Pagination, LocalizationProvider, TabPanel, TabList, TabContext } from '@mui/lab'
+import {
+  Pagination,
+  LocalizationProvider,
+  TabPanel,
+  TabList,
+  TabContext
+} from '@mui/lab'
 import AdapterMoment from '@mui/lab/AdapterMoment'
 
 const RubiWinShowCase = () => {
@@ -234,23 +240,23 @@ const RubiWinShowCase = () => {
     { label: 'Pulp Fiction', year: 1994 },
     {
       label: 'The Lord of the Rings: The Return of the King',
-      year: 2003,
+      year: 2003
     },
     { label: 'The Good, the Bad and the Ugly', year: 1966 },
     { label: 'Fight Club', year: 1999 },
     {
       label: 'The Lord of the Rings: The Fellowship of the Ring',
-      year: 2001,
+      year: 2001
     },
     {
       label: 'Star Wars: Episode V - The Empire Strikes Back',
-      year: 1980,
+      year: 1980
     },
     { label: 'Forrest Gump', year: 1994 },
     { label: 'Inception', year: 2010 },
     {
       label: 'The Lord of the Rings: The Two Towers',
-      year: 2002,
+      year: 2002
     },
     { label: "One Flew Over the Cuckoo's Nest", year: 1975 },
     { label: 'Goodfellas', year: 1990 },
@@ -258,7 +264,7 @@ const RubiWinShowCase = () => {
     { label: 'Seven Samurai', year: 1954 },
     {
       label: 'Star Wars: Episode IV - A New Hope',
-      year: 1977,
+      year: 1977
     },
     { label: 'City of God', year: 2002 },
     { label: 'Se7en', year: 1995 },
@@ -293,8 +299,9 @@ const RubiWinShowCase = () => {
     { label: 'Alien', year: 1979 },
     { label: 'Sunset Boulevard', year: 1950 },
     {
-      label: 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
-      year: 1964,
+      label:
+        'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
+      year: 1964
     },
     { label: 'The Great Dictator', year: 1940 },
     { label: 'Cinema Paradiso', year: 1988 },
@@ -317,7 +324,7 @@ const RubiWinShowCase = () => {
     { label: 'Vertigo', year: 1958 },
     {
       label: 'Star Wars: Episode VI - Return of the Jedi',
-      year: 1983,
+      year: 1983
     },
     { label: 'Reservoir Dogs', year: 1992 },
     { label: 'Braveheart', year: 1995 },
@@ -331,7 +338,7 @@ const RubiWinShowCase = () => {
     { label: 'Double Indemnity', year: 1944 },
     {
       label: 'Eternal Sunshine of the Spotless Mind',
-      year: 2004,
+      year: 2004
     },
     { label: 'Amadeus', year: 1984 },
     { label: 'To Kill a Mockingbird', year: 1962 },
@@ -348,20 +355,20 @@ const RubiWinShowCase = () => {
     { label: 'Inglourious Basterds', year: 2009 },
     { label: 'Snatch', year: 2000 },
     { label: '3 Idiots', year: 2009 },
-    { label: 'Monty Python and the Holy Grail', year: 1975 },
-  ];
+    { label: 'Monty Python and the Holy Grail', year: 1975 }
+  ]
 
-  const [date, setDate] = useState();
-  const [page, setPage] = useState(1);
-  const rowsPerPage = 10;
+  const [date, setDate] = useState()
+  const [page, setPage] = useState(1)
+  const rowsPerPage = 10
   const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-  const tableRef = createRef();
+    setPage(newPage)
+  }
+  const tableRef = createRef()
 
-  const [tabValue, setTabValue] = React.useState('1');
+  const [tabValue, setTabValue] = React.useState('1')
   const handleChangeTab = (event, newValue) => {
-    setTabValue(newValue);
+    setTabValue(newValue)
   }
 
   return (
@@ -369,7 +376,15 @@ const RubiWinShowCase = () => {
       <h1>--------- RUBIWIN COMPONENTS ---------</h1>
 
       <RubiwinThemeProvider>
-        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
+        <div
+          style={{
+            border: '1px solid #00C3FF',
+            display: 'grid',
+            placeItems: 'center',
+            width: '100%',
+            gap: '1em'
+          }}
+        >
           <h2>- TYPOGRAPHIES -</h2>
 
           <Typography variant='h1'>H1 text</Typography>
@@ -377,7 +392,9 @@ const RubiWinShowCase = () => {
           <Typography variant='h3'>H3 text</Typography>
           <Typography variant='h4'>H4 text</Typography>
           <Typography variant='subtitle1'>Subtitle1 text</Typography>
-          <Typography variant='subtitle1underline'>Subtitle1 underline text</Typography>
+          <Typography variant='subtitle1underline'>
+            Subtitle1 underline text
+          </Typography>
           <Typography variant='subtitle1bold'>Subtitle1 bold text</Typography>
           <Typography variant='body1'>Body1 text</Typography>
           <Typography variant='body1underline'>Body1 underline text</Typography>
@@ -386,12 +403,22 @@ const RubiWinShowCase = () => {
           <Typography variant='body2underline'>Body2 underline text</Typography>
           <Typography variant='body2bold'>Body2 bold text</Typography>
           <Typography variant='caption'>Caption text</Typography>
-          <Typography variant='captionunderline'>Caption underline text</Typography>
+          <Typography variant='captionunderline'>
+            Caption underline text
+          </Typography>
           <Typography variant='captionbold'>Caption bold text</Typography>
           <Typography>Default no variant text</Typography>
         </div>
 
-        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
+        <div
+          style={{
+            border: '1px solid #00C3FF',
+            display: 'grid',
+            placeItems: 'center',
+            width: '100%',
+            gap: '1em'
+          }}
+        >
           <h2>- TABLES -</h2>
 
           <h3>SIMPLE</h3>
@@ -399,43 +426,25 @@ const RubiWinShowCase = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>
-                    Heading 1
-                  </TableCell>
-                  <TableCell>
-                    Heading 2
-                  </TableCell>
-                  <TableCell>
-                    Heading 3
-                  </TableCell>
+                  <TableCell>Heading 1</TableCell>
+                  <TableCell>Heading 2</TableCell>
+                  <TableCell>Heading 3</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {[...Array(4)].map(() =>
+                {[...Array(4)].map(() => (
                   <TableRow>
-                    <TableCell>
-                      Body 1
-                    </TableCell>
-                    <TableCell>
-                      Body 2
-                    </TableCell>
-                    <TableCell>
-                      Body 3
-                    </TableCell>
+                    <TableCell>Body 1</TableCell>
+                    <TableCell>Body 2</TableCell>
+                    <TableCell>Body 3</TableCell>
                   </TableRow>
-                )}
+                ))}
               </TableBody>
               <TableFooter>
                 <TableRow>
-                  <TableCell>
-                    Footer 1
-                  </TableCell>
-                  <TableCell>
-                    Footer 2
-                  </TableCell>
-                  <TableCell>
-                    Footer 3
-                  </TableCell>
+                  <TableCell>Footer 1</TableCell>
+                  <TableCell>Footer 2</TableCell>
+                  <TableCell>Footer 3</TableCell>
                 </TableRow>
               </TableFooter>
             </Table>
@@ -443,46 +452,28 @@ const RubiWinShowCase = () => {
 
           <h3>SMALL</h3>
           <Grid sx={{ width: '100%', px: 2 }}>
-            <Table size="small">
+            <Table size='small'>
               <TableHead>
                 <TableRow>
-                  <TableCell>
-                    Heading 1
-                  </TableCell>
-                  <TableCell>
-                    Heading 2
-                  </TableCell>
-                  <TableCell>
-                    Heading 3
-                  </TableCell>
+                  <TableCell>Heading 1</TableCell>
+                  <TableCell>Heading 2</TableCell>
+                  <TableCell>Heading 3</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {[...Array(4)].map(() =>
+                {[...Array(4)].map(() => (
                   <TableRow>
-                    <TableCell>
-                      Body 1
-                    </TableCell>
-                    <TableCell>
-                      Body 2
-                    </TableCell>
-                    <TableCell>
-                      Body 3
-                    </TableCell>
+                    <TableCell>Body 1</TableCell>
+                    <TableCell>Body 2</TableCell>
+                    <TableCell>Body 3</TableCell>
                   </TableRow>
-                )}
+                ))}
               </TableBody>
               <TableFooter>
                 <TableRow>
-                  <TableCell>
-                    Footer 1
-                  </TableCell>
-                  <TableCell>
-                    Footer 2
-                  </TableCell>
-                  <TableCell>
-                    Footer 3
-                  </TableCell>
+                  <TableCell>Footer 1</TableCell>
+                  <TableCell>Footer 2</TableCell>
+                  <TableCell>Footer 3</TableCell>
                 </TableRow>
               </TableFooter>
             </Table>
@@ -493,49 +484,34 @@ const RubiWinShowCase = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>
-                    Heading 1
-                  </TableCell>
-                  <TableCell>
-                    Heading 2
-                  </TableCell>
-                  <TableCell>
-                    Heading 3
-                  </TableCell>
+                  <TableCell>Heading 1</TableCell>
+                  <TableCell>Heading 2</TableCell>
+                  <TableCell>Heading 3</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {[...Array(40).keys()]
-                  .slice((page - 1) * rowsPerPage, (page - 1) * rowsPerPage + rowsPerPage)
-                  .map((row) =>
-                  <TableRow>
-                    <TableCell>
-                      Body 1 - Row {row}
-                    </TableCell>
-                    <TableCell>
-                      Body 2 - Row {row}
-                    </TableCell>
-                    <TableCell>
-                      Body 3 - Row {row}
-                    </TableCell>
-                  </TableRow>
-                )}
+                  .slice(
+                    (page - 1) * rowsPerPage,
+                    (page - 1) * rowsPerPage + rowsPerPage
+                  )
+                  .map((row) => (
+                    <TableRow>
+                      <TableCell>Body 1 - Row {row}</TableCell>
+                      <TableCell>Body 2 - Row {row}</TableCell>
+                      <TableCell>Body 3 - Row {row}</TableCell>
+                    </TableRow>
+                  ))}
               </TableBody>
               <TableFooter>
                 <TableRow>
-                  <TableCell>
-                    Footer 1
-                  </TableCell>
-                  <TableCell>
-                    Footer 2
-                  </TableCell>
-                  <TableCell>
-                    Footer 3
-                  </TableCell>
+                  <TableCell>Footer 1</TableCell>
+                  <TableCell>Footer 2</TableCell>
+                  <TableCell>Footer 3</TableCell>
                 </TableRow>
               </TableFooter>
             </Table>
-            <Grid container justifyContent="end" sx={{ pt: 1 }}>
+            <Grid container justifyContent='end' sx={{ pt: 1 }}>
               <Grid item>
                 <RubiwinPagination
                   count={40}
@@ -554,31 +530,44 @@ const RubiWinShowCase = () => {
         <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
         <RubiwinInputField id='test' />
 
-        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
+        <div
+          style={{
+            border: '1px solid #00C3FF',
+            display: 'grid',
+            placeItems: 'center',
+            width: '100%',
+            gap: '1em'
+          }}
+        >
           <h2>- TABS -</h2>
 
           <Grid sx={{ width: '100%' }}>
             <TabContext value={tabValue}>
-              <TabList onChange={handleChangeTab} aria-label="lab API tabs example">
-                <Tab label="Item One" value="1" />
-                <Tab label="Item Two" value="2" />
-                <Tab label="Item Three" value="3" />
+              <TabList
+                onChange={handleChangeTab}
+                aria-label='lab API tabs example'
+              >
+                <Tab label='Item One' value='1' />
+                <Tab label='Item Two' value='2' />
+                <Tab label='Item Three' value='3' />
               </TabList>
 
-              <TabPanel value="1">
-                Item One
-              </TabPanel>
-              <TabPanel value="2">
-                Item Two
-              </TabPanel>
-              <TabPanel value="3">
-                Item Three
-              </TabPanel>
+              <TabPanel value='1'>Item One</TabPanel>
+              <TabPanel value='2'>Item Two</TabPanel>
+              <TabPanel value='3'>Item Three</TabPanel>
             </TabContext>
           </Grid>
         </div>
 
-        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
+        <div
+          style={{
+            border: '1px solid #00C3FF',
+            display: 'grid',
+            placeItems: 'center',
+            width: '100%',
+            gap: '1em'
+          }}
+        >
           <h2>- FORMS -</h2>
 
           <FormControl variant='standard' sx={{ width: '250px' }}>
@@ -610,14 +599,14 @@ const RubiWinShowCase = () => {
           <RubiwinAutocomplete
             sx={{ width: '250px' }}
             options={options}
-            label="Autocomplete"
+            label='Autocomplete'
           />
 
           <RubiwinAutocomplete
             multiple
             sx={{ width: '250px' }}
             options={options}
-            label="Multiple autocomplete whitout limit"
+            label='Multiple autocomplete whitout limit'
           />
 
           <RubiwinAutocomplete
@@ -625,7 +614,7 @@ const RubiWinShowCase = () => {
             limitTags={1}
             sx={{ width: '250px' }}
             options={options}
-            label="Multiple autocomplete with limit"
+            label='Multiple autocomplete with limit'
           />
 
           <RubiwinFormLabel
@@ -684,36 +673,80 @@ const RubiWinShowCase = () => {
           />
 
           <LocalizationProvider dateAdapter={AdapterMoment}>
-            <RubiwinDatePicker onChange={(date) => setDate(date)} value={date}/>
-            <RubiwinDatePicker onChange={(date) => setDate(date)} value={date} label="DesktopDatePicker with label" />
+            <RubiwinDatePicker
+              onChange={(date) => setDate(date)}
+              value={date}
+            />
+            <RubiwinDatePicker
+              onChange={(date) => setDate(date)}
+              value={date}
+              label='DesktopDatePicker with label'
+            />
           </LocalizationProvider>
         </div>
 
-        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
+        <div
+          style={{
+            border: '1px solid #00C3FF',
+            display: 'grid',
+            placeItems: 'center',
+            width: '100%',
+            gap: '1em'
+          }}
+        >
           <h2>- BUTTONS -</h2>
 
           <RubiwinButton text='default RubiwinButton' onClick={sayHello} />
           <RubiwinButton text='default RubiwinButton disabled' disabled />
           <Button>Default button mui text</Button>
-          <Button startIcon={<RubiwinAddIcon primarycolor='#171F46' />}>Default button mui text</Button>
+          <Button startIcon={<RubiwinAddIcon primarycolor='#171F46' />}>
+            Default button mui text
+          </Button>
           <Button disabled>Default button mui disabled</Button>
-          <Button disabled startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}>Default button mui disabled</Button>
+          <Button
+            disabled
+            startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}
+          >
+            Default button mui disabled
+          </Button>
           <Button variant='contained'>Default button mui contained</Button>
-          <Button variant='contained' size='small'>Default button mui contained small</Button>
-          <Button variant='contained' startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}>
+          <Button variant='contained' size='small'>
+            Default button mui contained small
+          </Button>
+          <Button
+            variant='contained'
+            startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}
+          >
             Default button mui contained
           </Button>
-          <Button variant='contained' disabled>Default button mui contained and disabled</Button>
-          <Button variant='contained' disabled startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}>
+          <Button variant='contained' disabled>
             Default button mui contained and disabled
           </Button>
-          <Button variant='outlined' size='small'>Default button mui outlined small</Button>
+          <Button
+            variant='contained'
+            disabled
+            startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}
+          >
+            Default button mui contained and disabled
+          </Button>
+          <Button variant='outlined' size='small'>
+            Default button mui outlined small
+          </Button>
           <Button variant='outlined'>Default button mui outlined</Button>
-          <Button variant='outlined' startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}>
+          <Button
+            variant='outlined'
+            startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}
+          >
             Default button mui outlined
           </Button>
-          <Button variant='outlined' disabled>Default button mui outlined and disabled</Button>
-          <Button variant='outlined' disabled startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}>
+          <Button variant='outlined' disabled>
+            Default button mui outlined and disabled
+          </Button>
+          <Button
+            variant='outlined'
+            disabled
+            startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}
+          >
             Default button mui outlined and disabled
           </Button>
           <RubiwinSquareButton
@@ -746,7 +779,15 @@ const RubiWinShowCase = () => {
           {testRedenderTwo()}
         </Select>
 
-        <div style={{ border: '1px solid #00C3FF', display: 'grid', placeItems: 'center', width: '100%', gap: '1em' }}>
+        <div
+          style={{
+            border: '1px solid #00C3FF',
+            display: 'grid',
+            placeItems: 'center',
+            width: '100%',
+            gap: '1em'
+          }}
+        >
           <h2>- ICONS -</h2>
           <div
             style={{
@@ -1170,6 +1211,8 @@ const ShipperShowCase = () => {
           <Chip color='primary' label='Label' />
           <Chip color='secondary' label='Label' />
           <Chip color='primary' label='Label' disabled />
+          <Chip variant='defaultGrey' label='defaultGrey' />
+
           <Pagination count={69} color='primary' />
           <div style={{ width: '400px', marginLeft: '50px' }}>
             <ShipperRangeSlider
