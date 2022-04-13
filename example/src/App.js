@@ -11,6 +11,7 @@ import {
   RubiwinBackButton,
   AmazonTimePicker,
   RubiwinDateTimePicker,
+  RubiwinTimePicker,
   RubiwinActionIcon,
   RubiwinAddIcon,
   RubiwinAdrIcon,
@@ -683,6 +684,19 @@ const RubiWinShowCase = () => {
               onChange={(date) => setDate(date)}
               value={date}
               label='DesktopDatePicker with label'
+            />
+          </LocalizationProvider>
+          <LocalizationProvider dateAdapter={AdapterMoment}>
+            <RubiwinTimePicker
+              onChange={(time) => setTime(time)}
+              value={time}
+            />
+          </LocalizationProvider>
+          <LocalizationProvider dateAdapter={AdapterMoment}>
+            <RubiwinTimePicker
+              onChange={(time) => setTime(time)}
+              value={time}
+              label='TimePicker with label'
             />
           </LocalizationProvider>
         </div>
