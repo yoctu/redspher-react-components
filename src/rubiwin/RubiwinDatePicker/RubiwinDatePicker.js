@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { TextField } from '@mui/material'
 import { DesktopDatePicker } from '@mui/lab'
+
 import DatePickerIcon from '../../icons/Rubiwin/DatePickerIcon'
 
 const RubiwinDatePicker = ({
@@ -39,16 +40,20 @@ const RubiwinDatePicker = ({
       components={{
         OpenPickerIcon: DatePickerIcon
       }}
-      sx={{
-        height: 'auto',
-        minHeight: '1.4375em'
-      }}
       OpenPickerButtonProps={{
         sx: {
           p: 0,
           mr: 0,
           '&:hover': {
             backgroundColor: 'transparent'
+          }
+        }
+      }}
+      InputProps={{
+        sx: {
+          input: {
+            height: 'auto',
+            minHeight: '1.4375em'
           }
         }
       }}
@@ -67,7 +72,7 @@ RubiwinDatePicker.propTypes = {
   open: PropTypes.bool,
   dateFormat: PropTypes.string,
   label: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   onChange: PropTypes.func
 }
 

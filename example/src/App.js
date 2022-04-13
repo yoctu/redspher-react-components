@@ -677,6 +677,8 @@ const RubiWinShowCase = () => {
               onChange={(date) => setDate(date)}
               value={date}
             />
+          </LocalizationProvider>
+          <LocalizationProvider dateAdapter={AdapterMoment}>
             <RubiwinDatePicker
               onChange={(date) => setDate(date)}
               value={date}

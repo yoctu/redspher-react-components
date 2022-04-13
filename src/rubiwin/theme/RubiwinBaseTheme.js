@@ -432,6 +432,7 @@ const rubiwinBaseTheme = {
     MuiTab: {
       styleOverrides: {
         root: {
+          textTransform: 'none',
           ...typographies.caption
         }
       }
