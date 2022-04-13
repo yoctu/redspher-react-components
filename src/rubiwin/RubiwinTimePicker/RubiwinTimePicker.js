@@ -10,7 +10,8 @@ const RubiwinTimePicker = ({
   value,
   onChange,
   helperText,
-  error,
+  showErrors,
+  hasError,
   ...props
 }) => {
   return (
@@ -29,14 +30,16 @@ const RubiwinTimePicker = ({
       components={{
         OpenPickerIcon: TimerIcon
       }}
-      renderInput={(params) => (
-        <TextField
-          variant='standard'
-          helperText={helperText}
-          error={error}
-          {...params}
-        />
-      )}
+      renderInput={({ error, ...params }) => {
+        return (
+          <TextField
+            variant='standard'
+            helperText={helperText}
+            error={showErrors && (error || hasError)}
+            {...params}
+          />
+        )
+      }}
       OpenPickerButtonProps={{
         sx: {
           pointerEvents: 'none',
@@ -56,8 +59,9 @@ RubiwinTimePicker.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
-  error: PropTypes.bool,
-  helperText: PropTypes.node
+  helperText: PropTypes.node,
+  hasError: PropTypes.bool,
+  showErrors: PropTypes.bool
 }
 
 export default RubiwinTimePicker
