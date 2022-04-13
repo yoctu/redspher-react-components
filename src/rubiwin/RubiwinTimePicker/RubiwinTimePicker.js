@@ -5,7 +5,14 @@ import { TimePicker } from '@mui/lab'
 
 import TimerIcon from '../../icons/Rubiwin/TimerIcon'
 
-const RubiwinTimePicker = ({ label, value, onChange, ...props }) => {
+const RubiwinTimePicker = ({
+  label,
+  value,
+  onChange,
+  helperText,
+  error,
+  ...props
+}) => {
   return (
     <TimePicker
       label={label}
@@ -22,7 +29,14 @@ const RubiwinTimePicker = ({ label, value, onChange, ...props }) => {
       components={{
         OpenPickerIcon: TimerIcon
       }}
-      renderInput={(params) => <TextField variant='standard' {...params} />}
+      renderInput={(params) => (
+        <TextField
+          variant='standard'
+          helperText={helperText}
+          error={error}
+          {...params}
+        />
+      )}
       OpenPickerButtonProps={{
         sx: {
           pointerEvents: 'none',
@@ -41,7 +55,9 @@ const RubiwinTimePicker = ({ label, value, onChange, ...props }) => {
 RubiwinTimePicker.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  error: PropTypes.bool,
+  helperText: PropTypes.node
 }
 
 export default RubiwinTimePicker
