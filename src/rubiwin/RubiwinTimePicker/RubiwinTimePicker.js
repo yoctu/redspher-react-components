@@ -12,6 +12,7 @@ const RubiwinTimePicker = ({
   helperText,
   showErrors,
   hasError,
+  id,
   ...props
 }) => {
   return (
@@ -36,6 +37,7 @@ const RubiwinTimePicker = ({
             variant='standard'
             helperText={helperText}
             error={showErrors && (error || hasError)}
+            id={id}
             {...params}
           />
         )

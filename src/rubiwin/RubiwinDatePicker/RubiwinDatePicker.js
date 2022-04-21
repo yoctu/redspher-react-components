@@ -11,6 +11,7 @@ const RubiwinDatePicker = ({
   label,
   value,
   onChange,
+  id,
   ...props
 }) => {
   const [openLocal, setOpen] = useState(open)
@@ -27,6 +28,7 @@ const RubiwinDatePicker = ({
         <TextField
           variant='standard'
           onClick={() => setOpen(true)}
+          id={id}
           {...props}
         />
       )}
