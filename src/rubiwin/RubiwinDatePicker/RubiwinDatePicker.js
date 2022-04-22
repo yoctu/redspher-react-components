@@ -32,13 +32,6 @@ const RubiwinDatePicker = ({
           {...props}
         />
       )}
-      PaperProps={{
-        sx: {
-          mt: '15px',
-          borderRadius: '6px',
-          boxShadow: '6px 6px 18px 2px rgba(0, 0, 0, 0.08)'
-        }
-      }}
       components={{
         OpenPickerIcon: DatePickerIcon
       }}

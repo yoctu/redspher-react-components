@@ -192,6 +192,9 @@ const rubiwinBaseTheme = {
           '&> *:first-child': {
             fontSize: '25px'
           }
+        },
+        outlinedPrimary: {
+          color: themeConstants.grey.main
         }
       }
     },
@@ -342,7 +345,9 @@ const rubiwinBaseTheme = {
     MuiPaper: {
       styleOverrides: {
         root: {
-          boxShadow: 'none'
+          boxShadow: '6px 6px 18px 2px rgba(0, 0, 0, 0.08)',
+          borderRadius: '6px',
+          marginTop: '10px'
         }
       }
     },
@@ -359,11 +364,6 @@ const rubiwinBaseTheme = {
           '& .MuiSvgIcon-root path': {
             stroke: themeConstants.primary.main
           }
-        },
-        paper: {
-          boxShadow: '6px 6px 18px 2px rgba(0, 0, 0, 0.08)',
-          borderRadius: '6px',
-          marginTop: '10px'
         },
         listbox: {
           '& .MuiAutocomplete-option[aria-selected="true"]': {
@@ -433,7 +433,7 @@ const rubiwinBaseTheme = {
       styleOverrides: {
         root: {
           textTransform: 'none',
-          ...typographies.caption
+          ...typographies.body2
         }
       }
     },
