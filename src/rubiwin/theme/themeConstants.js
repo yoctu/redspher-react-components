@@ -42,6 +42,7 @@ export const colors = {
 
 export const constants = {
   ...colors,
+  spacing: 8,
   breakpoints: {
     lg: 1280,
     md: 960,
