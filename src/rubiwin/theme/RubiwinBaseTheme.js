@@ -313,6 +313,15 @@ const rubiwinBaseTheme = {
         }
       }
     },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          '&:not(.Mui-focused)&:not(.MuiFormLabel-filled)': {
+            width: 'calc(100% - 1.5rem)'
+          }
+        }
+      }
+    },
     MuiChip: {
       styleOverrides: {
         colorPrimary: {
@@ -369,6 +378,11 @@ const rubiwinBaseTheme = {
           '& .MuiAutocomplete-option[aria-selected="true"]': {
             backgroundColor: 'transparent'
           }
+        },
+        popupIndicator: {
+          '&:hover': {
+            backgroundColor: 'transparent'
+          }
         }
       }
     },
@@ -376,11 +390,12 @@ const rubiwinBaseTheme = {
       styleOverrides: {
         root: {
           '& > div:first-of-type': {
-            paddingTop: 14,
-            paddingBottom: 14,
+            paddingTop: 12,
+            paddingBottom: 12,
             margin: 0,
             backgroundColor: themeConstants.grey.main,
             borderRadius: '6px 6px 0 0',
+            maxHeight: 'inherit',
             '& .MuiButtonBase-root': {
               color: themeConstants.white.main
             },
@@ -441,6 +456,47 @@ const rubiwinBaseTheme = {
       styleOverrides: {
         root: {
           padding: '15px 50px'
+        }
+      }
+    },
+    MuiAccordion: {
+      styleOverrides: {
+        root: {
+          marginTop: 0,
+          boxShadow: 'none',
+          '&:before': {
+            display: 'none'
+          },
+          '&.Mui-expanded': {
+            mb: 0
+          },
+          '&:first-of-type, &:last-of-type': {
+            borderRadius: 0
+          }
+        }
+      }
+    },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          paddingLeft: themeConstants.spacing * 6,
+          paddingRight: themeConstants.spacing * 6,
+          '&.Mui-expanded': {
+            minHeight: 48
+          },
+          '& .MuiAccordionSummary-content.Mui-expanded': {
+            my: themeConstants.spacing * 1.5
+          }
+        }
+      }
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: {
+          paddingLeft: themeConstants.spacing * 6,
+          paddingRight: themeConstants.spacing * 6,
+          paddingTop: 0,
+          paddingBottom: 0
         }
       }
     }

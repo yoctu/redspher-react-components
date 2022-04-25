@@ -173,13 +173,13 @@ import {
   RubiwinSelect,
   RubiwinAutocomplete,
   RubiwinPagination,
-  RubiwinDatePicker
+  RubiwinDatePicker,
+  rubiwinBaseTheme
 } from 'redspher-components'
 import {
   Button,
   MenuItem,
   Radio,
-  Select,
   Chip,
   Grid,
   FormControl,
@@ -197,7 +197,12 @@ import {
   TableHead,
   TableBody,
   InputAdornment,
-  Tab
+  Tab,
+  CssBaseline,
+  TextField,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails
 } from '@mui/material'
 import {
   Pagination,
@@ -214,7 +219,6 @@ const RubiWinShowCase = () => {
   const [selectedDate, handleDateChange] = useState(
     new Date('2020-10-05T00:00:00.000Z')
   )
-  const [selected, setSelected] = useState([10])
 
   const handleChange = () => {
     setChecked(!checked)
@@ -377,6 +381,7 @@ const RubiWinShowCase = () => {
       <h1>--------- RUBIWIN COMPONENTS ---------</h1>
 
       <RubiwinThemeProvider>
+        <CssBaseline />
         <div
           style={{
             border: '1px solid #00C3FF',
@@ -571,6 +576,9 @@ const RubiWinShowCase = () => {
         >
           <h2>- FORMS -</h2>
 
+          <TextField label="Simple input" variant="standard" sx={{ width: '250px' }} />
+          <TextField label="Simple input with label extra longgggggggggggggg" variant="standard" sx={{ width: '250px' }} />
+
           <FormControl variant='standard' sx={{ width: '250px' }}>
             <InputLabel>Select option</InputLabel>
             <RubiwinSelect label='Select option'>
@@ -708,6 +716,67 @@ const RubiWinShowCase = () => {
               hasError
             />
           </LocalizationProvider>
+
+          <AmazonTimePicker
+            value={time}
+            onClick={(event) => event.target.focus()}
+            onChange={(value) => setTime(value)}
+          />
+          <RubiwinDateTimePicker
+            value={selectedDate}
+            onChange={handleDateChange}
+            className='test'
+            label="Datetime picker"
+            minDate={new Date('2020-10-05T00:00:00.000Z')}
+            maxDate={'10/10/2020'}
+          />
+        </div>
+
+        <div
+          style={{
+            border: '1px solid #00C3FF',
+            display: 'grid',
+            placeItems: 'center',
+            width: '100%',
+            gap: '1em'
+          }}
+        >
+          <h2>- ACCORDION -</h2>
+
+          <Accordion
+            sx={{
+              width: 500
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<RubiwinCaretBottomIcon />}
+            >
+              <Typography variant="captionbold" align="left">
+                Accordion 1
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquam animi commodi, cupiditate distinctio doloribus ea, esse et iste laboriosam maxime obcaecati officiis pariatur, quasi qui ratione recusandae tenetur?</div>
+              <div>Ad, adipisci error excepturi fugit in maiores nesciunt quaerat quisquam, quos ratione repellat repellendus sit, tempore vitae voluptatem. Consectetur doloribus enim mollitia neque odio optio praesentium quibusdam temporibus ullam veniam!</div>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            sx={{
+              width: 500
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<RubiwinCaretBottomIcon />}
+            >
+              <Typography variant="captionbold" align="left">
+                Accordion 2
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aperiam atque beatae commodi dolorem dolorum eius illum molestias, omnis perspiciatis, quae quis quo recusandae sunt tenetur vel. Consectetur, quia.</div>
+              <div>Blanditiis, doloremque expedita harum inventore, maxime modi mollitia quia quidem repellat tempora temporibus veniam voluptatum. Ab accusamus aliquam cumque deleniti facilis impedit inventore ipsum nihil optio, praesentium, quae soluta voluptate.</div>
+            </AccordionDetails>
+          </Accordion>
         </div>
 
         <div
@@ -781,28 +850,6 @@ const RubiWinShowCase = () => {
           />
           <RubiwinBackButton text='back' onClick={sayHello} />
         </div>
-
-        <AmazonTimePicker
-          value={time}
-          onClick={(event) => event.target.focus()}
-          onChange={(value) => setTime(value)}
-        />
-        <RubiwinDateTimePicker
-          value={selectedDate}
-          onChange={handleDateChange}
-          className='test'
-          label='test label'
-          minDate={new Date('2020-10-05T00:00:00.000Z')}
-          maxDate={'10/10/2020'}
-        />
-        <Select
-          value={selected}
-          onChange={(event) => setSelected(event.target.value)}
-          multiple
-          variant='outlined'
-        >
-          {testRedenderTwo()}
-        </Select>
 
         <div
           style={{
