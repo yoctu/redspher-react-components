@@ -5,8 +5,6 @@ import {
   RubiwinCheckbox,
   RubiwinRadio,
   RubiwinFormLabel,
-  RubiwinInputField,
-  RubiwinInputLabel,
   RubiwinSquareButton,
   RubiwinBackButton,
   AmazonTimePicker,
@@ -173,8 +171,7 @@ import {
   RubiwinSelect,
   RubiwinAutocomplete,
   RubiwinPagination,
-  RubiwinDatePicker,
-  rubiwinBaseTheme
+  RubiwinDatePicker
 } from 'redspher-components'
 import {
   Button,
@@ -222,13 +219,6 @@ const RubiWinShowCase = () => {
 
   const handleChange = () => {
     setChecked(!checked)
-  }
-  const testProps = {
-    className: 'test',
-    id: 'id',
-    name: 'name',
-    onChange: () => {},
-    placeholder: 'placeholder'
   }
 
   const sayHello = () => {
@@ -377,11 +367,12 @@ const RubiWinShowCase = () => {
   }
 
   return (
-    <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
-      <h1>--------- RUBIWIN COMPONENTS ---------</h1>
+    <RubiwinThemeProvider>
+      <CssBaseline />
 
-      <RubiwinThemeProvider>
-        <CssBaseline />
+      <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
+        <h1>--------- RUBIWIN COMPONENTS ---------</h1>
+
         <div
           style={{
             border: '1px solid #00C3FF',
@@ -438,8 +429,8 @@ const RubiWinShowCase = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {[...Array(4)].map(() => (
-                  <TableRow>
+                {[...Array(4)].map((_, index) => (
+                  <TableRow key={index}>
                     <TableCell>Body 1</TableCell>
                     <TableCell>Body 2</TableCell>
                     <TableCell>Body 3</TableCell>
@@ -467,8 +458,8 @@ const RubiWinShowCase = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {[...Array(4)].map(() => (
-                  <TableRow>
+                {[...Array(4)].map((_, index) => (
+                  <TableRow key={index}>
                     <TableCell>Body 1</TableCell>
                     <TableCell>Body 2</TableCell>
                     <TableCell>Body 3</TableCell>
@@ -501,8 +492,8 @@ const RubiWinShowCase = () => {
                     (page - 1) * rowsPerPage,
                     (page - 1) * rowsPerPage + rowsPerPage
                   )
-                  .map((row) => (
-                    <TableRow>
+                  .map((row, index) => (
+                    <TableRow key={index}>
                       <TableCell>Body 1 - Row {row}</TableCell>
                       <TableCell>Body 2 - Row {row}</TableCell>
                       <TableCell>Body 3 - Row {row}</TableCell>
@@ -530,11 +521,6 @@ const RubiWinShowCase = () => {
             </Grid>
           </Grid>
         </div>
-
-        <RubiwinInputField {...testProps} />
-        <RubiwinInputField {...testProps} disabled />
-        <RubiwinInputLabel htmlFor='test'>tests 2</RubiwinInputLabel>
-        <RubiwinInputField id='test' />
 
         <div
           style={{
@@ -686,28 +672,24 @@ const RubiWinShowCase = () => {
               onChange={(date) => setDate(date)}
               value={date}
             />
-          </LocalizationProvider>
-          <LocalizationProvider dateAdapter={AdapterMoment}>
+
             <RubiwinDatePicker
               onChange={(date) => setDate(date)}
               value={date}
               label='DesktopDatePicker with label'
             />
-          </LocalizationProvider>
-          <LocalizationProvider dateAdapter={AdapterMoment}>
+
             <RubiwinTimePicker
               onChange={(time) => setTime(time)}
               value={time}
             />
-          </LocalizationProvider>
-          <LocalizationProvider dateAdapter={AdapterMoment}>
+
             <RubiwinTimePicker
               onChange={(time) => setTime(time)}
               value={time}
               label='TimePicker with label'
             />
-          </LocalizationProvider>
-          <LocalizationProvider dateAdapter={AdapterMoment}>
+
             <RubiwinTimePicker
               onChange={(time) => setTime(time)}
               value={time}
@@ -963,8 +945,8 @@ const RubiWinShowCase = () => {
             Bid on it !
           </Button>
         </E4pThemeProvider>
-      </RubiwinThemeProvider>
-    </div>
+      </div>
+    </RubiwinThemeProvider>
   )
 }
 
@@ -1097,10 +1079,10 @@ const ShipperShowCase = () => {
   const open = Boolean(anchorEl)
 
   return (
-    <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
-      <h1>--------- SHIPPER COMPONENTS ---------</h1>
+    <ShipperThemeProvider>
+      <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
+        <h1>--------- SHIPPER COMPONENTS ---------</h1>
 
-      <ShipperThemeProvider>
         <section
           style={{
             display: 'grid',
@@ -1833,24 +1815,16 @@ const ShipperShowCase = () => {
         <br />
         <br />
         <br />
-      </ShipperThemeProvider>
-    </div>
+      </div>
+    </ShipperThemeProvider>
   )
-}
-
-const testRedenderTwo = () => {
-  const items = []
-  for (let i = 0; i < 30; i++) {
-    items.push(<MenuItem value={i}>{i}</MenuItem>)
-  }
-  return items
 }
 
 const App = () => {
   return (
     // See: https://github.com/mui-org/material-ui/issues/15914
     //      https://stackoverflow.com/a/67555923/6595024
-    <ThemeProvider>
+    <ThemeProvider theme={{}}>
       <RubiWinShowCase />
       <ShipperShowCase />
     </ThemeProvider>
