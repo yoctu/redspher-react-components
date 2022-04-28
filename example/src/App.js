@@ -171,6 +171,7 @@ import {
   RubiwinSelect,
   RubiwinAutocomplete,
   NotificationIcon,
+  NewNotificationIcon,
   RubiwinPagination,
   RubiwinDatePicker
 } from 'redspher-components'
@@ -1243,6 +1244,7 @@ const ShipperShowCase = () => {
           <PrintIcon title='PrintIcon' />
           <ApprovalFlowIcon title='ApprovalFlowIcon' />
           <NotificationIcon title='NotificationIcon' />
+          <NewNotificationIcon title='NewNotificationIcon' />
         </section>
         <section
           style={{
