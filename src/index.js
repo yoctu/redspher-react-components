@@ -159,6 +159,7 @@ import ArrowLeftIcon from './icons/Shipper/ArrowLeftIcon'
 import ArrowRightIcon from './icons/Shipper/ArrowRightIcon'
 import ArrowTopIcon from './icons/Shipper/ArrowTopIcon'
 import ArrowBottomIcon from './icons/Shipper/ArrowBottomIcon'
+import NotificationIcon from './icons/Shipper/NotificationIcon'
 import AddStepsIcon from './icons/Shipper/AddStepsIcon'
 import PeopleGroupIcon from './icons/Shipper/PeopleGroupIcon'
 import CheckIcon from './icons/Shipper/CheckIcon'
@@ -334,6 +335,7 @@ export {
   BurgerIcon,
   BurgerCloseIcon,
   StarIcon,
+  NotificationIcon,
   TimerIcon,
   NotIncludedIcon,
   VisibilityIcon,
