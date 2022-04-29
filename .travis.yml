@@ -5,6 +5,9 @@ node_js:
 script:
   - npm run test
 
+before_install:
+  - npm install -g npm@8.7.0
+
 before_deploy:
   - npm run build
   - npm run predeploy
