@@ -38,6 +38,7 @@ exports[`is multiple 1`] = `
   >
     <path
       d="M15.6569 7.65685L10 13.3137L4.34315 7.65685"
+      fillOpacity={0}
       stroke="#171F46"
     />
   </svg>
@@ -99,6 +100,7 @@ exports[`renders correctly props object 1`] = `
   >
     <path
       d="M15.6569 7.65685L10 13.3137L4.34315 7.65685"
+      fillOpacity={0}
       stroke="#171F46"
     />
   </svg>
