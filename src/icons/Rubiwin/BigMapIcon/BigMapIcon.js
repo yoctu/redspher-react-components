@@ -8,6 +8,7 @@ function BigMapIcon({ primarycolor, ...props }) {
       <path
         d='M3 6.5V3H7.375M3 12.625V17H7.375M17 12.625V17H13.5M17 6.5V3H13.5'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

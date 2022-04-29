@@ -45,6 +45,7 @@ exports[`is checked 1`] = `
       fill="#00C3FF"
       height="10"
       rx="1"
+      strokeOpacity={0}
       width="10"
       x="3"
       y="3"

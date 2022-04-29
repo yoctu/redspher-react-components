@@ -8,6 +8,7 @@ function BurgerMenuIcon({ primarycolor, ...props }) {
       <path
         d='M2.49988 5L16.4999 5'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <line
         x1='2.5'
@@ -15,6 +16,7 @@ function BurgerMenuIcon({ primarycolor, ...props }) {
         x2='16.5'
         y2='10'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <line
         x1='2.5'
@@ -22,6 +24,7 @@ function BurgerMenuIcon({ primarycolor, ...props }) {
         x2='16.5'
         y2='15'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

@@ -7,6 +7,8 @@ import RubiwinCheckbox from '../RubiwinCheckbox'
 const RubiwinAutocomplete = ({
   label,
   options,
+  showErrors,
+  hasError,
   multiple = false,
   ...props
 }) => {
@@ -28,7 +30,12 @@ const RubiwinAutocomplete = ({
       disableClearable
       popupIcon={<RubiwinCaretBottomIcon />}
       renderInput={(params) => (
-        <TextField {...params} label={label} variant='standard' />
+        <TextField
+          {...params}
+          label={label}
+          variant='standard'
+          error={showErrors && hasError}
+        />
       )}
       getLimitTagsText={(more) => (
         <Typography variant='body2'>(+{more})</Typography>
@@ -54,7 +61,9 @@ const RubiwinAutocomplete = ({
 RubiwinAutocomplete.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   options: PropTypes.array,
-  multiple: PropTypes.bool
+  multiple: PropTypes.bool,
+  hasError: PropTypes.bool,
+  showErrors: PropTypes.bool
 }
 
 export default RubiwinAutocomplete

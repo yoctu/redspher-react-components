@@ -11,13 +11,19 @@ function PhoneIcon({ primarycolor, ...props }) {
         width='10'
         height='16'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
-      <path d='M5 15H15' stroke={primarycolor || themeConstants.grey.main} />
+      <path
+        d='M5 15H15'
+        stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
+      />
       <circle
         cx='10.0715'
         cy='16.2142'
         r='0.5'
         fill={primarycolor || themeConstants.grey.main}
+        strokeOpacity={0}
       />
     </SvgIcon>
   )

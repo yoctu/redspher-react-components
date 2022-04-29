@@ -266,10 +266,35 @@ const rubiwinBaseTheme = {
         text: {
           color: themeConstants.grey.main,
           '&.Mui-selected': {
-            color: themeConstants.white.main
+            color: themeConstants.white.main,
+            '&:hover, &:focus': {
+              color: themeConstants.white.main,
+              backgroundColor: themeConstants.primary.main
+            }
           },
           '&.Mui-disabled': {
             color: themeConstants.grey.light
+          },
+          '&:hover, &:focus': {
+            backgroundColor: `${themeConstants.primary.main}80`,
+            color: themeConstants.grey.main
+          }
+        }
+      }
+    },
+    MuiRadio: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: 'transparent',
+            '.MuiSvgIcon-root > rect:first-of-type': {
+              stroke: themeConstants.primary.main
+            }
+          },
+          'input:focus': {
+            '+ .MuiSvgIcon-root > rect:first-of-type': {
+              stroke: themeConstants.primary.main
+            }
           }
         }
       }
@@ -277,9 +302,16 @@ const rubiwinBaseTheme = {
     MuiCheckbox: {
       styleOverrides: {
         root: {
-          color: themeConstants.grey.light,
           '&:hover': {
-            backgroundColor: 'transparent'
+            backgroundColor: 'transparent',
+            '.MuiSvgIcon-root > rect:first-of-type': {
+              stroke: themeConstants.primary.main
+            }
+          },
+          'input:focus': {
+            '+ .MuiSvgIcon-root > rect:first-of-type': {
+              stroke: themeConstants.primary.main
+            }
           }
         }
       }
@@ -309,7 +341,27 @@ const rubiwinBaseTheme = {
     MuiFormLabel: {
       styleOverrides: {
         root: {
-          textTransform: 'capitalize'
+          textTransform: 'capitalize',
+          '&.Mui-focused': {
+            color: themeConstants.grey.main,
+            '+ .MuiInput-root:before': {
+              borderBottom: `1px solid ${themeConstants.primary.main}`
+            }
+          },
+          '&.Mui-error': {
+            color: themeConstants.grey.main,
+            '+ .MuiInput-root': {
+              '&:before': {
+                borderColor: themeConstants.error.main
+              },
+              '.MuiSvgIcon-root': {
+                '> *': {
+                  fill: themeConstants.error.main,
+                  stroke: themeConstants.error.main
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -348,7 +400,29 @@ const rubiwinBaseTheme = {
     },
     MuiInput: {
       styleOverrides: {
-        root: themeConstants.grey.main
+        root: {
+          color: themeConstants.grey.main,
+          '&:not(.Mui-disabled)': {
+            '&:hover, &.Mui-focused': {
+              '&:before': {
+                borderBottom: `1px solid ${themeConstants.primary.main}`
+              }
+            }
+          },
+          '&:before': {
+            borderColor: themeConstants.grey.main
+          },
+          '&:after': {
+            border: 'none'
+          },
+          '.MuiButtonBase-root': {
+            '&:hover, &:focus': {
+              path: {
+                fill: themeConstants.primary.main
+              }
+            }
+          }
+        }
       }
     },
     MuiPaper: {
@@ -364,6 +438,11 @@ const rubiwinBaseTheme = {
       styleOverrides: {
         iconStandard: {
           color: 'transparent'
+        },
+        select: {
+          '&:focus': {
+            backgroundColor: 'transparent'
+          }
         }
       }
     },
@@ -375,8 +454,14 @@ const rubiwinBaseTheme = {
           }
         },
         listbox: {
-          '& .MuiAutocomplete-option[aria-selected="true"]': {
-            backgroundColor: 'transparent'
+          '.MuiAutocomplete-option': {
+            '&:hover, &[aria-selected="true"], &.Mui-focused': {
+              backgroundColor: 'transparent',
+              color: themeConstants.primary.main,
+              '.MuiTypography-root': {
+                color: themeConstants.primary.main
+              }
+            }
           }
         },
         popupIndicator: {
@@ -448,7 +533,10 @@ const rubiwinBaseTheme = {
       styleOverrides: {
         root: {
           textTransform: 'none',
-          ...typographies.body2
+          ...typographies.body2,
+          '&:hover, &:focus': {
+            color: themeConstants.primary.main
+          }
         }
       }
     },
@@ -497,6 +585,46 @@ const rubiwinBaseTheme = {
           paddingRight: themeConstants.spacing * 6,
           paddingTop: 0,
           paddingBottom: 0
+        }
+      }
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&..Mui-selected': {
+            backgroundColor: 'transparent'
+          },
+          '&:hover, &:focus': {
+            backgroundColor: 'transparent',
+            color: themeConstants.primary.main,
+            '.MuiTypography-root': {
+              color: themeConstants.primary.main
+            }
+          }
+        }
+      }
+    },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        root: {
+          '&.Mui-error': {
+            '.MuiTypography-root': {
+              color: themeConstants.error.main
+            },
+            '.MuiCheckbox-root, .MuiRadio-root': {
+              '.MuiSvgIcon-root > rect:first-of-type': {
+                stroke: themeConstants.error.main
+              }
+            }
+          },
+          '&:hover': {
+            '.MuiCheckbox-root, .MuiRadio-root': {
+              backgroundColor: 'transparent',
+              '.MuiSvgIcon-root > rect:first-of-type': {
+                stroke: themeConstants.primary.main
+              }
+            }
+          }
         }
       }
     }
