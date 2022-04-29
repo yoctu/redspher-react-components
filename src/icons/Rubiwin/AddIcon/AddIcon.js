@@ -11,6 +11,7 @@ function AddIcon({ primarycolor, ...props }) {
         x2='16.5'
         y2='9.5'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <line
         x1='10.5'
@@ -18,6 +19,7 @@ function AddIcon({ primarycolor, ...props }) {
         x2='10.5'
         y2='16.5'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

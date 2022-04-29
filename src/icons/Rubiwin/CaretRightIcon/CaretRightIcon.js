@@ -8,6 +8,7 @@ function CaretRightIcon({ primarycolor, ...props }) {
       <path
         d='M7 4L13 10L7 16'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

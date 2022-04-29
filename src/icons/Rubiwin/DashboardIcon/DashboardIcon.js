@@ -11,6 +11,7 @@ function DashboardIcon({ primarycolor, ...props }) {
         width='16'
         height='12'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <rect
         x='9'
@@ -18,6 +19,7 @@ function DashboardIcon({ primarycolor, ...props }) {
         width='7'
         height='6'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <rect
         x='4'
@@ -25,6 +27,7 @@ function DashboardIcon({ primarycolor, ...props }) {
         width='3'
         height='6'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <line
         x1='2'
@@ -32,6 +35,7 @@ function DashboardIcon({ primarycolor, ...props }) {
         x2='18'
         y2='6.5'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

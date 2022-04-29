@@ -8,6 +8,7 @@ function CheckIcon({ primarycolor, ...props }) {
       <path
         d='M16 5L9.49999 14L5 10'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

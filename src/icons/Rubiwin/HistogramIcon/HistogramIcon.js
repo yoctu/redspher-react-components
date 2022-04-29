@@ -11,6 +11,7 @@ function HistogramIcon({ primarycolor, ...props }) {
         width='3'
         height='13'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <rect
         x='9'
@@ -18,6 +19,7 @@ function HistogramIcon({ primarycolor, ...props }) {
         width='3'
         height='5.41667'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <rect
         x='14'
@@ -25,6 +27,7 @@ function HistogramIcon({ primarycolor, ...props }) {
         width='3'
         height='8.66667'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

@@ -8,6 +8,7 @@ function HomeIcon({ primarycolor, ...props }) {
       <path
         d='M15 16H11.5V12.3152H8.54921V16H5V7.75292L10 4L15 7.75292V16Z'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

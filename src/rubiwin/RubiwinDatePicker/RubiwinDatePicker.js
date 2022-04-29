@@ -12,6 +12,8 @@ const RubiwinDatePicker = ({
   value,
   onChange,
   id,
+  showErrors,
+  hasError,
   ...props
 }) => {
   const [openLocal, setOpen] = useState(open)
@@ -24,11 +26,12 @@ const RubiwinDatePicker = ({
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
       onChange={onChange}
-      renderInput={(props) => (
+      renderInput={({ error, ...props }) => (
         <TextField
           variant='standard'
           onClick={() => setOpen(true)}
           id={id}
+          error={showErrors && (error || hasError)}
           {...props}
         />
       )}
@@ -68,7 +71,9 @@ RubiwinDatePicker.propTypes = {
   dateFormat: PropTypes.string,
   label: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  hasError: PropTypes.bool,
+  showErrors: PropTypes.bool
 }
 
 export default RubiwinDatePicker

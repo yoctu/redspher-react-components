@@ -566,6 +566,7 @@ const RubiWinShowCase = () => {
 
           <TextField label="Simple input" variant="standard" sx={{ width: '250px' }} />
           <TextField label="Simple input with label extra longgggggggggggggg" variant="standard" sx={{ width: '250px' }} />
+          <TextField label="Simple input with error" variant="standard" sx={{ width: '250px' }} error />
 
           <FormControl variant='standard' sx={{ width: '250px' }}>
             <InputLabel>Select option</InputLabel>
@@ -584,6 +585,18 @@ const RubiWinShowCase = () => {
               <MenuItem disabled sx={{ display: 'none' }}>
                 <Typography variant='body2'>-</Typography>
               </MenuItem>
+              <MenuItem value={0}>
+                <Typography variant='body2'>Option 1</Typography>
+              </MenuItem>
+              <MenuItem value={1}>
+                <Typography variant='body2'>Option 2</Typography>
+              </MenuItem>
+            </RubiwinSelect>
+          </FormControl>
+
+          <FormControl variant='standard' sx={{ width: '250px' }} error>
+            <InputLabel>Select error</InputLabel>
+            <RubiwinSelect label='Select error'>
               <MenuItem value={0}>
                 <Typography variant='body2'>Option 1</Typography>
               </MenuItem>
@@ -614,12 +627,29 @@ const RubiWinShowCase = () => {
             label='Multiple autocomplete with limit'
           />
 
+          <RubiwinAutocomplete
+            sx={{ width: '250px' }}
+            options={options}
+            label='Autocomplete error'
+            showErrors
+            hasError
+          />
+
           <RubiwinFormLabel
             control={<RubiwinRadio />}
             onChange={handleChange}
             checked={checked}
             name='rubiwin'
             label='Radio rubiwin'
+          />
+
+          <RubiwinFormLabel
+            control={<RubiwinRadio />}
+            onChange={handleChange}
+            checked={checked}
+            name='rubiwin'
+            label='Radio rubiwin error'
+            error
           />
 
           <RubiwinCheckbox
@@ -669,6 +699,15 @@ const RubiWinShowCase = () => {
             labelPlacement='end'
           />
 
+          <RubiwinFormLabel
+            control={<RubiwinCheckbox />}
+            onChange={handleChange}
+            checked={checked}
+            name='rubiwin'
+            label='Checkbox rubiwin error'
+            error
+          />
+
           <LocalizationProvider dateAdapter={AdapterMoment}>
             <RubiwinDatePicker
               onChange={(date) => setDate(date)}
@@ -679,6 +718,14 @@ const RubiWinShowCase = () => {
               onChange={(date) => setDate(date)}
               value={date}
               label='DesktopDatePicker with label'
+            />
+
+            <RubiwinDatePicker
+              onChange={(date) => setDate(date)}
+              value={date}
+              label='DesktopDatePicker with error'
+              showErrors
+              hasError
             />
 
             <RubiwinTimePicker

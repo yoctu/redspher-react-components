@@ -8,6 +8,7 @@ function CaretTopIcon({ primarycolor, ...props }) {
       <path
         d='M4.34315 13.3431L10 7.68629L15.6569 13.3431'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

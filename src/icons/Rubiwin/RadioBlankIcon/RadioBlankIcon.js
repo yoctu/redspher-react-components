@@ -12,6 +12,7 @@ function RadioBlankIcon({ primarycolor, ...props }) {
         height='14'
         rx='7'
         stroke={primarycolor || themeConstants.grey.light}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

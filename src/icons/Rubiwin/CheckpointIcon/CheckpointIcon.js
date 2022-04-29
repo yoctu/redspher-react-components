@@ -11,10 +11,12 @@ function CheckpointIcon({ primarycolor, ...props }) {
         x2='6.5'
         y2='17.5'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <path
         d='M6.5 4L15 4L13.5 6.5L15 9H6.5'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )
