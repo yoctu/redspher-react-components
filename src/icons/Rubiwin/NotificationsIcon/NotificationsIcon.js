@@ -2,7 +2,12 @@ import React from 'react'
 import { SvgIcon } from '@mui/material'
 import themeConstants from '../../../rubiwin/theme/themeConstants'
 
-function NotificationsIcon({ primarycolor, secondarycolor, tertiarycolor, ...props }) {
+function NotificationsIcon({
+  primarycolor,
+  secondarycolor,
+  tertiarycolor,
+  ...props
+}) {
   return (
     <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 20 20'>
       <path
