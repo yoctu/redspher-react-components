@@ -8,12 +8,6 @@ script:
 before_install:
   - npm i -g npm@8.7.0
 
-install:
-  - npm install
-
-cache:
-  npm: false
-
 before_deploy:
   - npm run predeploy
 
