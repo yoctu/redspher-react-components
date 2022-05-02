@@ -5,6 +5,12 @@ node_js:
 script:
   - npm run test
 
+install:
+  - npm install
+
+cache:
+  npm: false
+
 before_deploy:
   - npm run predeploy
 
