@@ -1075,7 +1075,7 @@ const ShipperShowCase = () => {
   ])
 
   const downloadAction = () => {
-    alert('Poney')
+    console.log('download')
   }
 
   const uploadDocument = () => {
