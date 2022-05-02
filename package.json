@@ -1,6 +1,6 @@
 {
   "name": "redspher-components",
-  "version": "1.8.5",
+  "version": "1.8.6",
   "description": "reusable components for redspher",
   "author": "Vincent Racelle",
   "license": "MIT",
@@ -20,18 +20,14 @@
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "npm ci && npm --prefix ./example ci && npm --prefix ./example run build",
+    "predeploy": "npm --prefix ./example install && npm --prefix ./example run build",
     "deploy": "gh-pages -d example/build"
   },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
   "devDependencies": {
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.3",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-standard": "^14.1.0",
@@ -50,7 +46,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^3.4.1",
-    "react-test-renderer": "^16.14.0"
+    "react-test-renderer": "^17.0.2"
   },
   "files": [
     "dist"
