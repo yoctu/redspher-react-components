@@ -1,6 +1,6 @@
 {
   "name": "redspher-components",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "description": "reusable components for redspher",
   "author": "Vincent Racelle",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "npm install --legacy-peer-deps && npm --prefix ./example install --legacy-peer-deps && npm --prefix ./example run build",
+    "predeploy": "npm ci && npm --prefix ./example ci && npm --prefix ./example run build",
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
