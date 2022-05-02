@@ -51,7 +51,7 @@ const RubiwinTimePicker = ({
             backgroundColor: 'transparent'
           }
         },
-        tabindex: -1
+        tabIndex: -1
       }}
       {...props}
     />

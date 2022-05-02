@@ -204,12 +204,7 @@ import {
   AccordionDetails,
   Pagination
 } from '@mui/material'
-import {
-  LocalizationProvider,
-  TabPanel,
-  TabList,
-  TabContext
-} from '@mui/lab'
+import { LocalizationProvider, TabPanel, TabList, TabContext } from '@mui/lab'
 import AdapterMoment from '@mui/lab/AdapterMoment'
 
 const RubiWinShowCase = () => {
@@ -564,9 +559,22 @@ const RubiWinShowCase = () => {
         >
           <h2>- FORMS -</h2>
 
-          <TextField label="Simple input" variant="standard" sx={{ width: '250px' }} />
-          <TextField label="Simple input with label extra longgggggggggggggg" variant="standard" sx={{ width: '250px' }} />
-          <TextField label="Simple input with error" variant="standard" sx={{ width: '250px' }} error />
+          <TextField
+            label='Simple input'
+            variant='standard'
+            sx={{ width: '250px' }}
+          />
+          <TextField
+            label='Simple input with label extra longgggggggggggggg'
+            variant='standard'
+            sx={{ width: '250px' }}
+          />
+          <TextField
+            label='Simple input with error'
+            variant='standard'
+            sx={{ width: '250px' }}
+            error
+          />
 
           <FormControl variant='standard' sx={{ width: '250px' }}>
             <InputLabel>Select option</InputLabel>
@@ -757,9 +765,9 @@ const RubiWinShowCase = () => {
             value={selectedDate}
             onChange={handleDateChange}
             className='test'
-            label="Datetime picker"
+            label='Datetime picker'
             minDate={new Date('2020-10-05T00:00:00.000Z')}
-            maxDate={'10/10/2020'}
+            maxDate='10/10/2020'
           />
         </div>
 
@@ -779,16 +787,24 @@ const RubiWinShowCase = () => {
               width: 500
             }}
           >
-            <AccordionSummary
-              expandIcon={<RubiwinCaretBottomIcon />}
-            >
-              <Typography variant="captionbold" align="left">
+            <AccordionSummary expandIcon={<RubiwinCaretBottomIcon />}>
+              <Typography variant='captionbold' align='left'>
                 Accordion 1
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquam animi commodi, cupiditate distinctio doloribus ea, esse et iste laboriosam maxime obcaecati officiis pariatur, quasi qui ratione recusandae tenetur?</div>
-              <div>Ad, adipisci error excepturi fugit in maiores nesciunt quaerat quisquam, quos ratione repellat repellendus sit, tempore vitae voluptatem. Consectetur doloribus enim mollitia neque odio optio praesentium quibusdam temporibus ullam veniam!</div>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus alias aliquam animi commodi, cupiditate distinctio
+                doloribus ea, esse et iste laboriosam maxime obcaecati officiis
+                pariatur, quasi qui ratione recusandae tenetur?
+              </div>
+              <div>
+                Ad, adipisci error excepturi fugit in maiores nesciunt quaerat
+                quisquam, quos ratione repellat repellendus sit, tempore vitae
+                voluptatem. Consectetur doloribus enim mollitia neque odio optio
+                praesentium quibusdam temporibus ullam veniam!
+              </div>
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -796,16 +812,24 @@ const RubiWinShowCase = () => {
               width: 500
             }}
           >
-            <AccordionSummary
-              expandIcon={<RubiwinCaretBottomIcon />}
-            >
-              <Typography variant="captionbold" align="left">
+            <AccordionSummary expandIcon={<RubiwinCaretBottomIcon />}>
+              <Typography variant='captionbold' align='left'>
                 Accordion 2
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aperiam atque beatae commodi dolorem dolorum eius illum molestias, omnis perspiciatis, quae quis quo recusandae sunt tenetur vel. Consectetur, quia.</div>
-              <div>Blanditiis, doloremque expedita harum inventore, maxime modi mollitia quia quidem repellat tempora temporibus veniam voluptatum. Ab accusamus aliquam cumque deleniti facilis impedit inventore ipsum nihil optio, praesentium, quae soluta voluptate.</div>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus ad aperiam atque beatae commodi dolorem dolorum eius
+                illum molestias, omnis perspiciatis, quae quis quo recusandae
+                sunt tenetur vel. Consectetur, quia.
+              </div>
+              <div>
+                Blanditiis, doloremque expedita harum inventore, maxime modi
+                mollitia quia quidem repellat tempora temporibus veniam
+                voluptatum. Ab accusamus aliquam cumque deleniti facilis impedit
+                inventore ipsum nihil optio, praesentium, quae soluta voluptate.
+              </div>
             </AccordionDetails>
           </Accordion>
         </div>
@@ -1020,12 +1044,12 @@ const ShipperShowCase = () => {
   const [selectedCarriers, setSelectedCarriers] = React.useState([])
   const [uploadStatus, setUploadStatus] = React.useState('')
   const [childrenStepper, setChildrenStepper] = useState([
-    <div>
+    <div key='step a'>
       <FormControl>
         <InputLabel htmlFor='input-test'>Label</InputLabel>
         <Input
           id='input-test'
-          type={'text'}
+          type='text'
           endAdornment={
             <InputAdornment position='end'>
               <PlusIcon />
@@ -1037,7 +1061,7 @@ const ShipperShowCase = () => {
         <InputLabel htmlFor='input-test'>Label</InputLabel>
         <Input
           id='input-test'
-          type={'text'}
+          type='text'
           endAdornment={
             <InputAdornment position='end'>
               <PlusIcon />
@@ -1046,8 +1070,8 @@ const ShipperShowCase = () => {
         />
       </FormControl>
     </div>,
-    <Typography>Step b</Typography>,
-    <Typography>Step c</Typography>
+    <Typography key='step b'>Step b</Typography>,
+    <Typography key='step c'>Step c</Typography>
   ])
 
   const downloadAction = () => {
@@ -1106,8 +1130,8 @@ const ShipperShowCase = () => {
   const removeStep = (index) => {
     if (index > -1) {
       setChildrenStepper([
-        <Typography>Step b</Typography>,
-        <Typography>Step c</Typography>
+        <Typography key='b'>Step b</Typography>,
+        <Typography key='c'>Step c</Typography>
       ])
     }
   }
@@ -1143,9 +1167,7 @@ const ShipperShowCase = () => {
             Shipper Button
           </Button>
           <Button
-            startIcon={
-              <PlusIcon primarycolor={'#fff'} secondarycolor={'#fff'} />
-            }
+            startIcon={<PlusIcon primarycolor='#fff' secondarycolor='#fff' />}
             color='primary'
             variant='contained'
           >
@@ -1172,8 +1194,8 @@ const ShipperShowCase = () => {
             }}
           >
             <Button
-              className={'logoutButton'}
-              startIcon={<DisconnectIcon primarycolor={'#fff'} />}
+              className='logoutButton'
+              startIcon={<DisconnectIcon primarycolor='#fff' />}
               variant='contained'
             >
               Shipper Button
@@ -1188,9 +1210,7 @@ const ShipperShowCase = () => {
             Shipper Button
           </Button>
           <Button
-            startIcon={
-              <PlusIcon primarycolor={'#fff'} secondarycolor={'#fff'} />
-            }
+            startIcon={<PlusIcon primarycolor='#fff' secondarycolor='#fff' />}
             color='primary'
             disabled
             variant='contained'
@@ -1325,7 +1345,7 @@ const ShipperShowCase = () => {
               max={max}
               rangeLabelFormat={rangeLabelFormat}
               shownLabelFormat={shownLabelFormat}
-              showLabel={true}
+              showLabel
             />
           </div>
           <div style={{ width: '400px', marginLeft: '50px' }}>
@@ -1551,8 +1571,8 @@ const ShipperShowCase = () => {
               disabled={false}
               selectedValue={selectedFeatures}
               setSelectedValue={setSelectedFeatures}
-              enableUnselect={true}
-              noInfoIcon={true}
+              enableUnselect
+              noInfoIcon
             />
           </Grid>
           <Grid item sm={1}>
@@ -1563,8 +1583,8 @@ const ShipperShowCase = () => {
               disabled={false}
               selectedValue={selectedFeatures}
               setSelectedValue={setSelectedFeatures}
-              enableUnselect={true}
-              noInfoIcon={true}
+              enableUnselect
+              noInfoIcon
             />
           </Grid>
           <Grid item sm={1}>
@@ -1575,8 +1595,8 @@ const ShipperShowCase = () => {
               disabled={false}
               selectedValue={selectedFeatures}
               setSelectedValue={setSelectedFeatures}
-              enableUnselect={true}
-              noInfoIcon={true}
+              enableUnselect
+              noInfoIcon
             />
           </Grid>
         </Grid>
@@ -1594,8 +1614,8 @@ const ShipperShowCase = () => {
               disabled={false}
               selectedValue={selectedCarriers}
               setSelectedValue={setSelectedCarriers}
-              enableUnselect={true}
-              noInfoIcon={true}
+              enableUnselect
+              noInfoIcon
             />
           </Grid>
           <Grid item sm={2}>
@@ -1611,8 +1631,8 @@ const ShipperShowCase = () => {
               disabled={false}
               selectedValue={selectedCarriers}
               setSelectedValue={setSelectedCarriers}
-              enableUnselect={true}
-              noInfoIcon={true}
+              enableUnselect
+              noInfoIcon
             />
           </Grid>
           <Grid item sm={2}>
@@ -1628,8 +1648,8 @@ const ShipperShowCase = () => {
               disabled={false}
               selectedValue={selectedCarriers}
               setSelectedValue={setSelectedCarriers}
-              enableUnselect={true}
-              noInfoIcon={true}
+              enableUnselect
+              noInfoIcon
             />
           </Grid>
         </Grid>
@@ -1665,14 +1685,14 @@ const ShipperShowCase = () => {
         >
           <FormControl>
             <InputLabel htmlFor='input-test'>Label</InputLabel>
-            <Input id='input-test' type={'text'} />
+            <Input id='input-test' type='text' />
           </FormControl>
           <br />
           <FormControl>
             <InputLabel htmlFor='input-test'>Label</InputLabel>
             <Input
               id='input-test'
-              type={'text'}
+              type='text'
               endAdornment={
                 <InputAdornment position='end'>
                   <PlusIcon />
@@ -1685,7 +1705,7 @@ const ShipperShowCase = () => {
             <InputLabel htmlFor='input-test'>Label</InputLabel>
             <Input
               id='input-test'
-              type={'text'}
+              type='text'
               aria-describedby='component-error-text'
             />
             <FormHelperText id='component-error-text'>
@@ -1697,7 +1717,7 @@ const ShipperShowCase = () => {
             <InputLabel htmlFor='input-test'>Label</InputLabel>
             <Input
               id='input-test'
-              type={'text'}
+              type='text'
               endAdornment={
                 <InputAdornment position='end'>
                   <PlusIcon />
@@ -1718,13 +1738,13 @@ const ShipperShowCase = () => {
             <InputLabel htmlFor='input-test'>Label</InputLabel>
             <Input
               id='input-test'
-              type={'text'}
+              type='text'
               aria-describedby='component-error-text'
             />
             <ShipperErrorPopover
               open={open}
               anchorEl={anchorEl}
-              text={'Error message'}
+              text='Error message'
               handlePopoverClose={handlePopoverClose}
             />
           </FormControl>
@@ -1732,14 +1752,14 @@ const ShipperShowCase = () => {
             <InputLabel htmlFor='input-test'>Label</InputLabel>
             <Input
               id='input-test'
-              type={'text'}
-              multiline={true}
+              type='text'
+              multiline
               aria-describedby='component-error-text'
             />
           </FormControl>
           <FormControl>
             <InputLabel htmlFor='select-test'>Select label</InputLabel>
-            <ShipperSelect label={'Select label'}>
+            <ShipperSelect label='Select label'>
               <MenuItem value={1}>
                 <Typography>One</Typography>
               </MenuItem>
@@ -1750,8 +1770,8 @@ const ShipperShowCase = () => {
           </FormControl>
 
           <ShipperPhoneNumber
-            label={'Phone number'}
-            helperText={'Not a number'}
+            label='Phone number'
+            helperText='Not a number'
             enableValidation
             inputProps={{
               className: 'contact-input',
@@ -1835,9 +1855,9 @@ const ShipperShowCase = () => {
         <br />
         <br />
         <ShipperRequestStepper
-          steppercolor={'#000'}
-          iconPrimaryColor={'#2986cc'}
-          iconSecondaryColor={'#f44336'}
+          steppercolor='#000'
+          iconPrimaryColor='#2986cc'
+          iconSecondaryColor='#f44336'
         />
         <br />
         <br />
