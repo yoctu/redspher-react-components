@@ -161,6 +161,7 @@ import ArrowTopIcon from './icons/Shipper/ArrowTopIcon'
 import ArrowBottomIcon from './icons/Shipper/ArrowBottomIcon'
 import NotificationIcon from './icons/Shipper/NotificationIcon'
 import NewNotificationIcon from './icons/Shipper/NewNotificationIcon'
+import GearIcon from './icons/Shipper/GearIcon'
 import AddStepsIcon from './icons/Shipper/AddStepsIcon'
 import PeopleGroupIcon from './icons/Shipper/PeopleGroupIcon'
 import CheckIcon from './icons/Shipper/CheckIcon'
@@ -340,6 +341,7 @@ export {
   NewNotificationIcon,
   TimerIcon,
   NotIncludedIcon,
+  GearIcon,
   VisibilityIcon,
   VisibilityNoneIcon,
   LoadingIcon,

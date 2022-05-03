@@ -135,6 +135,7 @@ import {
   ArrowBottomIcon,
   AddStepsIcon,
   PeopleGroupIcon,
+  GearIcon,
   CheckIcon,
   SideLoadIcon,
   TailLiftIcon,
@@ -1245,6 +1246,7 @@ const ShipperShowCase = () => {
           <ApprovalFlowIcon title='ApprovalFlowIcon' />
           <NotificationIcon title='NotificationIcon' />
           <NewNotificationIcon title='NewNotificationIcon' />
+          <GearIcon title='GearIcon' />
         </section>
         <section
           style={{
