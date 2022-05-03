@@ -12,7 +12,8 @@ const RubiwinFormLabel = ({
   onChange,
   value,
   inputRef,
-  className = ''
+  className = '',
+  ...props
 }) => {
   return (
     <FormControlLabel
@@ -25,6 +26,7 @@ const RubiwinFormLabel = ({
       value={value}
       inputRef={inputRef}
       className={`${className}`}
+      {...props}
     />
   )
 }

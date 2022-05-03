@@ -1,5 +1,5 @@
 import React from 'react'
-import { ToggleButton, ToggleButtonGroup } from '@mui/lab'
+import { ToggleButton, ToggleButtonGroup } from '@mui/material'
 
 export default function ShipperSwitch({
   firstValueTranslate,

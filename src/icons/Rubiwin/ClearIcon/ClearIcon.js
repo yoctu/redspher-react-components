@@ -11,6 +11,7 @@ function ClearIcon({ primarycolor, ...props }) {
         x2='5.70715'
         y2='14.8995'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <line
         x1='5.70711'
@@ -18,6 +19,7 @@ function ClearIcon({ primarycolor, ...props }) {
         x2='14.8995'
         y2='14.8995'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

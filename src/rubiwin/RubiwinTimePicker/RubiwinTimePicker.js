@@ -50,7 +50,8 @@ const RubiwinTimePicker = ({
           '&:hover': {
             backgroundColor: 'transparent'
           }
-        }
+        },
+        tabIndex: -1
       }}
       {...props}
     />

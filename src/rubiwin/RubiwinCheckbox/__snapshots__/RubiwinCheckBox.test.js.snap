@@ -33,6 +33,7 @@ exports[`is checked 1`] = `
     viewBox="0 0 16 16"
   >
     <rect
+      fillOpacity={0}
       height="14"
       rx="1"
       stroke="#8F8F8F"
@@ -44,6 +45,7 @@ exports[`is checked 1`] = `
       fill="#00C3FF"
       height="10"
       rx="1"
+      strokeOpacity={0}
       width="10"
       x="3"
       y="3"
@@ -89,6 +91,7 @@ exports[`is disabled 1`] = `
     viewBox="0 0 16 16"
   >
     <rect
+      fillOpacity={0}
       height="14"
       rx="1"
       stroke="#8F8F8F"
@@ -137,6 +140,7 @@ exports[`is small 1`] = `
     viewBox="0 0 16 16"
   >
     <rect
+      fillOpacity={0}
       height="14"
       rx="1"
       stroke="#8F8F8F"
@@ -188,6 +192,7 @@ exports[`renders correctly props object 1`] = `
     viewBox="0 0 16 16"
   >
     <rect
+      fillOpacity={0}
       height="14"
       rx="1"
       stroke="#8F8F8F"

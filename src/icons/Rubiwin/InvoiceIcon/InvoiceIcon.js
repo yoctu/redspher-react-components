@@ -11,6 +11,7 @@ function InvoiceIcon({ primarycolor, ...props }) {
         width='2'
         height='6'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <rect
         x='9'
@@ -18,6 +19,7 @@ function InvoiceIcon({ primarycolor, ...props }) {
         width='2'
         height='6'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <rect
         x='13'
@@ -25,14 +27,17 @@ function InvoiceIcon({ primarycolor, ...props }) {
         width='2'
         height='6'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <path
         d='M3.5 15H16.5V17H3.5V15Z'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <path
         d='M3 6L10 2L17 6H3Z'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )

@@ -12,6 +12,7 @@ function CheckboxIcon({ primarycolor, secondarycolor, ...props }) {
         height='14'
         rx='1'
         stroke={primarycolor || themeConstants.grey.light}
+        fillOpacity={0}
       />
       <rect
         x='3'
@@ -20,6 +21,7 @@ function CheckboxIcon({ primarycolor, secondarycolor, ...props }) {
         height='10'
         rx='1'
         fill={secondarycolor || themeConstants.primary.main}
+        strokeOpacity={0}
       />
     </SvgIcon>
   )

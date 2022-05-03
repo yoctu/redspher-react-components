@@ -10,10 +10,12 @@ function DetailIcon({ primarycolor, ...props }) {
         cy='8'
         r='5'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
       <path
         d='M7.8302 12.1313L4.64277 16.1113'
         stroke={primarycolor || themeConstants.grey.main}
+        fillOpacity={0}
       />
     </SvgIcon>
   )
