@@ -72,6 +72,7 @@ import RubiwinGearIcon from './icons/Rubiwin/GearIcon'
 import RubiwinGreenPassIcon from './icons/Rubiwin/GreenPassIcon'
 import RubiwinHistogramIcon from './icons/Rubiwin/HistogramIcon'
 import RubiwinHomeIcon from './icons/Rubiwin/HomeIcon'
+import RubiwinHorizontalActionIcon from './icons/Rubiwin/HorizontalActionIcon'
 import RubiwinIncoterms from './icons/Rubiwin/IncotermsIcon'
 import RubiwinInformationIcon from './icons/Rubiwin/InformationIcon'
 import RubiwinInformationFillIcon from './icons/Rubiwin/InformationFillIcon'
@@ -252,6 +253,7 @@ export {
   RubiwinGreenPassIcon,
   RubiwinHistogramIcon,
   RubiwinHomeIcon,
+  RubiwinHorizontalActionIcon,
   RubiwinIncoterms,
   RubiwinInformationIcon,
   RubiwinInformationFillIcon,

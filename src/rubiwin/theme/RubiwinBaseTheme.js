@@ -198,6 +198,18 @@ const rubiwinBaseTheme = {
         }
       }
     },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          '&:hover, &:focus': {
+            '.MuiSvgIcon-root > *': {
+              stroke: themeConstants.primary.main,
+              fill: themeConstants.primary.main
+            }
+          }
+        }
+      }
+    },
     MuiListItem: {
       styleOverrides: {
         root: {
@@ -391,7 +403,8 @@ const rubiwinBaseTheme = {
     MuiBackdrop: {
       styleOverrides: {
         root: {
-          backgroundColor: `${themeConstants.grey.lighter}D9`
+          backgroundColor: `${themeConstants.grey.lighter}D9`,
+          zIndex: 9999
         },
         invisible: {
           backgroundColor: 'transparent'
@@ -415,10 +428,22 @@ const rubiwinBaseTheme = {
           '&:after': {
             border: 'none'
           },
+          '&.Mui-disabled': {
+            color: themeConstants.grey.light,
+            '&:before': {
+              borderBottomStyle: 'solid',
+              borderColor: themeConstants.grey.light
+            },
+            'path, circle': {
+              fill: themeConstants.grey.light,
+              stroke: themeConstants.grey.light
+            }
+          },
           '.MuiButtonBase-root': {
             '&:hover, &:focus': {
-              path: {
-                fill: themeConstants.primary.main
+              'path, circle': {
+                fill: themeConstants.primary.main,
+                stroke: themeConstants.primary.main
               }
             }
           }
