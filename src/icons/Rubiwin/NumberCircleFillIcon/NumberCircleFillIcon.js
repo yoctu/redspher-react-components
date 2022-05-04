@@ -10,7 +10,7 @@ function NumberCircleFillIcon({ primarycolor, secondarycolor, ...props }) {
         cy='10'
         r='7'
         fill={primarycolor || themeConstants.grey.main}
-        fillOpacity={0}
+        strokeOpacity={0}
       />
       <path
         d='M10.9557 7V14H9.6557V8.09H8.1757V7H10.9557Z'

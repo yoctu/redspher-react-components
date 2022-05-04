@@ -154,7 +154,7 @@ const rubiwinBaseTheme = {
             color: themeConstants.grey.main,
             '&:hover': {
               backgroundColor: 'transparent',
-              color: themeConstants.primary.main
+              color: themeConstants.primary.hover
             }
           },
           '&.Mui-disabled': {
@@ -166,7 +166,7 @@ const rubiwinBaseTheme = {
             color: themeConstants.grey.light
           },
           '&:hover': {
-            backgroundColor: themeConstants.primary.main,
+            backgroundColor: themeConstants.primary.hover,
             color: themeConstants.white.main
           }
         },
@@ -198,6 +198,18 @@ const rubiwinBaseTheme = {
         }
       }
     },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          '&:hover, &:focus': {
+            '.MuiSvgIcon-root > *': {
+              stroke: themeConstants.primary.hover,
+              fill: themeConstants.primary.hover
+            }
+          }
+        }
+      }
+    },
     MuiListItem: {
       styleOverrides: {
         root: {
@@ -205,7 +217,7 @@ const rubiwinBaseTheme = {
             backgroundColor: themeConstants.primary.main,
             color: themeConstants.white.main,
             '&:hover': {
-              backgroundColor: themeConstants.primary.main + 'FF'
+              backgroundColor: themeConstants.primary.hover + 'FF'
             }
           }
         }
@@ -269,14 +281,14 @@ const rubiwinBaseTheme = {
             color: themeConstants.white.main,
             '&:hover, &:focus': {
               color: themeConstants.white.main,
-              backgroundColor: themeConstants.primary.main
+              backgroundColor: themeConstants.primary.hover
             }
           },
           '&.Mui-disabled': {
             color: themeConstants.grey.light
           },
           '&:hover, &:focus': {
-            backgroundColor: `${themeConstants.primary.main}80`,
+            backgroundColor: `${themeConstants.primary.hover}80`,
             color: themeConstants.grey.main
           }
         }
@@ -288,12 +300,12 @@ const rubiwinBaseTheme = {
           '&:hover': {
             backgroundColor: 'transparent',
             '.MuiSvgIcon-root > rect:first-of-type': {
-              stroke: themeConstants.primary.main
+              stroke: themeConstants.primary.hover
             }
           },
           'input:focus': {
             '+ .MuiSvgIcon-root > rect:first-of-type': {
-              stroke: themeConstants.primary.main
+              stroke: themeConstants.primary.hover
             }
           }
         }
@@ -305,12 +317,12 @@ const rubiwinBaseTheme = {
           '&:hover': {
             backgroundColor: 'transparent',
             '.MuiSvgIcon-root > rect:first-of-type': {
-              stroke: themeConstants.primary.main
+              stroke: themeConstants.primary.hover
             }
           },
           'input:focus': {
             '+ .MuiSvgIcon-root > rect:first-of-type': {
-              stroke: themeConstants.primary.main
+              stroke: themeConstants.primary.hover
             }
           }
         }
@@ -391,7 +403,8 @@ const rubiwinBaseTheme = {
     MuiBackdrop: {
       styleOverrides: {
         root: {
-          backgroundColor: `${themeConstants.grey.lighter}D9`
+          backgroundColor: `${themeConstants.grey.lighter}D9`,
+          zIndex: 9999
         },
         invisible: {
           backgroundColor: 'transparent'
@@ -405,7 +418,7 @@ const rubiwinBaseTheme = {
           '&:not(.Mui-disabled)': {
             '&:hover, &.Mui-focused': {
               '&:before': {
-                borderBottom: `1px solid ${themeConstants.primary.main}`
+                borderBottom: `1px solid ${themeConstants.primary.hover}`
               }
             }
           },
@@ -415,10 +428,22 @@ const rubiwinBaseTheme = {
           '&:after': {
             border: 'none'
           },
+          '&.Mui-disabled': {
+            color: themeConstants.grey.light,
+            '&:before': {
+              borderBottomStyle: 'solid',
+              borderColor: themeConstants.grey.light
+            },
+            'path, circle': {
+              fill: themeConstants.grey.light,
+              stroke: themeConstants.grey.light
+            }
+          },
           '.MuiButtonBase-root': {
             '&:hover, &:focus': {
-              path: {
-                fill: themeConstants.primary.main
+              'path, circle': {
+                fill: themeConstants.primary.hover,
+                stroke: themeConstants.primary.hover
               }
             }
           }
@@ -457,9 +482,9 @@ const rubiwinBaseTheme = {
           '.MuiAutocomplete-option': {
             '&:hover, &[aria-selected="true"], &.Mui-focused': {
               backgroundColor: 'transparent',
-              color: themeConstants.primary.main,
+              color: themeConstants.primary.hover,
               '.MuiTypography-root': {
-                color: themeConstants.primary.main
+                color: themeConstants.primary.hover
               }
             }
           }
@@ -504,14 +529,14 @@ const rubiwinBaseTheme = {
           '&.Mui-selected': {
             color: themeConstants.white.main,
             '&:hover': {
-              backgroundColor: themeConstants.primary.main
+              backgroundColor: themeConstants.primary.hover
             },
             '&:focus': {
-              backgroundColor: themeConstants.primary.main
+              backgroundColor: themeConstants.primary.hover
             }
           },
           '&:hover': {
-            backgroundColor: themeConstants.primary.light
+            backgroundColor: themeConstants.primary.hover
           }
         }
       }
@@ -535,7 +560,7 @@ const rubiwinBaseTheme = {
           textTransform: 'none',
           ...typographies.body2,
           '&:hover, &:focus': {
-            color: themeConstants.primary.main
+            color: themeConstants.primary.hover
           }
         }
       }
@@ -596,9 +621,9 @@ const rubiwinBaseTheme = {
           },
           '&:hover, &:focus': {
             backgroundColor: 'transparent',
-            color: themeConstants.primary.main,
+            color: themeConstants.primary.hover,
             '.MuiTypography-root': {
-              color: themeConstants.primary.main
+              color: themeConstants.primary.hover
             }
           }
         }
@@ -621,7 +646,7 @@ const rubiwinBaseTheme = {
             '.MuiCheckbox-root, .MuiRadio-root': {
               backgroundColor: 'transparent',
               '.MuiSvgIcon-root > rect:first-of-type': {
-                stroke: themeConstants.primary.main
+                stroke: themeConstants.primary.hover
               }
             }
           }
