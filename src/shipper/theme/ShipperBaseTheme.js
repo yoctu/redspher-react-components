@@ -476,6 +476,51 @@ const ShipperBaseTheme = {
         }
       }
     },
+    MuiSwitch: {
+      defaultProps: {
+        disableRipple: true
+      },
+      styleOverrides: {
+        root: {
+          padding: 8,
+          boxShadow: 'none',
+
+          '& .MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track': {
+            border: `1px solid ${colors.primary.main}`,
+            backgroundColor: colors.primary.main,
+            opacity: 1
+          },
+          '& .Mui-checked': {
+            '& .MuiSwitch-thumb': {
+              color: colors.white.main
+            },
+            '& .MuiSwitch-track': {
+              opacity: 1
+            }
+          },
+          '& .MuiSwitch-track': {
+            borderRadius: 22 / 2,
+            border: `1px solid ${colors.grey.dark}`,
+            backgroundColor: 'transparent',
+            '&:before, &:after': {
+              content: '""',
+              position: 'absolute',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              width: 16,
+              height: 16
+            }
+          },
+          '& .MuiSwitch-thumb': {
+            boxShadow: 'none',
+            width: 16,
+            height: 16,
+            margin: 2,
+            color: colors.primary.main
+          }
+        }
+      }
+    },
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true

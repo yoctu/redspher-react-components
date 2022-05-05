@@ -205,7 +205,8 @@ import {
   AccordionSummary,
   AccordionDetails,
   Pagination,
-  IconButton
+  IconButton,
+  Switch
 } from '@mui/material'
 import { LocalizationProvider, TabPanel, TabList, TabContext } from '@mui/lab'
 import AdapterMoment from '@mui/lab/AdapterMoment'
@@ -1903,6 +1904,11 @@ const ShipperShowCase = () => {
         <Typography variant='body2'>Body2 text</Typography>
         <Typography variant='caption'>Caption text</Typography>
         <Typography>Default no variant text</Typography>
+        <br />
+        <br />
+        <br />
+        <br />
+        <Switch disableRipple />
         <br />
         <br />
         <br />
