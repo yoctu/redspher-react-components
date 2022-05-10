@@ -152,7 +152,7 @@ const rubiwinBaseTheme = {
           padding: 0,
           '&.MuiButton-textPrimary': {
             color: themeConstants.grey.main,
-            '&:hover': {
+            '&:hover, &:focus': {
               backgroundColor: 'transparent',
               color: themeConstants.primary.hover
             }
@@ -165,14 +165,14 @@ const rubiwinBaseTheme = {
           '&.Mui-disabled': {
             color: themeConstants.grey.light
           },
-          '&:hover': {
+          '&:hover, &:focus': {
             backgroundColor: themeConstants.primary.hover,
             color: themeConstants.white.main
           }
         },
         contained: {
           boxShadow: 'none',
-          '&:hover': {
+          '&:hover, &:focus': {
             boxShadow: 'none',
             backgroundColor: themeConstants.primary.hover
           }
@@ -189,7 +189,7 @@ const rubiwinBaseTheme = {
           color: themeConstants.white.main
         },
         iconSizeLarge: {
-          '&> *:first-child': {
+          '& > *:first-child': {
             fontSize: '25px'
           }
         },
