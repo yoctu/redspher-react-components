@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Autocomplete, IconButton, TextField, Typography } from '@mui/material'
+
 import RubiwinCaretBottomIcon from '../../icons/Rubiwin/CaretBottomIcon'
-import { Autocomplete, TextField, Typography } from '@mui/material'
+import RubiwinClearIcon from '../../icons/Rubiwin/ClearIcon'
 import RubiwinCheckbox from '../RubiwinCheckbox'
+import rubiwinBaseTheme from '../theme/RubiwinBaseTheme'
 
 const RubiwinAutocomplete = ({
   label,
@@ -10,6 +13,7 @@ const RubiwinAutocomplete = ({
   showErrors,
   hasError,
   multiple = false,
+  withDelete = false,
   ...props
 }) => {
   const multipleProps = {}
@@ -48,7 +52,26 @@ const RubiwinAutocomplete = ({
             variant='body2'
           >
             {value.label}
-            {values.length - 1 !== index && ','}
+            {multiple && withDelete && (
+              <IconButton
+                sx={{
+                  p: 0,
+                  ml: 1,
+                  mr: 3,
+                  '&:hover': { backgroundColor: 'transparent' }
+                }}
+                onClick={getTagProps({ index }).onDelete}
+              >
+                <RubiwinClearIcon
+                  primarycolor={rubiwinBaseTheme.palette.error.main}
+                  sx={{
+                    width: 16,
+                    height: 16
+                  }}
+                />
+              </IconButton>
+            )}
+            {!withDelete && values.length - 1 !== index && ','}
           </Typography>
         ))
       }}
@@ -63,7 +86,8 @@ RubiwinAutocomplete.propTypes = {
   options: PropTypes.array,
   multiple: PropTypes.bool,
   hasError: PropTypes.bool,
-  showErrors: PropTypes.bool
+  showErrors: PropTypes.bool,
+  withDelete: PropTypes.bool
 }
 
 export default RubiwinAutocomplete

@@ -647,6 +647,18 @@ const RubiWinShowCase = () => {
             hasError
           />
 
+          <RubiwinAutocomplete
+            multiple
+            withDelete
+            sx={{ width: '250px' }}
+            options={options}
+            label='Autocomplete with delete'
+            onChange={(event, newValue) => {
+              console.log(event)
+              console.log(newValue)
+            }}
+          />
+
           <RubiwinFormLabel
             control={<RubiwinRadio />}
             onChange={handleChange}
