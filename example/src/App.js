@@ -61,6 +61,7 @@ import {
   RubiwinGreenPassIcon,
   RubiwinHistogramIcon,
   RubiwinHomeIcon,
+  RubiwinHorizontalActionIcon,
   RubiwinIncoterms,
   RubiwinInformationIcon,
   RubiwinInformationFillIcon,
@@ -220,7 +221,9 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Pagination
+  Pagination,
+  IconButton,
+  Switch
 } from '@mui/material'
 import { LocalizationProvider, TabPanel, TabList, TabContext } from '@mui/lab'
 import AdapterMoment from '@mui/lab/AdapterMoment'
@@ -661,6 +664,18 @@ const RubiWinShowCase = () => {
             hasError
           />
 
+          <RubiwinAutocomplete
+            multiple
+            withDelete
+            sx={{ width: '250px' }}
+            options={options}
+            label='Autocomplete with delete'
+            onChange={(event, newValue) => {
+              console.log(event)
+              console.log(newValue)
+            }}
+          />
+
           <RubiwinFormLabel
             control={<RubiwinRadio />}
             onChange={handleChange}
@@ -754,6 +769,12 @@ const RubiWinShowCase = () => {
               hasError
             />
 
+            <RubiwinDatePicker
+              onChange={(date) => setDate(date)}
+              value={date}
+              disabled
+            />
+
             <RubiwinTimePicker
               onChange={(time) => setTime(time)}
               value={time}
@@ -771,6 +792,12 @@ const RubiWinShowCase = () => {
               label='TimePicker with label and error'
               showErrors
               hasError
+            />
+
+            <RubiwinTimePicker
+              onChange={(time) => setTime(time)}
+              value={time}
+              disabled
             />
           </LocalizationProvider>
 
@@ -862,6 +889,10 @@ const RubiWinShowCase = () => {
           }}
         >
           <h2>- BUTTONS -</h2>
+
+          <IconButton>
+            <RubiwinCheckIcon primarycolor='#171F46' />
+          </IconButton>
 
           <RubiwinButton text='default RubiwinButton' onClick={sayHello} />
           <RubiwinButton text='default RubiwinButton disabled' disabled />
@@ -993,6 +1024,7 @@ const RubiWinShowCase = () => {
             <RubiwinGreenPassIcon />
             <RubiwinHistogramIcon />
             <RubiwinHomeIcon />
+            <RubiwinHorizontalActionIcon />
             <RubiwinIncoterms />
             <RubiwinInformationIcon />
             <RubiwinInformationFillIcon />
@@ -1918,6 +1950,11 @@ const ShipperShowCase = () => {
         <Typography variant='body2'>Body2 text</Typography>
         <Typography variant='caption'>Caption text</Typography>
         <Typography>Default no variant text</Typography>
+        <br />
+        <br />
+        <br />
+        <br />
+        <Switch disableRipple />
         <br />
         <br />
         <br />
