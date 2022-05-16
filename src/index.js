@@ -178,6 +178,23 @@ import NotIncludedIcon from './icons/Shipper/NotIncludedIcon'
 import VisibilityIcon from './icons/Shipper/VisibilityIcon'
 import VisibilityNoneIcon from './icons/Shipper/VisibilityNoneIcon'
 import LoadingIcon from './icons/Shipper/LoadingIcon'
+import DuplicateIcon from './icons/Shipper/DuplicateIcon'
+import ShipmentsOrderValidatedIcon from './icons/Shipper/ShipmentsOrderValidatedIcon'
+import ShipmentsPossibleDelayIcon from './icons/Shipper/ShipmentsPossibleDelayIcon'
+import ShipmentsArrivalPUIcon from './icons/Shipper/ShipmentsArrivalPUIcon'
+import ShipmentsOnGoingIcon from './icons/Shipper/ShipmentsOnGoingIcon'
+import ShipmentsLateForDEIcon from './icons/Shipper/ShipmentsLateForDEIcon'
+import ShipmentsArrivalOnDEIcon from './icons/Shipper/ShipmentsArrivalOnDEIcon'
+import ShipmentsDeliveredIcon from './icons/Shipper/ShipmentsDeliveredIcon'
+import InvoicesNewIcon from './icons/Shipper/InvoicesNewIcon'
+import InvoicesOverdueIcon from './icons/Shipper/InvoicesOverdueIcon'
+import InvoicesPayedIcon from './icons/Shipper/InvoicesPayedIcon'
+import ApprovalFlowValidationRequestedIcon from './icons/Shipper/ApprovalFlowValidationRequestedIcon'
+import ApprovalFlowValidationExpiredIcon from './icons/Shipper/ApprovalFlowValidationExpiredIcon'
+import QuotesNewQuoteIcon from './icons/Shipper/QuotesNewQuoteIcon'
+import QuotesNewOffersIcon from './icons/Shipper/QuotesNewOffersIcon'
+import QuotesSentValidationIcon from './icons/Shipper/QuotesSentValidationIcon'
+import StatisticsReportAvailableIcon from './icons/Shipper/StatisticsReportAvailableIcon'
 import WarningIcon from './icons/Shipper/WarningIcon'
 import People2Icon from './icons/Shipper/People2Icon'
 import ArrowLeft2Icon from './icons/Shipper/ArrowLeft2Icon'
@@ -347,6 +364,23 @@ export {
   VisibilityIcon,
   VisibilityNoneIcon,
   LoadingIcon,
+  DuplicateIcon,
+  ShipmentsOrderValidatedIcon,
+  ShipmentsPossibleDelayIcon,
+  ShipmentsArrivalPUIcon,
+  ShipmentsOnGoingIcon,
+  ShipmentsLateForDEIcon,
+  ShipmentsArrivalOnDEIcon,
+  ShipmentsDeliveredIcon,
+  InvoicesNewIcon,
+  InvoicesOverdueIcon,
+  InvoicesPayedIcon,
+  ApprovalFlowValidationRequestedIcon,
+  ApprovalFlowValidationExpiredIcon,
+  QuotesNewQuoteIcon,
+  QuotesNewOffersIcon,
+  QuotesSentValidationIcon,
+  StatisticsReportAvailableIcon,
   WarningIcon,
   People2Icon,
   ArrowLeft2Icon,
