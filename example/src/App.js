@@ -136,6 +136,23 @@ import {
   AddStepsIcon,
   PeopleGroupIcon,
   GearIcon,
+  DuplicateIcon,
+  ShipmentsOrderValidatedIcon,
+  ShipmentsPossibleDelayIcon,
+  ShipmentsArrivalPUIcon,
+  ShipmentsOnGoingIcon,
+  ShipmentsLateForDEIcon,
+  ShipmentsArrivalOnDEIcon,
+  ShipmentsDeliveredIcon,
+  InvoicesNewIcon,
+  InvoicesOverdueIcon,
+  InvoicesPayedIcon,
+  ApprovalFlowValidationExpiredIcon,
+  ApprovalFlowValidationRequestedIcon,
+  QuotesNewQuoteIcon,
+  QuotesNewOffersIcon,
+  QuotesSentValidationIcon,
+  StatisticsReportAvailableIcon,
   CheckIcon,
   SideLoadIcon,
   TailLiftIcon,
@@ -1314,6 +1331,23 @@ const ShipperShowCase = () => {
           <NotificationIcon title='NotificationIcon' />
           <NewNotificationIcon title='NewNotificationIcon' />
           <GearIcon title='GearIcon' />
+          <DuplicateIcon title='DuplicateIcon' />
+          <ShipmentsOrderValidatedIcon title='ShipmentsOrderValidatedIcon' />
+          <ShipmentsPossibleDelayIcon title='ShipmentsPossibleDelayIcon' />
+          <ShipmentsArrivalPUIcon title='ShipmentsArrivalPUIcon' />
+          <ShipmentsOnGoingIcon title='ShipmentsOnGoingIcon' />
+          <ShipmentsLateForDEIcon title='ShipmentsLateForDEIcon' />
+          <ShipmentsArrivalOnDEIcon title='ShipmentsArrivalOnDEIcon' />
+          <ShipmentsDeliveredIcon title='ShipmentsDeliveredIcon' />
+          <InvoicesNewIcon title='InvoicesNewIcon' />
+          <InvoicesOverdueIcon title='InvoicesOverdueIcon' />
+          <InvoicesPayedIcon title='InvoicesPayedIcon' />
+          <ApprovalFlowValidationRequestedIcon title='ApprovalFlowValidationRequestedIcon' />
+          <ApprovalFlowValidationExpiredIcon title='ApprovalFlowValidationExpiredIcon' />
+          <QuotesNewQuoteIcon title='QuotesNewQuoteIcon' />
+          <QuotesNewOffersIcon title='QuotesNewOffersIcon' />
+          <QuotesSentValidationIcon title='QuotesSentValidationIcon' />
+          <StatisticsReportAvailableIcon title='StatisticsReportAvailableIcon' />
         </section>
         <section
           style={{
