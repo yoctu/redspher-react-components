@@ -50,6 +50,7 @@ const RubiwinAutocomplete = ({
             key={`${value}-${index}`}
             {...getTagProps({ index })}
             variant='body2'
+            sx={{ display: 'flex', alignItems: 'center' }}
           >
             {value.label}
             {multiple && withDelete && (
