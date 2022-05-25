@@ -75,6 +75,7 @@ import {
   RubiwinPercentageIcon,
   RubiwinPhoneIcon,
   RubiwinPinMapIcon,
+  RubiwinPlaneIcon,
   RubiwinRadioIcon,
   RubiwinRadioBlankIcon,
   RubiwinRefreshIcon,
@@ -1038,6 +1039,7 @@ const RubiWinShowCase = () => {
             <RubiwinPercentageIcon />
             <RubiwinPhoneIcon />
             <RubiwinPinMapIcon />
+            <RubiwinPlaneIcon />
             <RubiwinRadioIcon />
             <RubiwinRadioBlankIcon />
             <RubiwinRefreshIcon />

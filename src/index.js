@@ -86,6 +86,7 @@ import RubiwinPeopleLockIcon from './icons/Rubiwin/PeopleLockIcon'
 import RubiwinPercentageIcon from './icons/Rubiwin/PercentageIcon'
 import RubiwinPhoneIcon from './icons/Rubiwin/PhoneIcon'
 import RubiwinPinMapIcon from './icons/Rubiwin/PinMapIcon'
+import RubiwinPlaneIcon from './icons/Rubiwin/PlaneIcon'
 import RubiwinRadioIcon from './icons/Rubiwin/RadioIcon'
 import RubiwinRadioBlankIcon from './icons/Rubiwin/RadioBlankIcon'
 import RubiwinRefreshIcon from './icons/Rubiwin/RefreshIcon'
@@ -284,6 +285,7 @@ export {
   RubiwinPercentageIcon,
   RubiwinPhoneIcon,
   RubiwinPinMapIcon,
+  RubiwinPlaneIcon,
   RubiwinRadioIcon,
   RubiwinRadioBlankIcon,
   RubiwinRefreshIcon,
