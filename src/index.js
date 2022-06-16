@@ -66,6 +66,7 @@ import RubiwinEditPeopleIcon from './icons/Rubiwin/EditPeopleIcon'
 import RubiwinEmailIcon from './icons/Rubiwin/EmailIcon'
 import RubiwinEuroIcon from './icons/Rubiwin/EuroIcon'
 import RubiwinFavorisIcon from './icons/Rubiwin/FavorisIcon'
+import RubiwinFavorisFillIcon from './icons/Rubiwin/FavorisFillIcon'
 import RubiwinFiltersIcon from './icons/Rubiwin/FiltersIcon'
 import RubiwinFormationIcon from './icons/Rubiwin/FormationIcon'
 import RubiwinGearIcon from './icons/Rubiwin/GearIcon'
@@ -265,6 +266,7 @@ export {
   RubiwinEmailIcon,
   RubiwinEuroIcon,
   RubiwinFavorisIcon,
+  RubiwinFavorisFillIcon,
   RubiwinFiltersIcon,
   RubiwinFormationIcon,
   RubiwinGearIcon,

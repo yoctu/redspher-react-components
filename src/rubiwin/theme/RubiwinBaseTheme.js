@@ -581,7 +581,8 @@ const rubiwinBaseTheme = {
             display: 'none'
           },
           '&.Mui-expanded': {
-            mb: 0
+            marginBottom: 0,
+            marginTop: 0
           },
           '&:first-of-type, &:last-of-type': {
             borderRadius: 0
