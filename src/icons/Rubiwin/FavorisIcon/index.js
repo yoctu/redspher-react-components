@@ -1,1 +1,1 @@
-export { default } from './FavorisFillIcon'
+export { default } from './FavorisIcon'
