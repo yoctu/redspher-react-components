@@ -28,6 +28,7 @@ const RubiwinDatePicker = ({
       onChange={onChange}
       renderInput={({ error, ...props }) => (
         <TextField
+          fullWidth
           variant='standard'
           onClick={() => setOpen(true)}
           id={id}
