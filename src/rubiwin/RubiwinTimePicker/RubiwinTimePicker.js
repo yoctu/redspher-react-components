@@ -34,6 +34,7 @@ const RubiwinTimePicker = ({
       renderInput={({ error, ...params }) => {
         return (
           <TextField
+            fullWidth
             variant='standard'
             helperText={helperText}
             error={showErrors && (error || hasError)}
