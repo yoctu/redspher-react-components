@@ -19,6 +19,7 @@ import InformationIcon from '../../icons/Shipper/InformationIcon'
 import DriverIcon from '../../icons/Shipper/DriverIcon'
 import TailLiftIcon from '../../icons/Shipper/TailLiftIcon'
 import SideLoadIcon from '../../icons/Shipper/SideLoadIcon'
+import WarningIcon from '../../icons/Shipper/WarningIcon'
 
 const ShipperCard = ({
   startIcon,
@@ -31,7 +32,9 @@ const ShipperCard = ({
   setSelectedValue,
   enableUnselect,
   tooltipValue,
-  noInfoIcon
+  noInfoIcon,
+  defaultVehicle = false,
+  tooltipDefaultValue
 }) => {
   const selectedValueIsArray = Array.isArray(selectedValue)
   const allowedIcons = new Map([
@@ -75,6 +78,7 @@ const ShipperCard = ({
   }
 
   const [open, setOpen] = useState(false)
+  const [openWarning, setOpenWarning] = useState(false)
 
   const handleTooltipClose = () => {
     setOpen(false)
@@ -82,6 +86,14 @@ const ShipperCard = ({
 
   const handleTooltipOpen = () => {
     setOpen(true)
+  }
+
+  const handleWarningClose = () => {
+    setOpenWarning(false)
+  }
+
+  const handleWarningOpen = () => {
+    setOpenWarning(true)
   }
 
   return (
@@ -182,6 +194,57 @@ const ShipperCard = ({
                         />
                       ) : (
                         <InformationIcon />
+                      )}
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+              )}
+              {defaultVehicle && (
+                <Grid item sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Tooltip
+                    title={
+                      <React.Fragment>{tooltipDefaultValue}</React.Fragment>
+                    }
+                    open={openWarning}
+                    onClose={handleWarningClose}
+                    onOpen={handleWarningOpen}
+                    PopperProps={{
+                      sx: {
+                        '.MuiTooltip-tooltip': {
+                          backgroundColor: '#FFFFFF',
+                          boxShadow: '2px 2px 8px rgba(0, 59, 129, 0.1)',
+                          borderRadius: 2
+                        }
+                      }
+                    }}
+                  >
+                    <IconButton
+                      sx={{
+                        backgroundColor: 'transparent',
+                        marginLeft: '5px',
+                        padding: 0,
+                        width: '16px',
+                        height: '16px',
+                        '&:hover': {
+                          backgroundColor: 'transparent'
+                        },
+                        '& svg': {
+                          width: '16px',
+                          height: '16px'
+                        }
+                      }}
+                      disableRipple
+                    >
+                      {openWarning ? (
+                        <WarningIcon
+                          primarycolor={themeConstants.primary.dark}
+                          secondarycolor={themeConstants.primary.dark}
+                        />
+                      ) : (
+                        <WarningIcon
+                          primarycolor={themeConstants.secondary.main}
+                          secondarycolor={themeConstants.secondary.main}
+                        />
                       )}
                     </IconButton>
                   </Tooltip>
