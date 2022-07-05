@@ -1583,6 +1583,18 @@ const ShipperShowCase = () => {
                   </Grid>
                 </Grid>
               }
+              defaultVehicle
+              tooltipDefaultValue={
+                <Typography
+                  style={{
+                    fontSize: 12,
+                    color: '#062440',
+                    lineHeight: '16px'
+                  }}
+                >
+                  Vehicule non configuré
+                </Typography>
+              }
             />
           </Grid>
           <Grid item sm={2}>
