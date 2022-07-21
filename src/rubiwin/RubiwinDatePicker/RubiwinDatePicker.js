@@ -77,7 +77,7 @@ RubiwinDatePicker.propTypes = {
   onChange: PropTypes.func,
   hasError: PropTypes.bool,
   showErrors: PropTypes.bool,
-  helperText: PropTypes.string,
+  helperText: PropTypes.string
 }
 
 export default RubiwinDatePicker
