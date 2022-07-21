@@ -11,7 +11,7 @@ function CheckboxBlankIcon({ primarycolor, ...props }) {
         width='14'
         height='14'
         rx='1'
-        stroke={primarycolor || themeConstants.grey.light}
+        stroke={`${primarycolor || themeConstants.grey.light}80`}
         fillOpacity={0}
       />
     </SvgIcon>

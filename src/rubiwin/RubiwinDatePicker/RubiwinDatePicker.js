@@ -14,6 +14,7 @@ const RubiwinDatePicker = ({
   id,
   showErrors,
   hasError,
+  helperText,
   ...props
 }) => {
   const [openLocal, setOpen] = useState(open)
@@ -33,6 +34,7 @@ const RubiwinDatePicker = ({
           onClick={() => setOpen(true)}
           id={id}
           error={showErrors && (error || hasError)}
+          helperText={helperText}
           {...props}
         />
       )}
@@ -74,7 +76,8 @@ RubiwinDatePicker.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   onChange: PropTypes.func,
   hasError: PropTypes.bool,
-  showErrors: PropTypes.bool
+  showErrors: PropTypes.bool,
+  helperText: PropTypes.string,
 }
 
 export default RubiwinDatePicker

@@ -583,6 +583,18 @@ const RubiWinShowCase = () => {
           <h2>- FORMS -</h2>
 
           <TextField
+            label='Simple input disabled'
+            variant='standard'
+            sx={{ width: '250px' }}
+            disabled
+          />
+          <TextField
+            label='Simple input filled'
+            variant='standard'
+            sx={{ width: '250px' }}
+            value='filled'
+          />
+          <TextField
             label='Simple input'
             variant='standard'
             sx={{ width: '250px' }}
