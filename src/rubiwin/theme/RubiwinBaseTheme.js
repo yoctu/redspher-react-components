@@ -300,12 +300,14 @@ const rubiwinBaseTheme = {
           '&:hover': {
             backgroundColor: 'transparent',
             '.MuiSvgIcon-root > rect:first-of-type': {
-              stroke: themeConstants.primary.hover
+              stroke: themeConstants.primary.hover,
+              opacity: 0.5
             }
           },
           'input:focus': {
             '+ .MuiSvgIcon-root > rect:first-of-type': {
-              stroke: themeConstants.primary.hover
+              stroke: themeConstants.primary.hover,
+              opacity: 0.5
             }
           }
         }
@@ -317,12 +319,14 @@ const rubiwinBaseTheme = {
           '&:hover': {
             backgroundColor: 'transparent',
             '.MuiSvgIcon-root > rect:first-of-type': {
-              stroke: themeConstants.primary.hover
+              stroke: themeConstants.primary.hover,
+              opacity: 0.5
             }
           },
           'input:focus': {
             '+ .MuiSvgIcon-root > rect:first-of-type': {
-              stroke: themeConstants.primary.hover
+              stroke: themeConstants.primary.hover,
+              opacity: 0.5
             }
           }
         }
@@ -357,14 +361,24 @@ const rubiwinBaseTheme = {
           '&.Mui-focused': {
             color: themeConstants.grey.main,
             '+ .MuiInput-root:before': {
-              borderBottom: `1px solid ${themeConstants.primary.main}`
+              borderBottom: `1px solid ${themeConstants.primary.main}`,
+              opacity: 0.5
+            }
+          },
+          '&.MuiFormLabel-filled': {
+            '+ .MuiInput-root:not(.Mui-disabled)': {
+              '&:before': {
+                borderBottom: `1px solid ${themeConstants.grey.main}`,
+                opacity: 0.5
+              }
             }
           },
           '&.Mui-error': {
             color: themeConstants.grey.main,
             '+ .MuiInput-root': {
               '&:before': {
-                borderColor: themeConstants.error.main
+                borderColor: themeConstants.error.main,
+                opacity: 0.5
               },
               '.MuiSvgIcon-root': {
                 '> *': {
@@ -418,12 +432,14 @@ const rubiwinBaseTheme = {
           '&:not(.Mui-disabled)': {
             '&:hover, &.Mui-focused': {
               '&:before': {
-                borderBottom: `1px solid ${themeConstants.primary.hover}`
+                borderBottom: `1px solid ${themeConstants.primary.hover}`,
+                opacity: 0.5
               }
             }
           },
           '&:before': {
-            borderColor: themeConstants.grey.main
+            borderColor: themeConstants.grey.light,
+            opacity: 0.5
           },
           '&:after': {
             border: 'none'
@@ -639,7 +655,8 @@ const rubiwinBaseTheme = {
             },
             '.MuiCheckbox-root, .MuiRadio-root': {
               '.MuiSvgIcon-root > rect:first-of-type': {
-                stroke: themeConstants.error.main
+                stroke: themeConstants.error.main,
+                opacity: 0.5
               }
             }
           },
@@ -647,7 +664,8 @@ const rubiwinBaseTheme = {
             '.MuiCheckbox-root, .MuiRadio-root': {
               backgroundColor: 'transparent',
               '.MuiSvgIcon-root > rect:first-of-type': {
-                stroke: themeConstants.primary.hover
+                stroke: themeConstants.primary.hover,
+                opacity: 0.5
               }
             }
           }
