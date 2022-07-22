@@ -1,6 +1,6 @@
 {
   "name": "redspher-components",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "reusable components for redspher",
   "author": "Vincent Racelle",
   "license": "MIT",
@@ -66,6 +66,7 @@
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-mui-dropzone": "^4.0.6"
+    "react-mui-dropzone": "^4.0.6",
+    "react-toastify": "^9.0.7"
   }
 }

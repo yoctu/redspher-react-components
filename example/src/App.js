@@ -194,7 +194,8 @@ import {
   NotificationIcon,
   NewNotificationIcon,
   RubiwinPagination,
-  RubiwinDatePicker
+  RubiwinDatePicker,
+  RubiwinToasterContainer
 } from 'redspher-components'
 import {
   Button,
@@ -229,6 +230,7 @@ import {
 } from '@mui/material'
 import { LocalizationProvider, TabPanel, TabList, TabContext } from '@mui/lab'
 import AdapterMoment from '@mui/lab/AdapterMoment'
+import { toast } from 'react-toastify'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -386,706 +388,745 @@ const RubiWinShowCase = () => {
     setTabValue(newValue)
   }
 
+  const notifyErrorOrWarning = () => {
+    toast.error('Error')
+  }
+
+  const notifySuccessOrInfo = () => {
+    toast.success('Success')
+  }
+
   return (
-    <RubiwinThemeProvider>
-      <CssBaseline />
+    <>
+      <RubiwinThemeProvider>
+        <CssBaseline />
+        <RubiwinToasterContainer />
 
-      <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
-        <h1>--------- RUBIWIN COMPONENTS ---------</h1>
+        <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
+          <h1>--------- RUBIWIN COMPONENTS ---------</h1>
 
-        <div
-          style={{
-            border: '1px solid #00C3FF',
-            display: 'grid',
-            placeItems: 'center',
-            width: '100%',
-            gap: '1em'
-          }}
-        >
-          <h2>- TYPOGRAPHIES -</h2>
-
-          <Typography variant='h1'>H1 text</Typography>
-          <Typography variant='h2'>H2 text</Typography>
-          <Typography variant='h3'>H3 text</Typography>
-          <Typography variant='h4'>H4 text</Typography>
-          <Typography variant='subtitle1'>Subtitle1 text</Typography>
-          <Typography variant='subtitle1underline'>
-            Subtitle1 underline text
-          </Typography>
-          <Typography variant='subtitle1bold'>Subtitle1 bold text</Typography>
-          <Typography variant='body1'>Body1 text</Typography>
-          <Typography variant='body1underline'>Body1 underline text</Typography>
-          <Typography variant='body1bold'>Body1 bold text</Typography>
-          <Typography variant='body2'>Body2 text</Typography>
-          <Typography variant='body2underline'>Body2 underline text</Typography>
-          <Typography variant='body2bold'>Body2 bold text</Typography>
-          <Typography variant='caption'>Caption text</Typography>
-          <Typography variant='captionunderline'>
-            Caption underline text
-          </Typography>
-          <Typography variant='captionbold'>Caption bold text</Typography>
-          <Typography>Default no variant text</Typography>
-        </div>
-
-        <div
-          style={{
-            border: '1px solid #00C3FF',
-            display: 'grid',
-            placeItems: 'center',
-            width: '100%',
-            gap: '1em'
-          }}
-        >
-          <h2>- TABLES -</h2>
-
-          <h3>SIMPLE</h3>
-          <Grid sx={{ width: '100%', px: 2 }}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Heading 1</TableCell>
-                  <TableCell>Heading 2</TableCell>
-                  <TableCell>Heading 3</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {[...Array(4)].map((_, index) => (
-                  <TableRow key={index}>
-                    <TableCell>Body 1</TableCell>
-                    <TableCell>Body 2</TableCell>
-                    <TableCell>Body 3</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-              <TableFooter>
-                <TableRow>
-                  <TableCell>Footer 1</TableCell>
-                  <TableCell>Footer 2</TableCell>
-                  <TableCell>Footer 3</TableCell>
-                </TableRow>
-              </TableFooter>
-            </Table>
-          </Grid>
-
-          <h3>SMALL</h3>
-          <Grid sx={{ width: '100%', px: 2 }}>
-            <Table size='small'>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Heading 1</TableCell>
-                  <TableCell>Heading 2</TableCell>
-                  <TableCell>Heading 3</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {[...Array(4)].map((_, index) => (
-                  <TableRow key={index}>
-                    <TableCell>Body 1</TableCell>
-                    <TableCell>Body 2</TableCell>
-                    <TableCell>Body 3</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-              <TableFooter>
-                <TableRow>
-                  <TableCell>Footer 1</TableCell>
-                  <TableCell>Footer 2</TableCell>
-                  <TableCell>Footer 3</TableCell>
-                </TableRow>
-              </TableFooter>
-            </Table>
-          </Grid>
-
-          <h3>PAGINATION</h3>
-          <Grid sx={{ width: '100%', px: 2 }} ref={tableRef}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Heading 1</TableCell>
-                  <TableCell>Heading 2</TableCell>
-                  <TableCell>Heading 3</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {[...Array(40).keys()]
-                  .slice(
-                    (page - 1) * rowsPerPage,
-                    (page - 1) * rowsPerPage + rowsPerPage
-                  )
-                  .map((row, index) => (
-                    <TableRow key={index}>
-                      <TableCell>Body 1 - Row {row}</TableCell>
-                      <TableCell>Body 2 - Row {row}</TableCell>
-                      <TableCell>Body 3 - Row {row}</TableCell>
-                    </TableRow>
-                  ))}
-              </TableBody>
-              <TableFooter>
-                <TableRow>
-                  <TableCell>Footer 1</TableCell>
-                  <TableCell>Footer 2</TableCell>
-                  <TableCell>Footer 3</TableCell>
-                </TableRow>
-              </TableFooter>
-            </Table>
-            <Grid container justifyContent='end' sx={{ pt: 1 }}>
-              <Grid item>
-                <RubiwinPagination
-                  count={40}
-                  page={page}
-                  onPageChange={handleChangePage}
-                  rowsPerPage={rowsPerPage}
-                  table={tableRef}
-                />
-              </Grid>
-            </Grid>
-          </Grid>
-        </div>
-
-        <div
-          style={{
-            border: '1px solid #00C3FF',
-            display: 'grid',
-            placeItems: 'center',
-            width: '100%',
-            gap: '1em'
-          }}
-        >
-          <h2>- TABS -</h2>
-
-          <Grid sx={{ width: '100%' }}>
-            <TabContext value={tabValue}>
-              <TabList
-                onChange={handleChangeTab}
-                aria-label='lab API tabs example'
-              >
-                <Tab label='Item One' value='1' />
-                <Tab label='Item Two' value='2' />
-                <Tab label='Item Three' value='3' />
-              </TabList>
-
-              <TabPanel value='1'>Item One</TabPanel>
-              <TabPanel value='2'>Item Two</TabPanel>
-              <TabPanel value='3'>Item Three</TabPanel>
-            </TabContext>
-          </Grid>
-        </div>
-
-        <div
-          style={{
-            border: '1px solid #00C3FF',
-            display: 'grid',
-            placeItems: 'center',
-            width: '100%',
-            gap: '1em'
-          }}
-        >
-          <h2>- FORMS -</h2>
-
-          <TextField
-            label='Simple input disabled'
-            variant='standard'
-            sx={{ width: '250px' }}
-            disabled
-          />
-          <TextField
-            label='Simple input filled'
-            variant='standard'
-            sx={{ width: '250px' }}
-            value='filled'
-          />
-          <TextField
-            label='Simple input'
-            variant='standard'
-            sx={{ width: '250px' }}
-          />
-          <TextField
-            label='Simple input with label extra longgggggggggggggg'
-            variant='standard'
-            sx={{ width: '250px' }}
-          />
-          <TextField
-            label='Simple input with error'
-            variant='standard'
-            sx={{ width: '250px' }}
-            error
-          />
-
-          <FormControl variant='standard' sx={{ width: '250px' }}>
-            <InputLabel>Select option</InputLabel>
-            <RubiwinSelect label='Select option'>
-              <MenuItem value={0}>
-                <Typography variant='body2'>Option 1</Typography>
-              </MenuItem>
-              <MenuItem value={1}>
-                <Typography variant='body2'>Option 2</Typography>
-              </MenuItem>
-            </RubiwinSelect>
-          </FormControl>
-
-          <FormControl variant='standard' sx={{ width: '250px' }}>
-            <RubiwinSelect label='Select option' displayEmpty>
-              <MenuItem disabled sx={{ display: 'none' }}>
-                <Typography variant='body2'>-</Typography>
-              </MenuItem>
-              <MenuItem value={0}>
-                <Typography variant='body2'>Option 1</Typography>
-              </MenuItem>
-              <MenuItem value={1}>
-                <Typography variant='body2'>Option 2</Typography>
-              </MenuItem>
-            </RubiwinSelect>
-          </FormControl>
-
-          <FormControl variant='standard' sx={{ width: '250px' }} error>
-            <InputLabel>Select error</InputLabel>
-            <RubiwinSelect label='Select error'>
-              <MenuItem value={0}>
-                <Typography variant='body2'>Option 1</Typography>
-              </MenuItem>
-              <MenuItem value={1}>
-                <Typography variant='body2'>Option 2</Typography>
-              </MenuItem>
-            </RubiwinSelect>
-          </FormControl>
-
-          <RubiwinAutocomplete
-            sx={{ width: '250px' }}
-            options={options}
-            label='Autocomplete'
-          />
-
-          <RubiwinAutocomplete
-            multiple
-            sx={{ width: '250px' }}
-            options={options}
-            label='Multiple autocomplete whitout limit'
-          />
-
-          <RubiwinAutocomplete
-            multiple
-            limitTags={1}
-            sx={{ width: '250px' }}
-            options={options}
-            label='Multiple autocomplete with limit'
-          />
-
-          <RubiwinAutocomplete
-            sx={{ width: '250px' }}
-            options={options}
-            label='Autocomplete error'
-            showErrors
-            hasError
-          />
-
-          <RubiwinAutocomplete
-            multiple
-            withDelete
-            sx={{ width: '250px' }}
-            options={options}
-            label='Autocomplete with delete'
-            onChange={(event, newValue) => {
-              console.log(event)
-              console.log(newValue)
-            }}
-          />
-
-          <RubiwinFormLabel
-            control={<RubiwinRadio />}
-            onChange={handleChange}
-            checked={checked}
-            name='rubiwin'
-            label='Radio rubiwin'
-          />
-
-          <RubiwinFormLabel
-            control={<RubiwinRadio />}
-            onChange={handleChange}
-            checked={checked}
-            name='rubiwin'
-            label='Radio rubiwin error'
-            error
-          />
-
-          <RubiwinCheckbox
-            onChange={handleChange}
-            checked={checked}
-            inputProps={{ 'aria-label': 'primary checkbox' }}
-            name='rubiwinCheck1'
-          />
-          <RubiwinCheckbox
-            onChange={handleChange}
-            checked={checked}
-            inputProps={{ 'aria-label': 'primary checkbox' }}
-            name='rubiwinCheck1'
-            indeterminate
-          />
-
-          <RubiwinFormLabel
-            control={<RubiwinCheckbox />}
-            onChange={handleChange}
-            checked={checked}
-            name='rubiwin'
-            label='Checkbox rubiwin top'
-            labelPlacement='top'
-          />
-          <RubiwinFormLabel
-            control={<RubiwinCheckbox />}
-            onChange={handleChange}
-            checked={checked}
-            name='rubiwin'
-            label='Checkbox rubiwin start'
-            labelPlacement='start'
-          />
-          <RubiwinFormLabel
-            control={<RubiwinCheckbox />}
-            onChange={handleChange}
-            checked={checked}
-            name='rubiwin'
-            label='Checkbox rubiwin bottom'
-            labelPlacement='bottom'
-          />
-          <RubiwinFormLabel
-            control={<RubiwinCheckbox />}
-            onChange={handleChange}
-            checked={checked}
-            name='rubiwin'
-            label='Checkbox rubiwin end'
-            labelPlacement='end'
-          />
-
-          <RubiwinFormLabel
-            control={<RubiwinCheckbox />}
-            onChange={handleChange}
-            checked={checked}
-            name='rubiwin'
-            label='Checkbox rubiwin error'
-            error
-          />
-
-          <LocalizationProvider dateAdapter={AdapterMoment}>
-            <RubiwinDatePicker
-              onChange={(date) => setDate(date)}
-              value={date}
-            />
-
-            <RubiwinDatePicker
-              onChange={(date) => setDate(date)}
-              value={date}
-              label='DesktopDatePicker with label'
-            />
-
-            <RubiwinDatePicker
-              onChange={(date) => setDate(date)}
-              value={date}
-              label='DesktopDatePicker with error'
-              showErrors
-              hasError
-            />
-
-            <RubiwinDatePicker
-              onChange={(date) => setDate(date)}
-              value={date}
-              disabled
-            />
-
-            <RubiwinTimePicker
-              onChange={(time) => setTime(time)}
-              value={time}
-            />
-
-            <RubiwinTimePicker
-              onChange={(time) => setTime(time)}
-              value={time}
-              label='TimePicker with label'
-            />
-
-            <RubiwinTimePicker
-              onChange={(time) => setTime(time)}
-              value={time}
-              label='TimePicker with label and error'
-              showErrors
-              hasError
-            />
-
-            <RubiwinTimePicker
-              onChange={(time) => setTime(time)}
-              value={time}
-              disabled
-            />
-          </LocalizationProvider>
-
-          <AmazonTimePicker
-            value={time}
-            onClick={(event) => event.target.focus()}
-            onChange={(value) => setTime(value)}
-          />
-          <RubiwinDateTimePicker
-            value={selectedDate}
-            onChange={handleDateChange}
-            className='test'
-            label='Datetime picker'
-            minDate={new Date('2020-10-05T00:00:00.000Z')}
-            maxDate='10/10/2020'
-          />
-        </div>
-
-        <div
-          style={{
-            border: '1px solid #00C3FF',
-            display: 'grid',
-            placeItems: 'center',
-            width: '100%',
-            gap: '1em'
-          }}
-        >
-          <h2>- ACCORDION -</h2>
-
-          <Accordion
-            sx={{
-              width: 500
-            }}
-          >
-            <AccordionSummary expandIcon={<RubiwinCaretBottomIcon />}>
-              <Typography variant='captionbold' align='left'>
-                Accordion 1
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusamus alias aliquam animi commodi, cupiditate distinctio
-                doloribus ea, esse et iste laboriosam maxime obcaecati officiis
-                pariatur, quasi qui ratione recusandae tenetur?
-              </div>
-              <div>
-                Ad, adipisci error excepturi fugit in maiores nesciunt quaerat
-                quisquam, quos ratione repellat repellendus sit, tempore vitae
-                voluptatem. Consectetur doloribus enim mollitia neque odio optio
-                praesentium quibusdam temporibus ullam veniam!
-              </div>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
-            sx={{
-              width: 500
-            }}
-          >
-            <AccordionSummary expandIcon={<RubiwinCaretBottomIcon />}>
-              <Typography variant='captionbold' align='left'>
-                Accordion 2
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusamus ad aperiam atque beatae commodi dolorem dolorum eius
-                illum molestias, omnis perspiciatis, quae quis quo recusandae
-                sunt tenetur vel. Consectetur, quia.
-              </div>
-              <div>
-                Blanditiis, doloremque expedita harum inventore, maxime modi
-                mollitia quia quidem repellat tempora temporibus veniam
-                voluptatum. Ab accusamus aliquam cumque deleniti facilis impedit
-                inventore ipsum nihil optio, praesentium, quae soluta voluptate.
-              </div>
-            </AccordionDetails>
-          </Accordion>
-        </div>
-
-        <div
-          style={{
-            border: '1px solid #00C3FF',
-            display: 'grid',
-            placeItems: 'center',
-            width: '100%',
-            gap: '1em'
-          }}
-        >
-          <h2>- BUTTONS -</h2>
-
-          <IconButton>
-            <RubiwinCheckIcon primarycolor='#171F46' />
-          </IconButton>
-
-          <RubiwinButton text='default RubiwinButton' onClick={sayHello} />
-          <RubiwinButton text='default RubiwinButton disabled' disabled />
-          <Button>Default button mui text</Button>
-          <Button startIcon={<RubiwinAddIcon primarycolor='#171F46' />}>
-            Default button mui text
-          </Button>
-          <Button disabled>Default button mui disabled</Button>
-          <Button
-            disabled
-            startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}
-          >
-            Default button mui disabled
-          </Button>
-          <Button variant='contained'>Default button mui contained</Button>
-          <Button variant='contained' size='small'>
-            Default button mui contained small
-          </Button>
-          <Button
-            variant='contained'
-            startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}
-          >
-            Default button mui contained
-          </Button>
-          <Button variant='contained' disabled>
-            Default button mui contained and disabled
-          </Button>
-          <Button
-            variant='contained'
-            disabled
-            startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}
-          >
-            Default button mui contained and disabled
-          </Button>
-          <Button variant='outlined' size='small'>
-            Default button mui outlined small
-          </Button>
-          <Button variant='outlined'>Default button mui outlined</Button>
-          <Button
-            variant='outlined'
-            startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}
-          >
-            Default button mui outlined
-          </Button>
-          <Button variant='outlined' disabled>
-            Default button mui outlined and disabled
-          </Button>
-          <Button
-            variant='outlined'
-            disabled
-            startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}
-          >
-            Default button mui outlined and disabled
-          </Button>
-          <RubiwinSquareButton
-            onClick={sayHello}
-            text='square'
-            className='rubiwin'
-          />
-          <RubiwinBackButton text='back' onClick={sayHello} />
-        </div>
-
-        <div
-          style={{
-            border: '1px solid #00C3FF',
-            display: 'grid',
-            placeItems: 'center',
-            width: '100%',
-            gap: '1em'
-          }}
-        >
-          <h2>- ICONS -</h2>
           <div
             style={{
+              border: '1px solid #00C3FF',
               display: 'grid',
-              gridTemplateColumns: 'repeat(6, 1fr)',
               placeItems: 'center',
+              width: '100%',
               gap: '1em'
             }}
           >
-            <RubiwinActionIcon />
-            <RubiwinAddIcon />
-            <RubiwinAdrIcon />
-            <RubiwinArrowBottomIcon />
-            <RubiwinArrowLeftIcon />
-            <RubiwinArrowRightIcon />
-            <RubiwinArrowTopIcon />
-            <RubiwinAttachmentIcon />
-            <RubiwinAttentionIcon />
-            <RubiwinBigMapIcon />
-            <RubiwinBusinessDirectIcon />
-            <DirectBusinessIcon />
-            <RubiwinBurgerMenuIcon />
-            <RubiwinCamembertIcon />
-            <RubiwinCamion1Icon />
-            <RubiwinCamion2Icon />
-            <RubiwinCamion3Icon />
-            <RubiwinCamion4Icon />
-            <RubiwinCamion5Icon />
-            <RubiwinCamion6Icon />
-            <RubiwinCaretBottomIcon />
-            <RubiwinCaretLeftIcon />
-            <RubiwinCaretRightIcon />
-            <RubiwinCaretTopIcon />
-            <RubiwinCheckboxIcon />
-            <RubiwinCheckboxBlankIcon />
-            <RubiwinCheckboxIndeterminateIcon />
-            <RubiwinCheckIcon />
-            <RubiwinCheckpointIcon />
-            <RubiwinCircleCaretBottomIcon />
-            <RubiwinCircleCaretLeftIcon />
-            <RubiwinCircleCaretRightIcon />
-            <RubiwinCircleCaretTopIcon />
-            <RubiwinClearIcon />
-            <RubiwinConcessionIcon />
-            <RubiwinContactIcon />
-            <RubiwinDashboardIcon />
-            <RubiwinDatePickerIcon />
-            <RubiwinDetailIcon />
-            <RubiwinDownloadIcon />
-            <RubiwinEditIcon />
-            <RubiwinEditPeopleIcon />
-            <RubiwinEmailIcon />
-            <RubiwinEuroIcon />
-            <RubiwinFavorisIcon />
-            <RubiwinFavorisFillIcon />
-            <RubiwinFiltersIcon />
-            <RubiwinFormationIcon />
-            <RubiwinGearIcon />
-            <RubiwinGreenPassIcon />
-            <RubiwinHistogramIcon />
-            <RubiwinHomeIcon />
-            <RubiwinHorizontalActionIcon />
-            <RubiwinIncoterms />
-            <RubiwinInformationIcon />
-            <RubiwinInformationFillIcon />
-            <RubiwinInvoiceIcon />
-            <RubiwinManyPeopleIcon />
-            <RubiwinNotificationsIcon />
-            <RubiwinNumberCircleFillIcon />
-            <RubiwinNumberCircleStrokeIcon />
-            <RubiwinPeopleIcon />
-            <RubiwinPeopleLockIcon />
-            <RubiwinPercentageIcon />
-            <RubiwinPhoneIcon />
-            <RubiwinPinMapIcon />
-            <RubiwinPlaneIcon />
-            <RubiwinRadioIcon />
-            <RubiwinRadioBlankIcon />
-            <RubiwinRefreshIcon />
-            <RubiwinReposIcon />
-            <RubiwinSaveIcon />
-            <RubiwinSecondDriverIcon />
-            <RubiwinSendIcon />
-            <RubiwinSideLoadIcon />
-            <RubiwinSortIcon />
-            <RubiwinTabIcon />
-            <RubiwinTailLiftIcon />
-            <RubiwinTimerIcon />
-            <RubiwinUnvisibilityIcon />
-            <RubiwinUploadIcon />
-            <RubiwinVisibilityIcon />
-            <RubiwinWebAppIcon />
-          </div>
-        </div>
+            <h2>- TYPOGRAPHIES -</h2>
 
-        <h2>- E4P COMPONENTS -</h2>
-        <E4pThemeProvider>
-          <Button
-            variant='contained'
-            startIcon={<DirectBusinessIcon />}
-            color='primary'
-            size='large'
+            <Typography variant='h1'>H1 text</Typography>
+            <Typography variant='h2'>H2 text</Typography>
+            <Typography variant='h3'>H3 text</Typography>
+            <Typography variant='h4'>H4 text</Typography>
+            <Typography variant='subtitle1'>Subtitle1 text</Typography>
+            <Typography variant='subtitle1underline'>
+              Subtitle1 underline text
+            </Typography>
+            <Typography variant='subtitle1bold'>Subtitle1 bold text</Typography>
+            <Typography variant='body1'>Body1 text</Typography>
+            <Typography variant='body1underline'>
+              Body1 underline text
+            </Typography>
+            <Typography variant='body1bold'>Body1 bold text</Typography>
+            <Typography variant='body2'>Body2 text</Typography>
+            <Typography variant='body2underline'>
+              Body2 underline text
+            </Typography>
+            <Typography variant='body2bold'>Body2 bold text</Typography>
+            <Typography variant='caption'>Caption text</Typography>
+            <Typography variant='captionunderline'>
+              Caption underline text
+            </Typography>
+            <Typography variant='captionbold'>Caption bold text</Typography>
+            <Typography>Default no variant text</Typography>
+          </div>
+
+          <div
+            style={{
+              border: '1px solid #00C3FF',
+              display: 'grid',
+              placeItems: 'center',
+              width: '100%',
+              gap: '1em'
+            }}
           >
-            Bid on it !
-          </Button>
-        </E4pThemeProvider>
-      </div>
-    </RubiwinThemeProvider>
+            <h2>- TABLES -</h2>
+
+            <h3>SIMPLE</h3>
+            <Grid sx={{ width: '100%', px: 2 }}>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Heading 1</TableCell>
+                    <TableCell>Heading 2</TableCell>
+                    <TableCell>Heading 3</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {[...Array(4)].map((_, index) => (
+                    <TableRow key={index}>
+                      <TableCell>Body 1</TableCell>
+                      <TableCell>Body 2</TableCell>
+                      <TableCell>Body 3</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+                <TableFooter>
+                  <TableRow>
+                    <TableCell>Footer 1</TableCell>
+                    <TableCell>Footer 2</TableCell>
+                    <TableCell>Footer 3</TableCell>
+                  </TableRow>
+                </TableFooter>
+              </Table>
+            </Grid>
+
+            <h3>SMALL</h3>
+            <Grid sx={{ width: '100%', px: 2 }}>
+              <Table size='small'>
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Heading 1</TableCell>
+                    <TableCell>Heading 2</TableCell>
+                    <TableCell>Heading 3</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {[...Array(4)].map((_, index) => (
+                    <TableRow key={index}>
+                      <TableCell>Body 1</TableCell>
+                      <TableCell>Body 2</TableCell>
+                      <TableCell>Body 3</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+                <TableFooter>
+                  <TableRow>
+                    <TableCell>Footer 1</TableCell>
+                    <TableCell>Footer 2</TableCell>
+                    <TableCell>Footer 3</TableCell>
+                  </TableRow>
+                </TableFooter>
+              </Table>
+            </Grid>
+
+            <h3>PAGINATION</h3>
+            <Grid sx={{ width: '100%', px: 2 }} ref={tableRef}>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Heading 1</TableCell>
+                    <TableCell>Heading 2</TableCell>
+                    <TableCell>Heading 3</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {[...Array(40).keys()]
+                    .slice(
+                      (page - 1) * rowsPerPage,
+                      (page - 1) * rowsPerPage + rowsPerPage
+                    )
+                    .map((row, index) => (
+                      <TableRow key={index}>
+                        <TableCell>Body 1 - Row {row}</TableCell>
+                        <TableCell>Body 2 - Row {row}</TableCell>
+                        <TableCell>Body 3 - Row {row}</TableCell>
+                      </TableRow>
+                    ))}
+                </TableBody>
+                <TableFooter>
+                  <TableRow>
+                    <TableCell>Footer 1</TableCell>
+                    <TableCell>Footer 2</TableCell>
+                    <TableCell>Footer 3</TableCell>
+                  </TableRow>
+                </TableFooter>
+              </Table>
+              <Grid container justifyContent='end' sx={{ pt: 1 }}>
+                <Grid item>
+                  <RubiwinPagination
+                    count={40}
+                    page={page}
+                    onPageChange={handleChangePage}
+                    rowsPerPage={rowsPerPage}
+                    table={tableRef}
+                  />
+                </Grid>
+              </Grid>
+            </Grid>
+          </div>
+
+          <div
+            style={{
+              border: '1px solid #00C3FF',
+              display: 'grid',
+              placeItems: 'center',
+              width: '100%',
+              gap: '1em'
+            }}
+          >
+            <h2>- TABS -</h2>
+
+            <Grid sx={{ width: '100%' }}>
+              <TabContext value={tabValue}>
+                <TabList
+                  onChange={handleChangeTab}
+                  aria-label='lab API tabs example'
+                >
+                  <Tab label='Item One' value='1' />
+                  <Tab label='Item Two' value='2' />
+                  <Tab label='Item Three' value='3' />
+                </TabList>
+
+                <TabPanel value='1'>Item One</TabPanel>
+                <TabPanel value='2'>Item Two</TabPanel>
+                <TabPanel value='3'>Item Three</TabPanel>
+              </TabContext>
+            </Grid>
+          </div>
+
+          <div
+            style={{
+              border: '1px solid #00C3FF',
+              display: 'grid',
+              placeItems: 'center',
+              width: '100%',
+              gap: '1em'
+            }}
+          >
+            <h2>- FORMS -</h2>
+
+            <TextField
+              label='Simple input disabled'
+              variant='standard'
+              sx={{ width: '250px' }}
+              disabled
+            />
+            <TextField
+              label='Simple input filled'
+              variant='standard'
+              sx={{ width: '250px' }}
+              value='filled'
+            />
+            <TextField
+              label='Simple input'
+              variant='standard'
+              sx={{ width: '250px' }}
+            />
+            <TextField
+              label='Simple input with label extra longgggggggggggggg'
+              variant='standard'
+              sx={{ width: '250px' }}
+            />
+            <TextField
+              label='Simple input with error'
+              variant='standard'
+              sx={{ width: '250px' }}
+              error
+            />
+
+            <FormControl variant='standard' sx={{ width: '250px' }}>
+              <InputLabel>Select option</InputLabel>
+              <RubiwinSelect label='Select option'>
+                <MenuItem value={0}>
+                  <Typography variant='body2'>Option 1</Typography>
+                </MenuItem>
+                <MenuItem value={1}>
+                  <Typography variant='body2'>Option 2</Typography>
+                </MenuItem>
+              </RubiwinSelect>
+            </FormControl>
+
+            <FormControl variant='standard' sx={{ width: '250px' }}>
+              <RubiwinSelect label='Select option' displayEmpty>
+                <MenuItem disabled sx={{ display: 'none' }}>
+                  <Typography variant='body2'>-</Typography>
+                </MenuItem>
+                <MenuItem value={0}>
+                  <Typography variant='body2'>Option 1</Typography>
+                </MenuItem>
+                <MenuItem value={1}>
+                  <Typography variant='body2'>Option 2</Typography>
+                </MenuItem>
+              </RubiwinSelect>
+            </FormControl>
+
+            <FormControl variant='standard' sx={{ width: '250px' }} error>
+              <InputLabel>Select error</InputLabel>
+              <RubiwinSelect label='Select error'>
+                <MenuItem value={0}>
+                  <Typography variant='body2'>Option 1</Typography>
+                </MenuItem>
+                <MenuItem value={1}>
+                  <Typography variant='body2'>Option 2</Typography>
+                </MenuItem>
+              </RubiwinSelect>
+            </FormControl>
+
+            <RubiwinAutocomplete
+              sx={{ width: '250px' }}
+              options={options}
+              label='Autocomplete'
+            />
+
+            <RubiwinAutocomplete
+              multiple
+              sx={{ width: '250px' }}
+              options={options}
+              label='Multiple autocomplete whitout limit'
+            />
+
+            <RubiwinAutocomplete
+              multiple
+              limitTags={1}
+              sx={{ width: '250px' }}
+              options={options}
+              label='Multiple autocomplete with limit'
+            />
+
+            <RubiwinAutocomplete
+              sx={{ width: '250px' }}
+              options={options}
+              label='Autocomplete error'
+              showErrors
+              hasError
+            />
+
+            <RubiwinAutocomplete
+              multiple
+              withDelete
+              sx={{ width: '250px' }}
+              options={options}
+              label='Autocomplete with delete'
+              onChange={(event, newValue) => {
+                console.log(event)
+                console.log(newValue)
+              }}
+            />
+
+            <RubiwinFormLabel
+              control={<RubiwinRadio />}
+              onChange={handleChange}
+              checked={checked}
+              name='rubiwin'
+              label='Radio rubiwin'
+            />
+
+            <RubiwinFormLabel
+              control={<RubiwinRadio />}
+              onChange={handleChange}
+              checked={checked}
+              name='rubiwin'
+              label='Radio rubiwin error'
+              error
+            />
+
+            <RubiwinCheckbox
+              onChange={handleChange}
+              checked={checked}
+              inputProps={{ 'aria-label': 'primary checkbox' }}
+              name='rubiwinCheck1'
+            />
+            <RubiwinCheckbox
+              onChange={handleChange}
+              checked={checked}
+              inputProps={{ 'aria-label': 'primary checkbox' }}
+              name='rubiwinCheck1'
+              indeterminate
+            />
+
+            <RubiwinFormLabel
+              control={<RubiwinCheckbox />}
+              onChange={handleChange}
+              checked={checked}
+              name='rubiwin'
+              label='Checkbox rubiwin top'
+              labelPlacement='top'
+            />
+            <RubiwinFormLabel
+              control={<RubiwinCheckbox />}
+              onChange={handleChange}
+              checked={checked}
+              name='rubiwin'
+              label='Checkbox rubiwin start'
+              labelPlacement='start'
+            />
+            <RubiwinFormLabel
+              control={<RubiwinCheckbox />}
+              onChange={handleChange}
+              checked={checked}
+              name='rubiwin'
+              label='Checkbox rubiwin bottom'
+              labelPlacement='bottom'
+            />
+            <RubiwinFormLabel
+              control={<RubiwinCheckbox />}
+              onChange={handleChange}
+              checked={checked}
+              name='rubiwin'
+              label='Checkbox rubiwin end'
+              labelPlacement='end'
+            />
+
+            <RubiwinFormLabel
+              control={<RubiwinCheckbox />}
+              onChange={handleChange}
+              checked={checked}
+              name='rubiwin'
+              label='Checkbox rubiwin error'
+              error
+            />
+
+            <LocalizationProvider dateAdapter={AdapterMoment}>
+              <RubiwinDatePicker
+                onChange={(date) => setDate(date)}
+                value={date}
+              />
+
+              <RubiwinDatePicker
+                onChange={(date) => setDate(date)}
+                value={date}
+                label='DesktopDatePicker with label'
+              />
+
+              <RubiwinDatePicker
+                onChange={(date) => setDate(date)}
+                value={date}
+                label='DesktopDatePicker with error'
+                showErrors
+                hasError
+              />
+
+              <RubiwinDatePicker
+                onChange={(date) => setDate(date)}
+                value={date}
+                disabled
+              />
+
+              <RubiwinTimePicker
+                onChange={(time) => setTime(time)}
+                value={time}
+              />
+
+              <RubiwinTimePicker
+                onChange={(time) => setTime(time)}
+                value={time}
+                label='TimePicker with label'
+              />
+
+              <RubiwinTimePicker
+                onChange={(time) => setTime(time)}
+                value={time}
+                label='TimePicker with label and error'
+                showErrors
+                hasError
+              />
+
+              <RubiwinTimePicker
+                onChange={(time) => setTime(time)}
+                value={time}
+                disabled
+              />
+            </LocalizationProvider>
+
+            <AmazonTimePicker
+              value={time}
+              onClick={(event) => event.target.focus()}
+              onChange={(value) => setTime(value)}
+            />
+            <RubiwinDateTimePicker
+              value={selectedDate}
+              onChange={handleDateChange}
+              className='test'
+              label='Datetime picker'
+              minDate={new Date('2020-10-05T00:00:00.000Z')}
+              maxDate='10/10/2020'
+            />
+          </div>
+
+          <div
+            style={{
+              border: '1px solid #00C3FF',
+              display: 'grid',
+              placeItems: 'center',
+              width: '100%',
+              gap: '1em'
+            }}
+          >
+            <h2>- ACCORDION -</h2>
+
+            <Accordion
+              sx={{
+                width: 500
+              }}
+            >
+              <AccordionSummary expandIcon={<RubiwinCaretBottomIcon />}>
+                <Typography variant='captionbold' align='left'>
+                  Accordion 1
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Accusamus alias aliquam animi commodi, cupiditate distinctio
+                  doloribus ea, esse et iste laboriosam maxime obcaecati
+                  officiis pariatur, quasi qui ratione recusandae tenetur?
+                </div>
+                <div>
+                  Ad, adipisci error excepturi fugit in maiores nesciunt quaerat
+                  quisquam, quos ratione repellat repellendus sit, tempore vitae
+                  voluptatem. Consectetur doloribus enim mollitia neque odio
+                  optio praesentium quibusdam temporibus ullam veniam!
+                </div>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              sx={{
+                width: 500
+              }}
+            >
+              <AccordionSummary expandIcon={<RubiwinCaretBottomIcon />}>
+                <Typography variant='captionbold' align='left'>
+                  Accordion 2
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Accusamus ad aperiam atque beatae commodi dolorem dolorum eius
+                  illum molestias, omnis perspiciatis, quae quis quo recusandae
+                  sunt tenetur vel. Consectetur, quia.
+                </div>
+                <div>
+                  Blanditiis, doloremque expedita harum inventore, maxime modi
+                  mollitia quia quidem repellat tempora temporibus veniam
+                  voluptatum. Ab accusamus aliquam cumque deleniti facilis
+                  impedit inventore ipsum nihil optio, praesentium, quae soluta
+                  voluptate.
+                </div>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+
+          <div
+            style={{
+              border: '1px solid #00C3FF',
+              display: 'grid',
+              placeItems: 'center',
+              width: '100%',
+              gap: '1em'
+            }}
+          >
+            <h2>- BUTTONS -</h2>
+
+            <IconButton>
+              <RubiwinCheckIcon primarycolor='#171F46' />
+            </IconButton>
+
+            <RubiwinButton text='default RubiwinButton' onClick={sayHello} />
+            <RubiwinButton text='default RubiwinButton disabled' disabled />
+            <Button>Default button mui text</Button>
+            <Button startIcon={<RubiwinAddIcon primarycolor='#171F46' />}>
+              Default button mui text
+            </Button>
+            <Button disabled>Default button mui disabled</Button>
+            <Button
+              disabled
+              startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}
+            >
+              Default button mui disabled
+            </Button>
+            <Button variant='contained'>Default button mui contained</Button>
+            <Button variant='contained' size='small'>
+              Default button mui contained small
+            </Button>
+            <Button
+              variant='contained'
+              startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}
+            >
+              Default button mui contained
+            </Button>
+            <Button variant='contained' disabled>
+              Default button mui contained and disabled
+            </Button>
+            <Button
+              variant='contained'
+              disabled
+              startIcon={<RubiwinAddIcon primarycolor='#FFFFFF' />}
+            >
+              Default button mui contained and disabled
+            </Button>
+            <Button variant='outlined' size='small'>
+              Default button mui outlined small
+            </Button>
+            <Button variant='outlined'>Default button mui outlined</Button>
+            <Button
+              variant='outlined'
+              startIcon={<RubiwinAddIcon primarycolor='#00C3FF' />}
+            >
+              Default button mui outlined
+            </Button>
+            <Button variant='outlined' disabled>
+              Default button mui outlined and disabled
+            </Button>
+            <Button
+              variant='outlined'
+              disabled
+              startIcon={<RubiwinAddIcon primarycolor='#8F8F8F' />}
+            >
+              Default button mui outlined and disabled
+            </Button>
+            <RubiwinSquareButton
+              onClick={sayHello}
+              text='square'
+              className='rubiwin'
+            />
+            <RubiwinBackButton text='back' onClick={sayHello} />
+          </div>
+
+          <div
+            style={{
+              border: '1px solid #00C3FF',
+              display: 'grid',
+              placeItems: 'center',
+              width: '100%',
+              gap: '1em'
+            }}
+          >
+            <h2>- ICONS -</h2>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(6, 1fr)',
+                placeItems: 'center',
+                gap: '1em'
+              }}
+            >
+              <RubiwinActionIcon />
+              <RubiwinAddIcon />
+              <RubiwinAdrIcon />
+              <RubiwinArrowBottomIcon />
+              <RubiwinArrowLeftIcon />
+              <RubiwinArrowRightIcon />
+              <RubiwinArrowTopIcon />
+              <RubiwinAttachmentIcon />
+              <RubiwinAttentionIcon />
+              <RubiwinBigMapIcon />
+              <RubiwinBusinessDirectIcon />
+              <DirectBusinessIcon />
+              <RubiwinBurgerMenuIcon />
+              <RubiwinCamembertIcon />
+              <RubiwinCamion1Icon />
+              <RubiwinCamion2Icon />
+              <RubiwinCamion3Icon />
+              <RubiwinCamion4Icon />
+              <RubiwinCamion5Icon />
+              <RubiwinCamion6Icon />
+              <RubiwinCaretBottomIcon />
+              <RubiwinCaretLeftIcon />
+              <RubiwinCaretRightIcon />
+              <RubiwinCaretTopIcon />
+              <RubiwinCheckboxIcon />
+              <RubiwinCheckboxBlankIcon />
+              <RubiwinCheckboxIndeterminateIcon />
+              <RubiwinCheckIcon />
+              <RubiwinCheckpointIcon />
+              <RubiwinCircleCaretBottomIcon />
+              <RubiwinCircleCaretLeftIcon />
+              <RubiwinCircleCaretRightIcon />
+              <RubiwinCircleCaretTopIcon />
+              <RubiwinClearIcon />
+              <RubiwinConcessionIcon />
+              <RubiwinContactIcon />
+              <RubiwinDashboardIcon />
+              <RubiwinDatePickerIcon />
+              <RubiwinDetailIcon />
+              <RubiwinDownloadIcon />
+              <RubiwinEditIcon />
+              <RubiwinEditPeopleIcon />
+              <RubiwinEmailIcon />
+              <RubiwinEuroIcon />
+              <RubiwinFavorisIcon />
+              <RubiwinFavorisFillIcon />
+              <RubiwinFiltersIcon />
+              <RubiwinFormationIcon />
+              <RubiwinGearIcon />
+              <RubiwinGreenPassIcon />
+              <RubiwinHistogramIcon />
+              <RubiwinHomeIcon />
+              <RubiwinHorizontalActionIcon />
+              <RubiwinIncoterms />
+              <RubiwinInformationIcon />
+              <RubiwinInformationFillIcon />
+              <RubiwinInvoiceIcon />
+              <RubiwinManyPeopleIcon />
+              <RubiwinNotificationsIcon />
+              <RubiwinNumberCircleFillIcon />
+              <RubiwinNumberCircleStrokeIcon />
+              <RubiwinPeopleIcon />
+              <RubiwinPeopleLockIcon />
+              <RubiwinPercentageIcon />
+              <RubiwinPhoneIcon />
+              <RubiwinPinMapIcon />
+              <RubiwinPlaneIcon />
+              <RubiwinRadioIcon />
+              <RubiwinRadioBlankIcon />
+              <RubiwinRefreshIcon />
+              <RubiwinReposIcon />
+              <RubiwinSaveIcon />
+              <RubiwinSecondDriverIcon />
+              <RubiwinSendIcon />
+              <RubiwinSideLoadIcon />
+              <RubiwinSortIcon />
+              <RubiwinTabIcon />
+              <RubiwinTailLiftIcon />
+              <RubiwinTimerIcon />
+              <RubiwinUnvisibilityIcon />
+              <RubiwinUploadIcon />
+              <RubiwinVisibilityIcon />
+              <RubiwinWebAppIcon />
+            </div>
+          </div>
+
+          <div
+            style={{
+              border: '1px solid #00C3FF',
+              display: 'grid',
+              placeItems: 'center',
+              width: '100%',
+              gap: '1em'
+            }}
+          >
+            <h2>- TOASTERS -</h2>
+
+            <Button
+              onClick={notifyErrorOrWarning}
+              variant='contained'
+              color='error'
+            >
+              Error and Warning toaster
+            </Button>
+            <Button onClick={notifySuccessOrInfo} variant='contained'>
+              Success and Info toaster
+            </Button>
+          </div>
+
+          <h2>- E4P COMPONENTS -</h2>
+          <E4pThemeProvider>
+            <Button
+              variant='contained'
+              startIcon={<DirectBusinessIcon />}
+              color='primary'
+              size='large'
+            >
+              Bid on it !
+            </Button>
+          </E4pThemeProvider>
+        </div>
+      </RubiwinThemeProvider>
+    </>
   )
 }
 
