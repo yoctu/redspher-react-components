@@ -2,7 +2,8 @@ import React from 'react'
 import { ToastContainer } from 'react-toastify'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
-import ToastifyCSS from 'react-toastify/dist/ReactToastify.css'
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import ToastifyCSS from '!style-loader!css-loader!react-toastify/dist/ReactToastify.css'
 
 import ClearIcon from '../../icons/Rubiwin/ClearIcon'
 import rubiwinBaseTheme from '../theme/RubiwinBaseTheme'
