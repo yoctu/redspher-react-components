@@ -10,9 +10,10 @@ export const colors = {
     hover: '#069CCA'
   },
   secondary: {
-    main: '#eb3343',
-    light: '#ff6c6e',
-    dark: '#b1001c'
+    main: '#FF003B',
+    light: '#FF6C6E',
+    dark: '#B1001C',
+    hover: '#B1001C'
   },
   tertiary: {
     main: '#00FFF3',

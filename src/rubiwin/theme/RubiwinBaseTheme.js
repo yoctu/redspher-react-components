@@ -165,6 +165,11 @@ const rubiwinBaseTheme = {
           '&.Mui-disabled': {
             color: themeConstants.grey.light
           },
+          '&.MuiButton-outlinedError': {
+            '&:hover, &:focus': {
+              backgroundColor: themeConstants.secondary.hover
+            }
+          },
           '&:hover, &:focus': {
             backgroundColor: themeConstants.primary.hover,
             color: themeConstants.white.main
@@ -172,6 +177,11 @@ const rubiwinBaseTheme = {
         },
         contained: {
           boxShadow: 'none',
+          '&.MuiButton-containedError': {
+            '&:hover, &:focus': {
+              backgroundColor: themeConstants.secondary.hover
+            }
+          },
           '&:hover, &:focus': {
             boxShadow: 'none',
             backgroundColor: themeConstants.primary.hover
