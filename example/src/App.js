@@ -386,19 +386,10 @@ const RubiWinShowCase = () => {
     setTabValue(newValue)
   }
 
-  const notifyErrorOrWarning = () => {
-    toast.error('Error')
-  }
-
-  const notifySuccessOrInfo = () => {
-    toast.success('Success')
-  }
-
   return (
     <>
       <RubiwinThemeProvider>
         <CssBaseline />
-        <ToastContainer />
 
         <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
           <h1>--------- RUBIWIN COMPONENTS ---------</h1>
