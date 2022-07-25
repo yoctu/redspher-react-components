@@ -18,7 +18,7 @@ const RubiwinToasterContainer = () => {
 const StyledContainer = styled(ToastContainer)(
   () => css`
     // From library
-    :root {
+    & {
       --toastify-color-light: #fff;
       --toastify-color-dark: #121212;
       --toastify-color-info: #3498db;
@@ -60,7 +60,7 @@ const StyledContainer = styled(ToastContainer)(
       --toastify-color-progress-error: var(--toastify-color-error);
     }
 
-    .Toastify__toast-container {
+    &.Toastify__toast-container {
       z-index: var(--toastify-z-index);
       -webkit-transform: translate3d(0, 0, var(--toastify-z-index) px);
       position: fixed;
@@ -68,56 +68,58 @@ const StyledContainer = styled(ToastContainer)(
       width: var(--toastify-toast-width);
       box-sizing: border-box;
       color: #fff;
-    }
-    .Toastify__toast-container--top-left {
-      top: 1em;
-      left: 1em;
-    }
-    .Toastify__toast-container--top-center {
-      top: 1em;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .Toastify__toast-container--top-right {
-      top: 1em;
-      right: 1em;
-    }
-    .Toastify__toast-container--bottom-left {
-      bottom: 1em;
-      left: 1em;
-    }
-    .Toastify__toast-container--bottom-center {
-      bottom: 1em;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .Toastify__toast-container--bottom-right {
-      bottom: 1em;
-      right: 1em;
+
+      &--top-left {
+        top: 1em;
+        left: 1em;
+      }
+      &--top-center {
+        top: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &--top-right {
+        top: 1em;
+        right: 1em;
+      }
+      &--bottom-left {
+        bottom: 1em;
+        left: 1em;
+      }
+      &--bottom-center {
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &--bottom-right {
+        bottom: 1em;
+        right: 1em;
+      }
     }
 
     @media only screen and (max-width: 480px) {
-      .Toastify__toast-container {
+      &.Toastify__toast-container {
         width: 100vw;
         padding: 0;
         left: 0;
         margin: 0;
-      }
-      .Toastify__toast-container--top-left,
-      .Toastify__toast-container--top-center,
-      .Toastify__toast-container--top-right {
-        top: 0;
-        transform: translateX(0);
-      }
-      .Toastify__toast-container--bottom-left,
-      .Toastify__toast-container--bottom-center,
-      .Toastify__toast-container--bottom-right {
-        bottom: 0;
-        transform: translateX(0);
-      }
-      .Toastify__toast-container--rtl {
-        right: 0;
-        left: initial;
+
+        &--top-left,
+        &--top-center,
+        &--top-right {
+          top: 0;
+          transform: translateX(0);
+        }
+        &--bottom-left,
+        &--bottom-center,
+        &--bottom-right {
+          bottom: 0;
+          transform: translateX(0);
+        }
+        &--rtl {
+          right: 0;
+          left: initial;
+        }
       }
     }
     .Toastify__toast {
