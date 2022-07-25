@@ -96,18 +96,22 @@ const StyledContainer = styled(ToastContainer)(
       right: 1em;
     }
 
-    @media only screen and (max-width : 480px) {
+    @media only screen and (max-width: 480px) {
       .Toastify__toast-container {
         width: 100vw;
         padding: 0;
         left: 0;
         margin: 0;
       }
-      .Toastify__toast-container--top-left, .Toastify__toast-container--top-center, .Toastify__toast-container--top-right {
+      .Toastify__toast-container--top-left,
+      .Toastify__toast-container--top-center,
+      .Toastify__toast-container--top-right {
         top: 0;
         transform: translateX(0);
       }
-      .Toastify__toast-container--bottom-left, .Toastify__toast-container--bottom-center, .Toastify__toast-container--bottom-right {
+      .Toastify__toast-container--bottom-left,
+      .Toastify__toast-container--bottom-center,
+      .Toastify__toast-container--bottom-right {
         bottom: 0;
         transform: translateX(0);
       }
@@ -123,7 +127,8 @@ const StyledContainer = styled(ToastContainer)(
       margin-bottom: 1rem;
       padding: 8px;
       border-radius: 4px;
-      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1),
+        0 2px 15px 0 rgba(0, 0, 0, 0.05);
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: justify;
@@ -171,7 +176,7 @@ const StyledContainer = styled(ToastContainer)(
       animation-duration: 0.3s;
     }
 
-    @media only screen and (max-width : 480px) {
+    @media only screen and (max-width: 480px) {
       .Toastify__toast {
         margin-bottom: 0;
         border-radius: 0;
@@ -224,7 +229,10 @@ const StyledContainer = styled(ToastContainer)(
     .Toastify__progress-bar--error {
       background: var(--toastify-color-progress-error);
     }
-    .Toastify__progress-bar-theme--colored.Toastify__progress-bar--info, .Toastify__progress-bar-theme--colored.Toastify__progress-bar--success, .Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning, .Toastify__progress-bar-theme--colored.Toastify__progress-bar--error {
+    .Toastify__progress-bar-theme--colored.Toastify__progress-bar--info,
+    .Toastify__progress-bar-theme--colored.Toastify__progress-bar--success,
+    .Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning,
+    .Toastify__progress-bar-theme--colored.Toastify__progress-bar--error {
       background: var(--toastify-color-transparent);
     }
 
@@ -249,7 +257,8 @@ const StyledContainer = styled(ToastContainer)(
       height: 16px;
       width: 14px;
     }
-    .Toastify__close-button:hover, .Toastify__close-button:focus {
+    .Toastify__close-button:hover,
+    .Toastify__close-button:focus {
       opacity: 1;
     }
 
@@ -295,7 +304,11 @@ const StyledContainer = styled(ToastContainer)(
     }
 
     @keyframes Toastify__bounceInRight {
-      from, 60%, 75%, 90%, to {
+      from,
+      60%,
+      75%,
+      90%,
+      to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
       }
       from {
@@ -327,7 +340,11 @@ const StyledContainer = styled(ToastContainer)(
       }
     }
     @keyframes Toastify__bounceInLeft {
-      from, 60%, 75%, 90%, to {
+      from,
+      60%,
+      75%,
+      90%,
+      to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
       }
       0% {
@@ -359,7 +376,11 @@ const StyledContainer = styled(ToastContainer)(
       }
     }
     @keyframes Toastify__bounceInUp {
-      from, 60%, 75%, 90%, to {
+      from,
+      60%,
+      75%,
+      90%,
+      to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
       }
       from {
@@ -384,7 +405,8 @@ const StyledContainer = styled(ToastContainer)(
       20% {
         transform: translate3d(0, -10px, 0);
       }
-      40%, 45% {
+      40%,
+      45% {
         opacity: 1;
         transform: translate3d(0, 20px, 0);
       }
@@ -394,7 +416,11 @@ const StyledContainer = styled(ToastContainer)(
       }
     }
     @keyframes Toastify__bounceInDown {
-      from, 60%, 75%, 90%, to {
+      from,
+      60%,
+      75%,
+      90%,
+      to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
       }
       0% {
@@ -419,7 +445,8 @@ const StyledContainer = styled(ToastContainer)(
       20% {
         transform: translate3d(0, 10px, 0);
       }
-      40%, 45% {
+      40%,
+      45% {
         opacity: 1;
         transform: translate3d(0, -20px, 0);
       }
@@ -428,10 +455,12 @@ const StyledContainer = styled(ToastContainer)(
         transform: translate3d(0, 2000px, 0);
       }
     }
-    .Toastify__bounce-enter--top-left, .Toastify__bounce-enter--bottom-left {
+    .Toastify__bounce-enter--top-left,
+    .Toastify__bounce-enter--bottom-left {
       animation-name: Toastify__bounceInLeft;
     }
-    .Toastify__bounce-enter--top-right, .Toastify__bounce-enter--bottom-right {
+    .Toastify__bounce-enter--top-right,
+    .Toastify__bounce-enter--bottom-right {
       animation-name: Toastify__bounceInRight;
     }
     .Toastify__bounce-enter--top-center {
@@ -441,10 +470,12 @@ const StyledContainer = styled(ToastContainer)(
       animation-name: Toastify__bounceInUp;
     }
 
-    .Toastify__bounce-exit--top-left, .Toastify__bounce-exit--bottom-left {
+    .Toastify__bounce-exit--top-left,
+    .Toastify__bounce-exit--bottom-left {
       animation-name: Toastify__bounceOutLeft;
     }
-    .Toastify__bounce-exit--top-right, .Toastify__bounce-exit--bottom-right {
+    .Toastify__bounce-exit--top-right,
+    .Toastify__bounce-exit--bottom-right {
       animation-name: Toastify__bounceOutRight;
     }
     .Toastify__bounce-exit--top-center {
@@ -597,10 +628,12 @@ const StyledContainer = styled(ToastContainer)(
         transform: translate3d(0, -500px, 0);
       }
     }
-    .Toastify__slide-enter--top-left, .Toastify__slide-enter--bottom-left {
+    .Toastify__slide-enter--top-left,
+    .Toastify__slide-enter--bottom-left {
       animation-name: Toastify__slideInLeft;
     }
-    .Toastify__slide-enter--top-right, .Toastify__slide-enter--bottom-right {
+    .Toastify__slide-enter--top-right,
+    .Toastify__slide-enter--bottom-right {
       animation-name: Toastify__slideInRight;
     }
     .Toastify__slide-enter--top-center {
@@ -610,10 +643,12 @@ const StyledContainer = styled(ToastContainer)(
       animation-name: Toastify__slideInUp;
     }
 
-    .Toastify__slide-exit--top-left, .Toastify__slide-exit--bottom-left {
+    .Toastify__slide-exit--top-left,
+    .Toastify__slide-exit--bottom-left {
       animation-name: Toastify__slideOutLeft;
     }
-    .Toastify__slide-exit--top-right, .Toastify__slide-exit--bottom-right {
+    .Toastify__slide-exit--top-right,
+    .Toastify__slide-exit--bottom-right {
       animation-name: Toastify__slideOutRight;
     }
     .Toastify__slide-exit--top-center {
