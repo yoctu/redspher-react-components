@@ -194,8 +194,7 @@ import {
   NotificationIcon,
   NewNotificationIcon,
   RubiwinPagination,
-  RubiwinDatePicker,
-  RubiwinToasterContainer
+  RubiwinDatePicker
 } from 'redspher-components'
 import {
   Button,
@@ -230,7 +229,6 @@ import {
 } from '@mui/material'
 import { LocalizationProvider, TabPanel, TabList, TabContext } from '@mui/lab'
 import AdapterMoment from '@mui/lab/AdapterMoment'
-import { toast } from 'react-toastify'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -400,7 +398,7 @@ const RubiWinShowCase = () => {
     <>
       <RubiwinThemeProvider>
         <CssBaseline />
-        <RubiwinToasterContainer />
+        <ToastContainer />
 
         <div style={{ display: 'grid', placeItems: 'center', gap: '1em' }}>
           <h1>--------- RUBIWIN COMPONENTS ---------</h1>
@@ -1088,29 +1086,6 @@ const RubiWinShowCase = () => {
               <RubiwinVisibilityIcon />
               <RubiwinWebAppIcon />
             </div>
-          </div>
-
-          <div
-            style={{
-              border: '1px solid #00C3FF',
-              display: 'grid',
-              placeItems: 'center',
-              width: '100%',
-              gap: '1em'
-            }}
-          >
-            <h2>- TOASTERS -</h2>
-
-            <Button
-              onClick={notifyErrorOrWarning}
-              variant='contained'
-              color='error'
-            >
-              Error and Warning toaster
-            </Button>
-            <Button onClick={notifySuccessOrInfo} variant='contained'>
-              Success and Info toaster
-            </Button>
           </div>
 
           <h2>- E4P COMPONENTS -</h2>
