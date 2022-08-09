@@ -194,7 +194,8 @@ import {
   NotificationIcon,
   NewNotificationIcon,
   RubiwinPagination,
-  RubiwinDatePicker
+  RubiwinDatePicker,
+  E4PlaneIcon
 } from 'redspher-components'
 import {
   Button,
@@ -1403,6 +1404,7 @@ const ShipperShowCase = () => {
           <QuotesNewOffersIcon title='QuotesNewOffersIcon' />
           <QuotesSentValidationIcon title='QuotesSentValidationIcon' />
           <StatisticsReportAvailableIcon title='StatisticsReportAvailableIcon' />
+          <E4PlaneIcon title='E4PlaneIcon' />
         </section>
         <section
           style={{
