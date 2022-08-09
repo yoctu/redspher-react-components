@@ -205,6 +205,7 @@ import ArrowTop2Icon from './icons/Shipper/ArrowTop2Icon'
 import ArrowBottom2Icon from './icons/Shipper/ArrowBottom2Icon'
 import EditIcon from './icons/Shipper/EditIcon'
 import PrintIcon from './icons/Shipper/PrintIcon/PrintIcon'
+import E4PlaneIcon from './icons/Shipper/E4PlaneIcon/E4PlaneIcon'
 
 export {
   RubiwinButton,
@@ -406,5 +407,6 @@ export {
   ShipperStepper,
   ShipperAddressStepper,
   ShipperErrorPopover,
-  ShipperRequestStepper
+  ShipperRequestStepper,
+  E4PlaneIcon
 }
