@@ -1,6 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Autocomplete, IconButton, TextField, Typography } from '@mui/material'
+import {
+  Autocomplete,
+  CircularProgress,
+  IconButton,
+  TextField,
+  Typography
+} from '@mui/material'
 
 import RubiwinCaretBottomIcon from '../../icons/Rubiwin/CaretBottomIcon'
 import RubiwinClearIcon from '../../icons/Rubiwin/ClearIcon'
@@ -12,6 +18,9 @@ const RubiwinAutocomplete = ({
   options,
   showErrors,
   hasError,
+  helperText,
+  isLoading = false,
+  showLoader = false,
   multiple = false,
   withDelete = false,
   ...props
@@ -39,6 +48,18 @@ const RubiwinAutocomplete = ({
           label={label}
           variant='standard'
           error={showErrors && hasError}
+          helperText={helperText}
+          InputProps={{
+            ...params.InputProps,
+            endAdornment: (
+              <>
+                {showLoader && isLoading ? (
+                  <CircularProgress color='inherit' size={20} />
+                ) : null}
+                {params.InputProps.endAdornment}
+              </>
+            )
+          }}
         />
       )}
       getLimitTagsText={(more) => (
@@ -88,7 +109,10 @@ RubiwinAutocomplete.propTypes = {
   multiple: PropTypes.bool,
   hasError: PropTypes.bool,
   showErrors: PropTypes.bool,
-  withDelete: PropTypes.bool
+  withDelete: PropTypes.bool,
+  helperText: PropTypes.string,
+  isLoading: PropTypes.bool,
+  showLoader: PropTypes.bool
 }
 
 export default RubiwinAutocomplete
