@@ -43,9 +43,7 @@ const RubiwinAutocomplete = ({
       options={options}
       disableClearable
       popupIcon={<RubiwinCaretBottomIcon />}
-      renderInput={(params) => {
-        console.log(params)
-        return (
+      renderInput={(params) => (
           <TextField
             {...params}
             label={label}
@@ -65,7 +63,7 @@ const RubiwinAutocomplete = ({
             }}
           />
         )
-      }}
+      }
       getLimitTagsText={(more) => (
         <Typography variant='body2'>(+{more})</Typography>
       )}
