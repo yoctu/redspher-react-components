@@ -4,6 +4,7 @@ import {
   Autocomplete,
   CircularProgress,
   IconButton,
+  InputAdornment,
   TextField,
   Typography
 } from '@mui/material'
@@ -52,12 +53,12 @@ const RubiwinAutocomplete = ({
           InputProps={{
             ...params.InputProps,
             endAdornment: (
-              <>
+              <InputAdornment position='end'>
                 {showLoader && isLoading ? (
-                  <CircularProgress color='inherit' size={20} />
+                  <CircularProgress color='primary' size={20} />
                 ) : null}
                 {params.InputProps.endAdornment}
-              </>
+              </InputAdornment>
             )
           }}
         />
