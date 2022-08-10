@@ -662,6 +662,14 @@ const RubiWinShowCase = () => {
             />
 
             <RubiwinAutocomplete
+              showLoader
+              isLoading
+              sx={{ width: '250px' }}
+              options={options}
+              label='Autocomplete with loader'
+            />
+
+            <RubiwinAutocomplete
               multiple
               sx={{ width: '250px' }}
               options={options}
