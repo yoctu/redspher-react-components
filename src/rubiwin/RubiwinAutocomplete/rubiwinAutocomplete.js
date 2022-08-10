@@ -44,26 +44,25 @@ const RubiwinAutocomplete = ({
       disableClearable
       popupIcon={<RubiwinCaretBottomIcon />}
       renderInput={(params) => (
-          <TextField
-            {...params}
-            label={label}
-            variant='standard'
-            error={showErrors && hasError}
-            helperText={helperText}
-            InputProps={{
-              ...params.InputProps,
-              endAdornment: (
-                <InputAdornment position='end'>
-                  {showLoader && isLoading ? (
-                    <CircularProgress color='primary' size={20} />
-                  ) : null}
-                  {params.InputProps.endAdornment}
-                </InputAdornment>
-              )
-            }}
-          />
-        )
-      }
+        <TextField
+          {...params}
+          label={label}
+          variant='standard'
+          error={showErrors && hasError}
+          helperText={helperText}
+          InputProps={{
+            ...params.InputProps,
+            endAdornment: (
+              <InputAdornment position='end'>
+                {showLoader && isLoading ? (
+                  <CircularProgress color='primary' size={20} />
+                ) : null}
+                {params.InputProps.endAdornment}
+              </InputAdornment>
+            )
+          }}
+        />
+      )}
       getLimitTagsText={(more) => (
         <Typography variant='body2'>(+{more})</Typography>
       )}
