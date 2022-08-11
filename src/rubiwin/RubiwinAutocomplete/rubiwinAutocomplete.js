@@ -20,6 +20,7 @@ const RubiwinAutocomplete = ({
   showErrors,
   hasError,
   helperText,
+  name,
   isLoading = false,
   showLoader = false,
   multiple = false,
@@ -47,6 +48,7 @@ const RubiwinAutocomplete = ({
         <TextField
           {...params}
           label={label}
+          name={name}
           variant='standard'
           error={showErrors && hasError}
           helperText={helperText}
@@ -112,6 +114,7 @@ RubiwinAutocomplete.propTypes = {
   showErrors: PropTypes.bool,
   withDelete: PropTypes.bool,
   helperText: PropTypes.string,
+  name: PropTypes.string,
   isLoading: PropTypes.bool,
   showLoader: PropTypes.bool
 }

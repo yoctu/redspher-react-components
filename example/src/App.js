@@ -619,7 +619,7 @@ const RubiWinShowCase = () => {
 
             <FormControl variant='standard' sx={{ width: '250px' }}>
               <InputLabel>Select option</InputLabel>
-              <RubiwinSelect label='Select option'>
+              <RubiwinSelect label='Select option' name='select'>
                 <MenuItem value={0}>
                   <Typography variant='body2'>Option 1</Typography>
                 </MenuItem>
@@ -659,6 +659,7 @@ const RubiWinShowCase = () => {
               sx={{ width: '250px' }}
               options={options}
               label='Autocomplete'
+              name='autocomplete'
             />
 
             <RubiwinAutocomplete
@@ -781,6 +782,7 @@ const RubiWinShowCase = () => {
               <RubiwinDatePicker
                 onChange={(date) => setDate(date)}
                 value={date}
+                name='iHaveAName'
               />
 
               <RubiwinDatePicker
