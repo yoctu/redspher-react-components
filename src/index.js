@@ -60,6 +60,7 @@ import RubiwinContactIcon from './icons/Rubiwin/ContactIcon'
 import RubiwinDashboardIcon from './icons/Rubiwin/DashboardIcon'
 import RubiwinDatePickerIcon from './icons/Rubiwin/DatePickerIcon'
 import RubiwinDetailIcon from './icons/Rubiwin/DetailIcon'
+import RubiwinDocumentIcon from './icons/Rubiwin/DocumentIcon'
 import RubiwinDownloadIcon from './icons/Rubiwin/DownloadIcon'
 import RubiwinEditIcon from './icons/Rubiwin/EditIcon'
 import RubiwinEditPeopleIcon from './icons/Rubiwin/EditPeopleIcon'
@@ -262,6 +263,7 @@ export {
   RubiwinDashboardIcon,
   RubiwinDatePickerIcon,
   RubiwinDetailIcon,
+  RubiwinDocumentIcon,
   RubiwinDownloadIcon,
   RubiwinEditIcon,
   RubiwinEditPeopleIcon,
