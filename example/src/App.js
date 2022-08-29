@@ -49,6 +49,7 @@ import {
   RubiwinDashboardIcon,
   RubiwinDatePickerIcon,
   RubiwinDetailIcon,
+  RubiwinDocumentIcon,
   RubiwinDownloadIcon,
   RubiwinEditIcon,
   RubiwinEditPeopleIcon,
@@ -1043,6 +1044,7 @@ const RubiWinShowCase = () => {
               <RubiwinDashboardIcon />
               <RubiwinDatePickerIcon />
               <RubiwinDetailIcon />
+              <RubiwinDocumentIcon />
               <RubiwinDownloadIcon />
               <RubiwinEditIcon />
               <RubiwinEditPeopleIcon />
