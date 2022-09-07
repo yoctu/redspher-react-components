@@ -1698,7 +1698,7 @@ const ShipperShowCase = () => {
             <ShipperCard
               startIcon='tailLift'
               value='tailLift'
-              labelOne='Label with two lines'
+              labelOne='tailLift'
               disabled={false}
               selectedValue={selectedFeatures}
               setSelectedValue={setSelectedFeatures}
@@ -1710,7 +1710,7 @@ const ShipperShowCase = () => {
             <ShipperCard
               startIcon='sideLoad'
               value='sideLoad'
-              labelOne='Label'
+              labelOne='sideLoad'
               disabled={false}
               selectedValue={selectedFeatures}
               setSelectedValue={setSelectedFeatures}
