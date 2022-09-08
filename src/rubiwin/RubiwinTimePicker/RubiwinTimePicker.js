@@ -14,11 +14,12 @@ const RubiwinTimePicker = ({
   showErrors,
   hasError,
   id,
+  locale,
   ampm = false,
   ...props
 }) => {
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
+    <LocalizationProvider adapterLocale={locale} dateAdapter={AdapterDateFns}>
       <TimePicker
         ampm={ampm}
         label={label}
@@ -71,7 +72,8 @@ RubiwinTimePicker.propTypes = {
   helperText: PropTypes.node,
   hasError: PropTypes.bool,
   showErrors: PropTypes.bool,
-  ampm: PropTypes.bool
+  ampm: PropTypes.bool,
+  locale: PropTypes.string
 }
 
 export default RubiwinTimePicker

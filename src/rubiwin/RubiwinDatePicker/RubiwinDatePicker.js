@@ -17,11 +17,12 @@ const RubiwinDatePicker = ({
   hasError,
   helperText,
   name,
+  locale,
   ...props
 }) => {
   const [openLocal, setOpen] = useState(open)
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
+    <LocalizationProvider adapterLocale={locale} dateAdapter={AdapterDateFns}>
       <DesktopDatePicker
         open={openLocal}
         inputFormat={dateFormat}
@@ -83,7 +84,8 @@ RubiwinDatePicker.propTypes = {
   hasError: PropTypes.bool,
   showErrors: PropTypes.bool,
   helperText: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  locale: PropTypes.string
 }
 
 export default RubiwinDatePicker

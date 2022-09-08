@@ -23,9 +23,10 @@ const RubiwinDateTimePicker = ({
   className = '',
   variant = 'dialog',
   TextFieldComponent,
+  locale,
   ...props
 }) => (
-  <LocalizationProvider dateAdapter={AdapterDateFns}>
+  <LocalizationProvider adapterLocale={locale} dateAdapter={AdapterDateFns}>
     <DateTimePicker
       label={label}
       value={value}
@@ -85,7 +86,8 @@ RubiwinDateTimePicker.propTypes = {
   /** Picker container option */
   variant: PropTypes.string,
   /** on error callback */
-  onError: PropTypes.func
+  onError: PropTypes.func,
+  locale: PropTypes.string
 }
 
 export default RubiwinDateTimePicker
