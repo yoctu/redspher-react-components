@@ -16,6 +16,7 @@ import rubiwinBaseTheme from '../theme/RubiwinBaseTheme'
 
 const RubiwinAutocomplete = ({
   label,
+  placeholder,
   options,
   showErrors,
   hasError,
@@ -48,6 +49,7 @@ const RubiwinAutocomplete = ({
         <TextField
           {...params}
           label={label}
+          placeholder={label}
           name={name}
           variant='standard'
           error={showErrors && hasError}
@@ -108,6 +110,7 @@ const RubiwinAutocomplete = ({
 
 RubiwinAutocomplete.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   options: PropTypes.array,
   multiple: PropTypes.bool,
   hasError: PropTypes.bool,

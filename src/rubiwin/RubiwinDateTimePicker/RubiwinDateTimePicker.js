@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import AdapterDateFns from '@mui/lab/AdapterDateFns'
-import { DateTimePicker, LocalizationProvider } from '@mui/lab'
 import { TextField } from '@mui/material'
+import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 
 /** full documentation : https://material-ui-pickers.dev/api/DateTimePicker */
 const RubiwinDateTimePicker = ({
@@ -23,9 +23,10 @@ const RubiwinDateTimePicker = ({
   className = '',
   variant = 'dialog',
   TextFieldComponent,
+  locale,
   ...props
 }) => (
-  <LocalizationProvider dateAdapter={AdapterDateFns}>
+  <LocalizationProvider adapterLocale={locale} dateAdapter={AdapterDateFns}>
     <DateTimePicker
       label={label}
       value={value}
@@ -85,7 +86,8 @@ RubiwinDateTimePicker.propTypes = {
   /** Picker container option */
   variant: PropTypes.string,
   /** on error callback */
-  onError: PropTypes.func
+  onError: PropTypes.func,
+  locale: PropTypes.string
 }
 
 export default RubiwinDateTimePicker

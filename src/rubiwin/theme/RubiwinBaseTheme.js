@@ -385,7 +385,7 @@ const rubiwinBaseTheme = {
           },
           '&.Mui-error': {
             color: themeConstants.grey.main,
-            '+ .MuiInput-root': {
+            '+ .MuiInput-root:not(.Mui-disabled)': {
               '&:before': {
                 borderColor: themeConstants.error.main,
                 opacity: 0.5
@@ -444,6 +444,18 @@ const rubiwinBaseTheme = {
               '&:before': {
                 borderBottom: `1px solid ${themeConstants.primary.hover}`,
                 opacity: 0.5
+              }
+            },
+            '&.Mui-error': {
+              '&:before': {
+                borderColor: themeConstants.error.main,
+                opacity: 0.5
+              },
+              '.MuiSvgIcon-root': {
+                '> *': {
+                  fill: themeConstants.error.main,
+                  stroke: themeConstants.error.main
+                }
               }
             }
           },

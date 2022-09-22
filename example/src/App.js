@@ -231,8 +231,7 @@ import {
   IconButton,
   Switch
 } from '@mui/material'
-import { LocalizationProvider, TabPanel, TabList, TabContext } from '@mui/lab'
-import AdapterMoment from '@mui/lab/AdapterMoment'
+import { TabPanel, TabList, TabContext } from '@mui/lab'
 
 const RubiWinShowCase = () => {
   const [checked, setChecked] = useState(true)
@@ -781,58 +780,56 @@ const RubiWinShowCase = () => {
               error
             />
 
-            <LocalizationProvider dateAdapter={AdapterMoment}>
-              <RubiwinDatePicker
-                onChange={(date) => setDate(date)}
-                value={date}
-                name='iHaveAName'
-              />
+            <RubiwinDatePicker
+              onChange={(date) => setDate(date)}
+              value={date}
+              name='iHaveAName'
+            />
 
-              <RubiwinDatePicker
-                onChange={(date) => setDate(date)}
-                value={date}
-                label='DesktopDatePicker with label'
-              />
+            <RubiwinDatePicker
+              onChange={(date) => setDate(date)}
+              value={date}
+              label='DesktopDatePicker with label'
+            />
 
-              <RubiwinDatePicker
-                onChange={(date) => setDate(date)}
-                value={date}
-                label='DesktopDatePicker with error'
-                showErrors
-                hasError
-              />
+            <RubiwinDatePicker
+              onChange={(date) => setDate(date)}
+              value={date}
+              label='DesktopDatePicker with error'
+              showErrors
+              hasError
+            />
 
-              <RubiwinDatePicker
-                onChange={(date) => setDate(date)}
-                value={date}
-                disabled
-              />
+            <RubiwinDatePicker
+              onChange={(date) => setDate(date)}
+              value={date}
+              disabled
+            />
 
-              <RubiwinTimePicker
-                onChange={(time) => setTime(time)}
-                value={time}
-              />
+            <RubiwinTimePicker
+              onChange={(time) => setTime(time)}
+              value={time}
+            />
 
-              <RubiwinTimePicker
-                onChange={(time) => setTime(time)}
-                value={time}
-                label='TimePicker with label'
-              />
+            <RubiwinTimePicker
+              onChange={(time) => setTime(time)}
+              value={time}
+              label='TimePicker with label'
+            />
 
-              <RubiwinTimePicker
-                onChange={(time) => setTime(time)}
-                value={time}
-                label='TimePicker with label and error'
-                showErrors
-                hasError
-              />
+            <RubiwinTimePicker
+              onChange={(time) => setTime(time)}
+              value={time}
+              label='TimePicker with label and error'
+              showErrors
+              hasError
+            />
 
-              <RubiwinTimePicker
-                onChange={(time) => setTime(time)}
-                value={time}
-                disabled
-              />
-            </LocalizationProvider>
+            <RubiwinTimePicker
+              onChange={(time) => setTime(time)}
+              value={time}
+              disabled
+            />
 
             <AmazonTimePicker
               value={time}
@@ -1700,7 +1697,7 @@ const ShipperShowCase = () => {
             <ShipperCard
               startIcon='tailLift'
               value='tailLift'
-              labelOne='Label with two lines'
+              labelOne='tailLift'
               disabled={false}
               selectedValue={selectedFeatures}
               setSelectedValue={setSelectedFeatures}
@@ -1712,7 +1709,7 @@ const ShipperShowCase = () => {
             <ShipperCard
               startIcon='sideLoad'
               value='sideLoad'
-              labelOne='Label'
+              labelOne='sideLoad'
               disabled={false}
               selectedValue={selectedFeatures}
               setSelectedValue={setSelectedFeatures}

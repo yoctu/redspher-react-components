@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { TextField } from '@mui/material'
-import { DesktopDatePicker } from '@mui/lab'
+import { DesktopDatePicker, LocalizationProvider } from '@mui/x-date-pickers'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 
 import DatePickerIcon from '../../icons/Rubiwin/DatePickerIcon'
 
 const RubiwinDatePicker = ({
   open = false,
-  dateFormat = 'DD/MM/YYYY',
+  dateFormat = 'dd/MM/yyyy',
   label,
   value,
   onChange,
@@ -16,58 +17,61 @@ const RubiwinDatePicker = ({
   hasError,
   helperText,
   name,
+  locale,
   ...props
 }) => {
   const [openLocal, setOpen] = useState(open)
   return (
-    <DesktopDatePicker
-      open={openLocal}
-      inputFormat={dateFormat}
-      label={label}
-      value={value}
-      onOpen={() => setOpen(true)}
-      onClose={() => setOpen(false)}
-      onChange={onChange}
-      renderInput={({ error, ...props }) => (
-        <TextField
-          fullWidth
-          variant='standard'
-          onClick={() => setOpen(true)}
-          id={id}
-          error={showErrors && (error || hasError)}
-          helperText={helperText}
-          name={name}
-          {...props}
-        />
-      )}
-      components={{
-        OpenPickerIcon: DatePickerIcon
-      }}
-      OpenPickerButtonProps={{
-        sx: {
-          p: 0,
-          mr: 0,
-          '&:hover': {
-            backgroundColor: 'transparent'
+    <LocalizationProvider adapterLocale={locale} dateAdapter={AdapterDateFns}>
+      <DesktopDatePicker
+        open={openLocal}
+        inputFormat={dateFormat}
+        label={label}
+        value={value}
+        onOpen={() => setOpen(true)}
+        onClose={() => setOpen(false)}
+        onChange={onChange}
+        renderInput={({ error, ...props }) => (
+          <TextField
+            fullWidth
+            variant='standard'
+            onClick={() => setOpen(true)}
+            id={id}
+            error={showErrors && (error || hasError)}
+            helperText={helperText}
+            name={name}
+            {...props}
+          />
+        )}
+        components={{
+          OpenPickerIcon: DatePickerIcon
+        }}
+        OpenPickerButtonProps={{
+          sx: {
+            p: 0,
+            mr: 0,
+            '&:hover': {
+              backgroundColor: 'transparent'
+            }
           }
-        }
-      }}
-      InputProps={{
-        sx: {
-          input: {
+        }}
+        InputProps={{
+          sx: {
+            input: {
+              height: 'auto',
+              minHeight: '1.4375em'
+            }
+          }
+        }}
+        InputAdornmentProps={{
+          sx: {
             height: 'auto',
-            minHeight: '1.4375em'
+            width: '1.5rem'
           }
-        }
-      }}
-      InputAdornmentProps={{
-        sx: {
-          height: 'auto',
-          width: '1.5rem'
-        }
-      }}
-      {...props}
-    />
+        }}
+        {...props}
+      />
+    </LocalizationProvider>
   )
 }
 
@@ -80,7 +84,8 @@ RubiwinDatePicker.propTypes = {
   hasError: PropTypes.bool,
   showErrors: PropTypes.bool,
   helperText: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  locale: PropTypes.string
 }
 
 export default RubiwinDatePicker

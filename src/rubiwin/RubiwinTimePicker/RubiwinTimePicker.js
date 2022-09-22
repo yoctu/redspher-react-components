@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { TextField } from '@mui/material'
-import { TimePicker } from '@mui/lab'
+import { TimePicker, LocalizationProvider } from '@mui/x-date-pickers'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 
 import TimerIcon from '../../icons/Rubiwin/TimerIcon'
 
@@ -13,49 +14,54 @@ const RubiwinTimePicker = ({
   showErrors,
   hasError,
   id,
+  locale,
+  ampm = false,
   ...props
 }) => {
   return (
-    <TimePicker
-      label={label}
-      value={value}
-      onChange={onChange}
-      InputProps={{
-        sx: {
-          input: {
-            height: 'auto',
-            minHeight: '1.4375em'
+    <LocalizationProvider adapterLocale={locale} dateAdapter={AdapterDateFns}>
+      <TimePicker
+        ampm={ampm}
+        label={label}
+        value={value}
+        onChange={onChange}
+        InputProps={{
+          sx: {
+            input: {
+              height: 'auto',
+              minHeight: '1.4375em'
+            }
           }
-        }
-      }}
-      components={{
-        OpenPickerIcon: TimerIcon
-      }}
-      renderInput={({ error, ...params }) => {
-        return (
-          <TextField
-            fullWidth
-            variant='standard'
-            helperText={helperText}
-            error={showErrors && (error || hasError)}
-            id={id}
-            {...params}
-          />
-        )
-      }}
-      OpenPickerButtonProps={{
-        sx: {
-          pointerEvents: 'none',
-          p: 0,
-          mr: 0,
-          '&:hover': {
-            backgroundColor: 'transparent'
-          }
-        },
-        tabIndex: -1
-      }}
-      {...props}
-    />
+        }}
+        components={{
+          OpenPickerIcon: TimerIcon
+        }}
+        renderInput={({ error, ...params }) => {
+          return (
+            <TextField
+              fullWidth
+              variant='standard'
+              helperText={helperText}
+              error={showErrors && (error || hasError)}
+              id={id}
+              {...params}
+            />
+          )
+        }}
+        OpenPickerButtonProps={{
+          sx: {
+            pointerEvents: 'none',
+            p: 0,
+            mr: 0,
+            '&:hover': {
+              backgroundColor: 'transparent'
+            }
+          },
+          tabIndex: -1
+        }}
+        {...props}
+      />
+    </LocalizationProvider>
   )
 }
 
@@ -65,7 +71,9 @@ RubiwinTimePicker.propTypes = {
   onChange: PropTypes.func,
   helperText: PropTypes.node,
   hasError: PropTypes.bool,
-  showErrors: PropTypes.bool
+  showErrors: PropTypes.bool,
+  ampm: PropTypes.bool,
+  locale: PropTypes.string
 }
 
 export default RubiwinTimePicker
