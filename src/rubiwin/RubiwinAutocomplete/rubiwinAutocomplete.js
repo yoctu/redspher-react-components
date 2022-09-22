@@ -49,7 +49,7 @@ const RubiwinAutocomplete = ({
         <TextField
           {...params}
           label={label}
-          placeholder={label}
+          placeholder={placeholder}
           name={name}
           variant='standard'
           error={showErrors && hasError}
