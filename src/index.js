@@ -208,6 +208,7 @@ import EditIcon from './icons/Shipper/EditIcon'
 import PrintIcon from './icons/Shipper/PrintIcon/PrintIcon'
 import E4PlaneIcon from './icons/Shipper/E4PlaneIcon/E4PlaneIcon'
 import StopWatchIcon from './icons/Shipper/StopWatchIcon'
+import MessageIcon from './icons/Shipper/MessageIcon'
 
 export {
   RubiwinButton,
@@ -412,5 +413,6 @@ export {
   ShipperErrorPopover,
   ShipperRequestStepper,
   E4PlaneIcon,
-  StopWatchIcon
+  StopWatchIcon,
+  MessageIcon
 }
