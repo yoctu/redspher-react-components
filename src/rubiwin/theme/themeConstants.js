@@ -41,16 +41,18 @@ export const colors = {
   }
 }
 
+export const breakpoints = {
+  xs: 0,
+  sm: 600,
+  md: 960,
+  lg: 1280,
+  xl: 1920
+}
+
 export const constants = {
   ...colors,
   spacing: 8,
-  breakpoints: {
-    lg: 1280,
-    md: 960,
-    sm: 600,
-    xl: 1920,
-    xs: 0
-  },
+  breakpoints,
   borderRadius: {
     sm: '8px',
     main: '16px'

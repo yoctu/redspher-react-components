@@ -16,7 +16,9 @@ import RubiwinPagination from './rubiwin/RubiwinPagination'
 import RubiwinDatePicker from './rubiwin/RubiwinDatePicker'
 import RubiwinTimePicker from './rubiwin/RubiwinTimePicker'
 import RubiwinThemeProvider from './rubiwin/theme/RubiwinThemeProvider'
-import rubiwinBaseTheme from './rubiwin/theme/RubiwinBaseTheme'
+import rubiwinBaseTheme, {
+  theme as rubiwinMuiTheme
+} from './rubiwin/theme/RubiwinBaseTheme'
 import E4pThemeProvider from './rubiwin/theme/E4pThemeProvider'
 import E4pTheme from './rubiwin/theme/E4pTheme'
 
@@ -402,6 +404,7 @@ export {
   ShipperSwitch,
   ShipperItem,
   ShipperCheckbox,
+  rubiwinMuiTheme,
   rubiwinBaseTheme,
   ShipperBaseTheme,
   E4pTheme,
