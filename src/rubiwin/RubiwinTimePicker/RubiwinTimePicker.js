@@ -73,7 +73,7 @@ RubiwinTimePicker.propTypes = {
   hasError: PropTypes.bool,
   showErrors: PropTypes.bool,
   ampm: PropTypes.bool,
-  locale: PropTypes.string
+  locale: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
 }
 
 export default RubiwinTimePicker

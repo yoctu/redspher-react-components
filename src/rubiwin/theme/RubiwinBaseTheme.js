@@ -1,8 +1,16 @@
-import themeConstants, { colors, typographies } from './themeConstants'
+import themeConstants, {
+  breakpoints,
+  colors,
+  typographies
+} from './themeConstants'
+import { createTheme } from '@mui/material/styles'
 
 const rubiwinBaseTheme = {
   palette: colors,
   typography: typographies,
+  breakpoints: {
+    values: breakpoints
+  },
   overrides: {
     MuiButton: {
       contained: {
@@ -696,5 +704,7 @@ const rubiwinBaseTheme = {
     }
   }
 }
+
+export const theme = createTheme(rubiwinBaseTheme)
 
 export default rubiwinBaseTheme

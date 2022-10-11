@@ -85,7 +85,7 @@ RubiwinDatePicker.propTypes = {
   showErrors: PropTypes.bool,
   helperText: PropTypes.string,
   name: PropTypes.string,
-  locale: PropTypes.string
+  locale: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
 }
 
 export default RubiwinDatePicker

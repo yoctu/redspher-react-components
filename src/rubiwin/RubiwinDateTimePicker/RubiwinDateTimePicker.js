@@ -87,7 +87,7 @@ RubiwinDateTimePicker.propTypes = {
   variant: PropTypes.string,
   /** on error callback */
   onError: PropTypes.func,
-  locale: PropTypes.string
+  locale: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
 }
 
 export default RubiwinDateTimePicker
