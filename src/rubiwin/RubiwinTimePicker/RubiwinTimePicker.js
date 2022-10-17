@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { TextField } from '@mui/material'
-import { TimePicker, LocalizationProvider } from '@mui/x-date-pickers'
+import { DesktopTimePicker, LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 
 import TimerIcon from '../../icons/Rubiwin/TimerIcon'
@@ -20,7 +20,7 @@ const RubiwinTimePicker = ({
 }) => {
   return (
     <LocalizationProvider adapterLocale={locale} dateAdapter={AdapterDateFns}>
-      <TimePicker
+      <DesktopTimePicker
         ampm={ampm}
         label={label}
         value={value}
