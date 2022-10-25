@@ -1,6 +1,6 @@
 {
   "name": "redspher-components",
-  "version": "1.16.1",
+  "version": "1.17.0",
   "description": "reusable components for redspher",
   "author": "Vincent Racelle",
   "license": "MIT",
@@ -12,8 +12,8 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "build": "microbundle-crl --compress false --format modern,cjs",
+    "start": "microbundle-crl watch --compress false --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
