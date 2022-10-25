@@ -8,12 +8,13 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
+  "umd:main": "dist/index.umd.js",
   "engines": {
     "node": ">=14"
   },
   "scripts": {
-    "build": "microbundle-crl --compress false --format modern,cjs",
-    "start": "microbundle-crl watch --compress false --format modern,cjs",
+    "build": "microbundle-crl --compress false",
+    "start": "microbundle-crl watch --compress false",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
