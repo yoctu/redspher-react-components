@@ -7,7 +7,6 @@ import {
   RubiwinFormLabel,
   RubiwinSquareButton,
   RubiwinBackButton,
-  AmazonTimePicker,
   RubiwinDateTimePicker,
   RubiwinTimePicker,
   RubiwinActionIcon,
@@ -831,11 +830,6 @@ const RubiWinShowCase = () => {
               disabled
             />
 
-            <AmazonTimePicker
-              value={time}
-              onClick={(event) => event.target.focus()}
-              onChange={(value) => setTime(value)}
-            />
             <RubiwinDateTimePicker
               value={selectedDate}
               onChange={handleDateChange}
