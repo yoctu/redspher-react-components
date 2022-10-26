@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function HourIcon(props: any) {
   return (
@@ -33,7 +32,7 @@ function HourIcon(props: any) {
         strokeLinecap='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default HourIcon
+export default HourIcon;

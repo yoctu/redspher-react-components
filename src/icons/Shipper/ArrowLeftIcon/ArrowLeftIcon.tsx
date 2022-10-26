@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function ArrowLeftIcon(props: any) {
   return (
@@ -14,7 +13,7 @@ function ArrowLeftIcon(props: any) {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default ArrowLeftIcon
+export default ArrowLeftIcon;

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function InvoiceIcon(props: any) {
   return (
@@ -32,7 +31,7 @@ function InvoiceIcon(props: any) {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default InvoiceIcon
+export default InvoiceIcon;

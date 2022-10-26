@@ -1,11 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
-import { Box } from '@mui/material'
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { Box } from '@mui/material';
+import { OverridableComponent } from '@mui/material/OverridableComponent';
+import { BoxTypeMap } from '@mui/material/Box/Box';
 
-const RubiwinBackButton = ({ onClick, text }: any) => (
+interface IrubiwinBackButton extends OverridableComponent<BoxTypeMap> {
+  text?: Element | string;
+}
+
+const RubiwinBackButton = ({ text, ...props }: IrubiwinBackButton) => (
   <Box
-    onClick={onClick}
     sx={{
       fontFamily: (theme) => theme.typography.fontFamily,
       cursor: 'pointer',
@@ -14,15 +17,11 @@ const RubiwinBackButton = ({ onClick, text }: any) => (
       alignItems: 'center',
       padding: '5px'
     }}
+    {...props}
   >
     <ArrowBackIosIcon />
     {text}
   </Box>
-)
+);
 
-RubiwinBackButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  text: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-}
-
-export default RubiwinBackButton
+export default RubiwinBackButton;

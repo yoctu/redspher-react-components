@@ -1,17 +1,34 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import { TextField } from '@mui/material'
-import { DesktopDatePicker, LocalizationProvider } from '@mui/x-date-pickers'
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
+import { useState } from 'react';
+import { TextField } from '@mui/material';
+import { DesktopDatePicker, LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { DesktopDatePickerProps } from '@mui/x-date-pickers/DesktopDatePicker/DesktopDatePicker';
 
-import DatePickerIcon from '../../icons/Rubiwin/DatePickerIcon'
+import DatePickerIcon from '../../icons/Rubiwin/DatePickerIcon';
 
+interface IrubiwinDatePicker
+  extends Omit<DesktopDatePickerProps<any, any>, 'renderInput'> {
+  dateFormat?: string;
+  hasError?: boolean;
+  showErrors?: boolean;
+  helperText?: string;
+  name?: string;
+  locale?: string | object;
+  id?: string;
+}
+
+/**
+ * This is a Mui DesktopDatePicker branded for Rubiwin
+ *
+ * Demos:
+ * - [Date Picker](https://mui.com/x/react-date-pickers/date-picker/)
+ *
+ * API:
+ * - [DesktopDatePicker API](https://mui.com/x/api/date-pickers/desktop-date-picker/)
+ */
 const RubiwinDatePicker = ({
   open = false,
   dateFormat = 'dd/MM/yyyy',
-  label,
-  value,
-  onChange,
   id,
   showErrors,
   hasError,
@@ -19,18 +36,15 @@ const RubiwinDatePicker = ({
   name,
   locale,
   ...props
-}: any) => {
-  const [openLocal, setOpen] = useState(open)
+}: IrubiwinDatePicker) => {
+  const [openLocal, setOpen] = useState(open);
   return (
     <LocalizationProvider adapterLocale={locale} dateAdapter={AdapterDateFns}>
       <DesktopDatePicker
         open={openLocal}
         inputFormat={dateFormat}
-        label={label}
-        value={value}
         onOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
-        onChange={onChange}
         renderInput={({ error, ...props }) => (
           <TextField
             fullWidth
@@ -72,20 +86,7 @@ const RubiwinDatePicker = ({
         {...props}
       />
     </LocalizationProvider>
-  )
-}
+  );
+};
 
-RubiwinDatePicker.propTypes = {
-  open: PropTypes.bool,
-  dateFormat: PropTypes.string,
-  label: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  onChange: PropTypes.func,
-  hasError: PropTypes.bool,
-  showErrors: PropTypes.bool,
-  helperText: PropTypes.string,
-  name: PropTypes.string,
-  locale: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
-}
-
-export default RubiwinDatePicker
+export default RubiwinDatePicker;

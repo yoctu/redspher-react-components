@@ -1,1 +1,1 @@
-export { default } from './RubiwinButton'
+export { default } from './RubiwinButton';

@@ -1,1 +1,1 @@
-export { default } from './NumberCircleStrokeIcon'
+export { default } from './NumberCircleStrokeIcon';

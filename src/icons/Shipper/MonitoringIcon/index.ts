@@ -1,1 +1,1 @@
-export { default } from './MonitoringIcon'
+export { default } from './MonitoringIcon';

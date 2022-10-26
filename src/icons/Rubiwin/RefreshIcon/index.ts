@@ -1,1 +1,1 @@
-export { default } from './RefreshIcon'
+export { default } from './RefreshIcon';

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function SemiIcon(props: any) {
   return (
@@ -102,7 +101,7 @@ function SemiIcon(props: any) {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default SemiIcon
+export default SemiIcon;

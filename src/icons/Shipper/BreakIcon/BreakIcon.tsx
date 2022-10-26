@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function BreakIcon(props: any) {
   return (
@@ -36,7 +35,7 @@ function BreakIcon(props: any) {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default BreakIcon
+export default BreakIcon;

@@ -1,26 +1,35 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": [
-    "standard",
-    "standard-react",
-    "plugin:prettier/recommended",
-    "prettier/standard",
-    "prettier/react"
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/jsx-runtime",
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@babel", "prettier", "@typescript-eslint", "jest"],
   "env": {
-    "node": true
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
   },
   "parserOptions": {
     "ecmaVersion": 2020,
+    "sourceType": "module",
     "ecmaFeatures": {
-      "legacyDecorators": true,
       "jsx": true
     }
   },
   "settings": {
     "react": {
       "version": "17"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   },
   "rules": {
@@ -30,6 +39,43 @@
     "react/jsx-fragments": 0,
     "react/no-unused-prop-types": 0,
     "import/export": 0,
-    "no-alert": 0
+    "prettier/prettier": [
+      2,
+      {
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "semi": true,
+        "tabWidth": 2,
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "arrowParens": "always",
+        "trailingComma": "none"
+      }
+    ],
+    "no-alert": 0,
+    "@typescript-eslint/ban-types": 1,
+    "@typescript-eslint/ban-ts-comment": 1,
+    "no-unused-vars": 0,
+    "@typescript-eslint/no-unused-vars": 2,
+    "react/jsx-filename-extension": 0,
+    "import/extensions": 0,
+    "no-restricted-exports": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/function-component-definition": 0,
+    "react/require-default-props": 0,
+    "react/forbid-prop-types": 0,
+    "react/no-array-index-key": 0,
+    "no-shadow": 0,
+    "react/no-unstable-nested-components": 0,
+    "no-restricted-globals": 0,
+    "no-unsafe-optional-chaining": 0,
+    "no-nested-ternary": 0,
+    "react/destructuring-assignment": 0,
+    "no-param-reassign": 0,
+    "no-unused-expressions": 0,
+    "react/jsx-no-useless-fragment": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "prefer-spread": 0
   }
 }

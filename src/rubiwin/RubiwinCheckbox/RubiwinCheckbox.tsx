@@ -1,12 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Checkbox from '@mui/material/Checkbox'
-import CheckboxIcon from '../../icons/Rubiwin/CheckboxIcon'
-import CheckboxBlankIcon from '../../icons/Rubiwin/CheckboxBlankIcon'
-import CheckboxIndeterminateIcon from '../../icons/Rubiwin/CheckboxIndeterminateIcon'
+import Checkbox from '@mui/material/Checkbox';
+import { CheckboxProps } from '@mui/material/Checkbox/Checkbox';
 
-/** this is a Mui Checkbox branded for Rubiwin
- * full dod : https://material-ui.com/api/checkbox/
+import CheckboxIcon from '../../icons/Rubiwin/CheckboxIcon';
+import CheckboxBlankIcon from '../../icons/Rubiwin/CheckboxBlankIcon';
+import CheckboxIndeterminateIcon from '../../icons/Rubiwin/CheckboxIndeterminateIcon';
+
+interface IrubiwinCheckbox extends CheckboxProps {
+  checked?: boolean;
+  className?: string;
+  disabled?: boolean;
+  size?: 'small' | 'medium';
+  value?: string | number;
+  name?: string;
+}
+
+/**
+ * This is a Mui Checkbox branded for Rubiwin
+ *
+ * Demos:
+ *
+ * - [Checkboxes](https://mui.com/components/checkboxes/)
+ * - [Transfer List](https://mui.com/components/transfer-list/)
+ *
+ * API:
+ *
+ * - [Checkbox API](https://mui.com/api/checkbox/)
+ * - inherits [ButtonBase API](https://mui.com/api/button-base/)
  */
 const RubiwinCheckbox = ({
   checked = false,
@@ -19,7 +38,7 @@ const RubiwinCheckbox = ({
   value,
   name,
   ...props
-}: any) => (
+}: IrubiwinCheckbox) => (
   <Checkbox
     checked={checked}
     className={className}
@@ -36,27 +55,6 @@ const RubiwinCheckbox = ({
     indeterminateIcon={<CheckboxIndeterminateIcon />}
     {...props}
   />
-)
+);
 
-RubiwinCheckbox.propTypes = {
-  /** component is checked or not */
-  checked: PropTypes.bool,
-  /** add a class to overload styles */
-  className: PropTypes.string,
-  /** disable checkbox */
-  disabled: PropTypes.bool,
-  /** set id of components */
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  /** on Change */
-  onChange: PropTypes.func,
-  /** size */
-  size: PropTypes.oneOf(['small', 'medium']),
-  /** pass a ref to the input element */
-  inputRef: PropTypes.string,
-  /** value of input */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  /** name attribute of input */
-  name: PropTypes.string
-}
-
-export default RubiwinCheckbox
+export default RubiwinCheckbox;

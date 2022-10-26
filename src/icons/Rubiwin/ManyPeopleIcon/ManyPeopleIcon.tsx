@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function ManyPeopleIcon({ primarycolor, ...props }: any) {
   return (
@@ -30,7 +29,7 @@ function ManyPeopleIcon({ primarycolor, ...props }: any) {
         fillOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default ManyPeopleIcon
+export default ManyPeopleIcon;

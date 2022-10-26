@@ -1,1 +1,1 @@
-export { default } from './PickupDetailsIcon'
+export { default } from './PickupDetailsIcon';

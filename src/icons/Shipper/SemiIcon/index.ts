@@ -1,1 +1,1 @@
-export { default } from './SemiIcon'
+export { default } from './SemiIcon';

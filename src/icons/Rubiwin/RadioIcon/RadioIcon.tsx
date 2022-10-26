@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function RadioIcon({ primarycolor, secondarycolor, ...props }: any) {
   return (
@@ -24,7 +23,7 @@ function RadioIcon({ primarycolor, secondarycolor, ...props }: any) {
         strokeOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default RadioIcon
+export default RadioIcon;

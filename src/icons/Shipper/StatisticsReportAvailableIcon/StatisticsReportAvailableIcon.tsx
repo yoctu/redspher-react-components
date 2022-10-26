@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function StatisticsReportAvailableIcon(props: any) {
   return (
@@ -74,7 +73,7 @@ function StatisticsReportAvailableIcon(props: any) {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default StatisticsReportAvailableIcon
+export default StatisticsReportAvailableIcon;

@@ -1,1 +1,1 @@
-export { default } from './SideLoadIcon'
+export { default } from './SideLoadIcon';

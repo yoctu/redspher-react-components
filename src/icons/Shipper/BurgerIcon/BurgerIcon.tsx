@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function BurgerIcon(props: any) {
   return (
@@ -27,7 +26,7 @@ function BurgerIcon(props: any) {
         strokeWidth='2'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default BurgerIcon
+export default BurgerIcon;

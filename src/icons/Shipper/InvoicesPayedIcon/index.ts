@@ -1,1 +1,1 @@
-export { default } from './InvoicesPayedIcon'
+export { default } from './InvoicesPayedIcon';

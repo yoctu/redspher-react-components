@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function HelpIcon(props: any) {
   return (
@@ -33,7 +32,7 @@ function HelpIcon(props: any) {
         strokeWidth='0.5'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default HelpIcon
+export default HelpIcon;

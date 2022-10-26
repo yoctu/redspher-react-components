@@ -1,1 +1,1 @@
-export { default } from './ShipperSelect'
+export { default } from './ShipperSelect';

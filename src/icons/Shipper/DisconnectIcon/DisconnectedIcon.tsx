@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function DisconnectedIcon(props: any) {
   return (
@@ -22,7 +21,7 @@ function DisconnectedIcon(props: any) {
         strokeLinecap='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default DisconnectedIcon
+export default DisconnectedIcon;

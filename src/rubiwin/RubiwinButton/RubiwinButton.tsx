@@ -1,31 +1,44 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Button from '@mui/material/Button'
-import { darken } from '@mui/material/styles'
+import Button from '@mui/material/Button';
+import { darken } from '@mui/material/styles';
+import { ExtendButtonBase } from '@mui/material/ButtonBase';
+import { ButtonTypeMap } from '@mui/material/Button/Button';
 
-/** This is a RubiwinButton branded for Rubiwin
- * full doc : https://material-ui.com/api/button/ */
+interface IrubiwinButton extends ExtendButtonBase<ButtonTypeMap> {
+  text: string;
+  className?: string;
+  disabled?: boolean;
+  fullWidth?: boolean;
+  href?: string;
+  size?: 'small' | 'medium' | 'large';
+}
+
+/**
+ * This is a Mui Button branded for Rubiwin
+ *
+ * Demos:
+ * - [Button Group](https://mui.com/components/button-group/)
+ * - [Buttons](https://mui.com/components/buttons/)
+ *
+ * API:
+ * - [Button API](https://mui.com/api/button/)
+ * - inherits [ButtonBase API](https://mui.com/api/button-base/)
+ */
 const RubiwinButton = ({
   text,
-  onClick,
   className = '',
   disabled = false,
   fullWidth = false,
   href,
   size = 'medium',
-  endIcon,
-  startIcon
-}: any) => (
+  ...props
+}: IrubiwinButton) => (
   <Button
     variant='contained'
-    onClick={onClick}
     className={className}
     disabled={disabled}
     fullWidth={fullWidth}
     href={href}
     size={size}
-    endIcon={endIcon}
-    startIcon={startIcon}
     sx={{
       fontFamily: (theme) => theme.typography.fontFamily,
       // @ts-ignore
@@ -48,30 +61,10 @@ const RubiwinButton = ({
         color: 'white'
       }
     }}
+    {...props}
   >
     {text}
   </Button>
-)
+);
 
-RubiwinButton.propTypes = {
-  /** text to display, it can be <Translate> component too */
-  text: PropTypes.string.isRequired,
-  /** function to handleButton behavior **/
-  onClick: PropTypes.func,
-  /** additional classname if you want to overload styles */
-  className: PropTypes.string,
-  /** disabled RubiwinButton */
-  disabled: PropTypes.bool,
-  /** make the RubiwinButton take the fullWidth of the parent */
-  fullWidth: PropTypes.bool,
-  /** link to another page */
-  href: PropTypes.string,
-  /** can be small, medium, large */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /** icon before text */
-  startIcon: PropTypes.element,
-  /** icon after text */
-  endIcon: PropTypes.element
-}
-
-export default RubiwinButton
+export default RubiwinButton;

@@ -1,1 +1,1 @@
-export { default } from './PercentageIcon'
+export { default } from './PercentageIcon';

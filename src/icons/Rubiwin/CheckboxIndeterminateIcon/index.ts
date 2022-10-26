@@ -1,1 +1,1 @@
-export { default } from './CheckboxIndeterminateIcon'
+export { default } from './CheckboxIndeterminateIcon';

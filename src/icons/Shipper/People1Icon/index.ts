@@ -1,1 +1,1 @@
-export { default } from './People1Icon'
+export { default } from './People1Icon';

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function CaretLeftIcon({ primarycolor, ...props }: any) {
   return (
@@ -11,7 +10,7 @@ function CaretLeftIcon({ primarycolor, ...props }: any) {
         fillOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default CaretLeftIcon
+export default CaretLeftIcon;

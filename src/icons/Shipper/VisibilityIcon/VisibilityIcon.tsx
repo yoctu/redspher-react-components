@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function VisibilityIcon(props: any) {
   return (
@@ -21,7 +20,7 @@ function VisibilityIcon(props: any) {
         }
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default VisibilityIcon
+export default VisibilityIcon;

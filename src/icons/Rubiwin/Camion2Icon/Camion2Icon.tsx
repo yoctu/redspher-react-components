@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function Camion2Icon({ primarycolor, ...props }: any) {
   return (
@@ -41,7 +40,7 @@ function Camion2Icon({ primarycolor, ...props }: any) {
         fillOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default Camion2Icon
+export default Camion2Icon;

@@ -1,7 +1,6 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
+import { SvgIcon } from '@mui/material';
 
-function DirectBusinessIcon({ primarycolor, ...props }: any) {
+function DirectBusinessIcon(props: any) {
   return (
     <SvgIcon {...props} viewBox='0 0 24 24'>
       <ellipse
@@ -59,7 +58,7 @@ function DirectBusinessIcon({ primarycolor, ...props }: any) {
         </clipPath>
       </defs>
     </SvgIcon>
-  )
+  );
 }
 
-export default DirectBusinessIcon
+export default DirectBusinessIcon;

@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { DropzoneArea } from 'react-mui-dropzone'
-import UploadIcon from '../../icons/Shipper/UploadIcon'
-import LoadingIcon from '../../icons/Shipper/LoadingIcon'
-import CheckIcon from '../../icons/Shipper/CheckIcon'
-import DeleteIcon from '../../icons/Shipper/DeleteIcon'
-import WarningIcon from '../../icons/Shipper/WarningIcon'
-import { Box, LinearProgress } from '@mui/material'
-import { createStyles, makeStyles } from '@mui/styles'
-import { styled } from '@mui/system'
-import themeConstants from '../theme/themeConstants'
+import { useEffect, useState } from 'react';
+import { DropzoneArea } from 'react-mui-dropzone';
+import { Box, LinearProgress } from '@mui/material';
+import { createStyles, makeStyles } from '@mui/styles';
+import { styled } from '@mui/system';
+import UploadIcon from '../../icons/Shipper/UploadIcon';
+import LoadingIcon from '../../icons/Shipper/LoadingIcon';
+import CheckIcon from '../../icons/Shipper/CheckIcon';
+import DeleteIcon from '../../icons/Shipper/DeleteIcon';
+import WarningIcon from '../../icons/Shipper/WarningIcon';
+import themeConstants from '../theme/themeConstants';
 
-const useStyles = makeStyles(() => {
-  return createStyles({
+const useStyles = makeStyles(() =>
+  createStyles({
     root: {
       width: '100%',
       padding: '10px',
@@ -36,7 +36,7 @@ const useStyles = makeStyles(() => {
       margin: 'auto'
     }
   })
-})
+);
 
 const IconFile = styled('span')`
   max-width: 20px;
@@ -68,28 +68,26 @@ const IconFile = styled('span')`
     width: 20px;
     height: 20px;
   }
-`
+`;
 
 const Error = styled('span')`
-  font-family: ${(theme) => {
+  font-family: ${(theme) =>
     // @ts-ignore
-    return theme.typography.fontFamily
-  }};
+    theme.typography.fontFamily};
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  color: ${(theme) => {
+  color: ${(theme) =>
     // @ts-ignore
-    return theme.palette.red.main
-  }};
+    theme.palette.red.main};
   margin: 5px auto 0;
   display: flex;
 
   & svg {
     margin: auto 10px auto 0;
   }
-`
+`;
 
 /**
  * @param uploadStatus
@@ -109,11 +107,11 @@ function DragAndDrop({
   errorMessage = 'Error: The file can be in the wrong format or too heavy',
   maxFileSize = 5000000
 }) {
-  const [file, setFile] = useState(null)
-  const [progress, setProgress] = useState(0)
-  const [timer, setTimer] = useState(null)
-  const [error, setError] = useState(null)
-  const classes = useStyles()
+  const [file, setFile] = useState(null);
+  const [progress, setProgress] = useState(0);
+  const [timer, setTimer] = useState(null);
+  const [error, setError] = useState(null);
+  const classes = useStyles();
 
   useEffect(() => {
     if (uploadStatus === 'loading') {
@@ -121,40 +119,40 @@ function DragAndDrop({
         const timerId = setInterval(() => {
           setProgress((prevProgress) =>
             prevProgress <= 76 ? prevProgress + 19 : 99
-          )
-        }, 500)
+          );
+        }, 500);
         // @ts-ignore
-        setTimer(timerId)
+        setTimer(timerId);
       }
     } else if (uploadStatus === 'finished') {
       // @ts-ignore
-      clearInterval(timer)
-      setTimer(null)
-      setProgress(100)
+      clearInterval(timer);
+      setTimer(null);
+      setProgress(100);
     } else {
       // @ts-ignore
-      clearInterval(timer)
-      setTimer(null)
-      setProgress(0)
+      clearInterval(timer);
+      setTimer(null);
+      setProgress(0);
     }
-  }, [uploadStatus])
+  }, [uploadStatus]);
 
   const handleChange = (file: any) => {
-    setFile(file)
-    setError(null)
-  }
+    setFile(file);
+    setError(null);
+  };
 
   const reject = () => {
-    setFile(null)
+    setFile(null);
     // @ts-ignore
-    setError(errorMessage)
-  }
+    setError(errorMessage);
+  };
 
   const removeFile = () => {
-    setFile(null)
+    setFile(null);
     // @ts-ignore
-    uploadStatus = null
-  }
+    uploadStatus = null;
+  };
 
   return (
     <div>
@@ -174,12 +172,12 @@ function DragAndDrop({
         acceptedFiles={acceptedFiles}
         maxFileSize={maxFileSize}
         onDropRejected={() => {
-          reject()
+          reject();
         }}
         onChange={(file) => {
           // @ts-ignore
-          onChangeMethod && onChangeMethod(file)
-          handleChange(file)
+          onChangeMethod && onChangeMethod(file);
+          handleChange(file);
         }}
       />
       {/* @ts-ignore */}
@@ -226,7 +224,7 @@ function DragAndDrop({
             <IconFile
               className='clickable'
               onClick={() => {
-                removeFile()
+                removeFile();
               }}
             >
               <DeleteIcon />
@@ -249,7 +247,7 @@ function DragAndDrop({
         />
       )}
     </div>
-  )
+  );
 }
 
-export default DragAndDrop
+export default DragAndDrop;

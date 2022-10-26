@@ -1,5 +1,4 @@
-import React from 'react'
-import { ListItemIcon, ListItemText, MenuItem } from '@mui/material'
+import { ListItemIcon, ListItemText, MenuItem } from '@mui/material';
 
 export default function CustomizedMenus({
   startIcon,
@@ -13,5 +12,5 @@ export default function CustomizedMenus({
       {text ? <ListItemText primary={text} /> : ''}
       {endIcon ? <ListItemIcon>{endIcon}</ListItemIcon> : ''}
     </MenuItem>
-  )
+  );
 }

@@ -1,1 +1,1 @@
-export { default } from './MessageIcon'
+export { default } from './MessageIcon';

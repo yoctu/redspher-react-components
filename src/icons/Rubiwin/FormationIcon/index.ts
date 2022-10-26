@@ -1,1 +1,1 @@
-export { default } from './FormationIcon'
+export { default } from './FormationIcon';

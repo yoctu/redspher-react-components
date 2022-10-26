@@ -1,9 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Pagination, PaginationItem } from '@mui/material'
-import CaretLeftIcon from '../../icons/Rubiwin/CaretLeftIcon'
-import CaretRightIcon from '../../icons/Rubiwin/CaretRightIcon'
+import { Pagination, PaginationItem } from '@mui/material';
+import { PaginationProps } from '@mui/material/Pagination/Pagination';
+import CaretLeftIcon from '../../icons/Rubiwin/CaretLeftIcon';
+import CaretRightIcon from '../../icons/Rubiwin/CaretRightIcon';
 
+interface IrubiwinPagination extends PaginationProps {
+  count: number;
+  onPageChange: Function;
+  page?: number;
+  rowsPerPage?: number;
+  table?: { current: any };
+  spacingScrollTop?: number;
+}
+
+/**
+ * This is a Mui Pagination branded for Rubiwin
+ *
+ * Demos:
+ * - [Pagination](https://mui.com/components/pagination/)
+ *
+ * API:
+ * - [Pagination API](https://mui.com/api/pagination/)
+ */
 const RubiwinPagination = ({
   count,
   onPageChange,
@@ -11,22 +28,22 @@ const RubiwinPagination = ({
   page = 1,
   rowsPerPage = 10,
   spacingScrollTop = 15
-}: any) => {
+}: IrubiwinPagination) => {
   const scrollToTop = (event: any, newPage: any) => {
     if (page !== newPage) {
       if (
         table &&
-        window.scrollY > table.current.offsetTop - spacingScrollTop
+        window.scrollY > table.current?.offsetTop - spacingScrollTop
       ) {
         window.scrollTo({
-          top: table.current.offsetTop - spacingScrollTop,
+          top: table.current?.offsetTop - spacingScrollTop,
           behavior: 'smooth'
-        })
+        });
       }
 
-      onPageChange(event, newPage)
+      onPageChange(event, newPage);
     }
-  }
+  };
 
   return (
     <Pagination
@@ -41,19 +58,7 @@ const RubiwinPagination = ({
       onChange={scrollToTop}
       color='primary'
     />
-  )
-}
+  );
+};
 
-RubiwinPagination.propTypes = {
-  count: PropTypes.number.isRequired,
-  onPageChange: PropTypes.func.isRequired,
-  page: PropTypes.number,
-  rowsPerPage: PropTypes.number,
-  table: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.object })
-  ]),
-  spacingScrollTop: PropTypes.number
-}
-
-export default RubiwinPagination
+export default RubiwinPagination;

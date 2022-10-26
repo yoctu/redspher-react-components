@@ -1,1 +1,1 @@
-export { default } from './ShipperPhoneNumber'
+export { default } from './ShipperPhoneNumber';

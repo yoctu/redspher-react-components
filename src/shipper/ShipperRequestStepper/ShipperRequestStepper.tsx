@@ -1,7 +1,6 @@
-import React from 'react'
-import { Stepper, Step, StepLabel, Box, StepConnector } from '@mui/material'
+import { Stepper, Step, StepLabel, Box, StepConnector } from '@mui/material';
 
-import PinIcon from '../../icons/Shipper/PinIcon'
+import PinIcon from '../../icons/Shipper/PinIcon';
 
 function StepIcon({ iconPrimaryColor, iconSecondaryColor }: any) {
   return (
@@ -11,7 +10,7 @@ function StepIcon({ iconPrimaryColor, iconSecondaryColor }: any) {
         secondarycolor={iconSecondaryColor}
       />
     </div>
-  )
+  );
 }
 
 const ShipperStepper = ({
@@ -19,7 +18,7 @@ const ShipperStepper = ({
   iconPrimaryColor,
   iconSecondaryColor
 }: any) => {
-  const steps = Array.apply('poney', Array(2))
+  const steps = Array.apply('poney', Array(2));
   return (
     <Box
       sx={{
@@ -52,7 +51,7 @@ const ShipperStepper = ({
         ))}
       </Stepper>
     </Box>
-  )
-}
+  );
+};
 
-export default ShipperStepper
+export default ShipperStepper;

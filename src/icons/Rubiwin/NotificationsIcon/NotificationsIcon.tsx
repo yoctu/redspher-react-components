@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function NotificationsIcon({
   primarycolor,
@@ -30,7 +29,7 @@ function NotificationsIcon({
         strokeOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default NotificationsIcon
+export default NotificationsIcon;

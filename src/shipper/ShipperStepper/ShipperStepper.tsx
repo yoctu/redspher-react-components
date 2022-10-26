@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Stepper,
   Step,
@@ -6,11 +5,11 @@ import {
   StepConnector,
   Typography,
   Box
-} from '@mui/material'
-import themeConstants from '../theme/themeConstants'
+} from '@mui/material';
+import themeConstants from '../theme/themeConstants';
 
 function StepIcon(props: any) {
-  const { active, completed, onClick } = props
+  const { active, completed, onClick } = props;
 
   return (
     <Box
@@ -28,7 +27,7 @@ function StepIcon(props: any) {
       }}
       onClick={() => {
         if (completed) {
-          onClick()
+          onClick();
         }
       }}
     >
@@ -65,7 +64,7 @@ function StepIcon(props: any) {
         </svg>
       )}
     </Box>
-  )
+  );
 }
 
 const ShipperStepper = ({ steps, activeStep }: any) => {
@@ -76,17 +75,17 @@ const ShipperStepper = ({ steps, activeStep }: any) => {
         '&:hover': {
           cursor: 'pointer'
         }
-      }
-    } else if (index === activeStep) {
+      };
+    }
+    if (index === activeStep) {
       return {
         color: 'black.dark'
-      }
-    } else {
-      return {
-        color: 'grey.main'
-      }
+      };
     }
-  }
+    return {
+      color: 'grey.main'
+    };
+  };
 
   const getClassNameIcon = (index: any) => {
     if (index < activeStep) {
@@ -94,19 +93,19 @@ const ShipperStepper = ({ steps, activeStep }: any) => {
         '&:hover': {
           cursor: 'pointer'
         }
-      }
-    } else if (index === activeStep) {
-      return {}
-    } else {
-      return {}
+      };
     }
-  }
+    if (index === activeStep) {
+      return {};
+    }
+    return {};
+  };
 
   const onClickAction = (index: any, step: any) => {
     if (index < activeStep) {
-      step.onClick()
+      step.onClick();
     }
-  }
+  };
 
   return (
     <Box
@@ -166,7 +165,7 @@ const ShipperStepper = ({ steps, activeStep }: any) => {
               <Typography
                 sx={getClassNameTypo(index)}
                 onClick={() => {
-                  onClickAction(index, step)
+                  onClickAction(index, step);
                 }}
               >
                 {step.label}
@@ -177,7 +176,7 @@ const ShipperStepper = ({ steps, activeStep }: any) => {
                   // @ts-ignore
                   sx={getClassNameIcon(index)}
                   onClick={() => {
-                    onClickAction(index, step)
+                    onClickAction(index, step);
                   }}
                 >
                   {step.icon}
@@ -188,7 +187,7 @@ const ShipperStepper = ({ steps, activeStep }: any) => {
         ))}
       </Stepper>
     </Box>
-  )
-}
+  );
+};
 
-export default ShipperStepper
+export default ShipperStepper;

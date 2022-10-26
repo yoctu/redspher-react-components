@@ -1,1 +1,1 @@
-export { default } from './ReposIcon'
+export { default } from './ReposIcon';

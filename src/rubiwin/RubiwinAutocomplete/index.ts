@@ -1,1 +1,1 @@
-export { default } from './rubiwinAutocomplete'
+export { default } from './rubiwinAutocomplete';

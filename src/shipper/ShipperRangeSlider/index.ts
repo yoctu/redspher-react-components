@@ -1,1 +1,1 @@
-export { default } from './ShipperRangeSlider'
+export { default } from './ShipperRangeSlider';

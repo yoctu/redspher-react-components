@@ -1,1 +1,1 @@
-export { default } from './AttachmentIcon'
+export { default } from './AttachmentIcon';

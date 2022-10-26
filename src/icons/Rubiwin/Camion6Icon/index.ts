@@ -1,1 +1,1 @@
-export { default } from './Camion6Icon'
+export { default } from './Camion6Icon';

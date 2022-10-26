@@ -1,1 +1,1 @@
-export { default } from './HelpIcon'
+export { default } from './HelpIcon';

@@ -1,15 +1,14 @@
-import * as React from 'react'
-import { Select } from '@mui/material'
-import ArrowBottomIcon from '../../icons/Shipper/ArrowBottomIcon'
-import { createStyles, makeStyles } from '@mui/styles'
+import { Select } from '@mui/material';
+import { createStyles, makeStyles } from '@mui/styles';
+import ArrowBottomIcon from '../../icons/Shipper/ArrowBottomIcon';
 
-const useStyles = makeStyles(() => {
-  return createStyles({
+const useStyles = makeStyles(() =>
+  createStyles({
     dropdown: {
       marginTop: '15px'
     }
   })
-})
+);
 
 export default function ShipperSelect({
   className = '',
@@ -17,7 +16,7 @@ export default function ShipperSelect({
   label,
   ...delegated
 }: any) {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Select
@@ -35,5 +34,5 @@ export default function ShipperSelect({
     >
       {children}
     </Select>
-  )
+  );
 }

@@ -1,14 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import InputLabel from '@mui/material/InputLabel'
+import InputLabel from '@mui/material/InputLabel';
+import { InputLabelProps } from '@mui/material/InputLabel/InputLabel';
 
+interface IrubiwinInputLabel extends InputLabelProps {
+  children?: Node;
+  className?: string;
+  disabled?: boolean;
+  error?: boolean;
+  htmlFor?: string;
+}
+
+/**
+ * This is a Mui InputLabel branded for Rubiwin
+ *
+ * Demos:
+ * - [Text Fields](https://mui.com/components/text-fields/)
+ *
+ * API:
+ * - [InputLabel API](https://mui.com/api/input-label/)
+ * - inherits [FormLabel API](https://mui.com/api/form-label/)
+ */
 const RubiwinInputLabel = ({
   children,
   disabled,
   error,
   htmlFor,
   className
-}: any) => (
+}: IrubiwinInputLabel) => (
   <InputLabel
     disabled={disabled}
     error={error}
@@ -17,19 +34,6 @@ const RubiwinInputLabel = ({
   >
     {children}
   </InputLabel>
-)
+);
 
-RubiwinInputLabel.propTypes = {
-  /** label text */
-  children: PropTypes.node,
-  /** add a className */
-  className: PropTypes.string,
-  /** is disabled */
-  disabled: PropTypes.bool,
-  /** has error state */
-  error: PropTypes.bool,
-  /** htmlFor */
-  htmlFor: PropTypes.string
-}
-
-export default RubiwinInputLabel
+export default RubiwinInputLabel;

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function WebAppIcon({ primarycolor, ...props }: any) {
   return (
@@ -11,7 +10,7 @@ function WebAppIcon({ primarycolor, ...props }: any) {
         strokeOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default WebAppIcon
+export default WebAppIcon;

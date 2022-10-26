@@ -1,1 +1,1 @@
-export { default } from './DetailIcon'
+export { default } from './DetailIcon';

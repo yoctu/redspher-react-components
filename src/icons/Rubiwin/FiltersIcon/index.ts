@@ -1,1 +1,1 @@
-export { default } from './FiltersIcon'
+export { default } from './FiltersIcon';

@@ -1,1 +1,1 @@
-export { default } from './InvoicesOverdueIcon'
+export { default } from './InvoicesOverdueIcon';

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function BusinessDirectIcon({ primarycolor, ...props }: any) {
   return (
@@ -16,7 +15,7 @@ function BusinessDirectIcon({ primarycolor, ...props }: any) {
         fillOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default BusinessDirectIcon
+export default BusinessDirectIcon;

@@ -1,1 +1,1 @@
-export { default } from './PlaneIcon'
+export { default } from './PlaneIcon';

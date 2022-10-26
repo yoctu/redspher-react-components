@@ -1,1 +1,1 @@
-export { default } from './BreakIcon'
+export { default } from './BreakIcon';

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function WarningIcon(props: any) {
   return (
@@ -31,7 +30,7 @@ function WarningIcon(props: any) {
         }
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default WarningIcon
+export default WarningIcon;

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   Grid,
@@ -9,17 +9,17 @@ import {
   Radio,
   Tooltip,
   IconButton
-} from '@mui/material'
-import themeConstants from '../theme/themeConstants'
-import VanIcon from '../../icons/Shipper/VanIcon'
-import BreakIcon from '../../icons/Shipper/BreakIcon'
-import TruckIcon from '../../icons/Shipper/TruckIcon'
-import SemiIcon from '../../icons/Shipper/SemiIcon'
-import InformationIcon from '../../icons/Shipper/InformationIcon'
-import DriverIcon from '../../icons/Shipper/DriverIcon'
-import TailLiftIcon from '../../icons/Shipper/TailLiftIcon'
-import SideLoadIcon from '../../icons/Shipper/SideLoadIcon'
-import WarningIcon from '../../icons/Shipper/WarningIcon'
+} from '@mui/material';
+import themeConstants from '../theme/themeConstants';
+import VanIcon from '../../icons/Shipper/VanIcon';
+import BreakIcon from '../../icons/Shipper/BreakIcon';
+import TruckIcon from '../../icons/Shipper/TruckIcon';
+import SemiIcon from '../../icons/Shipper/SemiIcon';
+import InformationIcon from '../../icons/Shipper/InformationIcon';
+import DriverIcon from '../../icons/Shipper/DriverIcon';
+import TailLiftIcon from '../../icons/Shipper/TailLiftIcon';
+import SideLoadIcon from '../../icons/Shipper/SideLoadIcon';
+import WarningIcon from '../../icons/Shipper/WarningIcon';
 
 const ShipperCard = ({
   startIcon,
@@ -36,7 +36,7 @@ const ShipperCard = ({
   defaultVehicle = false,
   tooltipDefaultValue
 }: any) => {
-  const selectedValueIsArray = Array.isArray(selectedValue)
+  const selectedValueIsArray = Array.isArray(selectedValue);
   const allowedIcons = new Map([
     ['van', VanIcon],
     ['break', BreakIcon],
@@ -45,56 +45,55 @@ const ShipperCard = ({
     ['driver', DriverIcon],
     ['tailLift', TailLiftIcon],
     ['sideLoad', SideLoadIcon]
-  ])
+  ]);
 
   const getIconByName = (name: any) => {
     if (allowedIcons.has(name)) {
-      return allowedIcons.get(name)
-    } else {
-      console.log(
-        "Requested icon does not exist or isn't allowed in this component."
-      )
-      return allowedIcons.get('van')
+      return allowedIcons.get(name);
     }
-  }
+    console.log(
+      "Requested icon does not exist or isn't allowed in this component."
+    );
+    return allowedIcons.get('van');
+  };
 
   // eslint-disable-next-line no-unused-vars
   const onclickAction = () => {
-    if (disabled) return
+    if (disabled) return;
     if (enableUnselect) {
       if (selectedValueIsArray) {
         selectedValue.includes(value)
           ? setSelectedValue(selectedValue.filter((val) => val !== value))
-          : setSelectedValue([...selectedValue, value])
+          : setSelectedValue([...selectedValue, value]);
       } else {
-        selectedValue === value ? setSelectedValue('') : setSelectedValue(value)
+        selectedValue === value
+          ? setSelectedValue('')
+          : setSelectedValue(value);
       }
-    } else {
-      if (!selectedValueIsArray) {
-        setSelectedValue(value)
-      }
+    } else if (!selectedValueIsArray) {
+      setSelectedValue(value);
     }
-    if (onclickFnc) onclickFnc(value)
-  }
+    if (onclickFnc) onclickFnc(value);
+  };
 
-  const [open, setOpen] = useState(false)
-  const [openWarning, setOpenWarning] = useState(false)
+  const [open, setOpen] = useState(false);
+  const [openWarning, setOpenWarning] = useState(false);
 
   const handleTooltipClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   const handleTooltipOpen = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   const handleWarningClose = () => {
-    setOpenWarning(false)
-  }
+    setOpenWarning(false);
+  };
 
   const handleWarningOpen = () => {
-    setOpenWarning(true)
-  }
+    setOpenWarning(true);
+  };
 
   return (
     // @ts-ignore
@@ -299,8 +298,8 @@ const ShipperCard = ({
         </CardContent>
       </CardActionArea>
     </Card>
-  )
-}
+  );
+};
 
 ShipperCard.propTypes = {
   /** text to display as title for the card, it can be <Translate> component too */
@@ -324,6 +323,6 @@ ShipperCard.propTypes = {
   tooltipValue: PropTypes.node,
 
   noInfoIcon: PropTypes.bool
-}
+};
 
-export default ShipperCard
+export default ShipperCard;

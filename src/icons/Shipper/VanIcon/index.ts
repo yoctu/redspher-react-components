@@ -1,1 +1,1 @@
-export { default } from './VanIcon'
+export { default } from './VanIcon';

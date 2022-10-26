@@ -1,1 +1,1 @@
-export { default } from './ClearIcon'
+export { default } from './ClearIcon';

@@ -1,1 +1,1 @@
-export { default } from './PeopleGroupIcon'
+export { default } from './PeopleGroupIcon';

@@ -1,1 +1,1 @@
-export { default } from './ParcelIcon'
+export { default } from './ParcelIcon';

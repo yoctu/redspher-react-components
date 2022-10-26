@@ -1,1 +1,1 @@
-export { default } from './ArrowBottom2Icon'
+export { default } from './ArrowBottom2Icon';

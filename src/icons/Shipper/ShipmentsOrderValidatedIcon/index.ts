@@ -1,1 +1,1 @@
-export { default } from './ShipmentsOrderValidatedIcon'
+export { default } from './ShipmentsOrderValidatedIcon';

@@ -1,1 +1,1 @@
-export { default } from './NotIncludedIcon'
+export { default } from './NotIncludedIcon';

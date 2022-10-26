@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function ShipmentsArrivalPUIcon(props: any) {
   return (
@@ -80,7 +79,7 @@ function ShipmentsArrivalPUIcon(props: any) {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default ShipmentsArrivalPUIcon
+export default ShipmentsArrivalPUIcon;

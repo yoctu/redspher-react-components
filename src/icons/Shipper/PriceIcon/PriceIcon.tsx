@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function PriceIcon(props: any) {
   return (
@@ -20,7 +19,7 @@ function PriceIcon(props: any) {
         }
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default PriceIcon
+export default PriceIcon;

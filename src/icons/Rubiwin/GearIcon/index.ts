@@ -1,1 +1,1 @@
-export { default } from './GearIcon'
+export { default } from './GearIcon';

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function DeliveryDetailsIcon(props: any) {
   return (
@@ -73,7 +72,7 @@ function DeliveryDetailsIcon(props: any) {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default DeliveryDetailsIcon
+export default DeliveryDetailsIcon;

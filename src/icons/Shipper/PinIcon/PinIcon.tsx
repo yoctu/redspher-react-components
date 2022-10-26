@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function PinIcon(props: any) {
   return (
@@ -25,7 +24,7 @@ function PinIcon(props: any) {
         }
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default PinIcon
+export default PinIcon;

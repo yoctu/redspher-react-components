@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function QuotesNewQuoteIcon(props: any) {
   return (
@@ -80,7 +79,7 @@ function QuotesNewQuoteIcon(props: any) {
         strokeLinecap='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default QuotesNewQuoteIcon
+export default QuotesNewQuoteIcon;

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function DeleteIcon(props: any) {
   return (
@@ -30,7 +29,7 @@ function DeleteIcon(props: any) {
         strokeLinecap='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default DeleteIcon
+export default DeleteIcon;

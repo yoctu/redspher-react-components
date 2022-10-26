@@ -1,1 +1,1 @@
-export { default } from './ShipperErrorPopover'
+export { default } from './ShipperErrorPopover';

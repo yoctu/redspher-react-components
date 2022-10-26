@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function AttentionIcon({ primarycolor, secondarycolor, ...props }: any) {
   return (
@@ -28,7 +27,7 @@ function AttentionIcon({ primarycolor, secondarycolor, ...props }: any) {
         </clipPath>
       </defs>
     </SvgIcon>
-  )
+  );
 }
 
-export default AttentionIcon
+export default AttentionIcon;

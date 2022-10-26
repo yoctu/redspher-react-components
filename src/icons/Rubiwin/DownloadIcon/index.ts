@@ -1,1 +1,1 @@
-export { default } from './DownloadIcon'
+export { default } from './DownloadIcon';

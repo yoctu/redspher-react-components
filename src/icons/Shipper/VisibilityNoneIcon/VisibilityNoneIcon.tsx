@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function VisibilityNoneIcon(props: any) {
   return (
@@ -28,7 +27,7 @@ function VisibilityNoneIcon(props: any) {
         strokeLinecap='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default VisibilityNoneIcon
+export default VisibilityNoneIcon;

@@ -1,1 +1,1 @@
-export { default } from './WebAppIcon'
+export { default } from './WebAppIcon';

@@ -1,1 +1,1 @@
-export { default } from './DisconnectedIcon'
+export { default } from './DisconnectedIcon';

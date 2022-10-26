@@ -1,1 +1,1 @@
-export { default } from './BusinessDirectIcon'
+export { default } from './BusinessDirectIcon';

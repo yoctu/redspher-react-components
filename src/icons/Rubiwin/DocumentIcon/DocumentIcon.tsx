@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function DocumentIcon({ primarycolor, ...props }: any) {
   return (
@@ -42,7 +41,7 @@ function DocumentIcon({ primarycolor, ...props }: any) {
         stroke={primarycolor || themeConstants.grey.main}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default DocumentIcon
+export default DocumentIcon;

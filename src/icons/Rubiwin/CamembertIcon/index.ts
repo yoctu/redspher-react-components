@@ -1,1 +1,1 @@
-export { default } from './CamembertIcon'
+export { default } from './CamembertIcon';

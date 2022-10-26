@@ -1,1 +1,1 @@
-export { default } from './AddStepsIcon'
+export { default } from './AddStepsIcon';

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function EmailIcon({ primarycolor, ...props }: any) {
   return (
@@ -19,7 +18,7 @@ function EmailIcon({ primarycolor, ...props }: any) {
         strokeOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default EmailIcon
+export default EmailIcon;

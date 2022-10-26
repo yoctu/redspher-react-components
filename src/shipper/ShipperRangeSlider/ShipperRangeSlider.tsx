@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Box, Slider, Typography } from '@mui/material'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react';
+import { Box, Slider, Typography } from '@mui/material';
+import PropTypes from 'prop-types';
 
 const ShipperRangeSlider = ({
   min,
@@ -9,18 +9,19 @@ const ShipperRangeSlider = ({
   shownLabelFormat,
   showLabel
 }: any) => {
-  const [rangeValue, setRangeValue] = React.useState([min, max])
-  const [shownLabel, setShownLabel] = useState(max - min)
-
-  const handleRangeChange = (event: any, newValue: any) => {
-    setRangeValue(newValue)
-    displayRangeDelta()
-  }
+  const [rangeValue, setRangeValue] = React.useState([min, max]);
+  const [shownLabel, setShownLabel] = useState(max - min);
 
   const displayRangeDelta = () => {
     // @ts-ignore
-    setShownLabel(`${rangeValue[1] - rangeValue[0]}`)
-  }
+    setShownLabel(`${rangeValue[1] - rangeValue[0]}`);
+  };
+
+  const handleRangeChange = (event: any, newValue: any) => {
+    setRangeValue(newValue);
+    displayRangeDelta();
+  };
+
   return (
     <Box sx={{ width: '100%' }}>
       <Slider
@@ -35,16 +36,16 @@ const ShipperRangeSlider = ({
         style={{
           textAlign: 'center',
           minWidth: 'max-content',
-          paddingLeft: (100 * rangeValue[0]) / max + '%',
-          paddingRight: (100 * (max - rangeValue[1])) / max + '%'
+          paddingLeft: `${(100 * rangeValue[0]) / max}%`,
+          paddingRight: `${(100 * (max - rangeValue[1])) / max}%`
         }}
         variant='body2'
       >
         {showLabel ? shownLabelFormat(shownLabel) : ''}
       </Typography>
     </Box>
-  )
-}
+  );
+};
 
 ShipperRangeSlider.propTypes = {
   /** min value for the slider */
@@ -57,6 +58,6 @@ ShipperRangeSlider.propTypes = {
   shownLabelFormat: PropTypes.string,
   /** does it show the label */
   showLabel: PropTypes.bool
-}
+};
 
-export default ShipperRangeSlider
+export default ShipperRangeSlider;

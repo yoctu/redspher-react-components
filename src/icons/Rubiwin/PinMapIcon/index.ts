@@ -1,1 +1,1 @@
-export { default } from './PinMapIcon'
+export { default } from './PinMapIcon';

@@ -1,1 +1,1 @@
-export { default } from './RubiwinDateTimePicker'
+export { default } from './RubiwinDateTimePicker';

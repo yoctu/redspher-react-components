@@ -1,6 +1,6 @@
-import * as React from 'react'
-import Checkbox from '@mui/material/Checkbox'
-import { CheckBoxOutlineBlankRounded, StopRounded } from '@mui/icons-material'
+import * as React from 'react';
+import Checkbox from '@mui/material/Checkbox';
+import { CheckBoxOutlineBlankRounded, StopRounded } from '@mui/icons-material';
 
 export default function IconCheckboxes({ className = '', ...delegated }: any) {
   return (
@@ -39,5 +39,5 @@ export default function IconCheckboxes({ className = '', ...delegated }: any) {
         marginRight: '10px'
       }}
     />
-  )
+  );
 }

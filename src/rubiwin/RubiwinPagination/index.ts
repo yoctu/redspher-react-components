@@ -1,1 +1,1 @@
-export { default } from './RubiwinPagination'
+export { default } from './RubiwinPagination';

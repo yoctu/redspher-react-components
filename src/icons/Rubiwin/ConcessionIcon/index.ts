@@ -1,1 +1,1 @@
-export { default } from './ConcessionIcon'
+export { default } from './ConcessionIcon';

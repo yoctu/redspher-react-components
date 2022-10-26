@@ -1,1 +1,1 @@
-export { default } from './RubiwinRadio'
+export { default } from './RubiwinRadio';

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function ApprovalFlowValidationExpiredIcon(props: any) {
   return (
@@ -94,7 +93,7 @@ function ApprovalFlowValidationExpiredIcon(props: any) {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default ApprovalFlowValidationExpiredIcon
+export default ApprovalFlowValidationExpiredIcon;

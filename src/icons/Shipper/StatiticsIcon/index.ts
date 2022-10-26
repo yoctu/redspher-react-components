@@ -1,1 +1,1 @@
-export { default } from './StatisticsIcon'
+export { default } from './StatisticsIcon';

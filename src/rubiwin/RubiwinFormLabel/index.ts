@@ -1,1 +1,1 @@
-export { default } from './RubiwinFormLabel'
+export { default } from './RubiwinFormLabel';

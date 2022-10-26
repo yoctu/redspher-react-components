@@ -1,1 +1,1 @@
-export { default } from './ShipperCardInvoice'
+export { default } from './ShipperCardInvoice';

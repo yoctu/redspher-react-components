@@ -1,1 +1,1 @@
-export { default } from './ShipperCheckbox'
+export { default } from './ShipperCheckbox';

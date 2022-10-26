@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function BurgerMenuIcon({ primarycolor, ...props }: any) {
   return (
@@ -27,7 +26,7 @@ function BurgerMenuIcon({ primarycolor, ...props }: any) {
         fillOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default BurgerMenuIcon
+export default BurgerMenuIcon;

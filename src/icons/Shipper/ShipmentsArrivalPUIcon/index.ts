@@ -1,1 +1,1 @@
-export { default } from './ShipmentsArrivalPUIcon'
+export { default } from './ShipmentsArrivalPUIcon';

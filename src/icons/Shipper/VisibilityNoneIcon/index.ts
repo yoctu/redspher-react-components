@@ -1,1 +1,1 @@
-export { default } from './VisibilityNoneIcon'
+export { default } from './VisibilityNoneIcon';

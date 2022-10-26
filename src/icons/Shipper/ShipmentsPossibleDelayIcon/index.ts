@@ -1,1 +1,1 @@
-export { default } from './ShipmentsPossibleDelayIcon'
+export { default } from './ShipmentsPossibleDelayIcon';

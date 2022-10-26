@@ -1,1 +1,1 @@
-export { default } from './TruckIcon'
+export { default } from './TruckIcon';

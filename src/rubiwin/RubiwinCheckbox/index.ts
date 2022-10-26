@@ -1,1 +1,1 @@
-export { default } from './RubiwinCheckbox'
+export { default } from './RubiwinCheckbox';

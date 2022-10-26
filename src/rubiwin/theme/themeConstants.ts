@@ -39,7 +39,7 @@ export const colors = {
   red: {
     main: '#FF003B'
   }
-}
+};
 
 export const breakpoints = {
   xs: 0,
@@ -47,7 +47,7 @@ export const breakpoints = {
   md: 960,
   lg: 1280,
   xl: 1920
-}
+};
 
 export const constants = {
   ...colors,
@@ -68,7 +68,7 @@ export const constants = {
   transition: {
     default: 'all .2s ease'
   }
-}
+};
 
 export const typographies = {
   fontFamily: ['Montserrat', 'sans-serif'].join(','),
@@ -179,6 +179,6 @@ export const typographies = {
     fontSize: '12px',
     lineHeight: '16px'
   }
-}
+};
 
-export default constants
+export default constants;

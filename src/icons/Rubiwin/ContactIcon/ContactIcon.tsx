@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function ContactIcon({ primarycolor, secondarycolor, ...props }: any) {
   return (
@@ -31,7 +30,7 @@ function ContactIcon({ primarycolor, secondarycolor, ...props }: any) {
         </clipPath>
       </defs>
     </SvgIcon>
-  )
+  );
 }
 
-export default ContactIcon
+export default ContactIcon;

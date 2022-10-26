@@ -1,1 +1,1 @@
-export { default } from './RubiwinSquareButton'
+export { default } from './RubiwinSquareButton';

@@ -1,9 +1,9 @@
+import { createTheme } from '@mui/material/styles';
 import themeConstants, {
   breakpoints,
   colors,
   typographies
-} from './themeConstants'
-import { createTheme } from '@mui/material/styles'
+} from './themeConstants';
 
 const rubiwinBaseTheme = {
   palette: colors,
@@ -39,7 +39,7 @@ const rubiwinBaseTheme = {
           backgroundColor: themeConstants.primary.main,
           color: themeConstants.white.main,
           '&:hover': {
-            backgroundColor: themeConstants.primary.main + 'FF'
+            backgroundColor: `${themeConstants.primary.main}FF`
           }
         }
       }
@@ -58,9 +58,9 @@ const rubiwinBaseTheme = {
         '&:last-of-type': {
           borderRight: '1px solid transparent'
         },
-        borderRight: '1px solid ' + themeConstants.grey.lighter,
-        borderLeft: '1px solid ' + themeConstants.grey.lighter,
-        borderBottom: '1px solid ' + themeConstants.grey.lighter
+        borderRight: `1px solid ${themeConstants.grey.lighter}`,
+        borderLeft: `1px solid ${themeConstants.grey.lighter}`,
+        borderBottom: `1px solid ${themeConstants.grey.lighter}`
       },
       head: {
         backgroundColor: themeConstants.grey.main,
@@ -68,7 +68,7 @@ const rubiwinBaseTheme = {
         borderTop: '0px !important'
       },
       body: {
-        color: themeConstants.grey.main + '!important',
+        color: `${themeConstants.grey.main}!important`,
         fontSize: '12px !important'
       }
     },
@@ -93,7 +93,7 @@ const rubiwinBaseTheme = {
     },
     MuiTableSortLabel: {
       root: {
-        color: themeConstants.grey.lighter + '!important',
+        color: `${themeConstants.grey.lighter}!important`,
         opacity: 1,
         '&.Mui-active': {
           color: themeConstants.grey.lighter,
@@ -235,7 +235,7 @@ const rubiwinBaseTheme = {
             backgroundColor: themeConstants.primary.main,
             color: themeConstants.white.main,
             '&:hover': {
-              backgroundColor: themeConstants.primary.hover + 'FF'
+              backgroundColor: `${themeConstants.primary.hover}FF`
             }
           }
         }
@@ -362,7 +362,7 @@ const rubiwinBaseTheme = {
     MuiTableSortLabel: {
       styleOverrides: {
         root: {
-          color: themeConstants.grey.lighter + '!important',
+          color: `${themeConstants.grey.lighter}!important`,
           opacity: 1,
           '&.Mui-active': {
             color: themeConstants.grey.lighter,
@@ -703,9 +703,9 @@ const rubiwinBaseTheme = {
       }
     }
   }
-}
+};
 
 // @ts-ignore
-export const theme = createTheme(rubiwinBaseTheme)
+export const theme = createTheme(rubiwinBaseTheme);
 
-export default rubiwinBaseTheme
+export default rubiwinBaseTheme;

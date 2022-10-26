@@ -1,11 +1,37 @@
-import React from 'react'
-import Input from '@mui/material/Input'
-import PropTypes from 'prop-types'
+import { MouseEventHandler } from 'react';
+import Input from '@mui/material/Input';
+import { InputProps } from '@mui/material/Input/Input';
 
-/** this is a simple input
- * full doc: https://material-ui.com/api/input/
- * */
+interface IrubiwinInputField extends InputProps {
+  className?: string;
+  defaultValue?: any;
+  disabled?: boolean;
+  error?: boolean;
+  endAdornment?: Node;
+  fullWidth?: boolean;
+  inputProps?: object;
+  multiline?: boolean;
+  name?: string;
+  placeholder?: string;
+  readOnly?: boolean;
+  required?: boolean;
+  rows?: number;
+  startAdornment?: Node;
+  type?: string;
+  value?: any;
+  onClick?: MouseEventHandler<HTMLDivElement>;
+}
 
+/**
+ * This is a Mui Input branded for Rubiwin
+ *
+ * Demos:
+ * - [Text Fields](https://mui.com/components/text-fields/)
+ *
+ * API:
+ * - [Input API](https://mui.com/api/input/)
+ * - inherits [InputBase API](https://mui.com/api/input-base/)
+ */
 const RubiwinInputField = ({
   className = '',
   id,
@@ -15,21 +41,18 @@ const RubiwinInputField = ({
   error = false,
   fullWidth = false,
   inputProps,
-  inputRef,
   multiline = false,
   name,
-  onChange,
   placeholder,
   readOnly,
   required,
   rows,
-  rowsMax,
   startAdornment,
   type,
   value,
-  onClick,
+  onClick = () => '',
   ...props
-}: any) => (
+}: IrubiwinInputField) => (
   <Input
     className={`${className}`}
     disableUnderline
@@ -40,64 +63,18 @@ const RubiwinInputField = ({
     error={error}
     fullWidth={fullWidth}
     inputProps={inputProps}
-    inputRef={inputRef}
     multiline={multiline}
     name={name}
-    onChange={onChange}
     placeholder={placeholder}
     readOnly={readOnly}
     required={required}
     rows={rows}
-    rowsMax={rowsMax}
     startAdornment={startAdornment}
     type={type}
     value={value}
     onClick={onClick}
     {...props}
   />
-)
+);
 
-RubiwinInputField.propTypes = {
-  /** add a class to field */
-  className: PropTypes.string,
-  /** add an id to input */
-  defaultValue: PropTypes.any,
-  /** disable input */
-  disabled: PropTypes.bool,
-  /** error state */
-  error: PropTypes.bool,
-  /** add end adornment */
-  endAdornment: PropTypes.node,
-  /** fullWidth */
-  fullWidth: PropTypes.bool,
-  /** Attributes applied to the input element */
-  inputProps: PropTypes.object,
-  /** pass a ref to input element */
-  inputRef: PropTypes.string,
-  /** If true, a textarea element will be rendered. */
-  multiline: PropTypes.bool,
-  /** Name attribute of the input element. */
-  name: PropTypes.string,
-  /** onChange callback */
-  onChange: PropTypes.func,
-  /** placeholder */
-  placeholder: PropTypes.string,
-  /** readOnly */
-  readOnly: PropTypes.bool,
-  /** required */
-  required: PropTypes.bool,
-  /** Number of rows to display when multiline option is set to true. */
-  rows: PropTypes.number,
-  /** Maximum number of rows to display when multiline option is set to true. */
-  rowsMax: PropTypes.number,
-  /** add end adornment */
-  startAdornment: PropTypes.node,
-  /** Type of the input element. It should be a valid HTML5 input type. */
-  type: PropTypes.string,
-  /** value */
-  value: PropTypes.any,
-  /** on click callback */
-  onClick: PropTypes.func
-}
-
-export default RubiwinInputField
+export default RubiwinInputField;

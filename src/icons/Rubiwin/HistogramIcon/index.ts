@@ -1,1 +1,1 @@
-export { default } from './HistogramIcon'
+export { default } from './HistogramIcon';

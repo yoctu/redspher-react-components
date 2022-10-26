@@ -1,1 +1,1 @@
-export { default } from './ShipmentsArrivalOnDEIcon'
+export { default } from './ShipmentsArrivalOnDEIcon';

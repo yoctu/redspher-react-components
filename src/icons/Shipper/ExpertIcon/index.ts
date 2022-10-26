@@ -1,1 +1,1 @@
-export { default } from './ExpertIcon'
+export { default } from './ExpertIcon';

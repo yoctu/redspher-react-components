@@ -1,1 +1,1 @@
-export { default } from './SendIcon'
+export { default } from './SendIcon';

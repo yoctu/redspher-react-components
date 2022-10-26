@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function StepIcon(props: any) {
   return (
@@ -26,7 +25,7 @@ function StepIcon(props: any) {
         }
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default StepIcon
+export default StepIcon;

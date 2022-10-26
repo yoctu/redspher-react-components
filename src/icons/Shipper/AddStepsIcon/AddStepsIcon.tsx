@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function AddStepsIcon(props: any) {
   return (
@@ -55,7 +54,7 @@ function AddStepsIcon(props: any) {
         strokeDasharray='2 2'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default AddStepsIcon
+export default AddStepsIcon;

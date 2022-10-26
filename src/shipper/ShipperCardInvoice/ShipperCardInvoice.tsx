@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import {
   Card,
   Grid,
@@ -8,9 +7,9 @@ import {
   Divider,
   Button,
   Box
-} from '@mui/material'
-import DownloadIcon from '../../icons/Shipper/DownloadIcon'
-import People2Icon from '../../icons/Shipper/People2Icon'
+} from '@mui/material';
+import DownloadIcon from '../../icons/Shipper/DownloadIcon';
+import People2Icon from '../../icons/Shipper/People2Icon';
 
 const ShipperCardInvoice = ({
   title,
@@ -198,7 +197,7 @@ const ShipperCardInvoice = ({
       </Grid>
     </CardContent>
   </Card>
-)
+);
 
 ShipperCardInvoice.propTypes = {
   /** text to display as title for the card, it can be <Translate> component too */
@@ -219,6 +218,6 @@ ShipperCardInvoice.propTypes = {
   vatAmount: PropTypes.number.isRequired,
   /** function to be executed when download button is clicked */
   downloadAction: PropTypes.func.isRequired
-}
+};
 
-export default ShipperCardInvoice
+export default ShipperCardInvoice;

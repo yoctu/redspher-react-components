@@ -1,5 +1,5 @@
-import rubiwinBaseTheme from './RubiwinBaseTheme'
-import themeConstants from './e4pThemeConstants'
+import rubiwinBaseTheme from './RubiwinBaseTheme';
+import themeConstants from './e4pThemeConstants';
 
 const E4pTheme = {
   ...rubiwinBaseTheme,
@@ -25,6 +25,6 @@ const E4pTheme = {
       lighter: themeConstants.grey.lighter
     }
   }
-}
+};
 
-export default E4pTheme
+export default E4pTheme;

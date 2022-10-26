@@ -1,1 +1,1 @@
-export { default } from './CaretTopIcon'
+export { default } from './CaretTopIcon';

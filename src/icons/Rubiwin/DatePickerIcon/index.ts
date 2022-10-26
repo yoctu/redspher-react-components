@@ -1,1 +1,1 @@
-export { default } from './DatePickerIcon'
+export { default } from './DatePickerIcon';

@@ -1,7 +1,6 @@
-import * as React from 'react'
-import { FormHelperText, Popover } from '@mui/material'
-import WarningIcon from '../../icons/Shipper/WarningIcon'
-import themeConstants from '../theme/themeConstants'
+import { FormHelperText, Popover } from '@mui/material';
+import WarningIcon from '../../icons/Shipper/WarningIcon';
+import themeConstants from '../theme/themeConstants';
 
 export default function ShipperErrorPopover({
   className = '',
@@ -48,5 +47,5 @@ export default function ShipperErrorPopover({
       <WarningIcon primarycolor={themeConstants.secondary.main} />
       <FormHelperText>{text}</FormHelperText>
     </Popover>
-  )
+  );
 }

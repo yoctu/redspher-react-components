@@ -1,1 +1,1 @@
-export { default } from './PrintIcon'
+export { default } from './PrintIcon';

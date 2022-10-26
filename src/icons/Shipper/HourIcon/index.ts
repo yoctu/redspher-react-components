@@ -1,1 +1,1 @@
-export { default } from './HourIcon'
+export { default } from './HourIcon';

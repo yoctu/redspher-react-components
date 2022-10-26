@@ -1,1 +1,1 @@
-export { default } from './InvoiceIcon'
+export { default } from './InvoiceIcon';

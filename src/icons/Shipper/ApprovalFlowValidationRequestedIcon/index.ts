@@ -1,1 +1,1 @@
-export { default } from './ApprovalFlowValidationRequestedIcon'
+export { default } from './ApprovalFlowValidationRequestedIcon';

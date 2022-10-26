@@ -1,1 +1,1 @@
-export { default } from './OffersIcon'
+export { default } from './OffersIcon';

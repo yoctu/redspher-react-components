@@ -29,6 +29,6 @@ const constants = {
     xl: 1920,
     xs: 0
   }
-}
+};
 
-export default constants
+export default constants;

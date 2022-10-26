@@ -1,1 +1,1 @@
-export { default } from './PhoneIcon'
+export { default } from './PhoneIcon';

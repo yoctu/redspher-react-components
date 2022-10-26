@@ -1,1 +1,1 @@
-export { default } from './RadioBlankIcon'
+export { default } from './RadioBlankIcon';

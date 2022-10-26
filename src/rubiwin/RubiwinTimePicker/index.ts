@@ -1,1 +1,1 @@
-export { default } from './RubiwinTimePicker'
+export { default } from './RubiwinTimePicker';

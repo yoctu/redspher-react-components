@@ -1,1 +1,1 @@
-export { default } from './CircleCaretBottomIcon'
+export { default } from './CircleCaretBottomIcon';

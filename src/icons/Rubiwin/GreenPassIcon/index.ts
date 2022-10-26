@@ -1,1 +1,1 @@
-export { default } from './GreenPassIcon'
+export { default } from './GreenPassIcon';

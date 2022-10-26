@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function LogoAddressBookIcon(props: any) {
   return (
@@ -15,7 +14,7 @@ function LogoAddressBookIcon(props: any) {
         }
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default LogoAddressBookIcon
+export default LogoAddressBookIcon;

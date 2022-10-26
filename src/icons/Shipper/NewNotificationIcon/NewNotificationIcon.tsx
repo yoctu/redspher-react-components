@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function NewNotificationIcon(props: any) {
   return (
@@ -43,7 +42,7 @@ function NewNotificationIcon(props: any) {
         strokeWidth='2'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default NewNotificationIcon
+export default NewNotificationIcon;

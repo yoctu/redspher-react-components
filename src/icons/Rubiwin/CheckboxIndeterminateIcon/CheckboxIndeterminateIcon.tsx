@@ -1,8 +1,11 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
-function CheckboxIndeterminateIcon({ primarycolor, secondarycolor, ...props }: any) {
+function CheckboxIndeterminateIcon({
+  primarycolor,
+  secondarycolor,
+  ...props
+}: any) {
   return (
     <SvgIcon {...props} htmlColor='transparent' viewBox='0 0 16 16'>
       <rect
@@ -24,7 +27,7 @@ function CheckboxIndeterminateIcon({ primarycolor, secondarycolor, ...props }: a
         strokeOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default CheckboxIndeterminateIcon
+export default CheckboxIndeterminateIcon;

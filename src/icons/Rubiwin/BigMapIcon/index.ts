@@ -1,1 +1,1 @@
-export { default } from './BigMapIcon'
+export { default } from './BigMapIcon';

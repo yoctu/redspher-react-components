@@ -1,1 +1,1 @@
-export { default } from './AutomaticIcon'
+export { default } from './AutomaticIcon';

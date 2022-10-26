@@ -1,1 +1,1 @@
-export { default } from './HorizontalActionIcon'
+export { default } from './HorizontalActionIcon';

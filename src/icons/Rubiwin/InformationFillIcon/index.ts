@@ -1,1 +1,1 @@
-export { default } from './InformationFillIcon'
+export { default } from './InformationFillIcon';

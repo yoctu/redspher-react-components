@@ -1,1 +1,1 @@
-export { default } from './QuotesNewOffersIcon'
+export { default } from './QuotesNewOffersIcon';

@@ -1,1 +1,1 @@
-export { default } from './TailLiftIcon'
+export { default } from './TailLiftIcon';

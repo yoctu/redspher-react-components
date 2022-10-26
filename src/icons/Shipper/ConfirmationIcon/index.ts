@@ -1,1 +1,1 @@
-export { default } from './ConfirmationIcon'
+export { default } from './ConfirmationIcon';

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function UnvisibilityIcon({
   primarycolor,
@@ -31,7 +30,7 @@ function UnvisibilityIcon({
         strokeOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default UnvisibilityIcon
+export default UnvisibilityIcon;

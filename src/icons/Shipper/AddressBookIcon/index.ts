@@ -1,1 +1,1 @@
-export { default } from './AddressBookIcon'
+export { default } from './AddressBookIcon';

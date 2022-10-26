@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function ConcessionIcon({ primarycolor, ...props }: any) {
   return (
@@ -16,7 +15,7 @@ function ConcessionIcon({ primarycolor, ...props }: any) {
         strokeOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default ConcessionIcon
+export default ConcessionIcon;

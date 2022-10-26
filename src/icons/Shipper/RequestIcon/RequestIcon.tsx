@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function RequestIcon(props: any) {
   return (
@@ -41,7 +40,7 @@ function RequestIcon(props: any) {
         strokeWidth='0.5'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default RequestIcon
+export default RequestIcon;

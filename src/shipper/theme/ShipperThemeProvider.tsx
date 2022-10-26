@@ -1,10 +1,9 @@
-import React from 'react'
-import { ThemeProvider } from '@mui/material/styles'
-import { createTheme } from '@mui/material'
-import ShipperBaseTheme from './ShipperBaseTheme'
+import { ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '@mui/material';
+import ShipperBaseTheme from './ShipperBaseTheme';
 
 // @ts-ignore
-export const defaultTheme = createTheme(ShipperBaseTheme)
+export const defaultTheme = createTheme(ShipperBaseTheme);
 
 const ShipperThemeProvider = ({
   theme = defaultTheme,
@@ -14,6 +13,6 @@ const ShipperThemeProvider = ({
   <ThemeProvider theme={theme} {...delegated}>
     {children}
   </ThemeProvider>
-)
+);
 
-export default ShipperThemeProvider
+export default ShipperThemeProvider;

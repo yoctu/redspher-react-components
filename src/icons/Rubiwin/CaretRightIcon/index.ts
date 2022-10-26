@@ -1,1 +1,1 @@
-export { default } from './CaretRightIcon'
+export { default } from './CaretRightIcon';

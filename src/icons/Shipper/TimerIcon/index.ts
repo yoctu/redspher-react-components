@@ -1,1 +1,1 @@
-export { default } from './TimerIcon'
+export { default } from './TimerIcon';

@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/e4pThemeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/e4pThemeConstants';
 
 function E4PlaneIcon() {
   return (
@@ -16,7 +15,7 @@ function E4PlaneIcon() {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default E4PlaneIcon
+export default E4PlaneIcon;

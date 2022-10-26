@@ -1,1 +1,1 @@
-export { default } from './PeopleLockIcon'
+export { default } from './PeopleLockIcon';

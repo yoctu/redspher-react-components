@@ -1,1 +1,1 @@
-export { default } from './TabIcon'
+export { default } from './TabIcon';

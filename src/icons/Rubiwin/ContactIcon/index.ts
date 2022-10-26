@@ -1,1 +1,1 @@
-export { default } from './ContactIcon'
+export { default } from './ContactIcon';

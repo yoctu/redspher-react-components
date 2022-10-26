@@ -1,1 +1,1 @@
-export { default } from './PinIcon'
+export { default } from './PinIcon';

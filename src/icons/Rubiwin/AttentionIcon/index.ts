@@ -1,1 +1,1 @@
-export { default } from './AttentionIcon'
+export { default } from './AttentionIcon';

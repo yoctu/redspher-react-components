@@ -1,1 +1,1 @@
-export { default } from './ShipperSwitch'
+export { default } from './ShipperSwitch';

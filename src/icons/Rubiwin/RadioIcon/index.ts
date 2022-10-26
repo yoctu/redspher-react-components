@@ -1,1 +1,1 @@
-export { default } from './RadioIcon'
+export { default } from './RadioIcon';

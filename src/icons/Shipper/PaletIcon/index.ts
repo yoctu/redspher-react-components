@@ -1,1 +1,1 @@
-export { default } from './PaletIcon'
+export { default } from './PaletIcon';

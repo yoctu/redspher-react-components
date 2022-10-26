@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../rubiwin/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../rubiwin/theme/themeConstants';
 
 function AdrIcon({ primarycolor, ...props }: any) {
   return (
@@ -30,7 +29,7 @@ function AdrIcon({ primarycolor, ...props }: any) {
         strokeOpacity={0}
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default AdrIcon
+export default AdrIcon;

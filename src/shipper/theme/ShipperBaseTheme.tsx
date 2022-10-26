@@ -1,4 +1,4 @@
-import themeConstants, { colors } from './themeConstants'
+import themeConstants, { colors } from './themeConstants';
 
 const ShipperBaseTheme = {
   spacing: 8,
@@ -77,7 +77,7 @@ const ShipperBaseTheme = {
           boxShadow: 'none',
           '&.logoutButton': {
             backgroundColor: 'transparent',
-            border: '1px solid ' + themeConstants.white.main,
+            border: `1px solid ${themeConstants.white.main}`,
             color: themeConstants.white.main,
             '&:hover': {
               backgroundColor: themeConstants.white.main,
@@ -382,10 +382,10 @@ const ShipperBaseTheme = {
               border: '0px'
             },
             '&:hover': {
-              boxShadow: 'inset 0px 0px 0px 1px ' + themeConstants.grey.main
+              boxShadow: `inset 0px 0px 0px 1px ${themeConstants.grey.main}`
             },
             '&.Mui-focused': {
-              boxShadow: 'inset 0px 0px 0px 1px ' + themeConstants.primary.main
+              boxShadow: `inset 0px 0px 0px 1px ${themeConstants.primary.main}`
             },
             '& .MuiInputAdornment-root': {
               width: '16px',
@@ -400,8 +400,7 @@ const ShipperBaseTheme = {
               }
             },
             '&.Mui-error': {
-              boxShadow:
-                'inset 0px 0px 0px 1px ' + themeConstants.secondary.main,
+              boxShadow: `inset 0px 0px 0px 1px ${themeConstants.secondary.main}`,
               '& .MuiSvgIcon-root > *': {
                 stroke: themeConstants.secondary.main
               }
@@ -538,6 +537,6 @@ const ShipperBaseTheme = {
       }
     }
   }
-}
+};
 
-export default ShipperBaseTheme
+export default ShipperBaseTheme;

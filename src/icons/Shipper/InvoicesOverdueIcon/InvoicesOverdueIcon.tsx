@@ -1,6 +1,5 @@
-import React from 'react'
-import { SvgIcon } from '@mui/material'
-import themeConstants from '../../../shipper/theme/themeConstants'
+import { SvgIcon } from '@mui/material';
+import themeConstants from '../../../shipper/theme/themeConstants';
 
 function InvoicesOverdueIcon(props: any) {
   return (
@@ -94,7 +93,7 @@ function InvoicesOverdueIcon(props: any) {
         strokeLinejoin='round'
       />
     </SvgIcon>
-  )
+  );
 }
 
-export default InvoicesOverdueIcon
+export default InvoicesOverdueIcon;

@@ -1,1 +1,1 @@
-export { default } from './AdrIcon'
+export { default } from './AdrIcon';

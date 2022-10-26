@@ -1,1 +1,1 @@
-export { default } from './IncotermsIcon'
+export { default } from './IncotermsIcon';

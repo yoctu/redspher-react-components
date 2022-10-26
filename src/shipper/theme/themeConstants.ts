@@ -1,9 +1,9 @@
 export const colors = {
   get primary() {
-    return this.blue
+    return this.blue;
   },
   get secondary() {
-    return this.red
+    return this.red;
   },
   blue: {
     main: '#1436D3',
@@ -32,7 +32,7 @@ export const colors = {
   orange: {
     main: '#FE7062'
   }
-}
+};
 
 const constants = {
   ...colors,
@@ -50,6 +50,6 @@ const constants = {
     main: '16px',
     small: '8px'
   }
-}
+};
 
-export default constants
+export default constants;

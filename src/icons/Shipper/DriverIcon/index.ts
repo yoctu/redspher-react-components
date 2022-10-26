@@ -1,1 +1,1 @@
-export { default } from './DriverIcon'
+export { default } from './DriverIcon';

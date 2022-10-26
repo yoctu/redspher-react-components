@@ -1,1 +1,1 @@
-export { default } from './NumberCircleFillIcon'
+export { default } from './NumberCircleFillIcon';

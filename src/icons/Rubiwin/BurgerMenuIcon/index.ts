@@ -1,1 +1,1 @@
-export { default } from './BurgerMenuIcon'
+export { default } from './BurgerMenuIcon';

@@ -1,12 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Button from '@mui/material/Button'
-import { createStyles, makeStyles } from '@mui/styles'
-import { darken } from '@mui/material/styles'
-import themeConstants from '../theme/themeConstants'
+import Button from '@mui/material/Button';
+import { createStyles, makeStyles } from '@mui/styles';
+import { darken } from '@mui/material/styles';
+import { ExtendButtonBase } from '@mui/material/ButtonBase';
+import { ButtonTypeMap } from '@mui/material/Button/Button';
+import themeConstants from '../theme/themeConstants';
 
-const useStyles = makeStyles(() => {
-  return createStyles({
+interface IrubiwinSquareButton extends ExtendButtonBase<ButtonTypeMap> {
+  text: string;
+  className?: string;
+  disabled?: boolean;
+  fullWidth?: boolean;
+  href?: string;
+  size?: 'small' | 'medium' | 'large';
+  startIcon?: Element;
+  endIcon?: Element;
+}
+
+const useStyles = makeStyles(() =>
+  createStyles({
     root: {
       backgroundColor: themeConstants.primary.main,
       borderRadius: themeConstants.borderRadius.sm,
@@ -23,24 +34,34 @@ const useStyles = makeStyles(() => {
       boxShadow: 'none'
     }
   })
-})
+);
 
+/**
+ * This is a Mui Button branded for Rubiwin
+ *
+ * Demos:
+ * - [Button Group](https://mui.com/components/button-group/)
+ * - [Buttons](https://mui.com/components/buttons/)
+ *
+ * API:
+ * - [Button API](https://mui.com/api/button/)
+ * - inherits [ButtonBase API](https://mui.com/api/button-base/)
+ */
 const RubiwinSquareButton = ({
   text,
-  onClick,
   className = '',
   disabled = false,
   fullWidth = false,
   href,
   size = 'medium',
   endIcon,
-  startIcon
-}: any) => {
-  const classes = useStyles()
+  startIcon,
+  ...props
+}: IrubiwinSquareButton) => {
+  const classes = useStyles();
 
   return (
     <Button
-      onClick={onClick}
       className={`${className}`}
       disabled={disabled}
       fullWidth={fullWidth}
@@ -49,31 +70,11 @@ const RubiwinSquareButton = ({
       endIcon={endIcon}
       startIcon={startIcon}
       classes={{ root: classes.root, disabled: classes.disabled }}
+      {...props}
     >
       {text}
     </Button>
-  )
-}
+  );
+};
 
-RubiwinSquareButton.propTypes = {
-  /** text to display, it can be <Translate> component too */
-  text: PropTypes.string.isRequired,
-  /** function to handleButton behavior **/
-  onClick: PropTypes.func,
-  /** additional classname if you want to overload styles */
-  className: PropTypes.string,
-  /** disabled button */
-  disabled: PropTypes.bool,
-  /** make the button take the fullWidth of the parent */
-  fullWidth: PropTypes.bool,
-  /** link to another page */
-  href: PropTypes.string,
-  /** can be small, medium, large */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /** icon before text */
-  startIcon: PropTypes.element,
-  /** icon after text */
-  endIcon: PropTypes.element
-}
-
-export default RubiwinSquareButton
+export default RubiwinSquareButton;

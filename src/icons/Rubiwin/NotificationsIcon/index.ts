@@ -1,1 +1,1 @@
-export { default } from './NotificationsIcon'
+export { default } from './NotificationsIcon';
