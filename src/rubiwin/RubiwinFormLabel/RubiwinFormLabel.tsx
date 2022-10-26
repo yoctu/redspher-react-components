@@ -8,6 +8,7 @@ interface IrubiwinFormLabel extends FormControlLabelProps {
   labelPlacement?: 'bottom' | 'end' | 'start' | 'top';
   value?: string | number;
   className?: string;
+  error?: boolean;
 }
 
 /**
@@ -27,6 +28,7 @@ const RubiwinFormLabel = ({
   labelPlacement,
   value,
   className = '',
+  error = false,
   ...props
 }: IrubiwinFormLabel) => (
   <FormControlLabel
@@ -35,6 +37,8 @@ const RubiwinFormLabel = ({
     labelPlacement={labelPlacement}
     value={value}
     className={`${className}`}
+    // @ts-ignore
+    error={error}
     {...props}
   />
 );

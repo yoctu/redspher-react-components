@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Autocomplete,
   CircularProgress,
@@ -9,10 +8,28 @@ import {
   Typography
 } from '@mui/material';
 
+import { AutocompleteProps } from '@mui/material/Autocomplete/Autocomplete';
 import RubiwinCaretBottomIcon from '../../icons/Rubiwin/CaretBottomIcon';
 import RubiwinClearIcon from '../../icons/Rubiwin/ClearIcon';
 import RubiwinCheckbox from '../RubiwinCheckbox';
 import rubiwinBaseTheme from '../theme/RubiwinBaseTheme';
+
+interface IrubiwinAutocomplete
+  extends Omit<
+    AutocompleteProps<any, any, any, any>,
+    'renderInput' | 'placeholder'
+  > {
+  label?: string | Node;
+  placeholder?: string;
+  multiple?: boolean;
+  hasError?: boolean;
+  showErrors?: boolean;
+  withDelete?: boolean;
+  helperText?: string;
+  name?: string;
+  isLoading?: boolean;
+  showLoader?: boolean;
+}
 
 /**
  * This is a Mui Autocomplete branded for Rubiwin
@@ -26,7 +43,6 @@ import rubiwinBaseTheme from '../theme/RubiwinBaseTheme';
 const RubiwinAutocomplete = ({
   label,
   placeholder,
-  options,
   showErrors,
   hasError,
   helperText,
@@ -36,7 +52,7 @@ const RubiwinAutocomplete = ({
   multiple = false,
   withDelete = false,
   ...props
-}: any) => {
+}: IrubiwinAutocomplete) => {
   const multipleProps = {};
 
   if (multiple) {
@@ -53,7 +69,6 @@ const RubiwinAutocomplete = ({
   return (
     <Autocomplete
       multiple={multiple}
-      options={options}
       disableClearable
       popupIcon={<RubiwinCaretBottomIcon />}
       renderInput={(params) => (
@@ -119,20 +134,6 @@ const RubiwinAutocomplete = ({
       {...props}
     />
   );
-};
-
-RubiwinAutocomplete.propTypes = {
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  options: PropTypes.array,
-  multiple: PropTypes.bool,
-  hasError: PropTypes.bool,
-  showErrors: PropTypes.bool,
-  withDelete: PropTypes.bool,
-  helperText: PropTypes.string,
-  name: PropTypes.string,
-  isLoading: PropTypes.bool,
-  showLoader: PropTypes.bool
 };
 
 export default RubiwinAutocomplete;
