@@ -521,9 +521,18 @@ const RubiWinShowCase = () => {
                     )
                     .map((row, index) => (
                       <TableRow key={index}>
-                        <TableCell>Body 1 - Row {row}</TableCell>
-                        <TableCell>Body 2 - Row {row}</TableCell>
-                        <TableCell>Body 3 - Row {row}</TableCell>
+                        <TableCell>
+                          Body 1 - Row
+                          {row}
+                        </TableCell>
+                        <TableCell>
+                          Body 2 - Row
+                          {row}
+                        </TableCell>
+                        <TableCell>
+                          Body 3 - Row
+                          {row}
+                        </TableCell>
                       </TableRow>
                     ))}
                 </TableBody>
@@ -1457,13 +1466,12 @@ const ShipperShowCase = () => {
             dueDate='14/02/2021'
             priceTtc='125,85€'
             priceHt='315,84€'
-            vatAmount='60,01€'
             downloadAction={downloadAction}
             invoiceDateTranslate='Invoice Date'
             dueDateTranslate='Due Date'
             withoutTaxes='HT'
             withTaxes='TTC'
-            VATAmount='VAT Amount'
+            vatAmount='VAT Amount'
             downloadTranslate='Download'
           />
         </div>

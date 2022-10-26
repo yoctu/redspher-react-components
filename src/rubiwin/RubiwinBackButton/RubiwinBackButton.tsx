@@ -1,5 +1,7 @@
+import React from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Box } from '@mui/material';
+// eslint-disable-next-line import/no-unresolved
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import { BoxTypeMap } from '@mui/material/Box/Box';
 

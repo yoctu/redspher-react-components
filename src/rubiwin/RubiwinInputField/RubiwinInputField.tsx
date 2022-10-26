@@ -1,4 +1,4 @@
-import { MouseEventHandler } from 'react';
+import React, { MouseEventHandler } from 'react';
 import Input from '@mui/material/Input';
 import { InputProps } from '@mui/material/Input/Input';
 

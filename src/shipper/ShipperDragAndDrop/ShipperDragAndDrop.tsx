@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DropzoneArea } from 'react-mui-dropzone';
 import { Box, LinearProgress } from '@mui/material';
 import { createStyles, makeStyles } from '@mui/styles';

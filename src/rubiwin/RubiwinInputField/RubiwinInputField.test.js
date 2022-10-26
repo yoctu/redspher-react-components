@@ -1,3 +1,4 @@
+import React from 'react';
 import renderer from 'react-test-renderer';
 import RubiwinInputField from './RubiwinInputField';
 import MailIcon from '../../icons/Rubiwin/EmailIcon';

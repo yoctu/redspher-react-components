@@ -1,3 +1,4 @@
+import React from 'react';
 import { Stepper, Step, StepLabel, Box, StepConnector } from '@mui/material';
 
 import PinIcon from '../../icons/Shipper/PinIcon';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Pagination, PaginationItem } from '@mui/material';
 import { PaginationProps } from '@mui/material/Pagination/Pagination';
 import CaretLeftIcon from '../../icons/Rubiwin/CaretLeftIcon';
