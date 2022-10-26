@@ -9,12 +9,13 @@ interface IrubiwinTimePicker
   extends Omit<DesktopTimePickerProps<any, any>, 'renderInput'>,
     React.RefAttributes<HTMLDivElement> {
   label?: string;
-  helperText?: Node;
+  helperText?: string | Node;
   hasError?: boolean;
   showErrors?: boolean;
   ampm?: boolean;
   locale?: string | object;
   id?: string;
+  name?: string;
 }
 
 /**
@@ -33,6 +34,7 @@ const RubiwinTimePicker = ({
   hasError,
   id,
   locale,
+  name,
   ampm = false,
   ...props
 }: IrubiwinTimePicker) => (
@@ -58,6 +60,7 @@ const RubiwinTimePicker = ({
           helperText={helperText}
           error={showErrors && (error || hasError)}
           id={id}
+          name={name}
           {...params}
         />
       )}

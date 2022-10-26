@@ -8,7 +8,10 @@ import {
   Typography
 } from '@mui/material';
 
-import { AutocompleteProps } from '@mui/material/Autocomplete/Autocomplete';
+import {
+  AutocompleteProps,
+  AutocompleteRenderInputParams
+} from '@mui/material/Autocomplete/Autocomplete';
 import RubiwinCaretBottomIcon from '../../icons/Rubiwin/CaretBottomIcon';
 import RubiwinClearIcon from '../../icons/Rubiwin/ClearIcon';
 import RubiwinCheckbox from '../RubiwinCheckbox';
@@ -17,7 +20,7 @@ import rubiwinBaseTheme from '../theme/RubiwinBaseTheme';
 interface IrubiwinAutocomplete
   extends Omit<
     AutocompleteProps<any, any, any, any>,
-    'renderInput' | 'placeholder'
+    'placeholder' | 'renderInput'
   > {
   label?: string | Node;
   placeholder?: string;
@@ -29,6 +32,7 @@ interface IrubiwinAutocomplete
   name?: string;
   isLoading?: boolean;
   showLoader?: boolean;
+  renderInput?: (params: AutocompleteRenderInputParams) => React.ReactNode;
 }
 
 /**
