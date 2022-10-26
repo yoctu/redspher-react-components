@@ -6,7 +6,6 @@ import themeConstants from '../theme/themeConstants';
 
 interface IrubiwinSelect extends SelectProps {
   autoWidth?: boolean;
-  children?: Node;
   className?: string;
   id?: string;
   inputProps?: object;
@@ -26,7 +25,6 @@ interface IrubiwinSelect extends SelectProps {
  * - inherits [OutlinedInput API](https://mui.com/api/outlined-input/)
  */
 const RubiwinSelect = ({
-  children,
   className,
   autoWidth,
   id,
@@ -55,9 +53,7 @@ const RubiwinSelect = ({
       />
     )}
     {...props}
-  >
-    {children}
-  </Select>
+  />
 );
 
 export default RubiwinSelect;
