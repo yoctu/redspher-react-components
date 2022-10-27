@@ -1,5 +1,4 @@
 {
-  "ignorePatterns": ["example/*"],
   "parser": "@typescript-eslint/parser",
   "extends": [
     "standard",
