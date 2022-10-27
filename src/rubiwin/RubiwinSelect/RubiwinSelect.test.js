@@ -1,25 +1,25 @@
-import React from 'react'
-import renderer from 'react-test-renderer'
-import RubiwinSelect from './rubiwinSelect'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import RubiwinSelect from './RubiwinSelect';
 
 const testProps = {
   className: 'test',
   autoWidth: false,
   id: 'testId',
-  onChange: () => {},
-  onClose: () => {},
-  onOpen: () => {},
+  onChange: () => '',
+  onClose: () => '',
+  onOpen: () => '',
   open: true,
-  renderValue: (value) => {},
+  renderValue: () => '',
   value: ''
-}
+};
 
 it('renders correctly props object', () => {
-  const tree = renderer.create(<RubiwinSelect {...testProps} />).toJSON()
-  expect(tree).toMatchSnapshot()
-})
+  const tree = renderer.create(<RubiwinSelect {...testProps} />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
 it('is multiple', () => {
-  const tree = renderer.create(<RubiwinSelect multiple />).toJSON()
-  expect(tree).toMatchSnapshot()
-})
+  const tree = renderer.create(<RubiwinSelect multiple />).toJSON();
+  expect(tree).toMatchSnapshot();
+});

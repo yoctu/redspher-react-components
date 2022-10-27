@@ -1,4 +1,4 @@
-import React, { createRef, useState } from 'react'
+import React, { createRef, useState } from 'react';
 
 import {
   RubiwinButton,
@@ -6,8 +6,8 @@ import {
   RubiwinRadio,
   RubiwinFormLabel,
   RubiwinSquareButton,
+  RubiwinInputField,
   RubiwinBackButton,
-  AmazonTimePicker,
   RubiwinDateTimePicker,
   RubiwinTimePicker,
   RubiwinActionIcon,
@@ -199,7 +199,7 @@ import {
   E4PlaneIcon,
   StopWatchIcon,
   MessageIcon
-} from 'redspher-components'
+} from 'redspher-components';
 import {
   Button,
   MenuItem,
@@ -230,23 +230,23 @@ import {
   Pagination,
   IconButton,
   Switch
-} from '@mui/material'
-import { TabPanel, TabList, TabContext } from '@mui/lab'
+} from '@mui/material';
+import { TabPanel, TabList, TabContext } from '@mui/lab';
 
 const RubiWinShowCase = () => {
-  const [checked, setChecked] = useState(true)
-  const [time, setTime] = useState(null)
+  const [checked, setChecked] = useState(true);
+  const [time, setTime] = useState(null);
   const [selectedDate, handleDateChange] = useState(
     new Date('2020-10-05T00:00:00.000Z')
-  )
+  );
 
   const handleChange = () => {
-    setChecked(!checked)
-  }
+    setChecked(!checked);
+  };
 
   const sayHello = () => {
-    window.alert('Hello Rubiwin')
-  }
+    window.alert('Hello Rubiwin');
+  };
 
   const options = [
     { label: 'The Shawshank Redemption', year: 1994 },
@@ -374,20 +374,20 @@ const RubiWinShowCase = () => {
     { label: 'Snatch', year: 2000 },
     { label: '3 Idiots', year: 2009 },
     { label: 'Monty Python and the Holy Grail', year: 1975 }
-  ]
+  ];
 
-  const [date, setDate] = useState()
-  const [page, setPage] = useState(1)
-  const rowsPerPage = 10
+  const [date, setDate] = useState();
+  const [page, setPage] = useState(1);
+  const rowsPerPage = 10;
   const handleChangePage = (event, newPage) => {
-    setPage(newPage)
-  }
-  const tableRef = createRef()
+    setPage(newPage);
+  };
+  const tableRef = createRef();
 
-  const [tabValue, setTabValue] = React.useState('1')
+  const [tabValue, setTabValue] = React.useState('1');
   const handleChangeTab = (event, newValue) => {
-    setTabValue(newValue)
-  }
+    setTabValue(newValue);
+  };
 
   return (
     <>
@@ -522,9 +522,18 @@ const RubiWinShowCase = () => {
                     )
                     .map((row, index) => (
                       <TableRow key={index}>
-                        <TableCell>Body 1 - Row {row}</TableCell>
-                        <TableCell>Body 2 - Row {row}</TableCell>
-                        <TableCell>Body 3 - Row {row}</TableCell>
+                        <TableCell>
+                          Body 1 - Row
+                          {row}
+                        </TableCell>
+                        <TableCell>
+                          Body 2 - Row
+                          {row}
+                        </TableCell>
+                        <TableCell>
+                          Body 3 - Row
+                          {row}
+                        </TableCell>
                       </TableRow>
                     ))}
                 </TableBody>
@@ -702,8 +711,8 @@ const RubiWinShowCase = () => {
               options={options}
               label='Autocomplete with delete'
               onChange={(event, newValue) => {
-                console.log(event)
-                console.log(newValue)
+                console.log(event);
+                console.log(newValue);
               }}
             />
 
@@ -722,6 +731,12 @@ const RubiWinShowCase = () => {
               name='rubiwin'
               label='Radio rubiwin error'
               error
+            />
+
+            <RubiwinInputField
+              placeholder='RubiwinInputField'
+              startAdornment={<RubiwinEmailIcon />}
+              endAdornment={<RubiwinEmailIcon />}
             />
 
             <RubiwinCheckbox
@@ -831,11 +846,6 @@ const RubiWinShowCase = () => {
               disabled
             />
 
-            <AmazonTimePicker
-              value={time}
-              onClick={(event) => event.target.focus()}
-              onChange={(value) => setTime(value)}
-            />
             <RubiwinDateTimePicker
               value={selectedDate}
               onChange={handleDateChange}
@@ -1105,29 +1115,25 @@ const RubiWinShowCase = () => {
         </div>
       </RubiwinThemeProvider>
     </>
-  )
-}
+  );
+};
 
 const ShipperShowCase = () => {
-  const min = 0
-  const max = 23
+  const min = 0;
+  const max = 23;
 
-  const rangeLabelFormat = (value) => {
-    return `${value % 24}:00`
-  }
+  const rangeLabelFormat = (value) => `${value % 24}:00`;
 
-  const shownLabelFormat = (value) => {
-    return `+ ${value}h`
-  }
+  const shownLabelFormat = (value) => `+ ${value}h`;
 
   const cardVehicleAction = (txt) => {
-    console.log(txt)
-  }
+    console.log(txt);
+  };
 
-  const [selectedVehicle, setSelectedVehicle] = React.useState('truck02')
-  const [selectedFeatures, setSelectedFeatures] = React.useState([])
-  const [selectedCarriers, setSelectedCarriers] = React.useState([])
-  const [uploadStatus, setUploadStatus] = React.useState('')
+  const [selectedVehicle, setSelectedVehicle] = React.useState('truck02');
+  const [selectedFeatures, setSelectedFeatures] = React.useState([]);
+  const [selectedCarriers, setSelectedCarriers] = React.useState([]);
+  const [uploadStatus, setUploadStatus] = React.useState('');
   const [childrenStepper, setChildrenStepper] = useState([
     <div key='step a'>
       <FormControl>
@@ -1157,25 +1163,25 @@ const ShipperShowCase = () => {
     </div>,
     <Typography key='step b'>Step b</Typography>,
     <Typography key='step c'>Step c</Typography>
-  ])
+  ]);
 
   const downloadAction = () => {
-    console.log('download')
-  }
+    console.log('download');
+  };
 
   const uploadDocument = () => {
-    setUploadStatus('loading')
+    setUploadStatus('loading');
     setTimeout(() => {
-      setUploadStatus('error')
-    }, 2000)
+      setUploadStatus('error');
+    }, 2000);
     setTimeout(() => {
-      setUploadStatus('finished')
-    }, 4000)
-  }
+      setUploadStatus('finished');
+    }, 4000);
+  };
 
   const onChangeMethodDrag = () => {
-    setUploadStatus(null)
-  }
+    setUploadStatus(null);
+  };
 
   const steps = [
     {
@@ -1183,7 +1189,7 @@ const ShipperShowCase = () => {
       label: 'Request',
       icon: <RequestIcon />,
       onClick: () => {
-        console.log('Step A')
+        console.log('Step A');
       }
     },
     {
@@ -1191,7 +1197,7 @@ const ShipperShowCase = () => {
       label: 'Offers',
       icon: <OffersIcon />,
       onClick: () => {
-        console.log('Step B')
+        console.log('Step B');
       }
     },
     {
@@ -1199,42 +1205,42 @@ const ShipperShowCase = () => {
       label: 'Confirmation',
       icon: <ConfirmationIcon />,
       onClick: () => {
-        console.log('Step C')
+        console.log('Step C');
       }
     }
-  ]
+  ];
 
-  const [activeStep] = useState(1)
+  const [activeStep] = useState(1);
 
   const addressStepperIcons = {
     first: <PinIcon title='PinIcon' />,
     last: <PinIcon title='PinIcon' />,
     middle: <StepIcon title='StepIcon' />
-  }
+  };
 
   const removeStep = (index) => {
     if (index > -1) {
       setChildrenStepper([
         <Typography key='b'>Step b</Typography>,
         <Typography key='c'>Step c</Typography>
-      ])
+      ]);
     }
-  }
+  };
 
   const updatePhone = (e) => {
-    console.log(e)
-  }
+    console.log(e);
+  };
 
-  const [anchorEl, setAnchorEl] = React.useState(null)
+  const [anchorEl, setAnchorEl] = React.useState(null);
   const handlePopoverOpen = (event) => {
-    setAnchorEl(event.target)
-  }
+    setAnchorEl(event.target);
+  };
 
   const handlePopoverClose = () => {
-    setAnchorEl(null)
-  }
+    setAnchorEl(null);
+  };
 
-  const open = Boolean(anchorEl)
+  const open = Boolean(anchorEl);
 
   return (
     <ShipperThemeProvider>
@@ -1467,13 +1473,12 @@ const ShipperShowCase = () => {
             dueDate='14/02/2021'
             priceTtc='125,85€'
             priceHt='315,84€'
-            vatAmount='60,01€'
             downloadAction={downloadAction}
             invoiceDateTranslate='Invoice Date'
             dueDateTranslate='Due Date'
             withoutTaxes='HT'
             withTaxes='TTC'
-            VATAmount='VAT Amount'
+            vatAmount='VAT Amount'
             downloadTranslate='Download'
           />
         </div>
@@ -1896,7 +1901,7 @@ const ShipperShowCase = () => {
               id: 'phoneNumberInput'
             }}
             onChange={(e) => {
-              updatePhone(e)
+              updatePhone(e);
             }}
           />
         </div>
@@ -1926,7 +1931,7 @@ const ShipperShowCase = () => {
           <DragAndDrop
             uploadStatus={uploadStatus}
             onChangeMethod={() => {
-              onChangeMethodDrag()
+              onChangeMethodDrag();
             }}
           />
           <br />
@@ -1937,7 +1942,7 @@ const ShipperShowCase = () => {
             color='primary'
             variant='contained'
             onClick={() => {
-              uploadDocument()
+              uploadDocument();
             }}
           >
             Upload
@@ -2011,18 +2016,16 @@ const ShipperShowCase = () => {
         <br />
       </div>
     </ShipperThemeProvider>
-  )
-}
+  );
+};
 
-const App = () => {
-  return (
-    // See: https://github.com/mui-org/material-ui/issues/15914
-    //      https://stackoverflow.com/a/67555923/6595024
-    <ThemeProvider theme={{}}>
-      <RubiWinShowCase />
-      <ShipperShowCase />
-    </ThemeProvider>
-  )
-}
+const App = () => (
+  // See: https://github.com/mui-org/material-ui/issues/15914
+  //      https://stackoverflow.com/a/67555923/6595024
+  <ThemeProvider theme={{}}>
+    <RubiWinShowCase />
+    <ShipperShowCase />
+  </ThemeProvider>
+);
 
-export default App
+export default App;
