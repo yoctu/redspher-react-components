@@ -7,7 +7,7 @@ interface IrubiwinInputField extends InputProps {
   defaultValue?: any;
   disabled?: boolean;
   error?: boolean;
-  endAdornment?: Node;
+  endAdornment?: JSX.Element;
   fullWidth?: boolean;
   inputProps?: object;
   multiline?: boolean;
@@ -16,7 +16,7 @@ interface IrubiwinInputField extends InputProps {
   readOnly?: boolean;
   required?: boolean;
   rows?: number;
-  startAdornment?: Node;
+  startAdornment?: JSX.Element;
   type?: string;
   value?: any;
   onClick?: MouseEventHandler<HTMLDivElement>;

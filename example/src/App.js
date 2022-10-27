@@ -6,6 +6,7 @@ import {
   RubiwinRadio,
   RubiwinFormLabel,
   RubiwinSquareButton,
+  RubiwinInputField,
   RubiwinBackButton,
   RubiwinDateTimePicker,
   RubiwinTimePicker,
@@ -730,6 +731,12 @@ const RubiWinShowCase = () => {
               name='rubiwin'
               label='Radio rubiwin error'
               error
+            />
+
+            <RubiwinInputField
+              placeholder='RubiwinInputField'
+              startAdornment={<RubiwinEmailIcon />}
+              endAdornment={<RubiwinEmailIcon />}
             />
 
             <RubiwinCheckbox
