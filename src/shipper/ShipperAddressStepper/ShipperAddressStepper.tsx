@@ -6,7 +6,15 @@ import {
   StepConnector,
   StepContent
 } from '@mui/material';
+import { StepperProps } from '@mui/material/Stepper/Stepper';
 import DeleteIcon from '../../icons/Shipper/DeleteIcon';
+
+interface IshipperAddressStepper extends StepperProps {
+  icons: any;
+  nbItems: any;
+  childrenComponent: any;
+  removeStepMethod: any;
+}
 
 function StepIcon(props: any) {
   const { index, nbItems, icons, removeStepMethod } = props;
@@ -33,13 +41,22 @@ function StepIcon(props: any) {
   );
 }
 
+/**
+ * This is a Mui Stepper branded for Shipper
+ *
+ * Demos:
+ * - [Steppers](https://mui.com/components/steppers/)
+ *
+ * API:
+ * - [Stepper API](https://mui.com/api/stepper/)
+ */
 const ShipperAddressStepper = ({
   icons,
   nbItems,
   childrenComponent,
   removeStepMethod,
   ...delegated
-}: any) => (
+}: IshipperAddressStepper) => (
   <Stepper
     connector={
       <StepConnector

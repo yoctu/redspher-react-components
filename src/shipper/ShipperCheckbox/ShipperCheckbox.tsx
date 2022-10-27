@@ -1,8 +1,27 @@
 import * as React from 'react';
 import Checkbox from '@mui/material/Checkbox';
 import { CheckBoxOutlineBlankRounded, StopRounded } from '@mui/icons-material';
+import { CheckboxProps } from '@mui/material/Checkbox/Checkbox';
 
-export default function IconCheckboxes({ className = '', ...delegated }: any) {
+interface IiconCheckboxes extends CheckboxProps {
+  className?: string;
+}
+
+/**
+ * This is a Mui Checkbox branded for Shipper
+ *
+ * Demos:
+ * - [Checkboxes](https://mui.com/components/checkboxes/)
+ * - [Transfer List](https://mui.com/components/transfer-list/)
+ *
+ * API:
+ * - [Checkbox API](https://mui.com/api/checkbox/)
+ * - inherits [ButtonBase API](https://mui.com/api/button-base/)
+ */
+export default function IconCheckboxes({
+  className = '',
+  ...delegated
+}: IiconCheckboxes) {
   return (
     <Checkbox
       {...delegated}

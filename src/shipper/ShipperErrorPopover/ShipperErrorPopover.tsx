@@ -1,8 +1,28 @@
 import React from 'react';
 import { FormHelperText, Popover } from '@mui/material';
+import { PopoverProps } from '@mui/material/Popover/Popover';
 import WarningIcon from '../../icons/Shipper/WarningIcon';
 import themeConstants from '../theme/themeConstants';
 
+interface IshipperErrorPopover extends Omit<PopoverProps, 'open'> {
+  className?: any;
+  open?: any;
+  anchorEl?: any;
+  handlePopoverClose?: any;
+  text?: any;
+}
+
+/**
+ * This is a Mui Popover branded for Shipper
+ *
+ * Demos:
+ * - [Menus](https://mui.com/components/menus/)
+ * - [Popover](https://mui.com/components/popover/)
+ *
+ * API:
+ * - [Popover API](https://mui.com/api/popover/)
+ * - inherits [Modal API](https://mui.com/api/modal/)
+ */
 export default function ShipperErrorPopover({
   className = '',
   open,
@@ -10,7 +30,7 @@ export default function ShipperErrorPopover({
   handlePopoverClose,
   text,
   ...delegated
-}: any) {
+}: IshipperErrorPopover) {
   return (
     <Popover
       className={className}

@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
-import MuiPhoneNumber from 'material-ui-phone-number';
-import PropTypes from 'prop-types';
+import MuiPhoneNumber, { MuiPhoneNumberProps } from 'material-ui-phone-number';
 import { isValidPhoneNumber } from 'libphonenumber-js';
+
+interface IphoneNumber extends React.FC<MuiPhoneNumberProps> {
+  helperText?: string;
+  enableValidation?: boolean;
+  label: string;
+  onChange?: Function;
+  name?: string;
+  value: string;
+  defaultCountry?: string;
+}
 
 export const defaultPreferredCountries = [
   'at',
@@ -34,16 +43,28 @@ export const defaultPreferredCountries = [
   'sk'
 ];
 
+/**
+ * This is a MuiPhoneNumber branded for Shipper
+ * @param helperText
+ * @param enableValidation
+ * @param label
+ * @param onChange
+ * @param name
+ * @param value
+ * @param defaultCountry
+ * @param props
+ * @constructor
+ */
 function PhoneNumber({
-  helperText,
-  enableValidation,
+  helperText = '',
+  enableValidation = false,
   label,
-  onChange,
+  onChange = () => null,
   name = 'phoneNumber',
   value,
   defaultCountry = 'fr',
   ...props
-}: any) {
+}: IphoneNumber) {
   const [error, setError] = useState(false);
   const [countryCode, setCountryCode] = useState(defaultCountry);
 
@@ -60,6 +81,7 @@ function PhoneNumber({
         }
       }}
       disableAreaCodes
+      // @ts-ignore
       onChange={(value: any, country: any) => {
         const valid = isValidPhoneNumber(value);
         setError(!valid);
@@ -86,21 +108,5 @@ function PhoneNumber({
     />
   );
 }
-
-PhoneNumber.propTypes = {
-  enableValidation: PropTypes.bool,
-  helperText: PropTypes.string,
-  label: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  onChange: PropTypes.func,
-  value: PropTypes.string.isRequired
-};
-
-PhoneNumber.defaultProps = {
-  enableValidation: false,
-  helperText: '',
-  name: 'phoneNumber',
-  onChange: () => null
-};
 
 export default PhoneNumber;
